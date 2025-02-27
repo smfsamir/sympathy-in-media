@@ -7,11 +7,11 @@ import aiohttp
 
 
 schema = {"Person Name": pl.Utf8, "Incident Date": pl.Date, "Publication Date": pl.Date, "Publisher": pl.Utf8, "URL": pl.Utf8, "Paragraph Index": pl.Int64, "Paragraph Text": pl.Utf8, "URL": pl.Utf8}
-
+static_timeout = 10
 
 async def getHTML(url):
     async with aiohttp.ClientSession() as session:
-        async with session.get(url) as response:
+        async with session.get(url, timeout=static_timeout) as response:
             return await response.text()
 
 ## static helpers
@@ -39,6 +39,7 @@ def getMetaData(soup):
         else:
             return ld_data             
         return None
+
 # these two might need more robust error handling
 def getPublisher(news_article):
     pub = news_article.get("publisher", {})
@@ -57,22 +58,31 @@ def extractAllText(soup):
     for p in paragraphs:
         text += "\n"
         text += p.get_text() 
-    return text
+    return text.split("\n")
 def addData(publisher, url, publication_date, text, person, event_date):
-    lines = text.split("\n")
+    # lines = text.split("\n")
     df = pl.DataFrame(schema=schema)
-    for i in range(len(lines)):
-        temp = pl.DataFrame({"Person Name": person, "Incident Date": event_date, "Publication Date": publication_date, "Publisher": publisher, "URL":url, "Paragraph Index": [i], "Paragraph Text": lines[i]})
+    for i in range(len(text)):
+        temp = pl.DataFrame({"Person Name": person, "Incident Date": event_date, "Publication Date": publication_date, "Publisher": publisher, "URL":url, "Paragraph Index": [i], "Paragraph Text": text[i]})
         df = df.vstack(temp)
         i += 1
     df.rechunk()
     return df
 
 async def static_extractor(url, person, event_date):
-    html_content = await getHTML(url)
-    soup = BeautifulSoup(html_content, features="lxml")
-    metadata = getMetaData(soup)
-    publisher = getPublisher(metadata)
-    publication_date = getPublicationDate(metadata)
-    text = extractAllText(soup)
-    return addData(publisher, url, publication_date, text, person, event_date)
+    try:
+        html_content = await getHTML(url)
+        soup = BeautifulSoup(html_content, features="lxml")
+        metadata = getMetaData(soup)
+        publisher = getPublisher(metadata)
+        publication_date = getPublicationDate(metadata)
+        text = extractAllText(soup)
+        if (len(text) >= 5):
+            return addData(publisher, url, publication_date, text, person, event_date)
+        else:
+            print("not enough text in ", url, "falling back on playwright") # try playwright
+    except Exception as e:
+        print("Static extraction failed for ", url, " trying Playwright...")
+    # todo return dynamic function
+    placeholder_df = pl.DataFrame(schema=schema)
+    return pl.DataFrame(schema=schema)

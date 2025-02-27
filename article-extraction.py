@@ -23,16 +23,16 @@ async def extractor(row):
     url = row[2] 
     df = pl.DataFrame(schema=schema)
     try:
-        # only handles cbc and global rn, need to implement ctv
-        if url.startswith("https://www.cbc.ca"):
-            print("processing: ", person)
-            df = await cbc_extractor(url, person, event_date)
-        # elif url.startswith("https://globalnews.ca"):
-        #     df = await static_extractor(url, person, event_date)
+        df = await static_extractor(url, person, event_date)
+        # # only handles cbc and global rn, need to implement ctv
+        # if url.startswith("https://www.cbc.ca"):
+        #     # print("processing: ", person)
+        #     df = await cbc_extractor(url, person, event_date)
+        # # elif url.startswith("https://globalnews.ca"):
+        # #     df = await static_extractor(url, person, event_date)
     except Exception as e:
         # return on error, continue to next article.
         print(f"Error processing {url} for {person}: {str(e)}")
-        return pl.DataFrame(schema=schema)
     return df
 
 
