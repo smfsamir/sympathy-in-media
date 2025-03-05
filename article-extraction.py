@@ -37,7 +37,7 @@ async def extractor(row):
 
 
 async def process_articles():
-    data = pl.read_csv("./data/canadian_deadly_force_cbc.csv", 
+    data = pl.read_csv("./data/wip_db.csv", 
                        has_header=True, 
                        try_parse_dates=True)
     df = pl.DataFrame(schema=schema)

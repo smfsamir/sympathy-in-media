@@ -4,6 +4,8 @@ import polars as pl
 from datetime import datetime
 import asyncio
 import aiohttp
+from dynamic_extractor import dynamic_extractor
+from ctv_extractor import ctv_extractor
 
 
 schema = {"Person Name": pl.Utf8, "Incident Date": pl.Date, "Publication Date": pl.Date, "Publisher": pl.Utf8, "URL": pl.Utf8, "Paragraph Index": pl.Int64, "Paragraph Text": pl.Utf8, "URL": pl.Utf8}
@@ -43,14 +45,15 @@ def getMetaData(soup):
 # these two might need more robust error handling
 def getPublisher(news_article):
     pub = news_article.get("publisher", {})
-    # pub_name = pub.get("name")
     return pub.get("name")
+
 def getPublicationDate(news_article):
     pub_date = news_article.get("datePublished")
     if pub_date:
         date = datetime.fromisoformat(pub_date.replace("Z", "+00:00"))
         return date.date()
     return None
+
 # returns text with line breaks
 def extractAllText(soup):
     paragraphs = soup.article.find_all('p')
@@ -83,6 +86,4 @@ async def static_extractor(url, person, event_date):
             print("not enough text in ", url, "falling back on playwright") # try playwright
     except Exception as e:
         print("Static extraction failed for ", url, " trying Playwright...")
-    # todo return dynamic function
-    placeholder_df = pl.DataFrame(schema=schema)
-    return pl.DataFrame(schema=schema)
+    return await dynamic_extractor(url, person, event_date)
