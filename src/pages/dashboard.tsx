@@ -8,7 +8,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
   if (!email) return { props: { user: null } };
 
-  const res = await fetch(`http://localhost:3000/api/loadArticles`);
+  const res = await fetch(`http://localhost:3000/api/loadArticles`); // load from loadArticles.ts API route
   let articleProp = await res.json();
   const articles = articleProp['message'];
 
