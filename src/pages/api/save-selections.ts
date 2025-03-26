@@ -5,7 +5,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
     const dirPath = path.join(process.cwd(), "data", "annotations");
-    const filePath = path.join(dirPath, "selections.json");
+    const filePath = path.join(dirPath, "selections.json"); // TODO: rewrite this so it saves the username as well as the person/article being annotated
     // const filePath = path.join(process.cwd(), "", "selections.json");
 
     try {
