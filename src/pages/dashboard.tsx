@@ -25,7 +25,7 @@ export default function Dashboard({articles}) {
     return (
         <div>
             {articleArray.map((article, index) => (
-                <a href="https://www.w3schools.com">{article}</a> 
+                <a href="https://www.w3schools.com">{article}</a>  // TODO: change this so it routes to the individual annotation page for the person/article that's selected
             ))}
         </div>
     )
