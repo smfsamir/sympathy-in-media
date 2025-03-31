@@ -1,9 +1,24 @@
 import jsonData from '../../data/articles/Dexter_Reed-2024_04_10-foody.json'
 import React, {useState} from 'react';
 import { useRouter } from 'next/router';
+import { GetServerSideProps } from "next";
 // TODO: have to read the data based on which article is selected.
 
-const ArticleAnnotation: React.FC = () => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const { email } = context.query;
+  const { article } = context.query;
+  if (!article || !email ) return { props: { user: null } };
+
+  return { props: { article, email }};
+};
+
+export default function ArticleAnnotation({article, email}) {
+
+    // TODO 
+    // select the user's copy
+    // const jsonData = {};
+
+
     // State to track which paragraphs are expanded
     const [expanded, setExpanded] = useState(Array(jsonData.length).fill(false));
     const [checkboxes, setCheckboxes] = useState(
