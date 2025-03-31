@@ -1,23 +1,23 @@
-import jsonData from '../../data/articles/Dexter_Reed-2024_04_10-foody.json'
 import React, {useState} from 'react';
 import { useRouter } from 'next/router';
 import { GetServerSideProps } from "next";
-// TODO: have to read the data based on which article is selected.
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { email } = context.query;
+  const { email } = context.query; // TODO: select user-specific copy
   const { article } = context.query;
-  if (!article || !email ) return { props: { user: null } };
+  if (!article || !email ) return { props: { jsonData: null, email:null } };
+  const res = await fetch(`http://localhost:3000//api/loadOneArticle/?article=${article}`); // TODO: change on deployment
+  const data = await res.json();
+  if (!res.ok) {
+    return { props: { jsonData: null, email:null }};
+  } 
+  const jsonData = data.message;
+  
 
-  return { props: { article, email }};
+  return { props: { jsonData, email }};
 };
 
-export default function ArticleAnnotation({article, email}) {
-
-    // TODO 
-    // select the user's copy
-    // const jsonData = {};
-
+export default function ArticleAnnotation({jsonData, email}) {
 
     // State to track which paragraphs are expanded
     const [expanded, setExpanded] = useState(Array(jsonData.length).fill(false));
