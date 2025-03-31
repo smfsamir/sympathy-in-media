@@ -59,8 +59,29 @@ export default function Dashboard({articles}) {
     // if is annotated, then preface with a checkmark
 
     return (
-        <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+        <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", margin: "15px" }}>
             <h1 style={{ fontSize: "1.25rem", fontWeight: "bold", textAlign: "center" }}>{user}'s Annotations</h1>
+                {/* Logout Button - smaller and positioned in upper right */}
+            <button
+                onClick={() => {
+                    router.push("/");
+                }}
+                style={{
+                    position: "absolute",
+                    top: "10px",
+                    right: "10px",
+                    padding: "5px 10px",
+                    border: "none",
+                    borderRadius: "5px",
+                    backgroundColor: "#dc3545",
+                    color: "white",
+                    fontSize: "15px",
+                    cursor: "pointer",
+                }}
+            >
+                Logout
+            </button>
+               
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem" }}>
     
                 {articleArray.map((article, index) => (

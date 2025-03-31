@@ -211,24 +211,7 @@ export default function ArticleAnnotation({jsonData, email, article, selections}
           </div>
         ))}
       </div>
-        {/* /* Logout Button */}
-        {/* <button
-          onClick={() => {
-            router.push("/");
-          }}
-          style={{
-            marginTop: "20px",
-            padding: "10px 20px",
-            border: "none",
-            borderRadius: "5px",
-            backgroundColor: "#dc3545",
-            color: "white",
-            fontSize: "16px",
-            cursor: "pointer",
-          }}
-        >
-          Logout
-        </button> */} 
+
         {/* Save Button */}
       <button
           onClick={saveSelectionsToServer}
