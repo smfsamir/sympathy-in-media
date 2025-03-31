@@ -12,13 +12,12 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     return { props: { jsonData: null, email:null }};
   } 
   const jsonData = data.message;
-  const user = String(email).split("@")[0]; // not sure if this is correct 
+  const user = String(email).split("@")[0]; 
   let selections = null; 
   const res_selections = await fetch(`http://localhost:3000//api/loadSelections/?article=${article}&user=${user}`); // TODO: change on deployment
   const data_selections = await res_selections.json();
   if (res_selections.ok) {
-    selections = data_selections.message.selections;
-    console.log("GOT THE SELECTIONS: ", selections);
+    selections = data_selections.message.selections; // if we get rid of user/article info in the file content, will need to chaneg this line
   }
 
   return { props: { jsonData, email, article, selections }};
@@ -29,6 +28,7 @@ export default function ArticleAnnotation({jsonData, email, article, selections}
 
   // State to track which paragraphs are expanded
   const [expanded, setExpanded] = useState(Array(jsonData.length).fill(false));
+  // load selections if they exist, or set all options to false
   const [checkboxes, setCheckboxes] = useState( () => {
     return selections ? selections : jsonData.map(() => Array(16).fill(false));
   });
@@ -121,7 +121,7 @@ export default function ArticleAnnotation({jsonData, email, article, selections}
           padding: "50px",
         }}
       >
-        <h1>Welcome to the Dashboard!</h1>
+        <h1 style={{marginBottom: "10px", fontWeight: "600", fontSize: "20px"}}>Annotating: {article.split(".")[0]}</h1>
   
         {/* Paragraphs Section */}
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%" }}>

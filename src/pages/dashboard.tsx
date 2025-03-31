@@ -10,8 +10,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   let articleProp = await res.json();
   const articles = articleProp['message'];
 
-  console.log("ARTICLES: ", articles);
-
   return { props: { articles }};
 };
 
@@ -29,10 +27,8 @@ export default function Dashboard({articles}) {
     useEffect(() => {
         const checkAnnotations = async () => {
             const statuses = {};
-            // console.log("ARTICLE ARRAY: ", articleArray);
             for (const article of articleArray) {
-                // console.log("ARTICLE TO CHECK: ", article);
-                statuses[article] = await isAnnotated(article, email);
+                statuses[article] = await isAnnotated(article);
             }
             setAnnotationStatus(statuses);
         };
@@ -46,7 +42,6 @@ export default function Dashboard({articles}) {
     const isAnnotated = async (article) => {
 
         try {
-            // console.log("THE ARTICLE IS: ", article);
             const res = await fetch(`/api/loadSelections/?article=${article}&user=${user}`);
             if (res.ok) {
                 return true;
