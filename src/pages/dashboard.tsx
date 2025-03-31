@@ -29,20 +29,21 @@ export default function Dashboard({articles}) {
     useEffect(() => {
         const checkAnnotations = async () => {
             const statuses = {};
+            console.log("ARTICLE ARRAY: ", articleArray);
             for (const article of articleArray) {
+                console.log("ARTICLE TO CHECK: ", article);
                 statuses[article] = await isAnnotated(article, email);
             }
-            // setAnnotationStatus(await isAnnotated(articleArray, email));
+            setAnnotationStatus(statuses);
         };
         
         if (email) {
             checkAnnotations();
         }
-    }, [email, articleArray]);
+    }, []); // just does it once?
     
     
     const isAnnotated = async (article, email) => {
-        console.log("THE ARTICLE IS: ", articles);
 
         try {
             console.log("THE ARTICLE IS: ", article);
@@ -68,9 +69,10 @@ export default function Dashboard({articles}) {
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem" }}>
     
                 {articleArray.map((article, index) => (
-                    <div style={{ backgroundColor: "#f9f9f9", margin: "1rem", padding: "1rem", borderRadius: "8px", width: "90%", border: "1px solid #ddd",}}> 
+                    <div style={{ backgroundColor: "#f9f9f9", margin: "1rem", padding: "1rem", borderRadius: "8px", width: "90%", border: "1px solid #ddd",}}>
+                        
                         <button onClick={() => openArticle(article)}>
-                            {annotationStatus[article] && "YES"}{article}
+                            {annotationStatus[article] && <span>&#10004;</span>} {article}
                         </button>
                     </div>
                 ))}
