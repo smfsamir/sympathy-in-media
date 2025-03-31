@@ -29,9 +29,9 @@ export default function Dashboard({articles}) {
     useEffect(() => {
         const checkAnnotations = async () => {
             const statuses = {};
-            console.log("ARTICLE ARRAY: ", articleArray);
+            // console.log("ARTICLE ARRAY: ", articleArray);
             for (const article of articleArray) {
-                console.log("ARTICLE TO CHECK: ", article);
+                // console.log("ARTICLE TO CHECK: ", article);
                 statuses[article] = await isAnnotated(article, email);
             }
             setAnnotationStatus(statuses);
@@ -43,10 +43,10 @@ export default function Dashboard({articles}) {
     }, []); // just does it once?
     
     
-    const isAnnotated = async (article, email) => {
+    const isAnnotated = async (article) => {
 
         try {
-            console.log("THE ARTICLE IS: ", article);
+            // console.log("THE ARTICLE IS: ", article);
             const res = await fetch(`/api/loadSelections/?article=${article}&user=${user}`);
             if (res.ok) {
                 return true;
@@ -65,7 +65,7 @@ export default function Dashboard({articles}) {
 
     return (
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
-            <h1 style={{ fontSize: "1.25rem", fontWeight: "bold", textAlign: "center" }}>{user}'s Articles</h1>
+            <h1 style={{ fontSize: "1.25rem", fontWeight: "bold", textAlign: "center" }}>{user}'s Annotations</h1>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem" }}>
     
                 {articleArray.map((article, index) => (

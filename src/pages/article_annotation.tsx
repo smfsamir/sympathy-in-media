@@ -30,8 +30,28 @@ export default function ArticleAnnotation({jsonData, email, article, selections}
   // State to track which paragraphs are expanded
   const [expanded, setExpanded] = useState(Array(jsonData.length).fill(false));
   const [checkboxes, setCheckboxes] = useState( () => {
-    return selections ? selections : jsonData.map(() => [false, false, false]);
+    return selections ? selections : jsonData.map(() => Array(16).fill(false));
   });
+  
+  // TODO: change these descriptors if needed
+  const frameGroups = [
+    {
+      name: "Civilian sympathy-mobilizing",
+      frames: ["Vivid description of brutality", "Complex personhood - social and community relationships", "Complex personhood - lasting physical or psychological harm"]
+    },
+    {
+      name: "Civilian sympathy-disrupting",
+      frames: ["Prior deliquency", "Deliquency during incident"]
+    },
+    {
+      name: "Police sympathy-mobilizing",
+      frames: ["General danger or difficulty of policing", "Danger or difficulty of policing in this specific case", "Officer injury", "Context of increasing crime"]
+    },
+    {
+      name: "Police sympathy-disrupting",
+      frames: ["Previous criminal/civil lawsuits against officer or department", "Connects to previous incidents", "Highlights systematic abuses of power towards marginalized groups", "Police misconduct and lack (or slow-pace) of justice for civilian"]
+    }
+  ];
 
   const toggleExpand = (index: number) => {
       setExpanded((prev) => {
@@ -151,24 +171,48 @@ export default function ArticleAnnotation({jsonData, email, article, selections}
                     backgroundColor: "#ffffff",
                   }}
                 >
-                  {checkboxes[index].map((checked, checkboxIndex) => ( 
-                <label key={checkboxIndex}>
-                  <input
-                    type="checkbox"
-                    checked={checked}
-                    onChange={() => handleCheckboxChange(index, checkboxIndex)}
-                  />
-                  Option {checkboxIndex + 1}
-                </label>
-              ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-  
-        {/* Logout Button
-        <button
+                  {frameGroups.map((group, groupIndex) => (
+                  <div key={groupIndex} style={{ marginBottom: "15px" }}>
+                    <h4 style={{ marginBottom: "8px", marginTop: "5px", fontWeight: "600" }}>{group.name}</h4>
+                    <div style={{ display: "flex", flexWrap: "wrap", flexDirection: "column"}}>
+                      {group.frames.map((frameId, frameIndex) => {
+                        const globalFrameIndex = groupIndex * 4 + frameIndex; // overall index
+                        return (
+                          <div 
+                            key={frameIndex} 
+                            style={{ 
+                              marginRight: "15px",
+                              marginBottom: "8px",
+                            }}
+                          >
+                            <label 
+                              style={{ 
+                                display: "flex", 
+                                alignItems: "center",
+                                cursor: "pointer"
+                              }}
+                            >
+                              <input
+                                type="checkbox"
+                                checked={checkboxes[index][globalFrameIndex]}
+                                style={{ margin: "0 8px 0 0" }}
+                                onChange={() => handleCheckboxChange(index, globalFrameIndex)}
+                              />
+                               <span>{frameId}</span>
+                            </label>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+        {/* /* Logout Button */}
+        {/* <button
           onClick={() => {
             router.push("/");
           }}
@@ -184,7 +228,7 @@ export default function ArticleAnnotation({jsonData, email, article, selections}
           }}
         >
           Logout
-        </button> */}
+        </button> */} 
         {/* Save Button */}
       <button
           onClick={saveSelectionsToServer}
