@@ -14,10 +14,10 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const jsonData = data.message;
   
 
-  return { props: { jsonData, email }};
+  return { props: { jsonData, email, article }};
 };
 
-export default function ArticleAnnotation({jsonData, email}) {
+export default function ArticleAnnotation({jsonData, email, article}) {
 
     // State to track which paragraphs are expanded
     const [expanded, setExpanded] = useState(Array(jsonData.length).fill(false));
@@ -51,7 +51,7 @@ export default function ArticleAnnotation({jsonData, email}) {
           const response = await fetch("/api/save-selections", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ selections: checkboxes }),
+            body: JSON.stringify({ email: email, article: article, selections: checkboxes }),
           });
     
           if (response.ok) {
@@ -71,6 +71,7 @@ export default function ArticleAnnotation({jsonData, email}) {
     // const names = article_fnames.map((fname: string) => {
     //     return fname.split('_')[0];
     // });
+    
     return (
         <div
           style={{

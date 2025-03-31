@@ -22,7 +22,7 @@ export default function Dashboard({articles}) {
     const articleArray = JSON.parse(articles);
     
     const openArticle = (article) => {
-        router.push(`/article_annotation/?email=${email}/&article=${article}`); // open apporpriate article
+        router.push(`/article_annotation/?email=${email}&article=${article}`); // open apporpriate article
     };
 
     return (
