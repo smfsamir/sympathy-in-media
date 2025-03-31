@@ -2,28 +2,36 @@ import React, {useState} from 'react';
 import { useRouter } from 'next/router';
 import { GetServerSideProps } from "next";
 
+// TODO: load in selections if it exists for this user-article pair
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { email } = context.query; // TODO: select user-specific copy
+  const { email } = context.query;
   const { article } = context.query;
-  if (!article || !email ) return { props: { jsonData: null, email:null } };
+  if (!article || !email ) return { props: { jsonData: null, email:null, article:null, selections:null } };
   const res = await fetch(`http://localhost:3000//api/loadOneArticle/?article=${article}`); // TODO: change on deployment
   const data = await res.json();
   if (!res.ok) {
     return { props: { jsonData: null, email:null }};
   } 
   const jsonData = data.message;
-  
+  const user = String(email).split("@")[0]; // not sure if this is correct 
+  let selections = null; 
+  const res_selections = await fetch(`http://localhost:3000//api/loadSelections/?article=${article}&user=${user}`); // TODO: change on deployment
+  const data_selections = await res_selections.json();
+  if (res.ok) {
+    selections = data_selections.message.selections;
+    console.log("GOT THE SELECTIONS: ", selections);
+  }
 
-  return { props: { jsonData, email, article }};
+  return { props: { jsonData, email, article, selections }};
 };
 
-export default function ArticleAnnotation({jsonData, email, article}) {
+export default function ArticleAnnotation({jsonData, email, article, selections}) {
 
     // State to track which paragraphs are expanded
     const [expanded, setExpanded] = useState(Array(jsonData.length).fill(false));
-    const [checkboxes, setCheckboxes] = useState(
-        jsonData.map(() => [false, false, false]) // Initialize each paragraph with 3 checkboxes
-      );
+    const [checkboxes, setCheckboxes] = useState( () => {
+      return selections ? selections : jsonData.map(() => [false, false, false]);
+    });
 
     const toggleExpand = (index: number) => {
         setExpanded((prev) => {
@@ -134,7 +142,7 @@ export default function ArticleAnnotation({jsonData, email, article}) {
                       backgroundColor: "#ffffff",
                     }}
                   >
-                    {checkboxes[index].map((checked, checkboxIndex) => (
+                    {checkboxes[index].map((checked, checkboxIndex) => ( // when im saving selections i get cant read undefined .map
                   <label key={checkboxIndex}>
                     <input
                       type="checkbox"
