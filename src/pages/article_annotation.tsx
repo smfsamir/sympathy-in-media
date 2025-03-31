@@ -7,7 +7,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const { email } = context.query;
   const { article } = context.query;
   if (!article || !email ) return { props: { jsonData: null, email:null, article:null, selections:null } };
-  const res = await fetch(`http://localhost:3000//api/loadOneArticle/?article=${article}`); // TODO: change on deployment
+  const res = await fetch(`http://localhost:3000/api/loadOneArticle/?article=${article}`); // TODO: change on deployment
   const data = await res.json();
   if (!res.ok) {
     return { props: { jsonData: null, email:null }};
@@ -17,7 +17,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   let selections = null; 
   const res_selections = await fetch(`http://localhost:3000//api/loadSelections/?article=${article}&user=${user}`); // TODO: change on deployment
   const data_selections = await res_selections.json();
-  if (res.ok) {
+  if (res_selections.ok) {
     selections = data_selections.message.selections;
     console.log("GOT THE SELECTIONS: ", selections);
   }
@@ -142,7 +142,7 @@ export default function ArticleAnnotation({jsonData, email, article, selections}
                       backgroundColor: "#ffffff",
                     }}
                   >
-                    {checkboxes[index].map((checked, checkboxIndex) => ( // when im saving selections i get cant read undefined .map
+                    {checkboxes[index].map((checked, checkboxIndex) => ( 
                   <label key={checkboxIndex}>
                     <input
                       type="checkbox"

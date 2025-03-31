@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { useRouter } from 'next/router';
 import { GetServerSideProps } from "next";
 
@@ -10,6 +10,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   let articleProp = await res.json();
   const articles = articleProp['message'];
 
+  console.log("ARTICLES: ", articles);
+
   return { props: { articles }};
 };
 
@@ -18,18 +20,63 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 export default function Dashboard({articles}) {
     // Define state with TypeScript types
     const router = useRouter();
-    const { email } = router.query; // this grabs the email from the URL
+    const { email } = router.query; 
     const articleArray = JSON.parse(articles);
+    const [annotationStatus, setAnnotationStatus] = useState({});
+    const user = email.split("@")[0];
+
+
+    useEffect(() => {
+        const checkAnnotations = async () => {
+            const statuses = {};
+            for (const article of articleArray) {
+                statuses[article] = await isAnnotated(article, email);
+            }
+            // setAnnotationStatus(await isAnnotated(articleArray, email));
+        };
+        
+        if (email) {
+            checkAnnotations();
+        }
+    }, [email, articleArray]);
     
+    
+    const isAnnotated = async (article, email) => {
+        console.log("THE ARTICLE IS: ", articles);
+
+        try {
+            console.log("THE ARTICLE IS: ", article);
+            const res = await fetch(`/api/loadSelections/?article=${article}&user=${user}`);
+            if (res.ok) {
+                return true;
+            } 
+            return false;
+        } catch (error) {
+            return false;
+        }
+    }
+
     const openArticle = (article) => {
-        router.push(`/article_annotation/?email=${email}&article=${article}`); // open apporpriate article
+        router.push(`/article_annotation/?email=${email}&article=${article}`); 
     };
 
+    // if is annotated, then preface with a checkmark
+
     return (
-        <div>
-            {articleArray.map((article, index) => (
-                <button onClick={() => openArticle(article)}>{article}</button>
-            ))}
+        <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+            <h1 style={{ fontSize: "1.25rem", fontWeight: "bold", textAlign: "center" }}>{user}'s Articles</h1>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem" }}>
+    
+                {articleArray.map((article, index) => (
+                    <div style={{ backgroundColor: "#f9f9f9", margin: "1rem", padding: "1rem", borderRadius: "8px", width: "90%", border: "1px solid #ddd",}}> 
+                        <button onClick={() => openArticle(article)}>
+                            {annotationStatus[article] && "YES"}{article}
+                        </button>
+                    </div>
+                ))}
+    
+            </div>
         </div>
-    )
+    );
+    
 };

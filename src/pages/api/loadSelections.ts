@@ -13,6 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Respon
     return res.status(400).json({ message: null});
   }
   const fileName = `data/annotations/` + user + "_" + article;
+  // need better handling for when not found. shouldn't be an error but a 404
   try {
     const content = fs.readFileSync(fileName, "utf8");
     res.status(200).json({ message: JSON.parse(content) })
