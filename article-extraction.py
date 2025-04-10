@@ -3,18 +3,25 @@ import polars as pl
 from datetime import datetime
 from playwright.async_api import async_playwright
 import re
-import html
-from concurrent.futures import ThreadPoolExecutor
 import polars as pl
-import csv
 import json
 from bs4 import BeautifulSoup
 import aiohttp
+import os
 
 
 schema = {"Person Name": pl.Utf8, "Incident Date": pl.Date, "Publication Date": pl.Date, "Publisher": pl.Utf8, "URL": pl.Utf8, "Paragraph Index": pl.Int64, "Paragraph Text": pl.Utf8, "URL": pl.Utf8}
 
+article_count = len(os.listdir("./data/articles")) # i wanna keep track of how many articles we have processed by going into data/article and checking how many files
 # general helpers
+def write_article(text, person, publisher):
+    global article_count
+    filename = f"{article_count}_{person}_{publisher}.json"
+    with open("./data/articles/" + filename, 'w') as f:
+        json.dump(text, f, indent=2)
+    article_count +=  1
+
+
 def get_publication_date(metadata):
     if not metadata:
         return None     
@@ -140,6 +147,7 @@ async def static_extractor(url, person, event_date):
         publication_date = get_publication_date(metadata)
         text = extract_all_text(soup)
         if (len(text) >= 5):
+            write_article(text, person, publisher)
             return add_data(publisher, url, publication_date, text, person, event_date)
         else:
             print("Not enough text in ", url, " trying Playwright") # try playwright
@@ -253,6 +261,8 @@ async def dynamic_extractor(url, person, event_date):
             df = df.vstack(temp)
             index += 1
         df.rechunk()
+        write_article(paras, person, publisher)
+
 
         await browser.close()
     return df
@@ -297,6 +307,8 @@ async def cbc_extractor(url, person, event_date):
             df = df.vstack(temp)
             index += 1
         df.rechunk()
+        write_article(paras, person, publisher)
+
 
         await browser.close()
     return df
@@ -338,6 +350,8 @@ async def ctv_extractor(url, person, event_date):
             df = df.vstack(temp)
             index += 1
         df.rechunk()
+        write_article(paras, person, publisher)
+
 
         await browser.close()
     return df
