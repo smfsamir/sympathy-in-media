@@ -12,14 +12,14 @@ import os
 
 schema = {"Person Name": pl.Utf8, "Incident Date": pl.Date, "Publication Date": pl.Date, "Publisher": pl.Utf8, "URL": pl.Utf8, "Paragraph Index": pl.Int64, "Paragraph Text": pl.Utf8, "URL": pl.Utf8}
 
-article_count = len(os.listdir("./data/articles")) # i wanna keep track of how many articles we have processed by going into data/article and checking how many files
+article_count = len(os.listdir("./data/articles")) 
 # general helpers
 def write_article(text, person, publisher):
     global article_count
+    article_count +=  1
     filename = f"{article_count}_{person}_{publisher}.json"
     with open("./data/articles/" + filename, 'w') as f:
         json.dump(text, f, indent=2)
-    article_count +=  1
 
 
 def get_publication_date(metadata):
@@ -124,6 +124,7 @@ def extract_all_text(soup):
 def add_data(publisher, url, publication_date, paras, person, event_date):
     # lines = text.split("\n")
     df = pl.DataFrame(schema=schema)
+    i = 0
     for p in paras:
         cleaned_p = clean_paragraph(p)
         if cleaned_p is None:
@@ -256,15 +257,16 @@ async def dynamic_extractor(url, person, event_date):
             if p == "stop phrase":
                 df.rechunk()
                 await browser.close()
+                write_article(paras, person, publisher)
                 return df
             temp = pl.DataFrame({"Person Name": person, "Incident Date": event_date, "Publication Date": published_on, "Publisher": publisher, "URL":url, "Paragraph Index": [index], "Paragraph Text": p})
             df = df.vstack(temp)
             index += 1
         df.rechunk()
-        write_article(paras, person, publisher)
-
 
         await browser.close()
+        write_article(paras, person, publisher)
+
     return df
 
 # extracts content from cbc articles
@@ -302,15 +304,14 @@ async def cbc_extractor(url, person, event_date):
             if p == "stop phrase":
                 df.rechunk()
                 await browser.close()
+                write_article(paras, person, publisher)
                 return df
             temp = pl.DataFrame({"Person Name": person, "Incident Date": event_date, "Publication Date": published_on, "Publisher": publisher, "URL":url, "Paragraph Index": [index], "Paragraph Text": p})
             df = df.vstack(temp)
             index += 1
         df.rechunk()
-        write_article(paras, person, publisher)
-
-
         await browser.close()
+        write_article(paras, person, publisher)
     return df
 
 # extracts content from ctv articles
@@ -345,15 +346,15 @@ async def ctv_extractor(url, person, event_date):
             if p == "stop phrase":
                 df.rechunk()
                 await browser.close()
+                write_article(paras, person, publisher)
                 return df
             temp = pl.DataFrame({"Person Name": person, "Incident Date": event_date, "Publication Date": published_on, "Publisher": publisher, "URL":url, "Paragraph Index": [index], "Paragraph Text": p})
             df = df.vstack(temp)
             index += 1
         df.rechunk()
+        await browser.close()
         write_article(paras, person, publisher)
 
-
-        await browser.close()
     return df
 
 # calls appropriate extractor for a given row entry 

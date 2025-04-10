@@ -36,7 +36,7 @@ export default function Dashboard({articles}) {
         if (email) {
             checkAnnotations();
         }
-    }, []); // just does it once?
+    }, []); 
     
     
     const isAnnotated = async (article) => {
