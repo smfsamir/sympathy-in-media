@@ -12,13 +12,13 @@ import os
 
 schema = {"Person Name": pl.Utf8, "Incident Date": pl.Date, "Publication Date": pl.Date, "Publisher": pl.Utf8, "URL": pl.Utf8, "Paragraph Index": pl.Int64, "Paragraph Text": pl.Utf8, "URL": pl.Utf8}
 
-article_count = len(os.listdir("./data/articles")) 
+article_count = len(os.listdir("./data/test")) 
 # general helpers
 def write_article(text, person, publisher):
     global article_count
     article_count +=  1
     filename = f"{article_count}_{person}_{publisher}.json"
-    with open("./data/articles/" + filename, 'w') as f:
+    with open("./data/test/" + filename, 'w') as f: ## !!!
         json.dump(text, f, indent=2)
 
 
@@ -42,8 +42,8 @@ def get_publication_date(metadata):
 
 def clean_paragraph(text):
     stop_phrases = [ "related articles", "related stories", "related news", "recommended videos", "trending now", "you may also like", "recommended for you",
-                    "more stories","read next","other news","popular articles","top stories","top news","top articles","most popular","trending videos",
-                    "trending articles","trending news","trending stories","trending now","with files from", "thanks for reading this article", "thank you for reading this article"]
+                    "more stories","read next","other news","popular articles","top stories","top news","top articles","most popular articles", "most popular stories", "trending videos",
+                    "trending articles","trending news","trending stories","trending now","with files from", "thanks for reading this article", "thank you for reading this article", "most commented articles"]
     for phrase in stop_phrases:
         if phrase in text.lower():
             return "stop phrase"
@@ -56,8 +56,8 @@ def clean_paragraph(text):
     if "©" in text:
         return None
     
-    account_words = ["subscribe now","create an account","sign up for an account","sign in if you have an account","sign-in if you have an account",
-                     "log in if you have an account","sign in to your account","sign-in to your account","log in to your account",
+    account_words = ["subscribe now","create an account","sign up for an account","sign in if you have an account","sign-in if you have an account", "subscribe to get the latest",
+                     "log in if you have an account","sign in to your account","sign-in to your account","log in to your account", "type your email", "enter your email",
                      "recaptcha", "captcha", "enter your email address"]
     for word in account_words:
         if word in text.lower():
@@ -244,12 +244,13 @@ async def dynamic_extractor(url, person, event_date):
         metadata = await get_dynamic_metadata(page)
         publisher = await get_dynamic_publisher(page, metadata, url)
         published_on = get_publication_date(metadata)
-
-        paras = await page.locator('article :is(p, h1, h2, figcaption)').all_text_contents() 
+        # stopped grabbing figcaptions
+        paras = await page.locator('article :is(p, h1, h2)').all_text_contents() 
         if not paras:
-            paras = await page.locator(':is(p, h1, h2, figcaption)').all_text_contents() 
+            paras = await page.locator(':is(p, h1, h2)').all_text_contents() 
 
         index = 0
+        cleaned_paras = []
         for p in paras:
             p = clean_paragraph(p)
             if p is None:
@@ -257,15 +258,16 @@ async def dynamic_extractor(url, person, event_date):
             if p == "stop phrase":
                 df.rechunk()
                 await browser.close()
-                write_article(paras, person, publisher)
+                write_article(cleaned_paras, person, publisher)
                 return df
             temp = pl.DataFrame({"Person Name": person, "Incident Date": event_date, "Publication Date": published_on, "Publisher": publisher, "URL":url, "Paragraph Index": [index], "Paragraph Text": p})
             df = df.vstack(temp)
             index += 1
+            cleaned_paras.append(p)
         df.rechunk()
 
         await browser.close()
-        write_article(paras, person, publisher)
+        write_article(cleaned_paras, person, publisher)
 
     return df
 
@@ -286,17 +288,21 @@ async def cbc_extractor(url, person, event_date):
 
         headline = await page.locator("h1.detailHeadline").all_text_contents() or []
         byline = await page.locator("h2.deck").all_text_contents() or []
-        img = []
-        try:
-            img_content = await page.locator("figcaption").first.text_content()
-            if img_content:
-                img = [img_content]
-        except:
-            pass        
-        body = await page.locator(".story p:not(article p), .story figcaption:not(article figcaption), .story h2:not(article h2)").all_text_contents() or []
-        paras = headline + byline + img + body
+        # !!!
+        # dont get img content
+        # also removed figcaption
+        # img = []
+        # try:
+        #     img_content = await page.locator("figcaption").first.text_content()
+        #     if img_content:
+        #         img = [img_content]
+        # except:
+        #     pass        
+        body = await page.locator(".story p:not(article p), .story h2:not(article h2)").all_text_contents() or []
+        paras = headline + byline + body
 
         index = 0
+        cleaned_paras = []
         for p in paras:
             p = clean_paragraph(p)
             if p is None:
@@ -304,14 +310,16 @@ async def cbc_extractor(url, person, event_date):
             if p == "stop phrase":
                 df.rechunk()
                 await browser.close()
-                write_article(paras, person, publisher)
+                write_article(cleaned_paras, person, publisher)
                 return df
             temp = pl.DataFrame({"Person Name": person, "Incident Date": event_date, "Publication Date": published_on, "Publisher": publisher, "URL":url, "Paragraph Index": [index], "Paragraph Text": p})
             df = df.vstack(temp)
             index += 1
+            cleaned_paras.append(p)
+
         df.rechunk()
         await browser.close()
-        write_article(paras, person, publisher)
+        write_article(cleaned_paras, person, publisher)
     return df
 
 # extracts content from ctv articles
@@ -339,6 +347,7 @@ async def ctv_extractor(url, person, event_date):
         body = await page.locator('article.b-article-body :is(p, h1, h2, h3)').all_text_contents() or []
         paras = headline + caption + body
         index = 0
+        cleaned_paras = []
         for p in paras:
             p = clean_paragraph(p)
             if p is None:
@@ -346,14 +355,15 @@ async def ctv_extractor(url, person, event_date):
             if p == "stop phrase":
                 df.rechunk()
                 await browser.close()
-                write_article(paras, person, publisher)
+                write_article(cleaned_paras, person, publisher)
                 return df
             temp = pl.DataFrame({"Person Name": person, "Incident Date": event_date, "Publication Date": published_on, "Publisher": publisher, "URL":url, "Paragraph Index": [index], "Paragraph Text": p})
             df = df.vstack(temp)
             index += 1
+            cleaned_paras.append(p)
         df.rechunk()
         await browser.close()
-        write_article(paras, person, publisher)
+        write_article(cleaned_paras, person, publisher)
 
     return df
 
@@ -394,7 +404,7 @@ async def process_articles():
         await asyncio.sleep(2)  # sleep for 2 seconds to avoid rate limits
     
     print(f"Final dataset size: {len(df)}")
-    df.write_csv("./data/datasets/processed_dataset.csv")
+    df.write_csv("./data/datasets/test_processed_dataset.csv") # !!! change
 
 asyncio.run(process_articles())
 

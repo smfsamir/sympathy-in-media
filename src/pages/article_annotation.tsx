@@ -24,20 +24,15 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 };
 
 export default function ArticleAnnotation({jsonData, email, article, selections}) {
+
   const router = useRouter();
 
-  // State to track which paragraphs are expanded
-  const [expanded, setExpanded] = useState(Array(jsonData.length).fill(false));
-  // load selections if they exist, or set all options to false
-  const [checkboxes, setCheckboxes] = useState( () => {
-    return selections ? selections : jsonData.map(() => Array(16).fill(false));
-  });
-  
+    // !!! changes : frame groups, 2 helper functions
   // TODO: change these descriptors if needed
   const frameGroups = [
     {
       name: "Civilian sympathy-mobilizing",
-      frames: ["Vivid description of brutality", "Complex personhood - social and community relationships", "Complex personhood - lasting physical or psychological harm"]
+      frames: ["Description of brutality", "Complex personhood - social and community relationships", "Complex personhood - lasting physical or psychological harm", "NEW FRAME"] // would adding a new frame mess up the previously saved annotations?
     },
     {
       name: "Civilian sympathy-disrupting",
@@ -45,13 +40,44 @@ export default function ArticleAnnotation({jsonData, email, article, selections}
     },
     {
       name: "Police sympathy-mobilizing",
-      frames: ["General danger or difficulty of policing", "Danger or difficulty of policing in this specific case", "Officer injury", "Context of increasing crime"]
+      frames: ["General danger or difficulty of policing", "Danger or difficulty of policing in this specific case", "Officer injury or career setback", "Context of increasing crime or high-crime area", "Officer heroism in this case or previously"]
     },
     {
       name: "Police sympathy-disrupting",
       frames: ["Previous criminal/civil lawsuits against officer or department", "Connects to previous incidents", "Highlights systematic abuses of power towards marginalized groups", "Police misconduct and lack (or slow-pace) of justice for civilian"]
     }
   ];
+
+  const getFrameNames = () => {
+    const allFrames = [];
+    frameGroups.forEach(group => {
+      group.frames.forEach(frame => {
+        allFrames.push(frame);
+      });
+    });
+    return allFrames;
+  };
+
+  const createEmptyDict = () => {
+    const frameDict = {};
+    getFrameNames().forEach(frame => {
+      frameDict[frame] = false;
+    });
+    return frameDict;
+  };
+
+  // State to track which paragraphs are expanded
+  const [expanded, setExpanded] = useState(Array(jsonData.length).fill(false));
+  // load selections if they exist, or set all options to false
+  // !!!
+  const [checkboxes, setCheckboxes] = useState(() => {
+    if (selections) {
+      return selections; 
+    } else {
+      return jsonData.map(() => createEmptyDict());
+    }
+  });
+  
 
   const toggleExpand = (index: number) => {
       setExpanded((prev) => {
@@ -61,17 +87,17 @@ export default function ArticleAnnotation({jsonData, email, article, selections}
       });
     };
 
-  const handleCheckboxChange = (index, checkboxIndex) => {
-      setCheckboxes((prev) => {
-          const newCheckboxes = prev.map((checkboxGroup, i) =>
-          i === index
-              ? checkboxGroup.map((checked, j) =>
-                  j === checkboxIndex ? !checked : checked
-              )
-              : checkboxGroup
-          );
-          return newCheckboxes;
-      });
+  // !!!!
+  const handleCheckboxChange = (paragraphIndex, frameName) => {
+    setCheckboxes((prev) => {
+      const newCheckboxes = [...prev];
+      // Toggle the boolean value for this specific frame in this paragraph
+      newCheckboxes[paragraphIndex] = {
+        ...newCheckboxes[paragraphIndex],
+        [frameName]: !newCheckboxes[paragraphIndex][frameName]
+      };
+      return newCheckboxes;
+    });
   };
 
   function goHome() {
@@ -175,34 +201,31 @@ export default function ArticleAnnotation({jsonData, email, article, selections}
                   <div key={groupIndex} style={{ marginBottom: "15px" }}>
                     <h4 style={{ marginBottom: "8px", marginTop: "5px", fontWeight: "600" }}>{group.name}</h4>
                     <div style={{ display: "flex", flexWrap: "wrap", flexDirection: "column"}}>
-                      {group.frames.map((frameId, frameIndex) => {
-                        const globalFrameIndex = groupIndex * 4 + frameIndex; // overall index
-                        return (
-                          <div 
-                            key={frameIndex} 
+                    {group.frames.map((frameName, frameIndex) => (
+                        <div 
+                          key={frameIndex} 
+                          style={{ 
+                            marginRight: "15px",
+                            marginBottom: "8px",
+                          }}
+                        >
+                          <label 
                             style={{ 
-                              marginRight: "15px",
-                              marginBottom: "8px",
+                              display: "flex", 
+                              alignItems: "center",
+                              cursor: "pointer"
                             }}
                           >
-                            <label 
-                              style={{ 
-                                display: "flex", 
-                                alignItems: "center",
-                                cursor: "pointer"
-                              }}
-                            >
-                              <input
-                                type="checkbox"
-                                checked={checkboxes[index][globalFrameIndex]}
-                                style={{ margin: "0 8px 0 0" }}
-                                onChange={() => handleCheckboxChange(index, globalFrameIndex)}
-                              />
-                               <span>{frameId}</span>
-                            </label>
-                          </div>
-                        );
-                      })}
+                            <input
+                              type="checkbox"
+                              checked={checkboxes[index][frameName] || false}
+                              style={{ margin: "0 8px 0 0" }}
+                              onChange={() => handleCheckboxChange(index, frameName)}
+                            />
+                             <span>{frameName}</span>
+                          </label>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 ))}
@@ -212,10 +235,10 @@ export default function ArticleAnnotation({jsonData, email, article, selections}
         ))}
       </div>
 
-        {/* Save Button */}
+      {/* Save Button */}
       <button
-          onClick={saveSelectionsToServer}
-          style={{
+        onClick={saveSelectionsToServer}
+        style={{
           marginTop: "20px",
           padding: "10px 20px",
           border: "none",
@@ -224,10 +247,10 @@ export default function ArticleAnnotation({jsonData, email, article, selections}
           color: "white",
           fontSize: "16px",
           cursor: "pointer",
-          }}
+        }}
       >
-          Save
+        Save
       </button>
-      </div>
-    );
-};
+    </div>
+  );
+}
