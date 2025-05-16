@@ -12,13 +12,13 @@ import os
 
 schema = {"Person Name": pl.Utf8, "Incident Date": pl.Date, "Publication Date": pl.Date, "Publisher": pl.Utf8, "URL": pl.Utf8, "Paragraph Index": pl.Int64, "Paragraph Text": pl.Utf8, "URL": pl.Utf8}
 
-article_count = len(os.listdir("./data/articles")) 
+article_count = len(os.listdir("./data/articles/")) 
 # general helpers
 def write_article(text, person, publisher):
     global article_count
     article_count +=  1
     filename = f"{article_count}_{person}_{publisher}.json"
-    with open("./data/articles" + filename, 'w') as f: ## !!!
+    with open("./data/articles/" + filename, 'w') as f: ## !!!
         json.dump(text, f, indent=2)
 
 
@@ -237,18 +237,24 @@ async def dynamic_extractor(url, person, event_date):
     async with async_playwright() as p:
 
         browser = await p.webkit.launch(headless=True)
+        # browser = await p.webkit.launch(headless=False, slow_mo=50)
         context = await browser.new_context()
         page = await context.new_page()
-        await page.goto(url)
+        # print(f"[DEBUG] Navigating to {url} from GENERAL")
+        await page.goto(url, timeout=60000, wait_until="domcontentloaded") 
 
         metadata = await get_dynamic_metadata(page)
         publisher = await get_dynamic_publisher(page, metadata, url)
         published_on = get_publication_date(metadata)
         # stopped grabbing figcaptions
-        paras = await page.locator('article :is(p, h1, h2)').all_text_contents() 
-        if not paras:
-            paras = await page.locator(':is(p, h1, h2)').all_text_contents() 
-
+        # replaced if/else with try/except for safer handling when no article tag
+        try:
+            await page.wait_for_selector("article :is(p, h1, h2)", timeout=5000)
+            paras = await page.locator('article :is(p, h1, h2)').all_text_contents()
+        except:
+            # print(f"[DEBUG] Fallback to generic selector for {url}")
+            await page.wait_for_selector(":is(p, h1, h2)", timeout=5000)
+            paras = await page.locator(':is(p, h1, h2)').all_text_contents()
         index = 0
         cleaned_paras = []
         for p in paras:
@@ -279,7 +285,9 @@ async def cbc_extractor(url, person, event_date):
         browser = await p.webkit.launch(headless=True)
         context = await browser.new_context()
         page = await context.new_page()
+        print(f"[DEBUG] Navigating to {url} from CBC")
         await page.goto(url)
+
 
         # get/set data that will be re-used first
         metadata = await get_dynamic_metadata(page)
@@ -330,6 +338,7 @@ async def ctv_extractor(url, person, event_date):
         browser = await p.webkit.launch(headless=True)
         context = await browser.new_context()
         page = await context.new_page()
+        print(f"[DEBUG] Navigating to {url} from CTV")
         await page.goto(url)
 
         metadata = await get_dynamic_metadata(page)
@@ -337,15 +346,16 @@ async def ctv_extractor(url, person, event_date):
         published_on = get_publication_date(metadata)
 
         headline = await page.locator("h1.b-headline").all_text_contents() or []
-        caption = []
-        try:
-            caption_content = await page.locator("figure.c-media-item").first.text_content()
-            if caption_content:
-                caption = [caption_content]
-        except:
-            pass        
+        # dont get image caption 
+        # caption = []
+        # try:
+        #     caption_content = await page.locator("figure.c-media-item").first.text_content()
+        #     if caption_content:
+        #         caption = [caption_content]
+        # except:
+        #     pass        
         body = await page.locator('article.b-article-body :is(p, h1, h2, h3)').all_text_contents() or []
-        paras = headline + caption + body
+        paras = headline + body
         index = 0
         cleaned_paras = []
         for p in paras:
