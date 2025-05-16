@@ -12,13 +12,13 @@ import os
 
 schema = {"Person Name": pl.Utf8, "Incident Date": pl.Date, "Publication Date": pl.Date, "Publisher": pl.Utf8, "URL": pl.Utf8, "Paragraph Index": pl.Int64, "Paragraph Text": pl.Utf8, "URL": pl.Utf8}
 
-article_count = len(os.listdir("./data/test")) 
+article_count = len(os.listdir("./data/articles")) 
 # general helpers
 def write_article(text, person, publisher):
     global article_count
     article_count +=  1
     filename = f"{article_count}_{person}_{publisher}.json"
-    with open("./data/test/" + filename, 'w') as f: ## !!!
+    with open("./data/articles" + filename, 'w') as f: ## !!!
         json.dump(text, f, indent=2)
 
 
@@ -404,7 +404,7 @@ async def process_articles():
         await asyncio.sleep(2)  # sleep for 2 seconds to avoid rate limits
     
     print(f"Final dataset size: {len(df)}")
-    df.write_csv("./data/datasets/test_processed_dataset.csv") # !!! change
+    df.write_csv("./data/datasets/processed_dataset.csv") # !!! change as needed
 
 asyncio.run(process_articles())
 
