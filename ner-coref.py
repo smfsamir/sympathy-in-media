@@ -1,25 +1,24 @@
 import openai
 from dotenv import dotenv_values
+from collections import defaultdict
+import ast
+import os
+import json
+from sklearn.metrics import classification_report
+
+
+AFFILIATION_MAP = {
+    "Victim-aligned": "Victim-aligned",
+    "Government officials": "Police-aligned",
+    "Policing institution officials": "Police-aligned"
+}
 
 '''
-Give it the entire article and prompt it to generate a list of 
-the people in each paragraph and their affiliation 
-    - Either Punishment Bureaucracy (includes police, the mayor, police oversight bodies)
-    - Civilian aligned (victim, victim's family, attorney, civil rights activists)
-    - {
-        "Civilian-aligned": [Brydon Whitstone, Darren Stanley, 
-            Witnesses] 
-        "Punishment Bureaucracy": [Maureen Levy (RCMP Chief), Drew Wilby (Justice Ministry Spokesman), ...]
-    }
-    - [
-        [,..., "Drew Wilby", "Drew Wilby", "Drew Wilby", "Levy", "Levy", "Context"]
-    ]
-===========================      PROMPT      =============================================
+
+===========================      PROMPTS      =============================================
 
 # NOTE
-## currently: testing with Dexter Reed article. Able to send and receive but Task 1 seems to miss entities, Task 2 skipped paragraphs.
 ## Questions:
-## Naming entities - I'm not sure that my descriptions of affiliations are sufficient
 ## I said "dominant entity" as the person whose perspective is in that paragraph since the paragraph could mention several entities
 ## for part b (testing) do I just do that manually on a subset of the articles we have so far
 ## TLDR i dont think my prompt is precise or robust enough so results are not great
@@ -30,7 +29,8 @@ the people in each paragraph and their affiliation
 # so one paragraph = 1 list 
 
 '''
-prompt = """
+# Task 1: idenitfy individuals and their affiliations
+task1_prompt = """
 Read the provided article on an incident of police violence to complete the following two tasks. Task 1: Identify each person mentioned in the article and determine their affiliation. The same person could be mentioned many times by different referring expressions.
 
 For instance, the terms "he", "Bob Dylan", "the singer", and "Dylan" all refer to the same entity.
@@ -67,10 +67,54 @@ def load_client():
         )
     return client
 
+def map_affiliations(raw):
+    # raw = ast.literal_eval(raw)
+    res = { "Victim-aligned": [], "Police-aligned": [] }
+    for key, names in raw.items():
+        for name in names:
+            map_key = AFFILIATION_MAP.get(key)
+            if map_key and name not in res[map_key]:
+                res[map_key].append(name)
+    print("mapped affiliation is: ", res)
+    return res
+    
+
+
+def evaluate_task1(pred_raw, expected_path):
+
+    with open(expected_path, "r") as f:
+        expected = json.load(f)
+
+    pred = map_affiliations(pred_raw)
+
+    people = set(pred["Victim-aligned"]) | set(pred["Police-aligned"]) | set(expected["Victim-aligned"]) | set(expected["Police-aligned"])
+
+    y_true = []
+    y_pred = []
+    for person in people:
+        if person in expected["Victim-aligned"]:
+            y_true.append("Victim-aligned")
+        elif person in expected["Police-aligned"]:
+            y_true.append("Police-aligned")
+        else:
+            y_true.append("Unknown")
+
+        if person in pred["Victim-aligned"]:
+            y_pred.append("Victim-aligned")
+        elif person in pred["Police-aligned"]:
+            y_pred.append("Police-aligned")
+        else:
+            y_pred.append("Unknown")
+    # print(classification_report(y_true, y_pred, labels=["Victim-aligned", "Police-aligned"], digits=3, zero_division=0))
+    return classification_report(y_true, y_pred, labels=["Victim-aligned", "Police-aligned"], digits=3, zero_division=0, output_dict=True)
+    
+
 def main():
-    with open("./data/articles/Dexter_Reed-2024_04_10-foody.json", "r") as f:
+    article_name = "Dexter_Reed-2024_04_10-foody.json"
+    article_path = os.path.join("data", "test", "articles", article_name)
+    with open(article_path, "r") as f:
         article = f.read()
-    message = prompt + article
+    message = task1_prompt + article
     client = load_client()
     response = client.chat.completions.create(
             model="gpt-4o", # gpt-4o, or you can also try gpt-4o-mini. See here for more details https://platform.openai.com/docs/models. But stick to 4o or 4o-mini
@@ -81,6 +125,12 @@ def main():
             ]
     )
     print(response.choices[0].message.content)
+
+    response_as_dict = ast.literal_eval(response.choices[0].message.content)
+
+    expected_name_task1 = "expected_task1_" + article_name
+    expected_path_task1 = os.path.join("data", "test", "expected_task1", expected_name_task1)
+    evaluate_task1(response_as_dict, expected_path_task1)
     
 if __name__ == "__main__":
     main()

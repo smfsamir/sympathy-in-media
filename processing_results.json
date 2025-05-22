@@ -1,0 +1,161 @@
+[
+  {
+    "article": "1_Adrian Lacquette_Global News.json",
+    "error": "Failed to parse response",
+    "response": "{\n  \"Victim-aligned\": [Adrian Lacquette, Adrian Lacquette's mother],\n\n  \"Government officials\": [Const. Jay Murray],\n\n  \"Policing institution officials\": []\n}"
+  },
+  {
+    "article": "2_Pierre Coriolan_CTV.json",
+    "response": {
+      "Victim-aligned": [
+        "Lawrence Dulac",
+        "Louis Guillemette",
+        "Claudine Laurin",
+        "Matthew Pearce"
+      ],
+      "Government officials": [
+        "Francois Dore"
+      ],
+      "Policing institution officials": []
+    },
+    "evaluation": {
+      "Victim-aligned": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "Police-aligned": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "micro avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 11.0
+      },
+      "macro avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 11.0
+      },
+      "weighted avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 11.0
+      }
+    }
+  },
+  {
+    "article": "3_Nadia Racine_CBC.json",
+    "error": "Failed to parse response",
+    "response": "{\n  \"Victim-aligned\": [Nadia Racine, Shawn Lescard],\n\n  \"Government officials\": [],\n\n  \"Policing institution officials\": [Martin Bonin-Charron]\n}"
+  },
+  {
+    "article": "4_Illutak Anautak_CBC.json",
+    "response": {
+      "Victim-aligned": [
+        "Illutak Anautak",
+        "Lucassie Anautak",
+        "Eli Qinuajuak",
+        "Randy McLeod",
+        "Rebecca Tukalak",
+        "Eli Aullaluk"
+      ],
+      "Government officials": [],
+      "Policing institution officials": []
+    },
+    "evaluation": {
+      "Victim-aligned": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "Police-aligned": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "micro avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 11.0
+      },
+      "macro avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 11.0
+      },
+      "weighted avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 11.0
+      }
+    }
+  },
+  {
+    "article": "Dexter_Reed-2024_04_10-foody.json",
+    "response": {
+      "Victim-aligned": [
+        "Dexter Reed",
+        "Andrew M. Stroth",
+        "Porscha Banks",
+        "Reed's mother",
+        "Reed's sister",
+        "Reed's uncle",
+        "Reed's father"
+      ],
+      "Government officials": [
+        "Larry Snelling",
+        "Thomas Ahern",
+        "Brandon Johnson",
+        "Kim Foxx"
+      ],
+      "Policing institution officials": [
+        "Jason Van Dyke"
+      ]
+    },
+    "evaluation": {
+      "Victim-aligned": {
+        "precision": 0.8571428571428571,
+        "recall": 1.0,
+        "f1-score": 0.9230769230769231,
+        "support": 6.0
+      },
+      "Police-aligned": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 5.0
+      },
+      "micro avg": {
+        "precision": 0.9166666666666666,
+        "recall": 1.0,
+        "f1-score": 0.9565217391304348,
+        "support": 11.0
+      },
+      "macro avg": {
+        "precision": 0.9285714285714286,
+        "recall": 1.0,
+        "f1-score": 0.9615384615384616,
+        "support": 11.0
+      },
+      "weighted avg": {
+        "precision": 0.922077922077922,
+        "recall": 1.0,
+        "f1-score": 0.958041958041958,
+        "support": 11.0
+      }
+    }
+  }
+]
