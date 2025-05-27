@@ -1,0 +1,43 @@
+{
+  "article":
+  [
+    "Man fatally shot by police in Gay Village, BEI investigating",
+    "Quebec\u2019s independent bureau of investigators is taking over after a 58-year-old man was fatally shot by Montreal police in the Gay Village Montreal Tuesday evening.",
+    "The BEI is reporting that police received a call around 7 p.m. concerning a man in crisis who was allegedly demolishing everything inside his apartment.",
+    "They say that once they arrived at the scene at the corner of Robillard Ave. and Saint-Andr\u00e9 St., police found the man holding a screwdriver in each hand. Police tried to subdue him with a taser, but failed to do so.",
+    "They also shot plastic bullets, again unsuccessfully. The BEI say police then shot him multiple times.",
+    "\u201cI heard them say, \u2018Calm down calm down !\u2019 And later I heard about five or six shots, said neighbour Lawrence Dulac.",
+    "The man was taken to hospital for treatment, and investigators reported at about 10 p.m. that he had succumbed to his injuries.",
+    "Neighbours said the man had lived in the low-income housing unit for eight years. One said the man could often be heard screaming in his apartment and that police intervention was a regular occurrence in the building.",
+    "\"We heard him screaming. He was often on the balcony, screaming on the balcony,\" said Dulac.",
+    "Another neighbour, Louis Guillemette, said the neighbourhood had many residents who used heavy drugs such as cocaine and heroin.",
+    "The building on Robillard St. is run by FOHM, an organization that helps people with very low incomes or who are at risk of becoming homeless.",
+    "FOHM\u2019s executive director Claudine Laurin said they began having issues with the victim in the past year.",
+    "Laurin said the organization tried to help him, but he recently received an eviction notice from the rental board.",
+    "\u201cHe was starting to bother other tenants,\u201d she said.",
+    "Twelve investigators from the BEI are taking over the investigation and have called on the Surete du Quebec to assist.",
+    "The BEI is asking anyone who witnessed the event to contact them online.",
+    "Former Surete du Quebec lieutenant Francois Dore, who now works as a police analyst, said it's too early to say if the shooting was justified and the BEI will have to determine what exactly happened before the officers opened fire.",
+    "\"Did he charge the police officers before they shot?\" he said. \"The investigation will tell us about that.\"",
+    "Dore added that the only time an officer should fire their weapon is if a life is in danger.",
+    "\"The person they are doing things with or why they were called, for their safety or for the public's safety,\" he said. \"Firing a gun is the last thing a police officer wants to do. It's a tool and should be considered as a tool but it's not pepper spray or a taser gun.\"",
+    "A command post has also been established at the scene.",
+    "It's another deadly police shooting that highlights why Old Brewery Mission CEO Matthew Pearce believes police officers need training on how to deal with people in crisis.",
+    "The homeless shelter is working with the Montreal police force to do just that.",
+    "\u201cWhen we talk about de-escalating a situation, that does not include rubber bullets and tasers, so already if they were using those tools, I can't judge them. They may have felt they needed to do so, but they are not techniques to de-escalate a situation.\u201d"
+  ],
+
+  "task1":
+  {
+    "Victim-aligned": [
+        "lawrence dulac",
+        "louis guillemette",
+        "matthew pearce"
+    ],
+
+    "Police-aligned": [
+        "francois dore",
+        "claudine laurin"
+    ]
+  }
+}

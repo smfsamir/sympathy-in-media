@@ -1,4 +1,6 @@
-[
+{
+  "article":
+  [
   "A quiet teen with tragic past suspected in fatal northern Quebec stabbings",
   "Police say Illutak Anautak, 19, stabbed 3 people to death before being fatally shot by officer",
   "The teen shot and killed by police following three fatal stabbings in a northern Quebec community on the weekend was dealing with a number of tragic events from his past, including the slaying of his mother and the suicide of his brother.",
@@ -25,4 +27,18 @@
   "Tukalak, who lives in Puvirnituq, a remote community further south, said she last saw Anautuk in May, and he didn't seem like himself.",
   "\"He was really weird and was talking really low. I think that was a goodbye,\" she said.",
   "Her takeaway, she said, is that even the \"most nice and quiet people explode one day, so it is really important to express truest feelings.\""
-]
+  ],
+  "task1":
+  {
+    "Victim-aligned": [
+      "illutak anautak",
+      "lucassie anautak",
+      "eli qinuajuak",
+      "randy mcleod",
+      "rebecca tukalak"
+    ],
+    "Police-aligned": [
+      "eli aullaluk"
+    ]
+  }
+}

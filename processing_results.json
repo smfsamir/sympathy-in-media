@@ -1,22 +1,14 @@
 [
   {
     "article": "1_Adrian Lacquette_Global News.json",
-    "error": "Failed to parse response",
-    "response": "{\n  \"Victim-aligned\": [Adrian Lacquette, Adrian Lacquette's mother],\n\n  \"Government officials\": [Const. Jay Murray],\n\n  \"Policing institution officials\": []\n}"
-  },
-  {
-    "article": "2_Pierre Coriolan_CTV.json",
     "response": {
       "Victim-aligned": [
-        "Lawrence Dulac",
-        "Louis Guillemette",
-        "Claudine Laurin",
-        "Matthew Pearce"
+        "Adrian Lacquette"
       ],
-      "Government officials": [
-        "Francois Dore"
-      ],
-      "Policing institution officials": []
+      "Government officials": [],
+      "Policing institution officials": [
+        "Jay Murray"
+      ]
     },
     "evaluation": {
       "Victim-aligned": {
@@ -49,12 +41,198 @@
         "f1-score": 0.0,
         "support": 11.0
       }
-    }
+    },
+    "y_true": [
+      "Victim-aligned",
+      "Police-aligned",
+      "Police-aligned",
+      "Victim-aligned",
+      "Unknown",
+      "Victim-aligned",
+      "Police-aligned",
+      "Victim-aligned",
+      "Police-aligned",
+      "Victim-aligned",
+      "Police-aligned",
+      "Unknown",
+      "Victim-aligned"
+    ],
+    "y_pred": [
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Victim-aligned",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Police-aligned",
+      "Unknown"
+    ]
+  },
+  {
+    "article": "2_Pierre Coriolan_CTV.json",
+    "response": {
+      "Victim-aligned": [
+        "Lawrence Dulac",
+        "Louis Guillemette",
+        "Matthew Pearce"
+      ],
+      "Government officials": [
+        "Francois Dore"
+      ],
+      "Policing institution officials": [
+        "Claudine Laurin"
+      ]
+    },
+    "evaluation": {
+      "Victim-aligned": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "Police-aligned": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "micro avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 11.0
+      },
+      "macro avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 11.0
+      },
+      "weighted avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 11.0
+      }
+    },
+    "y_true": [
+      "Victim-aligned",
+      "Unknown",
+      "Police-aligned",
+      "Victim-aligned",
+      "Police-aligned",
+      "Victim-aligned",
+      "Unknown",
+      "Police-aligned",
+      "Victim-aligned",
+      "Police-aligned",
+      "Unknown",
+      "Unknown",
+      "Victim-aligned",
+      "Unknown",
+      "Police-aligned",
+      "Victim-aligned"
+    ],
+    "y_pred": [
+      "Unknown",
+      "Victim-aligned",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Victim-aligned",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Police-aligned",
+      "Victim-aligned",
+      "Unknown",
+      "Police-aligned",
+      "Unknown",
+      "Unknown"
+    ]
   },
   {
     "article": "3_Nadia Racine_CBC.json",
-    "error": "Failed to parse response",
-    "response": "{\n  \"Victim-aligned\": [Nadia Racine, Shawn Lescard],\n\n  \"Government officials\": [],\n\n  \"Policing institution officials\": [Martin Bonin-Charron]\n}"
+    "response": {
+      "Victim-aligned": [
+        "Nadia Racine",
+        "Shawn Lescard"
+      ],
+      "Government officials": [],
+      "Policing institution officials": [
+        "Martin Bonin-Charron"
+      ]
+    },
+    "evaluation": {
+      "Victim-aligned": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 6.0
+      },
+      "Police-aligned": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "micro avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 11.0
+      },
+      "macro avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 11.0
+      },
+      "weighted avg": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 11.0
+      }
+    },
+    "y_true": [
+      "Victim-aligned",
+      "Police-aligned",
+      "Police-aligned",
+      "Victim-aligned",
+      "Victim-aligned",
+      "Police-aligned",
+      "Victim-aligned",
+      "Police-aligned",
+      "Unknown",
+      "Unknown",
+      "Victim-aligned",
+      "Victim-aligned",
+      "Police-aligned",
+      "Unknown"
+    ],
+    "y_pred": [
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Police-aligned",
+      "Victim-aligned",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Victim-aligned"
+    ]
   },
   {
     "article": "4_Illutak Anautak_CBC.json",
@@ -101,7 +279,45 @@
         "f1-score": 0.0,
         "support": 11.0
       }
-    }
+    },
+    "y_true": [
+      "Victim-aligned",
+      "Unknown",
+      "Unknown",
+      "Victim-aligned",
+      "Police-aligned",
+      "Police-aligned",
+      "Victim-aligned",
+      "Police-aligned",
+      "Victim-aligned",
+      "Unknown",
+      "Unknown",
+      "Police-aligned",
+      "Unknown",
+      "Victim-aligned",
+      "Victim-aligned",
+      "Police-aligned",
+      "Unknown"
+    ],
+    "y_pred": [
+      "Unknown",
+      "Victim-aligned",
+      "Victim-aligned",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Victim-aligned",
+      "Victim-aligned",
+      "Unknown",
+      "Victim-aligned",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Victim-aligned"
+    ]
   },
   {
     "article": "Dexter_Reed-2024_04_10-foody.json",
@@ -110,52 +326,72 @@
         "Dexter Reed",
         "Andrew M. Stroth",
         "Porscha Banks",
-        "Reed's mother",
-        "Reed's sister",
-        "Reed's uncle",
-        "Reed's father"
+        "Brandon Johnson"
       ],
       "Government officials": [
         "Larry Snelling",
         "Thomas Ahern",
-        "Brandon Johnson",
         "Kim Foxx"
       ],
-      "Policing institution officials": [
-        "Jason Van Dyke"
-      ]
+      "Policing institution officials": []
     },
     "evaluation": {
       "Victim-aligned": {
-        "precision": 0.8571428571428571,
-        "recall": 1.0,
-        "f1-score": 0.9230769230769231,
+        "precision": 0.75,
+        "recall": 0.5,
+        "f1-score": 0.6,
         "support": 6.0
       },
       "Police-aligned": {
         "precision": 1.0,
-        "recall": 1.0,
-        "f1-score": 1.0,
+        "recall": 0.6,
+        "f1-score": 0.75,
         "support": 5.0
       },
       "micro avg": {
-        "precision": 0.9166666666666666,
-        "recall": 1.0,
-        "f1-score": 0.9565217391304348,
+        "precision": 0.8571428571428571,
+        "recall": 0.5454545454545454,
+        "f1-score": 0.6666666666666666,
         "support": 11.0
       },
       "macro avg": {
-        "precision": 0.9285714285714286,
-        "recall": 1.0,
-        "f1-score": 0.9615384615384616,
+        "precision": 0.875,
+        "recall": 0.55,
+        "f1-score": 0.675,
         "support": 11.0
       },
       "weighted avg": {
-        "precision": 0.922077922077922,
-        "recall": 1.0,
-        "f1-score": 0.958041958041958,
+        "precision": 0.8636363636363636,
+        "recall": 0.5454545454545454,
+        "f1-score": 0.6681818181818181,
         "support": 11.0
       }
-    }
+    },
+    "y_true": [
+      "Victim-aligned",
+      "Police-aligned",
+      "Police-aligned",
+      "Victim-aligned",
+      "Victim-aligned",
+      "Police-aligned",
+      "Victim-aligned",
+      "Police-aligned",
+      "Victim-aligned",
+      "Police-aligned",
+      "Victim-aligned"
+    ],
+    "y_pred": [
+      "Victim-aligned",
+      "Unknown",
+      "Police-aligned",
+      "Unknown",
+      "Unknown",
+      "Victim-aligned",
+      "Unknown",
+      "Police-aligned",
+      "Victim-aligned",
+      "Police-aligned",
+      "Victim-aligned"
+    ]
   }
 ]

@@ -1,3 +1,4 @@
+{"article":
 [
   "Woman fatally injured during arrest by Gatineau police identified",
   "Nadia Racine, 34, succumbed to injuries Wednesday night",
@@ -13,4 +14,15 @@
   "Lescard said he first called 911, but was told to call Gatineau police's non-emergency phone line instead.",
   "\"She seemed like a good person. Quiet. She [kept] to herself. It's pretty sad the way she went,\" he said.",
   "The BEI has assigned eight investigators to the case and will be receiving assistance from the S\u00fbret\u00e9 du Qu\u00e9bec."
-]
+],
+"task1":
+{
+  "Victim-aligned": [
+    "nadia racine",
+    "shawn lescard"
+  ],
+
+  "Police-aligned": [
+    "martin bonin-charron" ]
+}
+}

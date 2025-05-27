@@ -1,4 +1,6 @@
-[
+{
+    "article":
+    [
     "Plainclothes Chicago police officers fired nearly 100 gunshots over 41 seconds during a traffic stop that left one man dead and one officer injured, according to graphic video footage a police oversight agency released Tuesday.",
     "Five officers from a tactical unit who were in an unmarked police vehicle surrounded an SUV last month driven by Dexter Reed, allegedly for failing to wear a seatbelt. Video shows the 26-year-old Black man briefly lowering a window and then raising it and refusing to exit the vehicle as more officers arrived, yelled commands and drew weapons.",
     "The Civilian Office of Police Accountability said preliminary evidence showed Reed fired first, injuring an officer in the Humboldt Park neighborhood on the city’s West Side. Then four officers returned fire, shooting 96 rounds.",
@@ -31,4 +33,24 @@
     "COPA was created in 2016 after the city was forced to release dashcam video of then-officer Jason Van Dyke shooting 17-year-old Laquan McDonald, contradicting officers’ account that the teen had lunged at police with a knife. Its responsibilities include investigations of shootings by police.",
     "The police department has been under a consent decree since 2019, handed down after the U.S. Justice Department found a long history of racial bias and excessive use of force following McDonald’s death.",
     "The independent monitoring team overseeing the department’s compliance has repeatedly found it falling behind on deadlines and specific goals and last year called on Snelling as the incoming superintendent to 'address challenges that have disproportionately delayed progress.'"
-]
+],
+"task1":
+{
+    "Victim-aligned": [
+        "dexter reed",
+        "andrew m. stroth",
+        "porscha banks",
+        "reed's mother",
+        "reed's uncle",
+        "reed's father"
+    ],
+
+    "Police-aligned": [
+        "larry snelling",
+        "brandon johnson",
+        "kim foxx",
+        "thomas ahern",
+        "jason van dyke"
+    ]
+}
+}

@@ -1,0 +1,27 @@
+{
+  "Victim-aligned": {
+    "precision": 0.8888888888888888,
+    "recall": 1.0,
+    "f1-score": 0.9411764705882353,
+    "support": 16.0
+  },
+  "Police-aligned": {
+    "precision": 1.0,
+    "recall": 0.7777777777777778,
+    "f1-score": 0.875,
+    "support": 9.0
+  },
+  "accuracy": 0.92,
+  "macro avg": {
+    "precision": 0.9444444444444444,
+    "recall": 0.8888888888888888,
+    "f1-score": 0.9080882352941176,
+    "support": 25.0
+  },
+  "weighted avg": {
+    "precision": 0.9288888888888889,
+    "recall": 0.92,
+    "f1-score": 0.9173529411764706,
+    "support": 25.0
+  }
+}
