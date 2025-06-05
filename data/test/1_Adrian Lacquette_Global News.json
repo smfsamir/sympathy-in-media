@@ -1,0 +1,34 @@
+{
+
+  "article":
+  ["Winnipeg police said the 23-year-old suspect shot and killed by an officer overnight was involved in an assault, robbery and carjacking just hours earlier.",
+  "The man was shot dead by police on Alfred Avenue around 12:50 a.m.",
+  "Family members have identified the suspect killed as Adrian Lacquette.",
+  "WATCH: Winnipeg police update media on fatal police involved shooting",
+  "\u201cI can\u2019t imagine this is an easy situation for anyone to go through,\u201d Const. Jay Murray said. \u201cWhether it be the officers involved, officers that witnessed this, individuals in the area or family members of anyone involved.\u201d",
+  "Get breaking BC news",
+  "Officers said their investigation started on the 800 block of Pritchard Avenue where a woman, who was known to the suspect, said she was assaulted by a man with a gun. She was not seriously hurt.",
+  "WATCH: Adrian Lacquette\u2019s mother speaks to Global News after he was shot and killed by police",
+  "Thirty minutes later police said another woman was carjacked as she was pulling into her garage, also on Pritchard Avenue.",
+  "At midnight a business on Notre Dame Avenue was robbed and then a car was stolen on Blake Street.",
+  "AIR1 tracked that car to Alfred Avenue and the Tactical Support Team moved in. Around 12:50 a.m an officer shot the suspect who was transported to hospital where he was pronounced dead.",
+  "WATCH: Neighbours talk to Global News about fatal shooting in Winnipeg\u2019s North End",
+  "Police could not say whether the suspect shot at police or was holding a gun at the time of the final confrontation.",
+  "The Independent Investigation Unit of Manitoba is continuing with the investigation."
+  ],
+
+  
+  "task1":
+  {
+    "Victim-aligned": [
+      "adrian lacquette",
+      "adrian lacquette's mother"
+    ],
+
+    "Police-aligned": [
+      "winnipeg police",
+      "jay murray",
+      "independent investigation unit of manitoba"
+    ]
+  }
+}

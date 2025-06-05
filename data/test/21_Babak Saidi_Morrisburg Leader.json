@@ -1,0 +1,34 @@
+{
+  "article":
+  [
+  "Iroquois man dead in shooting at OPP detachment",
+  "MORRISBURG \u2013 Just before noon December 23rd, a shooting incident in the parking lot at the Morrisburg detachment of the OPP killed a civilian from Iroquois.",
+  "An initial release from the OPP that afternoon said that a member of the Morrisburg detachment was involved in an altercation with an adult male outside of the detachment.",
+  "\u201cDuring the altercation the adult male sustained fatal injuries and was pronounced dead at the scene,\u201d said Acting Staff Sergeant Chrystal Jones with the OPP. \u201cThe officer is being treated for undetermined injuries.\u201d",
+  "The OPP notified the province\u2019s Special Investigations Unit which invoked its mandate and was on the scene by 5 p.m. Saturday. The SIU is an arm\u2019s length agency of the province that investigates reports involving police where there has been death, serious injury or allegations of sexual assault.",
+  "The scene was cordoned off by police and remained so until Sunday morning.",
+  "The SIU identified 43 year old Babak Saidi as the deceased.",
+  "\u201cAs the family has given us consent to release the man\u2019s name, I am now able to confirm that is the correct name,\u201d said Monica Hudon of the SIU. \u201cAt this time, one subject officer and 10 witness officers have been designated.\u201d The SIU had a team of four investigators and three forensic investigators on the scene.",
+  "\u201cI definitely heard gunshots,\u201d said one eyewitness who was at the MacEwan gas station across the road at the time. \u201cAs I looked over I saw two police officers, one with gun drawn, the other picking himself up off the ground.\u201d",
+  "The eyewitness described that a third person, a civilian, laid motionless on the ground near the north entrance to the police building. He later saw a police officer performing CPR on the man who was shot by police.",
+  "Saidi\u2019s sister was interviewed by CBC Ottawa on the day of the shooting and told them that her brother suffered from schizophrenia. She said that Saidi was required to check into the detachment weekly following his 2014 conviction for assault and battery. The SIU did not confirm those details.",
+  "According to the SIU in its preliminary release, a man entered the OPP detachment located at 6 Fifth Street West. There was an interaction between the man and officers and one of the officers discharged a firearm. The man was struck. He was pronounced dead at the scene.",
+  "When asked by The Leader about the condition of the OPP officer with \u2018undetermined injuries\u2019, the SIU referred the inquiry to the OPP. The OPP did not provide an update on the officers condition.",
+  "A post mortem on Saidi is scheduled for Wednesday in Ottawa.",
+  "Note: This article is the print article that was in the December 27th print edition of The Leader. It is based on the initial article from December 23rd and updated throughout December 24th."
+  ],
+  "task1":
+  {
+    "Victim-aligned": [
+      "babak saidi",
+      "eyewitness",
+      "babak saidi's sister"
+    ],
+
+    "Police-aligned": [
+      "opp",
+      "siu",
+      "monica hudon"
+    ]
+  }
+}

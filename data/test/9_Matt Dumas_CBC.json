@@ -1,0 +1,49 @@
+{
+  "article": [
+  "Man fatally shot by Edmonton police was due in court on drug and weapons charges",
+  "ASIRT says two 18-year-old women were in a car with Matt Dumas when he was shot and killed",
+  "A 30-year-old man who was shot and killed by Edmonton police Saturday was facing drug and weapons charges, court records reveal.",
+  "Friends and loved ones are expressing grief online after Matt Dumas was killed as police tried to arrest him in the McDonald's parking lot at Westmount Shopping Centre on Groat Road north of 111th Avenue.",
+  "Two 18-year-old female passengers were inside the same vehicle as Dumas when he was killed but were unhurt, the Alberta Serious Incident Response Team (ASIRT) said Monday.",
+  "Dumas was due in court for a two-day trial beginning Oct. 5 on several charges. including possession of methamphetamine for the purpose of trafficking. and possessing two dangerous weapons \u2014 bear spray and a knife.",
+  "Edmonton police shoot and kill suspect in Westmount parking lot",
+  "ASIRT is investigating the shooting. In a news release Monday, it said police officers attempted the \"high-risk arrest of a man seated in the driver's seat of a vehicle\" at 8:15 p.m. Saturday.",
+  "Officers boxed him in with their vehicles, yelled commands and eventually fired tear gas \"but the man was not compliant and attempted to escape in the vehicle,\" the news release said.",
+  "Officers fired tear gas into the vehicle but a confrontation resulted in police firing their guns, ASIRT said.",
+  "The man was removed from the vehicle and pronounced deceased at the scene. A loaded firearm was recovered from the vehicle and seized. Two 18-year-old female passengers who had been in the vehicle were apprehended at the scene, uninjured.",
+  "Edmonton police were unharmed in the incident.",
+  "In October 2011, Dumas pleaded guilty to a drug charge and was given a jail sentence of two years and four months. Last year, he was sentenced to 30 days in jail after pleading guilty to failing to appear.",
+  "Court records show Dumas was subject to a number of bail restrictions. Among them, a judge ordered that Dumas attend counselling as directed by his bail supervisor \"with particular attention to drug abuse.\"",
+  "Dumas was prohibited from possessing weapons and was not allowed to have a mobile phone, except for work purposes."
+],
+
+  "task1":
+  {
+    "Victim-aligned": [
+      "matt dumas",
+      "friends and loved ones"
+    ],
+    "Police-aligned": [
+      "alberta serious incident response team",
+      "edmonton police"
+    ]
+  },
+  "task2":
+  [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],    
+    [],
+    [],
+    [],
+    [],
+    []
+  ]
+}

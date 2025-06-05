@@ -31,14 +31,43 @@
   "task1":
   {
     "Victim-aligned": [
-      "illutak anautak",
-      "lucassie anautak",
-      "eli qinuajuak",
+      "illutak anautuk",
       "randy mcleod",
       "rebecca tukalak"
     ],
     "Police-aligned": [
+      "police",
       "eli aullaluk"
     ]
-  }
+  },
+
+  "task2":
+  [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    ["randy mcleod"],
+    ["randy mcleod"],
+    ["randy mcleod"],
+    ["randy mcleod"],
+    ["randy mcleod"],
+    ["randy mcleod"],
+    [],
+    [],
+    [],
+    ["rebecca tukalak"],
+    ["rebecca tukalak"],
+    [],
+    [],
+    ["eli aullaluk"],
+    ["eli aullaluk"],
+    ["illutak anautuk"],
+    ["rebecca tukalak"],
+    ["rebecca tukalak"],
+    ["rebecca tukalak"]
+  ]
 }

@@ -1,27 +1,32 @@
 {
   "Victim-aligned": {
-    "precision": 0.8888888888888888,
-    "recall": 1.0,
-    "f1-score": 0.9411764705882353,
-    "support": 16.0
+    "precision": 0.5735294117647058,
+    "recall": 0.75,
+    "f1-score": 0.65,
+    "support": 52.0
   },
   "Police-aligned": {
-    "precision": 1.0,
-    "recall": 0.7777777777777778,
-    "f1-score": 0.875,
-    "support": 9.0
+    "precision": 0.6410256410256411,
+    "recall": 0.6944444444444444,
+    "f1-score": 0.6666666666666666,
+    "support": 72.0
   },
-  "accuracy": 0.92,
+  "micro avg": {
+    "precision": 0.6095890410958904,
+    "recall": 0.717741935483871,
+    "f1-score": 0.6592592592592592,
+    "support": 124.0
+  },
   "macro avg": {
-    "precision": 0.9444444444444444,
-    "recall": 0.8888888888888888,
-    "f1-score": 0.9080882352941176,
-    "support": 25.0
+    "precision": 0.6072775263951735,
+    "recall": 0.7222222222222222,
+    "f1-score": 0.6583333333333333,
+    "support": 124.0
   },
   "weighted avg": {
-    "precision": 0.9288888888888889,
-    "recall": 0.92,
-    "f1-score": 0.9173529411764706,
-    "support": 25.0
+    "precision": 0.6127207706904101,
+    "recall": 0.717741935483871,
+    "f1-score": 0.6596774193548388,
+    "support": 124.0
   }
 }

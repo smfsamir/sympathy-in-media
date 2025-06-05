@@ -30,14 +30,44 @@
   "task1":
   {
     "Victim-aligned": [
+        "victim",
         "lawrence dulac",
         "louis guillemette",
         "matthew pearce"
     ],
 
     "Police-aligned": [
+        "bureau of investigators",
         "francois dore",
         "claudine laurin"
     ]
-  }
+  },
+
+  "task2":
+    [
+    [],
+    [],
+    [],
+    [],
+    [],
+    ["lawrence dulac"],
+    [],
+    ["lawrence dulac"],
+    ["lawrence dulac"],
+    ["louis guillemette"],
+    [],
+    ["claudine laurin"],
+    ["claudine laurin"],
+    ["claudine laurin"],
+    [],
+    [],
+    ["francis dore"],
+    ["francis dore"],
+    ["francis dore"],
+    ["francis dore"],
+    [],
+    ["matthew pearce"],
+    ["matthew pearce"],
+    ["matthew pearce"]
+    ]
 }
