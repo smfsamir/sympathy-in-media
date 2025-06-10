@@ -38,17 +38,45 @@
 
     "Police-aligned": [
       "aaron reichert",
-      "civilian police watchdog",
       "terrence phillips",
       "bun sim",
       "special investigations unit",
       "dr. jack kitts",
       "jill skinner",
       "vern white",
-      "former supervisor",
+      "aaron reichert's  supervisor",
       "member of the public",
-      "ottawa police service"
-    
+      "ottawa police service",
+      "matt skof"
     ]
-  }
+  },
+
+  "task2": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    ["special investigations unit"],
+    ["special investigations unit"],
+    [],
+    [],
+    [],
+    [],
+    ["aaron reichert's  supervisor"],
+    ["dr. jack kitts"],
+    ["dr. jack kitts"],
+    ["member of the public"],
+    [],
+    [],
+    ["jill skinner"],
+    ["jill skinner"],
+    ["matt skof"],
+    ["jill skinner"],
+    ["jill skinner"],
+    ["jill skinner"],
+    ["jill skinner"],
+    ["jill skinner"],
+    ["jill skinner"]
+  ]
 }

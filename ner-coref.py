@@ -116,10 +116,13 @@ Here is the article:
 
 task2_prompt = """
 
-Next, assign each paragaph with the people whose perspectives are being demonstrated in it. This must be a person who was previously identified in your last response.
-There may be zero, one or multiple perspective in a given paragaph. If there are multiple perspectives, list them all. If there are no perspectives, return an empty list.
+Next, assign each paragaph with the people whose perspectives are being demonstrated in it. List the entity by the name you previously identified them with in your last response.
 
-A perspective can be given through a quote, paraphrase, or a description of the person's opinions or feelings.
+There may be zero, one or multiple perspectives in a given paragaph. If there are multiple perspectives, list them all. 
+
+If there are no perspectives, return an empty list. For example, if the writer is simply 
+
+A perspective can be given through a quote, paraphrase, or a description of the entity's opinions or feelings.
 
 Return a list of lists, where the ith inner list corresponds to the ith paragraph in the article. Each inner list should contain the names of the people whose perspectives are being demonstrated in that paragraph.
 Use all lowercase.
@@ -129,10 +132,10 @@ You must return exactly one list per paragraph**, even if it is an empty list. D
 Example output:
 
 [
-    ["person1", "person2"],
-    ["person3"],
+    ["entity1", "entity2"],
+    ["entity3"],
     [],
-    ["person4", "person1"]
+    ["entity4", "entity1"]
 ]
 
 This represents a 4-paragraph article, where the first paragraph has two perspectives, the second has one, the third has none, and the fourth has two perspectives.
@@ -473,13 +476,15 @@ def main():
 
     # task 2
     task2_results = []
-    # for task1_result in task1_results:
-    #     task2_result = task2(client, task1_result["article_data"], task1_result["response"])
-    #     task2_results.append(task2_result)
-    #     # print("Task 2 result for ", task1_result["article"], ": ", task2_result)
-    #     # print(f"RESPONSE --- ", type(task1_result["response"]))
+    for task1_result in task1_results:
+        if "task2" not in task1_result["article_data"]: # todo: once eval dataset complete. skips articles without task2 eval sett
+            continue
+        task2_result = task2(client, task1_result["article_data"], task1_result["response"])
+        task2_results.append(task2_result)
+        # print("Task 2 result for ", task1_result["article"], ": ", task2_result)
+        # print(f"RESPONSE --- ", type(task1_result["response"]))
 
-    # task2_evaluation_report(task2_results)
+    task2_evaluation_report(task2_results)
 
     
     

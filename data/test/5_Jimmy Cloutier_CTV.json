@@ -30,7 +30,7 @@
       "jimmy cloutier",
       "old brewery mission",
       "matthew pearce",
-      "friends and acquaintances",
+      "jimmy clouter's friends and acquaintances",
       "milosz janda",
       "pierre magloire"
     ],
@@ -39,5 +39,28 @@
       "montreal police",
       "quebec's bureau of independent investigations"
     ]
-  }
+  },
+
+  "task2": [
+    [],
+    [],
+    ["old brewery mission"],
+    [],
+    [],
+    ["montreal police"],
+    [],
+    ["matthew pearce"],
+    ["matthew pearce"],
+    ["matthew pearce"],
+    ["matthew pearce"],
+    ["matthew pearce"],
+    ["jimmy clouter's friends and acquaintances"],
+    ["milosz janda"],
+    ["pierre magloire"],
+    [],
+    ["pierre magloire"],
+    ["pierre magloire"],
+    ["pierre magloire"],
+    []
+  ]
 }

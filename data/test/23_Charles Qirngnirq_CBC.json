@@ -23,5 +23,19 @@
       "rcmp",
       "ottawa police service"
     ]
-  }
+  },
+
+  "task2":
+  [
+    [],
+    ["rcmp"],
+    [],
+    [],
+    ["rcmp"],
+    [],
+    ["rcmp"],
+    ["rcmp"],
+    ["rcmp"],
+    ["rcmp"]
+  ]
 }

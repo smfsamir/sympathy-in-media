@@ -17,6 +17,7 @@
   "A post mortem on Saidi is scheduled for Wednesday in Ottawa.",
   "Note: This article is the print article that was in the December 27th print edition of The Leader. It is based on the initial article from December 23rd and updated throughout December 24th."
   ],
+
   "task1":
   {
     "Victim-aligned": [
@@ -28,7 +29,27 @@
     "Police-aligned": [
       "opp",
       "siu",
-      "monica hudon"
+      "monica hudon",
+      "chrystal jones"
     ]
-  }
+  },
+
+  "task2":
+  [
+    [],
+    [],
+    ["opp"],
+    ["chrystal jones"],
+    [],
+    [],
+    [],
+    ["monica hudon"],
+    ["eyewitness"],
+    ["eyewitness"],
+    ["babak saidi's sister"],
+    ["siu"],
+    [],
+    [],
+    []
+  ]
 }
