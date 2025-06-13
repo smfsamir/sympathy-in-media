@@ -32,7 +32,33 @@
 
     "Police-aligned": [
       "rcmp",
-      "ottawa police service"
+      "ottawa police service",
+      "peter siakuluk"
     ]
-  }
+  },
+
+  "task2":
+  [
+    ["victim"],
+    ["rcmp"],
+    ["victim"],
+    ["rcmp"],
+    ["rcmp"],
+    ["rcmp"],
+    [],
+    ["rcmp"],
+    ["peter siakulk"],
+    ["peter siakulk"],
+    [],
+    [],
+    [],
+    ["victim"],
+    ["victim"],
+    [],
+    ["victim"],
+    ["victim"],
+    [],
+    [],
+    []
+  ]
 }

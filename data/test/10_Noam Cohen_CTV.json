@@ -17,6 +17,7 @@
     "Anyone who witnessed the event is urged to contact the BEI here.",
     "Read the BEI report here."
   ],
+
   "task1":
   {
     "Victim-aligned": [
@@ -30,5 +31,24 @@
       "BEI"
       
     ]
-  }
+  },
+
+  "task2":
+  [
+    [],
+    [],
+    [],
+    [],
+    [],
+    ["montreal police"],
+    ["montreal police"],
+    ["montreal police"],
+    [],
+    ["matthew pearce"],
+    ["matthew pearce"],
+    [],
+    [],
+    [],
+    []
+  ]
 }

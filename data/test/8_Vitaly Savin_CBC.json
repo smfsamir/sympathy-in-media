@@ -19,6 +19,7 @@
   "An autopsy is scheduled for Friday.",
   "ASIRT's mandate is to investigate incidents involving Alberta's police that have resulted in serious injury or death to any person, as well as serious or sensitive allegations of police misconduct."
   ],
+
   "task1":
   {
     "Victim-aligned": [
@@ -29,5 +30,24 @@
       "edmonton police service",
       "alberta serious incident response team"
     ]
-  }
+  },
+
+  "task2":
+  [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    ["alberta serious incident response team"],
+    ["alberta serious incident response team"],
+    ["alberta serious incident response team"],
+    ["alberta serious incident response team"],
+    [],
+    []
+  ]
 }
