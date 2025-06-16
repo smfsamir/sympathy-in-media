@@ -1,4 +1,4 @@
-import openai
+from openai import OpenAI
 from dotenv import dotenv_values
 from collections import defaultdict
 import ast
@@ -18,65 +18,38 @@ AFFILIATION_MAP = {
 
 '''
 
-# NOTE
-## Questions:
-# - do we want to identify bodies/orgs even if a spokesperson is not mentioned? unions, watchdogs, police departments, etc.
-#   - police say...the police watchdog reports...
+# TASK 2 
+## paragraph mismatch typically occurs on the same 8 articles
+## - 9_Matt_Dumas
+## - 19_Babak_Saidi
+## - 2_Pierre_Coriolan
+## - 22_erixon
+## - 5_jimmy
+## - 15_bill_saunders
+## +2 more check what they are 
+
 
 # TODO
 ## move prompts into their own text files
 ## better logical flow (for evaluation  - have the overall eval fn call the individual eval fns)
 ## TASK 1:
-# better define categories
 # resolve issue of neutral parties
 # direct
 
 '''
-# people only
-
-# task1_prompt = """
-
-# Read the provided article on an incident of police violence to complete the following two tasks. Task 1: Identify each person mentioned in the article and determine their affiliation. The same person could be mentioned many times by different referring expressions.
-
-# For instance, the terms "he", "Bob Dylan", "the singer", and "Dylan" all refer to the same entity.
-
-# Use the article context to recognize these mentions as co-references and list the person only once using their most complete name (e.g. "Bob Dylan"). Do not create separate entities for pronouns, mentions, and names (e.g. "he", "the singer", "Bob Dylan", etc). A person can either be on the side of the police, or the civilian victim.
-
-# For example, government officials including police chiefs, mayors, police oversight officials, police unions officials. Government officials should always be assigned into the police-aligned category, even if their statements are ostensibly sympathetic. 
-# There may also be bystanders who take the side of the police. For these bystanders, it is important to take the quotes into account in determining whether they side with the police or not.  
-
-# People who side with the civilian victim, on the other hand, tend to be, of course, the victim's family or friends, their attorney, community members who knew the victim, witnesses, civil rights organization leaders, and more.
-
-# People mentioned from previous cases (whether officers or victims) should also be recorded, even if they are not part of the current case itself. 
-
-# Following each person's name, indicate their role in parentheses, such as (police chief), (witness), (mayor), (victim's mother), (victim's attorney), (police officer) etc. Use all lowercase for the names and roles.
-
-# Return the results in the following format:
-
-# {
-
-# "Victim-aligned": ["person1 (role)", "person2 (role)", "person3 (role)"],
-
-# "Government officials": ["person (role)", "person5 (role)", "person6 (role)"],
-
-# "Policing institution officials": ["person7 (role)", "person8 (role)"]
-
-# }
-
-# Here is the article:
 
 
 task1_prompt = """
 Read the provided article on an incident of police violence to complete the following task.
 
-Task: Identify each entity mentioned in the article and determine their role and affiliation. The entity may be a person or an instituion, like the ACLU or the Special Investigations Unit (SIU). 
+Task: Identify each entity mentioned in the article and determine their role and affiliation. The entity may be a person or an instituion, like the ACLU or the Special Investigations Unit (SIU). Only include entities that make a statement on the case.
 
 Restrictions on who/what to identify:
 - Only entities that are identified by either a name (e.g.,idenitfy "Matt Dumas", "Matt", "American Civil Liberties Union" "ACLU", and do not identify "man", "an organization") or relationship should be included (e.g. "victim's brother", "victim's neighbour", "officer's supervisor", etc.)
 - Do not include media outlets as entities
 - Avoid including entities which are only mentioned generically (e.g. "the officer", "the man") unless it is absolutely necessary to understand the article. If the generic, unnamed entity is the victim mark their name as "victim". 
 - Only include civilians if they 1. are mentioned by name or relationship and 2. have been quoted or directly paraphrased in the article
-- A person may represent or be a spokeperson for an organization. Identify both the person and the organization as seperate entities.
+- A person may represent or be a spokeperson for an organization. Identify both the person and the organization as separate entities.
 
 How to label entities:
 - Avoid abbreviations when the full name is mentioned (say "American Civil Liberties Union" and not ACLU)
@@ -86,7 +59,7 @@ Do not create separate entities for pronouns, mentions, and names (e.g. "he", "t
 - Every entity has a role. Following each entity's name, indicate their role in parentheses, such as (police chief), (witness), (mayor), (victim's mother), (legal nonprofit), (police oversight body) (victim's attorney), (police officer), (police union), etc. 
     - For example, if the article mentions "mayor john", "the victim's mother jane" and "police chief bob", you would return "john (mayor)", "jane (victim's mother)", "bob (police chief)"
     - Never include the role in the name, e.g. tag "const. jerry" as "jerry (const.)" and not "const. jerry (const.)" or "const. jerry"
-- For unnamed entities described by a relationship, include the full name of the entity with whom they have a relationship. For example, if an article about Bob Dylan mentions "dylan's brother", tag this person as "bob dylan's brother"
+- If the person is unnamed but is described by a relationship, include the full name of the entity with whom they have a relationship. For example, if an article about Bob Dylan mentions "dylan's brother", tag this person as "bob dylan's brother". 
 
 Affiliation: An entity can either be on the side of the police, or the civilian victim.
 
@@ -98,7 +71,7 @@ Police-aligned entities:
 
 Victim-aligned entities:
 - Entities who side with the civilian victim, on the other hand, tend to be, of course, the victim's family or friends, their attorney, community members who knew the victim, witnesses, civil rights organization, and more.
-- If a person is clearly identified as a family member or friend (e.g., “my dad,” “his sister,” “the victim’s mother”), but their name is not mentioned, you should still include them.
+- If a person is clearly identified as a family member or friend (e.g., "my dad," "his sister," "the victim's mother"), but their name is not mentioned, you should still include them.
 - Bystanders may take the side of the victim.  For these bystanders, it  is important to take their quotes into account to determine their affiliation. If their opinion sympathizes with the victim more than the police, assign them victim-aligned. 
 
 People mentioned from previous cases (whether officers or victims) should also be recorded, even if they are not part of the current case itself.
@@ -108,29 +81,35 @@ Output format:
 - Use the following format exactly: 
 {
 "Victim-aligned": ["entity1 (role)", "entity2 (role)", "entity3 (role)"],
-"Police-aligned": ["entity4 (role)", "entity5 (role)"]
+"Police-aligned": ["entity4 (role)", "entity5 (role)"],
 }
 
 Here is the article:
+
 """
 
 task2_prompt = """
 
-Next, assign each paragaph with the people whose perspectives are being demonstrated in it. List the entity by the name you previously identified them with in your last response.
+Assign each paragraph to the names of the entities whose perspectives are being demonstrated in it. Use the exact names you identified in your last response.
 
+A perspective can be given through a quote, a paraphrase, or a description of the entity's opinions or feelings. 
+
+Return a list of lists, where the ith inner list corresponds to the ith paragraph in the article. 
+Each inner list must contain the names of the people whose perspectives are shown in that paragraph.
 There may be zero, one or multiple perspectives in a given paragaph. If there are multiple perspectives, list them all. 
+If there are no perspectives, return an empty list []. 
 
-If there are no perspectives, return an empty list. For example, if the writer is simply 
+The article has been previously provided and is a list of numbered paragraphs. 
+Your output must exactly match that paragraph count.
+A paragraph can be extremely short, but if it is numbered has been a paragraph (i.e. precided by "Paragraph X: ") you must provide a list for it.
 
-A perspective can be given through a quote, paraphrase, or a description of the entity's opinions or feelings.
-
-Return a list of lists, where the ith inner list corresponds to the ith paragraph in the article. Each inner list should contain the names of the people whose perspectives are being demonstrated in that paragraph.
-Use all lowercase.
-
-You must return exactly one list per paragraph**, even if it is an empty list. Do not merge or skip any paragraphs. The article is separated by "\n\n-PARAGRAPH BREAK-\n\n" to indicate where a new paragraph starts.
-
-Example output:
-
+Rules your response must follow:
+- Return exactly one list per paragraph. Do not merge, skip, or duplicate paragraphs
+- The total number of lists must equal the number of paragraphs in the article, as indicated by the numbered list
+- Use only the names from your prior response
+- Use all lowercase
+- Your response should only be the raw list of lists, and nothing else
+- Format your response exactly like this:
 [
     ["entity1", "entity2"],
     ["entity3"],
@@ -146,11 +125,9 @@ This represents a 4-paragraph article, where the first paragraph has two perspec
 def load_client():
     config = dotenv_values(".env")
     key = config["OPENAI_API_KEY"] 
-    client = openai.AzureOpenAI(
-            azure_endpoint="https://ubcnlpgpt4.openai.azure.com/", 
-            api_key=key,
-            api_version="2023-05-15" 
-        )
+    client = OpenAI(
+        api_key=key
+    )
     return client
 
 ### TASK 1 HELPERS ###
@@ -164,13 +141,23 @@ def map_affiliations(raw):
             map_key = AFFILIATION_MAP.get(key)
             if map_key and name not in res[map_key]:
                 res[map_key].append(name)
-    # print("Mapped affiliations: ", res)
     return res
 
 # remove roles 
 def clean_name(name):
     if "(" in name and ")" in name:
         return name.split("(")[0].strip()
+
+# cleans backticks that gpt-4o sometimes includes
+def clean_response(raw):
+    if raw.startswith("```"):
+        lines = raw.splitlines()
+        if lines[0].strip().startswith("```"):
+            lines = lines[1:]  
+        if lines and lines[-1].strip().endswith("```"):
+            lines = lines[:-1] 
+        raw = "\n".join(lines).strip()
+    return raw
 
 # evaluates task 1 for a single article 
 def evaluate_task1(pred_raw, expected_dict, article_name):
@@ -193,12 +180,13 @@ def evaluate_task1(pred_raw, expected_dict, article_name):
             pred_police.add(clean_name(name))
         else:
             pred_police.add(name.lower())
-
-    print("------", article_name, "-----TASK 1 EVALUATION----")
-    print("\nPredicted Victim-aligned: ", pred_victim)
-    print("\nActual Victim-aligned: ", set(expected_dict["Victim-aligned"]))
-    print("\nPredicted Police-aligned: ", pred_police)
-    print("\nActual Police-aligned: ", set(expected_dict["Police-aligned"]))
+    
+    # Uncomment to easily see how Task 1 predictions compare to expected results
+    # print("------", article_name, "-----TASK 1 EVALUATION----")
+    # print("\nPredicted Victim-aligned: ", pred_victim)
+    # print("\nActual Victim-aligned: ", set(expected_dict["Victim-aligned"]))
+    # print("\nPredicted Police-aligned: ", pred_police)
+    # print("\nActual Police-aligned: ", set(expected_dict["Police-aligned"]))
 
     people = (
         pred_victim |
@@ -289,36 +277,47 @@ def task1(client, article_path):
         
         message = task1_prompt + article_content
         response = client.chat.completions.create(
-                model="gpt-4o", # gpt-4o, or you can also try gpt-4o-mini. See here for more details https://platform.openai.com/docs/models. But stick to 4o or 4o-mini
+                model="gpt-4o", 
                 temperature=0,
-                max_tokens = 500, # set this to whatever makes sense. It's the maximum number of tokens (basically, words) that you think are necessary for responding to the prompt
+                max_tokens = 500, 
                 messages = [
                     {"role": "user", "content" : message}
                 ]
         )
 
+        raw_response = clean_response(response.choices[0].message.content)
+
+
         try:
-            response_as_dict = ast.literal_eval(response.choices[0].message.content)
+            response_as_dict = ast.literal_eval(raw_response)
         except (ValueError, SyntaxError) as e:
-            print("Error parsing response for ", article_name)
+            print("DEBUG!! Error parsing response for:", article_name)
+            print("---- RAW RESPONSE START ----")
+            print(raw_response)
+            print("---- RAW RESPONSE END ----")
+            print("Parse error:", str(e))
             return {"article": article_name, "error": "Failed to parse response"}
 
         # Get expected results from the same file
         expected_task1 = article_data.get("task1", {})
         if not expected_task1:
-            print("Warning: No expected task1 results found for ", article_name)
-            return {"article": article_name, "error": "No expected results"}
-        
-        evaluation_result, y_true, y_pred = evaluate_task1(response_as_dict, expected_task1, article_name)
-        
-        return {
+            print("WARNING: No expected task1 results found for ", article_name)
+            return {
             "article": article_name,
             "article_data": article_data,
             "response": response.choices[0].message.content,
-            "evaluation": evaluation_result,
-            "y_true": y_true,
-            "y_pred": y_pred,
-        }
+            }
+        else:
+            evaluation_result, y_true, y_pred = evaluate_task1(response_as_dict, expected_task1, article_name)
+            
+            return {
+                "article": article_name,
+                "article_data": article_data,
+                "response": response.choices[0].message.content,
+                "evaluation": evaluation_result,
+                "y_true": y_true,
+                "y_pred": y_pred,
+            }
         
     except Exception as e:
         print("Error processing ", article_name, ": ", str(e))
@@ -394,18 +393,17 @@ def task2(client, article_data, task1_response):
     article_text = article_data.get("article", "")
 
     article_text = article_data.get("article", "")
+    numbered_article = []
     if isinstance(article_text, list):
-        article_text = "\n\n-PARAGRAPH BREAK-\n\n".join(article_text)
+        # article_text = "\n\n-PARAGRAPH BREAK-\n\n".join(article_text)
+        for i, para in enumerate(article_text, start=1):
+            line = "Paragraph " + str(i) + ": " + para
+            numbered_article.append(line)
+    article_text_prompt = "\n\n".join(numbered_article)
     
-
-    # if isinstance(article_text, list):
-    #         article_content = "\n".join(article_text)
-    #         print("ARTICLE IS A LIST OF SIZE", len(article_text), "AND IN STRING ITS LENGTH: ", len(article_content))
-    
-    # print("ARTICLE TEXT:", article_text)
-
+    # this is chat history that i feed -- am i doing that correctly?
     messages = [
-        {"role": "user", "content": task1_prompt + article_text},
+        {"role": "user", "content": task1_prompt + article_text_prompt},
         {"role": "assistant", "content": task1_response},
         {"role": "user", "content": task2_prompt}
     ]
@@ -417,7 +415,7 @@ def task2(client, article_data, task1_response):
         messages=messages
     )
 
-    raw_output = response.choices[0].message.content
+    raw_output = clean_response(response.choices[0].message.content)
 
     try:
         parsed_res = ast.literal_eval(raw_output)
@@ -427,32 +425,34 @@ def task2(client, article_data, task1_response):
 
     expected_task2 = article_data.get("task2", {})
     if not expected_task2:
-        print("Warning: No expected task2 results found")
-        return {"error": "No expected task2 labels", "raw": parsed_res}
+        print("WARNING: No expected task2 results found")
+        return {
+        "parsed_result": parsed_res,
+        "raw_output": raw_output,
+        }
+    else:
+        eval_metrics, y_true, y_pred = evaluate_task2(expected_task2, parsed_res)
 
-    eval_metrics, y_true, y_pred = evaluate_task2(expected_task2, parsed_res)
+        if eval_metrics is None:
+            print("Skipping Task 2 eval due to length mismatch.")
+            return {
+                "parsed_result": parsed_res,
+                "raw_output": raw_output,
+                "error": "Length mismatch",
+            }
 
-    if eval_metrics is None:
-        print("Skipping Task 2 eval due to length mismatch.")
         return {
             "parsed_result": parsed_res,
             "raw_output": raw_output,
-            "error": "Length mismatch",
+            "evaluation": {
+                "precision": eval_metrics[0],
+                "recall": eval_metrics[1],
+                "f1": eval_metrics[2],
+                "support": eval_metrics[3],
+            },
+            "y_true": y_true,
+            "y_pred": y_pred
         }
-
-
-    return {
-        "parsed_result": parsed_res,
-        "raw_output": raw_output,
-        "evaluation": {
-            "precision": eval_metrics[0],
-            "recall": eval_metrics[1],
-            "f1": eval_metrics[2],
-            "support": eval_metrics[3],
-        },
-        "y_true": y_true,
-        "y_pred": y_pred
-    }
 
 
 def main():
@@ -472,13 +472,13 @@ def main():
         # print("TASK 1 --- ", task1_result["article"], ": ", task1_result["response"])
         task1_results.append(task1_result)
     
-    task1_evaluation_report(task1_results)
+    task1_evaluation_report(task1_results) 
 
     # task 2
     task2_results = []
     for task1_result in task1_results:
-        if "task2" not in task1_result["article_data"]: # todo: once eval dataset complete. skips articles without task2 eval sett
-            continue
+        # if "task2" not in task1_result["article_data"]: # todo: once eval dataset complete. skips articles without task2 eval sett
+        #     continue
         task2_result = task2(client, task1_result["article_data"], task1_result["response"])
         task2_results.append(task2_result)
         # print("Task 2 result for ", task1_result["article"], ": ", task2_result)

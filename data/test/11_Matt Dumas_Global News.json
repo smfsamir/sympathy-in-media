@@ -47,5 +47,40 @@
       "edmonton police service",
       "briage lock"
     ]
-  }
+  },
+
+  "task2":
+  [
+    [],
+    [],
+    ["edmonton police service"],
+    ["edmonton police service"],
+    ["edmonton police service"],
+    [],
+    ["aberta serious incident response team"],
+    ["aberta serious incident response team"],
+    [],
+    ["briage lock"],
+    ["briage lock"],
+    [],
+    ["briage lock"],
+    ["briage lock"],
+    ["briage lock"],
+    ["shantel freeman"],
+    ["shantel freeman"],
+    ["shantel freeman"],
+    ["shantel freeman"],
+    ["shantel freeman"],
+    [],
+    [],
+    [],
+    [],
+    [],
+    ["mary maccormac"],
+    ["mary maccormac"],
+    [],
+    [],
+    ["edmonton police service"],
+    []
+  ]
 }
