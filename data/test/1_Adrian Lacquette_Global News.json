@@ -33,21 +33,11 @@
   },
 
   "task2":
-  [
-    ["winnipeg police"],
-    [],
-    [],
-    [],
-    ["jay murray"],
-    [],
-    ["winnipeg police"],
-    [],
-    ["winnipeg police"],
-    [],
-    ["winnipeg police"],
-    [],
-    [],
-    []
-
-  ]
+  {
+    "paragraph 1": ["winnipeg police"],
+    "paragraph 5": ["jay murray"],
+    "paragraph 7": ["winnipeg police"],
+    "paragraph 9": ["winnipeg police"],
+    "paragraph 11": ["winnipeg police"]
+  }
 }

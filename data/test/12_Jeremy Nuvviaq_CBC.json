@@ -38,27 +38,19 @@
   },
 
   "task2":
-  [
-    ["victim"],
-    ["rcmp"],
-    ["victim"],
-    ["rcmp"],
-    ["rcmp"],
-    ["rcmp"],
-    [],
-    ["rcmp"],
-    ["peter siakulk"],
-    ["peter siakulk"],
-    [],
-    [],
-    [],
-    ["victim"],
-    ["victim"],
-    [],
-    ["victim"],
-    ["victim"],
-    [],
-    [],
-    []
-  ]
+  {
+    "paragraph 1": ["victim"],
+    "paragraph 2": ["rcmp"],
+    "paragraph 3": ["victim"],
+    "paragraph 4": ["rcmp"],
+    "paragraph 5": ["rcmp"],
+    "paragraph 6": ["rcmp"],
+    "paragraph 8": ["rcmp"],
+    "paragraph 9": ["peter siakulk"],
+    "paragraph 10": ["peter siakulk"],
+    "paragraph 14": ["victim"],
+    "paragraph 15": ["victim"],
+    "paragraph 17": ["victim"],
+    "paragraph 18": ["victim"]
+  }
 }

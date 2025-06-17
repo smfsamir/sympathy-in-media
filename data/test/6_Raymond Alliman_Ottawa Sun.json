@@ -51,32 +51,22 @@
     ]
   },
 
-  "task2": [
-    [],
-    [],
-    [],
-    [],
-    [],
-    ["special investigations unit"],
-    ["special investigations unit"],
-    [],
-    [],
-    [],
-    [],
-    ["aaron reichert's  supervisor"],
-    ["dr. jack kitts"],
-    ["dr. jack kitts"],
-    ["member of the public"],
-    [],
-    [],
-    ["jill skinner"],
-    ["jill skinner"],
-    ["matt skof"],
-    ["jill skinner"],
-    ["jill skinner"],
-    ["jill skinner"],
-    ["jill skinner"],
-    ["jill skinner"],
-    ["jill skinner"]
-  ]
+  "task2": 
+  {
+    "paragraph 6": ["special investigations unit"],
+    "paragraph 7": ["special investigations unit"],
+    "paragraph 12": ["aaron reichert's  supervisor"],
+    "paragraph 13": ["dr. jack kitts"],
+    "paragraph 14": ["dr. jack kitts"],
+    "paragraph 15": ["member of the public"],
+    "paragraph 18": ["jill skinner"],
+    "paragraph 19": ["jill skinner"],
+    "paragraph 20": ["matt skof"],
+    "paragraph 21": ["jill skinner"],
+    "paragraph 22": ["jill skinner"],
+    "paragraph 23": ["jill skinner"],
+    "paragraph 24": ["jill skinner"],
+    "paragraph 25": ["jill skinner"],
+    "paragraph 26": ["jill skinner"]
+  }
 }

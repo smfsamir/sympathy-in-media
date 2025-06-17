@@ -37,24 +37,16 @@
   },
 
   "task2":
-  [
-    [],
-    [],
-    ["winnipeg police assoication"],
-    ["woman close with evan caron"],
-    [],
-    [],
-    [],
-    ["winnipeg police assoication"],
-    ["george van mackelbergh"],
-    ["george van mackelbergh"],
-    ["george van mackelbergh"],
-    ["george van mackelbergh"],
-    ["george van mackelbergh"],
-    ["danny smyth"],
-    [],
-    [],
-    ["independent investigation unit of manitoba"],
-    []
-  ]
+  {
+    "paragraph 3": ["winnipeg police assoication"],
+    "paragraph 4": ["woman close with evan caron"],
+    "paragraph 8": ["winnipeg police assoication"],
+    "paragraph 9": ["george van mackelbergh"],
+    "paragraph 10": ["george van mackelbergh"],
+    "paragraph 11": ["george van mackelbergh"],
+    "paragraph 12": ["george van mackelbergh"],
+    "paragraph 13": ["george van mackelbergh"],
+    "paragraph 14": ["danny smyth"],
+    "paragraph 17": ["independent investigation unit of manitoba"]
+  }
 }

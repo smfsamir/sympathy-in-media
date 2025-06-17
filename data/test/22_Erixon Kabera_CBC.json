@@ -42,30 +42,25 @@
   },
 
   "task2":
-  [
-    ["lydia nimbeshaho"],
-    ["erixon kabera's family"],
-    ["erixon kabera's family"],
-    ["lydia nimbeshaho"],
-    ["lydia nimbeshaho"],
-    [],
-    ["jackie penman"],
-    [],
-    ["special investigations unit"],
-    ["special investigations unit"],
-    [],
-    ["special investigations unit"],
-    ["lydia nimbeshaho, erixon kabera's family"],
-    ["erixon kabera's family"],
-    ["erixon kabera's family"],
-    ["special investigations unit"],
-    ["special investigations unit"],
-    ["erixon kabera's family"],
-    ["erixon kabera's family"],
-    ["erixon kabera's family"],
-    ["erixon kabera's family"],
-    ["erixon kabera's family"],
-    [],
-    []
-  ]
+  {
+    "paragraph 1": ["lydia nimbeshaho"],
+    "paragraph 2": ["erixon kabera's family"],
+    "paragraph 3": ["erixon kabera's family"],
+    "paragraph 4": ["lydia nimbeshaho"],
+    "paragraph 5": ["lydia nimbeshaho"],
+    "paragraph 7": ["jackie penman"],
+    "paragraph 9": ["special investigations unit"],
+    "paragraph 10": ["special investigations unit"],
+    "paragraph 12": ["special investigations unit"],
+    "paragraph 13": ["lydia nimbeshaho, erixon kabera's family"],
+    "paragraph 14": ["erixon kabera's family"],
+    "paragraph 15": ["erixon kabera's family"],
+    "paragraph 16": ["special investigations unit"],
+    "paragraph 17": ["special investigations unit"],
+    "paragraph 18": ["erixon kabera's family"],
+    "paragraph 19": ["erixon kabera's family"],
+    "paragraph 20": ["erixon kabera's family"],
+    "paragraph 21": ["erixon kabera's family"],
+    "paragraph 22": ["erixon kabera's family"]
+  }
 }

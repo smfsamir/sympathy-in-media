@@ -30,21 +30,12 @@
   },
 
   "task2":
-  [
-    [],
-    ["alberta serious incident response team"],
-    [],
-    ["friends and loved ones"],
-    ["alberta serious incident response team"],
-    [],
-    [],
-    ["alberta serious incident response team"],
-    ["alberta serious incident response team"],
-    ["alberta serious incident response team"],
-    [],
-    [],
-    [],
-    [],
-    []
-  ]
+  {
+    "paragraph 2": ["alberta serious incident response team"],
+    "paragraph 4": ["friends and loved ones"],
+    "paragraph 5": ["alberta serious incident response team"],
+    "paragraph 8": ["alberta serious incident response team"],
+    "paragraph 9": ["alberta serious incident response team"],
+    "paragraph 10": ["alberta serious incident response team"]
+  }
 }

@@ -32,20 +32,14 @@
   },
 
   "task2":
-  [
-    [],
-    [],
-    [],
-    [],
-    ["martin bonin-charron"],
-    ["martin bonin-charron"],
-    ["martin bonin-charron"],
-    ["martin bonin-charron"],
-    [],
-    ["shawn lescard"],
-    ["shawn lescard"],
-    ["shawn lescard"],
-    ["shawn lescard"],
-    []
-  ]
+  {
+    "paragraph 5": ["martin bonin-charron"],
+    "paragraph 6": ["martin bonin-charron"],
+    "paragraph 7": ["martin bonin-charron"],
+    "paragraph 8": ["martin bonin-charron"],
+    "paragraph 10": ["shawn lescard"],
+    "paragraph 11": ["shawn lescard"],
+    "paragraph 12": ["shawn lescard"],
+    "paragraph 13": ["shawn lescard"]
+  }
 }

@@ -47,32 +47,19 @@
   },
 
   "task2":
-  [
-    [],
-    [],
-    [],
-    [], 
-    [],
-    ["rcmp"],
-    [],
-    [],
-    [],
-    ["maureen levy"],
-    [],
-    ["darren stanley"],   
-    ["darren stanley"],   
-    [],
-    [],
-    ["rcmp"],
-    ["maureen levy"],
-    ["maureen levy"],
-    ["rcmp"],
-    ["drew wilby"],
-    ["drew wilby"],
-    ["drew wilby"],
-    [],
-    ["maureen levy"],
-    ["maureen levy"],
-    []
-  ]
+  {
+    "paragraph 6": ["rcmp"],
+    "paragraph 10": ["maureen levy"],
+    "paragraph 12": ["darren stanley"],   
+    "paragraph 13": ["darren stanley"],   
+    "paragraph 16": ["rcmp"],
+    "paragraph 17": ["maureen levy"],
+    "paragraph 18": ["maureen levy"],
+    "paragraph 19": ["rcmp"],
+    "paragraph 20": ["drew wilby"],
+    "paragraph 21": ["drew wilby"],
+    "paragraph 22": ["drew wilby"],
+    "paragraph 24": ["maureen levy"],
+    "paragraph 25": ["maureen levy"]
+  }
 }

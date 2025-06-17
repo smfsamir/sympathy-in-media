@@ -44,30 +44,19 @@
   },
 
   "task2":
-  [
-    [],
-    ["gerald powderface"],
-    [],
-    [],
-    ["rcmp"],
-    [],
-    ["tony hamori"],
-    [],
-    ["rcmp"],
-    ["tony hamori"],
-    ["tony hamori"],
-    ["tony hamori"],
-    [],
-    ["gerald powderface"],
-    ["gerald powderface"],
-    ["gerald powderface"],
-    ["gerald powderface"],
-    ["gerald powderface"],
-    ["gerald powderface"],
-    [],
-    [],
-    [],
-    [],
-    []
-  ]
+  {
+    "paragraph 2": ["gerald powderface"],
+    "paragraph 5": ["rcmp"],
+    "paragraph 7": ["tony hamori"],
+    "paragraph 9": ["rcmp"],
+    "paragraph 10": ["tony hamori"],
+    "paragraph 11": ["tony hamori"],
+    "paragraph 12": ["tony hamori"],
+    "paragraph 14": ["gerald powderface"],
+    "paragraph 15": ["gerald powderface"],
+    "paragraph 16": ["gerald powderface"],
+    "paragraph 17": ["gerald powderface"],
+    "paragraph 18": ["gerald powderface"],
+    "paragraph 19": ["gerald powderface"]
+  }
 }

@@ -35,21 +35,13 @@
   },
 
   "task2":
-  [
-    [],
-    [],
-    ["opp"],
-    ["chrystal jones"],
-    [],
-    [],
-    [],
-    ["monica hudon"],
-    ["eyewitness"],
-    ["eyewitness"],
-    ["babak saidi's sister"],
-    ["siu"],
-    [],
-    [],
-    []
-  ]
+  {
+    "paragraph 3": ["opp"],
+    "paragraph 4": ["chrystal jones"],
+    "paragraph 8": ["monica hudon"],
+    "paragraph 9": ["eyewitness"],
+    "paragraph 10": ["eyewitness"],
+    "paragraph 11": ["babak saidi's sister"],
+    "paragraph 12": ["siu"]
+  }
 }

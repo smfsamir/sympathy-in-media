@@ -39,25 +39,22 @@
   },
 
   "task2":
-  [
-    [],
-    ["rcmp"],
-    ["rcmp"],
-    ["rcmp"],
-    ["rcmp"],
-    ["maureen levy"],
-    [],
-    ["maureen levy"],
-    [],
-    ["maureen levy"],
-    ["maureen levy"],
-    ["maureen levy"],
-    ["maureen levy"],
-    ["rcmp"],
-    ["drew wilby"],
-    ["drew wilby"],
-    ["drew wilby"],
-    ["maureen levy"],
-    ["maureen levy"]
-  ]
+  {
+    "paragraph 2": ["rcmp"],
+    "paragraph 3": ["rcmp"],
+    "paragraph 4": ["rcmp"],
+    "paragraph 5": ["rcmp"],
+    "paragraph 6": ["maureen levy"],
+    "paragraph 8": ["maureen levy"],
+    "paragraph 10": ["maureen levy"],
+    "paragraph 11": ["maureen levy"],
+    "paragraph 12": ["maureen levy"],
+    "paragraph 13": ["maureen levy"],
+    "paragraph 14": ["rcmp"],
+    "paragraph 15": ["drew wilby"],
+    "paragraph 16": ["drew wilby"],
+    "paragraph 17": ["drew wilby"],
+    "paragraph 18": ["maureen levy"],
+    "paragraph 19": ["maureen levy"]
+  }
 }

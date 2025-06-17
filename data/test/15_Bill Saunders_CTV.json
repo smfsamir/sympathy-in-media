@@ -37,25 +37,19 @@
   },
 
  "task2":
-  [
-    [],
-    [],
-    [],
-    ["rebecca saunders"],
-    ["rebecca saunders"],
-    ["rebecca saunders"],
-    ["rebecca saunders"],
-    ["rebecca saunders"],
-    [],
-    [],
-    ["rebecca saunders"],
-    ["rebecca saunders"],
-    ["rebecca saunders"],
-    ["rebecca saunders"],
-    [],
-    ["rebecca saunders"],
-    ["rebecca saunders"],
-    ["cornell mclean"],
-    ["cornell mclean"]  
-  ]
+  {
+    "paragraph 4": ["rebecca saunders"],
+    "paragraph 5": ["rebecca saunders"],
+    "paragraph 6": ["rebecca saunders"],
+    "paragraph 7": ["rebecca saunders"],
+    "paragraph 8": ["rebecca saunders"],
+    "paragraph 11": ["rebecca saunders"],
+    "paragraph 12": ["rebecca saunders"],
+    "paragraph 13": ["rebecca saunders"],
+    "paragraph 14": ["rebecca saunders"],
+    "paragraph 16": ["rebecca saunders"],
+    "paragraph 17": ["rebecca saunders"],
+    "paragraph 18": ["cornell mclean"],
+    "paragraph 19": ["cornell mclean"]  
+  }
 }

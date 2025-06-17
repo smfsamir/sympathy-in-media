@@ -33,23 +33,10 @@
   },
 
   "task2":
-  [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    ["alberta serious incident response team"],
-    [],
-    [],
-    ["alberta serious incident response team"],
-    ["alberta serious incident response team"],
-    ["alberta serious incident response team"],
-    [],
-    []
-  ]
+  {
+    "paragraph 10": ["alberta serious incident response team"],
+    "paragraph 13": ["alberta serious incident response team"],
+    "paragraph 14": ["alberta serious incident response team"],
+    "paragraph 15": ["alberta serious incident response team"]
+  }
 }

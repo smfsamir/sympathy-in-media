@@ -41,26 +41,20 @@
     ]
   },
 
-  "task2": [
-    [],
-    [],
-    ["old brewery mission"],
-    [],
-    [],
-    ["montreal police"],
-    [],
-    ["matthew pearce"],
-    ["matthew pearce"],
-    ["matthew pearce"],
-    ["matthew pearce"],
-    ["matthew pearce"],
-    ["jimmy clouter's friends and acquaintances"],
-    ["milosz janda"],
-    ["pierre magloire"],
-    [],
-    ["pierre magloire"],
-    ["pierre magloire"],
-    ["pierre magloire"],
-    []
-  ]
+  "task2": 
+  {
+    "paragraph 3": ["old brewery mission"],
+    "paragraph 6": ["montreal police"],
+    "paragraph 8": ["matthew pearce"],
+    "paragraph 9": ["matthew pearce"],
+    "paragraph 10": ["matthew pearce"],
+    "paragraph 11": ["matthew pearce"],
+    "paragraph 12": ["matthew pearce"],
+    "paragraph 13": ["jimmy clouter's friends and acquaintances"],
+    "paragraph 14": ["milosz janda"],
+    "paragraph 15": ["pierre magloire"],
+    "paragraph 17": ["pierre magloire"],
+    "paragraph 18": ["pierre magloire"],
+    "paragraph 19": ["pierre magloire"]
+  }
 }

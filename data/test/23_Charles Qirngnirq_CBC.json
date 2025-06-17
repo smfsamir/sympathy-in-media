@@ -26,16 +26,12 @@
   },
 
   "task2":
-  [
-    [],
-    ["rcmp"],
-    [],
-    [],
-    ["rcmp"],
-    [],
-    ["rcmp"],
-    ["rcmp"],
-    ["rcmp"],
-    ["rcmp"]
-  ]
+  {
+    "paragraph 2": ["rcmp"],
+    "paragraph 5": ["rcmp"],
+    "paragraph 7": ["rcmp"],
+    "paragraph 8": ["rcmp"],
+    "paragraph 9": ["rcmp"],
+    "paragraph 10": ["rcmp"]
+  }
 }

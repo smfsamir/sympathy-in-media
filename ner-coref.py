@@ -94,30 +94,20 @@ Assign each paragraph to the names of the entities whose perspectives are being 
 
 A perspective can be given through a quote, a paraphrase, or a description of the entity's opinions or feelings. 
 
-Return a list of lists, where the ith inner list corresponds to the ith paragraph in the article. 
-Each inner list must contain the names of the people whose perspectives are shown in that paragraph.
-There may be zero, one or multiple perspectives in a given paragaph. If there are multiple perspectives, list them all. 
-If there are no perspectives, return an empty list []. 
-
-The article has been previously provided and is a list of numbered paragraphs. 
-Your output must exactly match that paragraph count.
-A paragraph can be extremely short, but if it is numbered has been a paragraph (i.e. precided by "Paragraph X: ") you must provide a list for it.
+Return a dictionary mapping each paragraph to the list of entities whose perspectives are being described. The article has been previously provided and is a list of numbered paragraphs. 
 
 Rules your response must follow:
-- Return exactly one list per paragraph. Do not merge, skip, or duplicate paragraphs
-- The total number of lists must equal the number of paragraphs in the article, as indicated by the numbered list
 - Use only the names from your prior response
 - Use all lowercase
-- Your response should only be the raw list of lists, and nothing else
 - Format your response exactly like this:
-[
-    ["entity1", "entity2"],
-    ["entity3"],
-    [],
-    ["entity4", "entity1"]
-]
+{
+    “paragraph 1”: [“entity1", “entity2”],
+    "paragraph 2": ["entity4", "entity5"],
+    “paragraph 4": [“entity3”, “entity4"]
+}
 
 This represents a 4-paragraph article, where the first paragraph has two perspectives, the second has one, the third has none, and the fourth has two perspectives.
+
 """
 
 
@@ -325,33 +315,92 @@ def task1(client, article_path):
 
 ### TASK 2 HELPERS ###
 
-# evaluates task 2 for a single article
-def evaluate_task2(expected, predicted):
-    # assert len(predicted) == len(expected) 
-    if not len(predicted) == len(expected):
-        print("EXPECTED LENGTH: ,", len(expected), "PREDICTED LENGTH: ", len(predicted))
-        print("\nEXPECTED: ,", expected)
-        print("\nPREDICTED: ,", predicted)
+# # evaluates task 2 for a single article
+# def evaluate_task2(expected, predicted):
+#     # assert len(predicted) == len(expected) 
+#     if not len(predicted) == len(expected):
+#         print("EXPECTED LENGTH: ,", len(expected), "PREDICTED LENGTH: ", len(predicted))
+#         print("\nEXPECTED: ,", expected)
+#         print("\nPREDICTED: ,", predicted)
 
-        return (None, None, None)
+#         return (None, None, None)
+
+#     y_true = []
+#     y_pred = []
+
+#     all_people = set()
+#     for p in predicted:
+#         all_people.update(p)
+#     for p in expected:
+#         all_people.update(p)
+
+#     for exp, pred in zip(expected, predicted):
+#         for person in all_people:
+#             y_true.append(1 if person in exp else 0)
+#             y_pred.append(1 if person in pred else 0)
+
+#     return precision_recall_fscore_support(
+#         y_true, y_pred, average='binary', zero_division=0
+#     ), y_true, y_pred 
+
+def evaluate_task2(expected, predicted):
+    expected_paras = set(expected.keys())
+    predicted_paras = set(predicted.keys())
+    all_paras = expected_paras | predicted_paras
+
+    # DEBUG LOG
+    if expected_paras != predicted_paras:
+        print("PARAGRAPH COVERAGE:")
+        print(f"Expected paragraphs: {sorted(expected_paras)}")
+        print(f"Predicted paragraphs: {sorted(predicted_paras)}")
+        print(f"Missing from prediction: {sorted(expected_paras - predicted_paras)}")
+        print(f"Extra in prediction: {sorted(predicted_paras - expected_paras)}")
+        print(f"Evaluating on all {len(all_paras)} paragraphs")
+    
+    # sorting
+    paragraph_numbers = []
+    for para in all_paras:
+        try:
+            # Extract number from "paragraph X" format
+            num = int(para.lower().replace("paragraph", "").strip())
+            paragraph_numbers.append(num)
+        except:
+            print(f"Warning: Could not parse paragraph number from '{para}'")
+            continue
+    
+    paragraph_numbers.sort()
 
     y_true = []
     y_pred = []
 
+    # Get all unique entities mentioned across all paragraphs
     all_people = set()
-    for p in predicted:
-        all_people.update(p)
-    for p in expected:
-        all_people.update(p)
+    for entities in expected.values():
+        all_people.update(entities)
+    for entities in predicted.values():
+        all_people.update(entities)
+    
+    if not all_people:
+        print("Warning: No entities found in either expected or predicted results")
+        return (None, None, None)
 
-    for exp, pred in zip(expected, predicted):
+    # For each paragraph, create binary labels for each entity
+    for num in paragraph_numbers:
+        para_key = f"paragraph {num}"
+        
+        # Get entities for this paragraph (empty list if paragraph not present)
+        expected_entities = expected.get(para_key, [])
+        predicted_entities = predicted.get(para_key, [])
+        
+        # For each entity, check if it appears in this paragraph
         for person in all_people:
-            y_true.append(1 if person in exp else 0)
-            y_pred.append(1 if person in pred else 0)
+            y_true.append(1 if person in expected_entities else 0)
+            y_pred.append(1 if person in predicted_entities else 0)
 
     return precision_recall_fscore_support(
         y_true, y_pred, average='binary', zero_division=0
-    ), y_true, y_pred 
+    ), y_true, y_pred
+
 
 def task2_evaluation_report(results):
     all_y_true = []
@@ -400,6 +449,7 @@ def task2(client, article_data, task1_response):
             line = "Paragraph " + str(i) + ": " + para
             numbered_article.append(line)
     article_text_prompt = "\n\n".join(numbered_article)
+    # print("ARTICLE TEXT: ", article_text_prompt)
     
     # this is chat history that i feed -- am i doing that correctly?
     messages = [

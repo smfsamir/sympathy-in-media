@@ -44,30 +44,24 @@
   },
 
   "task2":
-    [
-    [],
-    [],
-    ["bei"],
-    ["bei"],
-    ["bei"],
-    ["lawrence dulac"],
-    [],
-    ["lawrence dulac"],
-    ["lawrence dulac"],
-    ["louis guillemette"],
-    [],
-    ["claudine laurin"],
-    ["claudine laurin"],
-    ["claudine laurin"],
-    [],
-    [],
-    ["francis dore"],
-    ["francis dore"],
-    ["francis dore"],
-    ["francis dore"],
-    [],
-    ["matthew pearce"],
-    ["matthew pearce"],
-    ["matthew pearce"]
-    ]
+  {
+    "paragraph 3": ["bei"],
+    "paragraph 4": ["bei"],
+    "paragraph 5": ["bei"],
+    "paragraph 6": ["lawrence dulac"],
+    "paragraph 7": [],
+    "paragraph 8": ["lawrence dulac"],
+    "paragraph 9": ["lawrence dulac"],
+    "paragraph 10": ["louis guillemette"],
+    "paragraph 12": ["claudine laurin"],
+    "paragraph 13": ["claudine laurin"],
+    "paragraph 14": ["claudine laurin"],
+    "paragraph 17": ["francis dore"],
+    "paragraph 18": ["francis dore"],
+    "paragraph 19": ["francis dore"],
+    "paragraph 20": ["francis dore"],
+    "paragraph 22": ["matthew pearce"],
+    "paragraph 23": ["matthew pearce"],
+    "paragraph 24": ["matthew pearce"]
+  }
 }

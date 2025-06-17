@@ -42,32 +42,21 @@
   },
 
   "task2":
-  [
-    [],
-    ["police"],
-    [],
-    [],
-    [],
-    [],
-    [],
-    ["randy mcleod"],
-    ["randy mcleod"],
-    ["randy mcleod"],
-    ["randy mcleod"],
-    ["randy mcleod"],
-    ["randy mcleod"],
-    [],
-    [],
-    [],
-    ["rebecca tukalak"],
-    ["rebecca tukalak"],
-    [],
-    [],
-    ["eli aullaluk"],
-    ["eli aullaluk"],
-    ["illutak anautuk"],
-    ["rebecca tukalak"],
-    ["rebecca tukalak"],
-    ["rebecca tukalak"]
-  ]
+  {
+    "paragraph 2": ["police"],
+    "paragraph 8": ["randy mcleod"],
+    "paragraph 9": ["randy mcleod"],
+    "paragraph 10": ["randy mcleod"],
+    "paragraph 11": ["randy mcleod"],
+    "paragraph 12": ["randy mcleod"],
+    "paragraph 13": ["randy mcleod"],
+    "paragraph 17": ["rebecca tukalak"],
+    "paragraph 18": ["rebecca tukalak"],
+    "paragraph 21": ["eli aullaluk"],
+    "paragraph 22": ["eli aullaluk"],
+    "paragraph 23": ["illutak anautuk"],
+    "paragraph 24": ["rebecca tukalak"],
+    "paragraph 25": ["rebecca tukalak"],
+    "paragraph 26": ["rebecca tukalak"]
+  }
 }

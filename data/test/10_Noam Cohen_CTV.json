@@ -34,21 +34,11 @@
   },
 
   "task2":
-  [
-    [],
-    [],
-    [],
-    [],
-    [],
-    ["montreal police"],
-    ["montreal police"],
-    ["montreal police"],
-    [],
-    ["matthew pearce"],
-    ["matthew pearce"],
-    [],
-    [],
-    [],
-    []
-  ]
+  {
+    "paragraph 6": ["montreal police"],
+    "paragraph 7": ["montreal police"],
+    "paragraph 8": ["montreal police"],
+    "paragraph 10": ["matthew pearce"],
+    "paragraph 11": ["matthew pearce"]
+  }
 }
