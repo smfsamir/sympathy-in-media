@@ -1,0 +1,1319 @@
+{
+  "18_David Sappa_CBC.json":
+  {
+    "task1_prediction": {
+      "Victim-aligned": [],
+      "Police-aligned": [
+        "quebec's police watchdog (police oversight body)",
+        "s\u00fbret\u00e9 du qu\u00e9bec (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [
+        "quebec's police watchdog"
+      ],
+      "paragraph 2": [
+        "quebec's police watchdog"
+      ],
+      "paragraph 3": [
+        "quebec's police watchdog"
+      ],
+      "paragraph 4": [],
+      "paragraph 5": [
+        "quebec's police watchdog"
+      ],
+      "paragraph 6": [
+        "quebec's police watchdog"
+      ],
+      "paragraph 7": [],
+      "paragraph 8": [],
+      "paragraph 9": [
+        "quebec's police watchdog",
+        "s\u00fbret\u00e9 du qu\u00e9bec"
+      ],
+      "paragraph 10": [
+        "quebec's police watchdog"
+      ]
+    }
+  },
+  "11_Matt Dumas_Global News.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "matt dumas (victim)",
+        "briage lock (friend)",
+        "shantel freeman (friend)"
+      ],
+      "Police-aligned": [
+        "alberta serious incident response team (police oversight body)",
+        "edmonton police service (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 2": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 3": [
+        "edmonton police service"
+      ],
+      "paragraph 4": [
+        "edmonton police service"
+      ],
+      "paragraph 5": [
+        "edmonton police service"
+      ],
+      "paragraph 6": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 7": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 8": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 9": [
+        "matt dumas"
+      ],
+      "paragraph 10": [
+        "briage lock"
+      ],
+      "paragraph 11": [
+        "briage lock"
+      ],
+      "paragraph 13": [
+        "briage lock"
+      ],
+      "paragraph 14": [
+        "briage lock"
+      ],
+      "paragraph 15": [
+        "briage lock"
+      ],
+      "paragraph 16": [
+        "shantel freeman"
+      ],
+      "paragraph 17": [
+        "shantel freeman"
+      ],
+      "paragraph 18": [
+        "shantel freeman"
+      ],
+      "paragraph 19": [
+        "shantel freeman"
+      ],
+      "paragraph 20": [
+        "shantel freeman"
+      ],
+      "paragraph 21": [
+        "matt dumas"
+      ],
+      "paragraph 22": [
+        "matt dumas"
+      ],
+      "paragraph 23": [
+        "matt dumas"
+      ],
+      "paragraph 30": [
+        "edmonton police service"
+      ],
+      "paragraph 31": [
+        "alberta serious incident response team"
+      ]
+    }
+  },
+  "9_Matt Dumas_CBC.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "matt dumas (victim)"
+      ],
+      "Police-aligned": [
+        "alberta serious incident response team (police oversight body)",
+        "edmonton police (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [],
+      "paragraph 2": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 3": [],
+      "paragraph 4": [
+        "matt dumas"
+      ],
+      "paragraph 5": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 6": [],
+      "paragraph 7": [],
+      "paragraph 8": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 9": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 10": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 11": [],
+      "paragraph 12": [
+        "edmonton police"
+      ],
+      "paragraph 13": [],
+      "paragraph 14": [],
+      "paragraph 15": []
+    }
+  },
+  "14_Evan Caron_CTV.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "evan caron (victim)",
+        "woman close with evan caron (friend)"
+      ],
+      "Police-aligned": [
+        "winnipeg police (police department)",
+        "winnipeg police association (police union)",
+        "george van mackelbergh (police union vice-president)",
+        "danny smyth (police chief)",
+        "independent investigation unit of manitoba (police oversight body)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [],
+      "paragraph 2": [
+        "evan caron"
+      ],
+      "paragraph 3": [
+        "winnipeg police"
+      ],
+      "paragraph 4": [
+        "woman close with evan caron"
+      ],
+      "paragraph 5": [],
+      "paragraph 6": [],
+      "paragraph 7": [
+        "winnipeg police association"
+      ],
+      "paragraph 8": [
+        "winnipeg police association"
+      ],
+      "paragraph 9": [
+        "george van mackelbergh"
+      ],
+      "paragraph 10": [
+        "george van mackelbergh"
+      ],
+      "paragraph 11": [
+        "george van mackelbergh"
+      ],
+      "paragraph 12": [
+        "george van mackelbergh"
+      ],
+      "paragraph 13": [
+        "winnipeg police association"
+      ],
+      "paragraph 14": [
+        "danny smyth"
+      ],
+      "paragraph 15": [
+        "independent investigation unit of manitoba"
+      ],
+      "paragraph 16": [
+        "independent investigation unit of manitoba"
+      ],
+      "paragraph 17": [
+        "independent investigation unit of manitoba"
+      ],
+      "paragraph 18": [
+        "independent investigation unit of manitoba"
+      ]
+    }
+  },
+  "6_Raymond Alliman_Ottawa Sun.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "bun sim (victim's friend)"
+      ],
+      "Police-aligned": [
+        "const. aaron reichert (police officer)",
+        "special investigations unit (police oversight body)",
+        "jill skinner (acting police chief)",
+        "matt skof (police union president)",
+        "ottawa police service (police department)",
+        "dr. jack kitts (ottawa hospital president and ceo)",
+        "vern white (former police chief)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 6": [
+        "const. aaron reichert",
+        "special investigations unit"
+      ],
+      "paragraph 11": [
+        "const. aaron reichert"
+      ],
+      "paragraph 12": [
+        "const. aaron reichert"
+      ],
+      "paragraph 13": [
+        "dr. jack kitts"
+      ],
+      "paragraph 15": [
+        "const. aaron reichert"
+      ],
+      "paragraph 16": [
+        "const. aaron reichert"
+      ],
+      "paragraph 18": [
+        "jill skinner"
+      ],
+      "paragraph 20": [
+        "matt skof"
+      ],
+      "paragraph 21": [
+        "jill skinner"
+      ],
+      "paragraph 22": [
+        "jill skinner"
+      ],
+      "paragraph 23": [
+        "jill skinner"
+      ],
+      "paragraph 24": [
+        "jill skinner"
+      ],
+      "paragraph 25": [
+        "jill skinner"
+      ],
+      "paragraph 26": [
+        "jill skinner"
+      ]
+    }
+  },
+  "20_Brydon Whitstone_CTV.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "brydon bryce whitstone (victim)"
+      ],
+      "Police-aligned": [
+        "maureen levy (rcmp chief superintendent)",
+        "regina city police (police)",
+        "saskatchewan justice ministry (government)",
+        "drew wilby (justice ministry spokesman)",
+        "rcmp (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [],
+      "paragraph 2": [
+        "rcmp"
+      ],
+      "paragraph 3": [
+        "rcmp"
+      ],
+      "paragraph 4": [
+        "rcmp"
+      ],
+      "paragraph 5": [
+        "rcmp"
+      ],
+      "paragraph 6": [
+        "maureen levy"
+      ],
+      "paragraph 7": [
+        "rcmp"
+      ],
+      "paragraph 8": [
+        "maureen levy"
+      ],
+      "paragraph 9": [
+        "rcmp"
+      ],
+      "paragraph 10": [
+        "maureen levy"
+      ],
+      "paragraph 11": [
+        "maureen levy"
+      ],
+      "paragraph 12": [
+        "maureen levy"
+      ],
+      "paragraph 13": [
+        "maureen levy"
+      ],
+      "paragraph 14": [
+        "rcmp"
+      ],
+      "paragraph 15": [
+        "drew wilby"
+      ],
+      "paragraph 16": [
+        "drew wilby"
+      ],
+      "paragraph 17": [
+        "drew wilby"
+      ],
+      "paragraph 18": [
+        "maureen levy"
+      ],
+      "paragraph 19": [
+        "maureen levy"
+      ]
+    }
+  },
+  "10_Noam Cohen_CTV.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "noam cohen's father (victim's father)",
+        "matthew pearce (director of the old brewery mission)"
+      ],
+      "Police-aligned": [
+        "montreal police (police)",
+        "bei (police oversight body)",
+        "sq (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 3": [
+        "noam cohen's father"
+      ],
+      "paragraph 6": [
+        "montreal police"
+      ],
+      "paragraph 7": [
+        "montreal police"
+      ],
+      "paragraph 8": [
+        "montreal police"
+      ],
+      "paragraph 10": [
+        "matthew pearce"
+      ],
+      "paragraph 11": [
+        "matthew pearce"
+      ],
+      "paragraph 13": [
+        "bei",
+        "sq"
+      ]
+    }
+  },
+  "1_Adrian Lacquette_Global News.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "adrian lacquette (victim)",
+        "adrian lacquette's mother"
+      ],
+      "Police-aligned": [
+        "winnipeg police (police)",
+        "jay murray (const.)",
+        "independent investigation unit of manitoba (police oversight body)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [
+        "winnipeg police"
+      ],
+      "paragraph 2": [],
+      "paragraph 3": [
+        "adrian lacquette's mother"
+      ],
+      "paragraph 4": [
+        "winnipeg police"
+      ],
+      "paragraph 5": [
+        "jay murray"
+      ],
+      "paragraph 6": [],
+      "paragraph 7": [
+        "winnipeg police"
+      ],
+      "paragraph 8": [
+        "adrian lacquette's mother"
+      ],
+      "paragraph 9": [
+        "winnipeg police"
+      ],
+      "paragraph 10": [
+        "winnipeg police"
+      ],
+      "paragraph 11": [
+        "winnipeg police"
+      ],
+      "paragraph 12": [],
+      "paragraph 13": [
+        "winnipeg police"
+      ],
+      "paragraph 14": [
+        "independent investigation unit of manitoba"
+      ]
+    }
+  },
+  "8_Vitaly Savin_CBC.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "vitaly savin (victim)"
+      ],
+      "Police-aligned": [
+        "alberta serious incident response team (police oversight body)",
+        "edmonton police service (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [
+        "vitaly savin"
+      ],
+      "paragraph 2": [],
+      "paragraph 3": [
+        "vitaly savin"
+      ],
+      "paragraph 4": [],
+      "paragraph 5": [
+        "vitaly savin"
+      ],
+      "paragraph 6": [
+        "vitaly savin"
+      ],
+      "paragraph 7": [
+        "vitaly savin"
+      ],
+      "paragraph 8": [
+        "edmonton police service"
+      ],
+      "paragraph 9": [
+        "edmonton police service"
+      ],
+      "paragraph 10": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 11": [
+        "edmonton police service"
+      ],
+      "paragraph 12": [
+        "edmonton police service"
+      ],
+      "paragraph 13": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 14": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 15": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 16": [],
+      "paragraph 17": [
+        "alberta serious incident response team"
+      ]
+    }
+  },
+  "16_Brydon Whitstone_Global News.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "brydon bryce whitstone (victim)",
+        "darren stanley (witness)"
+      ],
+      "Police-aligned": [
+        "maureen levy (rcmp chief supt.)",
+        "battlefords rcmp (police)",
+        "regina police service (police)",
+        "ministry of justice (government)",
+        "drew wilby (justice ministry spokesman)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [],
+      "paragraph 2": [],
+      "paragraph 3": [],
+      "paragraph 4": [],
+      "paragraph 5": [
+        "battlefords rcmp"
+      ],
+      "paragraph 6": [
+        "battlefords rcmp"
+      ],
+      "paragraph 7": [],
+      "paragraph 8": [],
+      "paragraph 9": [],
+      "paragraph 10": [
+        "maureen levy"
+      ],
+      "paragraph 11": [],
+      "paragraph 12": [
+        "darren stanley"
+      ],
+      "paragraph 13": [
+        "darren stanley"
+      ],
+      "paragraph 14": [],
+      "paragraph 15": [],
+      "paragraph 16": [
+        "saskatchewan rcmp",
+        "regina police service"
+      ],
+      "paragraph 17": [
+        "maureen levy"
+      ],
+      "paragraph 18": [
+        "maureen levy"
+      ],
+      "paragraph 19": [
+        "battlefords rcmp"
+      ],
+      "paragraph 20": [
+        "drew wilby"
+      ],
+      "paragraph 21": [
+        "drew wilby"
+      ],
+      "paragraph 22": [
+        "drew wilby"
+      ],
+      "paragraph 23": [],
+      "paragraph 24": [
+        "maureen levy"
+      ],
+      "paragraph 25": [
+        "maureen levy"
+      ],
+      "paragraph 26": [
+        "battlefords rcmp"
+      ]
+    }
+  },
+  "23_Charles Qirngnirq_CBC.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "charles qirngnirq (victim)"
+      ],
+      "Police-aligned": [
+        "rcmp (police)",
+        "ottawa police service (police)",
+        "office of the chief coroner of nunavut (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [],
+      "paragraph 2": [
+        "rcmp"
+      ],
+      "paragraph 3": [],
+      "paragraph 4": [
+        "charles qirngnirq"
+      ],
+      "paragraph 5": [
+        "rcmp"
+      ],
+      "paragraph 6": [
+        "rcmp"
+      ],
+      "paragraph 7": [
+        "rcmp"
+      ],
+      "paragraph 8": [
+        "rcmp"
+      ],
+      "paragraph 9": [
+        "rcmp",
+        "ottawa police service",
+        "office of the chief coroner of nunavut"
+      ],
+      "paragraph 10": [
+        "ottawa police service",
+        "rcmp"
+      ]
+    }
+  },
+  "21_Babak Saidi_Morrisburg Leader.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "babak saidi (victim)",
+        "saidi's sister (victim's sister)"
+      ],
+      "Police-aligned": [
+        "chrystal jones (opp acting staff sergeant)",
+        "monica hudon (siu spokesperson)",
+        "special investigations unit (police oversight body)",
+        "opp (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [],
+      "paragraph 2": [],
+      "paragraph 3": [
+        "opp"
+      ],
+      "paragraph 4": [
+        "chrystal jones"
+      ],
+      "paragraph 5": [
+        "special investigations unit"
+      ],
+      "paragraph 6": [
+        "opp"
+      ],
+      "paragraph 7": [
+        "special investigations unit"
+      ],
+      "paragraph 8": [
+        "monica hudon",
+        "special investigations unit"
+      ],
+      "paragraph 9": [],
+      "paragraph 10": [],
+      "paragraph 11": [
+        "saidi's sister"
+      ],
+      "paragraph 12": [
+        "special investigations unit"
+      ],
+      "paragraph 13": [
+        "special investigations unit",
+        "opp"
+      ],
+      "paragraph 14": [],
+      "paragraph 15": []
+    }
+  },
+  "19_Babak Saidi_CBC.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "babak saidi (victim)",
+        "elly saidi (victim's sister)"
+      ],
+      "Police-aligned": [
+        "ontario provincial police (police)",
+        "special investigations unit (police oversight body)",
+        "monica hudon (siu spokeswoman)",
+        "tylor copeland (opp constable)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [],
+      "paragraph 2": [
+        "elly saidi"
+      ],
+      "paragraph 3": [],
+      "paragraph 4": [
+        "elly saidi"
+      ],
+      "paragraph 5": [
+        "elly saidi"
+      ],
+      "paragraph 6": [
+        "elly saidi"
+      ],
+      "paragraph 7": [
+        "special investigations unit"
+      ],
+      "paragraph 8": [],
+      "paragraph 9": [],
+      "paragraph 10": [
+        "elly saidi"
+      ],
+      "paragraph 11": [
+        "elly saidi"
+      ],
+      "paragraph 12": [
+        "elly saidi"
+      ],
+      "paragraph 13": [
+        "elly saidi"
+      ],
+      "paragraph 14": [],
+      "paragraph 15": [
+        "elly saidi"
+      ],
+      "paragraph 16": [
+        "elly saidi"
+      ],
+      "paragraph 17": [
+        "elly saidi"
+      ],
+      "paragraph 18": [
+        "elly saidi"
+      ],
+      "paragraph 19": [
+        "elly saidi"
+      ],
+      "paragraph 20": [],
+      "paragraph 21": [
+        "elly saidi"
+      ],
+      "paragraph 22": [
+        "elly saidi"
+      ],
+      "paragraph 23": [
+        "elly saidi"
+      ],
+      "paragraph 24": [
+        "elly saidi"
+      ],
+      "paragraph 25": [
+        "elly saidi"
+      ],
+      "paragraph 26": [
+        "special investigations unit"
+      ],
+      "paragraph 27": [
+        "special investigations unit"
+      ],
+      "paragraph 28": [
+        "special investigations unit"
+      ],
+      "paragraph 29": [
+        "special investigations unit"
+      ],
+      "paragraph 30": [
+        "monica hudon"
+      ],
+      "paragraph 31": [
+        "special investigations unit"
+      ],
+      "paragraph 32": [
+        "ontario provincial police"
+      ],
+      "paragraph 33": [
+        "ontario provincial police"
+      ],
+      "paragraph 34": [
+        "tylor copeland"
+      ],
+      "paragraph 35": [
+        "tylor copeland"
+      ],
+      "paragraph 36": [],
+      "paragraph 37": [],
+      "paragraph 38": [
+        "special investigations unit"
+      ],
+      "paragraph 39": [
+        "special investigations unit"
+      ],
+      "paragraph 40": [
+        "special investigations unit"
+      ],
+      "paragraph 41": [],
+      "paragraph 42": []
+    }
+  },
+  "2_Pierre Coriolan_CTV.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "lawrence dulac (neighbour)",
+        "louis guillemette (neighbour)",
+        "claudine laurin (fohm executive director)",
+        "matthew pearce (old brewery mission ceo)"
+      ],
+      "Police-aligned": [
+        "bei (police oversight body)",
+        "surete du quebec (police)",
+        "francois dore (police analyst)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 6": [
+        "lawrence dulac"
+      ],
+      "paragraph 9": [
+        "lawrence dulac"
+      ],
+      "paragraph 10": [
+        "louis guillemette"
+      ],
+      "paragraph 12": [
+        "claudine laurin"
+      ],
+      "paragraph 13": [
+        "claudine laurin"
+      ],
+      "paragraph 14": [
+        "claudine laurin"
+      ],
+      "paragraph 17": [
+        "francois dore"
+      ],
+      "paragraph 18": [
+        "francois dore"
+      ],
+      "paragraph 19": [
+        "francois dore"
+      ],
+      "paragraph 20": [
+        "francois dore"
+      ],
+      "paragraph 22": [
+        "matthew pearce"
+      ],
+      "paragraph 24": [
+        "matthew pearce"
+      ]
+    }
+  },
+  "12_Jeremy Nuvviaq_CBC.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "peter siakuluk (mayor)"
+      ],
+      "Police-aligned": [
+        "rcmp (police)",
+        "ottawa police service (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [],
+      "paragraph 2": [
+        "rcmp"
+      ],
+      "paragraph 3": [],
+      "paragraph 4": [
+        "rcmp"
+      ],
+      "paragraph 5": [
+        "rcmp"
+      ],
+      "paragraph 6": [
+        "rcmp"
+      ],
+      "paragraph 7": [
+        "ottawa police service"
+      ],
+      "paragraph 8": [
+        "rcmp"
+      ],
+      "paragraph 9": [
+        "peter siakuluk"
+      ],
+      "paragraph 10": [
+        "peter siakuluk"
+      ],
+      "paragraph 11": [],
+      "paragraph 12": [],
+      "paragraph 13": [],
+      "paragraph 14": [],
+      "paragraph 15": [],
+      "paragraph 16": [],
+      "paragraph 17": [],
+      "paragraph 18": [],
+      "paragraph 19": [],
+      "paragraph 20": [],
+      "paragraph 21": []
+    }
+  },
+  "7_Ralph Stephens_CBC.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "ralph stephens (victim)",
+        "gerald powderface (relative of the stephens family)"
+      ],
+      "Police-aligned": [
+        "tony hamori (chief superintendent, officer in charge of southern alberta)",
+        "rcmp (police)",
+        "alberta serious incident response team (police oversight body)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [],
+      "paragraph 2": [
+        "gerald powderface"
+      ],
+      "paragraph 3": [],
+      "paragraph 4": [],
+      "paragraph 5": [],
+      "paragraph 6": [],
+      "paragraph 7": [
+        "tony hamori"
+      ],
+      "paragraph 8": [],
+      "paragraph 9": [
+        "rcmp"
+      ],
+      "paragraph 10": [
+        "tony hamori"
+      ],
+      "paragraph 11": [
+        "tony hamori"
+      ],
+      "paragraph 12": [
+        "tony hamori"
+      ],
+      "paragraph 13": [],
+      "paragraph 14": [
+        "gerald powderface"
+      ],
+      "paragraph 15": [
+        "gerald powderface"
+      ],
+      "paragraph 16": [
+        "gerald powderface"
+      ],
+      "paragraph 17": [
+        "gerald powderface"
+      ],
+      "paragraph 18": [
+        "gerald powderface"
+      ],
+      "paragraph 19": [
+        "gerald powderface"
+      ],
+      "paragraph 20": [],
+      "paragraph 21": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 22": [
+        "rcmp"
+      ],
+      "paragraph 23": [],
+      "paragraph 24": []
+    }
+  },
+  "22_Erixon Kabera_CBC.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "erixon kabera (victim)",
+        "lydia nimbeshaho (victim's wife)",
+        "kabera's family (victim's family)"
+      ],
+      "Police-aligned": [
+        "special investigations unit (police oversight body)",
+        "jackie penman (hamilton police spokesperson)",
+        "hamilton police (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [
+        "lydia nimbeshaho"
+      ],
+      "paragraph 2": [
+        "kabera's family"
+      ],
+      "paragraph 3": [
+        "kabera's family"
+      ],
+      "paragraph 4": [
+        "lydia nimbeshaho"
+      ],
+      "paragraph 5": [
+        "lydia nimbeshaho"
+      ],
+      "paragraph 6": [
+        "special investigations unit"
+      ],
+      "paragraph 7": [
+        "hamilton police",
+        "jackie penman"
+      ],
+      "paragraph 8": [
+        "special investigations unit"
+      ],
+      "paragraph 9": [
+        "special investigations unit"
+      ],
+      "paragraph 10": [
+        "special investigations unit"
+      ],
+      "paragraph 11": [
+        "special investigations unit"
+      ],
+      "paragraph 12": [
+        "lydia nimbeshaho"
+      ],
+      "paragraph 13": [
+        "kabera's family"
+      ],
+      "paragraph 14": [
+        "kabera's family"
+      ],
+      "paragraph 15": [
+        "special investigations unit"
+      ],
+      "paragraph 16": [
+        "special investigations unit"
+      ],
+      "paragraph 17": [
+        "kabera's family"
+      ],
+      "paragraph 18": [
+        "kabera's family"
+      ],
+      "paragraph 19": [
+        "kabera's family"
+      ],
+      "paragraph 20": [
+        "kabera's family"
+      ],
+      "paragraph 21": [
+        "kabera's family"
+      ],
+      "paragraph 22": [
+        "special investigations unit"
+      ],
+      "paragraph 23": []
+    }
+  },
+  "5_Jimmy Cloutier_CTV.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "jimmy cloutier (victim)",
+        "matthew pearce (head of the old brewery mission)",
+        "milosz janda (old brewery mission social counsellor)",
+        "pierre magloire (alain magloire's brother)"
+      ],
+      "Police-aligned": [
+        "montreal police (police)",
+        "quebec's bureau of independent investigations (bei) (police oversight body)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [],
+      "paragraph 2": [
+        "matthew pearce"
+      ],
+      "paragraph 3": [
+        "montreal police"
+      ],
+      "paragraph 4": [
+        "jimmy cloutier"
+      ],
+      "paragraph 5": [
+        "montreal police"
+      ],
+      "paragraph 6": [
+        "jimmy cloutier"
+      ],
+      "paragraph 7": [
+        "montreal police"
+      ],
+      "paragraph 8": [
+        "matthew pearce"
+      ],
+      "paragraph 9": [
+        "matthew pearce"
+      ],
+      "paragraph 10": [
+        "matthew pearce"
+      ],
+      "paragraph 11": [
+        "matthew pearce"
+      ],
+      "paragraph 12": [
+        "matthew pearce"
+      ],
+      "paragraph 13": [
+        "matthew pearce"
+      ],
+      "paragraph 14": [
+        "jimmy cloutier"
+      ],
+      "paragraph 15": [
+        "milosz janda"
+      ],
+      "paragraph 16": [
+        "pierre magloire"
+      ],
+      "paragraph 17": [
+        "pierre magloire"
+      ],
+      "paragraph 18": [
+        "pierre magloire"
+      ],
+      "paragraph 19": [
+        "pierre magloire"
+      ],
+      "paragraph 20": [
+        "pierre magloire"
+      ],
+      "paragraph 21": [
+        "quebec's bureau of independent investigations (bei)"
+      ]
+    }
+  },
+  "3_Nadia Racine_CBC.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "nadia racine (victim)",
+        "shawn lescard (victim's neighbour)"
+      ],
+      "Police-aligned": [
+        "martin bonin-charron (bei spokesman)",
+        "bei (police oversight body)",
+        "gatineau police (police)",
+        "s\u00fbret\u00e9 du qu\u00e9bec (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [],
+      "paragraph 2": [],
+      "paragraph 3": [],
+      "paragraph 4": [
+        "nadia racine"
+      ],
+      "paragraph 5": [
+        "martin bonin-charron"
+      ],
+      "paragraph 6": [
+        "martin bonin-charron"
+      ],
+      "paragraph 7": [
+        "martin bonin-charron"
+      ],
+      "paragraph 8": [
+        "martin bonin-charron"
+      ],
+      "paragraph 9": [],
+      "paragraph 10": [
+        "shawn lescard"
+      ],
+      "paragraph 11": [
+        "shawn lescard"
+      ],
+      "paragraph 12": [
+        "shawn lescard"
+      ],
+      "paragraph 13": [
+        "shawn lescard"
+      ],
+      "paragraph 14": [
+        "bei",
+        "s\u00fbret\u00e9 du qu\u00e9bec"
+      ]
+    }
+  },
+  "4_Illutak Anautak_CBC.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "illutak anautak (victim)",
+        "lucassie anautak (victim's uncle)",
+        "eli qinuajuak (victim's aunt's partner)",
+        "randy mcleod (victim's former teacher)",
+        "rebecca tukalak (victim's friend)",
+        "eli aullaluk (victim's uncle)"
+      ],
+      "Police-aligned": [
+        "police (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [],
+      "paragraph 2": [
+        "police"
+      ],
+      "paragraph 3": [],
+      "paragraph 4": [
+        "illutak anautak"
+      ],
+      "paragraph 5": [
+        "illutak anautak"
+      ],
+      "paragraph 6": [],
+      "paragraph 7": [],
+      "paragraph 8": [
+        "randy mcleod"
+      ],
+      "paragraph 9": [
+        "randy mcleod"
+      ],
+      "paragraph 10": [
+        "randy mcleod"
+      ],
+      "paragraph 11": [
+        "randy mcleod"
+      ],
+      "paragraph 12": [
+        "randy mcleod"
+      ],
+      "paragraph 13": [
+        "randy mcleod"
+      ],
+      "paragraph 14": [],
+      "paragraph 15": [
+        "illutak anautak"
+      ],
+      "paragraph 16": [
+        "illutak anautak"
+      ],
+      "paragraph 17": [
+        "rebecca tukalak"
+      ],
+      "paragraph 18": [
+        "rebecca tukalak"
+      ],
+      "paragraph 19": [],
+      "paragraph 20": [],
+      "paragraph 21": [
+        "eli aullaluk"
+      ],
+      "paragraph 22": [
+        "eli aullaluk"
+      ],
+      "paragraph 23": [
+        "illutak anautak"
+      ],
+      "paragraph 24": [
+        "rebecca tukalak"
+      ],
+      "paragraph 25": [
+        "rebecca tukalak"
+      ],
+      "paragraph 26": [
+        "rebecca tukalak"
+      ]
+    }
+  },
+  "15_Bill Saunders_CTV.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "rebecca saunders (victim's sister)"
+      ],
+      "Police-aligned": [
+        "independent investigations unit of manitoba (police oversight body)",
+        "cornell mclean (lake manitoba first nation chief)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [],
+      "paragraph 2": [],
+      "paragraph 3": [],
+      "paragraph 4": [
+        "rebecca saunders"
+      ],
+      "paragraph 5": [
+        "rebecca saunders"
+      ],
+      "paragraph 6": [
+        "rebecca saunders"
+      ],
+      "paragraph 7": [
+        "rebecca saunders"
+      ],
+      "paragraph 8": [],
+      "paragraph 9": [
+        "independent investigations unit of manitoba"
+      ],
+      "paragraph 10": [],
+      "paragraph 11": [
+        "rebecca saunders"
+      ],
+      "paragraph 12": [
+        "rebecca saunders"
+      ],
+      "paragraph 13": [
+        "rebecca saunders"
+      ],
+      "paragraph 14": [
+        "rebecca saunders"
+      ],
+      "paragraph 15": [],
+      "paragraph 16": [
+        "rebecca saunders"
+      ],
+      "paragraph 17": [
+        "rebecca saunders"
+      ],
+      "paragraph 18": [
+        "cornell mclean"
+      ],
+      "paragraph 19": [
+        "cornell mclean"
+      ]
+    }
+  }
+}
