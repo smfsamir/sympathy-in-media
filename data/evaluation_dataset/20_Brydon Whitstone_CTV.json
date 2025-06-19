@@ -1,0 +1,60 @@
+{
+  "article":
+  [
+  "Saskatchewan RCMP shoot and kill man in North Battleford",
+  "REGINA -- RCMP in Saskatchewan say they shot and killed a man in North Battleford after a chase that police say ended with the suspect's vehicle ramming a police cruiser.",
+  "Police say it started when they received a call Saturday night about a male being shot at by some people in a vehicle.",
+  "Police found and chased the vehicle, which they say rammed an RCMP vehicle.",
+  "The vehicle was immobilized, police say, and an officer shot and wounded the driver of the suspect vehicle in what police describe as a \"response to the driver's actions.\"",
+  "\"Life-saving measures were immediately provided by RCMP members until local EMS arrived and took over. However, at approximately 9:40 p.m., the driver was pronounced deceased while en route to hospital,\" RCMP Chief Superintendent Maureen Levy told reporters at a news conference in Regina on Sunday morning.",
+  "Brydon Bryce Whitstone of Onion Lake, Sask., has been identified by police as the man who died.",
+  "Levy said a woman who was in the vehicle suffered minor injuries in the pursuit. She was taken to hospital but was later released into police custody.",
+  "One RCMP officer also suffered minor injuries, received medical attention in hospital, and has since been released.",
+  "Regina city police have been called in to investigate how the Mounties handled the incident, and Levy said RCMP have also requested the Saskatchewan justice ministry appoint an independent observer.",
+  "Levy wouldn't provide any further details on the pursuit, the ramming of the police cruiser, or the shooting, noting the investigation is now in the hands of Regina police.",
+  "Levy would not say how many shots were fired or if Whitstone was known to police, stressing that such questions will be investigated by police from Regina.",
+  "\"We'll have to let them conduct their investigation. We want to make sure it's a fair and transparent investigation and we want to give them the opportunity without reproach to conduct their investigation independently from the RCMP,\" Levy said.",
+  "RCMP said they will continue to handle the initial complaint of the male being chased and shot at.",
+  "Justice Ministry spokesman Drew Wilby explained at the news conference that when an independent observer is requested, the ministry appoints someone such as a former police officer.",
+  "\"This individual will not be connected to the RCMP,\" he said.",
+  "The observer will then file a report with the Ministry of Justice, Wilby said.",
+  "Levy said the officers who were at the incident aren't working now and are receiving peer-to-peer counselling.",
+  "She said she wasn't sure how many officers were now off-duty, but said the RCMP can deploy extra resources to North Battleford if needed."
+  ],
+
+  "task1":
+  {
+    "Victim-aligned": [
+      "brydon bryce whitstone"
+    ],
+
+    "Police-aligned": [
+      "rcmp",
+      "maureen levy",
+      "saskatchewan justice ministry",
+      "regina police",
+      "drew wilby"
+
+    ]
+  },
+
+  "task2":
+  {
+    "paragraph 2": ["rcmp"],
+    "paragraph 3": ["rcmp"],
+    "paragraph 4": ["rcmp"],
+    "paragraph 5": ["rcmp"],
+    "paragraph 6": ["maureen levy"],
+    "paragraph 8": ["maureen levy"],
+    "paragraph 10": ["maureen levy"],
+    "paragraph 11": ["maureen levy"],
+    "paragraph 12": ["maureen levy"],
+    "paragraph 13": ["maureen levy"],
+    "paragraph 14": ["rcmp"],
+    "paragraph 15": ["drew wilby"],
+    "paragraph 16": ["drew wilby"],
+    "paragraph 17": ["drew wilby"],
+    "paragraph 18": ["maureen levy"],
+    "paragraph 19": ["maureen levy"]
+  }
+}

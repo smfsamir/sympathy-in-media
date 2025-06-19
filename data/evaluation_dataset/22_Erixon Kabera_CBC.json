@@ -1,0 +1,66 @@
+{
+  "article":
+  [
+  "'I don't even know how I'm going to live with this' says wife of man killed by Hamilton police",
+  "Erixon Kabera, 43, died in hospital of gunshot wounds, his family says",
+  "The family of the man shot and killed by Hamilton police on Saturday has identified him as Erixon Kabera \u2014 a father of three, known for his kindness and dedication to Hamilton's Rwandan community.",
+  "His wife, Lydia Nimbeshaho, told CBC News her family is devastated and demanding answers. She was not at Kabera's apartment at the time of the shooting, but went to see him in the hospital after.",
+  "\"They killed him like an animal ... I don't even know how I'm going to live with this,\" she said in an interview.",
+  "The province's police watchdog, the Special Investigations Unit (SIU), is investigating the shooting at a west-end Hamilton apartment building. It has not confirmed Kabera was the victim.",
+  "Hamilton police declined to comment on the family's statement citing the SIU investigation. Spokesperson Jackie Penman said the person who called police had reported a man was \"at their door believed to be in possession of a handgun.\"",
+  "The SIU said in a statement that Hamilton officers responded to reports of a man \"acting in a threatening manner\" and shots were fired.",
+  "A police officer sustained non-life threatening injuries, the SIU said, and has been released from hospital, while the man died at 1 a.m. Sunday from a gunshot wound.",
+  "SIU walks back 'exchange of gunfire' claim",
+  "The SIU initially said there was an \"exchange of gunfire,\" then later issued a statement to say that based on further investigation, it doesn't appear the man discharged a firearm, but rather two police officers did.",
+  "Nimbeshaho said she and her family are \"very angry\" about how the case has been handled.",
+  "\"We find that reversal of crucial facts, a full day after telling the entire world otherwise and painting an image of violence for our very own, to be deeply outrageous and unnerving,\" said Kabera's family in a statement.",
+  "\"We stand firm in our belief that Erixon was not armed, nor would he act in a way that would justify this result.\"",
+  "The SIU said on Monday its initial statement was based on preliminary information and an update was provided after further investigation.",
+  "A replica handgun was later recovered at the scene, the SIU said.",
+  "His family says Kabera, 43, did not possess a gun and didn't have a violent history.",
+  "\"He was a peaceful man who valued harmony and community, making this claim profoundly difficult to reconcile with the person we knew and loved,\" they said in a statement.",
+  "Kabera had worked as a resource officer with the Canada Revenue Agency and was \"deeply involved\" in the Rwandan community, his family's statement said. Along with his role as an adviser at the Rwanda Canadian Healing Centre, he was vice president of the Rwandan Community Abroad Toronto.",
+  "\"Erixon Kabera was a remarkable man whose life was dedicated to love, service and compassion,\" the family's statement said.",
+  "\"We miss him deeply, and we seek only the truth to honour his memory.\"",
+  "The SIU continues to investigate.",
+  "A rally in honour of Kabera will take place at Hamilton's city hall Thursday at 6 p.m., and supporters have launched an online fundraising campaign to help his family."
+  ],
+
+  "task1":
+  {
+    "Victim-aligned": [
+      "erixon kabera",
+      "lydia nimbeshaho",
+      "erixon kabera's family"
+    ],
+
+    "Police-aligned": [
+      "special investigations unit",
+      "hamilton police",
+      "jackie penman"
+    ]
+  },
+
+  "task2":
+  {
+    "paragraph 1": ["lydia nimbeshaho"],
+    "paragraph 2": ["erixon kabera's family"],
+    "paragraph 3": ["erixon kabera's family"],
+    "paragraph 4": ["lydia nimbeshaho"],
+    "paragraph 5": ["lydia nimbeshaho"],
+    "paragraph 7": ["jackie penman"],
+    "paragraph 9": ["special investigations unit"],
+    "paragraph 10": ["special investigations unit"],
+    "paragraph 12": ["special investigations unit"],
+    "paragraph 13": ["lydia nimbeshaho, erixon kabera's family"],
+    "paragraph 14": ["erixon kabera's family"],
+    "paragraph 15": ["erixon kabera's family"],
+    "paragraph 16": ["special investigations unit"],
+    "paragraph 17": ["special investigations unit"],
+    "paragraph 18": ["erixon kabera's family"],
+    "paragraph 19": ["erixon kabera's family"],
+    "paragraph 20": ["erixon kabera's family"],
+    "paragraph 21": ["erixon kabera's family"],
+    "paragraph 22": ["erixon kabera's family"]
+  }
+}

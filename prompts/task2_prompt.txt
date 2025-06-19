@@ -1,0 +1,17 @@
+Assign each paragraph to the names of the entities whose perspectives are being demonstrated in it. Use the exact names you identified in your last response.
+
+A perspective can be given through a quote, a paraphrase, or a description of the entity's opinions or feelings. 
+
+Return a dictionary mapping each paragraph to the list of entities whose perspectives are being described. The article has been previously provided and is a list of numbered paragraphs. 
+
+Rules your response must follow:
+- Use only the names from your prior response
+- Use all lowercase
+- Format your response exactly like this:
+{
+    “paragraph 1”: [“entity1", “entity2”],
+    "paragraph 2": ["entity4", "entity5"],
+    “paragraph 4": [“entity3”, “entity4"]
+}
+
+This represents a 4-paragraph article, where the first paragraph has two perspectives, the second has one, the third has none, and the fourth has two perspectives.

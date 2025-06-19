@@ -1,0 +1,62 @@
+{
+  "article":
+  [
+  "A quiet teen with tragic past suspected in fatal northern Quebec stabbings",
+  "Police say Illutak Anautak, 19, stabbed 3 people to death before being fatally shot by officer",
+  "The teen shot and killed by police following three fatal stabbings in a northern Quebec community on the weekend was dealing with a number of tragic events from his past, including the slaying of his mother and the suicide of his brother.",
+  "Illutak Anautak, 19, who was described by friends and family as quiet young man with an easy smile, was identified by local officials as the man shot dead by police in the Inuit village of Akulivik after three break-ins during which five people were stabbed early Saturday morning.",
+  "The dead were identified as Anautak's uncle, Lucassie Anautak, a cousin who was about 10 years old, and Eli Qinuajuak, his aunt's partner, three local officials confirmed to CBC News.",
+  "Two others were taken to hospital with injuries. Investigators said Sunday evening that they are no longer listed as being in critical condition.",
+  "Anautak's mother was killed by her boyfriend in 2014, friends say, while an older brother took his own life eight or nine years ago.",
+  "Randy McLeod, Anautak's former teacher at the local school, described Anautak as a \"very nice, extremely respectful\" student. In 2011, Anautak was among a group of students who joined McLeod on an educational trip to Montreal.",
+  "At the same time, McLeod said, the young man was \"dealing with a lot of personal things and perhaps there wasn't any support.\"",
+  "\"He was dealing with a lot of trauma; I guess that maybe was too much,\" said McLeod, who is on leave from his position at the school.",
+  "\"I don't know what the trigger was, what created the situation. Obviously I wasn't there.\"",
+  "McLeod worries that even if Anautak had sought help, the mental health resources wouldn't have been available.",
+  "\"You need that kind of thing to be available to you in those moments, not, 'Ok, we'll get a counsellor flown here in a couple weeks to speak in another language,'\" he said.",
+  "Despite his troubles, though, friends say Anautak rarely showed signs of anger.",
+  "He was passionate about hockey \u2014 he played goalie and volunteered as a coach in the community \u2014 and posted photos on his Facebook page in appreciation of his hometown.",
+  "In a post accompanying a photo just last month, he wrote, \"Akulivik always the best!\"",
+  "He had three younger siblings and was \"like a father to them,\" said Rebecca Tukalak, one of his closest friends.",
+  "He was \"just always smiling and a funny guy,\" she said in an interview on Facebook messenger, adding that he never showed signs of aggression.",
+  "Struggling with mother's death",
+  "Still, Anautuk struggled to cope with the death of his mother.",
+  "He was known in Akulivik, a village of about 600, as a \"quiet person,\" said his uncle and a local councillor, Eli Aullaluk.",
+  "\"This is not normal. I feel sorry for all the people in this community. Our prayers go them all,\" he said.",
+  "In 2015, in a rare display of emotion on social media, Anautuk wrote, \"I finally get it mom, I miss you so much.\"",
+  "Tukalak, who lives in Puvirnituq, a remote community further south, said she last saw Anautuk in May, and he didn't seem like himself.",
+  "\"He was really weird and was talking really low. I think that was a goodbye,\" she said.",
+  "Her takeaway, she said, is that even the \"most nice and quiet people explode one day, so it is really important to express truest feelings.\""
+  ],
+  "task1":
+  {
+    "Victim-aligned": [
+      "illutak anautuk",
+      "randy mcleod",
+      "rebecca tukalak"
+    ],
+    "Police-aligned": [
+      "police",
+      "eli aullaluk"
+    ]
+  },
+
+  "task2":
+  {
+    "paragraph 2": ["police"],
+    "paragraph 8": ["randy mcleod"],
+    "paragraph 9": ["randy mcleod"],
+    "paragraph 10": ["randy mcleod"],
+    "paragraph 11": ["randy mcleod"],
+    "paragraph 12": ["randy mcleod"],
+    "paragraph 13": ["randy mcleod"],
+    "paragraph 17": ["rebecca tukalak"],
+    "paragraph 18": ["rebecca tukalak"],
+    "paragraph 21": ["eli aullaluk"],
+    "paragraph 22": ["eli aullaluk"],
+    "paragraph 23": ["illutak anautuk"],
+    "paragraph 24": ["rebecca tukalak"],
+    "paragraph 25": ["rebecca tukalak"],
+    "paragraph 26": ["rebecca tukalak"]
+  }
+}

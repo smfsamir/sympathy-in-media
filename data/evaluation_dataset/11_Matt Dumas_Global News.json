@@ -1,0 +1,73 @@
+{
+  "article":
+  [
+  "WARNING: Some people may find the video above disturbing.",
+  "The Alberta Serious Incident Response Team (ASIRT) has taken over an investigation into a police-involved shooting which occurred at Westmount Shopping Centre on Saturday night.",
+  "In a news release issued on Sunday, the Edmonton Police Service (EPS) said at around 8:15 p.m., officers were trying to arrest a man wanted on outstanding warrants who was in a vehicle in the area of Groat Road and 113 Avenue N.W.",
+  "They said the suspect tried to flee the scene and collided with a police vehicle as officers tried to box him in. According to police, a confrontation then occurred, with officers firing their guns. The 29-year-old suspect was shot and killed.",
+  "According to EPS, a firearm was discovered at the scene after the shooting occurred.",
+  "On Monday, ASIRT issued a news release which provided more details about what happened during the \u201chigh-risk arrest\u201d attempt.",
+  "The police watchdog said after EPS officer boxed in the suspect, they yelled commands at him but he was \u201cnot compliant\u201d and tried to escape with his vehicle. According to ASIRT, officers fired tear gas into the suspect vehicle which led to the confrontation and subsequent shooting.",
+  "The civilian oversight agency said the suspect was then taken out of the vehicle and pronounced dead at the scene. Two 18-year-old women were also in the vehicle and were \u201capprehended.\u201d ASIRT said they were not injured.",
+  "Family and friends tell Global News that the man killed was named Matt Dumas.",
+  "Briage Lock knew Dumas for 11 years and said he was \u201ctroubled.\u201d",
+  "\u201cHe used drugs and he was in a bad lifestyle,\u201d she said, adding he used crystal meth.",
+  "Get breaking National news",
+  "\u201cUnpredictable and very skinny and was just having a lot of bad company around him.\u201d",
+  "Lock, who witnessed the police shooting from the McDonald\u2019s but did not see the confrontation that led to it, said Dumas was struggling.",
+  "\u201cI\u2019m sad. I\u2019m sad for his family. I\u2019m sad for him.\u201d",
+  "Shantel Freeman met Dumas in 2004 and calls him the \u201cfirst love of her life.\u201d",
+  "\u201cHe was a really good guy, family-oriented. He had goals,\u201d she said. \u201cHe loved poetry, rap.\u201d",
+  "But Freeman said Dumas had issues with meth.",
+  "\u201cI found out he got into some addictions and it spiraled out of control,\u201d she said.",
+  "\u201cHe was very loved by many people. He had children that loved him very much. He just went down a bad road and maybe it was hard for him to get out.\u201d",
+  "Dumas was set to go to trial in Edmonton this October for possession for the purpose of trafficking, possession of property over $5,000, possession of property under $5,000 and two counts of possession of a weapon dangerous to the public.",
+  "In 2016, Dumas pleaded guilty to failing to appear in court and was given a $100 fine and 30 days in jail, according to court records.",
+  "In 2011, Dumas was sentenced to 28 months in jail and handed a 10-year firearm prohibition for possession for the purpose of trafficking.",
+  "View a photo gallery of Matt Dumas below:",
+  "Witnesses at the scene on Saturday told Global News the parking lot of the McDonald\u2019s restaurant in the area was blocked off by police after the incident.",
+  "\u201cI work right across the street at Shoppers Drug Mart and I was on my break outside and heard what I thought was someone\u2019s tire blowing up and immediately turned and heard shouting,\u201d Mary MacCormac told Global News. \u201c(I) immediately clued in that this was gunfire.\u201d",
+  "\u201cIt was very very distressing. I just wanted to stay away. I ran back inside.\u201d",
+  "Watch below: One day after Edmonton police were involved in an officer-involved shooting in a Westmount parking lot that left a man dead, a woman who works in the area submitted video to Global News in which gunshots can be heard in the parking lot. Police said they were trying to arrest the man when they say he tried to flee in a vehicle and collided with a police vehicle before a confrontation ensued and shots were fired.",
+  "WARNING: Some people may find the video below disturbing.",
+  "Police said no officers were injured in the incident.",
+  "ASIRT investigates incidents involving Alberta law enforcement officers that result in injury or death as well as \u201cserious or sensitive allegations of police misconduct.\u201d"
+  ],
+  
+  "task1":
+  {
+    "Victim-aligned": [
+      "matt dumas",
+      "shantel freeman",
+      "mary maccormac"
+    ],
+
+    "Police-aligned": [
+      "alberta serious incident response team",
+      "edmonton police service",
+      "briage lock"
+    ]
+  },
+
+  "task2":
+  {
+    "paragraph 3": ["edmonton police service"],
+    "paragraph 4": ["edmonton police service"],
+    "paragraph 5": ["edmonton police service"],
+    "paragraph 7": ["alberta serious incident response team"],
+    "paragraph 8": ["alberta serious incident response team"],
+    "paragraph 10": ["briage lock"],
+    "paragraph 11": ["briage lock"],
+    "paragraph 13": ["briage lock"],
+    "paragraph 14": ["briage lock"],
+    "paragraph 15": ["briage lock"],
+    "paragraph 16": ["shantel freeman"],
+    "paragraph 17": ["shantel freeman"],
+    "paragraph 18": ["shantel freeman"],
+    "paragraph 19": ["shantel freeman"],
+    "paragraph 20": ["shantel freeman"],
+    "paragraph 26": ["mary maccormac"],
+    "paragraph 27": ["mary maccormac"],
+    "paragraph 30": ["edmonton police service"]
+  }
+}
