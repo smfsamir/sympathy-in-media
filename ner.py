@@ -15,7 +15,7 @@ def load_prompt(filename):
 
 TASK1_PROMPT = load_prompt("task1_prompt.txt")
 TASK2_PROMPT = load_prompt("task2_prompt.txt")
-ARTICLES_FOLDER = "data/evaluation_dataset/"
+ARTICLES_FOLDER = "data/articles/"
 
 def load_client():
     config = dotenv_values(".env")
@@ -152,8 +152,16 @@ def task1(client, article_path):
         with open(article_path, "r") as f:
             article_data = json.load(f)
         
-        # Extract article content - handle both string and list formats
-        article_content = article_data.get("article", "")
+        # Extract article content
+        # Evaluation dataset articles will be in dict format
+        if isinstance(article_data, dict):
+            article_content = article_data["article"]
+        # Otherwise we should be given an array
+        elif isinstance(article_data, list):
+            article_content = article_data
+        else:
+            raise ValueError("Unexpected article format in", article_path)
+
         if isinstance(article_content, list):
             article_content = "\n".join(article_content)
         
@@ -161,7 +169,7 @@ def task1(client, article_path):
         response = client.chat.completions.create(
                 model="gpt-4o", 
                 temperature=0,
-                max_tokens = 500, 
+                max_tokens = 1500, 
                 messages = [
                     {"role": "user", "content" : message}
                 ]
@@ -182,16 +190,16 @@ def task1(client, article_path):
             return {"article": article_name, "error": "Failed to parse response"}
 
         # Get expected results from the same file
-        expected_task1 = article_data.get("task1", {})
-        if not expected_task1:
-            print("WARNING: No expected task1 results found for ", article_name)
+        if isinstance(article_data, list):
             return {
             "article": article_name,
             "article_data": article_data,
             "response": response,
             "response_as_dict": response_as_dict
             }
-        else:
+        elif isinstance(article_data, dict) and article_data.get("task1", {}):
+
+            expected_task1 = article_data.get("task1", {})
             evaluation_result, y_true, y_pred = evaluate_task1(response_as_dict, expected_task1)
             
             return {
@@ -203,6 +211,9 @@ def task1(client, article_path):
                 "y_true": y_true,
                 "y_pred": y_pred,
             }
+        else:
+            return{"WARNING: Task1 formatting or expected is wrong for ", article_name}
+
         
     except Exception as e:
         print("ERROR: Failed to process ", article_name, ": ", str(e))
@@ -305,9 +316,11 @@ def task2_evaluation_report(results):
 
 # Task 2: assign paragraphs to individuals    
 def task2(client, article_data, task1_response):
-    article_text = article_data.get("article", "")
+    if isinstance(article_data, dict):
+        article_text = article_data.get("article", "")
+    else:
+        article_text = article_data
 
-    article_text = article_data.get("article", "")
     numbered_article = []
     if isinstance(article_text, list):
         # article_text = "\n\n-PARAGRAPH BREAK-\n\n".join(article_text)
@@ -325,7 +338,7 @@ def task2(client, article_data, task1_response):
     response = client.chat.completions.create(
         model="gpt-4o",
         temperature=0,
-        max_tokens=500,
+        max_tokens=1500,
         messages=messages
     )
 
@@ -337,14 +350,19 @@ def task2(client, article_data, task1_response):
         print("Failed to parse Task 2 output:", response)
         return {"error": str(e), "raw": response}
 
-    expected_task2 = article_data.get("task2", {})
-    if not expected_task2:
+    if isinstance(article_data, list):
+        return {
+            "response_as_dict": response_as_dict,
+            "response": response,
+        }
+    elif isinstance(article_data, dict) and not article_data.get("task2", {}):
         print("WARNING: No expected task2 results found")
         return {
             "response_as_dict": response_as_dict,
             "response": response,
         }
     else:
+        expected_task2 = article_data.get("task2", {})
         eval_metrics, y_true, y_pred = evaluate_task2(expected_task2, response_as_dict)
 
         if eval_metrics is None:
@@ -368,13 +386,18 @@ def task2(client, article_data, task1_response):
             "y_pred": y_pred
         }
 
+def prune_empty_paragraphs(paragraphs):
+    if not isinstance(paragraphs, dict):
+        return None
+    return {para: entity for para, entity in paragraphs.items() if entity}
+
 def save_predictions(task1_results, task2_results):
     combined = {}
 
     for t1_res, t2_res in zip(task1_results, task2_results):
         prediction = {
             "task1_prediction": t1_res.get("response_as_dict", None),
-            "task2_prediction": t2_res.get("response_as_dict", None)
+            "task2_prediction": prune_empty_paragraphs(t2_res.get("response_as_dict", None))
         }
         article = t1_res.get("article", None)
         combined[article] = prediction
