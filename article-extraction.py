@@ -285,7 +285,7 @@ async def cbc_extractor(url, person, event_date):
         browser = await p.webkit.launch(headless=True)
         context = await browser.new_context()
         page = await context.new_page()
-        print(f"[DEBUG] Navigating to {url} from CBC")
+        # print(f"[DEBUG] Navigating to {url} from CBC")
         await page.goto(url)
 
 
@@ -338,7 +338,7 @@ async def ctv_extractor(url, person, event_date):
         browser = await p.webkit.launch(headless=True)
         context = await browser.new_context()
         page = await context.new_page()
-        print(f"[DEBUG] Navigating to {url} from CTV")
+        # print(f"[DEBUG] Navigating to {url} from CTV")
         await page.goto(url)
 
         metadata = await get_dynamic_metadata(page)
@@ -417,6 +417,10 @@ async def process_articles():
     # print(f"Final dataset size: {len(df)}")
     # df.write_csv("./data/datasets/processed_dataset_2.csv") # Replace with path-to-your-CSV
 
-asyncio.run(process_articles())
+def main():
+    asyncio.run(process_articles())
+
+if __name__ == "__main__":
+    main()
 
 
