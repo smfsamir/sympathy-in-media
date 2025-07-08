@@ -237,15 +237,6 @@ def evaluate_task2(expected, predicted):
     expected_paras = set(expected.keys())
     predicted_paras = set(predicted.keys())
     all_paras = expected_paras | predicted_paras
-
-    # DEBUG LOG
-    # if expected_paras != predicted_paras:
-    #     print("PARAGRAPH COVERAGE:")
-    #     print(f"Expected paragraphs: {sorted(expected_paras)}")
-    #     print(f"Predicted paragraphs: {sorted(predicted_paras)}")
-    #     print(f"Missing from prediction: {sorted(expected_paras - predicted_paras)}")
-    #     print(f"Extra in prediction: {sorted(predicted_paras - expected_paras)}")
-    #     print(f"Evaluating on all {len(all_paras)} paragraphs")
     
     paragraph_numbers = sort_paragraph_nums(all_paras)
 
