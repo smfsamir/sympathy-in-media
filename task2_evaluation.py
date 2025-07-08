@@ -107,5 +107,87 @@ def main():
     #         }, f, indent=2)
     #     print(f"\nResults saved to {output_file}")
 
+def sort_paragraph_nums(all_paras):
+    paragraph_numbers = []
+    for para in all_paras:
+        try:
+            num = int(para.lower().replace("paragraph", "").strip())
+            paragraph_numbers.append(num)
+        except:
+            print("WARNING: Could not parse paragraph number from " + {para})
+            continue
+    return sorted(paragraph_numbers)
+
+def evaluate_task2(expected, predicted):
+    expected_paras = set(expected.keys())
+    predicted_paras = set(predicted.keys())
+    all_paras = expected_paras | predicted_paras
+    
+    paragraph_numbers = sort_paragraph_nums(all_paras)
+
+    y_true = []
+    y_pred = []
+
+    all_entities = set()
+    for entities in expected.values():
+        all_entities.update(entities)
+    for entities in predicted.values():
+        all_entities.update(entities)
+    
+    if not all_entities:
+        print("WARNING: No entities found in either expected or predicted results")
+        return (None, None, None)
+
+    # For each paragraph, create a binary label for every entity to rep. whether or not is it tagged
+    for num in paragraph_numbers:
+        para_key = f"paragraph {num}"
+        expected_entities = expected.get(para_key, [])
+        predicted_entities = predicted.get(para_key, [])
+        
+        for entity in all_entities:
+            y_true.append(1 if entity in expected_entities else 0)
+            y_pred.append(1 if entity in predicted_entities else 0)
+
+    return precision_recall_fscore_support(
+        y_true, y_pred, average='binary', zero_division=0
+    ), y_true, y_pred
+
+
+def task2_evaluation_report(results):
+    all_y_true = []
+    all_y_pred = []
+
+    for result in results:
+        if result.get("y_true") and result.get("y_pred"):
+            all_y_true.extend(result["y_true"])
+            all_y_pred.extend(result["y_pred"])
+
+    if all_y_true and all_y_pred:
+        precision, recall, f1, support = precision_recall_fscore_support(
+            all_y_true,
+            all_y_pred,
+            average='binary',
+            zero_division=0
+        )
+        report_dict = {
+            "precision": round(precision, 3),
+            "recall": round(recall, 3),
+            "f1": round(f1, 3),
+            "support": len(all_y_true)
+        }
+
+        # DEBUG
+        # print("OVERALL TASK 2 REPORT:")
+        # print(json.dumps(report_dict))
+
+        timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
+        filename = timestamp + "_task2_evaluation.json"
+        save_path = os.path.join("results", filename)
+        with open(save_path, "w") as f:
+            json.dump(report_dict, f)
+
+    else:
+        print("No valid Task 2 predictions found.")
+
 if __name__ == "__main__":
     main()
