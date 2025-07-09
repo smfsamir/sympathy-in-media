@@ -37,7 +37,7 @@ def create_distillation_examples_task1():
 def distill_task1_olmo():
     # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-2-0425-1B")
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-2-0425-1B")
-    dataset = load_dataset("json", data_files="path/to/dataset.jsonl")
+    dataset = load_dataset("json", data_files="data/distillation_data/distill_examples.jsonl")
     # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
     training_args = SFTConfig()
