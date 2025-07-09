@@ -60,6 +60,7 @@ def main():
     pass
 
 main.add_command(create_distillation_examples_task1)
+main.add_command(distill_task1_olmo)
 # main.add_command(create_distillation_examples_task1)
 
 if __name__ == "__main__":
