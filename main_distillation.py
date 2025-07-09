@@ -28,7 +28,6 @@ def create_distillation_examples_task1():
             article_paragraphs = annotation_object['article']
             prompt = TASK_1_PROMPT + "\n".join(article_paragraphs) + "\n\n"
             response = json.dumps(annotation_object['task1'])
-            ipdb.set_trace()
             f.write(f"{{'prompt': {prompt}, 'completion': '{response}'}}\n")
     logger.info("Distillation examples created successfully.")
         # Add more examples or prompts as needed
