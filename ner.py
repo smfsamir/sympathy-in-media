@@ -15,7 +15,7 @@ def load_prompt(filename):
 
 TASK1_PROMPT = load_prompt("task1_prompt.txt")
 TASK2_PROMPT = load_prompt("task2_prompt.txt")
-ARTICLES_FOLDER = "data/articles/"
+ARTICLES_FOLDER = "data/articles/batch5"
 
 def load_client():
     config = dotenv_values(".env")

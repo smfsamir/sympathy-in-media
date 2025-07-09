@@ -1,0 +1,548 @@
+{
+  "61_Abisay Cruz_CityNews Montreal.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "abisay cruz (victim)",
+        "pierre petit-fr\u00e8re (victim's friend)",
+        "ted rutland (concordia university professor)"
+      ],
+      "Police-aligned": [
+        "bei (police watchdog)",
+        "spvm (police)",
+        "val\u00e9rie plante (elected official)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 10": [
+        "abisay cruz",
+        "pierre petit-fr\u00e8re"
+      ],
+      "paragraph 11": [
+        "pierre petit-fr\u00e8re"
+      ],
+      "paragraph 12": [
+        "pierre petit-fr\u00e8re"
+      ],
+      "paragraph 13": [
+        "bei"
+      ],
+      "paragraph 14": [
+        "bei"
+      ],
+      "paragraph 16": [
+        "pierre petit-fr\u00e8re"
+      ],
+      "paragraph 17": [
+        "ted rutland"
+      ],
+      "paragraph 18": [
+        "ted rutland"
+      ],
+      "paragraph 19": [
+        "pierre petit-fr\u00e8re"
+      ],
+      "paragraph 20": [
+        "ted rutland"
+      ],
+      "paragraph 21": [
+        "ted rutland"
+      ],
+      "paragraph 22": [
+        "ted rutland"
+      ],
+      "paragraph 23": [
+        "ted rutland",
+        "spvm",
+        "val\u00e9rie plante"
+      ],
+      "paragraph 26": [
+        "abisay cruz"
+      ]
+    }
+  },
+  "59_Gordon Dale Couvrette_North Bay Nugget.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "lillian couvrette (victim's mother)",
+        "glen couvrette (victim's brother)",
+        "stephanie asselin (north bay paramedic)"
+      ],
+      "Police-aligned": [
+        "north bay police service (police department)",
+        "north bay police services board (police oversight body)",
+        "special investigations unit (police oversight body)",
+        "cecilia martin (crown attorney)",
+        "steve sproule (north bay police constable)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 2": [
+        "lillian couvrette"
+      ],
+      "paragraph 3": [
+        "lillian couvrette"
+      ],
+      "paragraph 4": [
+        "lillian couvrette"
+      ],
+      "paragraph 6": [
+        "north bay police service",
+        "north bay police services board"
+      ],
+      "paragraph 7": [
+        "stephanie asselin"
+      ],
+      "paragraph 8": [
+        "cecilia martin",
+        "stephanie asselin"
+      ],
+      "paragraph 10": [
+        "north bay police service",
+        "north bay police services board"
+      ],
+      "paragraph 11": [
+        "north bay police service",
+        "north bay police services board",
+        "special investigations unit"
+      ],
+      "paragraph 12": [
+        "glen couvrette"
+      ],
+      "paragraph 13": [
+        "glen couvrette"
+      ],
+      "paragraph 14": [
+        "glen couvrette"
+      ],
+      "paragraph 15": [
+        "lillian couvrette"
+      ],
+      "paragraph 16": [
+        "lillian couvrette"
+      ],
+      "paragraph 17": [
+        "lillian couvrette"
+      ],
+      "paragraph 18": [
+        "lillian couvrette"
+      ],
+      "paragraph 22": [
+        "steve sproule"
+      ]
+    }
+  },
+  "58_Dillon Warren Breed_CBC.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "dillon warren breed (victim)",
+        "doreen henderson (victim's mother)"
+      ],
+      "Police-aligned": [
+        "gene bowers (winnipeg police chief)",
+        "winnipeg police (police)",
+        "independent investigation unit (police oversight body)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 4": [
+        "doreen henderson"
+      ],
+      "paragraph 6": [
+        "doreen henderson"
+      ],
+      "paragraph 8": [
+        "winnipeg police"
+      ],
+      "paragraph 9": [
+        "winnipeg police"
+      ],
+      "paragraph 10": [
+        "winnipeg police"
+      ],
+      "paragraph 11": [
+        "gene bowers",
+        "winnipeg police"
+      ],
+      "paragraph 12": [
+        "gene bowers"
+      ],
+      "paragraph 13": [
+        "independent investigation unit"
+      ],
+      "paragraph 14": [
+        "independent investigation unit"
+      ],
+      "paragraph 15": [
+        "independent investigation unit"
+      ]
+    }
+  },
+  "57_Charles Qirngnirq_CBC.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "charles qirngnirq (victim)",
+        "eva qirngnirq (victim's grandmother)"
+      ],
+      "Police-aligned": [
+        "ian crowe (rcmp officer)",
+        "tanya kellogg (former rcmp officer)",
+        "rcmp (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 2": [
+        "ian crowe"
+      ],
+      "paragraph 3": [
+        "ian crowe"
+      ],
+      "paragraph 4": [
+        "ian crowe"
+      ],
+      "paragraph 6": [
+        "ian crowe"
+      ],
+      "paragraph 7": [
+        "ian crowe"
+      ],
+      "paragraph 8": [
+        "tanya kellogg"
+      ],
+      "paragraph 9": [
+        "ian crowe"
+      ],
+      "paragraph 10": [
+        "ian crowe"
+      ],
+      "paragraph 11": [
+        "tanya kellogg"
+      ],
+      "paragraph 12": [
+        "tanya kellogg"
+      ],
+      "paragraph 13": [
+        "tanya kellogg",
+        "ian crowe"
+      ],
+      "paragraph 14": [
+        "tanya kellogg"
+      ],
+      "paragraph 16": [
+        "tanya kellogg"
+      ],
+      "paragraph 17": [
+        "tanya kellogg"
+      ],
+      "paragraph 18": [
+        "tanya kellogg"
+      ],
+      "paragraph 19": [
+        "tanya kellogg"
+      ],
+      "paragraph 20": [
+        "tanya kellogg"
+      ],
+      "paragraph 21": [
+        "tanya kellogg"
+      ],
+      "paragraph 22": [
+        "tanya kellogg"
+      ],
+      "paragraph 23": [
+        "ian crowe",
+        "tanya kellogg"
+      ],
+      "paragraph 24": [
+        "tanya kellogg"
+      ],
+      "paragraph 26": [
+        "tanya kellogg"
+      ],
+      "paragraph 29": [
+        "ian crowe"
+      ],
+      "paragraph 31": [
+        "eva qirngnirq"
+      ],
+      "paragraph 32": [
+        "eva qirngnirq"
+      ],
+      "paragraph 33": [
+        "eva qirngnirq"
+      ],
+      "paragraph 34": [
+        "eva qirngnirq"
+      ]
+    }
+  },
+  "54_Mark R Annanack_Winnipeg Sun.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "makivvik (political organization)",
+        "pita aatami (makivvik head)",
+        "kativik regional government (regional government)"
+      ],
+      "Police-aligned": [
+        "nunavik police service (police department)",
+        "bureau des enquetes independantes (police oversight agency)",
+        "ian lafreniere (quebec indigenous affairs minister)",
+        "francine danais (coroner)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 4": [
+        "makivvik"
+      ],
+      "paragraph 6": [
+        "makivvik"
+      ],
+      "paragraph 8": [
+        "pita aatami"
+      ],
+      "paragraph 9": [
+        "pita aatami"
+      ],
+      "paragraph 10": [
+        "bureau des enquetes independantes",
+        "nunavik police service"
+      ],
+      "paragraph 18": [
+        "bureau des enquetes independantes",
+        "nunavik police service"
+      ],
+      "paragraph 20": [
+        "makivvik"
+      ],
+      "paragraph 22": [
+        "makivvik"
+      ],
+      "paragraph 23": [
+        "makivvik"
+      ],
+      "paragraph 24": [
+        "kativik regional government"
+      ],
+      "paragraph 25": [
+        "ian lafreniere"
+      ],
+      "paragraph 26": [
+        "francine danais"
+      ]
+    }
+  },
+  "60_Muskego Elgyn_Winnipeg Free Press.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "brian rowden (victim's cousin)"
+      ],
+      "Police-aligned": [
+        "rcmp (police)",
+        "independent investigation unit (police oversight body)",
+        "norway house chief larson anderson (chief)",
+        "norway house chief and council (community leadership)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 3": [
+        "brian rowden"
+      ],
+      "paragraph 12": [
+        "brian rowden"
+      ],
+      "paragraph 16": [
+        "brian rowden"
+      ],
+      "paragraph 17": [
+        "brian rowden"
+      ],
+      "paragraph 18": [
+        "brian rowden"
+      ],
+      "paragraph 19": [
+        "rcmp"
+      ],
+      "paragraph 20": [
+        "independent investigation unit"
+      ],
+      "paragraph 21": [
+        "rcmp"
+      ],
+      "paragraph 22": [
+        "rcmp"
+      ],
+      "paragraph 23": [
+        "brian rowden"
+      ],
+      "paragraph 24": [
+        "brian rowden"
+      ],
+      "paragraph 25": [
+        "brian rowden"
+      ],
+      "paragraph 27": [
+        "brian rowden"
+      ],
+      "paragraph 28": [
+        "brian rowden"
+      ],
+      "paragraph 30": [
+        "brian rowden"
+      ],
+      "paragraph 31": [
+        "brian rowden"
+      ],
+      "paragraph 33": [
+        "norway house chief larson anderson"
+      ],
+      "paragraph 34": [
+        "norway house chief and council"
+      ]
+    }
+  },
+  "56_Erixon Kabera_Global News.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "erixon kabera (victim)",
+        "kabera's family (victim's family)"
+      ],
+      "Police-aligned": [
+        "joseph martino (siu director)",
+        "special investigations unit (police oversight body)",
+        "hamilton police (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [
+        "special investigations unit"
+      ],
+      "paragraph 2": [
+        "special investigations unit"
+      ],
+      "paragraph 3": [
+        "special investigations unit"
+      ],
+      "paragraph 4": [
+        "special investigations unit"
+      ],
+      "paragraph 7": [
+        "special investigations unit"
+      ],
+      "paragraph 8": [
+        "joseph martino"
+      ],
+      "paragraph 9": [
+        "joseph martino"
+      ],
+      "paragraph 10": [
+        "kabera's family"
+      ],
+      "paragraph 11": [
+        "special investigations unit"
+      ],
+      "paragraph 12": [
+        "joseph martino"
+      ],
+      "paragraph 13": [
+        "special investigations unit"
+      ]
+    }
+  },
+  "55_David Sappa_Nunatsiaq News.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "david sappa's family member (family member)"
+      ],
+      "Police-aligned": [
+        "kativik regional police force (police)",
+        "bureau des enqu\u00eates ind\u00e9pendantes (police oversight body)",
+        "quebec's director of criminal and penal prosecutions (police oversight body)",
+        "quebec's crown prosecutor's office (police oversight body)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 6": [
+        "quebec's crown prosecutor's office"
+      ],
+      "paragraph 7": [
+        "kativik regional police force"
+      ],
+      "paragraph 16": [
+        "bureau des enqu\u00eates ind\u00e9pendantes"
+      ],
+      "paragraph 17": [
+        "quebec's director of criminal and penal prosecutions"
+      ],
+      "paragraph 18": [
+        "quebec's director of criminal and penal prosecutions"
+      ],
+      "paragraph 19": [
+        "quebec's crown prosecutor's office"
+      ]
+    }
+  },
+  "62_Jordan Charlie_James O'Connor.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "jordan charlie's friend (friend)"
+      ],
+      "Police-aligned": [
+        "winnipeg police (police)",
+        "national parole board (government entity)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 3": [
+        "winnipeg police"
+      ],
+      "paragraph 4": [
+        "winnipeg police"
+      ],
+      "paragraph 12": [
+        "national parole board"
+      ],
+      "paragraph 17": [
+        "jordan charlie's friend"
+      ]
+    }
+  },
+  "53_Evan Caron_CBC.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "evan grant caron (victim)",
+        "adrian lacquette (victim)"
+      ],
+      "Police-aligned": [
+        "winnipeg police (police)",
+        "independent investigation unit of manitoba (police oversight body)",
+        "dr. john younes (chief medical examiner)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 2": [
+        "evan grant caron"
+      ],
+      "paragraph 3": [
+        "evan grant caron",
+        "winnipeg police"
+      ],
+      "paragraph 4": [
+        "evan grant caron"
+      ],
+      "paragraph 5": [
+        "independent investigation unit of manitoba",
+        "winnipeg police"
+      ],
+      "paragraph 6": [
+        "independent investigation unit of manitoba",
+        "winnipeg police"
+      ],
+      "paragraph 7": [
+        "independent investigation unit of manitoba"
+      ],
+      "paragraph 9": [
+        "dr. john younes",
+        "adrian lacquette"
+      ]
+    }
+  }
+}

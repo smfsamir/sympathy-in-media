@@ -1,0 +1,651 @@
+{
+  "26_Dale Culver_Global News.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "dale culver (victim)",
+        "alicia wisla (victim's girlfriend)"
+      ],
+      "Police-aligned": [
+        "independent investigations office (police oversight body)",
+        "rob gordon (criminology expert)",
+        "rcmp (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [
+        "alicia wisla"
+      ],
+      "paragraph 2": [
+        "alicia wisla"
+      ],
+      "paragraph 3": [
+        "alicia wisla"
+      ],
+      "paragraph 4": [
+        "alicia wisla"
+      ],
+      "paragraph 5": [
+        "alicia wisla"
+      ],
+      "paragraph 7": [
+        "rcmp"
+      ],
+      "paragraph 11": [
+        "alicia wisla"
+      ],
+      "paragraph 12": [
+        "alicia wisla"
+      ],
+      "paragraph 13": [
+        "alicia wisla"
+      ],
+      "paragraph 15": [
+        "rob gordon"
+      ],
+      "paragraph 16": [
+        "rob gordon"
+      ],
+      "paragraph 17": [
+        "rob gordon"
+      ],
+      "paragraph 19": [
+        "rob gordon"
+      ],
+      "paragraph 18": [
+        "rob gordon"
+      ],
+      "paragraph 20": [
+        "rob gordon"
+      ],
+      "paragraph 21": [
+        "rob gordon",
+        "independent investigations office"
+      ]
+    }
+  },
+  "25_Bill Saunders_CBC.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "bill saunders (victim)",
+        "irene saunders (victim's mother)",
+        "rebecca saunders (victim's sister)",
+        "cornell mclean (lake manitoba first nation chief)"
+      ],
+      "Police-aligned": [
+        "rcmp (police)",
+        "independent investigation unit of manitoba (police oversight body)",
+        "mark peikoff (bystander)",
+        "carmen combot (bystander)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [
+        "irene saunders"
+      ],
+      "paragraph 2": [
+        "rcmp"
+      ],
+      "paragraph 3": [
+        "irene saunders"
+      ],
+      "paragraph 5": [
+        "irene saunders"
+      ],
+      "paragraph 6": [
+        "irene saunders"
+      ],
+      "paragraph 7": [
+        "irene saunders"
+      ],
+      "paragraph 10": [
+        "rcmp"
+      ],
+      "paragraph 11": [
+        "rcmp"
+      ],
+      "paragraph 13": [
+        "rcmp"
+      ],
+      "paragraph 14": [
+        "independent investigation unit of manitoba"
+      ],
+      "paragraph 15": [
+        "cornell mclean"
+      ],
+      "paragraph 16": [
+        "irene saunders"
+      ],
+      "paragraph 18": [
+        "irene saunders"
+      ],
+      "paragraph 19": [
+        "irene saunders"
+      ],
+      "paragraph 20": [
+        "irene saunders"
+      ],
+      "paragraph 21": [
+        "cornell mclean"
+      ],
+      "paragraph 22": [
+        "cornell mclean"
+      ],
+      "paragraph 23": [
+        "mark peikoff"
+      ],
+      "paragraph 24": [
+        "mark peikoff"
+      ],
+      "paragraph 25": [
+        "mark peikoff"
+      ],
+      "paragraph 26": [
+        "mark peikoff"
+      ],
+      "paragraph 27": [
+        "carmen combot"
+      ],
+      "paragraph 28": [
+        "carmen combot"
+      ],
+      "paragraph 29": [
+        "carmen combot"
+      ],
+      "paragraph 30": [
+        "irene saunders"
+      ],
+      "paragraph 31": [
+        "irene saunders"
+      ],
+      "paragraph 32": [
+        "irene saunders"
+      ],
+      "paragraph 33": [
+        "irene saunders"
+      ],
+      "paragraph 34": [
+        "irene saunders"
+      ]
+    }
+  },
+  "31_Daniel Rintoul_Vancouver Sun.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "daniel peter rintoul (victim)"
+      ],
+      "Police-aligned": [
+        "independent investigations office (police oversight body)",
+        "vancouver police department (police)",
+        "adam palmer (police chief)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [
+        "independent investigations office"
+      ],
+      "paragraph 3": [
+        "independent investigations office"
+      ],
+      "paragraph 6": [
+        "independent investigations office"
+      ],
+      "paragraph 7": [
+        "independent investigations office"
+      ],
+      "paragraph 11": [
+        "vancouver police department"
+      ],
+      "paragraph 12": [
+        "vancouver police department"
+      ],
+      "paragraph 13": [
+        "independent investigations office"
+      ]
+    }
+  },
+  "30_Hoss Lightning_CBC.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "hoss lightning (victim)",
+        "vernon saddleback (chief of samson cree nation)",
+        "brooks arcand-paul (mla)",
+        "jodi calahoo stonehouse (mla)"
+      ],
+      "Police-aligned": [
+        "alberta serious incident response team (police oversight body)",
+        "rcmp (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 3": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 4": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 5": [
+        "rcmp"
+      ],
+      "paragraph 6": [
+        "rcmp"
+      ],
+      "paragraph 7": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 8": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 9": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 10": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 11": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 12": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 13": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 14": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 15": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 17": [
+        "vernon saddleback"
+      ],
+      "paragraph 19": [
+        "vernon saddleback"
+      ],
+      "paragraph 20": [
+        "brooks arcand-paul",
+        "jodi calahoo stonehouse"
+      ],
+      "paragraph 21": [
+        "brooks arcand-paul",
+        "jodi calahoo stonehouse"
+      ],
+      "paragraph 22": [
+        "brooks arcand-paul",
+        "jodi calahoo stonehouse"
+      ]
+    }
+  },
+  "24_Joshua Megeney_CTV.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "joshua megeney (victim)",
+        "scott spencer (victim's family lawyer)"
+      ],
+      "Police-aligned": [
+        "kyla hicks (sergeant)",
+        "alma wiebe (coroner)",
+        "saskatoon police (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 5": [
+        "kyla hicks"
+      ],
+      "paragraph 6": [
+        "kyla hicks"
+      ],
+      "paragraph 7": [
+        "kyla hicks"
+      ],
+      "paragraph 8": [
+        "kyla hicks"
+      ],
+      "paragraph 9": [
+        "kyla hicks"
+      ],
+      "paragraph 10": [
+        "kyla hicks"
+      ],
+      "paragraph 11": [
+        "scott spencer"
+      ],
+      "paragraph 12": [
+        "kyla hicks"
+      ],
+      "paragraph 13": [
+        "kyla hicks"
+      ],
+      "paragraph 16": [
+        "alma wiebe"
+      ]
+    }
+  },
+  "29_Bony Jean-Pierre_CBC.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "bony jean-pierre (victim)",
+        "dany villanueva (arrested individual)",
+        "fredy villanueva (victim in previous case)"
+      ],
+      "Police-aligned": [
+        "s\u00fbret\u00e9 du qu\u00e9bec (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 4": [
+        "s\u00fbret\u00e9 du qu\u00e9bec"
+      ],
+      "paragraph 8": [
+        "s\u00fbret\u00e9 du qu\u00e9bec"
+      ]
+    }
+  },
+  "27_Tammy Bateman_APTN News.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "tammy bateman (victim)",
+        "lori bateman (victim's sister)",
+        "tammy bateman's father (victim's father)",
+        "main street project (outreach organization)",
+        "siloam mission (outreach organization)",
+        "morgan's warriors (outreach organization)"
+      ],
+      "Police-aligned": [
+        "winnipeg police service (police)",
+        "independent investigation unit of manitoba (police oversight body)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [
+        "lori bateman"
+      ],
+      "paragraph 2": [
+        "lori bateman"
+      ],
+      "paragraph 3": [
+        "lori bateman"
+      ],
+      "paragraph 4": [
+        "lori bateman"
+      ],
+      "paragraph 5": [
+        "lori bateman"
+      ],
+      "paragraph 8": [
+        "lori bateman"
+      ],
+      "paragraph 11": [
+        "lori bateman"
+      ],
+      "paragraph 12": [
+        "lori bateman"
+      ],
+      "paragraph 13": [
+        "lori bateman"
+      ],
+      "paragraph 14": [
+        "lori bateman"
+      ],
+      "paragraph 15": [
+        "lori bateman"
+      ],
+      "paragraph 16": [
+        "lori bateman", "tammy bateman's father"
+      ],
+      "paragraph 17": [
+        "lori bateman"
+      ],
+      "paragraph 18": [
+        "lori bateman", "tammy bateman's father"
+      ],
+      "paragraph 19": [
+        "lori bateman", "tammy bateman's father"
+      ],
+      "paragraph 20": [
+        "lori bateman"
+      ],
+      "paragraph 21": [
+        "lori bateman"
+      ],
+      "paragraph 22": [
+        "lori bateman"
+      ],
+      "paragraph 23": [
+        "lori bateman"
+      ],
+      "paragraph 25": [
+        "lori bateman"
+      ],
+      "paragraph 26": [
+        "lori bateman"
+      ]
+    }
+  },
+  "32_Terrence Wienmeyer_Calgary Herald.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "terrence weinmeyer (victim)",
+        "william weinmeyer (victim's father)",
+        "tonii roulston (victim's former lawyer)"
+      ],
+      "Police-aligned": [
+        "alberta serious incident response team (police oversight body)",
+        "susan hughson (asirt executive director)",
+        "police (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [
+        "william weinmeyer"
+      ],
+      "paragraph 2": [
+        "william weinmeyer", "police"
+      ],
+      "paragraph 4": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 6": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 7": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 11": [
+        "police"
+      ],
+      "paragraph 12": [
+        "police"
+      ],
+      "paragraph 13": [
+        "william weinmeyer"
+      ],
+      "paragraph 14": [
+        "william weinmeyer"
+      ],
+      "paragraph 15": [
+        "tonii roulston"
+      ],
+      "paragraph 16": [
+        "tonii roulston"
+      ],
+      "paragraph 17": [
+        "police"
+      ],
+      "paragraph 18": [
+        "susan hughson"
+      ],
+      "paragraph 19": [
+        "susan hughson"
+      ],
+      "paragraph 20": [
+        "susan hughson"
+      ],
+      "paragraph 21": [
+        "susan hughson"
+      ],
+      "paragraph 22": [
+        "susan hughson"
+      ],
+      "paragraph 23": [
+        "susan hughson"
+      ]
+    }
+  },
+  "33_Jessica Patterson_Calgary Herald.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "trena patterson (victim's mother)",
+        "jessica lynn patterson (victim)",
+        "neighbour (witness)"
+      ],
+      "Police-aligned": [
+        "calgary police service (police)",
+        "alberta serious incident response team (police oversight body)",
+        "roger chaffin (police chief)",
+        "calgary police association (police union)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [
+        "trena patterson"
+      ],
+      "paragraph 2": [
+        "trena patterson"
+      ],
+      "paragraph 6": [
+        "trena patterson"
+      ],
+      "paragraph 7": [
+        "trena patterson"
+      ],
+      "paragraph 8": [
+        "calgary police service",
+        "alberta serious incident response team"
+      ],
+      "paragraph 9": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 10": [
+        "calgary police service"
+      ],
+      "paragraph 11": [
+        "calgary police service",
+        "calgary police association"
+      ],
+      "paragraph 12": [
+        "trena patterson"
+      ],
+      "paragraph 14": [
+        "trena patterson"
+      ],
+      "paragraph 15": [
+        "trena patterson"
+      ],
+      "paragraph 17": [
+        "trena patterson"
+      ],
+      "paragraph 19": [
+        "neighbour"
+      ],
+      "paragraph 20": [
+        "neighbour"
+      ],
+      "paragraph 21": [
+        "neighbour"
+      ],
+      "paragraph 22": [
+        "neighbour"
+      ],
+      "paragraph 23":[
+        "neighbour"
+      ],
+      "paragraph 24": [
+        "neighbour"
+      ],
+      "paragraph 25": [
+        "neighbour"
+      ],
+      "paragraph 26":[
+        "neighbour"
+      ],
+      "paragraph 27": [
+        "calgary police service"
+      ],
+      "paragraph 28": [
+        "roger chaffin"
+      ],
+      "paragraph 29": [
+        "roger chaffin"
+      ],
+      "paragraph 30": [
+        "roger chaffin"
+      ],
+      "paragraph 31": [
+        "roger chaffin"
+      ],
+      "paragraph 32": [
+        "trena patterson"
+      ],
+      "paragraph 33": [
+        "trena patterson"
+      ],
+      "paragraph 34": [
+        "trena patterson"
+      ],
+      "paragraph 35": [
+        "trena patterson"
+      ],
+      "paragraph 36": [
+        "trena patterson"
+      ],
+      "paragraph 37": [
+        "trena patterson"
+      ]
+    }
+  },
+  "28_Alex Wettlaufer_Global News.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "alex wettlaufer (victim)",
+        "alex wettlaufer's brother (victim's brother)",
+        "alex wettlaufer's sister-in-law (victim's sister-in-law)"
+      ],
+      "Police-aligned": [
+        "special investigations unit (police oversight body)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [
+        "alex wettlaufer's brother"
+      ],
+      "paragraph 2": [
+        "special investigations unit"
+      ],
+      "paragraph 3": [
+        "special investigations unit"
+      ],
+      "paragraph 5": [
+        "alex wettlaufer's brother"
+      ],
+      "paragraph 6": [
+        "alex wettlaufer's brother"
+      ],
+      "paragraph 7": [
+        "alex wettlaufer's brother"
+      ],
+      "paragraph 8": [
+        "alex wettlaufer's sister-in-law"
+      ],
+      "paragraph 9": [
+        "alex wettlaufer's sister-in-law"
+      ],
+      "paragraph 10": [
+        "alex wettlaufer's brother", "alex wettlaufer's sister-in-law"
+      ]
+    }
+  }
+}

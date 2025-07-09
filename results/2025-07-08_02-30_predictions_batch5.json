@@ -1,0 +1,788 @@
+{
+  "64_Quinn E MacDougall_Global News.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "quinn macdougall (victim)"
+      ],
+      "Police-aligned": [
+        "ontario government (government)",
+        "hamilton police service (police)",
+        "ministry of the solicitor general (government)",
+        "special investigations unit (police oversight body)",
+        "ontario police college (police training institution)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [
+        "quinn macdougall"
+      ],
+      "paragraph 2": [
+        "ontario government",
+        "hamilton police service"
+      ],
+      "paragraph 3": [
+        "ministry of the solicitor general"
+      ],
+      "paragraph 4": [
+        "hamilton police service"
+      ],
+      "paragraph 5": [
+        "quinn macdougall"
+      ],
+      "paragraph 7": [
+        "special investigations unit"
+      ],
+      "paragraph 8": [
+        "special investigations unit"
+      ],
+      "paragraph 10": [
+        "hamilton police service"
+      ],
+      "paragraph 11": [
+        "hamilton police service"
+      ],
+      "paragraph 12": [
+        "hamilton police service"
+      ],
+      "paragraph 13": [
+        "ontario police college",
+        "ministry of the solicitor general"
+      ]
+    }
+  },
+  "66_Abderrahmane Bettahar_CBC.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "nadia el-dib (victim)"
+      ],
+      "Police-aligned": [
+        "alberta serious incident response team (police oversight body)",
+        "rcmp (police)",
+        "calgary police (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 1": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 3": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 4": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 6": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 7": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 10": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 12": [
+        "calgary police"
+      ],
+      "paragraph 13": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 16": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 18": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 21": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 25": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 28": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 30": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 34": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 36": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 39": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 40": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 41": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 42": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 43": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 44": [
+        "alberta serious incident response team"
+      ]
+    }
+  },
+  "63_Pierre Charron_Ottawa Citizen.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "pierre charron's mother (victim's mother)",
+        "victim (victim)"
+      ],
+      "Police-aligned": [
+        "greg bell (const.)",
+        "special investigations unit (police oversight body)",
+        "tony loparco (special investigations unit director)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 2": [
+        "special investigations unit"
+      ],
+      "paragraph 3": [
+        "special investigations unit"
+      ],
+      "paragraph 4": [
+        "greg bell"
+      ],
+      "paragraph 11": [
+        "special investigations unit"
+      ],
+      "paragraph 19": [
+        "greg bell"
+      ],
+      "paragraph 20": [
+        "greg bell"
+      ],
+      "paragraph 22": [
+        "pierre charron's mother",
+        "victim",
+        "greg bell"
+      ],
+      "paragraph 24": [
+        "tony loparco"
+      ],
+      "paragraph 25": [
+        "tony loparco"
+      ],
+      "paragraph 26": [
+        "greg bell"
+      ],
+      "paragraph 27": [
+        "greg bell"
+      ],
+      "paragraph 28": [
+        "greg bell"
+      ],
+      "paragraph 29": [
+        "special investigations unit"
+      ]
+    }
+  },
+  "65_Matthew Mahoney_CBC.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "matthew mahoney (victim)",
+        "michael mahoney (victim's brother)",
+        "natalie vriesen (witness)"
+      ],
+      "Police-aligned": [
+        "andre marentette (constable)",
+        "john paul karam (constable)",
+        "special investigations unit (police oversight body)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 3": [
+        "andre marentette"
+      ],
+      "paragraph 4": [
+        "andre marentette"
+      ],
+      "paragraph 5": [
+        "andre marentette"
+      ],
+      "paragraph 6": [
+        "andre marentette"
+      ],
+      "paragraph 7": [
+        "andre marentette"
+      ],
+      "paragraph 8": [
+        "andre marentette"
+      ],
+      "paragraph 10": [
+        "andre marentette"
+      ],
+      "paragraph 11": [
+        "andre marentette"
+      ],
+      "paragraph 12": [
+        "andre marentette"
+      ],
+      "paragraph 13": [
+        "andre marentette"
+      ],
+      "paragraph 14": [
+        "andre marentette"
+      ],
+      "paragraph 15": [
+        "andre marentette"
+      ],
+      "paragraph 16": [
+        "andre marentette"
+      ],
+      "paragraph 18": [
+        "andre marentette"
+      ],
+      "paragraph 19": [
+        "andre marentette"
+      ],
+      "paragraph 20": [
+        "andre marentette"
+      ],
+      "paragraph 21": [
+        "andre marentette"
+      ],
+      "paragraph 22": [
+        "andre marentette"
+      ],
+      "paragraph 23": [
+        "andre marentette"
+      ],
+      "paragraph 26": [
+        "john paul karam"
+      ],
+      "paragraph 27": [
+        "john paul karam"
+      ],
+      "paragraph 29": [
+        "andre marentette"
+      ],
+      "paragraph 31": [
+        "andre marentette"
+      ],
+      "paragraph 32": [
+        "andre marentette"
+      ],
+      "paragraph 34": [
+        "natalie vriesen"
+      ],
+      "paragraph 35": [
+        "natalie vriesen"
+      ],
+      "paragraph 36": [
+        "natalie vriesen"
+      ],
+      "paragraph 37": [
+        "natalie vriesen"
+      ],
+      "paragraph 38": [
+        "natalie vriesen"
+      ],
+      "paragraph 39": [
+        "michael mahoney"
+      ],
+      "paragraph 40": [
+        "michael mahoney"
+      ],
+      "paragraph 41": [
+        "special investigations unit"
+      ]
+    }
+  },
+  "69_Bradley Thomas Clattenburg_CityNews Halifax.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "bradley thomas clattenburg (victim)"
+      ],
+      "Police-aligned": [
+        "felix cacchione (director of sirt)",
+        "sirt (police oversight body)",
+        "halifax district rcmp (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 5": [
+        "sirt",
+        "halifax district rcmp"
+      ],
+      "paragraph 6": [
+        "bradley thomas clattenburg"
+      ],
+      "paragraph 8": [
+        "sirt"
+      ],
+      "paragraph 9": [
+        "sirt"
+      ],
+      "paragraph 10": [
+        "sirt"
+      ],
+      "paragraph 11": [
+        "sirt"
+      ],
+      "paragraph 12": [
+        "sirt"
+      ],
+      "paragraph 14": [
+        "felix cacchione"
+      ],
+      "paragraph 15": [
+        "felix cacchione"
+      ],
+      "paragraph 18": [
+        "felix cacchione"
+      ],
+      "paragraph 19": [
+        "sirt"
+      ]
+    }
+  },
+  "71_Clayton Norman Crawford_CTV.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "clayton crawford's brother (victim's brother)",
+        "clayton crawford (victim)",
+        "linda shin (crown attorney)"
+      ],
+      "Police-aligned": [
+        "jessica brown (const.)",
+        "randy stenger (cpl.)",
+        "robb beeman (brown's lawyer)",
+        "mona duckett (stenger's lawyer)",
+        "whitecourt rcmp (police)",
+        "grande prairie rcmp (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 3": [
+        "jessica brown",
+        "randy stenger",
+        "clayton crawford"
+      ],
+      "paragraph 7": [
+        "clayton crawford's brother"
+      ],
+      "paragraph 8": [
+        "clayton crawford's brother"
+      ],
+      "paragraph 9": [
+        "clayton crawford's brother"
+      ],
+      "paragraph 10": [
+        "clayton crawford's brother"
+      ],
+      "paragraph 11": [
+        "linda shin"
+      ],
+      "paragraph 12": [
+        "linda shin"
+      ],
+      "paragraph 13": [
+        "jessica brown",
+        "grande prairie rcmp"
+      ],
+      "paragraph 16": [
+        "jessica brown"
+      ],
+      "paragraph 17": [
+        "jessica brown",
+        "randy stenger"
+      ],
+      "paragraph 18": [
+        "jessica brown",
+        "randy stenger"
+      ],
+      "paragraph 19": [
+        "robb beeman"
+      ],
+      "paragraph 20": [
+        "mona duckett"
+      ],
+      "paragraph 21": [
+        "mona duckett"
+      ],
+      "paragraph 22": [
+        "linda shin"
+      ],
+      "paragraph 23": [
+        "linda shin"
+      ]
+    }
+  },
+  "68_Robert Morfitt_Toronto Sun.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "morfitt family representative (representative)"
+      ],
+      "Police-aligned": [
+        "arjuna raveendran (const.)",
+        "jason crocker (const.)",
+        "kevin marshall (off-duty officer)",
+        "special investigations unit (police oversight body)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 2": [
+        "arjuna raveendran"
+      ],
+      "paragraph 4": [
+        "arjuna raveendran",
+        "jason crocker"
+      ],
+      "paragraph 5": [
+        "kevin marshall"
+      ],
+      "paragraph 6": [
+        "kevin marshall"
+      ],
+      "paragraph 7": [
+        "arjuna raveendran"
+      ],
+      "paragraph 14": [
+        "kevin marshall"
+      ],
+      "paragraph 15": [
+        "arjuna raveendran"
+      ],
+      "paragraph 16": [
+        "arjuna raveendran"
+      ],
+      "paragraph 21": [
+        "arjuna raveendran"
+      ],
+      "paragraph 23": [
+        "arjuna raveendran"
+      ],
+      "paragraph 25": [
+        "arjuna raveendran"
+      ],
+      "paragraph 27": [
+        "jason crocker"
+      ],
+      "paragraph 28": [
+        "special investigations unit"
+      ],
+      "paragraph 29": [
+        "arjuna raveendran"
+      ],
+      "paragraph 31": [
+        "morfitt family representative"
+      ],
+      "paragraph 32": [
+        "arjuna raveendran"
+      ],
+      "paragraph 34": [
+        "arjuna raveendran"
+      ]
+    }
+  },
+  "72_Emroy Edward Cardinal_Edmonton Journal.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "amanda hart-dowhun (edmonton man's family lawyer)",
+        "emroy cardinal's wife (wife)",
+        "edward blood (emroy cardinal's father)",
+        "emilene blood (emroy cardinal's mother)"
+      ],
+      "Police-aligned": [
+        "alberta serious incident response team (police oversight body)",
+        "michael ewenson (asirt executive director)",
+        "dr. mitchell weinberg (edmonton medical examiner)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 12": [
+        "amanda hart-dowhun"
+      ],
+      "paragraph 13": [
+        "amanda hart-dowhun"
+      ],
+      "paragraph 16": [
+        "emroy cardinal's wife"
+      ],
+      "paragraph 19": [
+        "michael ewenson"
+      ],
+      "paragraph 20": [
+        "michael ewenson"
+      ],
+      "paragraph 21": [
+        "edward blood",
+        "emilene blood"
+      ],
+      "paragraph 28": [
+        "michael ewenson"
+      ],
+      "paragraph 29": [
+        "michael ewenson"
+      ]
+    }
+  },
+  "67_Josephine Shelly Lynn Pelletier_APTN News.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "josephine pelletier (victim)",
+        "youth (witness)"
+      ],
+      "Police-aligned": [
+        "alberta serious incident response team (police oversight body)",
+        "calgary police service (police)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 6": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 9": [
+        "alberta serious incident response team",
+        "calgary police service"
+      ],
+      "paragraph 13": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 14": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 15": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 18": [
+        "josephine pelletier"
+      ],
+      "paragraph 19": [
+        "josephine pelletier"
+      ],
+      "paragraph 20": [
+        "josephine pelletier"
+      ],
+      "paragraph 22": [
+        "josephine pelletier"
+      ],
+      "paragraph 23": [
+        "josephine pelletier"
+      ],
+      "paragraph 25": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 26": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 28": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 29": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 30": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 31": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 33": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 34": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 35": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 37": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 38": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 39": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 40": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 41": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 42": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 43": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 44": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 45": [
+        "alberta serious incident response team",
+        "youth"
+      ],
+      "paragraph 46": [
+        "alberta serious incident response team",
+        "youth"
+      ],
+      "paragraph 47": [
+        "alberta serious incident response team",
+        "youth"
+      ],
+      "paragraph 48": [
+        "alberta serious incident response team",
+        "youth"
+      ],
+      "paragraph 49": [
+        "alberta serious incident response team",
+        "youth"
+      ],
+      "paragraph 50": [
+        "alberta serious incident response team",
+        "youth"
+      ],
+      "paragraph 51": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 52": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 53": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 54": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 55": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 56": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 57": [
+        "alberta serious incident response team"
+      ],
+      "paragraph 58": [
+        "alberta serious incident response team"
+      ]
+    }
+  },
+  "70_Jeremy Stephens_PNI Atlantic News.json": {
+    "task1_prediction": {
+      "Victim-aligned": [
+        "gilda stephens (victim's mother)",
+        "julie kirkpatrick (victim's attorney)"
+      ],
+      "Police-aligned": [
+        "summerside police department (police)",
+        "david poirier (police chief)",
+        "serious incident response team (police oversight body)"
+      ]
+    },
+    "task2_prediction": {
+      "paragraph 3": [
+        "gilda stephens"
+      ],
+      "paragraph 4": [
+        "julie kirkpatrick"
+      ],
+      "paragraph 5": [
+        "gilda stephens"
+      ],
+      "paragraph 7": [
+        "gilda stephens"
+      ],
+      "paragraph 8": [
+        "gilda stephens"
+      ],
+      "paragraph 9": [
+        "gilda stephens"
+      ],
+      "paragraph 10": [
+        "gilda stephens"
+      ],
+      "paragraph 11": [
+        "gilda stephens"
+      ],
+      "paragraph 12": [
+        "gilda stephens"
+      ],
+      "paragraph 13": [
+        "gilda stephens"
+      ],
+      "paragraph 14": [
+        "gilda stephens"
+      ],
+      "paragraph 15": [
+        "gilda stephens"
+      ],
+      "paragraph 16": [
+        "gilda stephens"
+      ],
+      "paragraph 17": [
+        "gilda stephens"
+      ],
+      "paragraph 18": [
+        "gilda stephens"
+      ],
+      "paragraph 19": [
+        "julie kirkpatrick"
+      ],
+      "paragraph 21": [
+        "gilda stephens"
+      ],
+      "paragraph 23": [
+        "julie kirkpatrick"
+      ],
+      "paragraph 24": [
+        "julie kirkpatrick"
+      ],
+      "paragraph 25": [
+        "gilda stephens"
+      ],
+      "paragraph 26": [
+        "david poirier"
+      ],
+      "paragraph 27": [
+        "julie kirkpatrick"
+      ],
+      "paragraph 34": [
+        "gilda stephens"
+      ],
+      "paragraph 35": [
+        "gilda stephens"
+      ],
+      "paragraph 36": [
+        "gilda stephens"
+      ],
+      "paragraph 37": [
+        "gilda stephens"
+      ],
+      "paragraph 38": [
+        "gilda stephens"
+      ],
+      "paragraph 39": [
+        "gilda stephens"
+      ],
+      "paragraph 40": [
+        "gilda stephens"
+      ],
+      "paragraph 41": [
+        "gilda stephens"
+      ],
+      "paragraph 45": [
+        "gilda stephens"
+      ],
+      "paragraph 46": [
+        "gilda stephens"
+      ],
+      "paragraph 47": [
+        "gilda stephens"
+      ]
+    }
+  }
+}
