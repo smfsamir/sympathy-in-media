@@ -47,6 +47,7 @@ def distill_task1_olmo():
         args=training_args,
         train_dataset=dataset,
     )
+    trainer.train()
 
     # optional verifying cuda
     # inputs = {k: v.to('cuda') for k,v in inputs.items()}
