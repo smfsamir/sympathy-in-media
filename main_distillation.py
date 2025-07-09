@@ -6,7 +6,7 @@ import pathlib
 import click
 
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from datasets import load_dataset
+from datasets import load_dataset, Dataset
 from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
 from trl import SFTConfig, SFTTrainer
 
@@ -22,13 +22,22 @@ logger = loguru.logger
 
 @click.command()
 def create_distillation_examples_task1():
+    prompts = []
+    completions = []
     with open("data/distillation_data/distill_examples.jsonl", "w") as f:
         for annotated_example_file in os.listdir("data/evaluation_dataset"):
             annotation_object = json.load(open(os.path.join("data/evaluation_dataset", annotated_example_file)))
             article_paragraphs = annotation_object['article']
             prompt = TASK_1_PROMPT + "\n".join(article_paragraphs) + "\n\n"
             response = json.dumps(annotation_object['task1'])
+            prompts.append(prompt)
+            completions.append(response)
             f.write(f"{{'prompt': {prompt}, 'completion': '{response}'}}\n")
+    dataset = Dataset.from_dict({
+        'prompt': prompts,
+        'completion': completions
+    }) 
+    dataset.to_json("data/distillation_data/distill_examples.json") 
     logger.info("Distillation examples created successfully.")
         # Add more examples or prompts as needed
         # f.write("Another example prompt here\n")
@@ -37,7 +46,7 @@ def create_distillation_examples_task1():
 def distill_task1_olmo():
     # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-2-0425-1B")
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-2-0425-1B")
-    dataset = load_dataset("json", data_files="data/distillation_data/distill_examples.jsonl")
+    dataset = load_dataset("json", data_files={'train': "data/distillation_data/distill_examples.json"}, split='train')
     # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
     training_args = SFTConfig()
