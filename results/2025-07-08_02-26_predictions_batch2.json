@@ -6,19 +6,28 @@
         "melissa facciolo (victim's partner)",
         "peter maloney (victim's father)",
         "nick cake (victim's lawyer)",
-        "moira adlan (theatre co-owner)"
+        "moira adlan (victim's employer)",
+        "priest pandit durgesh tiwari (witness)"
       ],
       "Police-aligned": [
         "london police (police)",
-        "special investigations unit (police oversight body)"
+        "special investigations unit (police oversight body)",
+        "canada border services agency (federal law enforcement agency)",
+        "bylaw enforcement (municpal agency)",
+        "katherine zambrano (victim's classmate)",
+        "neighbours (victim's neighbours)"
+
+
       ]
     },
     "task2_prediction": {
-      "paragraph 9": [
-        "special investigations unit",
-        "london police"
+      "paragraph 13": [
+        "samuel maloney"
       ],
       "paragraph 16": [
+        "peter maloney"
+      ],
+      "paragraph 17":[
         "peter maloney"
       ],
       "paragraph 19": [
@@ -28,19 +37,28 @@
         "london police"
       ],
       "paragraph 25": [
-        "london police"
+        "canada border services agency"
+      ],
+      "paragraph 27": [
+        "samuel maloney"
+      ],
+      "paragraph 30": [
+        "samuel maloney"
       ],
       "paragraph 31": [
         "samuel maloney"
+      ],
+      "paragraph 32": [
+        "neighbours"
       ],
       "paragraph 35": [
         "samuel maloney"
       ],
       "paragraph 37": [
-        "samuel maloney"
+        "priest pandit durgesh tiwari"
       ],
       "paragraph 39": [
-        "samuel maloney"
+        "melissa facciolo"
       ],
       "paragraph 40": [
         "peter maloney"
@@ -70,8 +88,7 @@
         "peter maloney"
       ],
       "paragraph 56": [
-        "london police",
-        "special investigations unit"
+        "london police"
       ],
       "paragraph 60": [
         "moira adlan"
@@ -97,6 +114,9 @@
       "paragraph 68": [
         "peter maloney"
       ],
+      "paragraph 69": [
+        "peter maloney"
+      ],
       "paragraph 70": [
         "peter maloney"
       ],
@@ -111,18 +131,17 @@
   "36_Mark Dicesre_Global News.json": {
     "task1_prediction": {
       "Victim-aligned": [
-        "mark dicesare (victim)"
+        "mark dicesare (victim)",
+        "witnesses (witnesses)"
       ],
       "Police-aligned": [
         "independent investigation unit (police oversight body)",
         "zane tessler (iiu director)",
-        "danny smyth (deputy chief)"
+        "danny smyth (deputy chief)",
+        "police (police)"
       ]
     },
     "task2_prediction": {
-      "paragraph 1": [
-        "independent investigation unit"
-      ],
       "paragraph 2": [
         "independent investigation unit"
       ],
@@ -130,13 +149,19 @@
         "zane tessler"
       ],
       "paragraph 4": [
-        "zane tessler"
+        "zane tessler", "mark dicesare"
       ],
       "paragraph 6": [
         "police"
       ],
       "paragraph 7": [
         "danny smyth"
+      ],
+      "paragraph 8": [
+        "witnesses"
+      ],
+      "paragraph 9": [
+        "independent investigation unit"
       ],
       "paragraph 12": [
         "independent investigation unit"
@@ -147,14 +172,8 @@
       "paragraph 14": [
         "zane tessler"
       ],
-      "paragraph 15": [
-        "police"
-      ],
       "paragraph 16": [
-        "police"
-      ],
-      "paragraph 19": [
-        "independent investigation unit"
+        "police", "mark dicesare"
       ],
       "paragraph 21": [
         "mark dicesare"
@@ -176,7 +195,7 @@
         "special investigations unit (police oversight body)",
         "ontario provincial police (police)",
         "london police (police)",
-        "chrystal jones (spokesperson)"
+        "chrystal jones (police spokesperson)"
       ]
     },
     "task2_prediction": {
@@ -187,22 +206,13 @@
         "special investigations unit"
       ],
       "paragraph 4": [
-        "special investigations unit",
-        "mark mckillop",
-        "nicholas doering"
-      ],
-      "paragraph 5": [
         "special investigations unit"
       ],
       "paragraph 7": [
         "special investigations unit"
       ],
-      "paragraph 11": [
-        "special investigations unit"
-      ],
       "paragraph 12": [
-        "ontario provincial police",
-        "london police"
+        "ontario provincial police"
       ],
       "paragraph 13": [
         "chrystal jones"
@@ -225,158 +235,26 @@
         "adrian lacquette (victim)"
       ],
       "Police-aligned": [
+        "independent investigation unit (police oversight body)",
         "zane tessler (iiu director)",
-        "winnipeg police (police department)",
-        "jay murray (const.)"
+        "winnipeg police (police department)"
       ]
     },
     "task2_prediction": {
       "paragraph 1": [
-        "zane tessler"
-      ],
-      "paragraph 2": [
-        "winnipeg police"
+        "independent investigation unit"
       ],
       "paragraph 3": [
         "zane tessler"
-      ],
-      "paragraph 8": [
-        "winnipeg police"
-      ],
-      "paragraph 9": [
-        "adrian lacquette"
-      ],
-      "paragraph 11": [
-        "jay murray"
-      ],
-      "paragraph 12": [
-        "zane tessler"
-      ],
-      "paragraph 13": [
-        "zane tessler"
-      ]
-    }
-  },
-  "39_Gerald Rattu_Durham Region.json": {
-    "task1_prediction": {
-      "Victim-aligned": [
-        "gerald rattu (victim)",
-        "laurie bailey (victim's girlfriend)"
-      ],
-      "Police-aligned": [
-        "durham police (police)",
-        "special investigations unit (police oversight body)"
-      ]
-    },
-    "task2_prediction": {
-      "paragraph 3": [
-        "gerald rattu",
-        "laurie bailey"
-      ],
-      "paragraph 4": [
-        "gerald rattu",
-        "laurie bailey"
-      ],
-      "paragraph 6": [
-        "gerald rattu"
-      ],
-      "paragraph 7": [
-        "gerald rattu",
-        "laurie bailey"
-      ],
-      "paragraph 9": [
-        "laurie bailey"
       ],
       "paragraph 10": [
-        "laurie bailey"
+        "zane tessler"
       ],
       "paragraph 11": [
-        "durham police"
+        "zane tessler"
       ],
       "paragraph 12": [
-        "laurie bailey"
-      ],
-      "paragraph 13": [
-        "laurie bailey"
-      ],
-      "paragraph 14": [
-        "laurie bailey"
-      ],
-      "paragraph 18": [
-        "laurie bailey"
-      ],
-      "paragraph 19": [
-        "laurie bailey"
-      ],
-      "paragraph 20": [
-        "laurie bailey"
-      ],
-      "paragraph 21": [
-        "laurie bailey"
-      ],
-      "paragraph 22": [
-        "laurie bailey"
-      ],
-      "paragraph 23": [
-        "laurie bailey"
-      ],
-      "paragraph 24": [
-        "laurie bailey"
-      ],
-      "paragraph 25": [
-        "laurie bailey"
-      ],
-      "paragraph 26": [
-        "laurie bailey"
-      ],
-      "paragraph 27": [
-        "laurie bailey"
-      ],
-      "paragraph 28": [
-        "laurie bailey"
-      ],
-      "paragraph 29": [
-        "laurie bailey"
-      ],
-      "paragraph 30": [
-        "laurie bailey"
-      ],
-      "paragraph 31": [
-        "laurie bailey"
-      ],
-      "paragraph 32": [
-        "laurie bailey"
-      ],
-      "paragraph 33": [
-        "laurie bailey"
-      ],
-      "paragraph 34": [
-        "laurie bailey"
-      ],
-      "paragraph 35": [
-        "laurie bailey"
-      ],
-      "paragraph 36": [
-        "special investigations unit"
-      ],
-      "paragraph 37": [
-        "durham police",
-        "special investigations unit"
-      ],
-      "paragraph 38": [
-        "durham police"
-      ],
-      "paragraph 44": [
-        "durham police"
-      ],
-      "paragraph 45": [
-        "durham police"
-      ],
-      "paragraph 47": [
-        "special investigations unit"
-      ],
-      "paragraph 48": [
-        "laurie bailey"
+        "zane tessler"
       ]
     }
   },
@@ -393,10 +271,13 @@
       ]
     },
     "task2_prediction": {
+      "paragraph 2": [
+        "independent investigation unit"
+      ],
       "paragraph 3": [
         "independent investigation unit"
       ],
-      "paragraph 4": [
+      "paragraph 6": [
         "independent investigation unit"
       ],
       "paragraph 7": [
@@ -405,19 +286,13 @@
       "paragraph 8": [
         "independent investigation unit"
       ],
-      "paragraph 9": [
-        "independent investigation unit"
-      ],
       "paragraph 12": [
-        "independent investigation unit"
-      ],
-      "paragraph 13": [
         "zane tessler"
       ],
-      "paragraph 15": [
+      "paragraph 13": [
         "jo-anne malcolm"
       ],
-      "paragraph 17": [
+      "paragraph 14": [
         "jo-anne malcolm"
       ]
     }
@@ -426,8 +301,8 @@
     "task1_prediction": {
       "Victim-aligned": [
         "raymond alliman (victim)",
-        "bun sim (victim)",
-        "terrence phillips (victim)"
+        "bun sim (individual shot by victim)",
+        "terrence phillips (individual killed by victim)"
       ],
       "Police-aligned": [
         "aaron reichert (const.)",
@@ -444,72 +319,63 @@
         "special investigations unit"
       ],
       "paragraph 3": [
-        "special investigations unit",
-        "aaron reichert",
-        "raymond alliman",
-        "bun sim",
-        "terrence phillips"
+        "special investigations unit"
       ],
       "paragraph 4": [
-        "tony loparco",
+        "tony loparco"
+      ],
+      "paragraph 5": [
+        "aaron reichert"
+      ],
+      "paragraph 6": [
+        "bun sim"
+      ],
+      "paragraph 7": [
+        "aaron reichert"
+      ],
+      "paragraph 8": [
+        "aaron reichert"
+      ],
+      "paragraph ": [
+        "aaron reichert"
+      ],
+      "paragraph 10": [
         "aaron reichert"
       ],
       "paragraph 11": [
         "aaron reichert"
       ],
-      "paragraph 13": [
-        "aaron reichert",
-        "raymond alliman"
+      "paragraph 12": [
+        "aaron reichert"
       ],
-      "paragraph 14": [
-        "aaron reichert",
-        "raymond alliman",
-        "terrence phillips"
+      "paragraph 13": [
+        "aaron reichert"
       ],
       "paragraph 16": [
-        "aaron reichert",
-        "raymond alliman"
+        "tony loparco"
       ],
       "paragraph 17": [
-        "aaron reichert"
-      ],
-      "paragraph 18": [
-        "aaron reichert"
-      ],
-      "paragraph 20": [
-        "raymond alliman",
-        "terrence phillips"
-      ],
-      "paragraph 21": [
-        "ottawa police",
-        "aaron reichert",
-        "special investigations unit"
-      ],
-      "paragraph 22": [
-        "tony loparco",
-        "aaron reichert"
-      ],
-      "paragraph 23": [
-        "tony loparco",
-        "aaron reichert",
-        "raymond alliman",
-        "terrence phillips"
+        "tony loparco"
       ]
     }
   },
   "37_Danny Lafrance-Godmer_Ottawa Citizen.json": {
     "task1_prediction": {
       "Victim-aligned": [
-        "danny lafrance-godmer (victim)",
-        "girlfriend's relative (girlfriend's relative)"
+        "danny lafrance-godmer (victim)"
       ],
       "Police-aligned": [
         "s\u00fbret\u00e9 du qu\u00e9bec (police department)",
         "bureau des enqu\u00eates ind\u00e9pendantes (police oversight body)",
-        "montreal police service (police department)"
+        "montreal police service (police department)",
+        "girlfriend (victim's girlfriend)",
+        "girlfriend's relative (victim's girlfriend's relative)"
       ]
     },
     "task2_prediction": {
+      "paragraph 1": [
+        "bureau des enqu\u00eates ind\u00e9pendantes"
+      ],
       "paragraph 2": [
         "girlfriend's relative"
       ],
@@ -520,13 +386,7 @@
         "girlfriend's relative"
       ],
       "paragraph 8": [
-        "girlfriend's relative"
-      ],
-      "paragraph 9": [
-        "girlfriend's relative"
-      ],
-      "paragraph 10": [
-        "girlfriend's relative"
+        "girlfriend"
       ],
       "paragraph 11": [
         "bureau des enqu\u00eates ind\u00e9pendantes"
@@ -537,12 +397,8 @@
       "paragraph 14": [
         "bureau des enqu\u00eates ind\u00e9pendantes"
       ],
-      "paragraph 15": [
-        "bureau des enqu\u00eates ind\u00e9pendantes"
-      ],
       "paragraph 16": [
-        "bureau des enqu\u00eates ind\u00e9pendantes",
-        "montreal police service"
+        "bureau des enqu\u00eates ind\u00e9pendantes"
       ]
     }
   },
@@ -558,6 +414,9 @@
       ]
     },
     "task2_prediction": {
+      "paragraph 1": [
+        "bureau des enqu\u00eates ind\u00e9pendantes"
+      ],
       "paragraph 4": [
         "bureau des enqu\u00eates ind\u00e9pendantes"
       ],
@@ -565,16 +424,10 @@
         "bureau des enqu\u00eates ind\u00e9pendantes",
         "gatineau police"
       ],
-      "paragraph 12": [
-        "gatineau police"
-      ],
-      "paragraph 13": [
-        "bureau des enqu\u00eates ind\u00e9pendantes"
-      ],
-      "paragraph 14": [
+      "paragraph 8": [
         "jenn knox"
       ],
-      "paragraph 15": [
+      "paragraph 9": [
         "jenn knox"
       ]
     }
@@ -583,22 +436,26 @@
     "task1_prediction": {
       "Victim-aligned": [
         "peter rosenthal (lawyer)",
-        "rui nabico (victim)"
+        "rui nabico (victim)",
+        "rodrigo almonacid (victim in previous case)"
       ],
       "Police-aligned": [
         "toronto police (police)",
         "mark saunders (police chief)",
-        "special investigations unit (police oversight body)"
+        "special investigations unit (police oversight body)",
+        "toronto police services board (police oversight body)"
       ]
     },
     "task2_prediction": {
       "paragraph 1": [
+        "toronto police",
+        "peter rosenthal"
+      ],
+      "paragraph 2": [
         "toronto police"
       ],
       "paragraph 3": [
-        "peter rosenthal",
-        "toronto police",
-        "special investigations unit"
+        "peter rosenthal"
       ],
       "paragraph 4": [
         "special investigations unit"
@@ -608,9 +465,6 @@
       ],
       "paragraph 6": [
         "peter rosenthal"
-      ],
-      "paragraph 7": [
-        "toronto police"
       ],
       "paragraph 8": [
         "toronto police"
@@ -625,8 +479,7 @@
         "mark saunders"
       ],
       "paragraph 12": [
-        "mark saunders",
-        "special investigations unit"
+        "mark saunders"
       ],
       "paragraph 13": [
         "mark saunders"
@@ -645,9 +498,6 @@
         "peter rosenthal"
       ],
       "paragraph 18": [
-        "toronto police"
-      ],
-      "paragraph 19": [
         "toronto police"
       ]
     }
