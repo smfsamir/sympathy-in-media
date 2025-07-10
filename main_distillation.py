@@ -37,7 +37,7 @@ def create_distillation_examples_task1():
         'prompt': prompts,
         'completion': completions
     }) 
-    dataset = dataset.train_test_split(test=0.5)
+    dataset = dataset.train_test_split(test_size=0.5)
     dataset.to_json("data/distillation_data/distill_examples.json") 
     logger.info("Distillation examples created successfully.")
         # Add more examples or prompts as needed
