@@ -49,13 +49,19 @@ def distill_task1_olmo():
     dataset = load_dataset("json", data_files={'train': "data/distillation_data/distill_examples.json"}, split='train')
     # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
-    training_args = SFTConfig()
+    training_args = SFTConfig(
+        output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation",
+        logging_steps=10,
+        num_train_epochs=5,
+        load_best_model_at_end=True
+    )
     trainer = SFTTrainer(
         "allenai/OLMo-1B-hf",
         args=training_args,
-        train_dataset=dataset,
+        train_dataset=dataset
     )
     trainer.train()
+    trainer.save_model("/h/smfsamir/hf_cache")
 
     # optional verifying cuda
     # inputs = {k: v.to('cuda') for k,v in inputs.items()}
