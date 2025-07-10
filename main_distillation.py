@@ -61,7 +61,6 @@ def distill_task1_olmo():
         train_dataset=dataset
     )
     trainer.train()
-    trainer.save_model("/h/smfsamir/hf_cache")
 
     # optional verifying cuda
     # inputs = {k: v.to('cuda') for k,v in inputs.items()}
