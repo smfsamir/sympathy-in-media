@@ -69,14 +69,14 @@ def distill_task1_olmo():
         logging_steps=10,
         num_train_epochs=5,
         per_device_train_batch_size=8,
-        per_device_eval_batch_size=8
+        per_device_eval_batch_size=8,
+        eval_steps=5
     )
     trainer = SFTTrainer(
         "allenai/OLMo-1B-hf",
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset = eval_dataset,
-        eval_steps=5,
         compute_metrics=compute_metrics
     )
     trainer.train()
