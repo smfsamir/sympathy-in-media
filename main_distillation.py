@@ -37,6 +37,7 @@ def create_distillation_examples_task1():
         'prompt': prompts,
         'completion': completions
     }) 
+    dataset = dataset.train_test_split(test=0.5)
     dataset.to_json("data/distillation_data/distill_examples.json") 
     logger.info("Distillation examples created successfully.")
         # Add more examples or prompts as needed
@@ -46,27 +47,23 @@ def create_distillation_examples_task1():
 def distill_task1_olmo():
     # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-2-0425-1B")
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-2-0425-1B")
-    dataset = load_dataset("json", data_files={'train': "data/distillation_data/distill_examples.json"}, split='train')
+    train_dataset = load_dataset("json", data_files="data/distillation_data/distill_examples.json", split='train')
+    eval_dataset = load_dataset("json", data_files="data/distillation_data/distill_examples.json", split='test')
     # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
     training_args = SFTConfig(
         output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation",
         logging_steps=10,
-        num_train_epochs=5
+        num_train_epochs=5,
+        per_device_train_batch_size=2
     )
     trainer = SFTTrainer(
         "allenai/OLMo-1B-hf",
         args=training_args,
-        train_dataset=dataset
+        train_dataset=train_dataset,
+        eval_dataset = eval_dataset
     )
     trainer.train()
-
-    # optional verifying cuda
-    # inputs = {k: v.to('cuda') for k,v in inputs.items()}
-    # olmo = olmo.to('cuda')
-    # response = olmo.generate(**inputs, max_new_tokens=100, do_sample=True, top_k=50, top_p=0.95)
-
-
 
 @click.group()
 def main():
