@@ -52,8 +52,7 @@ def distill_task1_olmo():
     training_args = SFTConfig(
         output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation",
         logging_steps=10,
-        num_train_epochs=5,
-        load_best_model_at_end=True
+        num_train_epochs=5
     )
     trainer = SFTTrainer(
         "allenai/OLMo-1B-hf",
