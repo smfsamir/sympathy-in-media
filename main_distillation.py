@@ -37,18 +37,31 @@ def create_distillation_examples_task1():
         'prompt': prompts,
         'completion': completions
     }) 
-    dataset = dataset.train_test_split(test_size=0.5)
     dataset.to_json("data/distillation_data/distill_examples.json") 
     logger.info("Distillation examples created successfully.")
         # Add more examples or prompts as needed
         # f.write("Another example prompt here\n")
 
+def compute_metrics(eval_preds):
+    # This function can be customized to compute specific metrics
+    # For now, we will just return a dummy metric
+    ipdb.set_trace()
+    predictions, labels = eval_preds
+    predictions = predictions.argmax(axis=-1)
+    accuracy = (predictions == labels).mean()
+    return {"accuracy": accuracy}
+
 @click.command()
 def distill_task1_olmo():
     # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-2-0425-1B")
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-2-0425-1B")
-    train_dataset = load_dataset("json", data_files="data/distillation_data/distill_examples.json", split='train')
-    eval_dataset = load_dataset("json", data_files="data/distillation_data/distill_examples.json", split='test')
+    dataset = load_dataset("json", data_files={'train': "data/distillation_data/distill_examples.json"}, split='train')
+    train_testvalid = dataset.train_test_split(test=0.5)
+    train_dataset = train_testvalid['train']
+    test_valid = train_testvalid['test'].train_test_split(test=0.5)
+    eval_dataset = test_valid['train']
+    test_dataset = test_valid['test']
+
     # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
     training_args = SFTConfig(
@@ -61,7 +74,8 @@ def distill_task1_olmo():
         "allenai/OLMo-1B-hf",
         args=training_args,
         train_dataset=train_dataset,
-        eval_dataset = eval_dataset
+        eval_dataset = eval_dataset,
+        compute_metrics=compute_metrics
     )
     trainer.train()
 
