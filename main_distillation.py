@@ -56,9 +56,9 @@ def distill_task1_olmo():
     # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-2-0425-1B")
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-2-0425-1B")
     dataset = load_dataset("json", data_files={'train': "data/distillation_data/distill_examples.json"}, split='train')
-    train_testvalid = dataset.train_test_split(test=0.5)
+    train_testvalid = dataset.train_test_split(test_size=0.5)
     train_dataset = train_testvalid['train']
-    test_valid = train_testvalid['test'].train_test_split(test=0.5)
+    test_valid = train_testvalid['test'].train_test_split(test_size=0.5)
     eval_dataset = test_valid['train']
     test_dataset = test_valid['test']
 
