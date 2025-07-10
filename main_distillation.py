@@ -72,6 +72,7 @@ def distill_task1_olmo():
         per_device_eval_batch_size=4,
         eval_steps=1,
         max_length = 2048 # TODO: should check that nothing gets truncated
+        completion_only_loss=True
     )
     trainer = SFTTrainer(
         "allenai/OLMo-1B-hf",
