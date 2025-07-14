@@ -1,0 +1,252 @@
+{
+  "1_Adrian Lacquette_Global News.json": {
+    "Victim-aligned": [
+      "adrian lacquette",
+      "adrian lacquette's mother"
+    ],
+    "Police-aligned": [
+      "winnipeg police",
+      "jay murray",
+      "independent investigation unit of manitoba"
+    ]
+  },
+  "2_Pierre Coriolan_CTV.json": {
+    "Victim-aligned": [
+      "victim",
+      "lawrence dulac",
+      "louis guillemette",
+      "matthew pearce"
+    ],
+    "Police-aligned": [
+      "bureau of investigators",
+      "francois dore",
+      "claudine laurin"
+    ]
+  },
+  "3_Nadia Racine_CBC.json": {
+    "Victim-aligned": [
+      "nadia racine",
+      "shawn lescard"
+    ],
+    "Police-aligned": [
+      "martin bonin-charron",
+      "bei",
+      "sûreté du québec",
+      "gatineau police"
+    ]
+  },
+  "4_Illutak Anautak_CBC.json": {
+    "Victim-aligned": [
+      "illutak anautuk",
+      "randy mcleod",
+      "rebecca tukalak"
+    ],
+    "Police-aligned": [
+      "police",
+      "eli aullaluk"
+    ]
+  },
+  "5_Jimmy Cloutier_CTV.json": {
+    "Victim-aligned": [
+      "jimmy cloutier",
+      "old brewery mission",
+      "matthew pearce",
+      "jimmy clouter's friends and acquaintances",
+      "milosz janda",
+      "pierre magloire"
+    ],
+    "Police-aligned": [
+      "montreal police",
+      "quebec's bureau of independent investigations"
+    ]
+  },
+  "6_Raymond Alliman_Ottawa Sun.json": {
+    "Victim-aligned": [
+      "raymond alliman"
+    ],
+    "Police-aligned": [
+      "aaron reichert",
+      "terrence phillips",
+      "bun sim",
+      "special investigations unit",
+      "dr. jack kitts",
+      "jill skinner",
+      "vern white",
+      "aaron reichert's  supervisor",
+      "member of the public",
+      "ottawa police service",
+      "matt skof"
+    ]
+  },
+  "7_Ralph Stephens_CBC.json": {
+    "Victim-aligned": [
+      "ralph stevens",
+      "gerald powderface",
+      "deangelo powderface",
+      "john stephens"
+    ],
+    "Police-aligned": [
+      "rcmp",
+      "tony hamori",
+      "alberta serious incident response team"
+    ]
+  },
+  "8_Vitaly Savin_CBC.json": {
+    "Victim-aligned": [
+      "vitaly savin"
+    ],
+    "Police-aligned": [
+      "edmonton police service",
+      "alberta serious incident response team"
+    ]
+  },
+  "9_Matt Dumas_CBC.json": {
+    "Victim-aligned": [
+      "matt dumas",
+      "friends and loved ones"
+    ],
+    "Police-aligned": [
+      "alberta serious incident response team",
+      "edmonton police"
+    ]
+  },
+  "10_Noam Cohen_CTV.json": {
+    "Victim-aligned": [
+      "noam cohen",
+      "jimmy cloutier",
+      "matthew pearce"
+    ],
+    "Police-aligned": [
+      "montreal police",
+      "BEI"
+    ]
+  },
+  "11_Matt Dumas_Global News.json": {
+    "Victim-aligned": [
+      "matt dumas",
+      "shantel freeman",
+      "mary maccormac"
+    ],
+    "Police-aligned": [
+      "alberta serious incident response team",
+      "edmonton police service",
+      "briage lock"
+    ]
+  },
+  "12_Jeremy Nuvviaq_CBC.json": {
+    "Victim-aligned": [
+      "victim"
+    ],
+    "Police-aligned": [
+      "rcmp",
+      "ottawa police service",
+      "peter siakuluk"
+    ]
+  },
+  "14_Evan Caron_CTV.json": {
+    "Victim-aligned": [
+      "evan caron",
+      "woman close with evan caron"
+    ],
+    "Police-aligned": [
+      "winnipeg police association",
+      "george van mackelbergh",
+      "danny smyth",
+      "independent investigation unit of manitoba"
+    ]
+  },
+  "15_Bill Saunders_CTV.json": {
+    "Victim-aligned": [
+      "bill saunders",
+      "rebecca saunders"
+    ],
+    "Police-aligned": [
+      "rcmp",
+      "independent investigations unit of manitoba",
+      "cornell mclean"
+    ]
+  },
+  "16_Brydon Whitstone_Global News.json": {
+    "Victim-aligned": [
+      "brydon bryce whitstone",
+      ""
+    ],
+    "Police-aligned": [
+      "rcmp",
+      "maureen levy",
+      "darren stanley",
+      "regina police service",
+      "ministry of justice",
+      "drew wilby"
+    ]
+  },
+  "18_David Sappa_CBC.json": {
+    "Victim-aligned": [
+      "victim"
+    ],
+    "Police-aligned": [
+      "bei",
+      "police"
+    ]
+  },
+  "19_Babak Saidi_CBC.json": {
+    "Victim-aligned": [
+      "babak saidi",
+      "elly saidi",
+      "babak saidi's father",
+      "babak saidi's mother"
+    ],
+    "Police-aligned": [
+      "ontario provincial police",
+      "special investigations unit",
+      "monica hudon",
+      "tylor copeland"
+    ]
+  },
+  "20_Brydon Whitstone_CTV.json": {
+    "Victim-aligned": [
+      "brydon bryce whitstone"
+    ],
+    "Police-aligned": [
+      "rcmp",
+      "maureen levy",
+      "saskatchewan justice ministry",
+      "regina police",
+      "drew wilby"
+    ]
+  },
+  "21_Babak Saidi_Morrisburg Leader.json": {
+    "Victim-aligned": [
+      "babak saidi",
+      "eyewitness",
+      "babak saidi's sister"
+    ],
+    "Police-aligned": [
+      "opp",
+      "siu",
+      "monica hudon",
+      "chrystal jones"
+    ]
+  },
+  "22_Erixon Kabera_CBC.json": {
+    "Victim-aligned": [
+      "erixon kabera",
+      "lydia nimbeshaho",
+      "erixon kabera's family"
+    ],
+    "Police-aligned": [
+      "special investigations unit",
+      "hamilton police",
+      "jackie penman"
+    ]
+  },
+  "23_Charles Qirngnirq_CBC.json": {
+    "Victim-aligned": [
+      "charles qirngnirq"
+    ],
+    "Police-aligned": [
+      "rcmp",
+      "ottawa police service"
+    ]
+  }
+}
