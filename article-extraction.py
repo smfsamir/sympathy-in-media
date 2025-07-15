@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 import aiohttp
 import os
 
+PATH_TO_DATA = "./data/csv_datasets/scrape_me.csv" # path to the CSV file with articles to scrape
 
 schema = {"Person Name": pl.Utf8, "Incident Date": pl.Date, "Publication Date": pl.Date, "Publisher": pl.Utf8, "URL": pl.Utf8, "Paragraph Index": pl.Int64, "Paragraph Text": pl.Utf8, "URL": pl.Utf8}
 
@@ -397,7 +398,7 @@ async def extractor(row):
 
 # processes an csv
 async def process_articles():
-    data = pl.read_csv("./data/csv_datasets/batch_two.csv", 
+    data = pl.read_csv(PATH_TO_DATA, 
                        has_header=True, 
                        try_parse_dates=True)
     df = pl.DataFrame(schema=schema)

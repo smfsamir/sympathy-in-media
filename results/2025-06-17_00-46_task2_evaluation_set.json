@@ -1,1 +1,19 @@
-{"precision": 0.589, "recall": 0.758, "f1": 0.663, "support": 2193}
+{
+    "overall": {
+        "precision": 0.589, 
+        "recall": 0.758, 
+        "f1": 0.663, 
+        "support": 2193},
+    "victim-aligned":{
+        "precision": 0.672,
+        "recall": 0.935,
+        "f1": 0.782,
+        "support": 92
+    },
+    "police-aligned": {
+        "precision": 0.536,
+        "recall": 0.897,
+        "f1": 0.671,
+        "support": 107
+    }
+}
