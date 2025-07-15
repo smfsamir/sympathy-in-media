@@ -75,7 +75,6 @@ def compute_metrics(eval_preds):
     predictions = predictions[mask]
     predicted_string = OLMO_TOKENIZER.decode(predictions.argmax(axis=1), skip_special_tokens=True)
     logger.info(f"Prediction: {predicted_string}")
-    ipdb.set_trace()
     # return {"accuracy": accuracy}
 
 @click.command()
@@ -99,7 +98,6 @@ def distill_task1_olmo():
         do_eval=True,
         eval_strategy="steps"
     )
-    tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
     trainer = SFTTrainer(
         "allenai/OLMo-1B-hf",
         args=training_args,
