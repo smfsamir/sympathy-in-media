@@ -71,7 +71,7 @@ def create_training_dataset():
 
 def compute_metrics(eval_preds):
     predictions = eval_preds.predictions[0]
-    mask = ~(predictions == -100).all(dim=1)
+    mask = ~(predictions == -100).all(axis=1)
     predictions = predictions[mask]
     predicted_string = OLMO_TOKENIZER.decode(predictions.argmax(axis=1), skip_special_tokens=True)
     logger.info(f"Prediction: {predicted_string}")
