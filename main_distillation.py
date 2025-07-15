@@ -1,4 +1,5 @@
 import ipdb
+from functools import partial
 import loguru
 import json
 import os
@@ -67,9 +68,9 @@ def create_training_dataset():
     logger.info("Distillation examples created successfully.")
     pass
 
-def compute_metrics(eval_preds):
-    # arr = eval_preds.label_ids[0]
-    # tokenizer.decode(arr[arr!=-100])
+def compute_metrics(tokenizer, eval_preds):
+    arr = eval_preds.label_ids[0]
+    tokenizer.decode(arr[arr!=-100])
 
     ipdb.set_trace()
     # return {"accuracy": accuracy}
@@ -95,12 +96,14 @@ def distill_task1_olmo():
         do_eval=True,
         eval_strategy="steps"
     )
+    tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
+    compute_metrics_partial = partial(compute_metrics, tokenizer=tokenizer)
     trainer = SFTTrainer(
         "allenai/OLMo-1B-hf",
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset = eval_dataset,
-        compute_metrics=compute_metrics
+        compute_metrics=compute_metrics_partial
     )
     trainer.train()
 
