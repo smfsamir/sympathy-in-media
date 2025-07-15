@@ -70,9 +70,11 @@ def create_training_dataset():
     pass
 
 def compute_metrics(eval_preds):
-    arr = eval_preds.label_ids[0]
-    predictions = OLMO_TOKENIZER.decode(arr[arr!=-100])
-
+    predictions = eval_preds.predictions[0]
+    mask = ~(predictions == -100).all(dim=1)
+    predictions = predictions[mask]
+    predicted_string = OLMO_TOKENIZER.decode(predictions.argmax(axis=1), skip_special_tokens=True)
+    logger.info(f"Prediction: {predicted_string}")
     ipdb.set_trace()
     # return {"accuracy": accuracy}
 
