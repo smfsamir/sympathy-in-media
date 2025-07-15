@@ -93,8 +93,7 @@ def distill_task1_olmo():
         per_device_train_batch_size=4,
         per_device_eval_batch_size=4,
         eval_steps=1,
-        max_length = 300, # TODO: should check that nothing gets truncated
-        # completion_only_loss=True,
+        completion_only_loss=True,
         do_eval=True,
         eval_strategy="steps",
         learning_rate=4e-4,
