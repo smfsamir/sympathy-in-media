@@ -20,6 +20,7 @@ logger = loguru.logger
 # response = olmo.generate(**inputs, max_new_tokens=100, do_sample=True, top_k=50, top_p=0.95)
 # print(tokenizer.batch_decode(response, skip_special_tokens=True)[0])
 
+OLMO_TOKENIZER = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
 
 @click.command()
 def create_distillation_examples_task1():
@@ -68,9 +69,9 @@ def create_training_dataset():
     logger.info("Distillation examples created successfully.")
     pass
 
-def compute_metrics(tokenizer, eval_preds):
+def compute_metrics(eval_preds):
     arr = eval_preds.label_ids[0]
-    tokenizer.decode(arr[arr!=-100])
+    predictions = OLMO_TOKENIZER.decode(arr[arr!=-100])
 
     ipdb.set_trace()
     # return {"accuracy": accuracy}
@@ -97,13 +98,12 @@ def distill_task1_olmo():
         eval_strategy="steps"
     )
     tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
-    compute_metrics_partial = partial(compute_metrics, tokenizer=tokenizer)
     trainer = SFTTrainer(
         "allenai/OLMo-1B-hf",
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset = eval_dataset,
-        compute_metrics=compute_metrics_partial
+        compute_metrics=compute_metrics
     )
     trainer.train()
 
