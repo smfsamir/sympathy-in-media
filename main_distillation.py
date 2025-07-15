@@ -75,7 +75,7 @@ def compute_metrics(eval_preds):
     predictions = predictions[mask]
     predicted_string = OLMO_TOKENIZER.decode(predictions.argmax(axis=1), skip_special_tokens=True)
     logger.info(f"Prediction: {predicted_string}")
-    # return {"accuracy": accuracy}
+    return {"accuracy": 0}
 
 @click.command()
 def distill_task1_olmo():
