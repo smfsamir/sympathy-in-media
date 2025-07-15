@@ -84,8 +84,8 @@ def distill_task1_olmo():
     eval_dataset = load_dataset("json", data_files={'test': "data/distillation_data/distill_examples.json"}, split='test')
     train_dataset = load_dataset("json", data_files={'train': "data/distillation_data/train_distill_examples.json"}, split='train')
 
-    # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
-    # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
+    olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
+    tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
     training_args = SFTConfig(
         output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation",
         logging_steps=10,
@@ -103,9 +103,9 @@ def distill_task1_olmo():
         weight_decay=0.1
     )
     trainer = SFTTrainer(
-        # "allenai/OLMo-1B-0724-hf",
-        # "allenai/OLMo-2-0425-1B",
-        "meta-llama/Llama-3.2-1B",
+        # "allenai/OLMo-1B-hf",
+        "allenai/OLMo-2-0425-1B",
+        # "meta-llama/Llama-3.2-1B",
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset = eval_dataset,
