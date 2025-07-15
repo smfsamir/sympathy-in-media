@@ -104,7 +104,8 @@ def distill_task1_olmo():
         weight_decay=0.1
     )
     trainer = SFTTrainer(
-        "allenai/OLMo-1B-0724-hf",
+        # "allenai/OLMo-1B-0724-hf",
+        "allenai/OLMo-2-0425-1B",
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset = eval_dataset,
