@@ -37,19 +37,41 @@ def create_distillation_examples_task1():
         'prompt': prompts,
         'completion': completions
     }) 
-    dataset.to_json("data/distillation_data/distill_examples.json") 
+    dataset.to_json("data/distillation_data/eval_distill_examples.json") 
     logger.info("Distillation examples created successfully.")
         # Add more examples or prompts as needed
         # f.write("Another example prompt here\n")
 
+def create_training_dataset():
+    prompts = []
+    completions = []
+    training_annotations = 'training_data.json'
+    annotation_object = json.load(open(os.path.join("data", training_annotations)))
+    eval_fnames = os.listdir("data/evaluation_dataset")
+    for fname in os.listdir("data/articles"):
+        if fname in eval_fnames:
+            continue
+        else:
+            person_annotations = annotation_object[fname]
+        article_paragraphs = json.load(open(os.path.join("data/articles", fname)))
+        prompt = TASK_1_PROMPT + "\n".join(article_paragraphs) + "\n\n"
+        response = json.dumps(person_annotations['task1'])
+        prompts.append(prompt)
+        completions.append(response)
+    dataset = Dataset.from_dict({
+        'prompt': prompts,
+        'completion': completions
+    }) 
+    dataset.to_json("data/distillation_data/train_distill_examples.json") 
+    logger.info("Distillation examples created successfully.")
+    pass
+
 def compute_metrics(eval_preds):
-    # This function can be customized to compute specific metrics
-    # For now, we will just return a dummy metric
+    # arr = eval_preds.label_ids[0]
+    # tokenizer.decode(arr[arr!=-100])
+
     ipdb.set_trace()
-    predictions, labels = eval_preds
-    predictions = predictions.argmax(axis=-1)
-    accuracy = (predictions == labels).mean()
-    return {"accuracy": accuracy}
+    # return {"accuracy": accuracy}
 
 @click.command()
 def distill_task1_olmo():
@@ -91,6 +113,7 @@ def main():
 
 main.add_command(create_distillation_examples_task1)
 main.add_command(distill_task1_olmo)
+main.add_command(create_training_dataset)
 # main.add_command(create_distillation_examples_task1)
 
 if __name__ == "__main__":
