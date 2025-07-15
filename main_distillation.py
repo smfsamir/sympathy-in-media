@@ -42,6 +42,7 @@ def create_distillation_examples_task1():
         # Add more examples or prompts as needed
         # f.write("Another example prompt here\n")
 
+@click.command()
 def create_training_dataset():
     prompts = []
     completions = []
