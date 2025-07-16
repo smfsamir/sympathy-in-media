@@ -51,12 +51,15 @@ def create_training_dataset():
     training_annotations = 'training_data.json'
     annotation_object = json.load(open(os.path.join("data", training_annotations)))
     eval_fnames = os.listdir("data/evaluation_dataset")
+
+    paragraph_num_tokens = []
     for fname in os.listdir("data/articles"):
         if fname in eval_fnames:
             continue
         else:
             person_annotations = annotation_object[fname]
         article_paragraphs = json.load(open(os.path.join("data/articles", fname)))
+        paragraph_num_tokens.append(len(OLMO_TOKENIZER.encode(article_paragraphs)))
         prompt = TASK_1_PROMPT + "\n".join(article_paragraphs) + "\n\n"
         response = json.dumps(person_annotations['task1'])
         prompts.append(prompt)
@@ -65,6 +68,7 @@ def create_training_dataset():
         'prompt': prompts,
         'completion': completions
     }) 
+    prompt_length = len(OLMO_TOKENIZER.encode(TASK_1_PROMPT))
     dataset.to_json("data/distillation_data/train_distill_examples.json") 
     # with open("data/distillation_data/train_distill_examples.json", "r") as f:
     #     object = json.load(f)
