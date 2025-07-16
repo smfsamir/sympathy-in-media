@@ -101,7 +101,8 @@ def distill_task1_olmo():
         return AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
     trainer = SFTTrainer(
         # "allenai/OLMo-1B-hf",
-        "allenai/OLMo-2-0425-1B",
+        model = None,
+        model_init = model_init,
         # "meta-llama/Llama-3.2-1B",
         args=training_args,
         train_dataset=train_dataset,
