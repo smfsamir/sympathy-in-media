@@ -84,6 +84,7 @@ def create_training_dataset():
     pass
 
 def compute_metrics(eval_preds):
+    ipdb.set_trace()
     predictions = eval_preds.predictions[0]
     mask = ~(predictions == -100).all(axis=1)
     predictions = predictions[mask]
