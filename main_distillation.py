@@ -123,8 +123,7 @@ def distill_task1_olmo():
     def model_init():
         return AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
 
-    olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf", torch_dtype=torch.float16,
-                                                load_in_8bit=True)
+    olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
     tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
     training_args = Seq2SeqTrainingArguments(
         output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation",
