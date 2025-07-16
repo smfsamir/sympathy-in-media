@@ -85,6 +85,12 @@ def create_training_dataset():
 
 def compute_metrics(eval_preds):
     ipdb.set_trace()
+    arr = eval_preds.label_ids
+    arr = arr[0]
+    arr = arr[arr != -100]
+    label_text = OLMO_TOKENIZER.decode(arr, skip_special_tokens=True)
+    logger.info(f"Ground Truth: {label_text}")
+
     predictions = eval_preds.predictions[0]
     mask = ~(predictions == -100).all(axis=1)
     predictions = predictions[mask]
@@ -110,13 +116,7 @@ def distill_task1_olmo():
         num_train_epochs=5,
         per_device_train_batch_size=4,
         per_device_eval_batch_size=4,
-        learning_rate=2e-5,
-        lr_scheduler_type="linear",
-        warmup_steps=200,
-        warmup_ratio=0.03,
-        max_seq_length=1024,
-        optim="adamw_torch",
-        eval_steps=1,
+        eval_steps=10,
         do_eval=True,
         eval_strategy="steps",
         completion_only_loss=True
