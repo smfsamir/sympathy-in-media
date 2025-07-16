@@ -66,7 +66,7 @@ def create_training_dataset():
         paragraph_num_tokens.append(len(OLMO_TOKENIZER(article_paragraphs)['input_ids']))
         flan_num_tokens.append(len(FLAN_TOKENIZER(article_paragraphs)['input_ids']))
         num_words.append(len(article_paragraphs.split()))
-        prompt = TASK_1_PROMPT + "\n".join(article_paragraphs) + "\n\n"
+        prompt = "\n".join(article_paragraphs) + "\n\n"
         response = json.dumps(person_annotations['task1'])
         prompts.append(prompt)
         completions.append(response)
