@@ -97,6 +97,8 @@ def distill_task1_olmo():
         do_eval=True,
         eval_strategy="steps"
     )
+    def model_init():
+        return AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
     trainer = SFTTrainer(
         # "allenai/OLMo-1B-hf",
         "allenai/OLMo-2-0425-1B",
@@ -104,7 +106,8 @@ def distill_task1_olmo():
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset = eval_dataset,
-        compute_metrics=compute_metrics
+        compute_metrics=compute_metrics,
+        model_init=model_init
     )
     def optuna_hp_space(trial):
         return {
