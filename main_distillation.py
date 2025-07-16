@@ -6,7 +6,7 @@ import os
 import pathlib
 import click
 
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer, Seq2SeqTrainingArguments, Seq2SeqTrainer, DataCollatorForSeq2Seq
 from datasets import load_dataset, Dataset
 from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
 from trl import SFTConfig, SFTTrainer
@@ -108,7 +108,7 @@ def distill_task1_olmo():
 
     olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
     tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
-    training_args = SFTConfig(
+    training_args = Seq2SeqTrainingArguments(
         output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation",
         logging_steps=10,
         num_train_epochs=5,
@@ -122,19 +122,26 @@ def distill_task1_olmo():
         optim="adamw_torch",
         eval_steps=10,
         do_eval=True,
-        eval_strategy="steps",
+        eval_strategy="steps"
+    )
+    label_pad_token_id = -100
+    data_collator = DataCollatorForSeq2Seq(
+        tokenizer,
+        model=olmo,
+        label_pad_token_id=label_pad_token_id, 
+        padding=True, 
+    )
+    trainer = Seq2SeqTrainer(
+        model=olmo,
+        tokenizer=tokenizer,
+        data_collator=data_collator,
+        train_dataset=train_dataset,
+        compute_metrics=partial(compute_metrics, tokenizer),
+        eval_dataset=eval_dataset,
+        args = training_args
     )
     # def model_init():
     #     return AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
-    trainer = SFTTrainer(
-        "allenai/OLMo-1B-hf",
-        # model_init = model_init,
-        # "meta-llama/Llama-3.2-1B",
-        args=training_args,
-        train_dataset=train_dataset,
-        eval_dataset = eval_dataset,
-        compute_metrics=compute_metrics,
-    )
     # def optuna_hp_space(trial):
     #     return {
     #         "learning_rate": trial.suggest_float("learning_rate", 1e-6, 1e-4, log=True)
