@@ -21,6 +21,7 @@ logger = loguru.logger
 # print(tokenizer.batch_decode(response, skip_special_tokens=True)[0])
 
 OLMO_TOKENIZER = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
+FLAN_TOKENIZER = AutoTokenizer.from_pretrained("google/flan-t5-base")
 
 @click.command()
 def create_distillation_examples_task1():
@@ -53,6 +54,9 @@ def create_training_dataset():
     eval_fnames = os.listdir("data/evaluation_dataset")
 
     paragraph_num_tokens = []
+    flan_num_tokens = []
+    num_words = []
+
     for fname in os.listdir("data/articles"):
         if fname in eval_fnames:
             continue
@@ -60,6 +64,8 @@ def create_training_dataset():
             person_annotations = annotation_object[fname]
         article_paragraphs = '\n'.join([f"{i+1}. {paragraph}" for i, paragraph in enumerate(json.load(open(os.path.join("data/articles", fname))))])
         paragraph_num_tokens.append(len(OLMO_TOKENIZER(article_paragraphs)['input_ids']))
+        flan_num_tokens.append(len(FLAN_TOKENIZER(article_paragraphs)['input_ids']))
+        num_words.append(len(article_paragraphs.split()))
         prompt = TASK_1_PROMPT + "\n".join(article_paragraphs) + "\n\n"
         response = json.dumps(person_annotations['task1'])
         prompts.append(prompt)
