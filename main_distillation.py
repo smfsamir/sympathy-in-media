@@ -79,7 +79,6 @@ def create_training_dataset():
     # with open("data/distillation_data/train_distill_examples.json", "r") as f:
     #     object = json.load(f)
     dataset = load_dataset("json", data_files={'train': "data/distillation_data/train_distill_examples.json"}, split='train')
-    ipdb.set_trace()
     logger.info("Distillation examples created successfully.")
     pass
 
@@ -116,6 +115,12 @@ def distill_task1_olmo():
         num_train_epochs=5,
         per_device_train_batch_size=4,
         per_device_eval_batch_size=4,
+        learning_rate=2e-5,
+        lr_scheduler_type="linear",
+        warmup_steps=50,
+        warmup_ratio=0.03,
+        max_seq_length=1024,
+        optim="adamw_torch",
         eval_steps=10,
         do_eval=True,
         eval_strategy="steps",
