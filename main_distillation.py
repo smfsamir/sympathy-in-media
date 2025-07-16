@@ -113,7 +113,6 @@ def distill_task1_olmo():
         lr_scheduler_type="linear",
         warmup_steps=200,
         warmup_ratio=0.03,
-        num_train_epochs=3,
         max_seq_length=1024,
         optim="adamw_torch",
         eval_steps=1,
