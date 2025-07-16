@@ -95,12 +95,7 @@ def distill_task1_olmo():
         eval_steps=1,
         completion_only_loss=True,
         do_eval=True,
-        eval_strategy="steps",
-        learning_rate=4e-4,
-        adam_beta1=0.9,
-        adam_beta2=0.95,
-        adam_epsilon=1e-5,
-        weight_decay=0.1
+        eval_strategy="steps"
     )
     trainer = SFTTrainer(
         # "allenai/OLMo-1B-hf",
@@ -111,7 +106,20 @@ def distill_task1_olmo():
         eval_dataset = eval_dataset,
         compute_metrics=compute_metrics
     )
-    trainer.train()
+    def optuna_hp_space(trial):
+        return {
+            "learning_rate": trial.suggest_float("learning_rate", 1e-6, 1e-4, log=True)
+        }
+
+    trainer.hyperparameter_search(
+        direction="maximize",
+        n_trials=10,
+        backend="optuna",
+        resources_per_trial={"cpu": 2, "gpu": 1},
+        hp_space=optuna_hp_space,
+        metric="eval_loss",
+        mode="min"
+    )
 
 @click.group()
 def main():
