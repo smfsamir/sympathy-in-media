@@ -66,6 +66,9 @@ def create_training_dataset():
         'completion': completions
     }) 
     dataset.to_json("data/distillation_data/train_distill_examples.json") 
+    with open("data/distillation_data/train_distill_examples.json", "r") as f:
+        object = json.load(f)
+    ipdb.set_trace()
     logger.info("Distillation examples created successfully.")
     pass
 
@@ -86,38 +89,9 @@ def distill_task1_olmo():
 
     olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
     tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
-    training_args = SFTConfig(
-        output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation",
-        logging_steps=10,
-        num_train_epochs=5,
-        per_device_train_batch_size=4,
-        per_device_eval_batch_size=4,
-        learning_rate=2e-5,
-        lr_scheduler_type="linear",
-        warmup_steps=200,
-        warmup_ratio=0.03,
-        max_seq_length=1024,
-        optim="adamw_torch",
-        eval_steps=1,
-        do_eval=True,
-        eval_strategy="steps"
-    )
-    # def model_init():
-    #     return AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
-    trainer = SFTTrainer(
-        "allenai/OLMo-1B-hf",
-        # model_init = model_init,
-        # "meta-llama/Llama-3.2-1B",
-        args=training_args,
-        train_dataset=train_dataset,
-        eval_dataset = eval_dataset,
-        compute_metrics=compute_metrics,
-    )
-    # def optuna_hp_space(trial):
-    #     return {
-    #         "learning_rate": trial.suggest_float("learning_rate", 1e-6, 1e-4, log=True)
-    #     }
-    trainer.train()
+
+    def model_init():
+        return AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
 
 @click.group()
 def main():
