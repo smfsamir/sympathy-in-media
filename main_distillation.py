@@ -66,8 +66,9 @@ def create_training_dataset():
         'completion': completions
     }) 
     dataset.to_json("data/distillation_data/train_distill_examples.json") 
-    with open("data/distillation_data/train_distill_examples.json", "r") as f:
-        object = json.load(f)
+    # with open("data/distillation_data/train_distill_examples.json", "r") as f:
+    #     object = json.load(f)
+    dataset = load_dataset("json", data_files={'train': "data/distillation_data/train_distill_examples.json"}, split='train')
     ipdb.set_trace()
     logger.info("Distillation examples created successfully.")
     pass
