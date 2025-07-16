@@ -117,7 +117,8 @@ def distill_task1_olmo():
         optim="adamw_torch",
         eval_steps=1,
         do_eval=True,
-        eval_strategy="steps"
+        eval_strategy="steps",
+        completion_only_loss=True
     )
     # def model_init():
     #     return AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
