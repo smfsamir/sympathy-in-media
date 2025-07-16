@@ -1,3 +1,4 @@
+import torch
 import ipdb
 from functools import partial
 import loguru
@@ -122,7 +123,8 @@ def distill_task1_olmo():
     def model_init():
         return AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
 
-    olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
+    olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf", torch_dtype=torch.float16,
+                                                load_in_8bit=True)
     tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
     training_args = Seq2SeqTrainingArguments(
         output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation",
@@ -130,7 +132,6 @@ def distill_task1_olmo():
         num_train_epochs=5,
         per_device_train_batch_size=2,
         per_device_eval_batch_size=2,
-        gradient_checkpointing=True,
         learning_rate=2e-5,
         lr_scheduler_type="linear",
         warmup_steps=50,
