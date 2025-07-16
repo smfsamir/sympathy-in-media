@@ -115,8 +115,8 @@ def distill_task1_olmo():
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-2-0425-1B")
     eval_dataset = load_dataset("json", data_files={'test': "data/distillation_data/distill_examples.json"}, split='test')
     train_dataset = load_dataset("json", data_files={'train': "data/distillation_data/train_distill_examples.json"}, split='train')
-    train_dataset= train_dataset.map(partial(preprocess_function, tokenizer), remove_columns=['prompt', 'completion'])
-    eval_dataset = eval_dataset.map(partial(preprocess_function, tokenizer), remove_columns=['prompt', 'completion'])
+    train_dataset= train_dataset.map(partial(preprocess_function, OLMO_TOKENIZER), remove_columns=['prompt', 'completion'])
+    eval_dataset = eval_dataset.map(partial(preprocess_function, OLMO_TOKENIZER), remove_columns=['prompt', 'completion'])
 
 
     def model_init():
