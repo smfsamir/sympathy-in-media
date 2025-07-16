@@ -108,7 +108,6 @@ def distill_task1_olmo():
         train_dataset=train_dataset,
         eval_dataset = eval_dataset,
         compute_metrics=compute_metrics,
-        model_init=model_init
     )
     def optuna_hp_space(trial):
         return {
