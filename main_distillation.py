@@ -128,8 +128,8 @@ def distill_task1_olmo():
         output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation",
         logging_steps=10,
         num_train_epochs=5,
-        per_device_train_batch_size=2,
-        per_device_eval_batch_size=2,
+        per_device_train_batch_size=1,
+        per_device_eval_batch_size=1,
         learning_rate=2e-5,
         lr_scheduler_type="linear",
         warmup_steps=50,
@@ -145,7 +145,6 @@ def distill_task1_olmo():
         tokenizer,
         model=olmo,
         label_pad_token_id=label_pad_token_id, 
-        padding=True, 
     )
     trainer = Seq2SeqTrainer(
         model=olmo,
