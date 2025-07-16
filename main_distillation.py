@@ -142,11 +142,10 @@ def distill_task1_olmo():
         eval_strategy="steps",
         fp16=True
     )
-    label_pad_token_id = -100
+    tokenizer.pad_token = tokenizer.eos_token
     data_collator = DataCollatorForSeq2Seq(
         tokenizer,
         model=olmo,
-        label_pad_token_id=label_pad_token_id, 
         padding=True, 
     )
     trainer = Seq2SeqTrainer(
