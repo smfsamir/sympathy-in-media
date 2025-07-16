@@ -97,32 +97,22 @@ def distill_task1_olmo():
         do_eval=True,
         eval_strategy="steps"
     )
-    def model_init():
-        return AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
+    # def model_init():
+    #     return AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
     trainer = SFTTrainer(
-        # "allenai/OLMo-1B-hf",
-        model = None,
-        model_init = model_init,
+        "allenai/OLMo-1B-hf",
+        # model_init = model_init,
         # "meta-llama/Llama-3.2-1B",
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset = eval_dataset,
         compute_metrics=compute_metrics,
     )
-    def optuna_hp_space(trial):
-        return {
-            "learning_rate": trial.suggest_float("learning_rate", 1e-6, 1e-4, log=True)
-        }
-
-    trainer.hyperparameter_search(
-        direction="maximize",
-        n_trials=10,
-        backend="optuna",
-        resources_per_trial={"cpu": 2, "gpu": 1},
-        hp_space=optuna_hp_space,
-        metric="eval_loss",
-        mode="min"
-    )
+    # def optuna_hp_space(trial):
+    #     return {
+    #         "learning_rate": trial.suggest_float("learning_rate", 1e-6, 1e-4, log=True)
+    #     }
+    trainer.train()
 
 @click.group()
 def main():
