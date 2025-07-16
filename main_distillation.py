@@ -59,7 +59,8 @@ def create_training_dataset():
         else:
             person_annotations = annotation_object[fname]
         article_paragraphs = json.load(open(os.path.join("data/articles", fname)))
-        paragraph_num_tokens.append(len(OLMO_TOKENIZER.encode(article_paragraphs)))
+        ipdb.set_trace()
+        paragraph_num_tokens.append(len(OLMO_TOKENIZER(article_paragraphs)))
         prompt = TASK_1_PROMPT + "\n".join(article_paragraphs) + "\n\n"
         response = json.dumps(person_annotations['task1'])
         prompts.append(prompt)
