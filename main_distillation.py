@@ -92,8 +92,14 @@ def distill_task1_olmo():
         num_train_epochs=5,
         per_device_train_batch_size=4,
         per_device_eval_batch_size=4,
+        learning_rate=2e-5,
+        lr_scheduler_type="linear",
+        warmup_steps=200,
+        warmup_ratio=0.03,
+        num_train_epochs=3,
+        max_seq_length=1024,
+        optim="adamw_torch",
         eval_steps=1,
-        completion_only_loss=True,
         do_eval=True,
         eval_strategy="steps"
     )
