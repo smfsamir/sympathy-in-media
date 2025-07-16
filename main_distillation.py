@@ -131,6 +131,7 @@ def distill_task1_olmo():
         num_train_epochs=5,
         per_device_train_batch_size=2,
         per_device_eval_batch_size=2,
+        gradient_checkpointing=True, 
         learning_rate=2e-5,
         lr_scheduler_type="linear",
         warmup_steps=50,
