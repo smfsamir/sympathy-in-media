@@ -96,12 +96,28 @@ def compute_metrics(eval_preds):
     logger.info(f"Prediction: {predicted_string}")
     return {"accuracy": 0}
 
+def preprocess_function(tokenizer, sample):
+    model_inputs = tokenizer(sample['prompt']) # don't pad in preprocessing
+    label_str = f"{sample['completion']}"
+    # json stringifying the label_str
+    labels = tokenizer((label_str))
+    # if padding == "max_length":
+    #     labels["input_ids"] = [
+    #         # [(l if l != tokenizer.pad_token_id else -100) for l in label] for label in labels["input_ids"]
+    #         (l if l != tokenizer.pad_token_id else -100) for l in labels["input_ids"]
+    #     ]
+    model_inputs["labels"] = labels["input_ids"]
+    return model_inputs
+
 @click.command()
 def distill_task1_olmo():
     # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-2-0425-1B")
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-2-0425-1B")
     eval_dataset = load_dataset("json", data_files={'test': "data/distillation_data/distill_examples.json"}, split='test')
     train_dataset = load_dataset("json", data_files={'train': "data/distillation_data/train_distill_examples.json"}, split='train')
+    train_dataset= train_dataset.map(partial(preprocess_function, tokenizer), remove_columns=['prompt', 'completion'])
+    eval_dataset = eval_dataset.map(partial(preprocess_function, tokenizer), remove_columns=['prompt', 'completion'])
+
 
     def model_init():
         return AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
