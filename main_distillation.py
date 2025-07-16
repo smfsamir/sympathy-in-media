@@ -7,7 +7,7 @@ import os
 import pathlib
 import click
 
-from transformers import AutoModelForCausalLM, AutoTokenizer, Seq2SeqTrainingArguments, Seq2SeqTrainer, DataCollatorForSeq2Seq
+from transformers import AutoModelForCausalLM, AutoTokenizer, Seq2SeqTrainingArguments, Seq2SeqTrainer, DataCollatorForSeq2Seq, AutoModelForSeq2SeqLM
 from datasets import load_dataset, Dataset
 from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
 from trl import SFTConfig, SFTTrainer
@@ -123,8 +123,10 @@ def distill_task1_olmo():
     def model_init():
         return AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
 
-    olmo = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.2-1B")
-    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.2-1B")
+    # olmo = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.2-1B")
+    # tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.2-1B")
+    model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-large")
+    tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-large")
     training_args = Seq2SeqTrainingArguments(
         output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation",
         logging_steps=10,
@@ -142,14 +144,13 @@ def distill_task1_olmo():
         eval_strategy="steps",
         fp16=True
     )
-    tokenizer.pad_token = tokenizer.eos_token
     data_collator = DataCollatorForSeq2Seq(
         tokenizer,
-        model=olmo,
-        padding=True, 
+        model=model,
+        padding=True
     )
     trainer = Seq2SeqTrainer(
-        model=olmo,
+        model=model,
         tokenizer=tokenizer,
         data_collator=data_collator,
         train_dataset=train_dataset,
