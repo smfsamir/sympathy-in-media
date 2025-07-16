@@ -140,7 +140,8 @@ def distill_task1_olmo():
         optim="adamw_torch",
         eval_steps=10,
         do_eval=True,
-        eval_strategy="steps"
+        eval_strategy="steps",
+        fp16=True
     )
     label_pad_token_id = -100
     data_collator = DataCollatorForSeq2Seq(
