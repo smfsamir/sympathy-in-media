@@ -131,7 +131,7 @@ def distill_task1_olmo():
         num_train_epochs=5,
         per_device_train_batch_size=2,
         per_device_eval_batch_size=2,
-        gradient_checkpointing=True, 
+        gradient_accumulation_steps=4,
         learning_rate=2e-5,
         lr_scheduler_type="linear",
         warmup_steps=50,
@@ -156,7 +156,7 @@ def distill_task1_olmo():
         train_dataset=train_dataset,
         compute_metrics=partial(compute_metrics, tokenizer),
         eval_dataset=eval_dataset,
-        args = training_args
+        args = training_args, 
     )
     # def model_init():
     #     return AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
