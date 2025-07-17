@@ -133,7 +133,6 @@ def distill_task1_olmo():
     trainer = SFTTrainer(
         model,
         train_dataset=train_dataset,
-        completion_only=True,
         eval_dataset = eval_dataset,
         args=training_args,
         # data_collator=collator,
