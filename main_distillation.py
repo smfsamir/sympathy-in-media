@@ -121,8 +121,7 @@ def distill_task1_olmo():
     tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
     # tokenizer.pad_token = tokenizer.eos_token
 
-    collator = DataCollatorForCompletionOnlyLM("### Answer", tokenizer=tokenizer) 
-
+    collator = DataCollatorForCompletionOnlyLM("### Answer:", tokenizer=tokenizer) 
     trainer = SFTTrainer(
         model,
         train_dataset=train_dataset,
