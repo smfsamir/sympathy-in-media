@@ -125,7 +125,7 @@ def distill_task1_olmo():
 
     # olmo = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.2-1B")
     # tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.2-1B")
-    model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-base")
+    model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-base", attn_implementation='sdpa')
     tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-base")
     training_args = Seq2SeqTrainingArguments(
         output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation",
