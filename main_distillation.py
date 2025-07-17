@@ -121,22 +121,12 @@ def distill_task1_olmo():
     tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
     # tokenizer.pad_token = tokenizer.eos_token
 
-    def formatting_prompts_func(example):
-        output_texts = []
-        for i in range(len(example['instruction'])):
-            text = f"{example['instruction'][i]}\n ### Answer: {example['output'][i]}"
-            output_texts.append(text)
-        return output_texts
-
-    response_template = "### Answer:"
-    collator = DataCollatorForCompletionOnlyLM(response_template=response_template, 
-                                               tokenizer=tokenizer) 
+    collator = DataCollatorForCompletionOnlyLM(tokenizer=tokenizer) 
     trainer = SFTTrainer(
         model,
         train_dataset=train_dataset,
         eval_dataset = eval_dataset,
         args=SFTConfig(output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation"),
-        formatting_func=formatting_prompts_func,
         data_collator=collator,
         compute_metrics=compute_metrics # TODO: double check that you're using the right tokenizer in the compute_metrics function
     )
