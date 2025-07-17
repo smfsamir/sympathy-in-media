@@ -68,7 +68,7 @@ def create_training_dataset():
         paragraph_num_tokens.append(len(OLMO_TOKENIZER(article_paragraphs)['input_ids']))
         flan_num_tokens.append(len(FLAN_TOKENIZER(article_paragraphs)['input_ids']))
         num_words.append(len(article_paragraphs.split()))
-        prompt = "\n".join(article_paragraphs) + "\n\n"
+        prompt = f"{TASK_1_PROMPT}" + "\n".join(article_paragraphs) + "\n\n"
         response = f"### Answer: {json.dumps(person_annotations['task1'])}"
         prompts.append(prompt)
         completions.append(response)
@@ -121,7 +121,10 @@ def distill_task1_olmo():
     tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
     # tokenizer.pad_token = tokenizer.eos_token
 
-    collator = DataCollatorForCompletionOnlyLM("### Answer:", tokenizer=tokenizer) 
+    collator = DataCollatorForCompletionOnlyLM(instruction_template="### Instruction:", 
+                                               response_template="### Answer:", 
+                                               tokenizer=tokenizer, 
+                                               mlm=False) 
     trainer = SFTTrainer(
         model,
         train_dataset=train_dataset,
@@ -131,7 +134,6 @@ def distill_task1_olmo():
         compute_metrics=compute_metrics # TODO: double check that you're using the right tokenizer in the compute_metrics function
     )
     trainer.train()
-
 
 @click.group()
 def main():
