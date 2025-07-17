@@ -124,7 +124,8 @@ def distill_task1_olmo():
     collator = DataCollatorForCompletionOnlyLM(instruction_template="### Instruction:", 
                                                response_template="### Answer:", 
                                                tokenizer=tokenizer, 
-                                               mlm=False) 
+                                               mlm=False, 
+                                               padding=True) 
     trainer = SFTTrainer(
         model,
         train_dataset=train_dataset,
