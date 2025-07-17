@@ -126,7 +126,7 @@ def distill_task1_olmo():
     #                                            tokenizer=tokenizer, 
     #                                            mlm=False
     training_args = SFTConfig(
-        generation_max_length=300,
+        max_length=3300,
         output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation",
         eval_steps = 10,
         evaluation_strategy="steps"
