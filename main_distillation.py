@@ -117,15 +117,15 @@ def distill_task1_olmo():
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-2-0425-1B")
     eval_dataset = load_dataset("json", data_files={'test': "data/distillation_data/distill_examples.json"}, split='test')
     train_dataset = load_dataset("json", data_files={'train': "data/distillation_data/train_distill_examples.json"}, split='train')
-    model = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf", attn_implementation="sdpa")
+    model = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
     tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
     # tokenizer.pad_token = tokenizer.eos_token
 
     collator = DataCollatorForCompletionOnlyLM(instruction_template="### Instruction:", 
                                                response_template="### Answer:", 
                                                tokenizer=tokenizer, 
-                                               mlm=False, 
-                                               padding=True) 
+                                               mlm=False
+                                               ) 
     trainer = SFTTrainer(
         model,
         train_dataset=train_dataset,
