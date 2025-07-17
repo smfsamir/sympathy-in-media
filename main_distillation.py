@@ -121,17 +121,17 @@ def distill_task1_olmo():
     tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
     # tokenizer.pad_token = tokenizer.eos_token
 
-    collator = DataCollatorForCompletionOnlyLM(instruction_template="### Instruction:", 
-                                               response_template="### Answer:", 
-                                               tokenizer=tokenizer, 
-                                               mlm=False
-                                               ) 
+    # collator = DataCollatorForCompletionOnlyLM(instruction_template="### Instruction:", 
+    #                                            response_template="### Answer:", 
+    #                                            tokenizer=tokenizer, 
+    #                                            mlm=False
+    #                                            ) 
     trainer = SFTTrainer(
         model,
         train_dataset=train_dataset,
         eval_dataset = eval_dataset,
         args=SFTConfig(output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation"),
-        data_collator=collator,
+        # data_collator=collator,
         compute_metrics=compute_metrics # TODO: double check that you're using the right tokenizer in the compute_metrics function
     )
     trainer.train()
