@@ -69,7 +69,7 @@ def create_training_dataset():
         flan_num_tokens.append(len(FLAN_TOKENIZER(article_paragraphs)['input_ids']))
         num_words.append(len(article_paragraphs.split()))
         prompt = "\n".join(article_paragraphs) + "\n\n"
-        response = json.dumps(person_annotations['task1'])
+        response = f"### Answer: {json.dumps(person_annotations['task1'])}"
         prompts.append(prompt)
         completions.append(response)
     dataset = Dataset.from_dict({
@@ -121,8 +121,7 @@ def distill_task1_olmo():
     tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
     # tokenizer.pad_token = tokenizer.eos_token
 
-    response_template = " ### Answer:"
-    collator = DataCollatorForCompletionOnlyLM(response_template, tokenizer=tokenizer) 
+    collator = DataCollatorForCompletionOnlyLM("### Answer", tokenizer=tokenizer) 
 
     trainer = SFTTrainer(
         model,
