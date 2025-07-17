@@ -130,7 +130,7 @@ def distill_task1_olmo():
         output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation",
         completion_only_loss=True,
         per_device_train_batch_size=4,
-        per_device_eval_batch_size=4
+        per_device_eval_batch_size=4,
         eval_steps = 10,
         eval_strategy = "steps"
     )
