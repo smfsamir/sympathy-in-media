@@ -125,12 +125,18 @@ def distill_task1_olmo():
     #                                            response_template="### Answer:", 
     #                                            tokenizer=tokenizer, 
     #                                            mlm=False
+    training_args = SFTConfig(
+        generation_max_length=300,
+        output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation",
+        eval_steps = 10,
+        evaluation_strategy="steps"
+    )
     #                                            ) 
     trainer = SFTTrainer(
         model,
         train_dataset=train_dataset,
         eval_dataset = eval_dataset,
-        args=SFTConfig(output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation"),
+        args=training_args,
         # data_collator=collator,
         compute_metrics=compute_metrics # TODO: double check that you're using the right tokenizer in the compute_metrics function
     )
