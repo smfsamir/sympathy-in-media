@@ -116,8 +116,6 @@ def distill_task1_olmo():
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-2-0425-1B")
     eval_dataset = load_dataset("json", data_files={'test': "data/distillation_data/distill_examples.json"}, split='test')
     train_dataset = load_dataset("json", data_files={'train': "data/distillation_data/train_distill_examples.json"}, split='train')
-    train_dataset= train_dataset.map(partial(preprocess_function, OLMO_TOKENIZER), remove_columns=['prompt', 'completion'])
-    eval_dataset = eval_dataset.map(partial(preprocess_function, OLMO_TOKENIZER), remove_columns=['prompt', 'completion'])
 
 
     def model_init():
@@ -125,8 +123,8 @@ def distill_task1_olmo():
 
     # olmo = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.2-1B")
     # tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.2-1B")
-    model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-base")
-    tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-base")
+    model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-large")
+    tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-large")
     training_args = Seq2SeqTrainingArguments(
         output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation",
         logging_steps=10,
