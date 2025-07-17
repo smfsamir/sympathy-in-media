@@ -1,4 +1,5 @@
 TASK_1_PROMPT = """
+### Instruction:
 Read the provided article on an incident of police violence to complete the following task. Task: Identify each entity mentioned in the article and determine their role and affiliation. The entity may be a person or an instituion, like the ACLU or the Special Investigations Unit (SIU). Only include entities that make a statement on the case.
 
 Affiliation: An entity can either be on the side of the police, or the civilian victim.
