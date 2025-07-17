@@ -131,7 +131,14 @@ def distill_task1_olmo():
         eval_steps = 10,
         eval_strategy="steps",
         per_device_train_batch_size=2,
-        per_device_eval_batch_size=2
+        per_device_eval_batch_size=2,
+        learning_rate=2e-5,
+        lr_scheduler_type="linear",
+        warmup_steps=50,
+        warmup_ratio=0.03,
+        num_train_epochs=3,
+        max_seq_length=1024,
+        optim="adamw_torch"
     )
     #                                            ) 
     trainer = SFTTrainer(
