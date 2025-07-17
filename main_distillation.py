@@ -129,7 +129,9 @@ def distill_task1_olmo():
         max_length=3300,
         output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation",
         eval_steps = 10,
-        eval_strategy="steps"
+        eval_strategy="steps",
+        per_device_train_batch_size=2,
+        per_device_eval_batch_size=2
     )
     #                                            ) 
     trainer = SFTTrainer(
