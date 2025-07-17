@@ -120,8 +120,8 @@ def distill_task1_olmo():
     model = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf", attn_implementation="sdpa")
     tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
     # tokenizer.pad_token = tokenizer.eos_token
-    train_dataset= train_dataset.map(partial(preprocess_function, META_TOKENIZER), remove_columns=['prompt', 'completion'])
-    eval_dataset = eval_dataset.map(partial(preprocess_function, META_TOKENIZER), remove_columns=['prompt', 'completion'])
+    train_dataset= train_dataset.map(partial(preprocess_function, OLMO_TOKENIZER), remove_columns=['prompt', 'completion'])
+    eval_dataset = eval_dataset.map(partial(preprocess_function, OLMO_TOKENIZER), remove_columns=['prompt', 'completion'])
 
 
     def model_init():
