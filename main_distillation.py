@@ -117,6 +117,9 @@ def distill_task1_olmo():
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-2-0425-1B")
     eval_dataset = load_dataset("json", data_files={'test': "data/distillation_data/distill_examples.json"}, split='test')
     train_dataset = load_dataset("json", data_files={'train': "data/distillation_data/train_distill_examples.json"}, split='train')
+    model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.2-1B", attn_implementation="sdpa")
+    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.2-1B")
+    tokenizer.pad_token = tokenizer.eos_token
     train_dataset= train_dataset.map(partial(preprocess_function, META_TOKENIZER), remove_columns=['prompt', 'completion'])
     eval_dataset = eval_dataset.map(partial(preprocess_function, META_TOKENIZER), remove_columns=['prompt', 'completion'])
 
@@ -124,8 +127,6 @@ def distill_task1_olmo():
     def model_init():
         return AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
 
-    model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.2-1B", attn_implementation="sdpa")
-    tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.2-1B")
     # model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-base")
     # tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-base")
     training_args = Seq2SeqTrainingArguments(
