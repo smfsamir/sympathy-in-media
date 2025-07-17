@@ -10,7 +10,7 @@ import click
 from transformers import AutoModelForCausalLM, AutoTokenizer, Seq2SeqTrainingArguments, Seq2SeqTrainer, DataCollatorForSeq2Seq, AutoModelForSeq2SeqLM
 from datasets import load_dataset, Dataset
 from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
-from trl import SFTConfig, SFTTrainer
+from trl import SFTConfig, SFTTrainer, DataCollatorForCompletionOnlyLM
 
 logger = loguru.logger
 # message = ["Language modeling is "]
@@ -120,52 +120,26 @@ def distill_task1_olmo():
     model = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf", attn_implementation="sdpa")
     tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
     # tokenizer.pad_token = tokenizer.eos_token
-    train_dataset= train_dataset.map(partial(preprocess_function, OLMO_TOKENIZER), remove_columns=['prompt', 'completion'])
-    eval_dataset = eval_dataset.map(partial(preprocess_function, OLMO_TOKENIZER), remove_columns=['prompt', 'completion'])
 
+    def formatting_prompts_func(example):
+        output_texts = []
+        for i in range(len(example['instruction'])):
+            text = f"{example['instruction'][i]}\n ### Answer: {example['output'][i]}"
+            output_texts.append(text)
+        return output_texts
 
-    def model_init():
-        return AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
-
-    # model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-base")
-    # tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-base")
-    training_args = Seq2SeqTrainingArguments(
-        output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation",
-        logging_steps=10,
-        num_train_epochs=5,
-        per_device_train_batch_size=2,
-        per_device_eval_batch_size=2,
-        learning_rate=2e-5,
-        lr_scheduler_type="linear",
-        warmup_steps=50,
-        warmup_ratio=0.03,
-        generation_max_length=200,
-        optim="adamw_torch",
-        eval_steps=10,
-        do_eval=True,
-        eval_strategy="steps",
-        fp16=True
-    )
-    data_collator = DataCollatorForSeq2Seq(
-        tokenizer,
-        model=model,
-        padding=True
-    )
-    trainer = Seq2SeqTrainer(
-        model=model,
-        tokenizer=tokenizer,
-        data_collator=data_collator,
+    response_template = "### Answer:"
+    collator = DataCollatorForCompletionOnlyLM(response_template=response_template, 
+                                               tokenizer=tokenizer) 
+    trainer = SFTTrainer(
+        model,
         train_dataset=train_dataset,
-        compute_metrics=partial(compute_metrics, tokenizer),
-        eval_dataset=eval_dataset,
-        args = training_args, 
+        eval_dataset = eval_dataset,
+        args=SFTConfig(output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation"),
+        formatting_func=formatting_prompts_func,
+        data_collator=collator,
+        compute_metrics=compute_metrics # TODO: double check that you're using the right tokenizer in the compute_metrics function
     )
-    # def model_init():
-    #     return AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
-    # def optuna_hp_space(trial):
-    #     return {
-    #         "learning_rate": trial.suggest_float("learning_rate", 1e-6, 1e-4, log=True)
-    #     }
     trainer.train()
 
 
