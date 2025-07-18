@@ -152,8 +152,8 @@ class CustomTrainer(Trainer):
             metrics = {'wer': 0}
             return metrics
 
-def preprocess_text(example):
-    batch = OLMO_TOKENIZER(example['prompt'] + example['completion'])
+def preprocess_text(samples):
+    batch = OLMO_TOKENIZER([example['prompt'] + example['completion'] for example in samples])
     ipdb.set_trace()
     batch['labels'] = batch['input_ids'].copy()  # shifting is done in the model
     return batch
