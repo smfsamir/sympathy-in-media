@@ -152,12 +152,24 @@ class CustomTrainer(Trainer):
             metrics = {'wer': 0}
             return metrics
 
+def preprocess_text(example):
+    batch = OLMO_TOKENIZER.encode(example)
+    batch['labels'] = batch['input_ids'].copy()  # shifting is done in the model
+
 @click.command()
 def distill_task1_olmo():
     # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-2-0425-1B")
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-2-0425-1B")
     eval_dataset = load_dataset("json", data_files={'test': "data/distillation_data/distill_examples.json"}, split='test')
     train_dataset = load_dataset("json", data_files={'train': "data/distillation_data/train_distill_examples.json"}, split='train')
+    train_dataset = train_dataset.map(
+        preprocess_text, 
+        batched=True,
+    )
+    eval_dataset = eval_dataset.map(
+        preprocess_text, 
+        batched=True,
+    )
     model = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
     tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
 
