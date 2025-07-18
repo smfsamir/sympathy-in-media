@@ -154,6 +154,7 @@ class CustomTrainer(Trainer):
 
 def preprocess_text(example):
     batch = OLMO_TOKENIZER(example['prompt'] + example['completion'])
+    ipdb.set_trace()
     batch['labels'] = batch['input_ids'].copy()  # shifting is done in the model
     return batch
 
