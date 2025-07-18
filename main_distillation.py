@@ -167,7 +167,7 @@ def distill_task1_olmo():
         per_device_eval_batch_size=4,
         num_train_epochs=3,
         logging_steps=10,
-        evaluation_strategy="steps",
+        eval_strategy="steps",
         save_strategy="steps",
         eval_steps=100,
         save_steps=100,
