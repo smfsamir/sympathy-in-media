@@ -7,7 +7,7 @@ import os
 import pathlib
 import click
 
-from transformers import AutoModelForCausalLM, AutoTokenizer, Seq2SeqTrainingArguments, Seq2SeqTrainer, DataCollatorForSeq2Seq, AutoModelForSeq2SeqLM, TrainingArguments, Trainer
+from transformers import AutoModelForCausalLM, AutoTokenizer, Seq2SeqTrainingArguments, Seq2SeqTrainer, DataCollatorForSeq2Seq, AutoModelForSeq2SeqLM, TrainingArguments, Trainer, DataCollatorForLanguageModeling
 from dataclasses import dataclass
 from datasets import load_dataset, Dataset
 from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
@@ -175,7 +175,7 @@ def distill_task1_olmo():
         weight_decay=0.01,
         warmup_steps=100,
     )
-    collator = DataCollatorForCompletionOnlyLM()
+    collator = DataCollatorForLanguageModeling(tokenizer = tokenizer, mlm=False)
     trainer = CustomTrainer(
         model=model,
         args=training_arguments,
