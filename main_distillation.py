@@ -153,8 +153,7 @@ class CustomTrainer(Trainer):
             return metrics
 
 def preprocess_text(example):
-    batch = OLMO_TOKENIZER.encode(example)
-    ipdb.set_trace()
+    batch = OLMO_TOKENIZER(example)
     batch['labels'] = batch['input_ids'].copy()  # shifting is done in the model
 
 @click.command()
