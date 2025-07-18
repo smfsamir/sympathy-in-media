@@ -7,7 +7,8 @@ import os
 import pathlib
 import click
 
-from transformers import AutoModelForCausalLM, AutoTokenizer, Seq2SeqTrainingArguments, Seq2SeqTrainer, DataCollatorForSeq2Seq, AutoModelForSeq2SeqLM
+from transformers import AutoModelForCausalLM, AutoTokenizer, Seq2SeqTrainingArguments, Seq2SeqTrainer, DataCollatorForSeq2Seq, AutoModelForSeq2SeqLM, TrainingArguments, Trainer
+from dataclasses import dataclass
 from datasets import load_dataset, Dataset
 from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
 from trl import SFTConfig, SFTTrainer, DataCollatorForCompletionOnlyLM
@@ -111,6 +112,46 @@ def preprocess_function(tokenizer, sample):
     model_inputs["labels"] = labels["input_ids"]
     return model_inputs
 
+@dataclass 
+class DataCollatorForCompletionOnlyLM:
+    instruction_template: str = "### Instruction:"
+    response_template: str = "### Answer:"
+    tokenizer: AutoTokenizer = OLMO_TOKENIZER
+    mlm: bool = False
+
+    def __call__(self, features):
+        batch
+        batch = self.tokenizer(
+            features,
+            padding=True,
+            truncation = False,
+            return_tensors="pt",
+        )
+        batch["labels"] = batch['input_ids'].clone() # shifting is done in the model
+        # batch['attention_mask'] = batch['attention_mask'].clone() # NOTE may want to come back to this to mask out the prompt
+        return batch
+
+class CustomTrainer(Trainer):
+    def evaluate(
+            self,
+            eval_dataset = None,
+            ignore_keys = None,
+            metric_key_prefix: str = "eval",
+        ):
+            # memory metrics - must set up as early as possible
+            self._memory_tracker.start()
+
+            eval_dataloader = self.get_eval_dataloader(eval_dataset)
+            # Perform decoding and loss calculations here
+            model = self.model
+            tokenizer = self.tokenizer
+            for i, _data in enumerate(eval_dataloader):
+                if i == 0:
+                    logger.info(f"Eval batch {_data}")
+                ipdb.set_trace()
+            metrics = {'wer': 0}
+            return metrics
+
 @click.command()
 def distill_task1_olmo():
     # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-2-0425-1B")
@@ -119,29 +160,34 @@ def distill_task1_olmo():
     train_dataset = load_dataset("json", data_files={'train': "data/distillation_data/train_distill_examples.json"}, split='train')
     model = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
     tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
-    # tokenizer.pad_token = tokenizer.eos_token
 
+    training_arguments = TrainingArguments(
+        output_dir="output/task1_olmo_distillation",
+        per_device_train_batch_size=4,
+        per_device_eval_batch_size=4,
+        num_train_epochs=3,
+        logging_steps=10,
+        evaluation_strategy="steps",
+        save_strategy="steps",
+        eval_steps=100,
+        save_steps=100,
+        learning_rate=2e-5,
+        weight_decay=0.01,
+        warmup_steps=100,
+    )
+    collator = DataCollatorForCompletionOnlyLM()
+    trainer = CustomTrainer(
+        model=model,
+        args=training_arguments,
+        train_dataset=train_dataset,
+        eval_dataset=eval_dataset,
+        data_collator=collator
+    )
     # collator = DataCollatorForCompletionOnlyLM(instruction_template="### Instruction:", 
     #                                            response_template="### Answer:", 
     #                                            tokenizer=tokenizer, 
     #                                            mlm=False
-    training_args = SFTConfig(
-        max_length=3300,
-        output_dir="/h/smfsamir/hf_cache/olmo-1b-hf_task1_distillation",
-        completion_only_loss=True,
-        per_device_train_batch_size=4,
-        per_device_eval_batch_size=4,
-        eval_steps = 10,
-        eval_strategy = "steps"
-    )
-    trainer = SFTTrainer(
-        model,
-        train_dataset=train_dataset,
-        eval_dataset = eval_dataset,
-        args=training_args,
-        # data_collator=collator,
-        compute_metrics=compute_metrics # TODO: double check that you're using the right tokenizer in the compute_metrics function
-    )
+
     trainer.train()
 
 @click.group()
