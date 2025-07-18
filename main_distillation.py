@@ -184,7 +184,7 @@ def distill_task1_olmo():
         logging_steps=10,
         eval_strategy="steps",
         save_strategy="steps",
-        eval_steps=100,
+        eval_steps=5,
         save_steps=100,
         learning_rate=2e-5,
         weight_decay=0.01,
