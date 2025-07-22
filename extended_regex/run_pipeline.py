@@ -1,7 +1,7 @@
 import os
 import re
 import json
-from task1 import preprocess_article_with_unidecode, extract_and_classify_entities
+from extended.task1 import preprocess_article_with_unidecode, extract_and_classify_entities
 from task2 import get_paragraph_perspectives
 from task2_eval import evaluate_task2, task2_evaluation_report
 from task1_eval import evaluate_task1, task1_evaluation_report

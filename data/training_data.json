@@ -1503,7 +1503,7 @@
     "task2": {
       "paragraph 3": [
         "quebec's crown prosecutor's office"
-      ], 
+      ],
       "paragraph 4": [
         "quebec's crown prosecutor's office"
       ],
@@ -1842,7 +1842,7 @@
       "paragraph 1": [
         "laurie bailey"
       ],
-      "paragraphy 2": [
+      "paragraph 2": [
         "laurie bailey"
       ],
       "paragraph 5": [
@@ -2065,7 +2065,7 @@
         "special investigations unit (police oversight body)",
         "bun sim (individual shot by victim)",
         "terrence phillips (individual killed by victim)"
-        
+
       ]
     },
     "task2": {
@@ -3790,7 +3790,7 @@
       ],
       "paragraph 13": [
         "lawyer"
-      ]    
+      ]
     }
   },
   "81_Stacey Perry_Calgary Herald.json": {
@@ -4573,7 +4573,7 @@
                 "martin bonin-charron (bei spokesperson)",
                 "bei (police oversight body)",
                 "sûreté du québec (police)",
-                "gatineau police (police)" 
+                "gatineau police (police)"
             ]
         },
 
@@ -4671,7 +4671,7 @@
             ]
         },
 
-        "task2": 
+        "task2":
         {
             "paragraph 3": ["old brewery mission"],
             "paragraph 6": ["montreal police"],
@@ -4883,8 +4883,8 @@
         {
             "paragraph 6": ["rcmp"],
             "paragraph 10": ["maureen levy"],
-            "paragraph 12": ["darren stanley"],   
-            "paragraph 13": ["darren stanley"],   
+            "paragraph 12": ["darren stanley"],
+            "paragraph 13": ["darren stanley"],
             "paragraph 16": ["rcmp"],
             "paragraph 17": ["maureen levy"],
             "paragraph 18": ["maureen levy"],
@@ -4926,7 +4926,7 @@
             "paragraph 16": ["rebecca saunders"],
             "paragraph 17": ["rebecca saunders"],
             "paragraph 18": ["cornell mclean"],
-            "paragraph 19": ["cornell mclean"]  
+            "paragraph 19": ["cornell mclean"]
         }
      },
 
@@ -5159,7 +5159,7 @@
             ]
         },
 
-        "task2": 
+        "task2":
         {
             "paragraph 6": ["special investigations unit"],
             "paragraph 7": ["special investigations unit"],
