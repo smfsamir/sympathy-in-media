@@ -112,25 +112,6 @@ def preprocess_function(tokenizer, sample):
     model_inputs["labels"] = labels["input_ids"]
     return model_inputs
 
-@dataclass 
-class DataCollatorForCompletionOnlyLM:
-    instruction_template: str = "### Instruction:"
-    response_template: str = "### Answer:"
-    tokenizer: AutoTokenizer = OLMO_TOKENIZER
-    mlm: bool = False
-
-    def __call__(self, features):
-        batch
-        batch = self.tokenizer(
-            features,
-            padding=True,
-            truncation = False,
-            return_tensors="pt",
-        )
-        batch["labels"] = batch['input_ids'].clone() # shifting is done in the model
-        # batch['attention_mask'] = batch['attention_mask'].clone() # NOTE may want to come back to this to mask out the prompt
-        return batch
-
 class CustomTrainer(Trainer):
     def evaluate(
             self,
@@ -146,9 +127,10 @@ class CustomTrainer(Trainer):
             model = self.model
             tokenizer = self.tokenizer
             for i, _data in enumerate(eval_dataloader):
+                logger.info(_data)
+                ipdb.set_trace()
                 if i == 0:
                     logger.info(f"Eval batch {_data}")
-                ipdb.set_trace()
             metrics = {'wer': 0}
             return metrics
 
@@ -198,11 +180,6 @@ def distill_task1_olmo():
         eval_dataset=eval_dataset,
         data_collator=collator
     )
-    # collator = DataCollatorForCompletionOnlyLM(instruction_template="### Instruction:", 
-    #                                            response_template="### Answer:", 
-    #                                            tokenizer=tokenizer, 
-    #                                            mlm=False
-
     trainer.train()
 
 @click.group()
