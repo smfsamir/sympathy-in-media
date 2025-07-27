@@ -135,11 +135,11 @@ class CustomTrainer(Trainer):
                     **tokenized_input, 
                     do_sample=True, 
                     top_k=50, 
-                    top_p=0.95
+                    top_p=0.95,
+                    max_new_tokens=1000
                 )
                 prediction_text = tokenizer.batch_decode(prediction, skip_special_tokens=True)[0]
                 logger.info(prediction_text)
-                ipdb.set_trace()
                 if i == 0:
                     logger.info(f"Eval batch {_data}")
             metrics = {'wer': 0}
@@ -177,7 +177,7 @@ def distill_task1_olmo():
         logging_steps=10,
         eval_strategy="steps",
         save_strategy="steps",
-        eval_steps=5,
+        eval_steps=10,
         save_steps=100,
         learning_rate=2e-5,
         weight_decay=0.01,
