@@ -130,7 +130,7 @@ class CustomTrainer(Trainer):
                 logger.info(_data)
                 example_text = tokenizer.batch_decode(_data['input_ids'], skip_special_tokens=True)[0]
                 input_example = example_text[:example_text.rfind('\n\n')] + "### Answer:"
-                tokenized_input = tokenizer(input_example, return_tensors="pt")
+                tokenized_input = tokenizer(input_example, return_tensors="pt").to(model.device)
                 prediction = model.generate(
                     **tokenized_input, 
                     do_sample=True, 
