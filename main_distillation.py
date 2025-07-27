@@ -140,6 +140,7 @@ class CustomTrainer(Trainer):
                 )
                 prediction_text = tokenizer.batch_decode(prediction, skip_special_tokens=True)[0]
                 logger.info(prediction_text)
+                break
                 if i == 0:
                     logger.info(f"Eval batch {_data}")
             metrics = {'wer': 0}
