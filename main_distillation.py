@@ -125,9 +125,20 @@ class CustomTrainer(Trainer):
             eval_dataloader = self.get_eval_dataloader(eval_dataset)
             # Perform decoding and loss calculations here
             model = self.model
-            tokenizer = self.tokenizer
+            tokenizer = OLMO_TOKENIZER
             for i, _data in enumerate(eval_dataloader):
                 logger.info(_data)
+                example_text = tokenizer.batch_decode(_data['input_ids'], skip_special_tokens=True)[0]
+                input_example = example_text[:example_text.rfind('\n\n')] + "### Answer:"
+                tokenized_input = tokenizer(input_example, return_tensors="pt")
+                prediction = model.generate(
+                    **tokenized_input, 
+                    do_sample=True, 
+                    top_k=50, 
+                    top_p=0.95
+                )
+                prediction_text = tokenizer.batch_decode(prediction, skip_special_tokens=True)[0]
+                logger.info(prediction_text)
                 ipdb.set_trace()
                 if i == 0:
                     logger.info(f"Eval batch {_data}")
