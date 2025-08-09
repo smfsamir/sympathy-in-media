@@ -15,9 +15,11 @@ for ((i=1; i<=NUM_TRIALS; i++)); do
     echo "  training_steps=${TRAINING_STEPS[$i-1]}"
     echo "  warmup_steps=${WARMUP_STEPS[$i-1]}"
 
+    logfile="logs/lr${LRS[$i-1]}_wd${WEIGHT_DECAYS[$i-1]}_ts${TRAINING_STEPS[$i-1]}_ws${WARMUP_STEPS[$i-1]}.err"
+
     python main_distillation.py distill-task1-olmo \
         --learning_rate ${LRS[$i-1]} \
         --num_training_steps ${TRAINING_STEPS[$i-1]} \
         --warmup_steps ${WARMUP_STEPS[$i-1]} \
-        --weight_decay ${WEIGHT_DECAYS[$i-1]}
+        --weight_decay ${WEIGHT_DECAYS[$i-1]} 2> "$logfile" 
 done
