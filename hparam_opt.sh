@@ -13,5 +13,5 @@ for ((i=1; i<=NUM_TRIALS; i++)); do
         --lr ${LRS[$i-1]} \
         --training_steps ${TRAINING_STEPS[$i-1]} \
         --warmup_steps ${WARMUP_STEPS[$i-1]} \
-        --weight_decay ${WEIGHT_DECAYS[$i-1]} \
+        --weight_decay ${WEIGHT_DECAYS[$i-1]}
 done
