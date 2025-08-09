@@ -7,6 +7,9 @@
 #SBATCH --mail-user=fsamir@mail.ubc.ca
 #SBATCH --output=R-olmo-%x.%j.out
 #SBATCH --error=R-olmo-%x.%j.err
+source /h/smfsamir/my-venv/bin/activate
+cd sympathy-in-media
+
 mkdir -p logs
 NUM_TRIALS=5
 LRS=(0.000017 0.000019 0.000070 0.000102 0.000199)
