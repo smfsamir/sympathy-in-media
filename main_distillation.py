@@ -183,7 +183,7 @@ def distill_task1_olmo(learning_rate, num_training_steps, warmup_steps, weight_d
         output_dir=os.path.join(SCRATCH_DIR, "sympathy_task_1"),
         per_device_train_batch_size=4,
         per_device_eval_batch_size=4,
-        num_training_steps=num_training_steps,
+        num_train_steps=num_training_steps,
         logging_steps=10,
         eval_strategy="steps",
         save_strategy="steps",
