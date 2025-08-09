@@ -1,3 +1,4 @@
+import random
 import torch
 import ipdb
 from functools import partial
@@ -13,7 +14,6 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, Seq2SeqTrainingArg
 from dataclasses import dataclass
 from datasets import load_dataset, Dataset
 from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
-from trl import SFTConfig, SFTTrainer, DataCollatorForCompletionOnlyLM
 
 config = dotenv_values(".env")
 logger = loguru.logger
@@ -157,10 +157,12 @@ def preprocess_text(samples):
     return batch
 
 @click.command()
-@click.argument('learning_rate', type=float, default=2e-5)
-@click.argument('warmup_steps', type=int, default=100)
-@click.argument('weight_decay', type=float, default=0.01)
-def distill_task1_olmo(learning_rate, warmup_steps, weight_decay):
+@click.option('learning_rate', type=float, default=2e-5)
+@click.option('num_training_steps', type=int, default=100)
+@click.option('warmup_steps', type=int, default=100)
+@click.option('weight_decay', type=float, default=0.01)
+def distill_task1_olmo(learning_rate, num_training_steps, warmup_steps, weight_decay):
+
     # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-2-0425-1B")
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-2-0425-1B")
     SCRATCH_DIR = config['SCRATCH_DIR']
@@ -181,7 +183,7 @@ def distill_task1_olmo(learning_rate, warmup_steps, weight_decay):
         output_dir=os.path.join(SCRATCH_DIR, "sympathy_task_1"),
         per_device_train_batch_size=4,
         per_device_eval_batch_size=4,
-        num_train_epochs=3,
+        num_training_steps=num_training_steps,
         logging_steps=10,
         eval_strategy="steps",
         save_strategy="steps",
@@ -204,6 +206,31 @@ def distill_task1_olmo(learning_rate, warmup_steps, weight_decay):
 @click.group()
 def main():
     pass
+import random
+
+# Define hyperparameter ranges
+param_ranges = {
+    "learning_rate": (1e-5, 1e-3),   # float range (log-uniform recommended)
+    "weight_decay": (0.0, 0.3),      # float range
+    "training_steps": (100, 200)       # int range
+}
+
+def random_hyperparams(n_trials=10, seed=None):
+    if seed is not None:
+        random.seed(seed)
+
+    configs = []
+    for _ in range(n_trials):
+        training_steps = random.randint(*param_ranges["training_steps"])
+        config = {
+            # log-uniform sampling for learning rate
+            "learning_rate": 10 ** random.uniform(-5, -3),  
+            "weight_decay": random.uniform(*param_ranges["weight_decay"]),
+            "training_steps": training_steps,
+            "warmup_steps": random.randint(0, training_steps - 1)  # strictly less
+        }
+        configs.append(config)
+    return configs
 
 main.add_command(create_distillation_examples_task1)
 main.add_command(distill_task1_olmo)
@@ -211,4 +238,17 @@ main.add_command(create_training_dataset)
 # main.add_command(create_distillation_examples_task1)
 
 if __name__ == "__main__":
+# Example: generate 5 random configs
     main()
+    # trials = random_hyperparams(n_trials=5, seed=42)
+    # # learning_rates = " ".join([f'{trial['learning_rate']:.6f}' for trial in trials])
+    # learning_rates = " ".join([f"{trial['learning_rate']:.6f}" for trial in trials])
+    # training_steps = " ".join([str(trial['training_steps']) for trial in trials])
+    # warmup_steps = " ".join([str(trial['warmup_steps']) for trial in trials])
+    # weight_decays = " ".join([str(trial['weight_decay']) for trial in trials])
+    # print(f"LRS=({learning_rates})")
+    # print(f"TRAINING_STEPS=({training_steps})")
+    # print(f"WARMUP_STEPS=({warmup_steps})")
+    # print(f"WEIGHT_DECAYS=({weight_decays})")
+
+    # # main()
