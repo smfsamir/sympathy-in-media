@@ -139,7 +139,10 @@ class CustomTrainer(Trainer):
                     max_new_tokens=1000
                 )
                 prediction_text = tokenizer.batch_decode(prediction, skip_special_tokens=True)[0]
-                logger.info(prediction_text)
+                prediction_text_answer = prediction_text[prediction_text.rfind("### Answer:") + len("### Answer:"):].strip()
+                logger.info(f"CONTEXT: {input_example}")
+                print("------------------")
+                logger.info(f"ANSWER: {prediction_text_answer}")
                 break
                 if i == 0:
                     logger.info(f"Eval batch {_data}")
