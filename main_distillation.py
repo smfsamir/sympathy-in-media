@@ -116,6 +116,11 @@ def preprocess_function(tokenizer, sample):
     return model_inputs
 
 class CustomTrainer(Trainer):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.tokenizer = kwargs['tokenizer']
+
     def evaluate(
             self,
             eval_dataset = None,
@@ -128,7 +133,7 @@ class CustomTrainer(Trainer):
             eval_dataloader = self.get_eval_dataloader(eval_dataset)
             # Perform decoding and loss calculations here
             model = self.model
-            tokenizer = OLMO_TOKENIZER
+            tokenizer = self.tokenizer
             for i, _data in enumerate(eval_dataloader):
                 example_text = tokenizer.batch_decode(_data['input_ids'], skip_special_tokens=True)[0]
                 input_example = example_text[:example_text.rfind('\n\n')] + "### Answer:"
@@ -156,12 +161,28 @@ def preprocess_text(samples):
     batch['labels'] = batch['input_ids'].clone()
     return batch
 
+def get_model(model_name):
+    if model_name == 'olmo':
+        model = AutoModelForCausalLM.from_pretrained("allenai/OLMo-2-0425-1B", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
+    elif model_name == 'meta':
+        model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.2-1B", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
+    return model
+
+def get_tokenizer(model_name):
+    cache_dir = os.path.join(config['SCRATCH_DIR'], "transformers_cache")
+    if model_name == 'olmo':
+        tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-2-0425-1B", cache_dir=cache_dir)
+    elif model_name == 'meta':
+        tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.2-1B", cache_dir=cache_dir)
+    return tokenizer
+
 @click.command()
 @click.option('--learning_rate', type=float, default=2e-5)
 @click.option('--num_training_steps', type=int, default=100)
 @click.option('--warmup_steps', type=int, default=100)
 @click.option('--weight_decay', type=float, default=0.01)
-def distill_task1_olmo(learning_rate, num_training_steps, warmup_steps, weight_decay):
+@click.option('--model_name', type=click.Choice(['olmo', 'flan', 'meta']), default='olmo')
+def distill_task1_olmo(learning_rate, num_training_steps, warmup_steps, weight_decay, model_name):
 
     # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-2-0425-1B")
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-2-0425-1B")
@@ -176,8 +197,10 @@ def distill_task1_olmo(learning_rate, num_training_steps, warmup_steps, weight_d
         preprocess_text, 
         batched=True,
     )
-    model = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf", cache_dir=os.path.join(SCRATCH_DIR, "transformers_cache"))
-    tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf", cache_dir=os.path.join(SCRATCH_DIR, "transformers_cache"))
+
+
+    model = get_model(model_name)
+    tokenizer = get_tokenizer(model_name)
 
     training_arguments = TrainingArguments(
         output_dir=os.path.join(SCRATCH_DIR, "sympathy_task_1"),
@@ -199,7 +222,8 @@ def distill_task1_olmo(learning_rate, num_training_steps, warmup_steps, weight_d
         args=training_arguments,
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
-        data_collator=collator
+        data_collator=collator, 
+        tokenizer=tokenizer
     )
     trainer.train()
 
