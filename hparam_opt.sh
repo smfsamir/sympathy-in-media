@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --qos=a100_smfsamir
 #SBATCH --time=12:00:00
-#SBATCH --job-name=olmo-ft
+#SBATCH --job-name=meta-ft
 #SBATCH --gres=gpu:a100:1 
 #SBATCH --mem=32GB
 #SBATCH --mail-type=END,FAIL,INVALID_DEPEND
@@ -32,5 +32,6 @@ for ((i=1; i<=NUM_TRIALS; i++)); do
         --learning_rate ${LRS[$i-1]} \
         --num_training_steps ${TRAINING_STEPS[$i-1]} \
         --warmup_steps ${WARMUP_STEPS[$i-1]} \
-        --weight_decay ${WEIGHT_DECAYS[$i-1]} 2> "$logfile" 
+        --weight_decay ${WEIGHT_DECAYS[$i-1]} 2> "$logfile" \
+        --model_name "meta"
 done
