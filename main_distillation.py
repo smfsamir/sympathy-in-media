@@ -6,6 +6,8 @@ import json
 import os
 import pathlib
 import click
+from dotenv import dotenv_values
+
 
 from transformers import AutoModelForCausalLM, AutoTokenizer, Seq2SeqTrainingArguments, Seq2SeqTrainer, DataCollatorForSeq2Seq, AutoModelForSeq2SeqLM, TrainingArguments, Trainer, DataCollatorForLanguageModeling
 from dataclasses import dataclass
@@ -13,6 +15,7 @@ from datasets import load_dataset, Dataset
 from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
 from trl import SFTConfig, SFTTrainer, DataCollatorForCompletionOnlyLM
 
+config = dotenv_values(".env")
 logger = loguru.logger
 # message = ["Language modeling is "]
 # inputs = tokenizer(message, return_tensors='pt', return_token_type_ids=False)
@@ -158,6 +161,7 @@ def preprocess_text(samples):
 def distill_task1_olmo():
     # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-2-0425-1B")
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-2-0425-1B")
+    SCRATCH_DIR = config['SCRATCH_DIR']
     eval_dataset = load_dataset("json", data_files={'test': "data/distillation_data/distill_examples.json"}, split='test')
     train_dataset = load_dataset("json", data_files={'train': "data/distillation_data/train_distill_examples.json"}, split='train')
     train_dataset = train_dataset.map(
@@ -168,11 +172,11 @@ def distill_task1_olmo():
         preprocess_text, 
         batched=True,
     )
-    model = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
-    tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
+    model = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf", cache_dir=os.path.join(SCRATCH_DIR, "transformers_cache"))
+    tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf", cache_dir=os.path.join(SCRATCH_DIR, "transformers_cache"))
 
     training_arguments = TrainingArguments(
-        output_dir="/scratch/ssd004/scratch/smfsamir/sympathy_task_1",
+        output_dir=os.path.join(SCRATCH_DIR, "sympathy_task_1"),
         per_device_train_batch_size=4,
         per_device_eval_batch_size=4,
         num_train_epochs=3,
