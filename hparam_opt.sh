@@ -1,5 +1,4 @@
 #!/bin/bash
-
 mkdir -p logs
 NUM_TRIALS=5
 LRS=(0.000017 0.000019 0.000070 0.000102 0.000199)
@@ -15,7 +14,7 @@ for ((i=1; i<=NUM_TRIALS; i++)); do
     echo "  training_steps=${TRAINING_STEPS[$i-1]}"
     echo "  warmup_steps=${WARMUP_STEPS[$i-1]}"
 
-    logfile="logs/lr${LRS[$i-1]}_wd${WEIGHT_DECAYS[$i-1]}_ts${TRAINING_STEPS[$i-1]}_ws${WARMUP_STEPS[$i-1]}.err"
+    logfile="logs/lr=${LRS[$i-1]}_wd=${WEIGHT_DECAYS[$i-1]}_ts=${TRAINING_STEPS[$i-1]}_ws=${WARMUP_STEPS[$i-1]}.err"
 
     python main_distillation.py distill-task1-olmo \
         --learning_rate ${LRS[$i-1]} \
