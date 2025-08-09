@@ -1,4 +1,5 @@
 #!/bin/bash
+#SBATCH --qos=a100_smfsamir
 #SBATCH --time=12:00:00
 #SBATCH --job-name=olmo-ft
 #SBATCH --gres=gpu:a100:1 
