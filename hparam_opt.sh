@@ -9,7 +9,6 @@ WEIGHT_DECAYS=(0.22246514992794986 0.030748552851452247 0.008939165831421103 0.0
 
 
 for ((i=1; i<=NUM_TRIALS; i++)); do
-# python main_dis
     python main_distillation.py distill-task1-olmo \
         --lr ${LRS[$i-1]} \
         --training_steps ${TRAINING_STEPS[$i-1]} \
