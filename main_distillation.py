@@ -187,9 +187,9 @@ def distill_task1_olmo(learning_rate, warmup_steps, weight_decay):
         save_strategy="steps",
         eval_steps=10,
         save_steps=100,
-        learning_rate=2e-5,
-        weight_decay=0.01,
-        warmup_steps=100,
+        learning_rate=learning_rate,
+        weight_decay=weight_decay,
+        warmup_steps=warmup_steps
     )
     collator = DataCollatorForLanguageModeling(tokenizer = tokenizer, mlm=False)
     trainer = CustomTrainer(
