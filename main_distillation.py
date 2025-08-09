@@ -140,8 +140,6 @@ class CustomTrainer(Trainer):
                 )
                 prediction_text = tokenizer.batch_decode(prediction, skip_special_tokens=True)[0]
                 prediction_text_answer = prediction_text[prediction_text.rfind("### Answer:") + len("### Answer:"):].strip()
-                logger.info(f"CONTEXT: {input_example}")
-                print("------------------")
                 logger.info(f"ANSWER: {prediction_text_answer}")
                 break
                 if i == 0:
@@ -174,7 +172,7 @@ def distill_task1_olmo():
     tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
 
     training_arguments = TrainingArguments(
-        output_dir="output/task1_olmo_distillation",
+        output_dir="/scratch/ssd004/scratch/smfsamir/sympathy_task_1",
         per_device_train_batch_size=4,
         per_device_eval_batch_size=4,
         num_train_epochs=3,
