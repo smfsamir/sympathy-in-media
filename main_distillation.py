@@ -167,8 +167,8 @@ def distill_task1_olmo():
         preprocess_text, 
         batched=True,
     )
-    model = AutoModelForCausalLM.from_pretrained("allenai/OLMo-7B-hf")
-    tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-7B-hf")
+    model = AutoModelForCausalLM.from_pretrained("allenai/OLMo-1B-hf")
+    tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
 
     training_arguments = TrainingArguments(
         output_dir="output/task1_olmo_distillation",
