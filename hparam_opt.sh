@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 mkdir -p logs
 NUM_TRIALS=5
