@@ -130,7 +130,6 @@ class CustomTrainer(Trainer):
             model = self.model
             tokenizer = OLMO_TOKENIZER
             for i, _data in enumerate(eval_dataloader):
-                logger.info(_data)
                 example_text = tokenizer.batch_decode(_data['input_ids'], skip_special_tokens=True)[0]
                 input_example = example_text[:example_text.rfind('\n\n')] + "### Answer:"
                 tokenized_input = tokenizer(input_example, return_tensors="pt").to(model.device)
@@ -158,7 +157,10 @@ def preprocess_text(samples):
     return batch
 
 @click.command()
-def distill_task1_olmo():
+@click.argument('learning_rate', type=float, default=2e-5)
+@click.argument('warmup_steps', type=int, default=100)
+@click.argument('weight_decay', type=float, default=0.01)
+def distill_task1_olmo(learning_rate, warmup_steps, weight_decay):
     # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-2-0425-1B")
     # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-2-0425-1B")
     SCRATCH_DIR = config['SCRATCH_DIR']
