@@ -1,4 +1,12 @@
 #!/bin/bash
+#SBATCH --time=12:00:00
+#SBATCH --job-name=olmo-ft
+#SBATCH --gres=gpu:a100:1 
+#SBATCH --mem=32GB
+#SBATCH --mail-type=END,FAIL,INVALID_DEPEND
+#SBATCH --mail-user=fsamir@mail.ubc.ca
+#SBATCH --output=R-olmo-%x.%j.out
+#SBATCH --error=R-olmo-%x.%j.err
 mkdir -p logs
 NUM_TRIALS=5
 LRS=(0.000017 0.000019 0.000070 0.000102 0.000199)
