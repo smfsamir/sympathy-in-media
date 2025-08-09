@@ -157,10 +157,10 @@ def preprocess_text(samples):
     return batch
 
 @click.command()
-@click.option('learning_rate', type=float, default=2e-5)
-@click.option('num_training_steps', type=int, default=100)
-@click.option('warmup_steps', type=int, default=100)
-@click.option('weight_decay', type=float, default=0.01)
+@click.option('--learning_rate', type=float, default=2e-5)
+@click.option('--num_training_steps', type=int, default=100)
+@click.option('--warmup_steps', type=int, default=100)
+@click.option('--weight_decay', type=float, default=0.01)
 def distill_task1_olmo(learning_rate, num_training_steps, warmup_steps, weight_decay):
 
     # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-2-0425-1B")
