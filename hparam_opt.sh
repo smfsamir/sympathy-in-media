@@ -9,9 +9,15 @@ WEIGHT_DECAYS=(0.22246514992794986 0.030748552851452247 0.008939165831421103 0.0
 
 
 for ((i=1; i<=NUM_TRIALS; i++)); do
+    echo "Running with:"
+    echo "  learning_rate=${LRS[$i-1]}"
+    echo "  weight_decay=${WEIGHT_DECAYS[$i-1]}"
+    echo "  training_steps=${TRAINING_STEPS[$i-1]}"
+    echo "  warmup_steps=${WARMUP_STEPS[$i-1]}"
+
     python main_distillation.py distill-task1-olmo \
-        --lr ${LRS[$i-1]} \
-        --training_steps ${TRAINING_STEPS[$i-1]} \
+        --learning_rate ${LRS[$i-1]} \
+        --num_training_steps ${TRAINING_STEPS[$i-1]} \
         --warmup_steps ${WARMUP_STEPS[$i-1]} \
         --weight_decay ${WEIGHT_DECAYS[$i-1]}
 done
