@@ -174,6 +174,7 @@ def get_tokenizer(model_name):
         tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-2-0425-1B", cache_dir=cache_dir)
     elif model_name == 'meta':
         tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.2-1B", cache_dir=cache_dir)
+        tokenizer.pad_token = tokenizer.eos_token
     return tokenizer
 
 @click.command()
