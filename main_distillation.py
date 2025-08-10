@@ -166,6 +166,8 @@ def get_model(model_name):
         model = AutoModelForCausalLM.from_pretrained("allenai/OLMo-2-0425-1B", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
     elif model_name == 'meta':
         model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.2-1B", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
+    elif model_name == 'olmo-7b':
+        model = AutoModelForCausalLM.from_pretrained("allenai/OLMo-2-1124-7B", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
     return model
 
 def get_tokenizer(model_name):
@@ -257,9 +259,17 @@ def random_hyperparams(n_trials=10, seed=None):
         configs.append(config)
     return configs
 
+@click.command()
+def compute_required_memory():
+    model = get_model("olmo-7b") 
+    num_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    print(f"Memory for weights (float16): {num_params * 2 / 1024**3:.2f} GB")
+    pass
+
 main.add_command(create_distillation_examples_task1)
 main.add_command(distill_task1_olmo)
 main.add_command(create_training_dataset)
+main.add_command(compute_required_memory)
 # main.add_command(create_distillation_examples_task1)
 
 if __name__ == "__main__":
