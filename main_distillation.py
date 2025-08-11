@@ -261,7 +261,7 @@ def random_hyperparams(n_trials=10, seed=None):
 
 @click.command()
 def compute_required_memory():
-    model = get_model("olmo-7b") 
+    model = get_model("OLMo-7B-hf") 
     num_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print(f"Memory for weights (float16): {num_params * 2 / 1024**3:.2f} GB")
     pass
