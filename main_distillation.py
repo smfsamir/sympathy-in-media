@@ -10,7 +10,7 @@ import click
 from dotenv import dotenv_values
 
 
-from transformers import AutoModelForCausalLM, AutoTokenizer, Seq2SeqTrainingArguments, Seq2SeqTrainer, DataCollatorForSeq2Seq, AutoModelForSeq2SeqLM, TrainingArguments, Trainer, DataCollatorForLanguageModeling
+from transformers import AutoModelForCausalLM, AutoTokenizer, Seq2SeqTrainingArguments, Seq2SeqTrainer, DataCollatorForSeq2Seq, AutoModelForSeq2SeqLM, TrainingArguments, Trainer, DataCollatorForLanguageModeling, AutoModelForTokenClassification
 from dataclasses import dataclass
 from datasets import load_dataset, Dataset
 from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
@@ -266,10 +266,26 @@ def compute_required_memory():
     print(f"Memory for weights (float16): {num_params * 2 / 1024**3:.2f} GB")
     pass
 
+@click.command()
+def assess_baseline_ner_model():
+    tokenizer = AutoTokenizer.from_pretrained("dslim/bert-base-NER")
+    model = AutoModelForTokenClassification.from_pretrained("dslim/bert-base-NER")
+    eval_dataset = load_dataset("json", data_files={'test': "data/distillation_data/distill_examples.json"}, split='test')
+
+    ipdb.set_trace()
+    eval_dataset = eval_dataset.map(
+        lambda samples: tokenizer(samples['prompt'], padding=True, truncation=True, return_tensors="pt"), 
+        batched=True,
+    )
+    eval_dataset.set_format(type='torch', columns=['input_ids', 'attention_mask'])
+
+
+
 main.add_command(create_distillation_examples_task1)
 main.add_command(distill_task1_olmo)
 main.add_command(create_training_dataset)
 main.add_command(compute_required_memory)
+main.add_command(assess_existing_ner_model)
 # main.add_command(create_distillation_examples_task1)
 
 if __name__ == "__main__":
