@@ -268,8 +268,8 @@ def compute_required_memory():
 
 @click.command()
 def assess_baseline_ner_model():
-    tokenizer = AutoTokenizer.from_pretrained("dslim/bert-base-NER")
-    model = AutoModelForTokenClassification.from_pretrained("dslim/bert-base-NER")
+    tokenizer = AutoTokenizer.from_pretrained("dslim/bert-base-NER", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
+    model = AutoModelForTokenClassification.from_pretrained("dslim/bert-base-NER", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
     eval_dataset = load_dataset("json", data_files={'test': "data/distillation_data/distill_examples.json"}, split='test')
 
     ipdb.set_trace()
