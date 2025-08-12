@@ -285,7 +285,7 @@ main.add_command(create_distillation_examples_task1)
 main.add_command(distill_task1_olmo)
 main.add_command(create_training_dataset)
 main.add_command(compute_required_memory)
-main.add_command(assess_existing_ner_model)
+main.add_command(assess_baseline_ner_model)
 # main.add_command(create_distillation_examples_task1)
 
 if __name__ == "__main__":
