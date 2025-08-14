@@ -427,7 +427,7 @@ def assess_baseline_ner_model():
 @click.command()
 def assess_ft_flan_model():
     flan_t5 = AutoModelForSeq2SeqLM.from_pretrained(
-        cache_dir=os.path.join(config['SCRATCH_DIR'], "sympathy_task_1_flan", "checkpoint-1000")
+        pretrained_model_name_or_path=os.path.join(config['SCRATCH_DIR'], "sympathy_task_1_flan", "checkpoint-1000")
     )
     dataset = load_dataset("json", data_files={'train': "data/distillation_data/rolling_training_dataset.json"}, split='train')
     # rolling_training_dataset.json
