@@ -171,8 +171,8 @@ def compute_metrics(eval_preds):
     logger.info(f"Prediction: {predicted_string}")
     return {"accuracy": 0}
 
-def compute_metrics_flan(eval_preds):
-    ipdb.set_trace()
+# def compute_metrics_flan(eval_preds):
+
 
 def preprocess_function(tokenizer, sample):
     model_inputs = tokenizer(sample['prompt']) # don't pad in preprocessing
@@ -344,7 +344,7 @@ def distill_flant5():
         output_dir=os.path.join(config['SCRATCH_DIR'], "sympathy_task_1_flan"),
         per_device_train_batch_size=2,
         per_device_eval_batch_size=2,
-        max_steps=100,
+        max_steps=1000,
         logging_steps=10,
         eval_strategy="steps",
         save_strategy="steps",
@@ -367,8 +367,7 @@ def distill_flant5():
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
         data_collator=data_collator, 
-        tokenizer=FLAN_TOKENIZER,
-        compute_metrics=compute_metrics_flan
+        tokenizer=FLAN_TOKENIZER
     )
     trainer.train()
 
