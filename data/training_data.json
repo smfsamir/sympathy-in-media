@@ -1562,7 +1562,7 @@
       "Police-aligned": [
         "winnipeg police (police)",
         "independent investigation unit of manitoba (police oversight body)",
-        "john younes (chief medical examiner)"
+        "dr. john younes (chief medical examiner)"
       ]
     },
     "task2": {
@@ -2153,7 +2153,7 @@
         "elgyn muskego (victim)",
         "brian rowden (victim's cousin)",
         "larson anderson (norway house chief)",
-        "norway house counil (community leadership)"
+        "norway house council (community leadership)"
       ],
       "Police-aligned": [
         "rcmp (police)",
@@ -2204,10 +2204,10 @@
         "brian rowden"
       ],
       "paragraph 17": [
-        "norway house chief larson anderson"
+        "larson anderson"
       ],
       "paragraph 18": [
-        "norway house chief and council"
+        "norway house council"
       ]
     }
   },
@@ -3274,21 +3274,21 @@
     },
     "task2": {
       "paragraph 1": [
-        "jaskamal (jas) singh lail's family members",
+        "lail's family members",
         "jay sidhu"
       ],
       "paragraph 2": [
-        "jaskamal (jas) singh lail's family members",
+        "lail's family members",
         "calgary police"
       ],
       "paragraph 3": [
-        "jaskamal (jas) singh lail's family members"
+        "lail's family members"
       ],
       "paragraph 4": [
-        "jaskamal (jas) singh lail's family members"
+        "lail's family members"
       ],
       "paragraph 5": [
-        "jaskamal (jas) singh lail's family members"
+        "lail's family members"
       ],
       "paragraph 9": [
         "calgary police"
@@ -4538,16 +4538,16 @@
                 "claudine laurin"
             ],
             "paragraph 17": [
-                "francis dore"
+                "francois dore"
             ],
             "paragraph 18": [
-                "francis dore"
+                "francois dore"
             ],
             "paragraph 19": [
-                "francis dore"
+                "francois dore"
             ],
             "paragraph 20": [
-                "francis dore"
+                "francois dore"
             ],
             "paragraph 22": [
                 "matthew pearce"
@@ -4717,7 +4717,7 @@
             "paragraph 9": ["special investigations unit"],
             "paragraph 10": ["special investigations unit"],
             "paragraph 12": ["special investigations unit"],
-            "paragraph 13": ["lydia nimbeshaho, erixon kabera's family"],
+            "paragraph 13": ["erixon kabera's family"],
             "paragraph 14": ["erixon kabera's family"],
             "paragraph 15": ["erixon kabera's family"],
             "paragraph 16": ["special investigations unit"],
@@ -4948,9 +4948,9 @@
 
         "task2":
         {
-            "paragraph 3": ["winnipeg police assoication"],
+            "paragraph 3": ["winnipeg police association"],
             "paragraph 4": ["woman close with evan caron"],
-            "paragraph 8": ["winnipeg police assoication"],
+            "paragraph 8": ["winnipeg police association"],
             "paragraph 9": ["george van mackelbergh"],
             "paragraph 10": ["george van mackelbergh"],
             "paragraph 11": ["george van mackelbergh"],
@@ -4984,8 +4984,8 @@
             "paragraph 5": ["rcmp"],
             "paragraph 6": ["rcmp"],
             "paragraph 8": ["rcmp"],
-            "paragraph 9": ["peter siakulk"],
-            "paragraph 10": ["peter siakulk"],
+            "paragraph 9": ["peter siakuluk"],
+            "paragraph 10": ["peter siakuluk"],
             "paragraph 14": ["victim"],
             "paragraph 15": ["victim"],
             "paragraph 17": ["victim"],
@@ -5152,7 +5152,7 @@
             "dr. jack kitts (hospital president and ceo)",
             "jill skinner (acting chief of police)",
             "vern white (former police chief)",
-            "aaron reichert's superviso (police officer)",
+            "aaron reichert's supervisor (police officer)",
             "member of the public (civilian)",
             "ottawa police service (police)",
             "matt skof (police union president)"
@@ -5163,7 +5163,7 @@
         {
             "paragraph 6": ["special investigations unit"],
             "paragraph 7": ["special investigations unit"],
-            "paragraph 12": ["aaron reichert's  supervisor"],
+            "paragraph 12": ["aaron reichert's supervisor"],
             "paragraph 13": ["dr. jack kitts"],
             "paragraph 14": ["dr. jack kitts"],
             "paragraph 15": ["member of the public"],
