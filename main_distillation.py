@@ -428,7 +428,7 @@ def assess_baseline_ner_model():
 def assess_ft_flan_model():
     flan_t5 = AutoModelForSeq2SeqLM.from_pretrained(
         pretrained_model_name_or_path=os.path.join(config['SCRATCH_DIR'], "sympathy_task_1_flan", "checkpoint-1000")
-    )
+    ).to('cuda')
     dataset = load_dataset("json", data_files={'train': "data/distillation_data/rolling_training_dataset.json"}, split='train')
     # rolling_training_dataset.json
     # split train_dataset into train and validation sets
@@ -445,7 +445,7 @@ def assess_ft_flan_model():
     )
 
     predictions = flan_t5.generate(
-        input_ids=eval_dataset['input_ids'][:8], 
+        input_ids=torch.tensor(eval_dataset['input_ids'][:8]).to('cuda'), 
         attention_mask=eval_dataset['attention_mask'], 
         max_new_tokens=300
     )
