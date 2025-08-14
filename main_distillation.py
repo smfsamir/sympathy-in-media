@@ -368,7 +368,7 @@ def distill_flant5():
         eval_dataset=eval_dataset,
         data_collator=data_collator, 
         tokenizer=FLAN_TOKENIZER,
-        compute_metrics=compute_metrics
+        compute_metrics=compute_metrics_flan
     )
     trainer.train()
 
