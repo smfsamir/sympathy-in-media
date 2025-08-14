@@ -301,6 +301,17 @@ def distill_task1_olmo(learning_rate, num_training_steps, warmup_steps, weight_d
     )
     trainer.train()
 
+
+def preprocess_flan_fn(sample):
+    prompt = f"Here's an article about {sample['subject']}, who was killed by police as reported by {sample['outlet']}. Identify entities (people, organizations) who are expressing a perspective about the incident. Here are the roles we've identified so far: {sample['current_mentioned_entities']}. Identify NEW people/agencies providing a perspective, if any, in this paragraph:\n\n{sample['paragraph']}"
+    return {'prompt': prompt, 'response': sample['output']}
+
+def tokenize_batch_flan_fn(samples):
+    model_inputs = FLAN_TOKENIZER(samples['prompt'], padding=True, truncation=True, return_tensors="pt")
+    labels = FLAN_TOKENIZER(samples['response'], padding=True, truncation=True, return_tensors="pt")['input_ids']
+    model_inputs['labels'] = labels
+    return model_inputs
+
 @click.command()
 def distill_flant5():
 
@@ -308,37 +319,29 @@ def distill_flant5():
         "google/flan-t5-large", 
         cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache")
     )
-    def preprocess_fn(sample):
-        prompt = f"Here's an article about {sample['subject']}, who was killed by police as reported by {sample['outlet']}. Identify entities (people, organizations) who are expressing a perspective about the incident. Here are the roles we've identified so far: {sample['current_mentioned_entities']}. Identify NEW people/agencies providing a perspective, if any, in this paragraph:\n\n{sample['paragraph']}"
-        return {'prompt': prompt, 'response': sample['output']}
-    
-    def tokenize_batch_fn(samples):
-        model_inputs = FLAN_TOKENIZER(samples['prompt'], padding=True, truncation=True, return_tensors="pt")
-        labels = FLAN_TOKENIZER(samples['response'], padding=True, truncation=True, return_tensors="pt")['input_ids']
-        model_inputs['labels'] = labels
-        return model_inputs
 
     dataset = load_dataset("json", data_files={'train': "data/distillation_data/rolling_training_dataset.json"}, split='train')
     # rolling_training_dataset.json
     # split train_dataset into train and validation sets
-    dataset = dataset.train_test_split(test_size=0.1)
+    dataset = dataset.train_test_split(test_size=0.1, seed=42)
     train_dataset = dataset['train']
     eval_dataset = dataset['test']
 
     train_dataset = train_dataset.map(
-        preprocess_fn, 
+        preprocess_flan_fn, 
         remove_columns=['output', 'subject', 'outlet', 'current_mentioned_entities'],
     ).map(
-        tokenize_batch_fn, 
+        tokenize_batch_flan_fn, 
         batched=True,
     )
     eval_dataset = eval_dataset.map(
-        preprocess_fn, 
+        preprocess_flan_fn, 
         remove_columns=['output', 'subject', 'outlet', 'current_mentioned_entities'],
     ).map(
-        tokenize_batch_fn, 
+        tokenize_batch_flan_fn, 
         batched=True,
     )
+
     model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-large", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
     training_arguments = Seq2SeqTrainingArguments(
         output_dir=os.path.join(config['SCRATCH_DIR'], "sympathy_task_1_flan"),
@@ -421,6 +424,36 @@ def assess_baseline_ner_model():
     )
     eval_dataset.set_format(type='torch', columns=['input_ids', 'attention_mask'])
 
+@click.command()
+def assess_ft_flan_model():
+    flan_t5 = AutoModelForSeq2SeqLM.from_pretrained(
+        cache_dir=os.path.join(config['SCRATCH_DIR'], "sympathy_task_1_flan", "checkpoint-1000")
+    )
+    dataset = load_dataset("json", data_files={'train': "data/distillation_data/rolling_training_dataset.json"}, split='train')
+    # rolling_training_dataset.json
+    # split train_dataset into train and validation sets
+    dataset = dataset.train_test_split(test_size=0.1, seed=42)
+    train_dataset = dataset['train']
+    eval_dataset = dataset['test']
+
+    eval_dataset = eval_dataset.map(
+        preprocess_flan_fn, 
+        remove_columns=['output', 'subject', 'outlet', 'current_mentioned_entities'],
+    ).map(
+        tokenize_batch_flan_fn, 
+        batched=True,
+    )
+
+    predictions = flan_t5.generate(
+        input_ids=eval_dataset['input_ids'][:8], 
+        attention_mask=eval_dataset['attention_mask'], 
+        max_new_tokens=300
+    )
+    predicted_texts = FLAN_TOKENIZER.batch_decode(predictions, skip_special_tokens=True)
+    ipdb.set_trace()
+
+    pass
+
 main.add_command(create_distillation_examples_task1)
 main.add_command(distill_task1_olmo)
 main.add_command(distill_flant5)
@@ -429,6 +462,7 @@ main.add_command(create_training_dataset_rolling)
 main.add_command(compute_required_memory)
 main.add_command(assess_baseline_ner_model)
 main.add_command(create_training_dataset_rolling)
+main.add_command(assess_ft_flan_model)
 # main.add_command(create_distillation_examples_task1)
 
 if __name__ == "__main__":
