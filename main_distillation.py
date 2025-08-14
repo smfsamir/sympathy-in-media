@@ -1,11 +1,11 @@
 import random
+import pathlib
 import torch
 import ipdb
 from functools import partial
 import loguru
 import json
 import os
-import pathlib
 import click
 from dotenv import dotenv_values
 
@@ -50,6 +50,75 @@ def create_distillation_examples_task1():
     logger.info("Distillation examples created successfully.")
         # Add more examples or prompts as needed
         # f.write("Another example prompt here\n")
+
+@click.command()
+def create_training_dataset_rolling():
+    training_annotations = 'training_data.json'
+    annotation_object = json.load(open(os.path.join("data", training_annotations)))
+
+    def contained_in(entity, entities):
+        """
+        Check if the entity is contained in the list of entities.
+        """
+        for e in entities:
+            if entity in e:
+                return True
+        return False
+
+    paragraphs = []
+    outputs = []
+    subjects = []
+    outlets = []
+    current_mentioned_entities = []
+    total_num_people = 0
+    for fname in os.listdir("data/articles"):
+        first_mentioned_entities = set([])
+        victim_aligned_entities = annotation_object[fname]['task1']['Victim-aligned']
+        police_aligned_entities = annotation_object[fname]['task1']['Police-aligned']
+        total_people_in_article = len(victim_aligned_entities) + len(police_aligned_entities)
+        task_2_corefs = annotation_object[fname]['task2'] # Dict[str, List[str]]
+        perspectives_in_article = 0
+        for i, paragraph in enumerate(json.load(open(os.path.join("data/articles", fname)))):
+            num = i + 1
+            if f"paragraph {num}" not in task_2_corefs:
+                output = "No new entities in this paragraph."
+            else:
+                paragraph_entities = task_2_corefs[f"paragraph {num}"]
+                new_entities = set(paragraph_entities) - first_mentioned_entities
+                if len(new_entities) == 0:
+                    output = "No new entities in this paragraph."
+                else:
+                    output = []
+                    for entity in new_entities:
+                        if contained_in(entity, victim_aligned_entities):
+                            output.append(f"{entity} (victim-aligned)")
+                            perspectives_in_article += 1
+                        elif contained_in(entity, police_aligned_entities):
+                            output.append(f"{entity} (police-aligned)")
+                            perspectives_in_article += 1
+                        else:
+                            raise ValueError(f"Entity {entity} not found in either victim-aligned or police-aligned entities.")
+                        total_num_people += 1
+                    first_mentioned_entities.update(new_entities)
+                    output = ", ".join(output)
+
+            paragraphs.append(paragraph)
+            current_mentioned_entities.append(tuple(first_mentioned_entities))
+            outputs.append(output)
+            subjects.append(fname.split("_")[1])
+            outlets.append(pathlib.Path(fname.split("_")[2]).stem)
+        if perspectives_in_article < total_people_in_article - 1: # subtract victims
+            logger.warning(f"Article {fname} has fewer perspectives ({perspectives_in_article}) than total people ({total_people_in_article - 1}).")
+    logger.info(f"Total number of people identified: {total_num_people}")
+    dataset = Dataset.from_dict({
+        'paragraph': paragraphs,
+        'output': outputs,
+        'subject': subjects,
+        'outlet': outlets,
+        'current_mentioned_entities': current_mentioned_entities
+    })
+    dataset.to_json("data/distillation_data/rolling_training_dataset.json")
+    logger.info("Rolling training dataset created successfully.")
 
 @click.command()
 def create_training_dataset():
@@ -101,6 +170,9 @@ def compute_metrics(eval_preds):
     predicted_string = OLMO_TOKENIZER.decode(predictions.argmax(axis=1), skip_special_tokens=True)
     logger.info(f"Prediction: {predicted_string}")
     return {"accuracy": 0}
+
+def compute_metrics_flan(eval_preds):
+    ipdb.set_trace()
 
 def preprocess_function(tokenizer, sample):
     model_inputs = tokenizer(sample['prompt']) # don't pad in preprocessing
@@ -201,7 +273,6 @@ def distill_task1_olmo(learning_rate, num_training_steps, warmup_steps, weight_d
         batched=True,
     )
 
-
     model = get_model(model_name)
     tokenizer = get_tokenizer(model_name)
 
@@ -229,6 +300,78 @@ def distill_task1_olmo(learning_rate, num_training_steps, warmup_steps, weight_d
         tokenizer=tokenizer
     )
     trainer.train()
+
+@click.command()
+def distill_flant5():
+
+    FLAN_TOKENIZER = AutoTokenizer.from_pretrained(
+        "google/flan-t5-large", 
+        cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache")
+    )
+    def preprocess_fn(sample):
+        prompt = f"Here's an article about {sample['subject']}, who was killed by police as reported by {sample['outlet']}. Identify entities (people, organizations) who are expressing a perspective about the incident. Here are the roles we've identified so far: {sample['current_mentioned_entities']}. Identify NEW people/agencies providing a perspective, if any, in this paragraph:\n\n{sample['paragraph']}"
+        return {'prompt': prompt, 'response': sample['output']}
+    
+    def tokenize_batch_fn(samples):
+        model_inputs = FLAN_TOKENIZER(samples['prompt'], padding=True, truncation=True, return_tensors="pt")
+        labels = FLAN_TOKENIZER(samples['response'], padding=True, truncation=True, return_tensors="pt")['input_ids']
+        model_inputs['labels'] = labels
+        return model_inputs
+
+    dataset = load_dataset("json", data_files={'train': "data/distillation_data/rolling_training_dataset.json"}, split='train')
+    # rolling_training_dataset.json
+    # split train_dataset into train and validation sets
+    dataset = dataset.train_test_split(test_size=0.1)
+    train_dataset = dataset['train']
+    eval_dataset = dataset['test']
+
+    train_dataset = train_dataset.map(
+        preprocess_fn, 
+        remove_columns=['output', 'subject', 'outlet', 'current_mentioned_entities'],
+    ).map(
+        tokenize_batch_fn, 
+        batched=True,
+    )
+    eval_dataset = eval_dataset.map(
+        preprocess_fn, 
+        remove_columns=['output', 'subject', 'outlet', 'current_mentioned_entities'],
+    ).map(
+        tokenize_batch_fn, 
+        batched=True,
+    )
+    model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-large", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
+    training_arguments = Seq2SeqTrainingArguments(
+        output_dir=os.path.join(config['SCRATCH_DIR'], "sympathy_task_1_flan"),
+        per_device_train_batch_size=2,
+        per_device_eval_batch_size=2,
+        max_steps=100,
+        logging_steps=10,
+        eval_strategy="steps",
+        save_strategy="steps",
+        eval_steps=10,
+        save_steps=100,
+        learning_rate=2e-5,
+        weight_decay=0.01,
+        warmup_steps=100
+    )
+    label_pad_token_id = -100
+    data_collator = DataCollatorForSeq2Seq(
+        FLAN_TOKENIZER,
+        model=model,
+        label_pad_token_id=label_pad_token_id, 
+        padding=True, 
+    )
+    trainer = Seq2SeqTrainer(
+        model=model,
+        args=training_arguments,
+        train_dataset=train_dataset,
+        eval_dataset=eval_dataset,
+        data_collator=data_collator, 
+        tokenizer=FLAN_TOKENIZER,
+        compute_metrics=compute_metrics
+    )
+    trainer.train()
+
 
 @click.group()
 def main():
@@ -279,13 +422,14 @@ def assess_baseline_ner_model():
     )
     eval_dataset.set_format(type='torch', columns=['input_ids', 'attention_mask'])
 
-
-
 main.add_command(create_distillation_examples_task1)
 main.add_command(distill_task1_olmo)
+main.add_command(distill_flant5)
 main.add_command(create_training_dataset)
+main.add_command(create_training_dataset_rolling)
 main.add_command(compute_required_memory)
 main.add_command(assess_baseline_ner_model)
+main.add_command(create_training_dataset_rolling)
 # main.add_command(create_distillation_examples_task1)
 
 if __name__ == "__main__":
