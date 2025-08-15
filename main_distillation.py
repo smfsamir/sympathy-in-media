@@ -447,17 +447,20 @@ def assess_ft_flan_model():
     # rolling_training_dataset.json
     # split train_dataset into train and validation sets
     eval_subjects = ['Danny Lafrance-Godmer', 'Jeremy Nuvviaq', 'Dale Culver', 'Jason Gary Roy', 'Bradley Thomas Clattenburg', 'Charles Qirngnirq', 'Riley Fairholm', 'Radford James Good Dagger', 'Elgyn Muskego', 'Illutak Anautak', 'Christopher Arkell', 'David Charles Sandaker', 'Abisay Cruz', 'William David McCaffrey', 'John Robert Buehler'] 
-    eval_dataset = dataset.filter(lambda example: example['subject'] in eval_subjects)
 
-    eval_dataset = eval_dataset.map(
-        preprocess_flan_fn, 
-        remove_columns=['output', 'subject', 'outlet', 'current_mentioned_entities'],
-    ).map(
-        tokenize_batch_flan_fn, 
-        batched=True,
-    )
     for subject in eval_subjects:
-        eval_subset = eval_dataset.filter(lambda example: example['subject'] == subject) # is this still in the right order?
+        eval_subset = dataset.filter(lambda example: example['subject'] == subject) # is this still in the right order?
+        if len(eval_subset['outlet'])> 1:
+            # pick a random one
+            outlet = random.choice(eval_subset['outlet'])
+            eval_subset = eval_subset.filter(lambda example: example['outlet'] == outlet)
+        eval_subset = eval_subset.map(
+            preprocess_flan_fn, 
+            remove_columns=['output', 'subject', 'outlet', 'current_mentioned_entities'],
+        ).map(
+            tokenize_batch_flan_fn, 
+            batched=True,
+        )
         ipdb.set_trace()
 
 
