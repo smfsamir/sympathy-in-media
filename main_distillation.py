@@ -467,6 +467,7 @@ def assess_ft_flan_model():
             max_new_tokens=300
         )
         predicted_texts = FLAN_TOKENIZER.batch_decode(predictions, skip_special_tokens=True)
+        ipdb.set_trace()
 
     pass
 
