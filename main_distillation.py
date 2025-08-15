@@ -51,7 +51,7 @@ def create_distillation_examples_task1():
         # Add more examples or prompts as needed
         # f.write("Another example prompt here\n")
 
-@click.command()
+# @click.command()
 def create_training_dataset_rolling():
     training_annotations = 'training_data.json'
     annotation_object = json.load(open(os.path.join("data", training_annotations)))
@@ -443,12 +443,11 @@ def assess_ft_flan_model():
         pretrained_model_name_or_path=os.path.join(config['SCRATCH_DIR'], "sympathy_task_1_flan", "checkpoint-1000")
     ).to('cuda')
     dataset = load_dataset("json", data_files={'train': "data/distillation_data/rolling_training_dataset.json"}, split='train')
-    subjects_unique = set(dataset['subject'])
 
     # rolling_training_dataset.json
     # split train_dataset into train and validation sets
-    train_dataset = dataset['train'].filter(lambda example: example['subject'] in train_subjects)
-    dev_dataset = dataset['train'].filter(lambda example: example['subject'] in dev_subjects)
+    eval_subjects = ['Danny Lafrance-Godmer', 'Jeremy Nuvviaq', 'Dale Culver', 'Jason Gary Roy', 'Bradley Thomas Clattenburg', 'Charles Qirngnirq', 'Riley Fairholm', 'Radford James Good Dagger', 'Elgyn Muskego', 'Illutak Anautak', 'Christopher Arkell', 'David Charles Sandaker', 'Abisay Cruz', 'William David McCaffrey', 'John Robert Buehler'] 
+    eval_dataset = dataset.filter(lambda example: example['subject'] in eval_subjects)
 
     eval_dataset = eval_dataset.map(
         preprocess_flan_fn, 
@@ -457,14 +456,18 @@ def assess_ft_flan_model():
         tokenize_batch_flan_fn, 
         batched=True,
     )
+    for subject in eval_subjects:
+        eval_subset = eval_dataset.filter(lambda example: example['subject'] == subject) # is this still in the right order?
+        ipdb.set_trace()
 
-    predictions = flan_t5.generate(
-        input_ids=torch.tensor(eval_dataset['input_ids'][:8]).to('cuda'), 
-        attention_mask=torch.tensor(eval_dataset['attention_mask'][:8]).to('cuda'), 
-        max_new_tokens=300
-    )
-    predicted_texts = FLAN_TOKENIZER.batch_decode(predictions, skip_special_tokens=True)
-    ipdb.set_trace()
+
+
+    # predictions = flan_t5.generate(
+    #     input_ids=torch.tensor(eval_dataset['input_ids'][:8]).to('cuda'), 
+    #     attention_mask=torch.tensor(eval_dataset['attention_mask'][:8]).to('cuda'), 
+    #     max_new_tokens=300
+    # )
+    # predicted_texts = FLAN_TOKENIZER.batch_decode(predictions, skip_special_tokens=True)
 
     pass
 
@@ -472,7 +475,7 @@ main.add_command(create_distillation_examples_task1)
 main.add_command(distill_task1_olmo)
 main.add_command(distill_flant5)
 main.add_command(create_training_dataset)
-main.add_command(create_training_dataset_rolling)
+# main.add_command(create_training_dataset_rolling)
 main.add_command(compute_required_memory)
 main.add_command(assess_baseline_ner_model)
 # main.add_command(create_training_dataset_rolling)
