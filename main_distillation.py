@@ -461,16 +461,12 @@ def assess_ft_flan_model():
             tokenize_batch_flan_fn, 
             batched=True,
         )
-        ipdb.set_trace()
-
-
-
-    # predictions = flan_t5.generate(
-    #     input_ids=torch.tensor(eval_dataset['input_ids'][:8]).to('cuda'), 
-    #     attention_mask=torch.tensor(eval_dataset['attention_mask'][:8]).to('cuda'), 
-    #     max_new_tokens=300
-    # )
-    # predicted_texts = FLAN_TOKENIZER.batch_decode(predictions, skip_special_tokens=True)
+        predictions = flan_t5.generate(
+            input_ids=torch.tensor(eval_subset['input_ids'][:1]).to('cuda'), 
+            attention_mask=torch.tensor(eval_subset['attention_mask'][:1]).to('cuda'), 
+            max_new_tokens=300
+        )
+        predicted_texts = FLAN_TOKENIZER.batch_decode(predictions, skip_special_tokens=True)
 
     pass
 
