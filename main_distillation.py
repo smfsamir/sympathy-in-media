@@ -462,8 +462,8 @@ def assess_ft_flan_model():
             batched=True,
         )
         predictions = flan_t5.generate(
-            input_ids=torch.tensor(eval_subset['input_ids'][:1]).to('cuda'), 
-            attention_mask=torch.tensor(eval_subset['attention_mask'][:1]).to('cuda'), 
+            input_ids=torch.tensor(eval_subset['input_ids']).to('cuda'), 
+            attention_mask=torch.tensor(eval_subset['attention_mask']).to('cuda'), 
             max_new_tokens=300
         )
         predicted_texts = FLAN_TOKENIZER.batch_decode(predictions, skip_special_tokens=True)
