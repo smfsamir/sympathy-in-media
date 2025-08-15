@@ -82,6 +82,7 @@ def create_training_dataset_rolling():
             num = i + 1
             if f"paragraph {num}" not in task_2_corefs:
                 output = "No new entities in this paragraph."
+                new_entities = set()
             else:
                 paragraph_entities = task_2_corefs[f"paragraph {num}"]
                 new_entities = set(paragraph_entities) - first_mentioned_entities
@@ -99,7 +100,6 @@ def create_training_dataset_rolling():
                         else:
                             raise ValueError(f"Entity {entity} not found in either victim-aligned or police-aligned entities.")
                         total_num_people += 1
-                    first_mentioned_entities.update(new_entities)
                     output = ", ".join(output)
 
             paragraphs.append(paragraph)
@@ -107,6 +107,7 @@ def create_training_dataset_rolling():
             outputs.append(output)
             subjects.append(fname.split("_")[1])
             outlets.append(pathlib.Path(fname.split("_")[2]).stem)
+            first_mentioned_entities.update(new_entities)
         if perspectives_in_article < total_people_in_article - 1: # subtract victims
             logger.warning(f"Article {fname} has fewer perspectives ({perspectives_in_article}) than total people ({total_people_in_article - 1}).")
     logger.info(f"Total number of people identified: {total_num_people}")
@@ -119,6 +120,7 @@ def create_training_dataset_rolling():
     })
     dataset.to_json("data/distillation_data/rolling_training_dataset.json")
     logger.info("Rolling training dataset created successfully.")
+    return dataset
 
 @click.command()
 def create_training_dataset():
@@ -312,6 +314,9 @@ def tokenize_batch_flan_fn(samples):
     model_inputs['labels'] = labels
     return model_inputs
 
+def compute_metrics_flan():
+    pass
+
 @click.command()
 def distill_flant5():
 
@@ -321,11 +326,19 @@ def distill_flant5():
     )
 
     dataset = load_dataset("json", data_files={'train': "data/distillation_data/rolling_training_dataset.json"}, split='train')
+
+    subjects_unique = set(dataset['subject'])
+    train_subjects = set(random.sample(subjects_unique, int(len(subjects_unique) * 0.6)))
+    dev_subjects = set(random.sample(subjects_unique - train_subjects, int(len(subjects_unique) * 0.2)))
+    test_subjects = subjects_unique - train_subjects - dev_subjects
+
+    logger.info(f"Train subjects: {train_subjects}")
+    logger.info(f"Dev subjects: {dev_subjects}")
+    logger.info(f"Test subjects: {test_subjects}")
     # rolling_training_dataset.json
     # split train_dataset into train and validation sets
-    dataset = dataset.train_test_split(test_size=0.1, seed=42)
-    train_dataset = dataset['train']
-    eval_dataset = dataset['test']
+    train_dataset =  dataset.filter(lambda example: example['subject'] in train_subjects)
+    eval_dataset = dataset.filter(lambda example: example['subject'] in dev_subjects)
 
     train_dataset = train_dataset.map(
         preprocess_flan_fn, 
@@ -430,11 +443,12 @@ def assess_ft_flan_model():
         pretrained_model_name_or_path=os.path.join(config['SCRATCH_DIR'], "sympathy_task_1_flan", "checkpoint-1000")
     ).to('cuda')
     dataset = load_dataset("json", data_files={'train': "data/distillation_data/rolling_training_dataset.json"}, split='train')
+    subjects_unique = set(dataset['subject'])
+
     # rolling_training_dataset.json
     # split train_dataset into train and validation sets
-    dataset = dataset.train_test_split(test_size=0.1, seed=42)
-    train_dataset = dataset['train']
-    eval_dataset = dataset['test']
+    train_dataset = dataset['train'].filter(lambda example: example['subject'] in train_subjects)
+    dev_dataset = dataset['train'].filter(lambda example: example['subject'] in dev_subjects)
 
     eval_dataset = eval_dataset.map(
         preprocess_flan_fn, 
@@ -461,7 +475,7 @@ main.add_command(create_training_dataset)
 main.add_command(create_training_dataset_rolling)
 main.add_command(compute_required_memory)
 main.add_command(assess_baseline_ner_model)
-main.add_command(create_training_dataset_rolling)
+# main.add_command(create_training_dataset_rolling)
 main.add_command(assess_ft_flan_model)
 # main.add_command(create_distillation_examples_task1)
 
