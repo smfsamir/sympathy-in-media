@@ -25,7 +25,8 @@ def compute_fastcoref_annotations():
     articles = ["78_Radford James Good Dagger_Global News.json"] # TODO: fill in the 10 articles.
     fcoref_annotations = []
     for article in articles:
-        paragraphs = json.load(f'data/articles/{article}')
+        with open(f'data/articles/{article}', 'r') as f:
+            paragraphs = json.load(f)
         full_text = " ".join(paragraphs)
         paragraph_boundaries = compute_paragraph_boundaries(paragraphs)
         preds = model.predict(texts=[full_text])[0]
