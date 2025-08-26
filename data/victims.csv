@@ -1,0 +1,653 @@
+INCIDENT_DATE,NAME_FIRST,NAME_LAST,NAME_MIDDLE,NICKNAME,AGE,GENDER,RACE,PROVINCE,POLICE_SERVICE,HIGHEST_LEVEL_FORCE
+2000-01-01,Henry,Masuka,Hidaya,,26,Man,Black,ON,Toronto Police Service,Gunshot
+2000-01-07,Long,Hoang,Duy,,28,Man,Asian,AB,Edmonton Police Service,Gunshot
+2000-01-30,Stuart,Mitchell,,,49,Man,Unknown,ON,Toronto Police Service,Physical Force
+2000-04-07,Scott,Reinhard,,,48,Man,Unknown,ON,Peel Regional Police,Gunshot
+2000-04-11,Paulsey,Alphonse,,Paul,67,Man,Indigenous,BC,RCMP,Physical Force
+2000-05-31,Carl,Ouellet,,,34,Man,Unknown,QC,Service de police de la Ville de Montreal,Gunshot
+2000-06-02,David,Melzer,,,33,Man,Unknown,ON,London Police Service,Gunshot
+2000-07-16,Luc,Aubert,,,43,Man,Unknown,QC,Service de police de la Ville de Montreal,Restraint
+2000-07-17,Larry,Campbell,Donald,,52,Man,Unknown,ON,London Police Service,Physical Force
+2000-07-18,Sebastien,McNicoll,,,26,Man,Unknown,QC,Service de police de la Ville de Montreal,Restraint
+2000-08-09,Otto,Vass,,,55,Man,White,ON,Toronto Police Service,Restraint
+2000-08-21,Mladen,Cujko,,,33,Man,Unknown,BC,RCMP,Restraint
+2000-08-26,Norman,Reid,,,43,Man,White,NL,RCMP,Gunshot
+2000-09-21,Kenneth,Holt,Gordon,,39,Man,Unknown,AB,RCMP,Restraint
+2000-10-04,Frank,Hutterer,,,35,Man,White,ON,Ottawa Police Service,Gunshot
+2000-10-16,Darryl,Power,,,23,Man,White,NL,Royal Newfoundland Constabulary,Gunshot
+2000-10-22,Jeffrey,Berg,Michael,,37,Man,White,BC,Vancouver Police Department,Physical Force
+2000-10-30,Robert,Carpenter,Scott,,37,Man,White,ON,Amherstburg Police Service,Gunshot
+2000-12-23,Arthur,Provencal,George,,34,Man,Unknown,AB,Calgary Police Service,Gunshot
+2001-01-14,Maurice,Linklater,,,29,Man,Indigenous,ON,OPP,Gunshot
+2011-02-02,Andreas,Unkerskov-Chinnery,,,19,Man,White,ON,Hamilton Police Service,Gunshot
+2001-04-27,Melvin,Bigsky,,,33,Man,Indigenous,SK,RCMP,Gunshot
+2001-04-29,Allen,Symons,Thomas,,54,Man,Unknown,AB,Lethbridge Police Service,Gunshot
+2001-05-11,Kasim,Cakmak,,,37,Man,Other,AB,Edmonton Police Service,Restraint
+2001-05-16,John,Pavic,Peter,,31,Man,Unknown,AB,Edmonton Police Service,Gunshot
+2001-05-20,Keldon,McMillan,,,33,Man,Indigenous,SK,Saskatoon Police Service,Gunshot
+2001-06-23,Benoit,Aube,Hector,,38,Man,Unknown,ON,Ottawa Police Service,Other
+2001-07-10,Vernon,Crowe,Dale,,32,Man,Indigenous,SK,Regina Police Service,Restraint
+2001-07-23,Frederick,Kirkey,John,Fred,33,Man,White,ON,OPP,Gunshot
+2001-07-29,Mark,Graham,Norman,,38,Man,White,ON,South Simcoe Police,Gunshot
+2001-09-01,Michael,Stochmal,,,35,Man,Unknown,SK,Regina Police Service,Restraint
+2001-10-09,Calvin,McLean,Roy,,43,Man,White,SK,Regina Police Service,Restraint
+2001-11-05,Donald,Miles,Lorne,,34,Man,Indigenous,MB,Winnipeg Police Service,Gunshot
+2001-12-21,Danny,Sand,,,21,Man,Indigenous,SK,RCMP,Gunshot
+2002-02-01,John,Menga,,,29,Man,Unknown,ON,Toronto Police Service,Gunshot
+2002-03-11,Daniel,Lamer,,,37,Man,White,ON,OPP,Gunshot
+2002-05-07,Peter,Francis,,,35,Man,Unknown,ON,Scarborough Police Service,Gunshot
+2002-05-12,Ben,Matson,Robert,,49,Man,White,BC,Vancouver Police Department,Restraint
+2002-06-05,Alexandre,Fortin,,,28,Man,Unknown,QC,Surete du Quebec,Gunshot
+2002-06-23,Nicholas,Blentzas,,,24,Man,White,ON,Toronto Police Service,Restraint
+2002-07-27,Richard,Bellerose,Perry,,30,Man,Unknown,AB,Edmonton Police Service,Restraint
+2002-08-01,Chris,Eklund,James,,33,Man,Unknown,BC,Vancouver Police Department,Restraint
+2002-09-03,James,Hammond,Andrew,,24,Man,Unknown,AB,RCMP,Restraint
+2002-09-04,Michel,Morin,,,43,Man,Unknown,QC,Service de police de la Ville de Montreal,Restraint
+2002-09-04,Tamer,Roha,Sayed,,27,Man,South Asian,AB,Calgary Police Service,Restraint
+2002-09-11,Naytanie,Atadjuat,,,26,Man,Indigenous,NU,RCMP,Gunshot
+2002-09-27,Darrell,Paquette,Raymond,,43,Man,Unknown,BC,RCMP,Restraint
+2002-12-07,Thomas,Stevenson,Evon,,46,Man,White,BC,Vancouver Police Department,Gunshot
+2003-02-05,Douglas,Oliver,Richard,,37,Man,Unknown,AB,Edmonton Police Service,Restraint
+2003-02-06,Edward,McNeil,,,44,Man,Unknown,ON,Toronto Police Service,Restraint
+2003-02-20,Chevranna,Abdi,,,26,Woman,Black,ON,Hamilton Police Service,Physical Force
+2003-02-28,Lorraine,Moon,Sue,,40,Woman,Indigenous,BC,RCMP,Gunshot
+2003-04-20,Terrance,Hanna,Brian,,51,Man,Unknown,BC,RCMP,Taser/CEW
+2003-06-28,Michel,Berniquez,,,45,Man,White,QC,Service de police de la Ville de Montreal,Restraint
+2003-07-14,Keyvan,Tabesh,,,18,Man,White,BC,Port Moody Police Department,Gunshot
+2003-07-21,Clayton,Willey,Alvin,,33,Man,Indigenous,BC,RCMP,Taser/CEW
+2003-08-27,Geronimo,Fobister,,,17,Man,Indigenous,ON,OPP,Gunshot
+2003-09-24,Constant,Bolduc,,,42,Man,Unknown,QC,Service de police de la Ville de Quebec,Physical Force
+2003-09-28,Clark,Whitehouse,,,34,Man,Indigenous,YT,RCMP,Taser/CEW
+2003-10-25,Deng,Kuol,Fermino,,34,Man,Black,AB,Calgary Police Service,Gunshot
+2003-11-15,William,Davidson,,,45,Man,Unknown,ON,OPP,Restraint
+2003-11-29,Lyndon,Valan,Charles,,32,Man,Unknown,BC,RCMP,Restraint
+2004-01-10,Antonio,Bellon,,,63,Man,White,ON,Toronto Police Service,Gunshot
+2004-02-11,Jorge,Giraldo,Ivan,,34,Man,White,QC,Service de police de la Ville de Gatineau,Gunshot
+2004-02-12,Rhonda,Schwartz,Lee,,32,Woman,Unknown,BC,Vancouver Police Department,Restraint
+2004-02-16,Robert,Walker,,,41,Man,White,ON,Toronto Police Service,Intermediate Weapon
+2004-02-21,Rohan,Wilson,,,28,Man,Black,QC,Service de police de la Ville de Montreal,Restraint
+2004-02-24,Joseph,Pagnotta,,,52,Man,Unknown,BC,RCMP,Gunshot
+2004-02-28,Martin,Ostopovich,Charles,,41,Man,White,AB,RCMP,Gunshot
+2004-03-19,Ronald,Perry,Ashley,,28,Man,Unknown,AB,Edmonton Police Service,Taser/CEW
+2004-03-31,Sandy,Salowatfeak,,,30,Man,Indigenous,QC,Kativik Regional Police Force,Gunshot
+2004-04-30,Andrew,Moore,,,35,Man,White,SK,Saskatoon Police Service,Gunshot
+2004-05-01,Roman,Andreichikov,,,25,Man,White,BC,Vancouver Police Department,Restraint
+2004-05-13,Peter,Lamonday,,,33,Male,Black,ON,London Police Service,Taser/CEW
+2004-05-27,Graham,Maryancik,John,,29,Man,White,BC,RCMP,Gunshot
+2004-06-13,Christopher-Reid,O'Brien,,,26,Man,Black,ON,Toronto Police Service,Gunshot
+2004-06-23,Robert,Bagnell,Wayne,,44,Man,White,BC,Vancouver Police Department,Taser/CEW
+2004-06-24,Stephane,Coulombe,,,35,Man,Unknown,QC,Service de police de la Ville de Montreal,Gunshot
+2004-07-02,Benoit,Richer,,,28,Man,White,QC,Service de police de la Ville de Montreal,Gunshot
+2004-07-11,Majencio,Camaso,Daugdaug,,33,Man,Asian,BC,Saanich Police Department,Gunshot
+2004-07-17,Jerry,Knight,,,29,Man,Black,ON,Peel Regional Police,Taser/CEW
+2004-07-25,Sugston,Brookes,Anthony,,45,Man,Black,ON,Toronto Police Service,Gunshot
+2004-08-08,Samuel,Truscott,,,43,Man,Unknown,ON,Kingston Police Services,Taser/CEW
+2004-08-30,Shawn,Martinot,,,38,Man,Unknown,SK,RCMP,Gunshot
+2004-09-29,Dean,Andrusyk,Nicholas,,49,Man,Unknown,BC,Vancouver Police Department,Gunshot
+2004-10-14,Courtney,Peters,,,32,Man,Black,ON,Toronto Police Service,Gunshot
+2004-12-19,Kevin,St. Arnaud,Edmond,,29,Man,White,BC,RCMP,Gunshot
+2004-12-26,Gerald,Chenery,Samuel,,29,Man,Indigenous,BC,Vancouver Police Department,Gunshot
+2005-01-03,Dennis,St. Paul,Junior,,30,Man,Indigenous,MB,RCMP,Gunshot
+2005-01-14,Paulo,Medeiros,,,34,Man,Unknown,ON,Toronto Police Service,Restraint
+2005-01-21,Harjinder,Cheema,Singh,,30,Man,South Asian,AB,Calgary Police Service,Gunshot
+2005-01-31,Matthew,Dumas,Adam Joseph,,18,Man,Indigenous,MB,Winnipeg Police Service,Gunshot
+2005-02-21,Adeyeri,Robinson,,,37,Man,Black,ON,Toronto Police Service,Restraint
+2005-03-06,Elyas,Bariali,,,29,Man,Arab,ON,Durham Regional Police Service,Gunshot
+2005-03-06,Michel,Weeds,,,39,Man,Unknown,QC,Service de police de l'agglomeration de Longueuil,Gunshot
+2005-03-11,Daniel,Lippa,,,29,Man,Unknown,AB,Edmonton Police Service,Gunshot
+2005-04-12,Adam,Steele,,,24,Man,Unknown,ON,Waterloo Regional Police Service,Restraint
+2005-04-19,Robert,Gourley,,,46,Man,Unknown,ON,Toronto Police Service,Restraint
+2005-05-05,Kevin,Geldart,,,34,Man,White,NB,RCMP,Restraint
+2005-05-11,David,Noble,,Dave,42,Man,Unknown,ON,Durham Regional Police Service,Gunshot
+2005-05-27,Ucal,Lauzon,,,34,Man,Unknown,ON,Toronto Police Service,Gunshot
+2005-06-05,Stephane,Michaud,,,43,Man,White,ON,Ottawa Police Service,Restraint
+2005-06-27,Stephen,Hanaghan,Mace,,45,Man,White,BC,RCMP,Gunshot
+2005-06-30,Gurmit,Sandhu,Singh,,41,Man,South Asian,BC,RCMP,Taser/CEW
+2005-07-01,James,Foldi,,,39,Man,White,ON,Niagara Regional Police Service,Taser/CEW
+2005-07-04,Maurice,Leblanc,,,59,Man,Unknown,QC,Service de police de la Ville de Montreal,Gunshot
+2005-07-15,Paul,Saulnier,Sheldon,,42,Man,White,NS,RCMP,Taser/CEW
+2005-08-11,Robert,Gregory,Mansfield,,70,Man,White,NS,RCMP,Gunshot
+2005-08-23,Kyle,Tait,Andrew,,16,Man,Indigenous,BC,New Westminster Police Service,Gunshot
+2005-09-29,Gilles,Lamy,,,62,Man,White,QC,Surete du Quebec,Gunshot
+2005-10-18,Jeffrey,Black,,,21,Man,White,ON,York Regional Police,Gunshot
+2005-10-29,Ian,Bush,Geoffrey,,22,Man,White,BC,RCMP,Gunshot
+2005-10-29,Michael,Kolisnyk,,,51,Man,Unknown,ON,Thunder Bay Police Service,Gunshot
+2005-11-05,Jason,Steacy,,,20,Man,White,ON,OPP,Gunshot
+2005-12-01,Mohamed,Bennis,Anas,,25,Man,Arab,QC,Service de police de la Ville de Montreal,Gunshot
+2005-12-02,Howard,Fleury,Glenn,,34,Man,Indigenous,MB,Winnipeg Police Service,Gunshot
+2005-12-24,Alessandro,Fiacco,,,33,Man,White,AB,Edmonton Police Service,Taser/CEW
+2005-12-30,Zunga,Bashir,Ramadan,,21,Man,Black,MB,Winnipeg Police Service,Gunshot
+2006-01-16,Rajesh,Owaan,,,21,Man,South Asian,ON,Peel Regional Police,Gunshot
+2006-03-18,Andrew,Osidacz,,,41,Man,White,ON,Brantford Police Service,Gunshot
+2006-03-26,Ted,Meiorin,James,,40,Man,Unknown,AB,RCMP,Restraint
+2006-04-05,Bryan,Dukic,,,42,Man,White,ON,Windsor Police Service,Physical Force
+2006-04-13,Shelton,McKenzie,,,21,Man,Black,ON,York Regional Police,Gunshot
+2006-04-17,Ronald,Smith,,,54,Man,Unknown,ON,Peel Regional Police,Gunshot
+2006-05-19,Jay,Louis,Douglas,,35,Man,Indigenous,BC,RCMP,Restraint
+2006-05-21,Jeffrey,Reodica,,,17,Man,Asian,ON,Toronto Police Service,Gunshot
+2006-06-07,Derrick,Madrusan,Patrick,,38,Man,White,BC,RCMP,Restraint
+2006-06-14,Yves,Beauchamp,,,53,Man,White,QC,Surete du Quebec,Gunshot
+2006-06-20,Duane,Christian,,,15,Man,Black,ON,Toronto Police Service,Gunshot
+2006-06-30,Darren,Cardinal,James,,27,Man,Black,AB,Edmonton Police Service,Gunshot
+2006-07-08,Mark,Milakovic,John,,25,Man,White,AB,Edmonton Police Service,Physical Force
+2006-08-10,Jason,Doan,Wayne,,28,Man,White,AB,RCMP,Restraint
+2006-08-13,Donald,Lewis,Dwayne,,43,Man,White,BC,RCMP,Gunshot
+2006-09-07,Evan,Arnold,,,26,Man,White,ON,York Regional Police,Gunshot
+2006-09-12,Mitchell,Koh,,,34,Man,Asian,ON,London Police Service,Restraint
+2006-10-12,Daniel,King,Antony,,37,Man,White,BC,"New Westminster Police Service, RCMP",Gunshot
+2006-11-12,Jasen,Drnasin,,,32,Man,White,ON,Toronto Police Service,Restraint
+2006-11-13,Delbert,Pelletier,Kenneth,,44,Man,Indigenous,SK,RCMP,Gunshot
+2007-02-03,John,Seguin,James Lionel,,37,Man,Unknown,BC,Victoria Police Department,Gunshot
+2007-03-07,Michael,Douglas,,,35,Man,Unknown,ON,Sarnia Police Services,Gunshot
+2007-03-27,Ahmad,Saleh-Azad,,,61,Man,Arab,MB,Winnipeg Police Service,Gunshot
+2007-03-27,Cristian,Iordache,,,37,Man,White,ON,Toronto Police Service,Gunshot
+2007-04-06,Soun,Saing,,,46,Man,Asian,ON,Hamilton Police Service,Gunshot
+2007-04-07,Lise,Hemond,,,43,Woman,White,QC,Surete du Quebec,Restraint
+2007-04-07,Michael,Foster,,,24,Man,White,ON,OPP,Gunshot
+2007-04-25,Oumar,Thiam,,,43,Man,Black,QC,Surete du Quebec,Gunshot
+2007-05-11,Normand,Jeanveau,,,37,Man,White,ON,Greater Sudbury Police Service,Restraint
+2007-06-01,Ghyslain,Trepanier,,,52,Man,White,QC,Service de police de la Ville de Quebec,Gunshot
+2007-07-09,Vianney,Charest,,,51,Man,Unknown,QC,Service de police de la Ville de Montreal,Gunshot
+2007-07-25,Orlando,Rotolo,Vince,,29,Man,Unknown,ON,Niagara Regional Police Service,Physical Force
+2007-08-13,Paul,Boyd,Glenn,,39,Man,White,BC,Vancouver Police Department,Gunshot
+2007-08-27,Stefan,Stritzkowski,,,36,Man,White,QC,Surete du Quebec,Gunshot
+2007-08-28,Larry,McPherson,Lee,,31,Man,Unknown,BC,RCMP,Physical Force
+2007-09-02,Daniel,Hong-Ross,,,40,Man,Unknown,BC,Vancouver Police Department,Restraint
+2007-09-26,Steven,Berthiaume,,,41,Man,White,QC,Surete du Quebec,Gunshot
+2007-10-14,Quilem,Registre,,,38,Man,Black,QC,Service de police de la Ville de Montreal,Taser/CEW
+2007-10-14,Robert,Dziekanski,,,40,Man,White,BC,RCMP,Taser/CEW
+2007-10-31,Alwy,Al-Nadhir,Al,,18,Man,Black,ON,Toronto Police Service,Gunshot
+2007-11-18,Chum,Yim,,,31,Man,Unknown,ON,Toronto Police Service,Intermediate Weapon
+2007-11-19,Robert,Knipstrom,Thurston,,36,Man,White,BC,RCMP,Restraint
+2007-11-20,Trevor,Graham,Colin,,26,Man,White,ON,Waterloo Regional Police Service,Gunshot
+2007-12-01,Steve,Remian,,,38,Man,White,ON,Halton Regional Police Service,Gunshot
+2007-12-10,Reuben,Coleman,Simeon,,21,Man,Unknown,BC,Vancouver Police Department,Gunshot
+2007-12-17,Roy,Bell,Thomas,,42,Man,White,MB,Winnipeg Police Service,Gunshot
+2007-12-22,Dwayne,Dustyhorn,Charles,,38,Man,Indigenous,SK,Saskatoon Police Service,Gunshot
+2007-12-27,Christopher,Klim,Paul,,24,Man,White,BC,RCMP,Gunshot
+2008-01-21,Gilles,Cloutier,,,43,Man,White,QC,Surete du Quebec,Gunshot
+2008-02-16,Byron,Debassige,,,28,Man,Indigenous,ON,Toronto Police Service,Gunshot
+2008-03-08,David,Fetterly,,,42,Man,Black,ON,Toronto Police Service,Gunshot
+2008-03-18,Jacqueline,Montgrand,,,44,Woman,Indigenous,SK,Prince Albert Police Service,Gunshot
+2008-06-08,David,Stevens,Troy,,27,Man,White,ON,Kawartha Lakes Police Service,Restraint
+2008-06-14,Kenneth,Standingready-McKay,Chase Wilfred,,21,Man,Indigenous,SK,RCMP,Gunshot
+2008-06-17,David,Stitt,James,,46,Man,White,BC,RCMP,Restraint
+2008-06-23,Jeffrey,Marreel,Mark,,36,Man,White,ON,OPP,Restraint
+2008-06-27,Ryan,Wagemans,Alexander,,24,Man,Unknown,BC,RCMP,Restraint
+2008-06-28,David,Leclair,,,35,Man,White,QC,Service de police de la Ville de Gatineau,Gunshot
+2008-07-12,Leo,Poulin,Raymond,,59,Man,White,AB,RCMP,Gunshot
+2008-07-22,Michael,Langan,Brian,,17,Man,Indigenous,MB,Winnipeg Police Service,Taser/CEW
+2008-07-31,Brandon,Whitelaw,Norman,,22,Man,White,BC,RCMP,Physical Force
+2008-08-02,Craig,McDougall,Vincent,,26,Man,Indigenous,MB,Winnipeg Police Service,Gunshot
+2008-08-09,Fredy,Villanueva,,,18,Man,Latin American,QC,Service de police de la Ville de Montreal,Gunshot
+2008-08-30,Grant,McLeod,Edwin,,39,Man,Unknown,YT,RCMP,Restraint
+2008-09-02,Harry,Haineault,,,38,Man,Indigenous,SK,RCMP,Gunshot
+2008-09-04,Walid,Maragan,Mohamed,,35,Man,Black,AB,Calgary Police Service,Gunshot
+2008-09-30,Frank,Frechette,Jonathan,,49,Man,White,BC,RCMP,Taser/CEW
+2008-10-29,Trevor,Grimolfson,Ashely Brent,,38,Man,White,AB,Edmonton Police Service,Restraint
+2008-11-01,Gordon,Bowe,Walker,,30,Man,White,AB,Calgary Police Service,Restraint
+2008-11-29,Gino,Petralia,,,47,Man,Unknown,ON,Durham Regional Police Service,Gunshot
+2008-11-29,Nathan,Boryskavich,Michael,,43,Man,White,MB,RCMP,Physical Force
+2008-12-02,John,Simon,,,44,Man,Indigenous,NS,RCMP,Gunshot
+2008-12-21,Gregory,Moynagh,,,25,Man,White,ON,Peel Regional Police,Gunshot
+2009-01-20,Benjamin,Wood,,,32,Man,White,ON,Brantford Police Service,Restraint
+2009-01-31,Johnny,Michel-Dumont Jr.,,,19,Man,Indigenous,QC,Anishnabe Takonewini Police Service,Gunshot
+2009-02-03,Douglas,Heagle,,,38,Man,Indigenous,ON,Midland Police Service,Gunshot
+2009-02-10,Gordon,Wilson,,,48,Man,Unknown,BC,RCMP,Gunshot
+2009-03-01,Derek,Welton,Wayne,,39,Man,White,BC,RCMP,Gunshot
+2009-03-06,Paul,Jeffrey,Michael,Michael,27,Man,White,ON,Ottawa Police Service,Gunshot
+2009-03-18,Travis,Oakes,Douglas,,33,Man,Unknown,AB,Calgary Police Service,Gunshot
+2009-03-20,Michael,Hubbard,Vann,,58,Man,White,BC,Vancouver Police Department,Gunshot
+2009-04-22,Richard,Bastien,,,43,Man,Unknown,ON,Ottawa Police Service,Gunshot
+2009-05-06,Grant,Prentice,William,,40,Man,White,AB,RCMP,Restraint
+2009-05-10,Shawn,Price,Michael,,36,Man,White,AB,Edmonton Police Service,Gunshot
+2009-05-24,Melvin,Vanhouwe,Donald,,49,Man,Unknown,AB,Calgary Police Service,Gunshot
+2009-06-22,Douglas,Minty,,,59,Man,White,ON,OPP,Gunshot
+2009-06-24,Levi,Schaeffer,,,30,Man,White,ON,OPP,Gunshot
+2009-07-03,Phillip,Charbonneau,Jeffrey,,35,Man,White,ON,OPP,Gunshot
+2009-07-05,Dennis,Melton,Albert,,48,Man,White,ON,Barrie Police Services,Gunshot
+2009-07-12,John,Rice,Ian,,38,Man,Unknown,BC,Victoria Police Department,Restraint
+2009-07-14,Kenneth,Baines,Keith,,46,Man,White,BC,RCMP,Gunshot
+2009-08-26,Jean-Claude,Raymond Jr.,,,29,Man,White,QC,Surete du Quebec,Gunshot
+2009-09-18,Eugene,Knight,Anthony,,47,Man,Black,BC,Vancouver Police Department,Gunshot
+2009-09-26,Rodney,Jackson,Shayne,,35,Man,Indigenous,BC,RCMP,Gunshot
+2009-09-30,Valeri,George,,,41,Man,White,BC,RCMP,Gunshot
+2009-10-23,Jeffrey,Hughes,Scott,,48,Man,White,BC,RCMP,Gunshot
+2009-11-08,Eric,Therrien,,,35,Male,White,QC,Sûreté du Québec,Gunshot
+2009-12-27,Paul,Daniel,,,34,Man,Unknown,ON,Toronto Police Service,Gunshot
+2010-01-01,Angela,Lavoie,,,47,Woman,Indigenous,QC,Police de Trois-Rivieres,Gunshot
+2010-01-09,Matthew,Wilcox,John,,39,Man,White,BC,RCMP,Gunshot
+2010-01-16,Bernadette,Auger,Mabel,,48,Woman,Indigenous,AB,Edmonton Police Service,Gunshot
+2010-01-18,Adam,Murray,,,26,Man,White,QC,Service de police de la Ville de Laval,Gunshot
+2010-03-07,Eric,Daniels,,,28,Man,Indigenous,MB,Winnipeg Police Service,Gunshot
+2010-03-08,Fred,Preston,,,70,Man,White,ON,OPP,Gunshot
+2010-04-19,Wieslaw,Duda,,,50,Man,White,ON,Toronto Police Service,Gunshot
+2010-05-05,Junior,Manon,Alexander,,18,Man,Black,ON,Toronto Police Service,Physical Force
+2010-05-09,Brian,Gray,,,39,Man,Indigenous,ON,OPP,Gunshot
+2010-05-09,Lance,Muir,Trevor,,42,Man,Indigenous,MB,Winnipeg Police Service,Gunshot
+2010-05-10,Darren,Burnside,,,24,Man,White,ON,OPP,Gunshot
+2010-05-19,Ropinder,Gill,Singh,,30,Man,South Asian,BC,RCMP,Restraint
+2010-06-22,Bikermanjit,Kooner,Singh,Victor,39,Man,South Asian,BC,RCMP,Restraint
+2010-06-24,Aron,Firman,,,27,Man,White,ON,OPP,Taser/CEW
+2010-07-09,Jason,Diffner,Brent,,37,Man,Unknown,BC,RCMP,Restraint
+2010-07-18,Corey,Lewis,Jason,,39,Man,White,AB,RCMP,Gunshot
+2010-07-30,Wilbert,Bartley,Douglas Ross,,50,Man,White,BC,RCMP,Gunshot
+2010-08-06,Jeffrey,Wright,James,Alvin,22,Man,White,BC,RCMP,Gunshot
+2010-08-08,Logan,Schaafsma,Andrew John,,20,Man,Unknown,ON,London Police Service,Restraint
+2010-08-25,Evan,Jones,,,18,Man,White,ON,Brantford Police Service,Gunshot
+2010-08-28,Reyal,Jardine-Douglas,Jensen,,25,Man,Black,ON,Toronto Police Service,Gunshot
+2010-09-09,Romeo,Wesley,,,34,Man,Indigenous,ON,Nishnawbe-Aski Police Service,Restraint
+2010-09-29,Eric,Osawe,,,26,Man,Black,ON,Toronto Police Service,Gunshot
+2010-10-06,Donald,Rancourt,,,49,Man,White,QC,"RCMP, Surete du Quebec",Gunshot
+2010-10-21,Eric,Page,,,34,Man,Unknown,QC,Surete du Quebec,Gunshot
+2010-10-23,Amit,Krishna,,,28,Man,South Asian,ON,Toronto Police Service,Gunshot
+2010-11-20,Bernard,Giroux Jr.,Emery,,37,Man,Indigenous,AB,RCMP,Gunshot
+2010-11-27,Henri,Rodgers,,,69,Man,White,QC,Surete du Quebec,Gunshot
+2010-12-29,Marcel,Tranchemontagne,Leonard,,46,Man,White,ON,Greater Sudbury Police Service,Gunshot
+2011-01-10,Jean,Boucher,Steven,,63,Man,White,AB,"Lake Shore Regional Police Service, RCMP",Gunshot
+2011-01-16,Murray,McCoy,Francis,,56,Man,Unknown,AB,RCMP,Gunshot
+2011-01-26,Jean-Claude,Lemay,,,48,Man,White,QC,Service de police de la Ville de Montreal,Gunshot
+2011-02-05,Cyrus,Green,,,17,Man,Indigenous,AB,Edmonton Police Service,Gunshot
+2011-02-06,Patrick,Saulnier,,,27,Man,White,QC,Service de police de la Ville de Montreal,Gunshot
+2011-03-02,Adam,Purdie,Brian,,28,Man,White,BC,RCMP,Gunshot
+2011-03-12,Carl,Kim,,,34,Man,Asian,ON,Halton Regional Police Service,Gunshot
+2011-03-14,Paul,Duck,Leonard,,52,Man,Indigenous,MB,RCMP,Gunshot
+2011-03-16,Ahmad,Abdallah,,,24,Man,Unknown,AB,RCMP,Gunshot
+2011-03-23,Brendon,Beddow,Samuel,,23,Man,White,BC,RCMP,Gunshot
+2011-03-27,Sylvain,Gaudet,,,49,Man,Unknown,QC,Service de police de Terrebonne,Gunshot
+2011-03-31,Kinling,Fire,Robin,,39,Man,Indigenous,AB,Edmonton Police Service,Gunshot
+2011-04-10,Alain,Moisan,,,52,Man,White,QC,Surete du Quebec,Gunshot
+2011-06-07,Mario,Hamel,,,40,Man,White,QC,Service de police de la Ville de Montreal,Gunshot
+2011-06-07,Patrick,Limoges,,,36,Man,White,QC,Service de police de la Ville de Montreal,Gunshot
+2011-06-10,Corwin,Peeace,Allan,Corey,40,Man,Indigenous,AB,Calgary Police Service,Gunshot
+2011-06-11,Julien,Gaudreau,,,25,Man,White,QC,Service de police de la Ville de Montreal,Restraint
+2011-06-22,Corey,Armstrong,Aaron,,21,Man,Black,ON,Peterborough Lakefield Community Police Force,Gunshot
+2011-07-01,Christopher,Kampman,Leslie,,37,Man,Other,BC,Abbotsford Police Department,Restraint
+2011-07-22,Darrell,Barnes,Elroy,,48,Man,White,BC,Vancouver Police Department,Gunshot
+2011-07-25,Keith,Prescod,,,53,Man,Black,ON,Peel Regional Police,Restraint
+2011-07-30,Anthony,Murray,Kevin,Kevin,30,Man,Black,ON,Toronto Police Service,Gunshot
+2011-08-01,Charles,McGillivary,,Charlie,45,Man,White,ON,Toronto Police Service,Restraint
+2011-08-01,Kaveh,Tabatabaei,Sabouri,,49,Man,Other,ON,York Regional Police,Gunshot
+2011-08-11,Jonathan,Rawlings,George,,36,Man,White,AB,Calgary Police Service,Gunshot
+2011-09-24,Justin,Zinser,Larry James,,23,Man,White,BC,RCMP,Gunshot
+2011-10-03,Gaétan,Plante,,,48,Man,Unknown,QC,Service de police de la Ville de Quebec,Gunshot
+2011-10-07,Sylvia,Klibingaitis,,,52,Woman,White,ON,Toronto Police Service,Gunshot
+2011-10-20,Peter,Spiewak,Dominik,,31,Man,White,AB,Calgary Police Service,Gunshot
+2012-01-06,Farshad,Mohammadi,,,34,Man,Other,QC,Service de police de la Ville de Montreal,Gunshot
+2012-01-11,Darby,Mahon,,,49,Man,Unknown,AB,RCMP,Gunshot
+2012-01-12,Kyle,Newman,,,43,Man,White,ON,Halton Regional Police Service,Gunshot
+2012-02-03,Michael,Eligon,,,29,Man,Black,ON,Toronto Police Service,Gunshot
+2012-02-13,Phonesay,Chanthachak,,,27,Man,Asian,ON,Hamilton Police Service,Gunshot
+2012-02-16,Jean-Francois,Nadreau,,,30,Man,White,QC,Service de police de la Ville de Montreal,Gunshot
+2012-02-20,Frank,Berry,Anthony,,48,Man,Black,ON,Toronto Police Service,Gunshot
+2012-02-28,Mikel,Dallaire,,,23,Man,White,QC,Service de securite publique de Saguenay,Gunshot
+2012-03-14,Karen,Lander,,,42,Woman,Indigenous,NT,RCMP,Gunshot
+2012-03-20,Felix,Taqqaugaq,,,30,Man,Indigenous,NU,RCMP,Gunshot
+2012-04-20,Peter,Lumanglas,,,38,Man,Asian,ON,Toronto Police Service,Gunshot
+2012-04-27,Louis,Soles,Charles,Lou,52,Man,White,ON,OPP,Gunshot
+2012-05-02,Matthew,Roke,,,33,Man,White,ON,OPP,Gunshot
+2012-05-06,Frederick,Guay,,,35,Man,White,QC,Surete du Quebec,Gunshot
+2012-05-30,Angus,Mitchell,David,,26,Man,White,BC,RCMP,Gunshot
+2012-07-15,Deu,Puri,Raj,,26,Man,Asian,AB,Lethbridge Police Service,Gunshot
+2012-07-18,Russell,Skoropad,Mark,,43,Man,White,AB,RCMP,Gunshot
+2012-09-10,Gregory,Matters,John,Greg,40,Man,White,BC,RCMP,Gunshot
+2012-10-29,Christopher,Ray,Lewis,,52,Man,White,BC,Vancouver Police Department,Gunshot
+2012-11-08,Mehrdad,Bayrami,,,48,Man,South Asian,BC,Delta Police Department,Gunshot
+2012-11-13,Alton,Cuyugan,Bernard,,33,Man,Asian,BC,Vancouver Police Department,Taser/CEW
+2012-12-11,Michael,Bronaugh,Benjamin,Mike Grisch,24,Man,White,AB,Edmonton Police Service,Gunshot
+2013-01-31,Ryan,Jacob,Allen Walter,,45,Man,Indigenous,BC,RCMP,Gunshot
+2013-02-07,Anthony,Parro,James,,41,Man,White,ON,OPP,Gunshot
+2013-04-26,Donald,Thompson,Percival,,50,Man,Black,ON,Toronto Police Service,Gunshot
+2013-06-07,Mladen,Mesic,,Steve,45,Man,White,ON,Hamilton Police Service,Gunshot
+2013-06-08,Malcolm,Jackman,,,39,Man,Black,ON,Toronto Police Service,Gunshot
+2013-06-21,Christopher,Coffey,John,,46,Man,White,ON,Saugeen Shores Police Service,Physical Force
+2013-07-09,Ryan,Natomagan-Nelson,,,26,Man,Indigenous,SK,Prince Albert Police Service,Gunshot
+2013-07-13,Daniel,Levesque,,,30,Man,White,NB,RCMP,Gunshot
+2013-07-25,Bob,Srigley,,,45,Man,White,ON,OPP,Gunshot
+2013-07-26,Robert,Henault,,,70,Man,White,QC,Service de police de la Ville de Montreal,Gunshot
+2013-07-27,Sammy,Yatim,,,18,Man,Arab,ON,Toronto Police Service,Gunshot
+2013-07-31,Abraham,Havis,Isidore,,71,Man,White,QC,Service de police de la Ville de Montreal,Intermediate Weapon
+2013-08-02,Marc-Andre,Fontaine,,,27,Man,White,AB,RCMP,Restraint
+2013-08-03,Lance,Cutarm,,,30,Man,Indigenous,AB,RCMP,Gunshot
+2013-08-15,Daniel,Charland,,,52,Man,Indigenous,AB,RCMP,Gunshot
+2013-08-17,Noah,Qiluqi,,,54,Man,Indigenous,QC,Kativik Regional Police Force,Gunshot
+2013-09-11,Gerald,Lord,,,42,Man,White,SK,RCMP,Gunshot
+2013-10-24,Simon,Chung,,,39,Man,Asian,AB,Edmonton Police Service,Restraint
+2013-11-11,Donald,Menard,,,41,Man,White,QC,Service de police de la Ville de Montreal,Taser/CEW
+2013-11-13,Ian,Pryce,,,30,Man,Black,ON,Toronto Police Service,Gunshot
+2013-11-17,Alexander,Tughan,,Alex,22,Man,White,ON,Halton Regional Police Service,Gunshot
+2013-12-02,Michael,MacIsaac,,,47,Man,White,ON,Durham Regional Police Service,Gunshot
+2014-01-17,Gaetan,Plante,Gilbert,,61,Man,Unknown,BC,RCMP,Gunshot
+2014-01-22,David-Hughes,Lacour,,,17,Man,White,QC,Surete du Quebec,Gunshot
+2014-02-03,Alain,Magloire,,,41,Man,Black,QC,Service de police de la Ville de Montreal,Gunshot
+2014-02-28,Jason,Roy,Gary,,34,Man,White,AB,Calgary Police Service,Gunshot
+2014-02-28,William,McCaffrey,David,,26,Man,Unknown,NB,Kennebecasis Regional Police Force,Gunshot
+2014-03-22,Christopher,Arkell,,,50,Man,Unknown,AB,"Medicine Hat Police Service, RCMP",Gunshot
+2014-03-28,Charnjit,Bassi,Singh,,45,Man,South Asian,ON,Peel Regional Police,Gunshot
+2014-04-12,John,Ross,Caleb,,21,Man,White,ON,York Regional Police,Gunshot
+2014-05-09,John,Quadros,Carlos,,55,Man,White,AB,RCMP,Gunshot
+2014-05-09,Mathieu,Perron,,,35,Man,White,QC,Service de police de la Ville de Quebec,Gunshot
+2014-05-11,David,Sandaker,Charles,,24,Man,White,AB,Edmonton Police Service,Gunshot
+2014-06-04,Maurizio,Facchin,Angelo,,50,Man,White,BC,RCMP,Restraint
+2014-09-17,John,Buehler,Robert,,51,Man,Unknown,BC,RCMP,Gunshot
+2014-09-24,Jermaine,Carby,,,33,Man,Black,ON,Peel Regional Police,Gunshot
+2014-10-14,Peter,de Groot,,,45,Man,White,BC,RCMP,Gunshot
+2014-10-20,Martin,Couture-Rouleau,,,25,Man,White,QC,Regie intermunicipale de police de Saint-Jean-sur-Richelieu,Gunshot
+2014-10-22,Michael,Zehaf-Bibeau,,,32,Man,Arab,ON,"RCMP, Parlimentary Security",Gunshot
+2014-10-31,Ryan,Sommers,Daniel,,30,Man,Unknown,AB,Calgary Police Service,Gunshot
+2014-11-01,Rhett,Mutch,Patrick Victor,,20,Man,White,BC,Victoria Police Department,Gunshot
+2014-11-12,Trevor,Proudman,,,32,Man,White,AB,Edmonton Police Service,Restraint
+2014-11-22,Phuong Na,Du,,Tony,51,Man,Asian,BC,Vancouver Police Department,Gunshot
+2014-12-28,Naverone,Woods,Christian Landon,,23,Man,Indigenous,BC,South Coast British Columbia Transit Authority Police Service,Gunshot
+2014-12-31,Daniel,Clause,,,33,Man,White,ON,Toronto Police Service,Gunshot
+2015-01-02,James,Houg,,,19,Man,Unknown,AB,RCMP,Gunshot
+2015-01-12,Michel,Vienneau,,,51,Man,White,NB,Bathurst Police Force,Gunshot
+2015-01-29,Waylon,Edey,Jesse,,39,Man,White,BC,RCMP,Gunshot
+2015-02-11,Kevin,Mukuyama,Seiji,,42,Man,Asian,BC,RCMP,Restraint
+2015-02-15,Jacobus,Jonker,,,53,Man,White,BC,RCMP,Restraint
+2015-02-18,David,Doucette,Andrew,,49,Man,White,ON,Toronto Police Service,Gunshot
+2015-03-16,Anthony,Heffernan,,,27,Man,White,AB,Calgary Police Service,Gunshot
+2015-03-20,Marc,Ekamba-Boekwa,,,22,Man,Black,ON,Peel Regional Police,Gunshot
+2015-03-29,Travis,Rood,,,35,Man,White,BC,RCMP,Gunshot
+2015-04-02,Beau,Baker,,,20,Man,White,ON,Waterloo Regional Police Service,Gunshot
+2015-04-04,Cody,Cole,,,23,Man,White,ON,Peterborough Police Service,Gunshot
+2015-04-05,Don,Dunphy,,,59,Man,White,NL,Royal Newfoundland Constabulary,Gunshot
+2015-04-09,Abdi,Hirsi,Gani Mahamud,,26,Man,Black,BC,Vancouver Police Department,Gunshot
+2015-05-11,Sammy,Alook,George,,29,Man,Indigenous,AB,RCMP,Restraint
+2015-05-18,Michael,Perreault,David,,31,Man,White,AB,Edmonton Police Service,Gunshot
+2015-05-20,Brandon,Duncan,Scott,,36,Man,White,ON,Guelph Police Service,Gunshot
+2015-05-22,Bradley,Perrott,,,47,Man,Unknown,AB,RCMP,Gunshot
+2015-05-31,Rene,Gallant,,,45,Man,Black,QC,Service de police de la Ville de Montreal,Gunshot
+2015-07-05,Andrew,Loku,,,45,Man,Black,ON,Toronto Police Service,Gunshot
+2015-07-08,James,Butters,Reginald,James Hayward,24,Man,Indigenous,BC,RCMP,Gunshot
+2015-07-16,James,McIntyre,Daniel,,48,Man,Indigenous,BC,RCMP,Gunshot
+2015-07-18,Hudson,Brooks,Daryl Willis,,20,Man,White,BC,RCMP,Gunshot
+2015-07-25,Kwasi,Skene-Peters,,,21,Man,Black,ON,Toronto Police Service,Gunshot
+2015-08-13,Myles,Gray,Thomas,,33,Man,White,BC,Vancouver Police Department,Restraint
+2015-09-18,Kenneth,Hanna,Robert,,48,Man,Unknown,BC,RCMP,Gunshot
+2015-09-20,Haki,Sefa,,,44,Man,White,MB,Winnipeg Police Service,Gunshot
+2015-11-06,Mark,Dicesare,,,24,Man,White,MB,Winnipeg Police Service,Gunshot
+2015-11-06,Rodrigo,Gonzalez,Hector Almonacid,,43,Man,Latin American,ON,Toronto Police Service,Taser/CEW
+2015-11-16,Brandon,Maurice,,,17,Man,White,QC,Surete du Quebec,Gunshot
+2015-11-21,Steven,Campbell,Douglas,,39,Man,White,MB,RCMP,Gunshot
+2015-12-02,Mathieu,Levesque,,,25,Man,White,QC,Regie intermunicipale de police de Saint-Jean-sur-Richelieu,Gunshot
+2015-12-07,Marcel,Moisan,Henry,,49,Man,White,AB,Edmonton Police Service,Restraint
+2015-12-25,Russell,Pohl,Edward,,37,Man,Unknown,AB,RCMP,Gunshot
+2015-12-27,Philippe-Charles,Leclerc,,,17,Man,Black,QC,Regie intermunicipale de police Roussillon,Gunshot
+2016-01-16,Gerald,Rattu,,,59,Man,White,ON,Durham Regional Police Service,Gunshot
+2016-01-21,Jean,Philippon,,,52,Man,White,QC,Regie intermunicipale de police du Lac-des-Deux-Montagnes,Gunshot
+2016-01-24,David,McQueen,William,,53,Man,White,AB,Calgary Police Service,Gunshot
+2016-02-02,Alexandre,Boucher,,,19,Man,White,ON,Toronto Police Service,Other
+2016-03-02,Marvel,Woodhouse,,,53,Man,Indigenous,BC,RCMP,Restraint
+2016-03-04,Devon,LaFleur,,,30,Man,White,ON,Toronto Police Service,Gunshot
+2016-03-13,Sylvain,Beauchamp,,,53,Man,White,QC,Service de police de la Ville de Montreal,Restraint
+2016-03-14,Alex,Wettlaufer,,,21,Man,White,ON,Toronto Police Service,Gunshot
+2016-03-18,Jean,Roussel,,,43,Man,White,QC,Securite publique de Saguenay,Gunshot
+2016-03-19,Dave,Tremblay,,,27,Man,White,QC,Surete du Quebec,Gunshot
+2016-03-31,Bony,Jean-Pierre,,,46,Man,Black,QC,Service de police de la Ville de Montreal,Intermediate Weapon
+2016-04-06,Lindsey,Gauthier,Harvey,,45,Man,White,BC,RCMP,Restraint
+2016-04-06,Sandy,Michel,Tarzan,,25,Man,Indigenous,QC,Anishnabe Takonewini Police Service,Gunshot
+2016-04-21,Jovan,Williams,,,39,Man,Indigenous,BC,RCMP,Gunshot
+2016-04-21,Shirley,Williams,Beatrice,,77,Woman,White,BC,RCMP,Gunshot
+2016-04-25,Andre,Benjamin,,,63,Man,White,QC,Service de police de la Ville de Montreal,Gunshot
+2016-06-14,Craig,Ford,Andrew,,49,Man,White,BC,RCMP,Gunshot
+2016-07-09,Simon,Simard,,,27,Man,White,QC,Surete du Quebec,Gunshot
+2016-07-15,Sanjai,Prasad,,,41,Man,South Asian,AB,Calgary Police Service,Gunshot
+2016-07-24,Abdirahman,Abdi,,,37,Man,Black,ON,Ottawa Police Service,Physical Force
+2016-08-10,Aaron,Driver,,,24,Man,White,ON,RCMP,Gunshot
+2016-08-18,Nicolas,Jeppesen,Allan,Nik,29,Man,White,BC,RCMP,Taser/CEW
+2016-08-26,David,Bouffard,,,41,Man,White,QC,Surete du Quebec,Gunshot
+2016-09-07,Debralee,Chrisjohn,,,39,Woman,Indigenous,ON,"OPP, London Police Service",Restraint
+2016-09-19,Stephane,Thiffault,,,55,Man,Unknown,QC,Surete du Quebec,Gunshot
+2016-09-30,Anthony,Divers,,,36,Man,White,ON,Hamilton Police Service,Gunshot
+2016-10-02,Chad,Murphy,,,45,Man,White,QC,Surete du Quebec,Gunshot
+2016-10-03,Francis,Dupont-Rivard,,,29,Man,White,QC,Surete du Quebec,Restraint
+2016-10-06,Danny,Lafrance-Godmer,,,29,Man,White,QC,Surete du Quebec,Gunshot
+2016-10-06,Joshua,Megeney,,,28,Man,White,SK,Saskatoon Police Service,Gunshot
+2016-10-11,Robert,Crowle,,Bob,76,Man,White,AB,Calgary Police Service,Gunshot
+2016-11-04,Rui,Nabico,,,31,Man,Latin American,ON,Toronto Police Service,Taser/CEW
+2016-11-10,Daniel,Rintoul,Peter,,38,Man,White,BC,Vancouver Police Department,Gunshot
+2016-11-22,Terrence,Wienmeyer,Leigh,Terry,49,Man,White,AB,Calgary Police Service,Gunshot
+2016-11-26,Daniel,Legarde,,,45,Man,Indigenous,ON,OPP,Gunshot
+2016-11-29,Jessica,Patterson,Lynn,,27,Woman,White,AB,Calgary Police Service,Gunshot
+2016-12-19,Charles,Qirngnirq,,,21,Man,Indigenous,NU,RCMP,Gunshot
+2016-12-23,Samuel,Maloney,,,35,Man,White,ON,London Police Service,Gunshot
+2016-12-27,Martin,Gagnon,,,39,Man,White,QC,"Service de police de la Ville de Levis, Surete du Quebec, Service de police de la Ville de Quebec",Gunshot
+2017-01-06,Jimmy,Cloutier,,,38,Man,White,QC,Service de police de la Ville de Montreal,Gunshot
+2017-01-07,Ralph,Stephens,Lorne Darcy,Jim,27,Man,Indigenous,AB,RCMP,Gunshot
+2017-01-24,Nadia,Racine,,,34,Woman,White,QC,Service de police de la Ville de Gatineau,Restraint
+2017-03-06,Koray,Celik,Kevin,,28,Man,White,QC,Service de police de la Ville de Montreal,Restraint
+2017-03-08,Vitaly,Savin,,,55,Man,White,AB,Edmonton Police Service,Gunshot
+2017-03-18,Kunuk,Qamaniq,,,20,Man,Indigenous,NU,RCMP,Gunshot
+2017-05-01,Jeremy,Nuvviaq,,,39,Man,Indigenous,NU,RCMP,Gunshot
+2017-05-15,Emmanuel,Therrien,,,41,Man,White,QC,Surete du Quebec,Gunshot
+2017-06-03,Raymond,Alliman,,Mike,31,Man,Black,ON,Ottawa Police Service,Gunshot
+2017-06-10,Illutak,Anautak,,,19,Man,Indigenous,QC,Kativik Regional Police Force,Gunshot
+2017-06-15,Noam,Cohen,,,27,Man,White,QC,Service de police de la Ville de Montreal,Gunshot
+2017-06-27,Pierre,Coriolan,,,58,Man,Black,QC,Service de police de la Ville de Montreal,Gunshot
+2017-06-29,Jacques,Filiatreault,,,63,Man,Unknown,QC,Surete du Quebec,Gunshot
+2017-07-09,David,Levesque,,,37,Man,White,QC,Surete du Quebec,Gunshot
+2017-07-18,Dale,Culver,,,35,Man,Indigenous,BC,RCMP,Restraint
+2017-07-27,Ozama,Shaw,,,15,Man,Black,ON,Peel Regional Police,Gunshot
+2017-08-10,Guillaume,Bolduc,,,25,Man,White,QC,Surete du Quebec,Gunshot
+2017-08-20,Jonathan,Belley,,,23,Man,White,QC,Surete du Quebec,Gunshot
+2017-09-06,John,Halfe,Douglas,,26,Man,Indigenous,AB,RCMP,Gunshot
+2017-09-09,Matthew,Dumas,,Matt,30,Man,White,AB,Edmonton Police Service,Gunshot
+2017-09-13,Adrian,Lacquette,,,23,Man,Indigenous,MB,Winnipeg Police Service,Gunshot
+2017-09-23,Evan,Caron,,,33,Man,Indigenous,MB,Winnipeg Police Service,Gunshot
+2017-10-12,Aaron,Prince,Lee,,35,Man,Indigenous,BC,RCMP,Gunshot
+2017-10-19,Cavin,Poucette,Kelsey,,26,Man,Indigenous,AB,RCMP,Gunshot
+2017-10-19,Justin,Potts,Robert,,33,Man,Unknown,AB,RCMP,Gunshot
+2017-10-21,Brydon,Whitstone,Bryce,,22,Man,Indigenous,SK,RCMP,Gunshot
+2017-10-27,Tom,Ryan,,William,70,Man,White,ON,Cobourg Police Service,Gunshot
+2017-11-15,Bill,Saunders,,,18,Man,White,MB,RCMP,Gunshot
+2017-12-13,Ali,Zaraeenah,,,25,Man,Unknown,ON,York Regional Police,Gunshot
+2017-12-23,Babak,Saidi,,,43,Man,Other,ON,OPP,Gunshot
+2017-12-28,David,Sappa,,,22,Man,Indigenous,QC,Kativik Regional Police Force,Gunshot
+2017-12-28,Denis,Beaudoin,,,36,Man,White,QC,Surete du Quebec,Gunshot
+2018-01-27,Brad,Coburn,Allan,,43,Man,White,AB,Calgary Police Service,Gunshot
+2018-02-03,Joey,Knapaysweet,,,21,Man,Indigenous,ON,Timmins Police Service,Gunshot
+2018-02-22,Gordon,Couvrette,Dale,,43,Man,White,ON,North Bay Police,Taser/CEW
+2018-02-24,David,Meadows,,,42,Man,White,BC,RCMP,Taser/CEW
+2018-02-25,Pierre,Charron,,,25,Man,White,ON,Ottawa Police Service,Gunshot
+2018-03-21,Matthew,Mahoney,,,33,Man,White,ON,Windsor Police Service,Gunshot
+2018-03-29,Abderrahmane,Bettahar,,Adam,21,Man,Unknown,AB,RCMP,Gunshot
+2018-04-03,Quinn,MacDougall,E,,19,Man,Unknown,ON,Hamilton Police Service,Gunshot
+2018-05-17,Josephine,Pelletier,Shelly Lynn,,33,Woman,Indigenous,AB,Calgary Police Service,Gunshot
+2018-05-26,Bradley,Clattenburg,Thomas,,24,Man,White,NS,RCMP,Gunshot
+2018-05-27,Jeremy,Stephens,,,32,Man,White,PE,Summerside Police Department,Gunshot
+2018-06-07,Robert,Morfitt,,,36,Man,Unknown,ON,Toronto Police Service,Gunshot
+2018-07-03,Clayton,Crawford,Norman,,31,Man,White,AB,RCMP,Gunshot
+2018-07-17,Lyle,Crane,Cory,,40,Man,Indigenous,AB,RCMP,Gunshot
+2018-07-25,Riley,Fairholm,,,17,Man,White,QC,Surete du Quebec,Gunshot
+2018-07-28,Matthew,Fosseneuve,Richard,,34,Man,Indigenous,MB,Winnipeg Police Service,Taser/CEW
+2018-07-31,Emroy,Cardinal,Edward,,38,Man,Indigenous,AB,RCMP,Taser/CEW
+2018-08-18,Sterling,Cardinal,Ross,,30,Man,Indigenous,AB,Edmonton Police Service,Gunshot
+2018-08-21,Nicholas,Gibbs,,,23,Man,Black,QC,Service de police de la Ville de Montreal,Gunshot
+2018-08-31,Jaskamal,Lail,Singh,Jas,25,Man,South Asian,AB,Calgary Police Service,Gunshot
+2018-09-05,Tommy,Ningiuk,,,40,Man,Indigenous,QC,Kativik Regional Police Force,Gunshot
+2018-09-14,Eugene,Marcano,Ethan,,36,Man,Unknown,BC,RCMP,Gunshot
+2018-10-03,Radford,Good Dagger,James,,48,Man,Indigenous,AB,Lethbridge Police Service,Physical Force
+2018-10-20,Robyn,Garlow,Helen,,30,Woman,Indigenous,ON,Hamilton Police Service,Gunshot
+2018-11-10,Chris,Bloomfield,,Shroomfield,27,Man,White,BC,RCMP,Gunshot
+2018-11-27,Jorden,McKay,Joseph,,27,Man,White,NL,Royal Newfoundland Constabulary,Gunshot
+2018-12-22,Steven,Rigby,,,27,Man,White,SK,Saskatoon Police Service,Gunshot
+2018-12-25,Stacey,Perry,,,29,Woman,White,AB,Calgary Police Service,Gunshot
+2018-12-26,Buck,Evans,E,,34,Man,Unknown,AB,Edmonton Police Service,Gunshot
+2019-01-02,Devlin,Neyando,Kyle,,26,Man,Unknown,AB,Edmonton Police Service,Gunshot
+2019-01-11,Chad,Williams,,,26,Man,Indigenous,MB,Winnipeg Police Service,Gunshot
+2019-01-31,Gregory,Ritchie,,Greg,30,Man,Indigenous,ON,Ottawa Police Service,Gunshot
+2019-02-23,Machuar,Madut,,,43,Man,Black,MB,Winnipeg Police Service,Gunshot
+2019-03-29,Nona,McEwan,Marnie,,45,Woman,White,BC,RCMP,Gunshot
+2019-03-29,Randy,Crosson,,,48,Man,White,BC,RCMP,Gunshot
+2019-03-30,Jean-Louis,D'amour,,,77,Man,Unknown,QC,Surete du Quebec,Intermediate Weapon
+2019-04-02,Benjamin,Richard,,Ben,23,Male,Indigenous,MB,Manitoba First Nations Police,Gunshot
+2019-05-04,Geoffrey,Morris,Faron,Geoff,41,Man,Indigenous,SK,Regina Police Service,Gunshot
+2019-06-26,Robin,Fiddler,Melissa Marie,,34,Woman,Indigenous,AB,Calgary Police Service,Gunshot
+2019-06-28,Denis,Chalifoux,,,50,Man,Unknown,QC,Service de police de la Ville de Laval,Restraint
+2019-07-23,Billy,Shea,,,27,Man,White,ON,Peterborough Police Service,Gunshot
+2019-08-04,Viengxay,Chommany,,,42,Man,Unknown,MB,Winnipeg Police Service,Taser/CEW
+2019-08-10,Mitchell,Speight,Anthony,,22,Man,White,NS,RCMP,Gunshot
+2019-08-11,Kyaw,Din,Naing,,54,Man,Asian,BC,RCMP,Gunshot
+2019-08-27,Lucien,Silverquill,,,37,Man,Indigenous,SK,RCMP,Gunshot
+2019-09-11,Matthew,Di Giovanni,,Matt,34,Man,Unknown,ON,Peel Regional Police,Taser/CEW
+2019-09-12,Evan,Freeman,Christian,,22,Man,White,ON,Kingston Police Services,Gunshot
+2019-10-28,Clayton,Donnelly,Elliot,,38,Man,White,BC,RCMP,Taser/CEW
+2019-11-20,Clive,Mensah,,,30,Man,Black,ON,Peel Regional Police,Taser/CEW
+2019-12-03,Wade,Vanderwal,,,44,Man,White,ON,OPP,Gunshot
+2019-12-31,Fred,Penner,,Troy,56,Man,White,ON,Niagara Regional Police Service,Gunshot
+2020-01-06,Dave,Clavel,Ouellette,,40,Man,Unknown,QC,Service de police de la Ville de Terrebonne,Restraint
+2020-01-07,Jamal,Francique,Derek Jr,,28,Man,Black,ON,Peel Regional Police,Gunshot
+2020-01-13,Howard,Shantz,,Barry,63,Man,Unknown,BC,RCMP,Gunshot
+2020-01-17,Benoit,Chabot,,,26,Man,Unknown,QC,Surete du Quebec,Gunshot
+2020-01-18,Ricardo,Mirabelles,,,37,Man,White,ON,Toronto Police Service,Gunshot
+2020-02-02,Brandon,Christian,,,47,Man,White,QC,Surete du Quebec,Gunshot
+2020-02-11,Brian,Schriver,Kyle,Kyle,30,Man,Unknown,AB,RCMP,Gunshot
+2020-02-26,Attachie,Ashoona,,,39,Man,Indigenous,NU,RCMP,Gunshot
+2020-03-08,Jason,Koehler,Elwyn,,47,Man,White,BC,RCMP,Taser/CEW
+2020-03-11,Sylvain,Legault,,,54,Man,Unknown,QC,Service de police de la Ville de Montreal,Gunshot
+2020-04-06,D'Andre,Campbell,Anthony,,26,Man,Black,ON,Peel Regional Police,Gunshot
+2020-04-08,Eishia,Hudson,,,16,Woman,Indigenous,MB,Winnipeg Police Service,Gunshot
+2020-04-09,Jason,Collins,,,36,Man,Indigenous,MB,Winnipeg Police Service,Gunshot
+2020-04-18,Stewart,Andrews,Kevin,,22,Man,Indigenous,MB,Winnipeg Police Service,Gunshot
+2020-04-19,Gabriel,Wortman,,,51,Man,White,NS,RCMP,Gunshot
+2020-05-05,Abraham,Natanine,Moses,,31,Man,Indigenous,NU,RCMP,Gunshot
+2020-05-06,Phillip,Blair,,,27,Man,White,AB,RCMP,Gunshot
+2020-06-04,Chantel,Moore,Courtney,,26,Woman,Indigenous,NB,Edmunston Police Force,Gunshot
+2020-06-12,Rodney,Levi,Buckanee,,48,Man,Indigenous,NB,RCMP,Gunshot
+2020-06-20,Ejaz,Choudry,,,62,Man,South Asian,ON,Peel Regional Police,Gunshot
+2020-06-20,Patrick,Bellemare,,,51,Man,Unknown,QC,Service de police de la Ville de Montreal,Intermediate Weapon
+2020-06-22,Marc,Savage,,,53,Man,White,QC,Surete du Quebec,Gunshot
+2020-07-08,Jason,Peterson,,,42,Man,White,ON,Hamilton Police Service,Gunshot
+2020-07-09,Richard,Wheeler,Kenneth,,60,Man,Unknown,NS,RCMP,Gunshot
+2020-07-15,Leslie,Hegedus,John,,73,Man,Unknown,ON,OPP,Gunshot
+2020-07-25,Jonathan,Roy,,,33,Man,Unknown,QC,Le Service de police de Sherbrooke,Intermediate Weapon
+2020-09-06,Bruno-Pierre,Harvey,,,28,Man,Unknown,QC,Service de police de la Ville de Quebec,Physical Force
+2020-09-09,Matthew,Rice,Reuben,,29,Man,Unknown,ON,OPP,Gunshot
+2020-09-18,Marty,Powder,(Matthew Marty),,48,Man,Indigenous,AB,Edmonton Police Service,Gunshot
+2020-09-20,Nazariy,Geletiy,,,24,Man,Unknown,ON,OPP,Gunshot
+2020-10-04,Jean,Belhumeur,,,41,Man,Unknown,QC,Surete du Quebec,Gunshot
+2020-10-29,Sheffield,Matthews,Etrion,,41,Man,Black,QC,Service de police de la Ville de Montreal,Gunshot
+2020-11-19,Gary,Brohman,,,60,Man,Unknown,ON,OPP,Gunshot
+2021-01-05,Chester,Libo-on,,,37,Man,Unknown,BC,Vancouver Police Department,Gunshot
+2021-01-05,Martin,Gordyn,,,27,Man,Unknown,ON,Niagara Regional Police Service,Gunshot
+2021-02-24,Gedi,Ali Gedi,,,46,Man,Unknown,ON,Toronto Police Service,Gunshot
+2021-02-27,Julian,Jones,,,28,Man,Indigenous,BC,RCMP,Gunshot
+2021-03-11,Braden,Herman,,,26,Man,Indigenous,SK,RCMP,Gunshot
+2021-03-16,Christopher,Cesar,,Jude,31,Man,Unknown,QC,Surete du Quebec,Gunshot
+2021-04-03,Trent,Firth,,,24,Man,Indigenous,AB,RCMP,Gunshot
+2021-06-06,Steven,Nguyen,,,33,Man,Asian,AB,Edmonton Police Service,Gunshot
+2021-06-11,Roy,Freake,,,37,Man,Unknown,NL,RCMP,Gunshot
+2021-06-18,Lionel,Grey,Ernest,,29,Man,Indigenous,AB,RCMP,Gunshot
+2021-07-06,Ray,Bitternose,Steven,,42,Man,Indigenous,SK,RCMP,Gunshot
+2021-07-08,Jared,Lowndes,,,38,Man,Indigenous,BC,RCMP,Gunshot
+2021-08-01,Jean-René,Olivier,,,38,Man,Black,QC,Service de police de la Ville de Repentigny,Gunshot
+2021-08-05,Kyle,Gianis,,,37,Man,Unknown,BC,RCMP,Intermediate Weapon
+2021-08-05,Sheena,Jackson,,,38,Woman,Unknown,ON,OPP,Gunshot
+2021-08-15,Mathias,Bunyan,,,31,Man,Unknown,ON,OPP,Gunshot
+2021-08-31,David,Manlove,,David Baker,Unknown,Man,Unknown,BC,RCMP,Gunshot
+2021-10-28,Justin,Bourassa,,,28,Man,Unknown,ON,London Police Service,Gunshot
+2021-11-03,Rodger,Kotanko,,,70,Man,Unknown,ON,Toronto Police Service,Gunshot
+2021-12-14,Dillon,McDonald,,,28,Man,Indigenous,SK,RCMP,Gunshot
+2021-12-31,Randal,Gladue,Waylon Matthew,,33,Man,Unknown,AB,Edmonton Police Service,Gunshot
+2021-12-31,Ryan,Nowlan,,,39,Man,Unknown,NB,RCMP,Gunshot
+2022-01-21,Moses,Erhirhie,,,35,Man,Black,ON,York Regional Police,Gunshot
+2022-02-19,Latjor,Tuel,,,41,Man,Black,AB,Calgary Police Service,Gunshot
+2022-02-23,James,Hanna,,,59,Man,Indigenous,AB,Edmonton Police Service,Gunshot
+2022-02-23,Mitchell,Potts,Tyler,,36,Man,Unknown,AB,Edmonton Police Service,Gunshot
+2022-02-26,Trent,Angus,,,33,Man,Indigenous,SK,RCMP,Gunshot
+2022-04-08,Jimmie,Johannesson,,,Unknown,Man,Indigenous,BC,RCMP,Gunshot
+2022-06-27,Joshua,Graves,,,21,Man,Unknown,ON,Ottawa Police Service,Gunshot
+2022-06-28,Isaac,Auchterlonie,,,22,Man,Unknown,BC,Saanich Police Department; Victoria Police Department,Gunshot
+2022-06-28,Mathew,Auchterlonie,,,22,Man,Unknown,BC,Saanich Police Department; Victoria Police Department,Gunshot
+2022-07-10,Rojun,Alphonse,,,36,Man,Indigenous,MB,RCMP,Gunshot
+2022-07-17,Ryan,Booker,,,26,Man,Unknown,SK,Regina Police Service; Moosejaw Police Service; RCMP,Gunshot
+2022-07-23,Sean,Brown,,,54,Man,Unknown,BC,RCMP,Gunshot
+2022-07-25,Jordan,Goggin,Daniel,,28,Man,White,BC,RCMP,Gunshot
+2022-08-04,Abdulla,Shaikh,,,26,Man,Unknown,QC,Service de police de la Ville de Montreal,Gunshot
+2022-08-16,Allan,Andkilde,,,70,Man,White,ON,Windsor Police Service,Gunshot
+2022-08-22,Chris,Amyotte,,,42,Man,Indigenous,BC,Vancouver Police Department,Intermediate Weapon
+2022-08-27,Terry,Riche,,,59,Man,Unknown,NS,Halifax Regional Police,Gunshot
+2022-09-06,Simon,Betser,,,42,Man,Unknown,QC,RCMP; CBSA,Intermediate Weapon
+2022-09-07,Myles,Sanderson,,,31,Man,Indigenous,SK,RCMP,Restraint
+2022-09-12,Sean,Petrie,,,40,Man,Black,ON,"Halton Regional Police Services, Hamilton Police Service",Gunshot
+2022-09-17,Ronny,Kay,,,38,Man,Asian,QC,Service de police de la Ville de Montreal,Gunshot
+2022-10-11,Chris,Doncaster,,,23,Man,Unknown,ON,South Simcoe Police,Gunshot
+2022-10-13,Taresh,Ramroop,Bobby,,32,Man,Unknown,ON,Toronto Police Service,Other
+2022-10-27,Ronald,Herman,Glen,,36,Man,Unknown,SK,Saskatoon Police Service,Gunshot
+2022-11-12,Maiken,Cooper,Dani,,27,Non-binary,Unknown,BC,RCMP,Gunshot
+2022-12-16,Calvin,Goertzen,,Bear,56,Man,Indigenous,BC,RCMP,Restraint
+2022-12-18,Francesco,Villi,,,73,Man,Unknown,ON,York Regional Police,Gunshot
+2022-12-25,Nathan,Leather,,,39,Man,Indigenous,AB,RCMP,Gunshot
+2023-01-16,John,Gardiner,,,34,Man,Indigenous,AB,Prince Albert Police Service,Gunshot
+2023-02-14,Mitchell,Croston,,,34,Man,Unknown,AB,Calgary Police Service,Gunshot
+2023-03-27,Isaac,Lessard,Brouillard,,35,Man,Unknown,QC,Surete du Quebec,Gunshot
+2023-04-02,Peter,Campbell,,,34,Man,Unknown,ON,Peel Regional Police,Unknown
+2023-04-13,Derek,Deon,,,33,Man,Indigenous,AB,RCMP,Gunshot
+2023-04-26,Boden,Umpherville,,,40,Man,Indigenous,SK,Prince Albert Police Service,Taser/CEW
+2023-05-10,Andrew,Geisler,,,40,Man,Unknown,ON,Toronto Police Service,Gunshot
+2023-05-27,Terry,Brekka,Gerald,,57,Man,Unknown,ON,Hamilton Police Service,Gunshot
+2023-05-29,Levon,Wildman,Fox,,39,Man,Indigenous,AB,Calgary Police Service,Gunshot
+2023-05-29,Wesley,Davidson,,,46,Man,Unknown,AB,Calgary Police Service,Gunshot
+2023-06-12,Omar,Mohammed,,,38,Man,Black,NL,Royal Newfoundland Constabulary,Gunshot
+2023-08-27,Garry,Pashe Jr.,,,23,Man,Unknown,BC,RCMP,Gunshot
+2023-10-15,Wendel,Houle,,,32,Man,Unknown,AB,RCMP,Gunshot
+2023-11-28,Dustin,Hatcher,,,39,Man,Black,MB,Winnipeg Police Service,Gunshot
+2023-12-31,Afolabi,Opaso,Stephen,,19,Man,Black,MB,Winnipeg Police Service,Gunshot
+2024-01-27,James,Wood,,,35,Man,Indigenous,MB,Winnipeg Police Service,Other
+2024-02-13,Bradley,Singer,,,59,Man,Unknown,MB,Winnipeg Police Service,Gunshot
+2024-02-19,Nicholas,Nembhard,,,31,Man,Black,ON,Waterloo Regional Police Service,Gunshot
+2024-03-15,Patrick,Kimmel,Robert,,45,Man,Unknown,AB,Calgary Police Service,Gunshot
+2024-06-04,Tristan,Mariash,,,30,Man,Unknown,MB,Winnipeg Police Service,Gunshot
+2024-06-20,Drake,Dillon,,,27,Man,Indigenous,SK,Saskatoon Police Service,Gunshot
+2024-06-25,Bruce,Frogg,Wallace,,57,Man,Indigenous,ON,OPP,Gunshot
+2024-06-29,Mathios,Arkangelo,,,28,Man,Black,AB,Edmonton Police Service,Gunshot
+2024-08-30,Hoss,Lightning-Saddleback,,,15,Man,Indigenous,AB,RCMP,Gunshot
+2024-09-06,Jason,West,,,57,Man,Indigenous,ON,Windsor Police Service,Gunshot
+2024-09-08,Daniel,Knife,,Danny,31,Man,Indigenous,SK,RCMP,Gunshot
+2024-09-08,Steven,Dedam,Iggy,,34,Man,Indigenous,NB,RCMP,Gunshot
+2024-09-17,Jon,Wells,,,42,Man,Indigenous,AB,Calgary Police Service,Taser/CEW
+2024-09-19,Vanessa,Valencia,Rentería,,37,Woman,Black,BC,RCMP,Gunshot
+2024-09-24,Joseph,Desjarlais,,,34,Man,Indigenous,SK,RCMP,Gunshot
+2024-10-30,Mikail,Rashid,,,17,Man,Unknown,ON,York Regional Police,Gunshot
+2024-11-04,Joshua,Papigatuk,,,27,Man,Indigenous,QC,Nunavik Police Service,Gunshot
+2024-11-09,Erixon,Kabera,,,43,Man,Black,ON,Hamilton Police Service,Gunshot
+2024-11-22,Elgyn,Muskego,,,17,Man,Indigenous,MB,RCMP,Gunshot
+2024-11-24,Jordan,Charlie,,,24,Man,Indigenous,MB,Winnipeg Police Service,Gunshot
+2024-12-14,Fabian,Skani,,,40,Man,Indigenous,AB,RCMP,Gunshot
+2025-02-09,Chase,de Balinhard,,,15,Man,Unknown,BC,RCMP,Gunshot
+2025-03-30,Abisay,Cruz,,,29,Man,Unknown,QC,Montreal Police Service,Restraint
+2025-05-06,Mark,Annanack,R,,35,Man,Indigenous,NU,Nunavik Police Service,Gunshot
+2025-05-30,Dillon,Breed,Warren,,32,Man,Indigenous,MB,Winnipeg Police Service,Gunshot
+2025-07-17,Jamie,Kavik,,,34,Man,Indigenous,NU,Nunavik Police Service,Gunshot
+2025-07-22,Eric,Nothing,,,40,Man,Indigenous,ON,Nishnawbe Aski Police Service,Gunshot
+2025-07-31,Tyrese,Roundsky,Kenny Padro Cree,,24,Man,Indigenous,ON,Ontario Provincial Police,Gunshot
+2024-09-03,Tamara,Bateman,,Tammy,39,Woman,Indigenous,MB,Winnipeg Police Service,Vehicle Collision
+2015-06-08,Norman,Raddatz,Walter,,42,Man,White,AB,Edmonton Police Service,Gunshot
+2016-08-21,Tracy Lyle,Janvier,,,41,Woman,Indigenous,AB,RCMP,Vehicle Collision
+2022-05-05,Randy,Schneider,,,48,Man,Unknown,BC,Vancouver Police Department,Gunshot
+2020-05-21,Sabrina,Van Vessem,,,24,Woman,Unknown,ON,Niagara Regional Police Service,Custody Negligence
+2019-12-25,Lisa,Rauch,Colleen,,43,Woman,Unknown,BC,Victoria Police Department,Gunshot
+1996-06-11,Wayne, Williams,,,24,Man,Black,ON,Toronto Police Service,Gunshot
+2023-02-04,Wesley ,Wanuch,,,45,Man,Indigenous,AB,RCMP,Gunshot
+2015-04-04,David,Walsh,,,66,Man,Unknown,NS,Cape Breton Regional Police,Vehicle Collision
+2014-02-12,Natasha,Abogado,Carla,,18,Woman,Unknown,ON,York Regional Police,Vehicle Collision
+2019-07-05,Sandy,Alaku,,,48,Man,Indigenous,QC,Kativik Regional Police Force,Vehicle Collision
+2017-06-19,Austin,Eaglechief,Gerome Gilbert,,22,Man,Indigenous,SK,Saskatoon Police Service,Vehicle Collision
+2020-04-09,John-Paul,George,,,42,Man,Unknown,ON,OPP,Gunshot
+2020-03-15,Christopher,Gillman,,,53,Man,Unknown,AB,Edmonton Police Service,Custody Negligence
+2021-11-09,Kristin,Grant,Lee,Krissy,36,Woman,Unknown,SK,RCP,Custody Negligence
+2020-07-07,Nicholas,Grieves,Edward,,24,Man,Unknown,ON,OPP,Vehicle Collision
+2015-06-11,Abdurahman,Hassan,Ibrahim,,39,Man,Black,ON,Canada Border Services Agency,Custody Negligence
+2013-03-17,Zoltan,Hyacinth,,,23,Man,Unknown,ON,Toronto Police Service,Gunshot
+2019-06-26,Sean,Thompson,,,30,Man,Indigenous,MB,Winnipeg Police Service,Custody Negligence
+2018-05-08,Jerry,Smallwood,Robert,Jer Wood,39,Man,Unknown,BC,RCMP,Gunshot
+2020-11-26,Jameson,Shapiro,,,33,Man,Unknown,ON,OPP,Gunshot
+2014-07-17,Jobie,Napartuk,,,29,Man,Indigenous,QC,Kativik Regional Police Force,Gunshot
+2019-12-06,Stewart,Robb,Kenneth Nigel,,27,Man,Unknown,AB,RCMP,Gunshot
+2018-04-09,Yacin,Osman,Abdikadir,,26,Man,Unknown,AB,Calgary Police Service,Gunshot
+2009-08-13,Elisapee,Michael,,,52,Woman,Indigenous,NU,RCMP,Custody Negligence
+2023-05-27,Terry,Brekka,Gerald,,57,Man,Unknown,ON,Hamilton Police Service,Gunshot
+2012-10-29,Paul,Kayuryuk,,,57,Man,Indigenous,NU,RCMP,Custody Negligence
+2017-05-22,Kieran,Kay,,,26,Man,Unknown,ON,Waterloo Regional Police Service,Custody Negligence
+2011-02-14,James,Kiteley,,,36,Man,Unknown,ON,Hamilton Police Service,Physical Force
