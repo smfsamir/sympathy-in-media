@@ -1,4 +1,4 @@
-Article ID,Victim ID,Person Name,Incident Date,Publication Date,Publisher,URL
+Article ID,VICTIM_ID,Person Name,Incident Date,Publication Date,Publisher,URL
 1,V1-0435,Adrian Lacquette,2017-09-13,2017-09-13,Global News,https://globalnews.ca/news/3739893/police-tape-off-part-of-winnipegs-north-end-wednesday-morning/
 2,V1-0426,Pierre Coriolan,2017-06-27,2017-06-27,CTV,https://www.ctvnews.ca/montreal/article/man-fatally-shot-by-police-in-gay-village-bei-investigating/
 3,V1-0417,Nadia Racine,2017-01-24,2017-01-26,CBC,https://www.cbc.ca/news/canada/ottawa/woman-dead-gatineau-bureau-enqu%C3%AAtes-ind%C3%A9pendantes-1.3952975
@@ -646,3 +646,38 @@ Article ID,Victim ID,Person Name,Incident Date,Publication Date,Publisher,URL
 645,V1-0516,Rodney Buckanee Levi,2020-06-12,2021-10-04,Winnipeg Free Press,https://www.winnipegfreepress.com/canada/2021/10/04/new-brunswick-coroners-inquest-into-fatal-shooting-of-rodney-levi-hears-911-calls
 646,V1-0515,Chantel Courtney Moore,2020-06-04,2023-02-23,CBC,https://www.cbc.ca/news/canada/new-brunswick/chantel-moore-shooting-lawsuit-defence-1.6750728
 647,V1-0517,Ejaz Choudry,2020-06-20,2024-04-29,CTV,https://www.ctvnews.ca/toronto/article/identities-of-officers-involved-in-death-of-mississauga-father-ejaz-choudry-to-be-made-public-court-rules/
+648,V1-0107,Paul Sheldon Saulnier,2005-07-15,2010-01-30,PNI Atlantic News,https://www.saltwire.com/atlantic-canada/rcmp-watchdog-launches-taser-investigation-36744
+649,V1-0120,Andrew Osidacz,2006-03-18,2021-07-29,The Brantford Expositor,https://www.brantfordexpositor.ca/news/julie-craven-wins-again-in-court
+650,V1-0653,Kuhkpaw Moo,2024-07-16,2024-11-15,The London Free Press,https://lfpress.com/news/local-news/london-officers-cleared-in-fatal-shooting-of-man-who-killed-girlfriend
+651,V1-0358,Bradley Perrott,2015-05-22,2020-07-29,PNI Atlantic News,https://www.saltwire.com/nova-scotia/its-hard-to-know-who-is-covering-whose-butt-in-mass-shooting-probe-psychologist-479046
+652,V1-0451,Pierre Charron,2018-02-25,2019-03-20,The Ottawa Citizen,https://ottawacitizen.com/news/local-news/ottawa-police-officer-who-shot-stabbing-suspect-was-justified-siu
+653,V1-0451,Pierre Charron,2018-02-25,2018-02-27,The Ottawa Citizen,https://ottawacitizen.com/news/local-news/slain-suspect-advanced-on-officer-before-fatal-shooting
+654,V1-0452,Matthew Mahoney,2018-03-21,2022-09-23,The Windsor Star,https://windsorstar.com/news/local-news/jury-reaches-decision-in-mahoney-inquest
+655,V1-0452,Matthew Mahoney,2018-03-21,2022-09-13,The Windsor Star,https://windsorstar.com/news/local-news/draft-head-officer-recalls-day-of-matthew-mahoneys-death
+656,V1-0456,Bradley Thomas Clattenburg,2018-05-26,2019-01-10,PNI Atlantic News,https://www.saltwire.com/nova-scotia/experts-question-police-tactics-in-killing-of-truro-man-274801
+657,V1-0456,Bradley Thomas Clattenburg,2018-05-26,2018-06-07,PNI Atlantic News,https://www.saltwire.com/nova-scotia/family-longs-for-answers-in-mans-death-during-rcmp-confrontation-275045
+658,V1-0457,Jeremy Stephens,2018-05-27,2019-03-05,PNI Atlantic News,https://www.saltwire.com/prince-edward-island/update-no-charges-laid-against-summerside-police-officers-involved-in-fatal-shooting-289678
+659,V1-0457,Jeremy Stephens,2018-05-27,2018-06-18,PNI Atlantic News,https://www.saltwire.com/prince-edward-island/updated-mother-of-man-shot-by-summerside-police-calling-for-coroners-inquest-wants-answers-219424
+660,V1-0459,Clayton Norman Crawford,2018-07-03,2022-12-09,Edmonton Journal,https://edmontonjournal.com/news/local-news/jury-finds-mounties-accused-of-manslaughter-in-2018-shooting-death-not-guilty
+661,V1-0459,Clayton Norman Crawford,2018-07-03,2022-11-30,Edmonton Journal,https://edmontonjournal.com/news/local-news/i-dont-want-to-die-rcmp-officer-describes-opening-fire-during-chaotic-attempted-arrest-that-left-man-dead
+662,V1-0459,Clayton Norman Crawford,2018-07-03,2020-06-08,National Post,https://nationalpost.com/news/national/newsalert-2-alberta-mounties-charged-in-connection-to-2018-shooting-death
+663,V1-0460,Lyle Cory Crane,2018-07-17,2016-01-28,Edmonton Journal,https://edmontonjournal.com/news/crime/police-seek-suspect-in-edmonton-kidnapping
+664,V1-0506,Jason Elwyn Koehler,2020-03-08,,North Shore News,https://www.nsnews.com/local-news/man-who-died-in-police-incident-identified-as-whistler-business-owner-3118537
+665,V1-0506,Jason Elwyn Koehler,2020-03-08,2020-06-12,The Vancouver Sun,https://vancouversun.com/news/local-news/lawsuit-alleges-rcmp-misconduct-in-death-of-whistler-business-owner
+666,V1-0512,Gabriel Wortman,2020-04-19,2022-09-28,PNI Atlantic News,https://www.saltwire.com/atlantic-canada/no-evidence-to-lead-any-reasonable-person-to-believe-nova-scotia-mass-shooter-was-police-agent-100777917
+667,V1-0514,Phillip Blair,2020-05-06,2020-06-10,National Post,https://nationalpost.com/news/reforms-to-rcmp-canadian-justice-system-coming-as-protests-sweep-world-public-safety-minister-says
+668,V1-0515,Chantel Courtney Moore,2020-06-04,2020-06-05,The Vancouver Sun,https://vancouversun.com/news/b-c-woman-fatally-shot-by-police-in-new-brunswick
+669,V1-0516,Rodney Buckanee Levi,2020-06-12,,North Shore News,https://www.nsnews.com/national-news/new-brunswick-coroners-jury-says-2020-police-killing-of-rodney-levi-was-a-homicide-4497885
+670,V1-0521,Richard Kenneth Wheeler,2020-07-09,2020-07-13,PNI Atlantic News,https://www.saltwire.com/nova-scotia/rcmp-didnt-try-to-de-escalate-in-fatal-shooting-of-eastern-passage-man-witness-472937
+671,V1-0521,Richard Kenneth Wheeler,2020-07-09,2010-07-01,PNI Atlantic News,https://www.saltwire.com/atlantic-canada/officers-civilian-employee-recognized-for-dedication-to-careers-141017
+672,V1-0525,Matthew Reuben Rice,2020-09-09,2012-12-03,PNI Atlantic News,https://www.saltwire.com/prince-edward-island/alcohol-fuelled-rampage-leads-to-five-month-sentence-53109
+673,V1-0525,Matthew Reuben Rice,2020-09-09,2019-02-20,PNI Atlantic News,https://www.saltwire.com/prince-edward-island/kensington-man-sentenced-for-threatening-to-kill-police-officers-285979
+674,V1-0526,Marty Powder,2020-09-18,2020-09-20,Edmonton Journal,https://edmontonjournal.com/news/local-news/man-killed-during-police-shooting-in-edmonton-alley-identified-by-family-as-person-trying-to-turn-his-life-around
+675,V1-0527,Nazariy Geletiy,2020-09-20,2020-09-20,The Vancouver Sun,https://vancouversun.com/news/investigation-launched-after-missing-vancouver-man-dies-of-gunshot-wound-in-ontario
+676,V1-0527,Nazariy Geletiy,2020-09-20,2025-07-30,The London Free Press,https://lfpress.com/news/local-news/ontario-provincial-police-officer-back-home-after-being-run-over-by-truck
+677,V1-0529,Sheffield Etrion Matthews,2020-10-29,2020-10-30,National Post,https://nationalpost.com/pmn/news-pmn/canada-news-pmn/black-man-killed-by-montreal-police-thursday-identified-as-sheffield-matthews-41
+678,V1-0530,Gary Brohman,2020-11-19,2020-11-21,Sudbury Star,https://www.thesudburystar.com/news/local-news/gary-brohman-60-identified-as-man-fatally-shot-during-incident-where-opp-const-marc-hovingh-was-killed-on-thursday
+679,V1-0530,Gary Brohman,2020-11-19,2021-03-26,Sudbury Star,https://www.thesudburystar.com/news/local-news/slain-opp-officer-committed-no-crime-in-manitoulin-shootout-siu
+680,V1-0534,Julian Jones,2021-02-27,2022-11-24,The Vancouver Sun,https://vancouversun.com/news/local-news/first-frustration-police-cleared-shooting-indigenous-person
+681,V1-0534,Julian Jones,2021-02-27,2023-07-15,The Times Colonist,https://www.timescolonist.com/local-news/details-of-fatal-police-shooting-of-indigenous-man-on-meares-island-released-7280721
+682,V1-0534,Julian Jones,2021-02-27,2022-11-17,The Times Colonist,https://www.timescolonist.com/local-news/tribal-council-devastated-after-rcmp-cleared-in-fatal-shooting-6121325
