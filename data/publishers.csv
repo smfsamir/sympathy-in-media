@@ -16,7 +16,7 @@ Beaumont News,https://www.thebeaumontnews.ca/,Postmedia Network Inc.,Beaumont,AB
 Bashaw Star,https://www.bashawstar.com/,Black Press Group Ltd.,Bashaw,AB
 Bow Valley Crag & Canyon,https://www.thecragandcanyon.ca/,Postmedia Network Inc.,Banff,AB
 Bracebridge Examiner,https://www.muskokaregion.com/ontario-communities/bracebridge/,"Torstar Syndication Services, a Division of Toronto Star Newspapers Limited",Bracebridge,ON
-The Brampton Guardian,https://www.bramptonguardian.com/,"Torstar Syndication Services, a Division of Toronto Star Newspapers Limited",Brampton,ON
+Brampton Guardian,https://www.bramptonguardian.com/,"Torstar Syndication Services, a Division of Toronto Star Newspapers Limited",Brampton,ON
 The Brandon Sun,https://www.brandonsun.com/,FP Canadian Newspapers Limited Partnership,Brandon,MB
 The Brighton Independent,https://www.brightonandhovenews.org/,"Torstar Syndication Services, a Division of Toronto Star Newspapers Limited",Brighton,ON
 Brock Citizen,https://www.durhamregion.com/ontario-communities/brock/news/,"Torstar Syndication Services, a Division of Toronto Star Newspapers Limited",Beaverton,ON
@@ -76,7 +76,7 @@ The Cloverdale Reporter,https://www.cloverdalereporter.com/,Black Press Group Lt
 Edmonton Examiner,https://www.edmontonexaminer.com/,Postmedia Network Inc.,Edmonton,AB
 Edmonton Journal,https://edmontonjournal.com/,Postmedia Network Inc.,Edmonton,AB
 The Edmonton Sun,https://edmontonsun.com/,Postmedia Network Inc.,Edmonton,AB
-Era - Banner,https://www.yorkregion.com/ontario-communities/newmarket/,"Torstar Syndication Services, a Division of Toronto Star Newspapers Limited",Newmarket,ON
+Newmarket Era,https://www.yorkregion.com/ontario-communities/newmarket/,"Torstar Syndication Services, a Division of Toronto Star Newspapers Limited",Newmarket,ON
 The Brantford Expositor,https://www.brantfordexpositor.ca/,Postmedia Network Inc.,Brantford,ON
 Fairview Post,https://www.fairviewpost.com/,Postmedia Network Inc.,Fairview,AB
 Flamborough Review,https://www.flamboroughtoday.com/,"Torstar Syndication Services, a Division of Toronto Star Newspapers Limited",Waterdown,ON
@@ -152,7 +152,7 @@ Kelowna Capital News,https://www.kelownacapnews.com/,Black Press Group Ltd.,Kelo
 Mississauga News,https://www.mississauga.com/news/mississauga-hospital-construction-project-under-fire-for-using-u-s-subcontractor/article_e8149308-9269-5e20-8a90-20dc8bb19861.html,"Torstar Syndication Services, a Division of Toronto Star Newspapers Limited",Mississauga,ON
 The Mitchell Advocate,https://www.mitchelladvocate.com/,Postmedia Network Inc.,West Perth,ON
 Kimberley Bulletin,https://www.kimberleybulletin.com/,Black Press Group Ltd.,Kimberley,BC
-The Montreal Gazette,https://www.montrealgazette.com/,Postmedia Network Inc.,Montreal,QC
+Montreal Gazette,https://www.montrealgazette.com/,Postmedia Network Inc.,Montreal,QC
 Ladysmith Chemainus Chronicle,https://www.ladysmithchronicle.com/,Black Press Group Ltd.,Ladysmith,BC
 The Mountaineer,https://www.themountaineer.com/,Postmedia Network Inc.,Rocky Mountain House,AB
 MuskokaRegion.com,https://www.muskokaregion.com/,"Torstar Syndication Services, a Division of Toronto Star Newspapers Limited",Muskoka,ON
@@ -251,7 +251,7 @@ Salmon Arm Observer,https://www.saobserver.net/,Black Press Group Ltd.,Salmon Ar
 Stoney Creek News,https://www.thespec.com/ontario-communities/stoney-creek/,"Torstar Syndication Services, a Division of Toronto Star Newspapers Limited",Stoney Creek,ON
 The Stony Plain Reporter,https://www.stonyplainreporter.com/,Postmedia Network Inc.,Stony Plain,AB
 Strathroy Age Dispatch,https://www.strathroyagedispatch.com/,Postmedia Network Inc.,Strathroy,ON
-The Sudbury Star,https://www.thesudburystar.com/,Postmedia Network Inc.,Sudbury,ON
+Sudbury Star,https://www.thesudburystar.com/,Postmedia Network Inc.,Sudbury,ON
 Shuswap Market News,https://www.saobserver.net/,Black Press Group Ltd.,Salmon Arm,BC
 The Owen Sound Sun Times,https://www.owensoundsuntimes.com/,Postmedia Network Inc.,Owen Sound,ON
 The Sunny South News,https://www.sunnysouthnews.com/,Postmedia Network Inc.,Coaldale,AB
@@ -268,7 +268,7 @@ The Timmins Times,https://www.timminstimes.com/,Postmedia Network Inc.,Timmins,O
 The Tofield Mercury,https://tofieldmerc.com/,Postmedia Network Inc.,Tofield,AB
 Surrey Now-Leader,https://www.surreynowleader.com/,Black Press Group Ltd.,Surrey,BC
 The Topic,https://www.simcoe.com/ontario-communities/bradford/news/,"Torstar Syndication Services, a Division of Toronto Star Newspapers Limited",Bradford,ON
-The Toronto Star,https://www.thestar.com/,"Torstar Syndication Services, a Division of Toronto Star Newspapers Limited",Toronto,ON
+Toronto Star,https://www.thestar.com/,"Torstar Syndication Services, a Division of Toronto Star Newspapers Limited",Toronto,ON
 The Toronto Sun,https://torontosun.com/,Postmedia Network Inc.,Toronto,ON
 Toronto.com,https://www.toronto.com/,"Torstar Syndication Services, a Division of Toronto Star Newspapers Limited",Toronto,ON
 Terrace Standard,https://www.terracestandard.com/,Black Press Group Ltd.,Terrace,BC
@@ -325,3 +325,22 @@ Le Journal de Montréal,journaldemontreal.com,Quebecor Média,Montréal,QC
 Midland Mirror,https://www.simcoe.com/ontario-communities/midland/,Metroland Media Group,Midland,ON
 TimminsToday,timminstoday.com,Village Media,Timmins,ON
 SaskToday,sasktoday.ca,Harvard Media,Saskatchewan-wide,SK
+Castlegar News,https://www.castlegarnews.com/,Black Press Group Ltd.,,
+Parksville Qualicum Beach News,https://www.pqbnews.com/,Black Press Group Ltd.,,
+Soo Today,https://www.sootoday.com/,Village Media ,,
+Squamish Chief,https://www.squamishchief.com/,Lodestar Media,,
+The Pointer,https://thepointer.com/,The Pointer Group Inc.,,ON
+Our Windsor,https://www.ourwindsor.ca,Metroland Media Group,,ON
+Lethbridge News Now,https://lethbridgenewsnow.com,Pattison Media Ltd ,Lethbridge,AB
+Nunavut News,https://www.nunavutnews.com,Black Press Group Ltd.,,NU
+Oshawa Express,https://oshawaexpress.ca/,Independently Owned,,ON
+Lakeland Today,https://www.lakelandtoday.ca,Great West Media,Lakeland,AB
+Moose Jaw Today,https://www.moosejawtoday.com/,Harvard Media,,
+The Reminder,,Lodestar Media,,
+Prince Albert Daily Herald,https://paherald.sk.ca/,Star News Publishing,,
+La Ronge Now,,Pattison Media Ltd ,,
+SaskNow,,Pattison Media Ltd ,,
+paNOW,https://panow.com,Pattison Media Ltd ,,
+Media Co-op,,Independent,,
+The Georgia Straight,,Overstory Media Group,,
+Penticton Herald,pentictonherald.ca,Continental Newspapers,,
