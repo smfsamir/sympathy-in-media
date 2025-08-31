@@ -1,4 +1,4 @@
-Article ID,VICTIM_ID,Person Name,Incident Date,Publication Date,Publisher,URL
+ID,VICTIM_ID,Person Name,Incident Date,Publication Date,Publisher,URL
 1,V1-0435,Adrian Lacquette,2017-09-13,2017-09-13,Global News,https://globalnews.ca/news/3739893/police-tape-off-part-of-winnipegs-north-end-wednesday-morning/
 2,V1-0426,Pierre Coriolan,2017-06-27,2017-06-27,CTV,https://www.ctvnews.ca/montreal/article/man-fatally-shot-by-police-in-gay-village-bei-investigating/
 3,V1-0417,Nadia Racine,2017-01-24,2017-01-26,CBC,https://www.cbc.ca/news/canada/ottawa/woman-dead-gatineau-bureau-enqu%C3%AAtes-ind%C3%A9pendantes-1.3952975
@@ -648,7 +648,7 @@ Article ID,VICTIM_ID,Person Name,Incident Date,Publication Date,Publisher,URL
 647,V1-0517,Ejaz Choudry,2020-06-20,2024-04-29,CTV,https://www.ctvnews.ca/toronto/article/identities-of-officers-involved-in-death-of-mississauga-father-ejaz-choudry-to-be-made-public-court-rules/
 648,V1-0107,Paul Sheldon Saulnier,2005-07-15,2010-01-30,PNI Atlantic News,https://www.saltwire.com/atlantic-canada/rcmp-watchdog-launches-taser-investigation-36744
 649,V1-0120,Andrew Osidacz,2006-03-18,2021-07-29,The Brantford Expositor,https://www.brantfordexpositor.ca/news/julie-craven-wins-again-in-court
-650,V1-0653,Kuhkpaw Moo,2024-07-16,2024-11-15,The London Free Press,https://lfpress.com/news/local-news/london-officers-cleared-in-fatal-shooting-of-man-who-killed-girlfriend
+650,V1-0652,Kuhkpaw Moo,2024-07-16,2024-11-15,The London Free Press,https://lfpress.com/news/local-news/london-officers-cleared-in-fatal-shooting-of-man-who-killed-girlfriend
 651,V1-0358,Bradley Perrott,2015-05-22,2020-07-29,PNI Atlantic News,https://www.saltwire.com/nova-scotia/its-hard-to-know-who-is-covering-whose-butt-in-mass-shooting-probe-psychologist-479046
 652,V1-0451,Pierre Charron,2018-02-25,2019-03-20,The Ottawa Citizen,https://ottawacitizen.com/news/local-news/ottawa-police-officer-who-shot-stabbing-suspect-was-justified-siu
 653,V1-0451,Pierre Charron,2018-02-25,2018-02-27,The Ottawa Citizen,https://ottawacitizen.com/news/local-news/slain-suspect-advanced-on-officer-before-fatal-shooting
@@ -681,145 +681,321 @@ Article ID,VICTIM_ID,Person Name,Incident Date,Publication Date,Publisher,URL
 680,V1-0534,Julian Jones,2021-02-27,2022-11-24,The Vancouver Sun,https://vancouversun.com/news/local-news/first-frustration-police-cleared-shooting-indigenous-person
 681,V1-0534,Julian Jones,2021-02-27,2023-07-15,The Times Colonist,https://www.timescolonist.com/local-news/details-of-fatal-police-shooting-of-indigenous-man-on-meares-island-released-7280721
 682,V1-0534,Julian Jones,2021-02-27,2022-11-17,The Times Colonist,https://www.timescolonist.com/local-news/tribal-council-devastated-after-rcmp-cleared-in-fatal-shooting-6121325
-683,V1-0089,Dennis St. Paul,2005-01-03,,CBC,https://www.cbc.ca/news/canada/manitoba/inquest-slams-rcmp-understaffing-underfunding-on-reserves-1.579161
-684,V1-0089,Dennis St. Paul,2005-01-03,,CBC,https://www.cbc.ca/news/canada/manitoba/rcmp-s-sour-relationship-contributed-to-shooting-chief-1.540597
-685,V1-0090,Paulo Medeiros,2005-01-14,,The Globe and Mail,https://www.theglobeandmail.com/news/national/fatal-police-raid-sparks-questions/article734065/
-686,V1-0091,Harjinder Cheema,2005-01-21,,CBC,https://www.cbc.ca/news/canada/calgary/police-defend-officer-who-shot-knife-wielding-man-1.681178
-687,V1-0091,Harjinder Cheema,2005-01-21,,CBC,https://www.cbc.ca/news/canada/calgary/judge-rules-calgary-officer-justified-in-shooting-man-1.718028
-688,V1-0092,Matthew Dumas,2005-01-31,,CBC,https://www.cbc.ca/news/canada/manitoba/dumas-family-sues-winnipeg-police-for-wrongful-death-1.637764
-689,V1-0092,Matthew Dumas,2005-01-31,,CBC,https://www.cbc.ca/news/canada/native-leaders-angry-over-2nd-police-shooting-1.538727
-690,V1-0092,Matthew Dumas,2005-01-31,,CTV,https://www.ctvnews.ca/winnipeg/article/marijuana-in-dumas-system-toxicology-report
-691,V1-0092,Matthew Dumas,2005-01-31,,CBC,https://www.cbc.ca/news/canada/manitoba/i-did-not-want-to-pull-the-trigger-officer-at-dumas-inquest-1.728782
-692,V1-0092,Matthew Dumas,2005-01-31,,Winnipeg Free Press,https://www.winnipegfreepress.com/historic/2008/06/21/the-stain-remains
-693,V1-0092,Matthew Dumas,2005-01-31,,The Winnipeg Sun,https://winnipegsun.com/2016/11/08/knife-seen-near-body-of-winnipeg-shooting-victim-inquest
-694,V1-0092,Matthew Dumas,2005-01-31,,The Globe and Mail,https://www.theglobeandmail.com/news/national/didnt-want-to-shoot-teen-but-had-no-choice-officer-tells-winnipeg-inquest/article674734/
-695,V1-0092,Matthew Dumas,2005-01-31,,Winnipeg Free Press,https://www.winnipegfreepress.com/featured/2023/09/12/a-pattern-of-none-and-done
-696,V1-0092,Matthew Dumas,2005-01-31,,Toronto Star,https://www.thestar.com/news/canada/officers-cleared-in-native-teens-death/article_e2f35d71-bc45-58c8-b05f-952466d670d8.html
-697,V1-0092,Matthew Dumas,2005-01-31,,The Winnipeg Sun,https://winnipegsun.com/2012/03/15/rally-against-police-brutality-racial-profiling
-698,V1-0092,Matthew Dumas,2005-01-31,,Global News,https://globalnews.ca/news/69146/officer-takes-the-stand/
-699,V1-0094,Elyas Bariali,2005-03-06,,Toronto Star,https://www.thestar.com/news/gta/stories-differ-after-police-shot-man-holding-screwdriver/article_5c79e1d1-21d6-5851-a95e-892999d2a31c.html
-700,V1-0094,Elyas Bariali,2005-03-06,,DurhamRegion.com,https://www.durhamregion.com/news/stories-differ-after-fatal-police-shooting-of-oshawa-man/article_0fbe2ab3-99ac-53ef-86fc-9632d5ae7970.html
-701,V1-0318,Michael MacIsaac,2013-12-02,,CBC,https://www.cbc.ca/news/canada/toronto/durham-police-body-worn-cameras-pilot-project-1.4703979
-702,V1-0096,Daniel Lippa,2005-03-11,,CBC,https://www.cbc.ca/news/canada/edmonton/inquiry-into-police-shooting-death-makes-no-recommendations-1.715108
-703,V1-0096,Daniel Lippa,2005-03-11,,CBC,https://www.cbc.ca/news/canada/edmonton/father-wants-second-inquiry-into-police-shooting-1.678809
-704,V1-0099,Kevin Geldart,2005-05-05,,CBC,https://www.cbc.ca/news/canada/new-brunswick/staff-didn-t-stop-geldart-from-leaving-psychiatric-ward-inquest-hears-1.640709
-705,V1-0099,Kevin Geldart,2005-05-05,,CBC,https://www.cbc.ca/news/canada/new-brunswick/hospital-slow-to-react-to-geldart-s-disappearance-says-psychiatrist-1.632442
-706,V1-0099,Kevin Geldart,2005-05-05,,The Globe and Mail,https://www.theglobeandmail.com/news/national/taser-inquest-disappoints-relatives-of-nb-man/article17992426/
-707,V1-0099,Kevin Geldart,2005-05-05,,The Globe and Mail,https://www.theglobeandmail.com/news/national/nb-death-after-taser-use-being-probed/article18226543/
-708,V1-0101,Ucal Lauzon,2005-05-27,,The Globe and Mail,https://www.theglobeandmail.com/news/national/tactical-squad-subdues-man-swinging-sword/article4146232/
-709,V1-0104,Gurmit Sandhu,2005-06-30,,The Globe and Mail,https://www.theglobeandmail.com/news/national/civilian-agency-one-model-to-probe-police-custody-deaths/article18155283/
-710,V1-0112,Ian Bush,2005-10-29,,CBC,https://www.cbc.ca/news/canada/british-columbia/ian-bush-s-mother-drops-rcmp-lawsuit-1.900920
-711,V1-0112,Ian Bush,2005-10-29,,CBC,https://www.cbc.ca/news/canada/british-columbia/man-shot-in-back-of-head-rcmp-shooting-inquest-told-1.651690
-712,V1-0112,Ian Bush,2005-10-29,,Global News,https://globalnews.ca/news/87911/mother-of-man-shot-to-death-by-cop-drops-rcmp-lawsuit/
-713,V1-0112,Ian Bush,2005-10-29,,The Globe and Mail,https://www.theglobeandmail.com/news/british-columbia/mother-of-ian-bush-drops-lawsuit-against-rcmp/article1210822/
-714,V1-0112,Ian Bush,2005-10-29,,The Vancouver Sun,https://vancouversun.com/news/coroners-inquest-into-shooting-turns-testy
-715,V1-0112,Ian Bush,2005-10-29,,The Globe and Mail,https://www.theglobeandmail.com/news/national/shooting-of-ian-bush-a-horrible-tragedy-rcmp/article1076970/
-716,V1-0112,Ian Bush,2005-10-29,,National Post,https://nationalpost.com/news/over-half-of-rcmp-in-custody-deaths-occurred-in-bc-report
-717,V1-0112,Ian Bush,2005-10-29,,Toronto Star,https://www.thestar.com/news/canada/rcmp-works-to-rebuild-image-in-b-c/article_65f372f6-e11c-5fd6-90ea-2ea0a659b003.html
-718,V1-0112,Ian Bush,2005-10-29,,The Interior News,https://www.interior-news.com/news/linda-bush-backs-new-police-watchdog-6450243
-719,V1-0114,Jason Steacy,2005-11-05,,Toronto Star,https://www.thestar.com/news/gta/opp-officers-tell-their-stories-of-recovering-from-ptsd/article_6bcc2f0f-b3db-5f1b-a029-d123fd92bf27.html
-720,V1-0114,Jason Steacy,2005-11-05,,The Ottawa Citizen,https://ottawacitizen.com/news/local-news/disgraced-opp-officers-employment-extended-until-at-least-october
-721,V1-0123,Shelton McKenzie,2006-04-13,,DurhamRegion.com,https://www.durhamregion.com/news/siu-clears-officer-in-ajax-mans-fatal-shooting/article_911282c5-3e45-56d0-b561-ec62595de608.html
-722,V1-0123,Shelton McKenzie,2006-04-13,,The Globe and Mail,https://www.theglobeandmail.com/news/national/trying-to-reconcile-a-mans-life-and-death/article708021/
-723,V1-0123,Shelton McKenzie,2006-04-13,,The Globe and Mail,https://www.theglobeandmail.com/news/national/police-justified-in-fatal-shooting-siu-concludes/article18168827/
-724,V1-0124,Ronald Smith,2006-04-17,,CBC,https://www.cbc.ca/news/canada/toronto/siu-clears-cops-in-brampton-shooting-1.574449
-725,V1-0124,Ronald Smith,2006-04-17,,The Globe and Mail,https://www.theglobeandmail.com/news/national/siu-probes-fatal-shooting-of-brampton-man/article18160527/
-726,V1-0124,Ronald Smith,2006-04-17,,Toronto Star,https://www.thestar.com/news/canada/ronald-smith-deserves-to-live-says-co-accused/article_65aa7d01-953f-53ff-add0-a5519764b7c5.html
-727,V1-0124,Ronald Smith,2006-04-17,,The Toronto Sun,https://torontosun.com/2012/04/30/death-row-canadian-to-plead-for-clemency
-728,V1-0124,Ronald Smith,2006-04-17,,CTV,https://www.ctvnews.ca/calgary/article/a-two-year-stay-of-execution-montana-legislature-defeats-bill-to-resume-executions/
+683,V1-0089,Dennis St. Paul,2005-01-03,2006-07-19,CBC,https://www.cbc.ca/news/canada/manitoba/inquest-slams-rcmp-understaffing-underfunding-on-reserves-1.579161
+684,V1-0089,Dennis St. Paul,2005-01-03,2005-01-07,CBC,https://www.cbc.ca/news/canada/manitoba/rcmp-s-sour-relationship-contributed-to-shooting-chief-1.540597
+685,V1-0090,Paulo Medeiros,2005-01-14,2005-01-21,The Globe and Mail,https://www.theglobeandmail.com/news/national/fatal-police-raid-sparks-questions/article734065/
+686,V1-0091,Harjinder Cheema,2005-01-21,2007-03-13,CBC,https://www.cbc.ca/news/canada/calgary/police-defend-officer-who-shot-knife-wielding-man-1.681178
+687,V1-0091,Harjinder Cheema,2005-01-21,2008-02-06,CBC,https://www.cbc.ca/news/canada/calgary/judge-rules-calgary-officer-justified-in-shooting-man-1.718028
+688,V1-0092,Matthew Dumas,2005-01-31,2007-01-29,CBC,https://www.cbc.ca/news/canada/manitoba/dumas-family-sues-winnipeg-police-for-wrongful-death-1.637764
+689,V1-0092,Matthew Dumas,2005-01-31,2005-02-02,CBC,https://www.cbc.ca/news/canada/native-leaders-angry-over-2nd-police-shooting-1.538727
+690,V1-0092,Matthew Dumas,2005-01-31,2008-06-17,CTV,https://www.ctvnews.ca/winnipeg/article/marijuana-in-dumas-system-toxicology-report
+691,V1-0092,Matthew Dumas,2005-01-31,2008-06-13,CBC,https://www.cbc.ca/news/canada/manitoba/i-did-not-want-to-pull-the-trigger-officer-at-dumas-inquest-1.728782
+692,V1-0092,Matthew Dumas,2005-01-31,2008-06-21,Winnipeg Free Press,https://www.winnipegfreepress.com/historic/2008/06/21/the-stain-remains
+693,V1-0092,Matthew Dumas,2005-01-31,2016-11-08,The Winnipeg Sun,https://winnipegsun.com/2016/11/08/knife-seen-near-body-of-winnipeg-shooting-victim-inquest
+694,V1-0092,Matthew Dumas,2005-01-31,2008-06-14,The Globe and Mail,https://www.theglobeandmail.com/news/national/didnt-want-to-shoot-teen-but-had-no-choice-officer-tells-winnipeg-inquest/article674734/
+695,V1-0092,Matthew Dumas,2005-01-31,2023-09-12,Winnipeg Free Press,https://www.winnipegfreepress.com/featured/2023/09/12/a-pattern-of-none-and-done
+696,V1-0092,Matthew Dumas,2005-01-31,2008-12-10,Toronto Star,https://www.thestar.com/news/canada/officers-cleared-in-native-teens-death/article_e2f35d71-bc45-58c8-b05f-952466d670d8.html
+697,V1-0092,Matthew Dumas,2005-01-31,2012-03-15,The Winnipeg Sun,https://winnipegsun.com/2012/03/15/rally-against-police-brutality-racial-profiling
+698,V1-0092,Matthew Dumas,2005-01-31,2008-09-02,Global News,https://globalnews.ca/news/69146/officer-takes-the-stand/
+699,V1-0094,Elyas Bariali,2005-03-06,2010-11-05,Toronto Star,https://www.thestar.com/news/gta/stories-differ-after-police-shot-man-holding-screwdriver/article_5c79e1d1-21d6-5851-a95e-892999d2a31c.html
+700,V1-0094,Elyas Bariali,2005-03-06,2010-11-09,DurhamRegion.com,https://www.durhamregion.com/news/stories-differ-after-fatal-police-shooting-of-oshawa-man/article_0fbe2ab3-99ac-53ef-86fc-9632d5ae7970.html
+701,V1-0318,Michael MacIsaac,2013-12-02,2018-06-13,CBC,https://www.cbc.ca/news/canada/toronto/durham-police-body-worn-cameras-pilot-project-1.4703979
+702,V1-0096,Daniel Lippa,2005-03-11,2008-02-29,CBC,https://www.cbc.ca/news/canada/edmonton/inquiry-into-police-shooting-death-makes-no-recommendations-1.715108
+703,V1-0096,Daniel Lippa,2005-03-11,2007-03-29,CBC,https://www.cbc.ca/news/canada/edmonton/father-wants-second-inquiry-into-police-shooting-1.678809
+704,V1-0099,Kevin Geldart,2005-05-05,2007-02-23,CBC,https://www.cbc.ca/news/canada/new-brunswick/staff-didn-t-stop-geldart-from-leaving-psychiatric-ward-inquest-hears-1.640709
+705,V1-0099,Kevin Geldart,2005-05-05,2007-03-02,CBC,https://www.cbc.ca/news/canada/new-brunswick/hospital-slow-to-react-to-geldart-s-disappearance-says-psychiatrist-1.632442
+706,V1-0099,Kevin Geldart,2005-05-05,2007-03-05,The Globe and Mail,https://www.theglobeandmail.com/news/national/taser-inquest-disappoints-relatives-of-nb-man/article17992426/
+707,V1-0099,Kevin Geldart,2005-05-05,2005-05-07,The Globe and Mail,https://www.theglobeandmail.com/news/national/nb-death-after-taser-use-being-probed/article18226543/
+708,V1-0101,Ucal Lauzon,2005-05-27,2001-04-11,The Globe and Mail,https://www.theglobeandmail.com/news/national/tactical-squad-subdues-man-swinging-sword/article4146232/
+709,V1-0104,Gurmit Sandhu,2005-06-30,2006-02-15,The Globe and Mail,https://www.theglobeandmail.com/news/national/civilian-agency-one-model-to-probe-police-custody-deaths/article18155283/
+710,V1-0112,Ian Bush,2005-10-29,2010-04-21,CBC,https://www.cbc.ca/news/canada/british-columbia/ian-bush-s-mother-drops-rcmp-lawsuit-1.900920
+711,V1-0112,Ian Bush,2005-10-29,2007-05-22,CBC,https://www.cbc.ca/news/canada/british-columbia/man-shot-in-back-of-head-rcmp-shooting-inquest-told-1.651690
+712,V1-0112,Ian Bush,2005-10-29,2010-04-21,Global News,https://globalnews.ca/news/87911/mother-of-man-shot-to-death-by-cop-drops-rcmp-lawsuit/
+713,V1-0112,Ian Bush,2005-10-29,2010-04-21,The Globe and Mail,https://www.theglobeandmail.com/news/british-columbia/mother-of-ian-bush-drops-lawsuit-against-rcmp/article1210822/
+714,V1-0112,Ian Bush,2005-10-29,2007-07-02,The Vancouver Sun,https://vancouversun.com/news/coroners-inquest-into-shooting-turns-testy
+715,V1-0112,Ian Bush,2005-10-29,2007-05-25,The Globe and Mail,https://www.theglobeandmail.com/news/national/shooting-of-ian-bush-a-horrible-tragedy-rcmp/article1076970/
+716,V1-0112,Ian Bush,2005-10-29,2008-02-14,National Post,https://nationalpost.com/news/over-half-of-rcmp-in-custody-deaths-occurred-in-bc-report
+717,V1-0112,Ian Bush,2005-10-29,2010-05-07,Toronto Star,https://www.thestar.com/news/canada/rcmp-works-to-rebuild-image-in-b-c/article_65f372f6-e11c-5fd6-90ea-2ea0a659b003.html
+718,V1-0112,Ian Bush,2005-10-29,2011-12-17,The Interior News,https://www.interior-news.com/news/linda-bush-backs-new-police-watchdog-6450243
+719,V1-0114,Jason Steacy,2005-11-05,2012-10-24,Toronto Star,https://www.thestar.com/news/gta/opp-officers-tell-their-stories-of-recovering-from-ptsd/article_6bcc2f0f-b3db-5f1b-a029-d123fd92bf27.html
+720,V1-0114,Jason Steacy,2005-11-05,2023-06-10,The Ottawa Citizen,https://ottawacitizen.com/news/local-news/disgraced-opp-officers-employment-extended-until-at-least-october
+721,V1-0123,Shelton McKenzie,2006-04-13,2006-07-26,DurhamRegion.com,https://www.durhamregion.com/news/siu-clears-officer-in-ajax-mans-fatal-shooting/article_911282c5-3e45-56d0-b561-ec62595de608.html
+722,V1-0123,Shelton McKenzie,2006-04-13,2006-04-29,The Globe and Mail,https://www.theglobeandmail.com/news/national/trying-to-reconcile-a-mans-life-and-death/article708021/
+723,V1-0123,Shelton McKenzie,2006-04-13,2006-07-26,The Globe and Mail,https://www.theglobeandmail.com/news/national/police-justified-in-fatal-shooting-siu-concludes/article18168827/
+724,V1-0124,Ronald Smith,2006-04-17,2006-06-08,CBC,https://www.cbc.ca/news/canada/toronto/siu-clears-cops-in-brampton-shooting-1.574449
+725,V1-0124,Ronald Smith,2006-04-17,2006-04-19,The Globe and Mail,https://www.theglobeandmail.com/news/national/siu-probes-fatal-shooting-of-brampton-man/article18160527/
+726,V1-0124,Ronald Smith,2006-04-17,2012-06-03,Toronto Star,https://www.thestar.com/news/canada/ronald-smith-deserves-to-live-says-co-accused/article_65aa7d01-953f-53ff-add0-a5519764b7c5.html
+727,V1-0124,Ronald Smith,2006-04-17,2012-04-30,The Toronto Sun,https://torontosun.com/2012/04/30/death-row-canadian-to-plead-for-clemency
+728,V1-0124,Ronald Smith,2006-04-17,2025-02-10,CTV,https://www.ctvnews.ca/calgary/article/a-two-year-stay-of-execution-montana-legislature-defeats-bill-to-resume-executions/
 729,V1-0124,Ronald Smith,2006-04-17,,APTN News,https://www.aptnnews.ca/wp-content/uploads/2023/01/On-Duty-Police-Officer-Deaths_Canada_1962-present_CPEP_as-of-6-January-2022.pdf
-730,V1-0124,Ronald Smith,2006-04-17,,Toronto Star,https://www.thestar.com/news/canada/death-row-canadian-asks-top-u-s-court-to-review-case/article_df3ada42-ed21-5584-86e1-0370ad4eb27a.html
-731,V1-0124,Ronald Smith,2006-04-17,,CTV,https://www.ctvnews.ca/world/article/montana-politician-wants-to-nix-death-penalty-could-affect-canadian-on-death-row/
-732,V1-0126,Jeffrey Reodica,2006-05-21,,CBC,https://www.cbc.ca/news/canada/toronto/no-choice-but-to-shoot-teen-officer-tells-inquest-1.623264
-733,V1-0126,Jeffrey Reodica,2006-05-21,,CBC,https://www.cbc.ca/news/canada/toronto/police-killed-unarmed-teen-family-says-1.486166
-734,V1-0126,Jeffrey Reodica,2006-05-21,,The Globe and Mail,https://www.theglobeandmail.com/news/national/teen-was-running-when-officer-shot-him/article18163361/
-735,V1-0126,Jeffrey Reodica,2006-05-21,,The Globe and Mail,https://www.theglobeandmail.com/news/national/partner-who-shot-teen-saved-my-life-officer-says/article18165933/
-736,V1-0126,Jeffrey Reodica,2006-05-21,,Toronto Star,https://www.thestar.com/news/crime/anguished-families-wait-years-for-answers-when-a-loved-one-is-killed-by-police/article_67c83084-bb27-5fa3-827a-8069cb47fb8a.html
-737,V1-0127,Derrick Madrusan,2006-06-07,,CBC,https://www.cbc.ca/news/canada/british-columbia/911-tape-shows-man-s-state-of-mind-before-he-died-in-police-custody-1.682132
-738,V1-0127,Derrick Madrusan,2006-06-07,,CBC,https://www.cbc.ca/news/canada/british-columbia/rcmp-investigating-man-s-death-in-police-custody-1.618285
-739,V1-0130,Darren Cardinal,2006-06-30,,CBC,https://www.cbc.ca/news/canada/edmonton/injured-constable-testifies-at-fatality-inquiry-1.827676
-740,V1-0130,Darren Cardinal,2006-06-30,,CBC,https://www.cbc.ca/news/canada/edmonton/1-dead-officer-wounded-in-edmonton-shootout-1.616380
-741,V1-0130,Darren Cardinal,2006-06-30,,The Globe and Mail,https://www.theglobeandmail.com/news/national/man-26-dies-in-gunfight-with-police-in-edmonton/article18166836/
-742,V1-0130,Darren Cardinal,2006-06-30,,The Edmonton Sun,https://edmontonsun.com/2012/11/23/edmonton-police-officer-saves-stabbed-mans-life
-743,V1-0130,Darren Cardinal,2006-06-30,,PNI Atlantic News,https://www.saltwire.com/atlantic-canada/fatality-report-says-edmonton-police-officers-lack-first-aid-training-83224
-744,V1-0130,Darren Cardinal,2006-06-30,,Edmonton Journal,https://edmontonjournal.com/news/local-news/family-of-st-paul-man-who-died-in-struggle-with-police-question-excited-delirium-finding
-745,V1-0131,Mark Milakovic,2006-07-08,,CBC,https://www.cbc.ca/news/canada/edmonton/suspected-carjacker-dies-in-custody-1.573676
-746,V1-0131,Mark Milakovic,2006-07-08,,CBC,https://www.cbc.ca/news/canada/edmonton/edmonton-police-cleared-in-2006-death-1.984518
-747,V1-0131,Mark Milakovic,2006-07-08,,The Globe and Mail,https://www.theglobeandmail.com/news/national/carjacking-suspect-dies-in-hospital/article18167530/
-748,V1-0132,Jason Doan,2006-08-10,,CBC,https://www.cbc.ca/news/canada/calgary/alberta-man-s-family-seeks-answers-into-taser-death-1.720308
-749,V1-0132,Jason Doan,2006-08-10,,CBC,https://www.cbc.ca/news/canada/calgary/cause-of-death-undeterminable-for-red-deer-man-jolted-by-taser-inquest-1.823998
-750,V1-0132,Jason Doan,2006-08-10,,The Globe and Mail,https://www.theglobeandmail.com/news/national/family-of-man-who-died-after-being-tasered-files-wrongful-death-suit/article955322/
-751,V1-0132,Jason Doan,2006-08-10,,Red Deer Advocate,https://www.reddeeradvocate.com/local-news/taser-inquiry-offers-no-recommendations-7013313
-752,V1-0132,Jason Doan,2006-08-10,,Red Deer Advocate,https://www.reddeeradvocate.com/opinion/the-newest-taser-target-children-7053996
-753,V1-0132,Jason Doan,2006-08-10,,The Globe and Mail,https://www.theglobeandmail.com/news/national/mans-death-sparks-taser-backlash/article22502571/
-754,V1-0132,Jason Doan,2006-08-10,,The Vancouver Sun,https://vancouversun.com/news/staff-blogs/197714
-755,V1-0134,Evan Arnold,2006-09-07,,YorkRegion.com,https://www.yorkregion.com/news/i-feared-for-my-life-officer-tells-inquest/article_d93218d8-ea46-5359-a3e5-a9fb79877475.html
-756,V1-0145,Michael Foster,2007-04-07,,CBC,https://www.cbc.ca/news/canada/ottawa/ont-man-held-pellet-gun-knives-before-police-shot-him-witness-1.678604
-757,V1-0134,Evan Arnold,2006-09-07,,YorkRegion.com,https://www.yorkregion.com/news/newmarket-shooting-draws-inquest/article_731b4977-d14d-5df9-9758-1cb947360c60.html
-758,V1-0134,Evan Arnold,2006-09-07,,YorkRegion.com,https://www.yorkregion.com/news/cops-should-reconsider-callings-suspects-inquest-told/article_2d220178-ad7f-555a-8e79-bf46cdb2f285.html
-759,V1-0134,Evan Arnold,2006-09-07,,YorkRegion.com,https://www.yorkregion.com/news/newmarket-shooting-suicide-by-cop-chief-says/article_3e94ce0a-39fb-578f-9d75-805f2e764c79.html
-760,V1-0137,Jasen Drnasin,2006-11-12,,CBC,https://www.cbc.ca/news/canada/toronto/toronto-police-cleared-in-struggle-that-ended-in-man-s-death-1.737049
-761,V1-0137,Jasen Drnasin,2006-11-12,,Toronto.com,https://www.toronto.com/news/police-not-at-fault-in-mans-death-siu-determines/article_8200de3c-cb89-5452-974d-ecdb313fc309.html
-762,V1-0137,Jasen Drnasin,2006-11-12,,CTV,https://www.ctvnews.ca/toronto/article/siu-clears-officers-in-death-of-man-after-struggle/
-763,V1-0137,Jasen Drnasin,2006-11-12,,Toronto Star,https://www.thestar.com/news/siu-clears-toronto-police-in-death-of-man/article_05721d0e-f1c2-577f-bc2c-7c4b685cf8d5.html
-764,V1-0137,Jasen Drnasin,2006-11-12,,The Globe and Mail,https://www.theglobeandmail.com/news/national/croatian-hero-hurt-in-transit-scuffle/article20417015/
-765,V1-0137,Jasen Drnasin,2006-11-12,,The Globe and Mail,https://www.theglobeandmail.com/news/national/croatian-army-hero-dies-after-scuffle-with-officers/article972230/
-766,V1-0137,Jasen Drnasin,2006-11-12,,CBC,https://www.cbc.ca/news/canada/toronto/man-pepper-sprayed-on-bus-dies-1.608746
-767,V1-0138,Delbert Pelletier,2006-11-13,,CBC,https://www.cbc.ca/news/canada/saskatchewan/suicide-by-cop-death-inquiry-needed-family-1.906674
-768,V1-0138,Delbert Pelletier,2006-11-13,,CBC,https://www.cbc.ca/news/canada/saskatchewan/pelletier-death-by-police-sniper-needs-deeper-examination-family-1.861608
-769,V1-0138,Delbert Pelletier,2006-11-13,,The Globe and Mail,https://www.theglobeandmail.com/news/national/rcmp-inquest-response-displeases-victims-family/article4276000/
-770,V1-0139,John Seguin,2007-02-03,,The Globe and Mail,https://www.theglobeandmail.com/news/national/final-two-shots-were-fatal-in-frenzied-chase-inquest-hears/article1089549/
-771,V1-0139,John Seguin,2007-02-03,,The Globe and Mail,https://www.theglobeandmail.com/news/national/officer-feared-for-life-coroners-inquest-hears/article697613/
-772,V1-0141,Ahmad Saleh-Azad,2007-03-27,,CBC,https://www.cbc.ca/news/canada/manitoba/police-identify-man-shot-by-officer-1.671684
-773,V1-0141,Ahmad Saleh-Azad,2007-03-27,,Winnipeg Free Press,https://www.winnipegfreepress.com/local/2011/04/08/killer-to-be-stopped-meds-but-home-didnt-consult-md
-774,V1-0141,Ahmad Saleh-Azad,2007-03-27,,Winnipeg Free Press,https://www.winnipegfreepress.com/opinion/editorials/2011/10/11/editorial-its-a-shame
-775,V1-0142,Cristian Iordache,2007-03-27,,Lakeland Today,https://www.lakelandtoday.ca/beyond-local/romanian-familys-dream-of-life-in-canada-ended-tragically-in-waters-off-akwesasne-6815434
-776,V1-0605,Jason West,2024-09-06,,CBC,https://www.cbc.ca/news/canada/windsor/windsor-police-jason-west-siu-1.7617476
-777,V1-0580,Nathan Leather,2022-12-25,,CBC,https://www.cbc.ca/news/canada/calgary/community-holds-vigil-for-siksika-nation-member-killed-in-christmas-day-police-shooting-1.6700482
-778,V1-0580,Nathan Leather,2022-12-25,,CBC,https://www.cbc.ca/news/canada/calgary/strathmore-police-shooting-asirt-1.6702735
-779,V1-0580,Nathan Leather,2022-12-25,,CBC,https://www.cbc.ca/news/canada/manitoba/3-inquests-correctional-facilities-1.7619017
-780,V1-0539,Arthur Freake,2021-06-11,,CBC,https://www.cbc.ca/news/canada/newfoundland-labrador/sirt-no-charges-rcmp-officer-shooting-2021-1.6591385
-781,V1-0539,Arthur Freake,2021-06-11,,CBC,https://www.cbc.ca/news/canada/newfoundland-labrador/roy-freake-sirt-police-shooting-rcmp-1.6080421
+730,V1-0124,Ronald Smith,2006-04-17,2010-08-24,Toronto Star,https://www.thestar.com/news/canada/death-row-canadian-asks-top-u-s-court-to-review-case/article_df3ada42-ed21-5584-86e1-0370ad4eb27a.html
+731,V1-0124,Ronald Smith,2006-04-17,2015-02-04,CTV,https://www.ctvnews.ca/world/article/montana-politician-wants-to-nix-death-penalty-could-affect-canadian-on-death-row/
+732,V1-0126,Jeffrey Reodica,2006-05-21,2006-06-28,CBC,https://www.cbc.ca/news/canada/toronto/no-choice-but-to-shoot-teen-officer-tells-inquest-1.623264
+733,V1-0126,Jeffrey Reodica,2006-05-21,2004-08-27,CBC,https://www.cbc.ca/news/canada/toronto/police-killed-unarmed-teen-family-says-1.486166
+734,V1-0126,Jeffrey Reodica,2006-05-21,2006-05-18,The Globe and Mail,https://www.theglobeandmail.com/news/national/teen-was-running-when-officer-shot-him/article18163361/
+735,V1-0126,Jeffrey Reodica,2006-05-21,2006-06-22,The Globe and Mail,https://www.theglobeandmail.com/news/national/partner-who-shot-teen-saved-my-life-officer-says/article18165933/
+736,V1-0126,Jeffrey Reodica,2006-05-21,2016-04-23,Toronto Star,https://www.thestar.com/news/crime/anguished-families-wait-years-for-answers-when-a-loved-one-is-killed-by-police/article_67c83084-bb27-5fa3-827a-8069cb47fb8a.html
+737,V1-0127,Derrick Madrusan,2006-06-07,2007-11-15,CBC,https://www.cbc.ca/news/canada/british-columbia/911-tape-shows-man-s-state-of-mind-before-he-died-in-police-custody-1.682132
+738,V1-0127,Derrick Madrusan,2006-06-07,2006-06-08,CBC,https://www.cbc.ca/news/canada/british-columbia/rcmp-investigating-man-s-death-in-police-custody-1.618285
+739,V1-0130,Darren Cardinal,2006-06-30,2009-01-20,CBC,https://www.cbc.ca/news/canada/edmonton/injured-constable-testifies-at-fatality-inquiry-1.827676
+740,V1-0130,Darren Cardinal,2006-06-30,2006-06-30,CBC,https://www.cbc.ca/news/canada/edmonton/1-dead-officer-wounded-in-edmonton-shootout-1.616380
+741,V1-0130,Darren Cardinal,2006-06-30,2006-07-01,The Globe and Mail,https://www.theglobeandmail.com/news/national/man-26-dies-in-gunfight-with-police-in-edmonton/article18166836/
+742,V1-0130,Darren Cardinal,2006-06-30,2012-11-23,The Edmonton Sun,https://edmontonsun.com/2012/11/23/edmonton-police-officer-saves-stabbed-mans-life
+743,V1-0130,Darren Cardinal,2006-06-30,2009-12-29,PNI Atlantic News,https://www.saltwire.com/atlantic-canada/fatality-report-says-edmonton-police-officers-lack-first-aid-training-83224
+744,V1-0130,Darren Cardinal,2006-06-30,2020-06-12,Edmonton Journal,https://edmontonjournal.com/news/local-news/family-of-st-paul-man-who-died-in-struggle-with-police-question-excited-delirium-finding
+745,V1-0131,Mark Milakovic,2006-07-08,2006-07-13,CBC,https://www.cbc.ca/news/canada/edmonton/suspected-carjacker-dies-in-custody-1.573676
+746,V1-0131,Mark Milakovic,2006-07-08,2011-07-19,CBC,https://www.cbc.ca/news/canada/edmonton/edmonton-police-cleared-in-2006-death-1.984518
+747,V1-0131,Mark Milakovic,2006-07-08,2006-07-14,The Globe and Mail,https://www.theglobeandmail.com/news/national/carjacking-suspect-dies-in-hospital/article18167530/
+748,V1-0132,Jason Doan,2006-08-10,2008-04-22,CBC,https://www.cbc.ca/news/canada/calgary/alberta-man-s-family-seeks-answers-into-taser-death-1.720308
+749,V1-0132,Jason Doan,2006-08-10,2009-05-13,CBC,https://www.cbc.ca/news/canada/calgary/cause-of-death-undeterminable-for-red-deer-man-jolted-by-taser-inquest-1.823998
+750,V1-0132,Jason Doan,2006-08-10,2008-09-11,The Globe and Mail,https://www.theglobeandmail.com/news/national/family-of-man-who-died-after-being-tasered-files-wrongful-death-suit/article955322/
+751,V1-0132,Jason Doan,2006-08-10,2009-05-13,Red Deer Advocate,https://www.reddeeradvocate.com/local-news/taser-inquiry-offers-no-recommendations-7013313
+752,V1-0132,Jason Doan,2006-08-10,2011-04-12,Red Deer Advocate,https://www.reddeeradvocate.com/opinion/the-newest-taser-target-children-7053996
+753,V1-0132,Jason Doan,2006-08-10,2007-10-15,The Globe and Mail,https://www.theglobeandmail.com/news/national/mans-death-sparks-taser-backlash/article22502571/
+754,V1-0132,Jason Doan,2006-08-10,2016-01-04,The Vancouver Sun,https://vancouversun.com/news/staff-blogs/197714
+755,V1-0134,Evan Arnold,2006-09-07,2009-07-29,YorkRegion.com,https://www.yorkregion.com/news/i-feared-for-my-life-officer-tells-inquest/article_d93218d8-ea46-5359-a3e5-a9fb79877475.html
+756,V1-0145,Michael Foster,2007-04-07,2007-04-10,CBC,https://www.cbc.ca/news/canada/ottawa/ont-man-held-pellet-gun-knives-before-police-shot-him-witness-1.678604
+757,V1-0134,Evan Arnold,2006-09-07,2009-07-21,YorkRegion.com,https://www.yorkregion.com/news/newmarket-shooting-draws-inquest/article_731b4977-d14d-5df9-9758-1cb947360c60.html
+758,V1-0134,Evan Arnold,2006-09-07,2009-07-30,YorkRegion.com,https://www.yorkregion.com/news/cops-should-reconsider-callings-suspects-inquest-told/article_2d220178-ad7f-555a-8e79-bf46cdb2f285.html
+759,V1-0134,Evan Arnold,2006-09-07,2009-07-30,YorkRegion.com,https://www.yorkregion.com/news/newmarket-shooting-suicide-by-cop-chief-says/article_3e94ce0a-39fb-578f-9d75-805f2e764c79.html
+760,V1-0137,Jasen Drnasin,2006-11-12,2008-01-08,CBC,https://www.cbc.ca/news/canada/toronto/toronto-police-cleared-in-struggle-that-ended-in-man-s-death-1.737049
+761,V1-0137,Jasen Drnasin,2006-11-12,2008-01-08,Toronto.com,https://www.toronto.com/news/police-not-at-fault-in-mans-death-siu-determines/article_8200de3c-cb89-5452-974d-ecdb313fc309.html
+762,V1-0137,Jasen Drnasin,2006-11-12,2008-01-09,CTV,https://www.ctvnews.ca/toronto/article/siu-clears-officers-in-death-of-man-after-struggle/
+763,V1-0137,Jasen Drnasin,2006-11-12,2008-01-08,Toronto Star,https://www.thestar.com/news/siu-clears-toronto-police-in-death-of-man/article_05721d0e-f1c2-577f-bc2c-7c4b685cf8d5.html
+764,V1-0137,Jasen Drnasin,2006-11-12,2006-11-16,The Globe and Mail,https://www.theglobeandmail.com/news/national/croatian-hero-hurt-in-transit-scuffle/article20417015/
+765,V1-0137,Jasen Drnasin,2006-11-12,2006-11-28,The Globe and Mail,https://www.theglobeandmail.com/news/national/croatian-army-hero-dies-after-scuffle-with-officers/article972230/
+766,V1-0137,Jasen Drnasin,2006-11-12,2006-11-27,CBC,https://www.cbc.ca/news/canada/toronto/man-pepper-sprayed-on-bus-dies-1.608746
+767,V1-0138,Delbert Pelletier,2006-11-13,2010-11-11,CBC,https://www.cbc.ca/news/canada/saskatchewan/suicide-by-cop-death-inquiry-needed-family-1.906674
+768,V1-0138,Delbert Pelletier,2006-11-13,2009-06-10,CBC,https://www.cbc.ca/news/canada/saskatchewan/pelletier-death-by-police-sniper-needs-deeper-examination-family-1.861608
+769,V1-0138,Delbert Pelletier,2006-11-13,2009-06-10,The Globe and Mail,https://www.theglobeandmail.com/news/national/rcmp-inquest-response-displeases-victims-family/article4276000/
+770,V1-0139,John Seguin,2007-02-03,2007-11-16,The Globe and Mail,https://www.theglobeandmail.com/news/national/final-two-shots-were-fatal-in-frenzied-chase-inquest-hears/article1089549/
+771,V1-0139,John Seguin,2007-02-03,2007-11-15,The Globe and Mail,https://www.theglobeandmail.com/news/national/officer-feared-for-life-coroners-inquest-hears/article697613/
+772,V1-0141,Ahmad Saleh-Azad,2007-03-27,2007-04-13,CBC,https://www.cbc.ca/news/canada/manitoba/police-identify-man-shot-by-officer-1.671684
+773,V1-0141,Ahmad Saleh-Azad,2007-03-27,2011-04-08,Winnipeg Free Press,https://www.winnipegfreepress.com/local/2011/04/08/killer-to-be-stopped-meds-but-home-didnt-consult-md
+774,V1-0141,Ahmad Saleh-Azad,2007-03-27,2011-10-11,Winnipeg Free Press,https://www.winnipegfreepress.com/opinion/editorials/2011/10/11/editorial-its-a-shame
+775,V1-0142,Cristian Iordache,2007-03-27,2023-04-05,Lakeland Today,https://www.lakelandtoday.ca/beyond-local/romanian-familys-dream-of-life-in-canada-ended-tragically-in-waters-off-akwesasne-6815434
+776,V1-0605,Jason West,2024-09-06,2025-08-25,CBC,https://www.cbc.ca/news/canada/windsor/windsor-police-jason-west-siu-1.7617476
+777,V1-0580,Nathan Leather,2022-12-25,2022-12-30,CBC,https://www.cbc.ca/news/canada/calgary/community-holds-vigil-for-siksika-nation-member-killed-in-christmas-day-police-shooting-1.6700482
+778,V1-0580,Nathan Leather,2022-12-25,2023-01-03,CBC,https://www.cbc.ca/news/canada/calgary/strathmore-police-shooting-asirt-1.6702735
+779,V1-0580,Nathan Leather,2022-12-25,2025-08-27,CBC,https://www.cbc.ca/news/canada/manitoba/3-inquests-correctional-facilities-1.7619017
+780,V1-0539,Arthur Freake,2021-06-11,2022-09-22,CBC,https://www.cbc.ca/news/canada/newfoundland-labrador/sirt-no-charges-rcmp-officer-shooting-2021-1.6591385
+781,V1-0539,Arthur Freake,2021-06-11,2021-06-29,CBC,https://www.cbc.ca/news/canada/newfoundland-labrador/roy-freake-sirt-police-shooting-rcmp-1.6080421
 782,V1-0420,Kunuk Qamaniq,2017-03-18,,Nunatsiaq News,https://nunatsiaq.com/stories/article/65674coroners_jury_rules_nunavut_police_shooting_a_homicide/
-783,V1-0420,Kunuk Qamaniq,2017-03-18,,Global News,https://globalnews.ca/news/5166283/inuit-suing-rcmp-son-shot/
-784,V1-0420,Kunuk Qamaniq,2017-03-18,,APTN News,https://www.aptnnews.ca/national-news/rcmp-release-account-after-mountie-cleared-in-fatal-shooting-of-inuk-artist-attachie-ashoona/
+783,V1-0420,Kunuk Qamaniq,2017-03-18,2019-04-14,Global News,https://globalnews.ca/news/5166283/inuit-suing-rcmp-son-shot/
+784,V1-0420,Kunuk Qamaniq,2017-03-18,2020-08-28,APTN News,https://www.aptnnews.ca/national-news/rcmp-release-account-after-mountie-cleared-in-fatal-shooting-of-inuk-artist-attachie-ashoona/
 785,V1-0420,Kunuk Qamaniq,2017-03-18,,Nunatsiaq News,https://nunatsiaq.com/stories/article/65674family_testify_on_sons_death_at_inquest_over_police_shooting/
-786,V1-0420,Kunuk Qamaniq,2017-03-18,,The Globe and Mail,https://www.theglobeandmail.com/canada/article-lawsuit-against-nunavut-rcmp-claims-force-losing-touch-with-inuit-2/
-787,V1-0420,Kunuk Qamaniq,2017-03-18,,Nunavut News,https://www.nunavutnews.com/home/monitoring-police-interactions-in-nunavut-the-role-of-body-cameras-7590120
-788,V1-0224,Junior Manon,2010-05-05,,Toronto Star,https://www.thestar.com/news/gta/inquest-jury-blames-police-for-teen-s-death-but-rules-it-an-accident/article_4505832a-1e16-526a-86d0-23606e1887c9.html
-789,V1-0224,Junior Manon,2010-05-05,,Toronto Star,https://www.thestar.com/news/crime/teen-died-quickly-in-police-custody/article_dbdd4915-eeaf-51a3-b906-43964f5a5183.html
-790,V1-0224,Junior Manon,2010-05-05,,National Post,https://nationalpost.com/posted-toronto/18-year-old-man-dead-after-police-foot-chase
-791,V1-0224,Junior Manon,2010-05-05,,CBC,https://www.cbc.ca/news/canada/toronto/coroner-s-jury-says-junior-manon-s-death-was-accidental-1.1299795
-792,V1-0224,Junior Manon,2010-05-05,,National Post,https://nationalpost.com/posted-toronto/siu-clears-toronto-police-officers-in-death-of-teen
-793,V1-0354,Abdi Hirsi,2015-04-09,,Peace Arch News,https://www.peacearchnews.com/news/inquest-set-into-26-year-old-edmonton-mans-police-shooting-death-2815158
-794,V1-0354,Abdi Hirsi,2015-04-09,,Global News,https://globalnews.ca/news/2914110/vancouver-police-cleared-in-fatal-shooting-of-edmonton-man/
-795,V1-0354,Abdi Hirsi,2015-04-09,,CTV,https://www.ctvnews.ca/edmonton/article/deceased-in-late-night-shooting-identified/
-796,V1-0343,Michel Vienneau,2015-01-12,,CBC,https://www.cbc.ca/news/canada/new-brunswick/bathurst-police-michel-vienneau-shooting-settlement-1.7199290
-797,V1-0343,Michel Vienneau,2015-01-12,,Global News,https://globalnews.ca/news/7843683/n-b-expert-calls-for-vetting-of-anonymous-police-tips-following-michel-vienneau-inquest/
-798,V1-0343,Michel Vienneau,2015-01-12,,CBC,https://www.cbc.ca/news/canada/new-brunswick/bathurst-day-5-police-shooting-hearing-1.5330174
-799,V1-0343,Michel Vienneau,2015-01-12,,Global News,https://globalnews.ca/news/7578337/coroners-inquest-michel-vienneau/
-800,V1-0343,Michel Vienneau,2015-01-12,,CTV,https://www.ctvnews.ca/atlantic/article/judge-upholds-dismissal-of-charges-in-bathurst-police-shooting-of-businessman/
-801,V1-0343,Michel Vienneau,2015-01-12,,CTV,https://www.ctvnews.ca/atlantic/article/preliminary-hearing-set-for-bathurst-police-officers-on-manslaughter-charges/
-802,V1-0343,Michel Vienneau,2015-01-12,,CityNews,https://calgary.citynews.ca/2019/12/24/n-b-officers-didnt-break-rules-in-fatal-shooting-arbitrator-rules/
-803,V1-0343,Michel Vienneau,2015-01-12,,The Globe and Mail,https://www.theglobeandmail.com/canada/article-police-officers-cleared-in-fatal-2015-shooting-at-new-brunswick-train/
-804,V1-0343,Michel Vienneau,2015-01-12,,Toronto Star,https://www.thestar.com/news/canada/inquest-into-fatal-police-shooting-in-northern-new-brunswick-to-start-in-april/article_cb875283-6974-5c57-89b9-a08bb949db79.html
-805,V1-0343,Michel Vienneau,2015-01-12,,Winnipeg Free Press,https://www.winnipegfreepress.com/canada/2019/12/09/closing-arguments-begin-in-hearing-for-nb-officers-involved-in-fatal-shooting
-806,V1-0343,Michel Vienneau,2015-01-12,,Toronto Star,https://www.thestar.com/news/canada/family-of-new-brunswick-man-killed-in-2015-offers-10-000-for-information/article_e2d37499-ba6f-5311-99af-eb17a7da6559.html
-807,V1-0343,Michel Vienneau,2015-01-12,,Lethbridge News Now,https://lethbridgenewsnow.com/2016/12/14/judge-delays-ruling-for-police-officers-in-shooting-of-new-brunswick-businessman/
-808,V1-0343,Michel Vienneau,2015-01-12,,CityNews,https://kitchener.citynews.ca/2015/11/19/two-new-brunswick-police-officers-charged-in-mans-shooting-death/
-809,V1-0318,Michael MacIsaac,2013-12-02,,CBC,https://www.cbc.ca/news/canada/toronto/michael-macisaac-inquest-officer-testifies-1.4215176
+786,V1-0420,Kunuk Qamaniq,2017-03-18,2019-04-14,The Globe and Mail,https://www.theglobeandmail.com/canada/article-lawsuit-against-nunavut-rcmp-claims-force-losing-touch-with-inuit-2/
+787,V1-0420,Kunuk Qamaniq,2017-03-18,2024-10-21,Nunavut News,https://www.nunavutnews.com/home/monitoring-police-interactions-in-nunavut-the-role-of-body-cameras-7590120
+788,V1-0224,Junior Manon,2010-05-05,2012-05-08,Toronto Star,https://www.thestar.com/news/gta/inquest-jury-blames-police-for-teen-s-death-but-rules-it-an-accident/article_4505832a-1e16-526a-86d0-23606e1887c9.html
+789,V1-0224,Junior Manon,2010-05-05,2012-01-16,Toronto Star,https://www.thestar.com/news/crime/teen-died-quickly-in-police-custody/article_dbdd4915-eeaf-51a3-b906-43964f5a5183.html
+790,V1-0224,Junior Manon,2010-05-05,2010-05-06,National Post,https://nationalpost.com/posted-toronto/18-year-old-man-dead-after-police-foot-chase
+791,V1-0224,Junior Manon,2010-05-05,2012-05-08,CBC,https://www.cbc.ca/news/canada/toronto/coroner-s-jury-says-junior-manon-s-death-was-accidental-1.1299795
+792,V1-0224,Junior Manon,2010-05-05,2011-01-14,National Post,https://nationalpost.com/posted-toronto/siu-clears-toronto-police-officers-in-death-of-teen
+793,V1-0354,Abdi Hirsi,2015-04-09,2018-08-27,Peace Arch News,https://www.peacearchnews.com/news/inquest-set-into-26-year-old-edmonton-mans-police-shooting-death-2815158
+794,V1-0354,Abdi Hirsi,2015-04-09,2016-09-01,Global News,https://globalnews.ca/news/2914110/vancouver-police-cleared-in-fatal-shooting-of-edmonton-man/
+795,V1-0354,Abdi Hirsi,2015-04-09,2018-08-20,CTV,https://www.ctvnews.ca/edmonton/article/deceased-in-late-night-shooting-identified/
+796,V1-0343,Michel Vienneau,2015-01-12,2024-05-10,CBC,https://www.cbc.ca/news/canada/new-brunswick/bathurst-police-michel-vienneau-shooting-settlement-1.7199290
+797,V1-0343,Michel Vienneau,2015-01-12,2021-05-07,Global News,https://globalnews.ca/news/7843683/n-b-expert-calls-for-vetting-of-anonymous-police-tips-following-michel-vienneau-inquest/
+798,V1-0343,Michel Vienneau,2015-01-12,2019-10-22,CBC,https://www.cbc.ca/news/canada/new-brunswick/bathurst-day-5-police-shooting-hearing-1.5330174
+799,V1-0343,Michel Vienneau,2015-01-12,2021-01-15,Global News,https://globalnews.ca/news/7578337/coroners-inquest-michel-vienneau/
+800,V1-0343,Michel Vienneau,2015-01-12,2017-10-20,CTV,https://www.ctvnews.ca/atlantic/article/judge-upholds-dismissal-of-charges-in-bathurst-police-shooting-of-businessman/
+801,V1-0343,Michel Vienneau,2015-01-12,2016-03-22,CTV,https://www.ctvnews.ca/atlantic/article/preliminary-hearing-set-for-bathurst-police-officers-on-manslaughter-charges/
+802,V1-0343,Michel Vienneau,2015-01-12,2019-12-24,CityNews,https://calgary.citynews.ca/2019/12/24/n-b-officers-didnt-break-rules-in-fatal-shooting-arbitrator-rules/
+803,V1-0343,Michel Vienneau,2015-01-12,2019-12-24,The Globe and Mail,https://www.theglobeandmail.com/canada/article-police-officers-cleared-in-fatal-2015-shooting-at-new-brunswick-train/
+804,V1-0343,Michel Vienneau,2015-01-12,2021-01-15,Toronto Star,https://www.thestar.com/news/canada/inquest-into-fatal-police-shooting-in-northern-new-brunswick-to-start-in-april/article_cb875283-6974-5c57-89b9-a08bb949db79.html
+805,V1-0343,Michel Vienneau,2015-01-12,2019-12-09,Winnipeg Free Press,https://www.winnipegfreepress.com/canada/2019/12/09/closing-arguments-begin-in-hearing-for-nb-officers-involved-in-fatal-shooting
+806,V1-0343,Michel Vienneau,2015-01-12,2019-11-30,Toronto Star,https://www.thestar.com/news/canada/family-of-new-brunswick-man-killed-in-2015-offers-10-000-for-information/article_e2d37499-ba6f-5311-99af-eb17a7da6559.html
+807,V1-0343,Michel Vienneau,2015-01-12,2016-12-14,Lethbridge News Now,https://lethbridgenewsnow.com/2016/12/14/judge-delays-ruling-for-police-officers-in-shooting-of-new-brunswick-businessman/
+808,V1-0343,Michel Vienneau,2015-01-12,2015-11-19,CityNews,https://kitchener.citynews.ca/2015/11/19/two-new-brunswick-police-officers-charged-in-mans-shooting-death/
+809,V1-0318,Michael MacIsaac,2013-12-02,2017-07-20,CBC,https://www.cbc.ca/news/canada/toronto/michael-macisaac-inquest-officer-testifies-1.4215176
 810,V1-0318,Michael MacIsaac,2013-12-02,,Toronto Star,https://www.thestar.com/news/gta/when-police-kill/
-811,V1-0318,Michael MacIsaac,2013-12-02,,DurhamRegion.com,https://www.durhamregion.com/news/family-of-ajax-man-michael-macisaac-says-testimony-from-three-police-officers-at-shooting-inquest/article_876d0411-4c6f-547d-8d4c-7d15e73a31c1.html
-812,V1-0318,Michael MacIsaac,2013-12-02,,Toronto Star,https://www.thestar.com/news/gta/durham-police-to-form-mental-health-committee-following-fatal-shooting-of-michael-macisaac/article_463f00f7-35eb-5f69-b1fa-030b302e1be9.html
-813,V1-0318,Michael MacIsaac,2013-12-02,,PNI Atlantic News,https://www.saltwire.com/newfoundland-labrador/michael-macisaacs-family-still-searching-for-justice-177342
-814,V1-0318,Michael MacIsaac,2013-12-02,,The Hamilton Spectator,https://www.thespec.com/news/ontario/what-did-he-do-family-of-man-shot-dead-by-durham-cop-eager-to-speak/article_5ce0960c-a37e-58f8-a9ad-d1d6b15e001e.html
-815,V1-0318,Michael MacIsaac,2013-12-02,,DurhamRegion.com,https://www.durhamregion.com/news/inquest-begins-into-fatal-police-shooting-of-ajax-man-michael-macisaac/article_96e64bd9-2b68-5a02-b2fb-1962d50e60b6.html
-816,V1-0318,Michael MacIsaac,2013-12-02,,CTV,https://www.ctvnews.ca/toronto/article/officer-in-shooting-death-of-ajax-man-will-not-be-charged-siu/
-817,V1-0318,Michael MacIsaac,2013-12-02,,Our Windsor,https://www.ourwindsor.ca/opinion/columnists/two-police-confrontations-two-outcomes-why-did-michael-macisaac-of-ajax-have-to-die/article_6642248b-21be-50ed-b33e-8dbe29478a55.html
-818,V1-0318,Michael MacIsaac,2013-12-02,,Global News,https://globalnews.ca/news/1061852/family-of-man-killed-by-police-plans-vigil-to-draw-attention-to-police-shootings/
-819,V1-0318,Michael MacIsaac,2013-12-02,,PNI Atlantic News,https://www.saltwire.com/atlantic-canada/family-still-seeking-answers-42754
-820,V1-0318,Michael MacIsaac,2013-12-02,,Oshawa Express,https://oshawaexpress.ca/mental-health-committee-to-be-established-by-durham-police-following-inquest/
-821,V1-0318,Michael MacIsaac,2013-12-02,,The Toronto Sun,https://torontosun.com/2014/06/03/siu-clears-durham-cop-in-fatal-shooting-of-ajax-man
-822,V1-0318,Michael MacIsaac,2013-12-02,,CityNews,https://toronto.citynews.ca/2014/06/04/family-devastated-after-siu-clears-officer-in-mans-death/
-823,V1-0318,Michael MacIsaac,2013-12-02,,The Pointer,https://thepointer.com/article/2020-11-28/calls-for-better-police-training-and-siu-reform-are-being-ignored-while-avoidable-tragedies-continue
-824,V1-0318,Michael MacIsaac,2013-12-02,,CBC,https://www.cbc.ca/news/canada/toronto/michael-macisaac-inquest-mental-health-1.4223451
+811,V1-0318,Michael MacIsaac,2013-12-02,2017-07-27,DurhamRegion.com,https://www.durhamregion.com/news/family-of-ajax-man-michael-macisaac-says-testimony-from-three-police-officers-at-shooting-inquest/article_876d0411-4c6f-547d-8d4c-7d15e73a31c1.html
+812,V1-0318,Michael MacIsaac,2013-12-02,2018-01-15,Toronto Star,https://www.thestar.com/news/gta/durham-police-to-form-mental-health-committee-following-fatal-shooting-of-michael-macisaac/article_463f00f7-35eb-5f69-b1fa-030b302e1be9.html
+813,V1-0318,Michael MacIsaac,2013-12-02,2018-01-15,PNI Atlantic News,https://www.saltwire.com/newfoundland-labrador/michael-macisaacs-family-still-searching-for-justice-177342
+814,V1-0318,Michael MacIsaac,2013-12-02,2017-07-17,The Hamilton Spectator,https://www.thespec.com/news/ontario/what-did-he-do-family-of-man-shot-dead-by-durham-cop-eager-to-speak/article_5ce0960c-a37e-58f8-a9ad-d1d6b15e001e.html
+815,V1-0318,Michael MacIsaac,2013-12-02,2017-07-17,DurhamRegion.com,https://www.durhamregion.com/news/inquest-begins-into-fatal-police-shooting-of-ajax-man-michael-macisaac/article_96e64bd9-2b68-5a02-b2fb-1962d50e60b6.html
+816,V1-0318,Michael MacIsaac,2013-12-02,2014-06-04,CTV,https://www.ctvnews.ca/toronto/article/officer-in-shooting-death-of-ajax-man-will-not-be-charged-siu/
+817,V1-0318,Michael MacIsaac,2013-12-02,2015-12-16,Our Windsor,https://www.ourwindsor.ca/opinion/columnists/two-police-confrontations-two-outcomes-why-did-michael-macisaac-of-ajax-have-to-die/article_6642248b-21be-50ed-b33e-8dbe29478a55.html
+818,V1-0318,Michael MacIsaac,2013-12-02,2014-01-04,Global News,https://globalnews.ca/news/1061852/family-of-man-killed-by-police-plans-vigil-to-draw-attention-to-police-shootings/
+819,V1-0318,Michael MacIsaac,2013-12-02,2017-09-29,PNI Atlantic News,https://www.saltwire.com/atlantic-canada/family-still-seeking-answers-42754
+820,V1-0318,Michael MacIsaac,2013-12-02,2018-01-24,Oshawa Express,https://oshawaexpress.ca/mental-health-committee-to-be-established-by-durham-police-following-inquest/
+821,V1-0318,Michael MacIsaac,2013-12-02,2014-06-03,The Toronto Sun,https://torontosun.com/2014/06/03/siu-clears-durham-cop-in-fatal-shooting-of-ajax-man
+822,V1-0318,Michael MacIsaac,2013-12-02,2014-06-04,CityNews,https://toronto.citynews.ca/2014/06/04/family-devastated-after-siu-clears-officer-in-mans-death/
+823,V1-0318,Michael MacIsaac,2013-12-02,2020-11-28,The Pointer,https://thepointer.com/article/2020-11-28/calls-for-better-police-training-and-siu-reform-are-being-ignored-while-avoidable-tragedies-continue
+824,V1-0318,Michael MacIsaac,2013-12-02,2017-07-26,CBC,https://www.cbc.ca/news/canada/toronto/michael-macisaac-inquest-mental-health-1.4223451
+825,V1-0059,Clark Whitehouse,2003-09-28,2018-04-13,CBC,https://www.cbc.ca/news/canada/north/deadly-force-cbc-yukon-1.4614546
+826,V1-0059,Clark Whitehouse,2003-09-28,2005-04-20,CBC,https://www.cbc.ca/news/canada/north/rcmp-member-lacked-drug-knowledge-inquest-hears-1.564169
+827,V1-0182,Grant Edwin McLeod,2008-08-30,2009-09-14,CBC,https://www.cbc.ca/news/canada/north/yukon-inquest-studies-man-s-death-in-police-arrest-1.813790
+828,V1-0182,Grant Edwin McLeod,2008-08-30,,Whitehorse Star,https://www.whitehorsestar.com/News/man-looked-right-through-us-officer-testifies
+829,V1-0182,Grant Edwin McLeod,2008-08-30,2009-09-17,CBC,https://www.cbc.ca/news/canada/north/high-cocaine-levels-killed-yukon-man-inquest-told-1.803483
+830,V1-0182,Grant Edwin McLeod,2008-08-30,2010-08-31,Yukon News,https://www.yukon-news.com/news/woman-sues-rcmp-claiming-negligence-caused-fathers-death-6987265
+831,V1-0182,Grant Edwin McLeod,2008-08-30,2008-09-11,Yukon News,https://www.yukon-news.com/news/man-did-not-die-by-police-force-coroner-6968954
+832,V1-0182,Grant Edwin McLeod,2008-08-30,,Whitehorse Star,https://www.whitehorsestar.com/News/deceaseds-daughter-takes-action-against-rcmp
+833,V1-0013,Norman Reid,2000-08-26,2003-12-22,CBC,https://www.cbc.ca/news/canada/newfoundland-labrador/shootings-inquiry-cites-litany-of-failure-1.396924
+834,V1-0013,Norman Reid,2000-08-26,2015-03-17,PNI Atlantic News,https://www.saltwire.com/newfoundland-labrador/grumpy-cop-136117
+835,V1-0013,Norman Reid,2000-08-26,2004-06-10,The Georgia Straight,https://www.straight.com/article/policing-the-policing-of-psychiatric-patients
+836,V1-0016,Darryl Power,2000-10-16,2000-10-17,CBC,https://www.cbc.ca/news/canada/opp-probe-police-shooting-1.251352
+837,V1-0016,Darryl Power,2000-10-16,2000-10-17,The Globe and Mail,https://www.theglobeandmail.com/news/national/man-23-dies-in-police-shooting/article25473136/
+838,V1-0046,Naytanie Atadjuat,2002-09-11,2018-11-05,Toronto Star,https://www.thestar.com/news/investigations/police-related-deaths-in-nunavut-nine-times-higher-than-in-ontario/article_8eba6f87-4331-52e7-89ed-92636c120017.html
+839,V1-0190,John Simon,2008-12-02,2012-01-09,APTN News,https://www.aptnnews.ca/national-news/rcmp-settles-with-ns-widow-of-fn-man-shot-inside-home/
+840,V1-0190,John Simon,2008-12-02,2010-03-12,CBC,https://www.cbc.ca/news/canada/nova-scotia/rcmp-drops-wagmatcook-shooting-probe-1.892418
+841,V1-0190,John Simon,2008-12-02,2010-06-10,CBC,https://www.cbc.ca/news/canada/nova-scotia/rcmp-ignored-evidence-in-simon-shooting-band-1.892612
+842,V1-0190,John Simon,2008-12-02,2011-03-21,Global News,https://globalnews.ca/news/72552/john-simons-widow-unhappy-with-rcmp-apology-for-wagmatcook-shooting/
+843,V1-0190,John Simon,2008-12-02,2010-03-17,The Globe and Mail,https://www.theglobeandmail.com/news/national/rcmp-watchdog-investigates-ns-native-mans-death/article573038/
+844,V1-0190,John Simon,2008-12-02,2010-03-11,The Globe and Mail,https://www.theglobeandmail.com/news/national/ns-rcmp-call-off-disciplinary-hearing-after-fatal-shooting/article573039/
+845,V1-0489,Mitchell Anthony Speight,2019-08-10,2019-08-12,PNI Atlantic News,https://www.saltwire.com/nova-scotia/injured-officer-man-killed-in-truro-weekend-shooting-identified-340804
+846,V1-0489,Mitchell Anthony Speight,2019-08-10,,The Chronicle Herald,https://www.pressreader.com/canada/the-chronicle-herald-provincial/20200910/281595242941977
+847,V1-0489,Mitchell Anthony Speight,2019-08-10,2019-08-12,Global News,https://globalnews.ca/news/5756951/officer-involved-in-shooting-out-of-coma/
+848,V1-0489,Mitchell Anthony Speight,2019-08-10,2019-08-13,PNI Atlantic News,https://www.saltwire.com/atlantic-canada/man-killed-by-rcmp-officer-in-truro-identified-as-mitchell-speight-340962
+849,V1-0489,Mitchell Anthony Speight,2019-08-10,2020-09-08,PNI Atlantic News,https://www.saltwire.com/nova-scotia/rcmp-officer-who-shot-driver-of-stolen-vehicle-not-criminally-responsible-sirt-494463
+850,V1-0489,Mitchell Anthony Speight,2019-08-10,2020-09-08,CBC,https://www.cbc.ca/news/canada/nova-scotia/no-charges-laid-against-ns-police-officer-shot-and-killed-man-in-truro-1.5716084
+851,V1-0304,Daniel Levesque,2013-07-13,2014-05-23,CBC,https://www.cbc.ca/news/canada/new-brunswick/codiac-rcmp-officers-found-not-responsible-for-man-s-death-1.2651801
+852,V1-0304,Daniel Levesque,2013-07-13,2014-05-23,Global News,https://globalnews.ca/news/1349567/codiac-rcmp-not-responsible-for-death-of-moncton-man-fredericton-police/
+853,V1-0304,Daniel Levesque,2013-07-13,2014-05-23,CTV,https://www.ctvnews.ca/atlantic/article/earlier-stabbing-not-rcmp-shooting-killed-man-fredericton-police/
+854,V1-0304,Daniel Levesque,2013-07-13,2013-07-14,PNI Atlantic News,https://www.saltwire.com/cape-breton/police-release-identify-of-moncton-man-following-shooting-incident-5038
+855,V1-0304,Daniel Levesque,2013-07-13,2014-06-06,Media Co-op,https://mediacoop.ca/story/are-moncton-rcmp-paying-price-last-years-murder-da/30896
+856,V1-0304,Daniel Levesque,2013-07-13,2014-06-12,CBC,https://www.cbc.ca/news/canada/new-brunswick/justin-bourque-loved-guns-but-wasn-t-violent-former-roommate-says-1.2673889
+857,V1-0304,Daniel Levesque,2013-07-13,2013-07-13,CBC,https://www.cbc.ca/news/canada/new-brunswick/moncton-shooting-involving-police-leaves-1-man-dead-1.1404259
+858,V1-0033,Donald Lorne Miles,2001-11-05,,Winnipeg Free Press,http://myaccess.library.utoronto.ca/login?qurl=https%3A%2F%2Fwww.proquest.com%2Fnewspapers%2Fpolice-conduct-be-reviewed-at-inquests%2Fdocview%2F2545262297%2Fse-2%3Faccountid%3D14771
+859,V1-0164,Roy Thomas Bell,2007-12-17,2007-12-19,CBC,https://www.cbc.ca/news/canada/manitoba/man-killed-by-winnipeg-police-a-former-canadian-forces-member-1.632109
+860,V1-0164,Roy Thomas Bell,2007-12-17,2007-12-19,Winnipeg Free Press,https://www.winnipegfreepress.com/historic/2007/12/19/ex-soldier-shot-by-police-had-pellet-gun-source
+861,V1-0164,Roy Thomas Bell,2007-12-17,2017-01-11,CBC,https://www.cbc.ca/news/canada/manitoba/winnipeg-police-granted-permission-inquest-bell-1.3931136
+862,V1-0164,Roy Thomas Bell,2007-12-17,2007-12-20,The Globe and Mail,https://www.theglobeandmail.com/news/national/how-an-off-the-cuff-comment-turned-deadly/article700092/
+863,V1-0164,Roy Thomas Bell,2007-12-17,2018-08-08,Winnipeg Free Press,https://www.winnipegfreepress.com/breakingnews/2018/08/08/long-delayed-police-shooting-inquest-yields-no-recommendations
+864,V1-0164,Roy Thomas Bell,2007-12-17,2016-12-05,CBC,https://www.cbc.ca/news/canada/manitoba/hearing-suicide-cop-inquest-roy-thomas-bell-1.3882836
+865,V1-0164,Roy Thomas Bell,2007-12-17,2018-08-08,CBC,https://www.cbc.ca/news/canada/manitoba/inquest-roy-thomas-bell-police-shooting-winnipeg-1.4777755
+866,V1-0164,Roy Thomas Bell,2007-12-17,2018-08-08,CTV,https://www.ctvnews.ca/winnipeg/article/no-recommendations-made-following-inquest-into-winnipeg-man-killed-by-police/
+867,V1-0180,Craig Vincent McDougall,2008-08-02,2017-05-12,CBC,https://www.cbc.ca/news/canada/manitoba/craig-mcdougall-inquest-report-1.4113028
+868,V1-0180,Craig Vincent McDougall,2008-08-02,2016-12-07,Global News,https://globalnews.ca/news/3112906/expert-cites-systemic-racism-in-the-2008-winnipeg-shooting-of-craig-mcdougall/
+869,V1-0180,Craig Vincent McDougall,2008-08-02,2013-08-08,Winnipeg Sun,https://winnipegsun.com/2013/08/08/inquest-called-into-death-of-craig-mcdougall
+870,V1-0180,Craig Vincent McDougall,2008-08-02,2017-05-12,CTV,https://www.ctvnews.ca/winnipeg/article/report-finds-winnipeg-police-justified-in-shooting-26-year-old-man/
+871,V1-0180,Craig Vincent McDougall,2008-08-02,2016-11-22,CBC,https://www.cbc.ca/news/canada/manitoba/police-fatal-shooting-craig-mcdougall-inquest-1.3861981
+872,V1-0180,Craig Vincent McDougall,2008-08-02,2016-11-23,Winnipeg Free Press,https://www.winnipegfreepress.com/breakingnews/2016/11/23/fatal-2008-shooting-happened-moments-after-police-arrived-inquest-told
+873,V1-0180,Craig Vincent McDougall,2008-08-02,2013-08-08,Global News,https://globalnews.ca/news/769138/inquest-called-into-winnipeg-police-shooting/
+874,V1-0180,Craig Vincent McDougall,2008-08-02,2013-08-08,CBC,https://www.cbc.ca/news/canada/manitoba/inquest-called-into-winnipeg-police-shooting-death-of-man-1.1391457
+875,V1-0180,Craig Vincent McDougall,2008-08-02,2016-08-08,CBC,https://www.cbc.ca/news/canada/manitoba/craig-mcdougall-inquest-begins-1.3711404
+876,V1-0180,Craig Vincent McDougall,2008-08-02,2015-12-03,Winnipeg Free Press,https://www.winnipegfreepress.com/local/2015/12/03/waiting-too-long-for-answers
+877,V1-0180,Craig Vincent McDougall,2008-08-02,2016-12-16,Winnipeg Free Press,https://www.winnipegfreepress.com/breakingnews/2016/12/16/father-of-man-shot-by-police-touched-by-apology
+878,V1-0180,Craig Vincent McDougall,2008-08-02,2016-08-08,Winnipeg Free Press,https://www.winnipegfreepress.com/breakingnews/2016/08/08/inquest-into-man-fatally-shot-by-police-2008-begins-today
+879,V1-0180,Craig Vincent McDougall,2008-08-02,2015-05-04,APTN News,https://www.aptnnews.ca/national-news/winnipeg-police-fatal-shooting-aboriginal-man-nearly-7-years-ago-family-still-waiting-answers/
+880,V1-0180,Craig Vincent McDougall,2008-08-02,2016-11-07,Global News,https://globalnews.ca/news/3052503/winnipeg-father-recalls-sons-last-night-alive/
+881,V1-0180,Craig Vincent McDougall,2008-08-02,2013-08-09,Winnipeg Free Press,https://www.winnipegfreepress.com/local/2013/08/09/inquest-to-probe-death-of-man-26-shot-by-police-in-west-end-in-2008
+882,V1-0180,Craig Vincent McDougall,2008-08-02,2017-05-12,Winnipeg Free Press,https://www.winnipegfreepress.com/breakingnews/2017/05/12/officer-had-to-shoot-man-holding-knife-in-2008-inquest-judge-says
+883,V1-0180,Craig Vincent McDougall,2008-08-02,2021-05-19,Media Co-op,https://mediacoop.ca/story/policing-violence-racism-and-colonialism-criminali/37140
+884,V1-0477,Chad Williams,2019-01-11,2022-10-20,Global News,https://globalnews.ca/news/9215350/fatal-shooting-man-with-hatchet-2019-winnipeg-police-inquest-report/
+885,V1-0477,Chad Williams,2019-01-11,2022-10-20,CBC,https://www.cbc.ca/news/canada/manitoba/chad-williams-inquest-winnipeg-police-shooting-1.6623910
+886,V1-0477,Chad Williams,2019-01-11,2019-10-16,APTN News,https://www.aptnnews.ca/national-news/inquest/
+887,V1-0477,Chad Williams,2019-01-11,2019-10-16,CTV,https://www.ctvnews.ca/winnipeg/article/inquest-called-into-death-of-man-killed-in-police-shooting/
+888,V1-0477,Chad Williams,2019-01-11,2019-01-17,CBC,https://www.cbc.ca/news/canada/manitoba/chad-williams-shooting-witness-1.4983171
+889,V1-0477,Chad Williams,2019-01-11,2019-01-16,APTN News,https://www.aptnnews.ca/national-news/it-was-uncalled-for-family-of-man-shot-by-winnipeg-police-speak-out/
+890,V1-0477,Chad Williams,2019-01-11,2019-01-16,Global News,https://globalnews.ca/news/4855297/vigil-man-shot-by-winnipeg-police/
+891,V1-0477,Chad Williams,2019-01-11,2019-01-15,Winnipeg Free Press,https://www.winnipegfreepress.com/breakingnews/2019/01/15/police-shooting-echoes-2016-incident
+892,V1-0477,Chad Williams,2019-01-11,2019-01-16,CBC,https://www.cbc.ca/news/canada/manitoba/chad-williams-police-shooting-vigil-1.4981431
+893,V1-0477,Chad Williams,2019-01-11,2022-10-20,Brandon Sun,https://www.brandonsun.com/local/2022/10/20/fatal-shooting-by-winnipeg-police-was-in-response-to-armed-threat-inquest-report
+894,V1-0477,Chad Williams,2019-01-11,2019-01-14,Winnipeg Sun,https://winnipegsun.com/news/local-news/man-shot-killed-by-police-identified
+895,V1-0596,James Wood,2024-01-27,2024-02-09,APTN News,https://www.aptnnews.ca/national-news/family-of-james-wood-speaks-about-his-death-following-interaction-with-winnipeg-police/
+896,V1-0596,James Wood,2024-01-27,2024-02-09,CBC,https://www.cbc.ca/news/canada/manitoba/james-wood-died-encounter-winnipeg-police-1.7110327
+897,V1-0596,James Wood,2024-01-27,2024-02-09,Winnipeg Sun,https://winnipegsun.com/news/family-of-man-who-died-in-police-incident-demand-accountability-end-to-systemic-racism-in-policing
+898,V1-0596,James Wood,2024-01-27,2024-02-09,Winnipeg Free Press,https://www.winnipegfreepress.com/breakingnews/2024/02/09/family-of-man-who-died-after-arrest-calls-for-police-accountability-transparency
+899,V1-0371,Steven Douglas Campbell,2015-11-21,2024-08-23,CBC,https://www.cbc.ca/news/canada/manitoba/inquest-death-steven-campbell-abram-letkema-1.7303805
+900,V1-0371,Steven Douglas Campbell,2015-11-21,2023-09-22,CBC,https://www.cbc.ca/news/canada/manitoba/inquest-death-police-haki-sefa-steven-douglas-campbell-manitoba-1.6976080
+901,V1-0371,Steven Douglas Campbell,2015-11-21,2016-08-31,CBC,https://www.cbc.ca/news/canada/manitoba/inquest-death-police-haki-sefa-steven-douglas-campbell-manitoba-1.3742798
+902,V1-0371,Steven Douglas Campbell,2015-11-21,2019-08-19,SaskToday,https://www.sasktoday.ca/north/local-news/fatal-police-shooting-of-steven-campbell-justified-but-ramming-his-vehicle-was-not-judge-rules-4293708
+903,V1-0371,Steven Douglas Campbell,2015-11-21,2017-03-13,The Reminder,https://www.thereminder.ca/local-news/updated-mountie-charged-in-shooting-death-of-ex-flin-flonner-4104509
+904,V1-0371,Steven Douglas Campbell,2015-11-21,2020-01-17,CTV,https://www.ctvnews.ca/winnipeg/article/mountie-to-be-sentenced-for-criminal-negligence-in-relation-to-fatal-on-duty-shooting/
+905,V1-0371,Steven Douglas Campbell,2015-11-21,2017-03-03,CBC,https://www.cbc.ca/news/canada/manitoba/lori-flett-rcmp-thompson-shooting-1.4007686
+906,V1-0601,Drake Dillon,2024-06-20,2024-06-24,Global News,https://globalnews.ca/news/10585352/saskatchewan-sirt-police-involved-shooting/
+907,V1-0601,Drake Dillon,2024-06-20,2024-06-24,CBC,https://www.cbc.ca/news/canada/saskatoon/sirt-investigates-saskatoon-police-fatal-shooting-1.7245435
+908,V1-0601,Drake Dillon,2024-06-20,2024-06-24,Saskatoon StarPhoenix,https://thestarphoenix.com/news/local-news/provinces-police-watchdog-offers-more-detail-in-fatal-saskatoon-police-shooting
+909,V1-0601,Drake Dillon,2024-06-20,2024-06-25,CBC,https://www.cbc.ca/news/canada/saskatoon/uncle-identifies-drake-dillon-27-as-man-fatally-shot-by-saskatoon-police-1.7245733
+910,V1-0563,Ryan Booker,2022-07-17,2025-06-25,CTV,https://www.ctvnews.ca/regina/article/sask-police-testify-suspects-gun-was-not-loaded-as-inquest-into-2022-police-shooting-of-ryan-booker-continues/
+911,V1-0563,Ryan Booker,2022-07-17,2025-06-26,Moosejaw Today,https://www.moosejawtoday.com/local-news/inquest-finds-ryan-booker-shooting-death-was-a-suicide-10865602
+912,V1-0563,Ryan Booker,2022-07-17,2025-05-27,SaskToday,https://www.sasktoday.ca/regina-today/regina-news/inquest-into-ryan-bookers-2022-police-shooting-death-set-for-june-10718756
+913,V1-0563,Ryan Booker,2022-07-17,2025-06-25,CTV,https://www.ctvnews.ca/regina/article/he-didnt-get-a-chance-to-get-help-jury-offers-no-recommendations-as-ryan-bookers-death-inquest-concludes/
+914,V1-0563,Ryan Booker,2022-07-17,2022-07-19,Regina Leader-Post,https://leaderpost.com/news/a-good-man-father-of-belle-plaine-victim-speaks-about-son
+915,V1-0563,Ryan Booker,2022-07-17,2025-06-23,CTV,https://www.ctvnews.ca/regina/article/death-inquest-for-man-fatally-shot-by-police-near-moose-jaw-to-begin/
+916,V1-0563,Ryan Booker,2022-07-17,2025-05-28,CTV,https://www.ctvnews.ca/regina/article/death-inquest-scheduled-for-man-shot-dead-by-police-outside-moose-jaw-in-2022/
+917,V1-0563,Ryan Booker,2022-07-17,2022-07-18,Moosejaw Today,https://www.moosejawtoday.com/local-news/police-shoot-and-kill-27-year-old-male-near-moose-jaw-investigation-requested-5593515
+918,V1-0563,Ryan Booker,2022-07-17,2025-06-25,CTV,https://vancouverisland.ctvnews.ca/regina/article/sask-police-testify-suspects-gun-was-not-loaded-as-inquest-into-2022-police-shooting-of-ryan-booker-continues/
+919,V1-0563,Ryan Booker,2022-07-17,,Global News,https://globalnews.ca/video/11263498/family-of-saskatchewan-man-fatally-shot-by-police-take-issue-with-inquest-findings/
+920,V1-0563,Ryan Booker,2022-07-17,2025-06-25,CBC,https://www.cbc.ca/news/canada/saskatchewan/jury-inquest-ryan-booker-police-shooting-1.7571102
+921,V1-0563,Ryan Booker,2022-07-17,2022-07-19,CBC,https://www.cbc.ca/news/canada/saskatchewan/family-loss-ryan-booker-police-shooting-1.6524304
+922,V1-0550,Dillon McDonald,2021-12-14,2021-12-17,CBC,https://www.cbc.ca/news/canada/saskatchewan/dillon-mcdonald-rcmp-shooting-friends-justice-1.6289116
+923,V1-0550,Dillon McDonald,2021-12-14,2025-03-06,Prince Albert Daily Herald,https://paherald.sk.ca/inquest-jury-rules-montreal-lake-rcmp-shooting-was-homicide-and-not-suicide-by-cop/
+924,V1-0550,Dillon McDonald,2021-12-14,2025-03-12,CBC,https://www.cbc.ca/news/canada/saskatoon/inquest-jusy-montreal-lake-homicide-1.7478091
+925,V1-0550,Dillon McDonald,2021-12-14,2025-03-04,paNow,https://panow.com/2025/03/04/gang-member-spoke-about-dying-by-cop-to-brother-before-shooting-death/
+926,V1-0550,Dillon McDonald,2021-12-14,2021-12-16,CTV,https://www.ctvnews.ca/saskatoon/article/the-softest-person-ever-around-his-baby-girl-family-of-sask-man-killed-in-rcmp-shooting-hopes-for-answers/
+927,V1-0550,Dillon McDonald,2021-12-14,2021-12-16,Saskatoon StarPhoenix,https://thestarphoenix.com/news/local-news/family-wants-answers-after-man-shot-and-killed-by-rcmp-on-montreal-lake-cree-nation
+928,V1-0550,Dillon McDonald,2021-12-14,2025-03-03,Prince Albert Daily Herald,https://paherald.sk.ca/inquest-underway-into-2021-police-involved-shooting-in-montreal-lake-sask/
+929,V1-0550,Dillon McDonald,2021-12-14,2024-12-06,Battlefords Now,https://battlefordsnow.com/2024/12/06/inquests-set-in-deaths-in-prince-albert-north-battleford/
+930,V1-0550,Dillon McDonald,2021-12-14,2025-02-05,CTV,https://www.ctvnews.ca/saskatoon/article/sask-coroner-to-examine-death-of-first-nation-man-shot-after-police-standoff/
+931,V1-0550,Dillon McDonald,2021-12-14,2025-03-04,La Ronge Now,https://larongenow.com/2025/03/04/gang-member-spoke-about-dying-by-cop-to-brother-before-shooting-death/
+932,V1-0550,Dillon McDonald,2021-12-14,2021-12-15,CBC,https://www.cbc.ca/news/canada/saskatchewan/fatal-rcmp-shooting-montreal-lake-cree-nation-1.6286793
+933,V1-0550,Dillon McDonald,2021-12-14,2025-02-05,paNOW,https://panow.com/2025/02/05/mcdonald-death-inquest-rescheduled-to-march/
+934,V1-0550,Dillon McDonald,2021-12-14,2025-03-04,SaskNow,https://sasknow.com/2025/03/04/gang-member-spoke-about-dying-by-cop-to-brother-before-shooting-death/
+935,V1-0550,Dillon McDonald,2021-12-14,,CBC,https://www.cbc.ca/lite/story/1.7478091
+936,V1-0550,Dillon McDonald,2021-12-14,2021-12-19,La Ronge Now,https://larongenow.com/2021/12/19/mlcn-leadership-responds-to-shooting-incident-community-prepares-for-funeral/
+937,V1-0550,Dillon McDonald,2021-12-14,2025-02-05,SaskNow,https://sasknow.com/2025/02/05/mcdonald-death-inquest-rescheduled-to-march/
+938,V1-0550,Dillon McDonald,2021-12-14,2025-02-05,SaskToday,https://www.sasktoday.ca/north/prince-albert/probe-into-police-involved-shooting-death-begins-march-3-10187222
+939,V1-0550,Dillon McDonald,2021-12-14,2021-12-16,National Post,https://nationalpost.com/news/local-news/family-wants-answers-after-man-shot-and-killed-by-rcmp-on-montreal-lake-cree-nation
+940,V1-0172,Kenneth Standingready-McKay,2008-06-14,2009-11-06,CBC,https://www.cbc.ca/news/canada/saskatchewan/rcmp-shooting-was-death-by-suicide-jury-1.840534
+941,V1-0172,Kenneth Standingready-McKay,2008-06-14,2009-11-04,CBC,https://www.cbc.ca/news/canada/saskatchewan/wife-of-sask-man-shot-by-rcmp-testifies-at-inquest-1.815514
+942,V1-0172,Kenneth Standingready-McKay,2008-06-14,2008-06-15,Winnipeg Free Press,https://www.winnipegfreepress.com/historic/2008/06/15/aboriginal-group-demands-meeting-after-rcmp-shooting
+943,V1-0172,Kenneth Standingready-McKay,2008-06-14,2011-04-25,Global News,https://globalnews.ca/news/38784/fsin-and-white-bear-first-nation-calling-for-public-inquiry-into-rcmp-shooting-death/
+944,V1-0165,Dwayne Dustyhorn,2007-12-22,2009-06-05,CBC,https://www.cbc.ca/news/canada/saskatchewan/dustyhorn-death-a-suicide-by-cop-jury-suggests-1.786180
+945,V1-0165,Dwayne Dustyhorn,2007-12-22,2009-06-03,CBC,https://www.cbc.ca/news/canada/saskatchewan/woman-yelled-at-police-not-to-shoot-dustyhorn-coroner-s-inquest-hears-1.786181
+946,V1-0165,Dwayne Dustyhorn,2007-12-22,2007-12-28,Winnipeg Free Press,https://www.winnipegfreepress.com/historic/2007/12/28/saskatoon-police-shootings-of-2-native-people-raise-race-relations-questions
+947,V1-0165,Dwayne Dustyhorn,2007-12-22,2009-06-02,CBC,https://www.cbc.ca/news/canada/saskatchewan/five-police-shots-hit-dustyhorn-pathologist-tells-coroner-s-inquest-1.862345
+948,V1-0165,Dwayne Dustyhorn,2007-12-22,2009-05-25,CBC,https://www.cbc.ca/news/canada/saskatchewan/police-shooting-death-to-be-examined-at-coroner-s-inquest-1.788144
+949,V1-0165,Dwayne Dustyhorn,2007-12-22,2007-12-27,CBC,https://www.cbc.ca/news/canada/saskatchewan/saskatoon-police-shoot-2nd-person-within-a-week-1.668517
+950,V1-0165,Dwayne Dustyhorn,2007-12-22,2009-06-01,CBC,https://www.cbc.ca/news/canada/saskatchewan/inquest-begins-on-knife-wielding-man-shot-by-police-1.851364
+951,V1-0165,Dwayne Dustyhorn,2007-12-22,2007-12-27,Winnipeg Free Press,https://www.winnipegfreepress.com/historic/2007/12/27/saskatoon-police-involved-in-second-shooting-in-less-than-a-week
+952,V1-0084,Shawn Martinot,2004-08-30,2006-06-06,CBC,https://www.cbc.ca/news/canada/saskatchewan/put-a-civilian-on-police-negotiating-teams-jury-urges-1.624302
+953,V1-0084,Shawn Martinot,2004-08-30,2006-05-30,CBC,https://www.cbc.ca/news/canada/saskatchewan/man-shot-multiple-times-inquest-hears-1.570402
+954,V1-0072,Andrew Moore,2004-04-30,2004-05-04,CBC,https://www.cbc.ca/news/canada/saskatchewan/officer-used-lethal-force-to-protect-himself-police-chief-1.485557
+955,V1-0072,Andrew Moore,2004-04-30,2005-05-25,CBC,https://www.cbc.ca/news/canada/saskatchewan/man-killed-by-police-had-gun-crystal-meth-1.568087
+956,V1-0034,Danny Sand,2001-12-21,2014-10-03,Edmonton Sun,https://edmontonsun.com/2014/10/03/man-admits-cops-had-to-shoot-him
+957,V1-0034,Danny Sand,2001-12-21,2003-04-22,CBC,https://www.cbc.ca/news/canada/trial-hears-how-rcmp-sniper-killed-suspect-1.393639
+958,V1-0034,Danny Sand,2001-12-21,2001-12-24,The Globe and Mail,https://www.theglobeandmail.com/news/national/two-suspects-in-mountie-slaying-were-on-parole/article4158530/
+959,V1-0032,Calvin Roy McLean,2001-10-09,2011-01-18,CBC,https://www.cbc.ca/news/canada/saskatchewan/pepper-sprayed-man-had-broken-bones-inquest-hears-1.1042686
+960,V1-0032,Calvin Roy McLean,2001-10-09,2011-01-22,CBC,https://www.cbc.ca/news/canada/saskatchewan/pepper-sprayed-man-died-accidentally-inquest-1.1043132
+961,V1-0031,Michael Stochmal,2001-09-01,2001-09-03,CBC,https://www.cbc.ca/news/canada/terror-turns-to-death-on-regina-street-1.276424
+962,V1-0031,Michael Stochmal,2001-09-01,2001-09-07,The Globe and Mail,https://www.theglobeandmail.com/news/national/use-of-pepper-spray-in-regina-death-probed/article18418024/
+963,V1-0028,Vernon Dale Crowe,2001-07-10,2001-07-12,CBC,https://www.cbc.ca/news/canada/use-of-pepper-spray-questioned-after-man-s-death-1.287375
+964,V1-0028,Vernon Dale Crowe,2001-07-10,2001-07-14,CBC,https://www.cbc.ca/news/canada/vigil-held-for-man-who-died-after-pepper-spray-incident-1.271437
+965,V1-0028,Vernon Dale Crowe,2001-07-10,2001-07-11,CBC,https://www.cbc.ca/news/canada/investigation-underway-into-death-of-regina-man-1.261953
+966,V1-0028,Vernon Dale Crowe,2001-07-10,2001-07-12,The Globe and Mail,https://www.theglobeandmail.com/news/national/epileptic-dies-after-struggle-with-police-in-ambulance/article4150515/
+967,V1-0022,Melvin Bigsky,2001-04-27,2018-04-06,CBC,https://www.cbc.ca/news/canada/saskatoon/most-people-who-died-in-police-encounters-in-sask-were-indigenous-1.4599366
+968,V1-0022,Melvin Bigsky,2001-04-27,2001-05-21,CBC,https://www.cbc.ca/news/canada/armed-suspect-killed-in-saskatchewan-1.286785
+969,V1-0084,Shawn Martinot,2004-08-30,2004-08-31,Edmonton Journal,https://www.proquest.com/docview/253172813?parentSessionId=Q2dRqx%2F%2BhSia7hpPGoKjM%2BJ0weoc1cKb2F5687ERxCo%3D&accountid=14771&sourcetype=Newspapers
+970,V1-0084,Shawn Martinot,2004-08-30,2004-08-31,Regina Leader-Post,https://www.proquest.com/docview/349875968?accountid=14771&parentSessionId=71z5s%2Fd9wrYg9I0fpoPEbhG2yGrKK7kmjcuZl%2FnntpA%3D&sourcetype=Newspapers
+971,V1-0072,Andrew Moore,2004-04-30,2005-05-28,Saskatoon StarPhoenix,https://www.proquest.com/canadiannews/docview/348814461/18888437A7C848C0PQ/2?accountid=14771&sourcetype=Newspapers
+972,V1-0072,Andrew Moore,2004-04-30,2004-05-06,Saskatoon StarPhoenix,https://www.proquest.com/canadiannews/docview/348726707/18888437A7C848C0PQ/3?accountid=14771&sourcetype=Newspapers
+973,V1-0072,Andrew Moore,2004-04-30,2004-05-05,Saskatoon StarPhoenix,https://www.proquest.com/canadiannews/docview/348695710/18888437A7C848C0PQ/4?accountid=14771&sourcetype=Newspapers
+974,V1-0072,Andrew Moore,2004-04-30,2004-05-04,Regina Leader-Post,https://www.proquest.com/canadiannews/docview/349785868/18888437A7C848C0PQ/6?accountid=14771&sourcetype=Newspapers
+975,V1-0072,Andrew Moore,2004-04-30,2005-05-25,Saskatoon StarPhoenix,https://www.proquest.com/canadiannews/docview/348902483/18888437A7C848C0PQ/10?accountid=14771&sourcetype=Newspapers
+976,V1-0072,Andrew Moore,2004-04-30,2005-05-11,Saskatoon StarPhoenix,https://www.proquest.com/canadiannews/docview/348791350/C7AD28E4D81A42BAPQ/1?accountid=14771&sourcetype=Newspapers
+977,V1-0034,Danny Sand,2001-12-21,2003-07-19,Calgary Herald,https://www.proquest.com/canadiannews/docview/245085000/Record/C5F0187E6BDE45B3PQ/1?accountid=14771&sourcetype=Newspapers
+978,V1-0034,Danny Sand,2001-12-21,2003-04-24,Edmonton Journal,https://www.proquest.com/canadiannews/docview/253006814/Record/C5F0187E6BDE45B3PQ/2?accountid=14771&sourcetype=Newspapers
+979,V1-0034,Danny Sand,2001-12-21,2003-04-25,Calgary Herald,https://www.proquest.com/canadiannews/docview/245048467/Record/C5F0187E6BDE45B3PQ/9?accountid=14771&sourcetype=Newspapers
+980,V1-0034,Danny Sand,2001-12-21,2003-04-30,Edmonton Journal,https://www.proquest.com/canadiannews/docview/253076103/Record/C5F0187E6BDE45B3PQ/10?accountid=14771&sourcetype=Newspapers
+981,V1-0034,Danny Sand,2001-12-21,2003-04-23,Calgary Herald,https://www.proquest.com/canadiannews/docview/245052749/Record/C5F0187E6BDE45B3PQ/14?accountid=14771&sourcetype=Newspapers
+982,V1-0034,Danny Sand,2001-12-21,2003-07-02,Saskatoon StarPhoenix,https://www.proquest.com/canadiannews/docview/348743385/Record/C5F0187E6BDE45B3PQ/15?accountid=14771&sourcetype=Newspapers
+983,V1-0031,Michael Stochmal,2001-09-01,2001-09-04,Regina Leader-Post,https://www.proquest.com/canadiannews/docview/349642360/F7745594E26240ABPQ/1?accountid=14771&sourcetype=Newspapers
+984,V1-0031,Michael Stochmal,2001-09-01,2003-10-02,Saskatoon StarPhoenix,https://www.proquest.com/canadiannews/docview/349806049/F7745594E26240ABPQ/10?accountid=14771&sourcetype=Newspapers
+985,V1-0031,Michael Stochmal,2001-09-01,2003-10-03,Regina Leader-Post,https://www.proquest.com/canadiannews/docview/349775506/F7745594E26240ABPQ/11?sourcetype=Newspapers
+986,V1-0031,Michael Stochmal,2001-09-01,2003-10-06,Saskatoon StarPhoenix,https://www.proquest.com/canadiannews/docview/348838128/F7745594E26240ABPQ/12?accountid=14771&sourcetype=Newspapers
+987,V1-0031,Michael Stochmal,2001-09-01,2003-10-04,Regina Leader-Post,https://www.proquest.com/canadiannews/docview/349732472/F7745594E26240ABPQ/13?accountid=14771&sourcetype=Newspapers
+988,V1-0031,Michael Stochmal,2001-09-01,2003-10-06,Moose Jaw Times Herald,https://www.proquest.com/canadiannews/docview/345329476/F7745594E26240ABPQ/17?accountid=14771&sourcetype=Newspapers
+989,V1-0031,Michael Stochmal,2001-09-01,2001-09-06,Regina Leader-Post,https://www.proquest.com/canadiannews/docview/349702293/F7745594E26240ABPQ/18?accountid=14771&sourcetype=Newspapers
+990,V1-0031,Michael Stochmal,2001-09-01,2003-10-06,Regina Leader-Post,https://www.proquest.com/canadiannews/docview/349746683/F7745594E26240ABPQ/19?accountid=14771&sourcetype=Newspapers
+991,V1-0028,Vernon Dale Crowe,2001-07-10,2003-02-21,Regina Leader-Post,https://www.proquest.com/canadiannews/docview/349720482/62FB8D79DFF6422CPQ/1?accountid=14771&sourcetype=Newspapers
+992,V1-0028,Vernon Dale Crowe,2001-07-10,2003-02-20,Regina Leader-Post,https://www.proquest.com/canadiannews/docview/349730183/62FB8D79DFF6422CPQ/2?accountid=14771&sourcetype=Newspapers
+993,V1-0028,Vernon Dale Crowe,2001-07-10,2003-02-22,Regina Leader-Post,https://www.proquest.com/canadiannews/docview/349738719/62FB8D79DFF6422CPQ/4?accountid=14771&sourcetype=Newspapers
+994,V1-0028,Vernon Dale Crowe,2001-07-10,2003-02-27,Regina Leader-Post,https://www.proquest.com/canadiannews/docview/349746770/62FB8D79DFF6422CPQ/5?accountid=14771&sourcetype=Newspapers
+995,V1-0028,Vernon Dale Crowe,2001-07-10,2003-02-26,Moose Jaw Times Herald,https://www.proquest.com/canadiannews/docview/345305043/62FB8D79DFF6422CPQ/6?accountid=14771&sourcetype=Newspapers
+996,V1-0028,Vernon Dale Crowe,2001-07-10,2003-02-18,Saskatoon StarPhoenix,https://www.proquest.com/canadiannews/docview/348691164/62FB8D79DFF6422CPQ/8?accountid=14771&sourcetype=Newspapers
+997,V1-0028,Vernon Dale Crowe,2001-07-10,2001-07-14,Regina Leader-Post,https://www.proquest.com/canadiannews/docview/349637608/62FB8D79DFF6422CPQ/11?accountid=14771&sourcetype=Newspapers
+998,V1-0028,Vernon Dale Crowe,2001-07-10,2001-07-12,Saskatoon StarPhoenix,https://www.proquest.com/canadiannews/docview/348574263/62FB8D79DFF6422CPQ/13?accountid=14771&sourcetype=Newspapers
+999,V1-0028,Vernon Dale Crowe,2001-07-10,2001-07-13,Saskatoon StarPhoenix,https://www.proquest.com/canadiannews/docview/348601715/62FB8D79DFF6422CPQ/16?accountid=14771
+1000,V1-0028,Vernon Dale Crowe,2001-07-10,2001-07-13,Regina Leader-Post,https://www.proquest.com/canadiannews/docview/349627168/62FB8D79DFF6422CPQ/15?accountid=14771
