@@ -1005,3 +1005,97 @@ ID,VICTIM_ID,Person Name,Incident Date,Publication Date,Publisher,URL
 1004,V1-0022,Melvin Bigsky,2001-04-27,2001-05-01,Saskatoon StarPhoenix,https://www.proquest.com/canadiannews/docview/348675887/818CF5B15F44EC0PQ/8?accountid=14771&sourcetype=Newspapers
 1005,V1-0022,Melvin Bigsky,2001-04-27,2002-10-04,Saskatoon StarPhoenix,https://www.proquest.com/canadiannews/docview/348695683/818CF5B15F44EC0PQ/9?accountid=14771&sourcetype=Newspapers
 1006,V1-0022,Melvin Bigsky,2001-04-27,2002-10-08,Prince Albert Daily Herald,https://www.proquest.com/canadiannews/docview/345023699/818CF5B15F44EC0PQ/11?accountid=14771
+1007,V1-0599,Patrick Kimmel,2024-03-15,2024-03-20,CTV,https://www.ctvnews.ca/calgary/article/man-killed-in-30-hour-calgary-standoff-had-long-criminal-history-documents/
+1008,V1-0599,Patrick Kimmel,2024-03-15,2024-03-15,CBC,https://www.cbc.ca/news/canada/calgary/calgary-police-memorial-drive-closed-situation-1.7144799
+1009,V1-0599,Patrick Kimmel,2024-03-15,2024-03-23,Calgary Herald,https://calgaryherald.com/news/local-news/woman-widowed-in-penbrooke-standoff-said-she-thought-surrender-deal-had-been-reached
+1010,V1-0599,Patrick Kimmel,2024-03-15,2024-03-17,CTV,https://www.ctvnews.ca/calgary/article/dead-penbrooke-meadows-standoff-suspect-had-criminal-history-of-firearms-violations/
+1011,V1-0599,Patrick Kimmel,2024-03-15,2024-03-16,Calgary Herald,https://calgaryherald.com/news/local-news/front-row-seat-those-in-line-of-fire-in-penbrooke-standoff-describe-shootout-snipers-perches
+1012,V1-0599,Patrick Kimmel,2024-03-15,2024-03-25,CTV,https://www.ctvnews.ca/calgary/article/calgary-man-at-centre-of-30-hour-standoff-came-outside-with-loaded-shotgun-asirt/
+1013,V1-0599,Patrick Kimmel,2024-03-15,2024-03-16,Calgary Herald,https://calgaryherald.com/news/local-news/barricaded-man-shot-dead-by-police-penbrooke-meadows-east-calgary
+1014,V1-0599,Patrick Kimmel,2024-03-15,2024-03-19,CityNews,https://calgary.citynews.ca/2024/03/19/calgary-stand-off-parole-documents/
+1015,V1-0599,Patrick Kimmel,2024-03-15,2024-03-16,CityNews,https://toronto.citynews.ca/2024/03/16/albertas-police-watchdog-called-in-after-deadly-ending-to-30-hour-armed-standoff/
+1016,V1-0599,Patrick Kimmel,2024-03-15,,Calgary Herald,https://calgaryherald.com/video/d6face50-e967-11ee-b30a-ee1be58b2e97/penbrooke-meadows-stand-off-widow-describes-ordeal
+1017,V1-0581,John Gardiner,2023-01-16,2023-02-03,Saskatoon StarPhoenix,https://thestarphoenix.com/news/local-news/police-oversight-body-seeks-potential-witness-to-fatal-prince-albert-police-shooting
+1018,V1-0581,John Gardiner,2023-01-16,2023-01-20,paNOW,https://panow.com/2023/01/20/more-details-released-on-police-shooting-weapon-recovered/
+1019,V1-0581,John Gardiner,2023-01-16,2023-01-20,CBC,https://www.cbc.ca/news/canada/saskatchewan/sirt-confirms-officer-shot-killed-man-1.6720538
+1020,V1-0581,John Gardiner,2023-01-16,2023-05-24,Saskatoon StarPhoenix,https://thestarphoenix.com/news/local-news/prince-albert-police-allege-harassment-inside-an-outside-of-force-prompting-it-to-remove-video-thanking-outgoing-chief
+1021,V1-0581,John Gardiner,2023-01-16,2025-05-13,paNOW,https://panow.com/2025/05/13/deputy-chief-calls-on-family-community-to-improve-reporting-in-wake-of-teen-with-gun/
+1022,V1-0581,John Gardiner,2023-01-16,2023-08-31,Saskatoon StarPhoenix,https://thestarphoenix.com/news/local-news/police-watchdog-investigating-after-man-seriously-injured-during-arrest-by-prince-albert-police
+1023,V1-0581,John Gardiner,2023-01-16,2024-03-05,CBC,https://www.cbc.ca/news/canada/saskatoon/no-criminal-charges-prince-albert-officer-fatal-shooting-1.7134152
+1024,V1-0555,James Hanna,2022-02-23,2024-12-11,CityNews,https://edmonton.citynews.ca/2024/12/11/officers-no-charges-innocent-edmonton-bystander-shot-killed/
+1025,V1-0555,James Hanna,2022-02-23,2024-12-11,Global News,https://globalnews.ca/news/10913564/edmonton-police-shooting-february-2022-asirt-report/
+1026,V1-0555,James Hanna,2022-02-23,2024-12-11,CBC,https://www.cbc.ca/news/canada/edmonton/asirt-decision-clears-eps-officers-double-fatal-1.7408193
+1027,V1-0555,James Hanna,2022-02-23,2024-12-12,Edmonton Journal,https://edmontonjournal.com/news/crime/asirt-clears-edmonton-police-bystander-shooting
+1028,V1-0555,James Hanna,2022-02-23,2024-12-11,CTV,https://www.ctvnews.ca/edmonton/article/edmonton-police-acted-reasonably-in-2022-shooting-that-killed-innocent-man-police-watchdog/
+1029,V1-0555,James Hanna,2022-02-23,2022-11-09,Toronto Star,https://www.thestar.com/news/canada/sister-alleges-gross-negligence-behind-fatal-police-shooting-of-edmonton-bystander/article_5e1d2a09-1976-5e85-804e-ff98bde1d83d.html
+1030,V1-0555,James Hanna,2022-02-23,2024-12-11,The Winnipeg Sun,https://winnipegsun.com/pmn/officers-wont-be-charged-after-innocent-man-shot-and-killed-alberta-police-watchdog
+1031,V1-0555,James Hanna,2022-02-23,2022-11-09,Global News,https://globalnews.ca/news/9264598/edmonton-police-shooting-innocent-bystander-killed-sister-alleges-negligence/
+1032,V1-0555,James Hanna,2022-02-23,2024-12-12,The Globe and Mail,https://www.theglobeandmail.com/canada/alberta/article-officers-wont-be-charged-after-innocent-man-shot-and-killed-alberta/
+1033,V1-0555,James Hanna,2022-02-23,2024-12-11,Winnipeg Free Press,https://www.winnipegfreepress.com/uncategorized/2024/12/11/officers-who-killed-edmonton-man-with-stray-bullet-wont-be-charged-police-watchdog
+1034,V1-0551,Randal Gladue,2021-12-31,2025-03-06,Global News,https://globalnews.ca/news/11069902/edmonton-police-shooting-nye-2021-asirt-report/
+1035,V1-0551,Randal Gladue,2021-12-31,2021-12-31,Global News,https://globalnews.ca/news/8482875/central-edmonton-police-shooting-fatality/
+1036,V1-0538,Steven Nguyen,2021-06-06,2022-03-22,Edmonton Journal,https://edmontonjournal.com/news/crime/man-killed-in-2021-edmonton-police-shooting-was-holding-cell-phone-chief-says-in-lawsuit-defence
+1037,V1-0538,Steven Nguyen,2021-06-06,,CityNews,https://edmonton.citynews.ca/video/2024/05/15/edmonton-police-officer-avoids-criminal-charges-in-fatal-2021-shooting/
+1038,V1-0538,Steven Nguyen,2021-06-06,2024-05-15,Global News,https://globalnews.ca/news/10499404/asirt-fatal-edmonton-police-shooting-steven-nguyen/
+1039,V1-0538,Steven Nguyen,2021-06-06,2025-06-11,CBC,https://www.cbc.ca/news/canada/edmonton/edmonton-police-officer-not-guilty-of-assault-in-arrest-where-he-hit-man-with-baton-1.7558639
+1040,V1-0538,Steven Nguyen,2021-06-06,2024-05-15,Edmonton Journal,https://edmontonjournal.com/news/local-news/crown-recommends-no-charges-against-edmonton-police-officer
+1041,V1-0538,Steven Nguyen,2021-06-06,2025-02-27,Edmonton Journal,https://edmontonjournal.com/opinion/columnists/temitope-oriola-review-of-albertas-police-watchdog-crown-prosecutors-long-overdue
+1042,V1-0538,Steven Nguyen,2021-06-06,2022-03-24,Global News,https://globalnews.ca/news/8708788/steven-nguyen-edmonton-police-shooting-lawsuit/
+1043,V1-0538,Steven Nguyen,2021-06-06,2021-06-13,CTV,https://www.ctvnews.ca/edmonton/article/family-and-friends-gather-to-mourn-man-killed-by-police/
+1044,V1-0538,Steven Nguyen,2021-06-06,2024-05-15,CTV,https://www.ctvnews.ca/edmonton/article/its-perverse-family-of-unarmed-man-killed-by-police-shocked-no-charges-will-be-brought-against-officer/
+1045,V1-0538,Steven Nguyen,2021-06-06,2024-05-16,CBC,https://www.cbc.ca/news/canada/edmonton/crown-declines-to-lay-charges-against-edmonton-police-officer-who-fatally-shot-unarmed-man-1.7205745
+1046,V1-0439,Justin Potts,2017-10-19,2023-10-20,CBC,https://www.cbc.ca/news/canada/edmonton/justin-potts-fatality-inquiry-1.7003050
+1047,V1-0270,Jonathan Rawlings,2011-08-11,2011-08-12,CBC,https://www.cbc.ca/news/canada/calgary/man-fatally-shot-by-police-had-criminal-history-1.994195
+1048,V1-0270,Jonathan Rawlings,2011-08-11,2011-08-12,The Globe and Mail,https://www.theglobeandmail.com/news/national/suspect-who-came-at-calgary-police-officer-with-a-screwdriver-shot-four-times/article4192863/
+1049,V1-0270,Jonathan Rawlings,2011-08-11,2013-08-09,CTV,https://www.ctvnews.ca/calgary/article/asirt-cps-officer-justified-in-fatal-shooting-of-jonathan-rawlings/
+1050,V1-0270,Jonathan Rawlings,2011-08-11,2016-01-05,Calgary Herald,https://calgaryherald.com/news/local-news/police-urged-to-create-foot-chase-policy-after-fatal-shooting
+1051,V1-0270,Jonathan Rawlings,2011-08-11,2025-03-13,Global News,https://globalnews.ca/news/11080467/calgary-police-shooting-asirt/
+1052,V1-0270,Jonathan Rawlings,2011-08-11,2011-08-12,CityNews,https://calgary.citynews.ca/2011/08/12/asirt-investigates-fatal-police-shooting/
+1053,V1-0270,Jonathan Rawlings,2011-08-11,2011-08-12,Global News,https://globalnews.ca/news/144195/suspect-who-came-at-calgary-police-officer-with-a-screwdriver-shot-four-times-3/
+1054,V1-0003,Stuart Mitchell,2000-01-30,2000-03-09,St. Catharines Standard,https://www.proquest.com/canadiannews/docview/349258721/DDAA324B1FB6490CPQ/2?accountid=14771&sourcetype=Newspapers
+1055,V1-0004,Scott Reinhard,2000-04-07,2000-04-10,The Globe and Mail,"https://www.proquest.com/canadiannews/docview/2387589070/BE7AF8F0B2744B07PQ/2?accountid=14771&sourcetype=Blogs,%20Podcasts,%20&%20Websites"
+1056,V1-0005,Paul Alphonse,2000-04-11,2000-04-20,The Province,https://www.proquest.com/canadiannews/docview/269230801/DC3723B33F2D410DPQ/7?accountid=14771&sourcetype=Newspapers
+1057,V1-0005,Paul Alphonse,2000-04-11,2000-04-21,Edmonton Journal,https://www.proquest.com/canadiannews/docview/252712473/DC3723B33F2D410DPQ/8?accountid=14771&sourcetype=Newspapers
+1058,V1-0005,Paul Alphonse,2000-04-11,2000-04-20,Prince Rupert Daily News,https://www.proquest.com/canadiannews/docview/357950348/DC3723B33F2D410DPQ/4?accountid=14771&sourcetype=Newspapers
+1059,V1-0005,Paul Alphonse,2000-04-11,2000-04-20,Kamloops Daily News,https://www.proquest.com/canadiannews/docview/358275967/DC3723B33F2D410DPQ/5?accountid=14771&sourcetype=Newspapers
+1060,V1-0336,Ryan Sommers,2014-10-31,2016-08-04,CTV,https://www.ctvnews.ca/calgary/article/cps-officer-will-not-face-charges-in-connection-with-fatal-2014-halloween-shooting/
+1061,V1-0433,John Douglas Halfe,2017-09-06,2019-07-24,Global News,https://globalnews.ca/news/5678973/whitefish-lake-first-nation-fatal-death-rcmp-asirt/
+1062,V1-0433,John Douglas Halfe,2017-09-06,2019-07-24,CBC,https://www.cbc.ca/news/canada/edmonton/st-paul-rcmp-officer-cleared-in-fatal-shooting-of-man-armed-with-knife-1.5223762
+1063,V1-0433,John Douglas Halfe,2017-09-06,2019-07-24,Edmonton Journal,https://edmontonjournal.com/news/local-news/watch-rcmp-officer-cleared-in-lethal-whitefish-lake-shooting
+1064,V1-0433,John Douglas Halfe,2017-09-06,2019-07-24,CTV,https://www.ctvnews.ca/edmonton/article/officer-acted-lawfully-in-2017-fatal-shooting-of-armed-man-asirt/
+1065,V1-0433,John Douglas Halfe,2017-09-06,2017-09-08,CBC,https://www.cbc.ca/news/canada/edmonton/whitefish-first-nation-rcmp-death-asirt-1.4281414
+1066,V1-0374,Russell Pohl,2015-12-25,2025-04-20,Edmonton Journal,https://edmontonjournal.com/news/local-news/st-albert-man-targeted-shooting-morinville-good-friday-rcmp
+1067,V1-0374,Russell Pohl,2015-12-25,2017-08-21,Global News,https://globalnews.ca/news/3685336/asirt-clears-rcmp-who-fatally-shot-driver-of-front-end-loader-in-red-deer/
+1068,V1-0374,Russell Pohl,2015-12-25,2016-12-09,CBC,https://www.cbc.ca/news/canada/edmonton/a-troubled-history-rcmp-justified-in-shooting-death-of-alberta-man-investigation-concludes-1.3889522
+1069,V1-0374,Russell Pohl,2015-12-25,2015-12-25,CityNews,https://calgary.citynews.ca/2015/12/25/asirt-investigating-officer-involved-shooting-in-red-deer/
+1070,V1-0374,Russell Pohl,2015-12-25,2015-12-26,Global News,https://globalnews.ca/news/2421394/rcmp-release-new-details-about-christmas-day-rampage-in-alberta/
+1071,V1-0373,Marcel Moisan,2015-12-07,2015-12-27,The Edmonton Sun,https://edmontonsun.com/2015/12/27/police-shoot-an-armed-man-in-west-edmonton-sunday-morning
+1072,V1-0373,Marcel Moisan,2015-12-07,2016-11-25,Global News,https://globalnews.ca/news/3089612/alberta-police-watchdog-says-cop-had-little-option-than-to-shoot-edmonton-man-in-december/
+1073,V1-0373,Marcel Moisan,2015-12-07,2017-08-28,Edmonton Journal,https://edmontonjournal.com/news/crime/asirt-clears-edmonton-police-in-2015-death-of-man-following-struggle
+1074,V1-0373,Marcel Moisan,2015-12-07,2015-12-27,CBC,https://www.cbc.ca/news/canada/edmonton/edmonton-police-shooting-december-27-1.3381314
+1075,V1-0373,Marcel Moisan,2015-12-07,2017-08-28,Global News,https://globalnews.ca/news/3701640/edmonton-police-members-acted-lawfully-after-man-dies-in-police-custody-asirt/
+1076,V1-0373,Marcel Moisan,2015-12-07,2015-12-13,The Edmonton Sun,https://edmontonsun.com/2015/12/12/brother-of-man-who-died-after-being-hit-by-a-police-taser-says-he-doesnt-blame-police
+1077,V1-0373,Marcel Moisan,2015-12-07,2015-12-11,The Edmonton Sun,https://edmontonsun.com/2015/12/10/man-who-died-after-being-hit-with-an-edmonton-police-taser-was-to-appear-in-court
+1078,V1-0249,Cyrus Green,2011-02-05,2014-08-18,Edmonton Journal,https://edmontonjournal.com/news/local-news/shooting-of-17-year-old-cyrus-green-justified-fatality-inquiry-finds
+1079,V1-0249,Cyrus Green,2011-02-05,2014-03-10,CBC,https://www.cbc.ca/news/canada/edmonton/officer-recounts-shooting-that-killed-teenager-cyrus-green-1.2567450
+1080,V1-0249,Cyrus Green,2011-02-05,2014-08-18,CBC,https://www.cbc.ca/news/canada/edmonton/police-officer-who-killed-cyrus-green-had-no-choice-says-alberta-justice-1.2739745
+1081,V1-0249,Cyrus Green,2011-02-05,2011-12-07,Red Deer Advocate,https://www.reddeeradvocate.com/uncategorized/edmonton-police-officer-ruled-justified-in-fatal-shooting-of-teenager-7045843
+1082,V1-0249,Cyrus Green,2011-02-05,2014-03-11,The Edmonton Sun,https://edmontonsun.com/2014/03/10/fatality-inquiry-starts-in-the-shooting-death-of-17-year-old-cyrus-green-in-2011
+1083,V1-0249,Cyrus Green,2011-02-05,2011-12-06,Global News,https://globalnews.ca/news/186091/police-officer-cleared-in-fatal-shooting-of-edmonton-teen/
+1084,V1-0247,William Francis McCoy,2011-01-16,2011-07-28,CBC,https://www.cbc.ca/news/canada/edmonton/alberta-mounties-won-t-be-charged-in-fatal-shooting-1.1035370
+1085,V1-0247,William Francis McCoy,2011-01-16,2015-01-27,Edmonton Journal,https://edmontonjournal.com/news/local-news/fatality-inquiry-concludes-rcmp-justified-in-sherwood-park-shooting-death
+1086,V1-0276,Darby Mahon,2012-01-11,2012-08-09,Global News,https://globalnews.ca/news/274761/investigation-clears-rcmp-officers-in-onoway-shooting-death/
+1087,V1-0276,Darby Mahon,2012-01-11,2012-01-12,CBC,https://www.cbc.ca/news/canada/edmonton/alberta-rcmp-shoot-kill-armed-man-in-onoway-1.1161297
+1088,V1-0276,Darby Mahon,2012-01-11,2012-08-09,Global News,https://globalnews.ca/news/274758/no-charges-against-rcmp-officers-who-shot-man-with-knife-in-alberta/
+1089,V1-0276,Darby Mahon,2012-01-11,2021-01-25,Edmonton Journal,https://edmontonjournal.com/news/crime/rcmp-officer-charged-with-off-duty-sexual-assault-in-edmonton
+1090,V1-0276,Darby Mahon,2012-01-11,2015-02-09,CBC,https://www.cbc.ca/news/canada/edmonton/rcmp-officers-acted-appropriately-in-shooting-of-onoway-man-judge-rules-1.2950967
+1091,V1-0276,Darby Mahon,2012-01-11,2015-02-09,Edmonton Journal,https://edmontonjournal.com/news/local-news/fatality-inquiry-finds-rcmp-had-little-choice-but-to-shoot-onoway-man-carrying-knife
+1092,V1-0276,Darby Mahon,2012-01-11,2012-01-13,The Edmonton Sun,https://edmontonsun.com/2012/01/13/daughters-mourn-father-killed-by-mounties
+1093,V1-0276,Darby Mahon,2012-01-11,2012-01-12,The Edmonton Sun,https://edmontonsun.com/2012/01/12/mountie-related-death-west-of-edmonton
+1094,V1-0291,Russell Mark Skoropad,2012-07-18,2013-04-10,CTV,https://www.ctvnews.ca/edmonton/article/rcmp-officer-cleared-of-wrongdoing-in-july-2012-fatal-shooting/
+1095,V1-0291,Russell Mark Skoropad,2012-07-18,2012-07-19,Global News,https://globalnews.ca/news/268244/man-killed-by-rcmp-near-vegreville-identified/
+1096,V1-0291,Russell Mark Skoropad,2012-07-18,2013-04-10,The Edmonton Sun,https://edmontonsun.com/2013/04/10/alberta-serious-incident-response-team-clears-vegreville-mountie-in-fatal-shooting-of-russell-skoropad
+1097,V1-0291,Russell Mark Skoropad,2012-07-18,2012-07-19,CBC,https://www.cbc.ca/news/canada/edmonton/man-shot-dead-by-alberta-rcmp-1.1196927
+1098,V1-0291,Russell Mark Skoropad,2012-07-18,2012-07-20,CBC,https://www.cbc.ca/news/canada/edmonton/man-killed-by-rcmp-had-history-of-police-run-ins-1.1208732
+1099,V1-0291,Russell Mark Skoropad,2012-07-18,2012-07-19,The Edmonton Sun,https://edmontonsun.com/2012/07/19/mounties-shoot-man-dead-near-vegreville
+1100,V1-0291,Russell Mark Skoropad,2012-07-18,2012-07-19,CTV,https://www.ctvnews.ca/edmonton/article/asirt-officer-who-fired-in-vegreville-incident-an-11-year-veteran/
