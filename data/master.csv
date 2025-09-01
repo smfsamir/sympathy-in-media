@@ -1199,3 +1199,168 @@ ID,VICTIM_ID,Person Name,Incident Date,Publication Date,Publisher,URL
 1198,V1-0295,Alton Cuyugan,2012-11-13,2013-02-28,CBC,https://www.cbc.ca/news/canada/british-columbia/b-c-police-watchdog-clears-officers-in-3-incidents-1.1318368
 1199,V1-0233,Wilbert Bartley,2010-07-30,2010-08-05,CBC,https://www.cbc.ca/news/canada/british-columbia/victim-in-fatal-b-c-rcmp-shooting-id-d-1.938031
 1200,V1-0233,Wilbert Bartley,2010-07-30,2012-05-15,Global News,https://globalnews.ca/news/245782/family-of-man-shot-dead-by-b-c-mounties-want-charges-as-inquest-ends/
+1201,V1-0602,Bruce Frogg,2024-06-25,2025-07-03,CBC,https://www.cbc.ca/news/canada/thunder-bay/kenora-opp-anicinabe-park-bruce-frogg-1.7575192
+1202,V1-0602,Bruce Frogg,2024-06-25,2025-07-02,APTN News,https://www.aptnnews.ca/national-news/siu-concludes-no-basis-for-criminal-charges-against-opp-for-fatally-shooting-first-nations-man/
+1203,V1-0602,Bruce Frogg,2024-06-25,2024-06-28,CBC,https://www.cbc.ca/news/canada/thunder-bay/kenora-shooting-anicinabe-park-siu-investigation-1.7248955
+1204,V1-0602,Bruce Frogg,2024-06-25,2025-07-02,Daily Miner and News,https://www.kenoraminerandnews.com/news/local-news/siu-clears-police-of-any-wrongdoing-related-to-death-of-bruce-frogg
+1205,V1-0602,Bruce Frogg,2024-06-25,2025-07-24,CBC,https://www.cbc.ca/news/canada/thunder-bay/siu-investigation-eric-nothing-deer-lake-first-nation-1.7593196
+1206,V1-0602,Bruce Frogg,2024-06-25,2025-07-03,APTN News,https://www.aptnnews.ca/national-news/family-of-bruce-frogg-heartbroken-police-were-cleared-of-any-criminal-wrongdoing/
+1207,V1-0602,Bruce Frogg,2024-06-25,2024-07-04,Daily Miner and News,https://www.kenoraminerandnews.com/news/local-news/man-subdued-at-anicinabe-park-identified-prompting-first-nation-leaders-to-call-for-accountability
+1208,V1-0602,Bruce Frogg,2024-06-25,2024-06-27,The Globe and Mail,https://www.theglobeandmail.com/canada/article-an-indigenous-man-shot-dead-by-opp-in-kenora-has-community-demanding/
+1209,V1-0602,Bruce Frogg,2024-06-25,2025-07-07,Penticton Herald,https://www.pentictonherald.ca/spare_news/article_954839d1-cd70-5f77-bc77-f1893ec799ee.html
+1210,V1-0602,Bruce Frogg,2024-06-25,2024-06-26,CTV,https://www.ctvnews.ca/northern-ontario/article/police-watchdog-investigates-after-shooting-death-of-a-man-in-kenora/
+1211,V1-0584,Peter Campbell,2023-04-02,2024-08-22,CBC,https://www.cbc.ca/news/canada/toronto/peter-campbell-peel-police-siu-investigation-1.7301682
+1212,V1-0584,Peter Campbell,2023-04-02,2023-04-10,Global News,https://globalnews.ca/news/9613862/family-brampton-man-died-apprehended-mental-health-act/
+1213,V1-0584,Peter Campbell,2023-04-02,2023-04-14,Brampton Guardian,https://www.bramptonguardian.com/news/we-are-devastated-brampton-man-in-mental-health-crisis-dies-after-peel-police-respond-to/article_36c72b87-9422-5ed0-ae6e-fc25e1885fee.html
+1214,V1-0584,Peter Campbell,2023-04-02,2023-04-14,CBC,https://www.cbc.ca/news/canada/toronto/brampton-man-dead-police-mental-health-1.6809121
+1215,V1-0584,Peter Campbell,2023-04-02,2024-03-21,The Toronto Sun,https://torontosun.com/news/local-news/project-midnight-peel-cops-and-opp-probe-five-shootings-three-deaths
+1216,V1-0584,Peter Campbell,2023-04-02,2023-04-14,Mississauga News,https://www.mississauga.com/news/we-are-devastated-brampton-man-in-mental-health-crisis-dies-after-peel-police-respond-to/article_4581f674-d72b-5133-b1f4-e4988146df3a.html
+1217,V1-0584,Peter Campbell,2023-04-02,2024-03-21,CBC,https://www.cbc.ca/news/canada/toronto/police-peel-region-5-shootings-investigation-1.7151166
+1218,V1-0579,Francesco Villi,2022-12-18,2023-04-18,East Gwillimbury Express,https://www.yorkregion.com/news/siu-clears-york-regional-police-officer-who-killed-vaughan-condo-shooter/article_8ac73572-5756-5cd3-b635-c01d50e4ff4c.html
+1219,V1-0579,Francesco Villi,2022-12-18,2022-12-20,East Gwillimbury Express,https://www.yorkregion.com/news/the-vaughan-condo-shooter-what-we-know-and-don-t-know-about-francesco-villi/article_b9697ac8-d3a7-50fc-89ba-3c529fa03ab6.html
+1220,V1-0579,Francesco Villi,2022-12-18,2023-04-18,The Toronto Sun,https://torontosun.com/news/local-news/no-grounds-to-charge-york-cop-who-killed-vaughan-condo-gunman-siu
+1221,V1-0579,Francesco Villi,2022-12-18,2022-12-19,CBC,https://www.cbc.ca/news/canada/toronto/francesco-villi-vaughan-shooting-what-we-know-1.6691201
+1222,V1-0579,Francesco Villi,2022-12-18,2023-04-17,CBC,https://www.cbc.ca/news/canada/toronto/vaughan-condo-siu-1.6813599
+1223,V1-0579,Francesco Villi,2022-12-18,2022-12-18,CBC,https://www.cbc.ca/news/canada/toronto/vaughan-condo-shooting-1.6690582
+1224,V1-0579,Francesco Villi,2022-12-18,2022-12-21,CBC,https://www.cbc.ca/news/canada/toronto/vaughan-condo-gunman-daughters-1.6693541
+1225,V1-0579,Francesco Villi,2022-12-18,2022-12-19,National Post,https://nationalpost.com/news/five-victims-mass-killing-luxury-condo-toronto
+1226,V1-0579,Francesco Villi,2022-12-18,2022-12-19,Global News,https://globalnews.ca/news/9358801/vaughan-condo-mass-shooting-tenant-dispute/
+1227,V1-0579,Francesco Villi,2022-12-18,2022-12-19,East Gwillimbury Express,https://www.yorkregion.com/news/torturing-noise-neighbours-identify-vaughan-mass-shooter/article_51e06136-6301-551e-8df4-b3f8e7b88ca3.html
+1228,V1-0579,Francesco Villi,2022-12-18,2022-12-20,Toronto Star,https://www.thestar.com/news/gta/our-home-has-been-taken-from-us-victims-of-vaughan-highrise-shooting-identified-as-condo/article_ce9a0505-4c17-5329-98e2-2f4889433586.html
+1229,V1-0579,Francesco Villi,2022-12-18,2022-12-19,CTV,https://www.ctvnews.ca/toronto/article/three-of-5-people-killed-in-vaughan-ont-were-members-of-condo-board-police-say/
+1230,V1-0579,Francesco Villi,2022-12-18,2022-12-19,The Toronto Sun,https://torontosun.com/news/provincial/condo-board-members-among-five-victims-in-vaughan-shooting-police-say
+1231,V1-0579,Francesco Villi,2022-12-18,2023-04-17,Toronto Star,https://www.thestar.com/news/gta/siu-details-chaos-of-vaughan-condo-mass-murder-clears-officer-who-killed-gunman/article_e061848b-846f-5437-8a6f-c43be48e1759.html
+1232,V1-0579,Francesco Villi,2022-12-18,2022-12-20,CBC,https://www.cbc.ca/news/canada/toronto/vaughan-condo-residents-shooting-aftermath-1.6692253
+1233,V1-0579,Francesco Villi,2022-12-18,2022-12-20,East Gwillimbury Express,https://www.yorkregion.com/news/i-was-there-vaughan-condo-shooting-victims-identified-survivors-husband-speaks/article_3a8eb7f8-87ff-5ebd-892b-a16bea783b3f.html
+1234,V1-0579,Francesco Villi,2022-12-18,2022-12-20,National Post,https://nationalpost.com/news/canada/francesco-villi-vaughan-condo-mass-shooting
+1235,V1-0579,Francesco Villi,2022-12-18,2022-12-19,Toronto Star,https://www.thestar.com/news/gta/vaughan-gunman-73-feuded-with-condo-board-over-electromagnetic-waves-victims-include-three-board-members/article_053dbad8-cb3a-5f53-b81f-4b39953a1454.html
+1236,V1-0559,Joshua Graves,2022-06-27,2022-08-22,CBC,https://www.cbc.ca/news/canada/ottawa/a-killer-took-their-loved-ones-but-he-couldn-t-destroy-their-family-1.6537989
+1237,V1-0559,Joshua Graves,2022-06-27,2022-06-30,CBC,https://www.cbc.ca/news/canada/ottawa/jasmine-catherine-anne-marie-ready-family-1.6506675
+1238,V1-0559,Joshua Graves,2022-06-27,2022-07-02,CBC,https://www.cbc.ca/news/canada/ottawa/catherine-sauve-fatal-stabbing-friends-pray-for-recovery-1.6508580
+1239,V1-0559,Joshua Graves,2022-06-27,2022-07-03,CBC,https://www.cbc.ca/news/canada/ottawa/vigil-anne-marie-jasmine-catherine-ready-anoka-street-stabbing-ottawa-1.6509123
+1240,V1-0559,Joshua Graves,2022-06-27,2022-06-30,The Ottawa Citizen,https://ottawacitizen.com/news/local-news/tremendous-loss-fatal-stabbing-attack-on-alta-vista-family-leaves-communities-reeling
+1241,V1-0559,Joshua Graves,2022-06-27,2022-07-04,The Ottawa Citizen,https://ottawacitizen.com/news/local-news/fundraiser-launched-for-alta-vista-teen-who-survived-knife-attack-that-left-sister-and-mom-dead
+1242,V1-0559,Joshua Graves,2022-06-27,2022-06-30,CBC,https://www.cbc.ca/news/canada/ottawa/joshua-graves-ottawa-stabbing-shooting-siu-anoka-1.6506396
+1243,V1-0559,Joshua Graves,2022-06-27,2022-07-05,The Ottawa Citizen,https://ottawacitizen.com/news/local-news/its-just-who-i-am-man-says-he-confronted-alta-vista-murder-suspect-as-he-harassed-teenager-weeks-prior-to-killings
+1244,V1-0559,Joshua Graves,2022-06-27,2022-10-26,CBC,https://www.cbc.ca/news/canada/ottawa/ottawa-anoka-street-death-police-1.6629866
+1245,V1-0559,Joshua Graves,2022-06-27,2022-07-12,The Ottawa Citizen,https://ottawacitizen.com/news/local-news/fundraiser-continues-for-19-year-old-survivor-of-knife-attack-at-her-alta-vista-home
+1246,V1-0443,Ali Zaraeenah,2017-12-13,2021-07-09,CTV,https://www.ctvnews.ca/toronto/article/ontario-announces-inquest-into-death-of-25-year-old-man-killed-following-2017-hostage-situation-in-vaughan/
+1247,V1-0443,Ali Zaraeenah,2017-12-13,2017-12-14,East Gwillimbury Express,https://www.yorkregion.com/news/crime/update-police-sniper-shot-killed-suspect-in-vaughan-hostage-situation/article_79f5ef27-18e9-582a-b6d4-5711392896be.html
+1248,V1-0443,Ali Zaraeenah,2017-12-13,2021-07-09,CityNews,https://toronto.citynews.ca/2021/07/09/coroners-inquest-called-into-2017-fatal-shooting-at-vaughan-bank/
+1249,V1-0443,Ali Zaraeenah,2017-12-13,2021-07-27,CBC,https://www.cbc.ca/news/canada/toronto/ali-zaraeeneh-coroners-inquest-bank-hostage-2017-vaughan-1.6120157
+1250,V1-0443,Ali Zaraeenah,2017-12-13,2025-02-28,CTV,https://www.ctvnews.ca/toronto/local/york/article/no-charges-will-be-laid-in-death-of-teen-shot-by-police-in-aurora-siu-says/
+1251,V1-0381,Devon LaFleur,2016-03-04,2017-06-07,CBC,https://www.cbc.ca/news/canada/ottawa/family-disappointed-no-charges-devon-lafleur-1.4148792
+1252,V1-0381,Devon LaFleur,2016-03-04,2016-03-05,The Ottawa Citizen,https://ottawacitizen.com/news/local-news/ottawa-man-shot-dead-by-toronto-police-struggled-with-bipolar-disorder
+1253,V1-0381,Devon LaFleur,2016-03-04,2017-06-06,Toronto Star,https://www.thestar.com/news/gta/mother-speaks-out-after-siu-lays-no-charges-in-son-s-police-shooting-death/article_dbfd4f9a-3c0f-5f2d-afe1-b5dd357b439a.html
+1254,V1-0381,Devon LaFleur,2016-03-04,2016-03-04,CTV,https://www.ctvnews.ca/ottawa/article/ottawa-man-shot-dead-by-toronto-police-friends-confirm/
+1255,V1-0381,Devon LaFleur,2016-03-04,2016-03-08,The Ottawa Citizen,https://ottawacitizen.com/news/local-news/ottawa-man-defiant-in-deadly-standoff-with-toronto-police
+1256,V1-0381,Devon LaFleur,2016-03-04,2016-03-05,CBC,https://www.cbc.ca/news/canada/toronto/bayview-steeles-shooting-siu-1.3477526
+1257,V1-0381,Devon LaFleur,2016-03-04,2016-03-07,The Ottawa Sun,https://ottawasun.com/2016/03/07/toronto-shooting-reopens-debate-over-police-handling-of-mentally-ill-suspects
+1258,V1-0381,Devon LaFleur,2016-03-04,2016-03-06,National Post,https://nationalpost.com/news/canada/a-lost-boy-ottawa-man-shot-dead-by-toronto-police-struggled-with-bipolar-disorder
+1259,V1-0381,Devon LaFleur,2016-03-04,2017-11-03,The Ottawa Citizen,https://ottawacitizen.com/news/local-news/ottawa-mans-shooting-by-toronto-police-underscores-proposed-reforms-around-coroners-inquests
+1260,V1-0381,Devon LaFleur,2016-03-04,2017-06-06,CBC,https://www.cbc.ca/news/canada/toronto/devon-lafleur-police-shooting-1.4147585
+1261,V1-0381,Devon LaFleur,2016-03-04,2016-03-07,The Ottawa Citizen,https://ottawacitizen.com/news/local-news/toronto-shooting-reopens-debate-over-police-handling-of-mentally-ill-suspects
+1262,V1-0381,Devon LaFleur,2016-03-04,2017-06-05,The Ottawa Citizen,https://ottawacitizen.com/news/local-news/toronto-officers-wont-be-charged-in-2016-shooting-death-of-ottawa-man
+1263,V1-0381,Devon LaFleur,2016-03-04,2016-03-06,CBC,https://www.cbc.ca/news/canada/toronto/bayview-steeles-shooting-siu-1.3478394
+1264,V1-0381,Devon LaFleur,2016-03-04,2017-06-06,Guelph Mercury Tribune,https://www.guelphmercury.com/news/mother-speaks-out-after-siu-lays-no-charges-in-son-s-police-shooting-death/article_d09ec341-0874-57d8-963c-84aaaae41c56.html
+1265,V1-0379,Alexandre Boucher,2016-02-02,2021-07-06,Toronto Star,https://www.thestar.com/news/gta/toronto-police-officer-demoted-for-refusing-to-intervene-in-suicide-lying-about-being-on-another/article_f706b3d7-747b-5193-bd64-306ece0a1583.html
+1266,V1-0379,Alexandre Boucher,2016-02-02,2018-12-21,Global News,https://globalnews.ca/news/4785888/ontario-court-no-trial-toronto-officer/
+1267,V1-0379,Alexandre Boucher,2016-02-02,2018-12-20,Toronto Star,https://www.thestar.com/news/gta/toronto-cop-won-t-stand-trial-for-allegedly-refusing-to-stop-man-s-suicide-in/article_3bfb66cf-0c86-5eb1-98ab-8c2f38b69484.html
+1268,V1-0379,Alexandre Boucher,2016-02-02,2016-08-04,Toronto Star,https://www.thestar.com/news/gta/new-charge-against-toronto-cop-accused-in-teen-s-suicide/article_0ff04ce0-8aec-56ee-b6a0-bc68067e8b18.html
+1269,V1-0379,Alexandre Boucher,2016-02-02,2017-05-24,Toronto.com,https://www.toronto.com/news/toronto-officer-faces-3-misconduct-charges-stemming-from-high-park-suicide/article_567a918f-6b5f-51d0-acc3-9c17942eca72.html
+1270,V1-0379,Alexandre Boucher,2016-02-02,2018-08-07,Toronto Star,https://www.thestar.com/news/gta/prosecutors-appealing-judges-decision-in-toronto-police-breach-of-trust-case/article_671b07e0-dcbb-5b80-9d9f-239f8ef315bb.html
+1271,V1-0379,Alexandre Boucher,2016-02-02,2018-12-21,The Globe and Mail,https://www.theglobeandmail.com/canada/article-no-trial-for-toronto-cop-who-refused-to-intervene-before-teen-killed/
+1272,V1-0379,Alexandre Boucher,2016-02-02,2018-12-21,The Toronto Sun,https://torontosun.com/news/local-news/no-trial-for-cop-who-refused-to-intervene-before-teen-killed-himself-in-park
+1273,V1-0379,Alexandre Boucher,2016-02-02,2021-07-06,Winnipeg Free Press,https://www.winnipegfreepress.com/canada/2021/07/06/toronto-police-officer-demoted-for-refusing-to-intervene-in-suicide-lying-about-being-on-another-call
+1274,V1-0369,Rodrigo Gonzalez,2015-11-06,2015-11-19,Toronto Star,https://www.thestar.com/news/crime/toronto-man-s-death-after-arrival-of-taser-wielding-police-now-being-investigated/article_f1b25ed4-881b-5160-93c7-17c2fafb3011.html
+1275,V1-0369,Rodrigo Gonzalez,2015-11-06,2017-03-23,Toronto.com,https://www.toronto.com/news/crime/siu-clears-toronto-police-in-2015-death-of-rodrigo-almonacid-gonzalez/article_6261576e-227a-5333-bc7e-51097aa03d78.html
+1276,V1-0369,Rodrigo Gonzalez,2015-11-06,2017-03-23,CBC,https://www.cbc.ca/news/canada/toronto/no-charges-against-toronto-police-after-siu-investigation-into-man-s-death-1.4038174
+1277,V1-0369,Rodrigo Gonzalez,2015-11-06,2017-03-29,Toronto Star,https://www.thestar.com/news/crime/family-calls-for-inquest-into-death-of-man-tasered-eight-times/article_aad26e33-5d6d-589c-9fe0-99f1883886ff.html
+1278,V1-0369,Rodrigo Gonzalez,2015-11-06,2015-11-18,CBC,https://www.cbc.ca/news/canada/toronto/siu-probes-toronto-man-s-death-involving-police-taser-1.3324704
+1279,V1-0369,Rodrigo Gonzalez,2015-11-06,2015-11-18,Global News,https://globalnews.ca/news/2347183/man-dies-in-hospital-after-being-tasered-twice-by-toronto-police-siu/
+1280,V1-0369,Rodrigo Gonzalez,2015-11-06,2017-03-23,Cambridge Times,https://www.cambridgetimes.ca/news/no-charges-in-death-of-barricaded-toronto-man/article_901e7ae8-b951-5bf4-b161-316fb78cf2ad.html
+1281,V1-0369,Rodrigo Gonzalez,2015-11-06,2015-11-18,The Toronto Sun,https://torontosun.com/2015/11/18/siu-probing-death-of-man-tasered-by-cops
+1282,V1-0317,Alexander Tughan,2013-11-17,2014-07-07,Burlington Post,https://www.insidehalton.com/news/siu-not-laying-charges-in-oakville-police-shooting/article_2bfa1717-8fe8-570f-ab28-269e05fa0c75.html
+1283,V1-0317,Alexander Tughan,2013-11-17,2013-11-20,Burlington Post,https://www.insidehalton.com/news/friends-remember-alex-tughan/article_309ebcb9-78c8-54bf-9735-1d677939fdb1.html
+1284,V1-0317,Alexander Tughan,2013-11-17,2014-07-07,CTV,https://www.ctvnews.ca/toronto/article/siu-clears-halton-officers-in-fatal-shooting-of-oakville-man/
+1285,V1-0317,Alexander Tughan,2013-11-17,2012-01-12,Burlington Post,https://www.insidehalton.com/news/crime/police-officers-being-investigated/article_20f78391-2fcc-5bb4-a5d9-3b3cf00fa3b1.html
+1286,V1-0316,Ian Pryce,2013-11-13,2015-11-24,CBC,https://www.cbc.ca/news/canada/toronto/inquest-shooting-fatal-police-toronto-man-1.3335824
+1287,V1-0316,Ian Pryce,2013-11-13,2015-01-03,Toronto Star,https://www.thestar.com/news/crime/mother-remembers-ian-pryce-shot-by-police-in-2013-with-a-pellet-gun-in-his/article_a4a2bcb5-ecd1-5ce5-8182-4a10aa0c5b69.html
+1288,V1-0316,Ian Pryce,2013-11-13,2015-11-24,Toronto Star,https://www.thestar.com/news/crime/inquest-will-be-held-in-toronto-police-fatally-shooting-mentally-ill-man-who-had-pellet/article_a23b9e6f-e66d-513e-bef7-3cd7d770b9ef.html
+1289,V1-0316,Ian Pryce,2013-11-13,2016-04-04,CityNews,https://toronto.citynews.ca/2016/04/04/inquest-begins-monday-after-siu-clears-toronto-police-officers-in-mans-death/
+1290,V1-0316,Ian Pryce,2013-11-13,2016-04-09,Toronto Star,https://www.thestar.com/news/crime/police-shooting-death-prompts-soul-searching-at-city-hall/article_6e572398-5d43-5720-a037-67b7e98d2320.html
+1291,V1-0316,Ian Pryce,2013-11-13,2016-04-04,Toronto Star,https://www.thestar.com/news/crime/inquest-hears-of-final-hours-of-man-shot-dead-by-toronto-police/article_aed566ff-af35-52f1-843d-c258d66f10a3.html
+1292,V1-0316,Ian Pryce,2013-11-13,2016-04-21,Toronto Star,https://www.thestar.com/news/gta/ian-pryce-inquest-makes-recommendations/article_44b5d101-bd0f-5c52-88be-83de40eeebb2.html
+1293,V1-0316,Ian Pryce,2013-11-13,2016-08-19,Toronto Star,https://www.thestar.com/news/gta/ministry-stands-firm-on-denying-funding-for-families-of-police-shooting-victims/article_e987e61e-2971-5a1f-9fd0-f206ad668796.html
+1294,V1-0316,Ian Pryce,2013-11-13,2018-06-03,CBC,https://www.cbc.ca/news/politics/imitation-guns-regulate-police-1.4682192
+1295,V1-0316,Ian Pryce,2013-11-13,2016-04-21,Kawartha Lakes This Week,https://www.thepeterboroughexaminer.com/news/gta/ian-pryce-inquest-makes-recommendations/article_6ee9df3e-fb29-59f6-9111-bb96a92ef262.html
+1296,V1-0316,Ian Pryce,2013-11-13,2015-08-16,Toronto Star,https://www.thestar.com/news/crime/how-many-black-men-have-been-killed-by-toronto-police-we-can-t-know/article_abfffb20-9ed1-5fda-b8e9-3c7aa63952ca.html
+1297,V1-0316,Ian Pryce,2013-11-13,2015-01-02,The Toronto Sun,https://torontosun.com/2015/01/02/siu-clears-toronto-officers-in-2013-fatal-shooting
+1298,V1-0316,Ian Pryce,2013-11-13,2013-11-13,The Globe and Mail,https://www.theglobeandmail.com/news/toronto/toronto-police-warn-of-suspect-possibly-armed-with-gun-in-downtown-neighbourhood/article15414176/
+1299,V1-0301,Malcolm Jackman,2013-06-08,2013-07-24,Toronto.com,https://www.toronto.com/news/police-cleared-in-fatal-shooting-of-man-at-scarborough-apartment-building/article_44ef0870-03c2-5bb7-9439-6fb1a508f2f2.html
+1300,V1-0301,Malcolm Jackman,2013-06-08,2013-07-23,The Toronto Sun,https://torontosun.com/2013/07/23/toronto-police-officer-cleared-in-fatal-shooting-of-man-holding-hostage
+1301,V1-0301,Malcolm Jackman,2013-06-08,2013-07-23,Toronto Star,https://www.thestar.com/news/gta/toronto-police-officer-cleared-in-shooting-death-of-knife-wielding-man/article_63c7e936-d2d3-5a8b-985a-6372d846e16b.html
+1302,V1-0298,Anthony Parro,2013-02-07,2013-03-02,Belleville Intelligencer,https://www.intelligencer.ca/2013/03/02/siu-investigates-assault-on-opp-officer
+1303,V1-0298,Anthony Parro,2013-02-07,2013-04-30,CTV,https://www.ctvnews.ca/toronto/article/siu-clears-opp-in-fatal-shooting-of-man-in-kawartha-lakes-area/
+1304,V1-0298,Anthony Parro,2013-02-07,2013-04-29,The Peterborough Examiner,https://www.thepeterboroughexaminer.com/news/opp-officer-cleared-in-shooting-death/article_9ec09e02-73b8-5b35-972c-be524d827173.html
+1305,V1-0268,Charles McGillivary,2011-08-01,2012-01-19,CBC,https://www.cbc.ca/news/canada/toronto/toronto-police-cleared-in-mistaken-identity-death-1.1298083
+1306,V1-0268,Charles McGillivary,2011-08-01,2012-01-20,Toronto.com,https://www.toronto.com/news/officers-cleared-in-death-of-a-gentle-giant/article_0e79fe35-45fa-5cd3-9a93-7fe0bcc1b5e1.html
+1307,V1-0268,Charles McGillivary,2011-08-01,2014-02-27,Toronto Star,https://www.thestar.com/news/crime/charles-mcgillivary-s-death-at-hands-of-toronto-police-an-accident-inquest-rules/article_dd45e5d2-54f5-54c8-8272-414a44116d55.html
+1308,V1-0268,Charles McGillivary,2011-08-01,2012-01-18,CityNews,https://toronto.citynews.ca/2012/01/18/siu-clears-police-in-death-of-mentally-challenged-man/
+1309,V1-0268,Charles McGillivary,2011-08-01,2014-02-03,Global News,https://globalnews.ca/news/1124477/inquest-into-2011-death-of-charles-mcgillivary-begins/
+1310,V1-0268,Charles McGillivary,2011-08-01,2011-08-09,CBC,https://www.cbc.ca/news/canada/toronto/vigil-held-for-disabled-man-who-died-in-arrest-1.988780
+1311,V1-0268,Charles McGillivary,2011-08-01,2014-02-11,Toronto Star,https://www.thestar.com/news/crime/mother-s-cry-really-confused-me-officer-tells-inquest-into-disabled-man-s-death/article_a9db8617-8709-5660-a1ce-d138feb647ef.html
+1312,V1-0268,Charles McGillivary,2011-08-01,2011-08-08,Toronto.com,https://www.toronto.com/news/vigil-for-charles-mcgillivary/article_212c0d73-62d0-5463-875a-d3bc92433a62.html
+1313,V1-0011,Otto Vass,2000-08-09,2003-11-05,CBC,https://www.cbc.ca/news/canada/toronto/officers-acquitted-in-vass-death-1.361981
+1314,V1-0011,Otto Vass,2000-08-09,2003-11-15,The Globe and Mail,https://www.theglobeandmail.com/news/national/why-i-cant-stop-thinking-about-otto-vass/article773788/
+1315,V1-0011,Otto Vass,2000-08-09,2012-03-14,Toronto Star,https://www.thestar.com/news/crime/death-of-otto-vass-at-police-hands-comes-to-the-stage/article_0122a627-491a-51ab-a319-43920ebb3cb4.html
+1316,V1-0011,Otto Vass,2000-08-09,2002-07-05,The Globe and Mail,https://www.theglobeandmail.com/news/national/toronto-police-officers-to-stand-trial-in-death-of-mentally-ill-man/article4137234/
+1317,V1-0011,Otto Vass,2000-08-09,2006-10-16,CityNews,https://toronto.citynews.ca/2006/10/16/inquest-begins-into-otto-vass-death/
+1318,V1-0011,Otto Vass,2000-08-09,2000-10-26,CBC,https://www.cbc.ca/news/canada/toronto-police-officers-charged-with-manslaughter-1.216343
+1319,V1-0011,Otto Vass,2000-08-09,2003-11-05,The Globe and Mail,https://www.theglobeandmail.com/news/national/toronto-police-cleared-in-death-of-otto-vass/article22618259/
+1320,V1-0011,Otto Vass,2000-08-09,2006-10-31,The Globe and Mail,https://www.theglobeandmail.com/news/national/one-officer-poised-to-understand/article20416056/
+1321,V1-0009,Larry Campbell,2000-07-17,2000-08-05,The Globe and Mail,https://www.theglobeandmail.com/news/national/london-police-investigated-after-stopped-cyclist-dies/article1041643/
+1322,V1-0235,Logan Schaafsma,2010-08-08,2012-10-19,London Free Press,https://www.proquest.com/canadiannews/docview/2226872633/695EAE3613624785PQ/1?accountid=14771&sourcetype=Newspapers
+1323,V1-0011,Otto Vass,2000-08-09,2000-10-26,National Post,https://www.proquest.com/canadiannews/docview/329866210/4EACB4830C9143D8PQ/1?accountid=14771&sourcetype=Newspapers
+1324,V1-0011,Otto Vass,2000-08-09,2006-11-17,Toronto Star,https://www.proquest.com/canadiannews/docview/439101213/4EACB4830C9143D8PQ/2?accountid=14771&sourcetype=Newspapers
+1325,V1-0011,Otto Vass,2000-08-09,2003-10-18,Toronto Star,https://www.proquest.com/canadiannews/docview/438638316/4EACB4830C9143D8PQ/3?accountid=14771&sourcetype=Newspapers
+1326,V1-0011,Otto Vass,2000-08-09,2003-09-24,Toronto Star,https://www.proquest.com/canadiannews/docview/438626047/4EACB4830C9143D8PQ/4?accountid=14771&sourcetype=Newspapers
+1327,V1-0011,Otto Vass,2000-08-09,2000-08-10,Toronto Star,https://www.proquest.com/canadiannews/docview/438164775/4EACB4830C9143D8PQ/6?accountid=14771&sourcetype=Newspapers
+1328,V1-0011,Otto Vass,2000-08-09,2010-09-19,Toronto Star,https://www.proquest.com/canadiannews/docview/751453776/4EACB4830C9143D8PQ/7?accountid=14771&sourcetype=Newspapers
+1329,V1-0011,Otto Vass,2000-08-09,2006-11-24,National Post,https://www.proquest.com/canadiannews/docview/330649383/4EACB4830C9143D8PQ/12?accountid=14771&sourcetype=Newspapers
+1330,V1-0009,Larry Campbell,2000-07-17,2000-09-13,Welland Tribune,https://www.proquest.com/canadiannews/docview/359244508/57B7F813E764C73PQ/5?accountid=14771&sourcetype=Newspapers
+1331,V1-0007,David Melzer,2000-06-02,2001-07-04,North Bay Nugget,https://www.proquest.com/canadiannews/docview/352403578/F196A65462F44680PQ/1?accountid=14771&sourcetype=Newspapers
+1332,V1-0007,David Melzer,2000-06-02,2001-06-19,Sudbury Star,https://www.proquest.com/canadiannews/docview/348715872/F196A65462F44680PQ/2?accountid=14771&sourcetype=Newspapers
+1333,V1-0007,David Melzer,2000-06-02,2001-07-12,Sault Star,https://www.proquest.com/canadiannews/docview/348380199/F196A65462F44680PQ/3?accountid=14771&sourcetype=Newspapers
+1334,V1-0007,David Melzer,2000-06-02,2000-07-11,Guelph Mercury Tribune,https://www.proquest.com/canadiannews/docview/355463591/F196A65462F44680PQ/6?accountid=14771&sourcetype=Newspapers
+1335,V1-0242,Amit Krishna,2010-10-23,2011-03-29,Toronto.com,https://www.toronto.com/news/officers-cleared-in-fatal-shooting-of-machete-wielding-man/article_2363c75c-1d9d-542d-9c54-71ceec67ccec.html
+1336,V1-0242,Amit Krishna,2010-10-23,2011-03-29,Toronto Star,https://www.thestar.com/news/gta/toronto-officer-cleared-of-wrongdoing-in-shooting-death/article_0ddbcb63-1e10-5a96-aa06-e179316a4ca7.html
+1337,V1-0242,Amit Krishna,2010-10-23,2011-03-29,The Globe and Mail,https://www.theglobeandmail.com/news/toronto/police-officer-who-shot-and-killed-man-in-parkdale-cleared-of-wrongdoing/article574449/
+1338,V1-0264,Christopher Kampman,2011-07-01,2011-07-01,The Abbotsford News,https://www.abbynews.com/news/update-man-who-went-into-cardiac-arrest-while-in-apd-custody-dies-in-hospital-1723610
+1339,V1-0264,Christopher Kampman,2011-07-01,2011-07-05,CBC,https://www.cbc.ca/news/canada/british-columbia/police-investigate-abbotsford-in-custody-death-1.1105033
+1340,V1-0264,Christopher Kampman,2011-07-01,2011-07-05,The Globe and Mail,https://www.theglobeandmail.com/news/british-columbia/mystery-surrounds-death-of-bc-man-in-police-custody/article585542/
+1341,V1-0264,Christopher Kampman,2011-07-01,2012-10-03,The Abbotsford News,https://www.abbynews.com/news/inquest-to-be-held-into-abbotsford-mans-police-involved-death-1730791
+1342,V1-0264,Christopher Kampman,2011-07-01,2011-07-04,Toronto Star,https://www.thestar.com/news/canada/homicide-team-investigates-man-s-death-in-custody-of-abbotsford-police/article_622ee8d7-6d72-59d4-b2cd-1e2404607852.html
+1343,V1-0264,Christopher Kampman,2011-07-01,2011-07-04,CityNews,https://vancouver.citynews.ca/2011/07/04/rcmp-investigate-after-in-custody-death/
+1344,V1-0264,Christopher Kampman,2011-07-01,2012-10-03,CBC,https://www.cbc.ca/news/canada/british-columbia/b-c-coroners-service-to-hold-inquest-into-police-involved-death-1.1208739
+1345,V1-0264,Christopher Kampman,2011-07-01,2013-04-26,The Abbotsford News,https://www.abbynews.com/news/inquest-jury-recommends-cameras-in-back-of-police-cars-1739211
+1346,V1-0264,Christopher Kampman,2011-07-01,2013-04-17,The Abbotsford News,https://www.abbynews.com/news/inquest-looks-into-police-involved-death-in-abbotsford-1747770
+1347,V1-0264,Christopher Kampman,2011-07-01,2011-07-01,CityNews,https://vancouver.citynews.ca/2011/07/01/abbotsford-police-investigates-bizarre-incident/
+1348,V1-0336,Ryan Sommers,2014-10-31,2016-08-04,CTV,https://www.ctvnews.ca/calgary/article/cps-officer-will-not-face-charges-in-connection-with-fatal-2014-halloween-shooting/
+1349,V1-0336,Ryan Sommers,2014-10-31,2016-08-04,CBC,https://www.cbc.ca/news/canada/calgary/asirt-october-2014-shooting-walther-ppk-pellet-pistol-1.3707466
+1350,V1-0336,Ryan Sommers,2014-10-31,2016-08-04,Calgary Herald,https://calgaryherald.com/news/local-news/asirt-clears-calgary-police-officer-in-fatal-shooting-of-man-waving-a-pellet-gun
+1351,V1-0336,Ryan Sommers,2014-10-31,2016-08-04,The Edmonton Sun,https://edmontonsun.com/2016/08/04/calgary-cop-cleared-in-deadly-shooting
+1352,V1-0336,Ryan Sommers,2014-10-31,2014-10-31,CityNews,https://calgary.citynews.ca/2014/10/31/police-chief-updates-fatal-downtown-calgary-police-shooting/
+1353,V1-0336,Ryan Sommers,2014-10-31,2014-10-31,CTV,https://www.ctvnews.ca/calgary/article/man-dead-in-officer-involved-shooting-in-downtown-calgary/
+1354,V1-0211,Eugene Knight,2009-09-18,2009-09-19,CBC,https://www.cbc.ca/news/canada/british-columbia/vancouver-police-kill-knife-wielding-man-1.842804
+1355,V1-0211,Eugene Knight,2009-09-18,2012-02-23,Global News,https://globalnews.ca/news/215299/vpd-officers-cleared-of-wrongdoing-in-2009-shooting-death-of-man/
+1356,V1-0211,Eugene Knight,2009-09-18,2009-09-19,The Georgia Straight,https://www.straight.com/article-258360/eugene-anthony-knight-shot-dead-vancouver-police-after-refusing-drop-knife
+1357,V1-0211,Eugene Knight,2009-09-18,2009-09-19,The Vancouver Sun,https://vancouversun.com/news/staff-blogs/ihit-identifies-man-killed-in-vancouver-police-shooting
+1358,V1-0211,Eugene Knight,2009-09-18,2012-02-23,CityNews,https://vancouver.citynews.ca/2012/02/23/vpd-officer-cleared-of-wrong-doing-in-fatal-shooting/
+1359,V1-0211,Eugene Knight,2009-09-18,2009-09-22,The Vancouver Sun,https://vancouversun.com/news/staff-blogs/another-death-linked-to-domestic-violence-in-less-than-a-week
+1360,V1-0212,Rodney Shayne Jackson,2009-09-26,2011-09-13,CBC,https://www.cbc.ca/news/canada/british-columbia/rcmp-shooting-inquest-revelations-shock-victim-s-family-1.1122665
+1361,V1-0212,Rodney Shayne Jackson,2009-09-26,2011-09-23,National Post,https://nationalpost.com/opinion/lorne-gunter-rodney-shane-jacksons-death-is-another-black-mark-for-the-rcmp
+1362,V1-0212,Rodney Shayne Jackson,2009-09-26,2011-09-15,Global News,https://globalnews.ca/news/155402/inquest-into-rodney-jacksons-death-reveals-timeline-of-shooting/
+1363,V1-0212,Rodney Shayne Jackson,2009-09-26,2011-09-12,CBC,https://www.cbc.ca/news/canada/british-columbia/rcmp-shooting-inquest-underway-in-terrace-b-c-1.1029240
+1364,V1-0212,Rodney Shayne Jackson,2009-09-26,2011-09-17,CBC,https://www.cbc.ca/news/canada/british-columbia/rcmp-shooting-inquest-jury-returns-13-recommendations-1.1077337
+1365,V1-0212,Rodney Shayne Jackson,2009-09-26,2011-09-14,Global News,https://globalnews.ca/news/154926/shooting-inquest-continues-in-terrace/
