@@ -1,3 +1,4 @@
+import pandas as pd
 import random
 import pathlib
 import torch
@@ -8,12 +9,14 @@ import json
 import os
 import click
 from dotenv import dotenv_values
+from typing import List, Dict
 
 
 from transformers import AutoModelForCausalLM, AutoTokenizer, Seq2SeqTrainingArguments, Seq2SeqTrainer, DataCollatorForSeq2Seq, AutoModelForSeq2SeqLM, TrainingArguments, Trainer, DataCollatorForLanguageModeling, AutoModelForTokenClassification
 from dataclasses import dataclass
 from datasets import load_dataset, Dataset
 from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
+from packages.parsing_utils import CorefEntityMetadata, get_manual_annotation_occurrences, load_article_paragraphs, load_training_data_annotations_for_person
 
 config = dotenv_values(".env")
 logger = loguru.logger
@@ -471,6 +474,99 @@ def assess_ft_flan_model():
 
     pass
 
+def construct_length_limited_prompt(victim_name: str, 
+                                    coref_entity_obj: CorefEntityMetadata,
+                                    all_paragraphs: List[str], 
+                                    coref_auto_indices: List[int], 
+                                    annotation_indices: List[int]) -> Dict:
+    preamble_str = f"This is an article about the killing of {victim_name} by police." 
+    #### Constructing the input
+    coref_auto_paragraphs = "\n".join([f"{i+1}. {all_paragraphs[index - 1]}" for i, index in enumerate(coref_auto_indices)])
+    task_instruction_str = preamble_str +\
+        f" Here are references to a potential entity: {coref_entity_obj.cluster_strings}\n" +\
+        f" Here are the paragraphs that mention them:\n" +\
+        f"{coref_auto_paragraphs}\n\n" +\
+        f" Parse whether there is a valid entity, and, if so, what the entity name is whether they're aligned with the police, and which paragraphs reflect their perspectives." 
+    index_to_auto_paragraph_index = {index: i+1 for i, index in enumerate(coref_auto_indices)}
+    intersection_indices = list(sorted(set(annotation_indices).intersection(set(coref_auto_indices))))
+
+    preamble_str = f"This is an article about the killing of {victim_name} by police." 
+    subset_indices = [index_to_auto_paragraph_index[index] for index in intersection_indices]
+    #### Constructing the input
+    task_instruction_str = preamble_str +\
+        f" Here are references to a potential entity: {coref_entity_obj.cluster_strings}\n" +\
+        f" Here are the paragraphs that mention them:\n" +\
+        f"{coref_auto_paragraphs}\n\n" +\
+        f" Parse whether there is a valid entity, and, if so, what the entity name is whether they're aligned with the police, and which paragraphs reflect their perspectives." 
+
+    if coref_entity_obj.valid_entity: 
+        # if len(intersection_indices) == 0: # TODO: this is more likely to happen, since you're not doing the split...
+        output_str = json.dumps({'entity_name': coref_entity_obj.entity_name, 'police_aligned': coref_entity_obj.police_aligned,'perspective_paragraphs': subset_indices})
+    else:
+        output_str = f"### Answer: There is no valid entity providing a perspective here."
+    return {'prompt': task_instruction_str, 'completion': output_str}
+
+def _create_training_instance(victim_name: str, 
+                              all_paragraphs: List[str], 
+                              coref_metadata_obj: CorefEntityMetadata, 
+                              training_annotation_entity: Dict) -> List[Dict]:
+    # TODO: need to return multiple instances, containing at most 5 paragraphs.
+
+    MAX_PARAGRAPHS = 5
+    # TODO: get the intersection of the paragraphs
+    ## TODO: watch out for multiple paragraphs
+    unique_auto_indices = list(sorted(list(set(coref_metadata_obj.auto_paragraph_indices))))
+    num_prompts_required = len(unique_auto_indices) // MAX_PARAGRAPHS + (1 if len(unique_auto_indices) % MAX_PARAGRAPHS > 0 else 0)
+    training_instances = []
+    all_perspective_paragraphs_empty = True
+    for i in range(num_prompts_required):
+        coref_indices = unique_auto_indices[i*MAX_PARAGRAPHS:(i+1)*MAX_PARAGRAPHS]
+        training_instances.append(construct_length_limited_prompt(
+            victim_name=victim_name,
+            coref_entity_obj=coref_metadata_obj,
+            all_paragraphs=all_paragraphs,
+            coref_auto_indices=coref_indices,
+            annotation_indices=get_manual_annotation_occurrences(training_annotation_entity, coref_metadata_obj.entity_name) if coref_metadata_obj.valid_entity else []
+        ))
+        if coref_metadata_obj.valid_entity:
+            output_dict = json.loads(training_instances[-1]['completion'])
+            if len(output_dict['perspective_paragraphs']) > 0:
+                all_perspective_paragraphs_empty = False
+
+    if coref_metadata_obj.valid_entity and all_perspective_paragraphs_empty:
+        logger.warning("Valid entity but no perspective paragraphs found")
+        ipdb.set_trace()
+    return training_instances
+
+    
+@click.command()
+def create_coref_training_dataset():
+    # write a function to create a coreference resolution training dataset.
+
+    # TODO: note that some people have multiple articles from one outlet (Charles Qirnirq)
+    all_articles = os.listdir("data/linked_coref_annotations")
+    imperfect_articles = pd.read_csv('data/imperfect_articles.csv')['article'].tolist()
+    perfect_articles = set(all_articles) - set(imperfect_articles)
+    training_set = []
+    for article in perfect_articles:
+        # load the coref object and the annotation object
+        article_index = article.split('_')[0]
+        person_name = article.split('_')[1]
+        outlet = article.split('_')[2]
+        annotations = load_training_data_annotations_for_person(person_name, outlet, identifier=article_index)
+        # coref_metadata_objects = [CorefEntityMetadata(**obj) for obj in json.load(open(os.path.join("data/coref_metadata", article)))]
+        paragraphs = load_article_paragraphs(article)
+        coref_metadata_objects = [CorefEntityMetadata(**obj) for obj in json.load(open(os.path.join("data/linked_coref_annotations", article)))]
+        for coref_obj in coref_metadata_objects:
+            training_instances = _create_training_instance(
+                victim_name=person_name,
+                all_paragraphs=paragraphs,
+                coref_metadata_obj=coref_obj, # just do the first one for now
+                training_annotation_entity=annotations
+            )
+            training_set.extend(training_instances)
+    print(len(training_set))
+
 main.add_command(create_distillation_examples_task1)
 main.add_command(distill_task1_olmo)
 main.add_command(distill_flant5)
@@ -480,6 +576,7 @@ main.add_command(compute_required_memory)
 main.add_command(assess_baseline_ner_model)
 # main.add_command(create_training_dataset_rolling)
 main.add_command(assess_ft_flan_model)
+main.add_command(create_coref_training_dataset)
 # main.add_command(create_distillation_examples_task1)
 
 if __name__ == "__main__":
