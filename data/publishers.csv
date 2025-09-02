@@ -310,7 +310,7 @@ CTV,https://ctvnews.ca/,Bell Media,National,National
 The Morrisburg Leader,https://www.morrisburgleader.ca/,The Morrisburg Leader Ltd.,Morrisburg,ON
 APTN News,https://www.aptnnews.ca/,Aboriginal Peoples Television Network Inc.,National,National
 Pique Newsmagazine,piquenewsmagazine.com,Glacier Media,Whistler,BC
-PNI Atlantic News,https://www.saltwire.com/,Postmedia Network,,
+PNI Atlantic News,https://www.saltwire.com/,Postmedia Network,Atlantic Canada,Atlantic Canada
 Sudbury Northern Life,https://northernlife.ca/,Village Media,Sudbury,ON
 Windspeaker,windspeaker.com,Aboriginal Multi-Media Society of Alberta (AMMSA),Edmonton,AB
 CityNews,citynews.ca,Rogers Sports & Media,Toronto,National
@@ -324,23 +324,25 @@ Halifax Examiner,halifaxexaminer.ca,"Halifax Examiner, Inc./Tim Bousquet",Halifa
 Le Journal de Montréal,journaldemontreal.com,Quebecor Média,Montréal,QC
 Midland Mirror,https://www.simcoe.com/ontario-communities/midland/,Metroland Media Group,Midland,ON
 TimminsToday,timminstoday.com,Village Media,Timmins,ON
-SaskToday,sasktoday.ca,Harvard Media,Saskatchewan-wide,SK
-Castlegar News,https://www.castlegarnews.com/,Black Press Group Ltd.,,
-Parksville Qualicum Beach News,https://www.pqbnews.com/,Black Press Group Ltd.,,
-Soo Today,https://www.sootoday.com/,Village Media ,,
-Squamish Chief,https://www.squamishchief.com/,Lodestar Media,,
-The Pointer,https://thepointer.com/,The Pointer Group Inc.,,ON
-Our Windsor,https://www.ourwindsor.ca,Metroland Media Group,,ON
-Lethbridge News Now,https://lethbridgenewsnow.com,Pattison Media Ltd ,Lethbridge,AB
-Nunavut News,https://www.nunavutnews.com,Black Press Group Ltd.,,NU
-Oshawa Express,https://oshawaexpress.ca/,Independently Owned,,ON
+SaskToday,https://www.sasktoday.ca,Harvard Media,Saskatchewan-wide,SK
+Castlegar News,https://www.castlegarnews.com/,Black Press Group Ltd.,Castlegar,BC
+Parksville Qualicum Beach News,https://www.pqbnews.com/,Black Press Group Ltd.,Parksville/Qualicum Beach,BC
+Soo Today,https://www.sootoday.com/,Village Media,Sault Ste. Marie,ON
+Squamish Chief,https://www.squamishchief.com/,Black Press (via Lodestar Media),Squamish,BC
+The Pointer,https://thepointer.com/,The Pointer Group Inc.,Hamilton,ON
+Our Windsor,https://www.ourwindsor.ca,Metroland Media Group,Windsor,ON
+Lethbridge News Now,https://lethbridgenewsnow.com,Pattison Media Ltd,Lethbridge,AB
+Nunavut News,https://www.nunavutnews.com,Black Press Group Ltd.,Iqaluit,NU
+Oshawa Express,https://oshawaexpress.ca/,Independently Owned,Oshawa,ON
 Lakeland Today,https://www.lakelandtoday.ca,Great West Media,Lakeland,AB
-Moose Jaw Today,https://www.moosejawtoday.com/,Harvard Media,,
-The Reminder,,Lodestar Media,,
-Prince Albert Daily Herald,https://paherald.sk.ca/,Star News Publishing,,
-La Ronge Now,,Pattison Media Ltd ,,
-SaskNow,,Pattison Media Ltd ,,
-paNOW,https://panow.com,Pattison Media Ltd ,,
-Media Co-op,,Independent,,
-The Georgia Straight,,Overstory Media Group,,
-Penticton Herald,pentictonherald.ca,Continental Newspapers,,
+Moose Jaw Today,https://www.moosejawtoday.com/,Harvard Media,Moose Jaw,SK
+The Reminder,https://www.thereminder.ca,Lodestar Media,Port Coquitlam,BC
+Prince Albert Daily Herald,https://paherald.sk.ca/,Star News Publishing,Prince Albert,SK
+La Ronge Now,https://www.larongenow.com/,Pattison Media Ltd,La Ronge,SK
+SaskNow,https://www.sasknow.ca/,Pattison Media Ltd,Saskatchewan-wide,SK
+paNOW,https://panow.com,Pattison Media Ltd,Port Alberni,BC
+Media Co-op,https://mediacoop.ca,Independent,National,CA
+The Georgia Straight,https://www.straight.com/,Overstory Media Group,Vancouver,BC
+Penticton Herald,https://www.pentictonherald.ca/,Continental Newspapers,Penticton,BC
+CHEK News,https://cheknews.ca/,CHEK Media Group,Victoria,BC
+BayToday,https://www.baytoday.ca/,Village Media,Barrie,ON
