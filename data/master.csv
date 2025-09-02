@@ -460,7 +460,7 @@ ID,Victim ID,Person Name,Incident Date,Publication Date,Publisher,URL
 459,V1-0517,Ejaz Choudry,2020-06-20,2025-02-16,Toronto Star,https://www.thestar.com/news/gta/peel-police-officers-involved-in-mental-health-call-that-left-malton-man-dead-in-2020/article_377e267e-df25-11ef-8d0b-6be405752f4a.html
 460,V1-0649,Paul Kayuryuk,2012-10-29,2017-08-01,Nunatsiaq News,https://nunatsiaq.com/stories/article/65674nunavut_rcmp_should_not_assume_unconscious_inuit_are_intoxicated_inque/
 461,V1-0508,D'Andre Anthony Campbell,2020-04-06,2020-12-17,Toronto Star,https://www.thestar.com/news/gta/d-andre-deserved-better-families-of-mentally-ill-men-killed-by-peel-police-call-for/article_56ec8178-b816-5cbb-8690-dd6fe45fff44.html
-462,V1-0532,Martin Gordyn,2021-01-05,2021-01-06,CTV,https://www.ctvnews.ca/toronto/article/siu-identifies-27-year-old-killed-by-police-in-niagara-on-the-lake/
+462,V1-0449,Gordon Couvrette,2018-02-22,2022-11-22,North Bay Nugget,https://www.nugget.ca/news/north-bay-cop-testifies-in-inquest-into-2018-tasered-death-of-43-year-old-man
 463,V1-0001,Henry Hidaya Masuka,2000-01-01,2001-04-17,CBC,https://www.cbc.ca/news/canada/inquest-into-fatal-hospital-shooting-begins-1.264820
 464,V1-0185,Frank Frechette,2008-09-30,2008-10-01,The Globe and Mail,https://www.theglobeandmail.com/news/national/man-dies-after-rcmp-attempt-to-subdue-him-with-taser/article660387/
 465,V1-0185,Frank Frechette,2008-09-30,2008-10-02,Winnipeg Free Press,https://www.winnipegfreepress.com/historic/2008/10/02/around-canada-691
@@ -643,7 +643,7 @@ ID,Victim ID,Person Name,Incident Date,Publication Date,Publisher,URL
 642,V1-0516,Rodney Buckanee Levi,2020-06-12,2020-06-13,Toronto Star,https://www.thestar.com/news/canada/indigenous-leaders-demand-answers-as-new-brunswick-community-mourns-rodney-levi-shot-and-killed-by/article_bda10c26-eace-5acd-85d1-332e687a4d58.html
 643,V1-0533,Gedi Ali Gedi,2021-02-24,2021-02-24,Toronto.com,https://www.toronto.com/news/man-killed-in-toronto-police-shooting-at-downtown-building-identified/article_04e1febc-0909-5511-a45c-838aeaf46dcb.html
 644,V1-0564,Sean Brown,2022-07-23,2022-07-24,NanaimoNewsNOW,https://nanaimonewsnow.com/2022/07/24/one-dead-following-police-shooting-in-nanaimo/
-645,V1-0516,Rodney Buckanee Levi,2020-06-12,2021-10-04,Winnipeg Free Press,https://www.winnipegfreepress.com/canada/2021/10/04/new-brunswick-coroners-inquest-into-fatal-shooting-of-rodney-levi-hears-911-calls
+645,V1-0449,Gordon Couvrette,2018-02-22,2022-11-23,North Bay Nugget,https://www.nugget.ca/news/local-news/taser-not-connected-to-death-of-north-bay-man-in-2018
 646,V1-0515,Chantel Courtney Moore,2020-06-04,2023-02-23,CBC,https://www.cbc.ca/news/canada/new-brunswick/chantel-moore-shooting-lawsuit-defence-1.6750728
 647,V1-0517,Ejaz Choudry,2020-06-20,2024-04-29,CTV,https://www.ctvnews.ca/toronto/article/identities-of-officers-involved-in-death-of-mississauga-father-ejaz-choudry-to-be-made-public-court-rules/
 648,V1-0107,Paul Sheldon Saulnier,2005-07-15,2010-01-30,PNI Atlantic News,https://www.saltwire.com/atlantic-canada/rcmp-watchdog-launches-taser-investigation-36744
@@ -1025,7 +1025,7 @@ ID,Victim ID,Person Name,Incident Date,Publication Date,Publisher,URL
 1024,V1-0381,Devon LaFleur,2016-03-04,2016-03-07,The Ottawa Sun,https://ottawasun.com/2016/03/07/toronto-shooting-reopens-debate-over-police-handling-of-mentally-ill-suspects
 1025,V1-0555,James Hanna,2022-02-23,2024-12-11,Global News,https://globalnews.ca/news/10913564/edmonton-police-shooting-february-2022-asirt-report/
 1026,V1-0555,James Hanna,2022-02-23,2024-12-11,CBC,https://www.cbc.ca/news/canada/edmonton/asirt-decision-clears-eps-officers-double-fatal-1.7408193
-1027,V1-0381,Devon LaFleur,2016-03-04,2016-03-06,National Post,https://nationalpost.com/news/canada/a-lost-boy-ottawa-man-shot-dead-by-toronto-police-struggled-with-bipolar-disorder
+1027,V1-0449,Gordon Couvrette,2018-02-22,2022-10-21,BayToday,https://www.baytoday.ca/local-news/inquest-scheduled-for-man-who-died-after-an-interaction-with-north-bay-police-5989679
 1028,V1-0555,James Hanna,2022-02-23,2024-12-11,CTV,https://www.ctvnews.ca/edmonton/article/edmonton-police-acted-reasonably-in-2022-shooting-that-killed-innocent-man-police-watchdog/
 1029,V1-0555,James Hanna,2022-02-23,2022-11-09,Toronto Star,https://www.thestar.com/news/canada/sister-alleges-gross-negligence-behind-fatal-police-shooting-of-edmonton-bystander/article_5e1d2a09-1976-5e85-804e-ff98bde1d83d.html
 1030,V1-0555,James Hanna,2022-02-23,2024-12-11,The Winnipeg Sun,https://winnipegsun.com/pmn/officers-wont-be-charged-after-innocent-man-shot-and-killed-alberta-police-watchdog
@@ -1241,7 +1241,7 @@ ID,Victim ID,Person Name,Incident Date,Publication Date,Publisher,URL
 1240,V1-0264,Christopher Kampman,2011-07-01,2011-07-04,CityNews,https://vancouver.citynews.ca/2011/07/04/rcmp-investigate-after-in-custody-death/
 1241,V1-0264,Christopher Kampman,2011-07-01,2012-10-03,CBC,https://www.cbc.ca/news/canada/british-columbia/b-c-coroners-service-to-hold-inquest-into-police-involved-death-1.1208739
 1242,V1-0264,Christopher Kampman,2011-07-01,2013-04-26,The Abbotsford News,https://www.abbynews.com/news/inquest-jury-recommends-cameras-in-back-of-police-cars-1739211
-1243,V1-0264,Christopher Kampman,2011-07-01,2013-04-17,The Abbotsford News,https://www.abbynews.com/news/inquest-looks-into-police-involved-death-in-abbotsford-1747770
+1243,V1-0449,Gordon Couvrette,2018-02-22,2022-11-24,BayToday,https://www.baytoday.ca/local-news/inquest-jury-rules-couvrette-death-an-accident-6152387
 1244,V1-0264,Christopher Kampman,2011-07-01,2011-07-01,CityNews,https://vancouver.citynews.ca/2011/07/01/abbotsford-police-investigates-bizarre-incident/
 1245,V1-0069,Martin Ostopovich,2004-02-28,2005-11-17,CBC,https://www.cbc.ca/news/canada/calgary/mistakes-were-made-at-fatal-standoff-inquiry-told-1.521970
 1246,V1-0336,Ryan Sommers,2014-10-31,2016-08-04,CBC,https://www.cbc.ca/news/canada/calgary/asirt-october-2014-shooting-walther-ppk-pellet-pistol-1.3707466
@@ -1271,6 +1271,7 @@ ID,Victim ID,Person Name,Incident Date,Publication Date,Publisher,URL
 1270,V1-0080,Majencio Camaso,2004-07-11,2012-09-12,Saanich News,https://www.saanichnews.com/news/saanich-waits-for-ruling-on-appeal-of-2004-police-shooting-225647
 1271,V1-0080,Majencio Camaso,2004-07-11,2013-01-10,The Times Colonist,https://www.timescolonist.com/local-news/new-trial-ordered-in-saanich-police-shooting-death-of-mentally-ill-man-4574240
 1272,V1-0080,Majencio Camaso,2004-07-11,2011-07-19,Oak Bay News,https://www.oakbaynews.com/news/saanich-to-appeal-camaso-court-costs-ruling-442829
+1273,V1-0449,Gordon Couvrette,2018-02-22,2018-02-23,CBC,https://www.cbc.ca/news/canada/sudbury/siu-north-bay-investigation-id-1.4549196
 1274,V1-0080,Majencio Camaso,2004-07-11,2012-01-23,Victoria News,https://www.vicnews.com/news/police-board-adopts-camaso-recommendations-16951
 1275,V1-0080,Majencio Camaso,2004-07-11,2013-01-10,Saanich News,https://www.saanichnews.com/news/court-orders-new-trial-linked-to-saanich-police-shooting-from-2004-221972
 1276,V1-0080,Majencio Camaso,2004-07-11,2011-05-03,Oak Bay News,https://www.oakbaynews.com/news/saanich-will-appeal-ruling-that-found-police-officer-grossly-negligent-in-camaso-death-441089
@@ -1298,3 +1299,34 @@ ID,Victim ID,Person Name,Incident Date,Publication Date,Publisher,URL
 1298,V1-0158,Alwy Al Al-Nadhir,2007-10-31,2008-06-13,Toronto Star,https://www.thestar.com/news/gta/police-cleared-of-wrongdoing-in-fatal-shootings/article_b2cfaa7d-b820-504d-bce0-ac92037ec637.html
 1299,V1-0158,Alwy Al Al-Nadhir,2007-10-31,2008-06-12,CBC,https://www.cbc.ca/news/canada/toronto/siu-clears-toronto-police-in-2-fatal-shootings-1.718272
 1300,V1-0158,Alwy Al Al-Nadhir,2007-10-31,2010-03-22,Toronto Star,https://www.thestar.com/news/crime/inquest-begins-into-police-shooting-of-18-year-old/article_4835f6f1-144f-549b-8cc4-382b718fc384.html
+1301,V1-0307,Sammy Yatim,2013-07-27,2024-01-13,Toronto Star,https://www.proquest.com/canadiannews/docview/2913648411/DFE21E03147740E4PQ/86?accountid=14771
+1302,V1-0449,Gordon Couvrette,2018-02-22,2022-10-23,CTV,https://www.ctvnews.ca/northern-ontario/article/date-set-for-inquest-into-death-of-a-north-bay-man-in-2018-following-an-interaction-with-police/
+1303,V1-0653,Bradley Prebble,2021-10-13,2024-01-02,Toronto Star,https://www.proquest.com/canadiannews/docview/2908283831/DFE21E03147740E4PQ/9?accountid=14771&sourcetype=Newspapers
+1304,V1-0246,Steven Boucher,2011-01-10,2011-03-26,The Edmonton Sun,https://www.proquest.com/canadiannews/docview/2227011911/DFE21E03147740E4PQ/64?accountid=14771&sourcetype=Newspapers
+1305,V1-0348,Anthony Heffernan,2015-03-16,2024-10-29,Calgary Herald,https://www.proquest.com/canadiannews/docview/3121784187/DFE21E03147740E4PQ/31?accountid=14771&sourcetype=Newspapers
+1306,V1-0181,Fredy Villanueva,2008-08-09,2008-12-14,Times-Colonist,https://www.proquest.com/canadiannews/docview/348295119/DFE21E03147740E4PQ/34?accountid=14771&sourcetype=Newspapers
+1307,V1-0571,Myles Sanderson,2022-09-07,2022-09-22,Leader Post,https://www.proquest.com/canadiannews/docview/2716768458/DFE21E03147740E4PQ/104?accountid=14771&sourcetype=Newspapers
+1308,V1-0654,Corey Rogers,2016-06-16,2019-10-31,PNI Atlantic News,https://www.proquest.com/canadiannews/docview/2311043213/DFE21E03147740E4PQ/49?accountid=14771&sourcetype=Newspapers
+1309,V1-0181,Fredy Villanueva,2008-08-09,2008-08-12,The Windsor Star,https://www.proquest.com/canadiannews/docview/254817527/DFE21E03147740E4PQ/26?accountid=14771&sourcetype=Newspapers
+1310,V1-0348,Anthony Heffernan,2015-03-16,2016-10-20,Calgary Herald,https://www.proquest.com/canadiannews/docview/1830608925/DFE21E03147740E4PQ/142?accountid=14771
+1311,V1-0655,Bolanle Alo,2018-08-07,2018-08-13,Calgary Herald,https://www.proquest.com/canadiannews/docview/2087830818/DFE21E03147740E4PQ/101?accountid=14771&sourcetype=Newspapers
+1312,V1-0589,Levon Fox Wildman,2023-05-29,2024-05-30,Calgary Herald,https://www.proquest.com/canadiannews/docview/3062314896/DFE21E03147740E4PQ/48?accountid=14771&sourcetype=Newspapers
+1313,V1-0121,Ted Meiorin,2006-03-26,2007-11-25,Calgary Herald,https://www.proquest.com/canadiannews/docview/245591903/BFBA2B382F97470FPQ/1?accountid=14771&sourcetype=Newspapers
+1314,V1-0543,Jean-Rene Olivier,2021-08-01,2021-08-03,Peterborough Examiner,https://www.proquest.com/canadiannews/docview/2557379063/DFE21E03147740E4PQ/57?accountid=14771&sourcetype=Newspapers
+1315,V1-0351,Beau Baker,2015-04-02,2018-04-02,Waterloo Region Record,https://www.proquest.com/canadiannews/docview/2020460370/DFE21E03147740E4PQ/54?accountid=14771&sourcetype=Newspapers
+1316,V1-0515,Chantel Courtney Moore,2020-06-04,2020-06-16,Times-Colonist,https://www.proquest.com/canadiannews/docview/2413840166/DFE21E03147740E4PQ/138?accountid=14771&sourcetype=Newspapers
+1317,V1-0116,Howard Glenn Fleury,2005-12-02,2005-12-04,Winnipeg Free Press,https://www.proquest.com/canadiannews/docview/2545438126/DFE21E03147740E4PQ/5?accountid=14771&sourcetype=Newspapers
+1318,V1-0270,Jonathan George Rawlings,2011-08-11,2011-08-15,Sault Star,https://www.proquest.com/canadiannews/docview/2211348279/DFE21E03147740E4PQ/67?accountid=14771&sourcetype=Newspapers
+1319,V1-0620,Dillon Warren Breed,2025-05-30,2025-06-02,Winnipeg Free Press,https://www.proquest.com/canadiannews/docview/3214420462/DFE21E03147740E4PQ/4?accountid=14771&sourcetype=Newspapers
+1320,V1-0656,Wilfred Asham,2007-09-02,2009-11-21,Winnipeg Free Press,https://www.proquest.com/canadiannews/docview/2547884098/DFE21E03147740E4PQ/49?accountid=14771&sourcetype=Newspapers
+1321,V1-0489,Mitchell Anthony Speight,2019-08-10,2019-08-29,Daily Gleaner,https://www.proquest.com/canadiannews/docview/2281629256/DFE21E03147740E4PQ/135?accountid=14771&sourcetype=Newspapers
+1322,V1-0121,Ted Meiorin,2006-03-26,2006-03-29,Calgary Herald,https://www.proquest.com/canadiannews/docview/245374563/BFBA2B382F97470FPQ/2?accountid=14771&sourcetype=Newspapers
+1323,V1-0571,Myles Sanderson,2022-09-07,2022-09-09,Toronto Star,https://www.proquest.com/canadiannews/docview/2711735444/DFE21E03147740E4PQ/50?accountid=14771&sourcetype=Newspapers
+1324,V1-0608,Jon Wells,2024-09-17,2024-12-05,Edmonton Journal,https://www.proquest.com/canadiannews/docview/3141285561/DFE21E03147740E4PQ/8?accountid=14771&sourcetype=Newspapers
+1325,V1-0622,Eric Nothing,2025-07-22,2025-07-24,The Globe and Mail,https://www.proquest.com/canadiannews/docview/3232581249/DFE21E03147740E4PQ/35?accountid=14771&sourcetype=Newspapers
+1326,V1-0418,Koray Celik,2017-03-06,2024-09-24,Toronto Star,https://www.proquest.com/canadiannews/docview/3108515503/DFE21E03147740E4PQ/7?accountid=14771&sourcetype=Newspapers
+1327,V1-0566,Abdulla Shaikh,2022-08-04,2023-09-28,Montreal Gazette,https://www.proquest.com/canadiannews/docview/2869801854/DFE21E03147740E4PQ/85?accountid=14771
+1328,V1-0249,Cyrus Green,2011-02-05,2011-08-23,Cold Lake Sun,https://www.proquest.com/canadiannews/docview/2166091695/DFE21E03147740E4PQ/68?accountid=14771&sourcetype=Newspapers
+1329,V1-0475,Buck E Evans,2018-12-26,2019-01-04,Calgary Herald,https://www.proquest.com/canadiannews/docview/2163297711/DFE21E03147740E4PQ/139?accountid=14771&sourcetype=Newspapers
+1330,V1-0657,George Simeonidis Jr.,2021-11-04,2021-11-09,Winnipeg Free Press,https://www.proquest.com/canadiannews/docview/2594953761/DFE21E03147740E4PQ/100?accountid=14771&sourcetype=Newspapers
+1331,V1-0093,Adeyeri Robinson,2005-02-21,2005-03-04,The Globe and Mail,https://www.proquest.com/canadiannews/docview/383722124/D1A9649243584495PQ/2?accountid=14771&sourcetype=Newspapers

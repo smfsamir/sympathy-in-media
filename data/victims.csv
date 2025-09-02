@@ -500,7 +500,7 @@ V1-0498,2020-01-06,Dave,Ouellette,Clavel,Dave Ouellette Clavel,,40,Man,Unknown,Q
 V1-0499,2020-01-07,Jamal,Derek Jr,Francique,Jamal Derek Jr Francique,,28,Man,Black,ON,Peel Regional Police,Gunshot
 V1-0500,2020-01-13,Howard,,Shantz,Howard Shantz,Barry,63,Man,Unknown,BC,RCMP,Gunshot
 V1-0501,2020-01-17,Benoit,,Chabot,Benoit Chabot,,26,Man,Unknown,QC,Surete du Quebec,Gunshot
-V1-0502,2020-01-18,Ricardo,,Mirabelles,Ricardo Mirabelles,,37,Man,White,ON,Toronto Police Service,Gunshot
+V1-0502,2020-01-18,Ricardo,,Ricardo Mirabelles,Ricardo Ricardo Mirabelles,Miraballes,37,Man,White,ON,Toronto Police Service,Gunshot
 V1-0503,2020-02-02,Brandon,,Christian,Brandon Christian,,47,Man,White,QC,Surete du Quebec,Gunshot
 V1-0504,2020-02-11,Brian,Kyle,Schriver,Brian Kyle Schriver,Kyle,30,Man,Unknown,AB,RCMP,Gunshot
 V1-0505,2020-02-26,Attachie,,Ashoona,Attachie Ashoona,,39,Man,Indigenous,NU,RCMP,Gunshot
@@ -651,3 +651,5 @@ V1-0649,2012-10-29,Paul,,Kayuryuk,Paul Kayuryuk,,57,Man,Indigenous,NU,RCMP,Custo
 V1-0650,2017-05-22,Kieran,,Kay,Kieran Kay,,26,Man,Unknown,ON,Waterloo Regional Police Service,Custody Negligence
 V1-0651,2011-02-14,James,,Kiteley,James Kiteley,,36,Man,Unknown,ON,Hamilton Police Service,Physical Force
 V1-0652,2024-07-16,Kuhkpaw,,Moo,Kuhkpaw Moo,,18,Man,Unknown,ON,London Police Service,Gunshot
+V1-0653,2021-10-13,Bradley,,Prebble,Bradley Prebble,,48,Man,White,ON,Toronto Police Service,Custody Negligence
+V1-0654,2016-06-16,Corey,,Rogers,Corey Rogers,,41,Man,White,NS,Halifax Regional Police,Custody Negligence
