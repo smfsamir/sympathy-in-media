@@ -1,6 +1,7 @@
 {
   "index": 11,
   "victim": "Matt Dumas",
+  "victim_id": "V1-0434",
   "incident_date": "2017-09-09",
   "url": "https://globalnews.ca/news/3731838/asirt-investigating-after-alleged-shots-fired-near-northwest-edmonton-shopping-centre/",
   "title": "'I'm sad for him': Friends of man killed in Saturday's Edmonton police shooting say he was troubled",
@@ -8,7 +9,7 @@
   "publisher": "Global News",
   "date_published": "2017-09-10",
   "date_updated": "2017-09-11",
-   "article": [
+  "article": [
     "The Alberta Serious Incident Response Team (ASIRT) has taken over an investigation into a police-involved shooting which occurred at Westmount Shopping Centre on Saturday night.",
     "In a news release issued on Sunday, the Edmonton Police Service (EPS) said at around 8:15 p.m., officers were trying to arrest a man wanted on outstanding warrants who was in a vehicle in the area of Groat Road and 113 Avenue N.W.",
     "They said the suspect tried to flee the scene and collided with a police vehicle as officers tried to box him in. According to police, a confrontation then occurred, with officers firing their guns. The 29-year-old suspect was shot and killed.",

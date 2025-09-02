@@ -1,12 +1,13 @@
 {
   "index": 460,
   "victim": "Paul Kayuryuk",
+  "victim_id": "V1-0649",
   "incident_date": "2012-10-29",
   "url": "https://nunatsiaq.com/stories/article/65674nunavut_rcmp_should_not_assume_unconscious_inuit_are_intoxicated_inque/",
   "title": "Nunavut RCMP should not assume unconscious Inuit are intoxicated: inquest",
   "subtitle": "Man who never drank alcohol held in a cell after suffering a stroke",
   "publisher": "Nunatsiaq News",
-  "date_published": null,
+  "date_published": "2017-08-01",
   "date_updated": null,
   "article": [
     "Detained persons who need medical help should get it whether or not they're intoxicated, and non-Inuit RCMP officers and civilian prison guards should challenge their own assumptions about alcohol use and intoxication among Inuit, a six-person jury recommended July 27 following an inquest in Baker Lake.",
@@ -32,5 +33,6 @@
     "Another inquest is underway July 31 to Aug. 3 in Rankin Inlet for Victor Kaludjak, a Rankin Inlet man who died in March 2013.",
     "Kaludjak had been medevaced to Winnipeg from his community health centre when he was found in \"medical distress.\"",
     "Coroner's inquests are not fault-finding exercises.",
-    "Their primary purpose is to determine the cause of a person's death where the cause of death is in doubt and to make recommendations to avoid similar deaths in the future. Those recommendations are not binding on government."  ]
+    "Their primary purpose is to determine the cause of a person's death where the cause of death is in doubt and to make recommendations to avoid similar deaths in the future. Those recommendations are not binding on government."
+  ]
 }
