@@ -1271,7 +1271,7 @@ ID,Victim ID,Person Name,Incident Date,Publication Date,Publisher,URL
 1270,V1-0080,Majencio Camaso,2004-07-11,2012-09-12,Saanich News,https://www.saanichnews.com/news/saanich-waits-for-ruling-on-appeal-of-2004-police-shooting-225647
 1271,V1-0080,Majencio Camaso,2004-07-11,2013-01-10,The Times Colonist,https://www.timescolonist.com/local-news/new-trial-ordered-in-saanich-police-shooting-death-of-mentally-ill-man-4574240
 1272,V1-0080,Majencio Camaso,2004-07-11,2011-07-19,Oak Bay News,https://www.oakbaynews.com/news/saanich-to-appeal-camaso-court-costs-ruling-442829
-1273,V1-0449,Gordon Couvrette,2018-02-22,2018-02-23,CBC,https://www.cbc.ca/news/canada/sudbury/siu-north-bay-investigation-id-1.4549196
+1273,V1-0449,2018-02-22,Gordon Couvrette,2018-02-23,CBC,https://www.cbc.ca/news/canada/sudbury/siu-north-bay-investigation-id-1.4549196
 1274,V1-0080,Majencio Camaso,2004-07-11,2012-01-23,Victoria News,https://www.vicnews.com/news/police-board-adopts-camaso-recommendations-16951
 1275,V1-0080,Majencio Camaso,2004-07-11,2013-01-10,Saanich News,https://www.saanichnews.com/news/court-orders-new-trial-linked-to-saanich-police-shooting-from-2004-221972
 1276,V1-0080,Majencio Camaso,2004-07-11,2011-05-03,Oak Bay News,https://www.oakbaynews.com/news/saanich-will-appeal-ruling-that-found-police-officer-grossly-negligent-in-camaso-death-441089
@@ -1349,3 +1349,153 @@ ID,Victim ID,Person Name,Incident Date,Publication Date,Publisher,URL
 1348,V1-0216,Paul Daniel,2009-12-27,2010-02-19,CityNews,https://toronto.citynews.ca/2010/02/19/siu-finds-officers-not-criminally-responsible-in-toronto-firearm-death/
 1349,V1-0216,Paul Daniel,2009-12-27,2009-12-31,Toronto Star,https://www.thestar.com/news/gta/montreal-man-shot-by-police-near-movie-theatre-identified/article_ee25a5f2-1385-5f0e-8c73-f4b170171e59.html
 1350,V1-0168,Byron Debassige,2008-02-16,2010-09-22,The Globe and Mail,https://www.theglobeandmail.com/news/toronto/schizophrenic-lunged-at-officers-with-knife-inquest-told/article4326554/
+1351,V1-0168,Byron Debassige,2008-02-16,2010-09-21,Toronto Star,https://www.thestar.com/news/crime/officers-who-shot-knife-wielding-schizophrenic-man-say-they-would-do-it-again/article_79879b19-6542-5905-b573-bdfe6756af35.html
+1352,V1-0168,Byron Debassige,2008-02-16,2010-09-21,The Globe and Mail,https://www.theglobeandmail.com/news/toronto/man-shot-by-police-had-made-earlier-threats-coroners-inquiry-told/article1213727/
+1353,V1-0168,Byron Debassige,2008-02-16,2008-03-15,Toronto Star,https://www.thestar.com/news/gta/family-retraces-last-steps/article_ac51a670-f118-5f78-b1cd-2bb1b5071471.html
+1354,V1-0488,Viengxay Chommany,2019-08-04,2024-10-25,CBC,https://www.cbc.ca/news/canada/manitoba/viengxay-chommany-inquest-report-1.7364240
+1355,V1-0488,Viengxay Chommany,2019-08-04,2021-06-25,CBC,https://www.cbc.ca/news/canada/manitoba/lawsuit-taser-death-winnipeg-police-1.6079044
+1356,V1-0488,Viengxay Chommany,2019-08-04,2024-10-25,Winnipeg Free Press,https://www.winnipegfreepress.com/breakingnews/2024/10/25/inquest-judge-recommends-creation-of-specialized-police-paramedic-unit-response-in-mental-health-addictions-crises
+1357,V1-0488,Viengxay Chommany,2019-08-04,2021-01-30,CTV,https://www.ctvnews.ca/winnipeg/article/inquest-called-into-death-of-man-hit-by-a-conductive-energy-weapon/
+1358,V1-0479,Machuar Madut,2019-02-23,2024-01-24,CBC,https://www.cbc.ca/news/canada/manitoba/machuar-madut-family-speaks-inquest-delays-1.7092571
+1359,V1-0479,Machuar Madut,2019-02-23,2019-02-27,CBC,https://www.cbc.ca/news/canada/manitoba/police-shooting-witness-risbey-1.5035063
+1360,V1-0479,Machuar Madut,2019-02-23,2020-01-08,CTV,https://www.ctvnews.ca/winnipeg/article/no-charges-for-officer-who-fatally-shot-man-struggling-with-mental-health-police-watchdog/
+1361,V1-0479,Machuar Madut,2019-02-23,2019-02-25,CBC,https://www.cbc.ca/news/canada/manitoba/man-shot-police-south-sudanese-community-1.5032314
+1362,V1-0479,Machuar Madut,2019-02-23,2020-06-16,CBC,https://www.cbc.ca/news/canada/manitoba/standing-hearing-inquest-machuar-madut-1.5615117
+1363,V1-0479,Machuar Madut,2019-02-23,2019-11-18,CBC,https://www.cbc.ca/news/canada/manitoba/chief-medical-examiner-inquest-death-south-sudanese-man-shot-winnipeg-police-1.5363950
+1364,V1-0479,Machuar Madut,2019-02-23,2019-03-01,CBC,https://www.cbc.ca/news/canada/manitoba/black-community-protest-killing-1.5039689
+1365,V1-0479,Machuar Madut,2019-02-23,2019-02-25,Winnipeg Free Press,https://www.winnipegfreepress.com/breakingnews/2019/02/25/police-shooting-victim-identified
+1366,V1-0479,Machuar Madut,2019-02-23,2019-02-25,The Winnipeg Sun,https://winnipegsun.com/news/news-news/south-sudanese-community-demands-answers-after-police-involved-shooting
+1367,V1-0544,Kyle Gianis,2021-08-05,2021-08-13,Victoria News,https://www.vicnews.com/news/rcmp-cleared-in-okanagan-campground-death-of-b-c-man-with-gang-ties-89175
+1368,V1-0544,Kyle Gianis,2021-08-05,2021-08-05,Kelowna Capital News,https://www.kelownacapnews.com/news/man-who-survived-recent-kelowna-gangland-shooting-found-dead-at-enderby-campground-3217742
+1369,V1-0544,Kyle Gianis,2021-08-05,2021-08-05,CBC,https://www.cbc.ca/news/canada/british-columbia/kyle-gianis-death-1.6131628
+1370,V1-0544,Kyle Gianis,2021-08-05,2021-08-06,CityNews,https://vancouver.citynews.ca/2021/08/06/notorious-gangster-dies-in-enderby-campground/
+1371,V1-0544,Kyle Gianis,2021-08-05,2021-08-05,Global News,https://globalnews.ca/news/8089874/man-dead-self-inflicted-injury-rcmp/
+1372,V1-0544,Kyle Gianis,2021-08-05,2021-08-05,CTV,https://www.ctvnews.ca/vancouver/article/watchdog-investigating-after-target-of-kelowna-shooting-dies-during-police-incident/
+1373,V1-0558,Jimmie Johannesson,2022-04-08,2023-03-23,Surrey Now-Leader,https://www.surreynowleader.com/news/head-of-b-c-police-watchdog-wants-all-officers-to-wear-body-cameras-3000591
+1374,V1-0417,Nadia Racine,2017-01-24,2017-01-24,CBC,https://www.cbc.ca/news/canada/ottawa/30-minute-gatineau-gauvreau-1.3950285
+1375,V1-0417,Nadia Racine,2017-01-24,2018-03-24,The Ottawa Citizen,https://ottawacitizen.com/news/local-news/watchdog-report-on-gatineau-police-actions-in-womans-death-goes-to-prosecutors-coroner
+1376,V1-0415,Jimmy Cloutier,2017-01-06,2018-09-27,CBC,https://www.cbc.ca/news/canada/montreal/no-charges-against-montreal-police-officers-in-shooting-of-homeless-man-1.4841915
+1377,V1-0415,Jimmy Cloutier,2017-01-06,2018-06-13,CBC,https://www.cbc.ca/news/canada/police-shooting-mental-illness-1.4699217
+1378,V1-0415,Jimmy Cloutier,2017-01-06,2017-01-10,CBC,https://www.cbc.ca/news/canada/montreal/old-brewery-mission-shooting-victim-identified-1.3928900
+1379,V1-0415,Jimmy Cloutier,2017-01-06,2018-09-27,Montreal Gazette,https://www.montrealgazette.com/news/article205127.html
+1380,V1-0434,Matt Dumas,2017-09-09,2017-09-10,The Edmonton Sun,https://edmontonsun.com/2017/09/10/fatal-edmonton-police-shooting-sparked-by-attempt-to-arrest-suspect
+1381,V1-0434,Matt Dumas,2017-09-09,2020-01-27,Edmonton Journal,https://edmontonjournal.com/news/local-news/man-shot-dead-by-police-in-mercedes-after-ramming-was-subject-of-drug-sting-asirt-clears-officers
+1382,V1-0434,Matt Dumas,2017-09-09,2020-01-27,Global News,https://globalnews.ca/news/6469141/asirt-edmonton-police-westmount-mall-fatal-shooting/
+1383,V1-0092,Matthew Dumas,2005-01-31,2007-05-04,Winnipeg Free Press,https://www.winnipegfreepress.com/historic/2007/05/04/officer-cleared-in-shooting-of-youth
+1384,V1-0421,Jeremy Nuvviaq,2017-05-01,2022-03-03,The Globe and Mail,https://www.theglobeandmail.com/canada/article-inquest-jury-rules-2017-police-shooting-of-nunavut-man-a-homicide/
+1385,V1-0421,Jeremy Nuvviaq,2017-05-01,2017-05-15,Nunatsiaq News,https://nunatsiaq.com/stories/article/65674family_members_mourn_nunavut_victim_of_police_shooting/
+1386,V1-0421,Jeremy Nuvviaq,2017-05-01,2022-03-02,CBC,https://www.cbc.ca/news/canada/north/jeremy-nuvviaq-inquest-sanirajak-rcmp-shooting-1.6369780
+1387,V1-0421,Jeremy Nuvviaq,2017-05-01,2022-03-03,Nunatsiaq News,https://nunatsiaq.com/stories/article/inquest-jury-rules-sanirajak-mans-death-a-homicide/
+1388,V1-0444,Babak Saidi,2017-12-23,2022-04-21,The Ottawa Citizen,https://ottawacitizen.com/news/local-news/inquest-hears-opp-had-labelled-man-a-violent-high-risk-offender-before-disastrous-arrest-led-to-his-death
+1389,V1-0421,Jeremy Nuvviaq,2017-05-01,2022-03-03,CBC,https://www.cbc.ca/news/canada/north/jeremy-nuvviaq-inquest-homicide-1.6372014
+1390,V1-0421,Jeremy Nuvviaq,2017-05-01,2022-03-03,CBC,https://www.cbc.ca/news/canada/north/jeremy-nuvviaq-inquest-day-three-1.6371272
+1391,V1-0421,Jeremy Nuvviaq,2017-05-01,2022-02-27,The Globe and Mail,https://www.theglobeandmail.com/canada/article-inquest-to-begin-into-death-of-nunavut-man/
+1392,V1-0421,Jeremy Nuvviaq,2017-05-01,2022-03-01,CBC,https://www.cbc.ca/news/canada/north/sanirajak-inquest-jeremy-nuvviaq-rcmp-shooting-1.6368099
+1393,V1-0421,Jeremy Nuvviaq,2017-05-01,2022-02-28,CBC,https://www.cbc.ca/news/canada/north/coroner-s-inquest-jeremy-nuvviaq-livestream-rcmp-shooting-1.6364867
+1394,V1-0440,Brydon Whitstone,2017-10-21,2018-12-07,CBC,https://www.cbc.ca/news/canada/saskatoon/whitstone-coroner-s-inquest-rcmp-shooting-1.4936746
+1395,V1-0444,Babak Saidi,2017-12-23,2022-04-28,CBC,https://www.cbc.ca/news/canada/ottawa/babak-saidi-coroner-inquest-officers-testify-1.6432406
+1396,V1-0440,Brydon Whitstone,2017-10-21,2018-08-20,CTV,https://www.ctvnews.ca/saskatoon/article/coroners-inquest-called-into-death-of-brydon-whitstone/
+1397,V1-0440,Brydon Whitstone,2017-10-21,2018-12-05,CBC,https://www.cbc.ca/news/canada/saskatoon/whitstone-rcmp-shooting-inquest-1.4933377
+1398,V1-0444,Babak Saidi,2017-12-23,2022-04-04,The Recorder and Times,https://www.recorder.ca/news/inquest-scheduled-into-death-of-babak-saidi
+1399,V1-0440,Brydon Whitstone,2017-10-21,2018-12-11,Saskatoon StarPhoenix,https://thestarphoenix.com/news/local-news/brydon-whitstones-family-fsin-call-for-new-investigations-following-rcmp-involved-fatal-shooting
+1400,V1-0440,Brydon Whitstone,2017-10-21,2018-12-03,CBC,https://www.cbc.ca/news/canada/saskatoon/brydon-whitstone-rcmp-shooting-inquest-1.4929528
+1401,V1-0440,Brydon Whitstone,2017-10-21,2018-12-06,CTV,https://www.ctvnews.ca/saskatoon/article/officer-recounts-final-moments-before-he-shot-brydon-whitstone/
+1402,V1-0440,Brydon Whitstone,2017-10-21,2018-08-18,CBC,https://www.cbc.ca/news/canada/saskatoon/brydon-whitstone-rcmp-shooting-inquest-1.4790487
+1403,V1-0440,Brydon Whitstone,2017-10-21,2018-11-29,CBC,https://www.cbc.ca/news/canada/saskatoon/brydon-whitstone-rcmp-shooting-coroner-s-inquest-1.4923163
+1404,V1-0440,Brydon Whitstone,2017-10-21,2018-08-25,CBC,https://www.cbc.ca/news/canada/saskatoon/dalton-checkosis-brydon-whitstone-sentence-death-1.4799311
+1405,V1-0440,Brydon Whitstone,2017-10-21,2018-12-04,Global News,https://globalnews.ca/news/4729770/inquest-brydon-whitstone/
+1406,V1-0440,Brydon Whitstone,2017-10-21,2018-11-02,Global News,https://globalnews.ca/news/4623755/inquest-2017-police-shooting-death-north-battleford-saskatchewan/
+1407,V1-0440,Brydon Whitstone,2017-10-21,2018-09-25,CBC,https://www.cbc.ca/news/canada/saskatoon/brydon-whitstone-rcmp-shooting-saskatchewan-1.4837861
+1408,V1-0440,Brydon Whitstone,2017-10-21,2018-09-25,Saskatoon StarPhoenix,https://thestarphoenix.com/news/local-news/no-charges-laid-in-rcmp-involved-shooting-of-brydon-bryce-whitstone
+1409,V1-0440,Brydon Whitstone,2017-10-21,2018-12-07,Global News,https://globalnews.ca/news/4742344/jury-brydon-whitstone-inquest-recommendation/
+1410,V1-0440,Brydon Whitstone,2017-10-21,2018-12-03,Global News,https://globalnews.ca/news/4725441/inquest-brydon-whitstone-death/
+1411,V1-0440,Brydon Whitstone,2017-10-21,2018-12-11,Global News,https://globalnews.ca/news/4752444/fsin-brydon-whitstone-independent-investigation-rcmp-shooting-death/
+1412,V1-0440,Brydon Whitstone,2017-10-21,2018-10-28,CBC,https://www.cbc.ca/news/canada/saskatoon/brydon-whitstone-rcmp-shooting-1.4881684
+1413,V1-0440,Brydon Whitstone,2017-10-21,2018-12-05,CTV,https://www.ctvnews.ca/saskatoon/article/passenger-in-vehicle-with-whitstone-when-he-died-testifies-in-inquest/
+1414,V1-0440,Brydon Whitstone,2017-10-21,2018-12-07,CBC,https://www.cbc.ca/news/canada/saskatoon/brydon-whitstone-rcmp-shooting-1.4936258
+1415,V1-0440,Brydon Whitstone,2017-10-21,2018-12-18,CBC,https://www.cbc.ca/news/canada/saskatoon/whitstone-rcmp-review-brydon-shooting-1.4951325
+1416,V1-0440,Brydon Whitstone,2017-10-21,2017-10-22,CBC,https://www.cbc.ca/news/canada/saskatchewan/saskatchewan-rcmp-1.4366410
+1417,V1-0440,Brydon Whitstone,2017-10-21,2017-10-29,Saskatoon StarPhoenix,https://thestarphoenix.com/news/local-news/brydon-whitstone-family-gathers-for-funeral-of-man-shot-by-rcmp
+1418,V1-0440,Brydon Whitstone,2017-10-21,2017-10-26,Saskatoon StarPhoenix,https://thestarphoenix.com/news/local-news/nb-day-3
+1419,V1-0440,Brydon Whitstone,2017-10-21,2018-12-11,CBC,https://www.cbc.ca/news/canada/saskatoon/whitstone-lawsuit-coroner-s-inquest-1.4941206
+1420,V1-0440,Brydon Whitstone,2017-10-21,2018-09-25,CTV,https://www.ctvnews.ca/saskatoon/article/no-charges-will-be-laid-in-police-shooting-death-of-onion-lake-man/
+1421,V1-0440,Brydon Whitstone,2017-10-21,2018-12-06,CBC,https://www.cbc.ca/news/canada/saskatoon/rcmp-whitstone-inquest-shooting-1.4934527
+1422,V1-0440,Brydon Whitstone,2017-10-21,2018-12-06,Saskatoon StarPhoenix,https://thestarphoenix.com/news/local-news/mountie-tells-inquest-he-shot-brydon-witstone-because-he-thought-he-had-a-gun
+1423,V1-0444,Babak Saidi,2017-12-23,2022-04-21,CBC,https://www.cbc.ca/news/canada/ottawa/babak-saidi-coroner-inquest-day-1-1.6425412
+1424,V1-0444,Babak Saidi,2017-12-23,2019-02-19,Toronto Star,https://www.thestar.com/news/canada/opp-officer-who-shot-and-killed-mentally-ill-man-will-not-face-charges-siu-says/article_837bc9df-df31-5f7c-94cb-10c85613b321.html
+1425,V1-0444,Babak Saidi,2017-12-23,2022-04-26,CTV,https://www.ctvnews.ca/ottawa/article/one-person-was-shot-five-times-and-two-officers-were-traumatized-inquest-into-police-shooting-death-continues/
+1426,V1-0444,Babak Saidi,2017-12-23,2022-04-22,CBC,https://www.cbc.ca/news/canada/ottawa/babak-saidi-coroner-inquest-day-2-1.6425587
+1427,V1-0444,Babak Saidi,2017-12-23,2022-04-23,CBC,https://www.cbc.ca/news/canada/ottawa/babak-saidi-coroner-inquest-day-3-1.6427030
+1428,V1-0444,Babak Saidi,2017-12-23,2018-07-11,CBC,https://www.cbc.ca/news/canada/ottawa/wait-devastating-morrisburg-shooting-opp-babak-saidi-1.4741169
+1429,V1-0444,Babak Saidi,2017-12-23,2022-04-29,CBC,https://www.cbc.ca/news/canada/ottawa/babak-saidi-coroner-inquest-evidence-ends-1.6434364
+1430,V1-0330,Maurizio Angelo Facchin,2014-06-04,2016-09-08,The Vancouver Sun,https://vancouversun.com/news/local-news/inquest-to-be-held-into-police-tasering-death-in-burnaby
+1431,V1-0407,Rui Nabico,2016-11-04,2016-11-07,Toronto Star,https://www.thestar.com/news/crime/as-toronto-police-mull-more-tasers-man-dies-after-cew-used/article_ad1b1ca6-2618-5156-9506-181b98dab7ae.html
+1432,V1-0407,Rui Nabico,2016-11-04,2016-12-10,Toronto Star,https://www.thestar.com/news/gta/family-of-man-who-died-in-toronto-police-taser-incident-speaks-out/article_be70934e-d776-54fd-af16-64c37aa38853.html
+1433,V1-0618,Abisay Cruz,2025-03-30,2025-05-27,CBC,https://www.cbc.ca/news/canada/montreal/abisay-cruz-george-floyd-vigil-saint-michel-spvm-bei-1.7543819
+1434,V1-0618,Abisay Cruz,2025-03-30,2025-04-23,CityNews,https://montreal.citynews.ca/2025/04/23/family-montrealer-killed-police-intervention-coroners-inquiry/
+1435,V1-0618,Abisay Cruz,2025-03-30,2025-04-23,Montreal Gazette,https://www.montrealgazette.com/news/article892390.html
+1436,V1-0618,Abisay Cruz,2025-03-30,2025-04-24,Global News,https://globalnews.ca/news/11146235/montreal-family-answers-police-intervention-death/
+1437,V1-0618,Abisay Cruz,2025-03-30,2025-05-02,CityNews,https://montreal.citynews.ca/2025/05/02/public-coroner-inquiry-montrealer-police-intervention/
+1438,V1-0332,Jermaine Carby,2014-09-24,2015-07-21,Toronto Star,https://www.thestar.com/news/crime/no-charges-against-peel-police-in-death-of-jermaine-carby/article_53cdbfcd-483a-531d-8476-9ff0a4c74f6f.html
+1439,V1-0618,Abisay Cruz,2025-03-30,2025-04-06,CBC,https://www.cbc.ca/news/canada/montreal/march-abisay-cruz-spvm-bei-investigations-1.7503358
+1440,V1-0618,Abisay Cruz,2025-03-30,2025-04-09,Montreal Gazette,https://www.montrealgazette.com/news/article865190.html
+1441,V1-0618,Abisay Cruz,2025-03-30,2025-04-23,CBC,https://www.cbc.ca/news/canada/montreal/family-coroners-inquiry-montreal-police-1.7516854
+1442,V1-0618,Abisay Cruz,2025-03-30,2025-04-08,CBC,https://www.cbc.ca/news/canada/montreal/montreal-police-st-michel-man-dead-after-police-intervention-1.7504859
+1443,V1-0618,Abisay Cruz,2025-03-30,2025-04-23,CTV,https://www.ctvnews.ca/montreal/article/they-destroyed-my-life-family-of-montreal-man-who-died-in-police-intervention-demands-public-coroners-inquiry/
+1444,V1-0614,Elgyn Muskego,2024-11-22,2024-11-24,CBC,https://www.cbc.ca/news/canada/manitoba/rcmp-fatal-shooting-boy-norway-house-cree-nation-1.7391955
+1445,V1-0614,Elgyn Muskego,2024-11-22,2024-11-22,APTN News,https://www.aptnnews.ca/national-news/norway-house-first-nation-manitoba-deaths-rcmp-manslaughter/
+1446,V1-0614,Elgyn Muskego,2024-11-22,2024-12-01,CBC,https://www.cbc.ca/news/canada/manitoba/norway-house-manitoba-elgyn-muskego-1.7398330
+1447,V1-0614,Elgyn Muskego,2024-11-22,2024-12-01,CBC,https://www.cbc.ca/news/canada/manitoba/winnipeg-police-shootings-traning-norway-finland-1.7397678
+1448,V1-0399,Debra Chrisjohn,2016-09-07,2023-10-06,CTV,https://www.ctvnews.ca/london/article/former-london-ont-cop-sentenced-in-death-of-woman-in-his-custody/
+1449,V1-0399,Debra Chrisjohn,2016-09-07,2020-01-31,CBC,https://www.cbc.ca/news/canada/london/officer-who-didn-t-help-first-nations-woman-he-arrested-deserves-jail-time-crown-says-1.5447383
+1450,V1-0399,Debra Chrisjohn,2016-09-07,2024-09-27,APTN News,https://www.aptnnews.ca/national-news/debra-chrisjohn-oneida-family-relieved-police-officers-appeals-come-to-an-end/
+1451,V1-0399,Debra Chrisjohn,2016-09-07,2019-11-01,Global News,https://globalnews.ca/news/6112340/verdict-in-death-of-debra-chrisjohn/
+1452,V1-0399,Debra Chrisjohn,2016-09-07,2023-10-06,The London Free Press,https://lfpress.com/news/local-news/conditional-sentence-for-police-officer-convicted-in-womans-custody-death
+1453,V1-0399,Debra Chrisjohn,2016-09-07,2020-09-21,Global News,https://globalnews.ca/news/7348359/12-months-in-jail-for-london-officer-convicted-in-debra-chrisjohn-death/
+1454,V1-0399,Debra Chrisjohn,2016-09-07,2020-09-21,CBC,https://www.cbc.ca/news/canada/london/nicholas-doering-sentencing-1.5732615
+1455,V1-0399,Debra Chrisjohn,2016-09-07,2020-01-31,Global News,https://globalnews.ca/news/6491218/sentencing-debra-chrisjohn-death-postponed/
+1456,V1-0399,Debra Chrisjohn,2016-09-07,2019-11-01,APTN News,https://www.aptnnews.ca/national-news/london-police-officer-found-guilty-in-death-of-oneida-of-the-thames-mother/
+1457,V1-0399,Debra Chrisjohn,2016-09-07,2022-02-10,CBC,https://www.cbc.ca/news/canada/london/doering-london-officer-appeal-chrisjohn-death-1.6345193
+1458,V1-0399,Debra Chrisjohn,2016-09-07,2019-11-01,CBC,https://www.cbc.ca/news/canada/london/london-ontario-debra-chrisjohn-police-nicholas-doering-verdict-1.5344317
+1459,V1-0399,Debra Chrisjohn,2016-09-07,2019-10-31,APTN News,https://www.aptnnews.ca/national-news/judgement-in-case-of-officer-charged-with-oneidas-womans-death-expected-friday/
+1460,V1-0399,Debra Chrisjohn,2016-09-07,2020-09-21,APTN News,https://www.aptnnews.ca/national-news/london-police-officer-sentenced-to-1-year-in-jail-for-role-in-death-of-oneida-mother/
+1461,V1-0399,Debra Chrisjohn,2016-09-07,2022-08-02,The London Free Press,https://lfpress.com/news/local-news/indigenous-womans-family-shocked-by-appeal-court-decision-in-custody-death
+1462,V1-0399,Debra Chrisjohn,2016-09-07,2019-10-25,Global News,https://globalnews.ca/news/6084492/justice-for-debra-chrisjohn/
+1463,V1-0399,Debra Chrisjohn,2016-09-07,2017-07-13,CBC,https://www.cbc.ca/news/canada/london/family-of-indigenous-woman-who-died-in-police-custody-wants-justice-1.4204624
+1464,V1-0399,Debra Chrisjohn,2016-09-07,2020-09-22,The London Free Press,https://lfpress.com/news/local-news/london-police-officer-sentenced-to-jail-over-womans-in-custody-death
+1465,V1-0399,Debra Chrisjohn,2016-09-07,2024-05-14,The London Free Press,https://lfpress.com/news/local-news/at-an-end-court-puts-stop-to-legal-fight-over-officers-conviction
+1466,V1-0399,Debra Chrisjohn,2016-09-07,2023-07-06,The London Free Press,https://lfpress.com/news/local-news/sentencing-hearing-for-officer-in-womans-custody-death-starts-with-twist
+1467,V1-0399,Debra Chrisjohn,2016-09-07,2020-09-21,CTV,https://www.ctvnews.ca/london/article/officer-sentenced-to-a-year-in-prison-in-death-of-indigenous-woman/
+1468,V1-0399,Debra Chrisjohn,2016-09-07,2017-11-28,Global News,https://globalnews.ca/news/3884942/charges-withdrawn-against-opp-officer-in-the-death-of-debra-chrisjohn/
+1469,V1-0399,Debra Chrisjohn,2016-09-07,2017-07-13,Global News,https://globalnews.ca/news/3596857/siu-probe-into-death-of-debra-chrisjohn-results-in-charges-against-london-police-officer-opp-officer/
+1470,V1-0399,Debra Chrisjohn,2016-09-07,2017-07-14,Global News,https://globalnews.ca/news/3599963/debra-chrisjohn-family-speaks-out/
+1471,V1-0399,Debra Chrisjohn,2016-09-07,2018-10-05,CBC,https://www.cbc.ca/news/canada/london/oneida-nation-of-the-thames-debra-chrisjohn-1.4851537
+1472,V1-0399,Debra Chrisjohn,2016-09-07,2017-11-28,CBC,https://www.cbc.ca/news/canada/london/charges-against-opp-officer-dropped-in-the-death-of-debra-chrisjohn-1.4422914
+1473,V1-0399,Debra Chrisjohn,2016-09-07,2022-02-10,The London Free Press,https://lfpress.com/news/local-news/judge-who-convicted-officer-in-overdose-death-had-hindsight-bias-appeal-court-told
+1474,V1-0399,Debra Chrisjohn,2016-09-07,2023-11-13,The London Free Press,https://lfpress.com/news/local-news/london-officer-convicted-in-womans-custody-death-appeals-again
+1475,V1-0399,Debra Chrisjohn,2016-09-07,2017-07-14,The Globe and Mail,https://www.theglobeandmail.com/news/national/family-of-indigenous-ontario-woman-who-died-in-custody-speaks-out/article35695355/
+1476,V1-0399,Debra Chrisjohn,2016-09-07,2020-09-03,The London Free Press,https://lfpress.com/news/local-news/family-rejects-apology-from-london-officer-convicted-in-indigenous-womans-death
+1477,V1-0399,Debra Chrisjohn,2016-09-07,2017-07-17,CBC,https://www.cbc.ca/news/canada/london/be-rooted-in-ceremony-indigenous-community-offers-support-for-debra-chrisjohn-s-family-1.4206159
+1478,V1-0399,Debra Chrisjohn,2016-09-07,2017-07-13,APTN News,https://www.aptnnews.ca/national-news/two-ontario-police-officers-charged-in-death-of-oneida-nation-of-the-thames-woman/
+1479,V1-0399,Debra Chrisjohn,2016-09-07,2022-07-29,The London Free Press,https://lfpress.com/news/local-news/appeal-court-overturns-one-of-london-cops-two-convictions-in-womans-death
+1480,V1-0399,Debra Chrisjohn,2016-09-07,2020-01-31,The London Free Press,https://lfpress.com/news/local-news/crown-seeks-jail-for-london-cop-convicted-in-custody-death
+1481,V1-0399,Debra Chrisjohn,2016-09-07,2017-07-14,APTN News,https://www.aptnnews.ca/national-news/why-didnt-police-take-her-to-the-hospital-despite-charges-debra-chrisjohns-family-still-has-questions-about-her-death/
+1482,V1-0399,Debra Chrisjohn,2016-09-07,2020-01-31,APTN News,https://www.aptnnews.ca/national-news/family-crown-say-london-police-officer-should-do-jail-time/
+1483,V1-0399,Debra Chrisjohn,2016-09-07,2017-11-28,The London Free Press,https://lfpress.com/2017/11/28/charges-against-opp-officer-dropped-in-death-of-local-woman-debra-chrisjohn
+1484,V1-0399,Debra Chrisjohn,2016-09-07,2019-10-23,The London Free Press,https://lfpress.com/news/local-news/prisoner-not-responsive-couldnt-walk-at-hand-over-court-hears
+1485,V1-0399,Debra Chrisjohn,2016-09-07,2020-09-23,The London Free Press,https://lfpress.com/news/local-news/officers-jail-sentence-sign-of-changing-times-indigenous-grand-chief-says
+1486,V1-0332,Jermaine Carby,2014-09-24,2016-05-26,CBC,https://www.cbc.ca/news/canada/toronto/jermaine-carby-inquest-1.3601734
+1487,V1-0332,Jermaine Carby,2014-09-24,2016-05-12,CityNews,https://toronto.citynews.ca/2016/05/12/fatal-police-shooting-of-jermaine-carby-began-with-carding-officer-testifies/
+1488,V1-0332,Jermaine Carby,2014-09-24,2016-05-13,Toronto Star,https://www.thestar.com/news/gta/officer-who-shot-jermaine-carby-says-he-wouldn-t-do-anything-differently/article_bb74341c-bd9b-5830-90aa-f9007c235a0f.html
+1489,V1-0332,Jermaine Carby,2014-09-24,2016-09-28,Global News,https://globalnews.ca/news/2970357/family-of-ontario-man-killed-by-peel-police-alleges-racial-prejudice-in-lawsuit/
+1490,V1-0332,Jermaine Carby,2014-09-24,2016-09-28,CBC,https://www.cbc.ca/news/canada/toronto/family-of-jermaine-carby-sues-peel-police-for-12m-protests-at-police-station-with-black-lives-matter-1.3782762
+1491,V1-0332,Jermaine Carby,2014-09-24,2014-09-26,CTV,https://www.ctvnews.ca/toronto/article/family-ids-man-killed-during-police-traffic-stop/
+1492,V1-0332,Jermaine Carby,2014-09-24,2015-07-31,Toronto Star,https://www.thestar.com/news/crime/jermaine-carby-taken-in-under-mental-health-act-a-month-before-police-shot-him-dead/article_078876d0-dbb4-599a-a4c3-4c5444b96637.html
+1493,V1-0332,Jermaine Carby,2014-09-24,2016-05-09,Brampton Guardian,https://www.bramptonguardian.com/news/was-knife-in-jermaine-carbys-hand-witnesses-cant-agree-as-police-shooting-inquest-begins/article_c4b4330d-68a3-58ec-ae45-29d2d05e424a.html
+1494,V1-0332,Jermaine Carby,2014-09-24,2016-05-12,CBC,https://www.cbc.ca/news/canada/toronto/peel-police-jermaine-carby-inquest-1.3579616
+1495,V1-0332,Jermaine Carby,2014-09-24,2014-09-25,CBC,https://www.cbc.ca/news/canada/toronto/jermaine-carby-id-d-as-victim-of-brampton-police-shooting-1.2777349
+1496,V1-0332,Jermaine Carby,2014-09-24,2014-10-01,CBC,https://www.cbc.ca/news/canada/toronto/jermaine-carby-s-family-wants-answers-in-traffic-stop-death-1.2784585
+1497,V1-0332,Jermaine Carby,2014-09-24,2016-09-28,Mississauga News,https://www.mississauga.com/news/crime/jermaine-carby-s-family-suing-peel-police-for-12-million/article_1c73e228-b355-51d5-8d8d-ffc590dbb6a2.html
+1498,V1-0332,Jermaine Carby,2014-09-24,2014-09-25,Toronto Star,https://www.thestar.com/news/gta/victim-in-brampton-police-shooting-is-jermaine-carby-says-mother/article_fd53ad16-57dc-500f-a45c-1f1cc2351646.html
+1499,V1-0332,Jermaine Carby,2014-09-24,2016-05-12,Toronto Star,https://www.thestar.com/news/crime/peel-cop-sought-to-card-jermaine-carby-before-slaying-inquest-hears/article_ded7134c-1033-56e8-a161-25c6d142391f.html
+1500,V1-0332,Jermaine Carby,2014-09-24,2016-05-13,CBC,https://www.cbc.ca/news/canada/toronto/jermaine-carby-inquest-peel-regional-police-1.3581519
