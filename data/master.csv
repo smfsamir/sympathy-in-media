@@ -1499,3 +1499,103 @@ ID,Victim ID,Person Name,Incident Date,Publication Date,Publisher,URL
 1498,V1-0332,Jermaine Carby,2014-09-24,2014-09-25,Toronto Star,https://www.thestar.com/news/gta/victim-in-brampton-police-shooting-is-jermaine-carby-says-mother/article_fd53ad16-57dc-500f-a45c-1f1cc2351646.html
 1499,V1-0332,Jermaine Carby,2014-09-24,2016-05-12,Toronto Star,https://www.thestar.com/news/crime/peel-cop-sought-to-card-jermaine-carby-before-slaying-inquest-hears/article_ded7134c-1033-56e8-a161-25c6d142391f.html
 1500,V1-0332,Jermaine Carby,2014-09-24,2016-05-13,CBC,https://www.cbc.ca/news/canada/toronto/jermaine-carby-inquest-peel-regional-police-1.3581519
+1501,V1-0617,Chase de Balinhard,2025-02-09,2025-02-14,CTV,https://www.ctvnews.ca/vancouver/article/that-sadness-has-turned-to-anger-vigil-held-for-15-year-old-autistic-boy-shot-killed-by-surrey-police/
+1502,V1-0360,Andrew Loku,2015-07-05,2016-04-17,CBC,https://www.cbc.ca/news/canada/toronto/black-lives-matter-1.3540279
+1503,V1-0383,Alex Wettlaufer,2016-03-14,2016-03-14,National Post,https://nationalpost.com/news/toronto/alex-wettlaufer-was-working-towards-joining-the-army-before-he-was-shot-dead-by-toronto-police-brother-says?itm_source=alex-wettlaufer
+1504,V1-0425,Noam Cohen,2017-06-15,2018-02-10,The Globe and Mail,https://www.theglobeandmail.com/news/national/families-criticizing-quebecs-police-watchdog-for-lack-of-transparency/article37930729/
+1505,V1-0386,Bony Jean-Pierre,2016-03-31,2018-07-17,CBC,https://www.cbc.ca/news/canada/montreal/jean-pierre-bony-spvm-police-montreal-manslaughter-plea-1.4750039
+1506,V1-0386,Bony Jean-Pierre,2016-03-31,2018-02-12,CTV,https://www.ctvnews.ca/montreal/article/preliminary-hearing-begins-for-officer-charged-with-manslaughter-death-of-bony-jean-pierre/
+1507,V1-0386,Bony Jean-Pierre,2016-03-31,2021-02-04,CBC,https://www.cbc.ca/news/canada/montreal/police-officer-christian-gilbert-acquitted-death-bony-jean-pierre-montreal-north-1.5900792
+1508,V1-0386,Bony Jean-Pierre,2016-03-31,2017-05-24,CBC,https://www.cbc.ca/news/canada/montreal/jean-pierre-bony-spvm-police-montreal-manslaughter-1.4129272
+1509,V1-0386,Bony Jean-Pierre,2016-03-31,2021-02-07,Montreal Gazette,https://montrealgazette.com/news/local-news/family-of-man-fatally-shot-by-montreal-police-officer-to-sue-following-acquittal
+1510,V1-0386,Bony Jean-Pierre,2016-03-31,2021-02-04,Montreal Gazette,https://montrealgazette.com/news/local-news/montreal-police-swat-team-member-acquitted-in-manslaughter-of-bony-jean-pierre
+1511,V1-0386,Bony Jean-Pierre,2016-03-31,2017-05-24,CTV,https://www.ctvnews.ca/montreal/article/police-officer-charged-with-manslaughter-in-death-of-bony-jean-pierre/
+1512,V1-0386,Bony Jean-Pierre,2016-03-31,2021-02-04,CTV,https://www.ctvnews.ca/montreal/article/montreal-police-officer-acquitted-after-killing-a-man-in-a-2016-drug-raid/
+1513,V1-0386,Bony Jean-Pierre,2016-03-31,2017-05-24,Global News,https://globalnews.ca/news/3475690/montreal-police-officer-charged-with-manslaughter-in-2016-death/
+1514,V1-0386,Bony Jean-Pierre,2016-03-31,2017-05-24,Montreal Gazette,http://montrealgazette.com/news/local-news/montreal-police-officer-to-be-charged-with-manslaughter-in-montreal-north-shooting
+1515,V1-0386,Bony Jean-Pierre,2016-03-31,2017-05-25,CBC,https://www.cbc.ca/news/canada/montreal/bony-jean-pierre-montreal-north-police-charges-1.4130738
+1516,V1-0395,Abdirahman Abdi,2016-07-24,2024-11-18,CBC,https://www.cbc.ca/news/canada/ottawa/inquest-hears-of-abdirahman-abdi-s-earlier-life-mental-health-struggles-in-canada-1.7375338
+1517,V1-0478,Greg Ritchie,2019-01-31,2023-04-08,Soo Today,https://www.sootoday.com/ontario-news/family-of-ojibwe-man-killed-by-ottawa-police-calls-for-new-mental-health-strategy-6826584
+1518,V1-0416,Ralph Stephens,2017-01-07,2017-01-08,Global News,https://globalnews.ca/news/3168042/suspect-fatally-shot-during-arrest-rcmp-seek-3rd-suspect-in-morley-homicide/
+1519,V1-0412,Charles Qirngnirq,2016-12-19,2021-10-08,The Globe and Mail,https://www.theglobeandmail.com/canada/article-jury-to-deliberate-in-nunavut-shooting-inquest-rcmp-officer-faces/
+1520,V1-0416,Ralph Stephens,2017-01-07,2023-05-11,Lakeland Today,https://www.lakelandtoday.ca/indigenous-alberta/public-inquiry-held-in-shooting-death-of-iyarhe-nakoda-man-in-2017-6984844
+1521,V1-0416,Ralph Stephens,2017-01-07,2017-01-09,Toronto Star,https://www.thestar.com/news/canada/rcmp-say-murder-suspect-fatally-shot-during-his-arrest-on-a-first-nation-in-calgary/article_5599dd22-da3c-56fa-b3bf-8c91d8ece045.html
+1522,V1-0416,Ralph Stephens,2017-01-07,2019-06-06,CTV,https://calgary.ctvnews.ca/police-acted-reasonably-in-shooting-death-of-alberta-murder-suspect-1.4455242
+1523,V1-0416,Ralph Stephens,2017-01-07,2024-08-13,Penticton Herald,https://www.pentictonherald.ca/spare_news/article_ca2c5b93-e65c-5e97-a341-2457eb097006.html
+1524,V1-0416,Ralph Stephens,2017-01-07,2019-06-06,CBC,https://www.cbc.ca/news/canada/calgary/asirt-morley-rcmp-shootout-stephens-powderface-bearspaw-1.5165216
+1525,V1-0429,Dale Culver,2017-07-18,2023-02-01,The Times Colonist,https://www.timescolonist.com/local-news/two-bc-mounties-charged-with-manslaughter-three-others-face-obstruction-charge-6473584
+1526,V1-0429,Dale Culver,2017-07-18,2023-08-22,CBC,https://www.cbc.ca/news/canada/british-columbia/rcmp-officer-assault-charge-1.6943962
+1527,V1-0324,Christopher Arkell,2014-03-22,2022-06-22,Medicine Hat News,https://medicinehatnews.com/news/local-news/2022/06/15/arkell-fatal-standoff-led-to-armoured-car-purchase/
+1528,V1-0412,Charles Qirngnirq,2016-12-19,2021-10-07,CBC,https://www.cbc.ca/news/canada/north/rcmp-coroner-inquest-nunavut-charles-qirngnirq-1.6203013
+1529,V1-0416,Ralph Stephens,2017-01-07,2019-06-10,CBC,https://www.cbc.ca/news/canada/calgary/morley-bearspaw-stephens-powderface-murder-manslaughter-plea-1.5169947
+1530,V1-0436,Evan Caron,2017-09-23,2024-08-01,Winnipeg Free Press,https://www.winnipegfreepress.com/breakingnews/2024/08/01/judge-recommends-province-cover-cost-of-lawyers-for-families-of-deceased-at-inquests
+1531,V1-0436,Evan Caron,2017-09-23,2023-08-29,Winnipeg Free Press,https://www.winnipegfreepress.com/breakingnews/2023/08/29/everything-fell-apart
+1532,V1-0436,Evan Caron,2017-09-23,2024-08-01,CBC,https://www.cbc.ca/news/canada/manitoba/inquest-report-police-shootings-winnipeg-1.7282044
+1533,V1-0615,Jordan Charlie,2024-11-24,2024-11-25,Global News,https://globalnews.ca/news/10886569/winnipeg-police-shooting/
+1534,V1-0412,Charles Qirngnirq,2016-12-19,2021-10-08,Nunatsiaq News,https://nunatsiaq.com/stories/article/inquest-jury-rules-charles-qirngnirqs-death-a-homicide/
+1535,V1-0483,Benjamin Richard,2019-04-19,2019-11-26,CBC,https://www.cbc.ca/news/canada/manitoba/inquest-benjiman-richard-shot-police-1.5374461
+1536,V1-0426,Pierre Coriolan,2017-06-27,2018-02-07,CBC,https://www.cbc.ca/news/canada/montreal/montreal-video-police-shooting-rcmp-coriolan-1.4523348
+1537,V1-0426,Pierre Coriolan,2017-06-27,2022-02-16,CBC,https://www.cbc.ca/news/canada/montreal/pierre-coriolan-report-1.6353562
+1538,V1-0659,David Kalubi,2017-11-08,2025-08-14,CBC,https://www.cbc.ca/news/canada/montreal/police-officers-ethics-committee-1.7607632
+1539,V1-0418,Koray Celik,2017-03-06,2024-09-23,CBC,https://www.cbc.ca/news/canada/montreal/koray-kevin-celik-parents-asking-reopening-case-1.7331278
+1540,V1-0604,Hoss Lightning-Saddleback,2024-08-30,2024-09-05,Global News,https://globalnews.ca/news/10735002/wetaskiwin-rcmp-hoss-lighting-death-asirt-update/
+1541,V1-0483,Benjamin Richard,2019-04-19,2022-08-03,CBC,https://www.cbc.ca/news/canada/manitoba/benjiman-richard-manitoba-first-nations-police-inquest-1.6539799
+1542,V1-0615,Jordan Charlie,2024-11-24,2024-12-08,CBC,https://www.cbc.ca/news/canada/manitoba/tracking-race-police-use-of-force-1.7404671
+1543,V1-0615,Jordan Charlie,2024-11-24,2024-11-28,CBC,https://www.cbc.ca/news/canada/manitoba/jordan-charlie-winnipeg-police-shooting-1.7394360
+1544,V1-0615,Jordan Charlie,2024-11-24,2024-11-26,Winnipeg Free Press,https://www.winnipegfreepress.com/breakingnews/2024/11/26/man-shot-dead-by-police-out-of-jail-less-than-a-week
+1545,V1-0615,Jordan Charlie,2024-11-24,2022-03-02,CBC,https://www.cbc.ca/news/canada/north/jordan-charlie-parole-decision-1.6369315
+1546,V1-0615,Jordan Charlie,2024-11-24,2024-12-28,CBC,https://www.cbc.ca/news/canada/manitoba/jordan-charlie-community-organizations-1.7416192
+1547,V1-0615,Jordan Charlie,2024-11-24,2024-11-29,Nunatsiaq News,https://nunatsiaq.com/stories/article/man-shot-by-winnipeg-police-believed-to-be-from-nunavut/
+1548,V1-0324,Christopher Arkell,2014-03-22,2014-03-26,CBC,https://www.cbc.ca/news/canada/calgary/chester-hunchak-confirmed-as-medicine-hat-homicide-victim-1.2587765
+1549,V1-0615,Jordan Charlie,2024-11-24,2024-11-29,CBC,https://www.cbc.ca/news/canada/manitoba/resources-jordan-charlie-nunavut-man-fatal-police-shooting-winnipeg-1.7396506
+1550,V1-0455,Josephine Pelletier,2018-05-17,2018-10-10,CBC,https://www.cbc.ca/news/indigenous/mmiwg-list-cases-1.4856500
+1551,V1-0455,Josephine Pelletier,2018-05-17,2018-06-14,APTN News,https://www.aptnnews.ca/national-news/woman-killed-in-calgary-police-involved-shooting-has-ties-to-saskatchewan-fn/
+1552,V1-0619,Mark Annanack,2025-05-06,2025-07-23,CBC,https://www.cbc.ca/news/canada/north/family-reforms-nunavik-police-1.7591643
+1553,V1-0236,Evan Jones,2010-08-25,2016-12-12,Toronto Star,https://www.thestar.com/news/canada/siu-clears-brantford-officer-of-wrongdoing-after-reopening-two-cases/article_9e84aca3-4fff-5a9d-a830-8296b41afc74.html
+1554,V1-0619,Mark Annanack,2025-05-06,2025-07-18,Nunatsiaq News,https://nunatsiaq.com/stories/article/one-person-dead-in-inukjuak-after-reported-police-shooting/
+1555,V1-0619,Mark Annanack,2025-05-06,2025-07-26,Nunatsiaq News,https://nunatsiaq.com/stories/article/third-shooting-underlines-need-for-change-in-nunavik/
+1556,V1-0619,Mark Annanack,2025-05-06,2025-05-07,CTV,https://www.ctvnews.ca/montreal/article/quebec-police-watchdog-investigating-after-person-dies-in-officer-intervention-in-nunavik/
+1557,V1-0376,Gerald Rattu,2016-01-16,2016-10-09,Toronto Star,https://www.thestar.com/news/gta/mourning-girlfriend-questions-siu-account-of-killing/article_3175184a-1b5c-567f-be8f-43c5227caaf7.html
+1558,V1-0383,Alex Wettlaufer,2016-03-14,2016-03-14,CTV,https://www.ctvnews.ca/toronto/article/mother-speaks-out-after-21-year-old-fatally-shot-by-police/
+1559,V1-0383,Alex Wettlaufer,2016-03-14,2016-03-14,The Globe and Mail,https://www.theglobeandmail.com/news/toronto/siu-investigating-shooting-involving-toronto-police-officers/article29205221/
+1560,V1-0412,Charles Qirngnirq,2016-12-19,2021-10-05,Nunatsiaq News,https://nunatsiaq.com/stories/article/shooting-was-proper-response-to-stop-a-threat-rcmp-officer-tells-inquest/
+1561,V1-0383,Alex Wettlaufer,2016-03-14,2017-05-16,Toronto Star,https://www.thestar.com/news/crime/toronto-police-cleared-in-shooting-death/article_27c1dbb9-43a6-55c2-b27f-0b3df5c4fe9c.html
+1562,V1-0424,Illutak Anautak,2017-06-10,2017-06-12,The Globe and Mail,https://www.theglobeandmail.com/news/national/northern-quebec-community-struggles-to-explain-stabbings-that-killed-three-injured-two/article35281659/
+1563,V1-0424,Illutak Anautak,2017-06-10,2017-07-04,Nunatsiaq News,https://nunatsiaq.com/stories/article/65674akulivik_stabbing_survivors_recover_in_montreal/
+1564,V1-0424,Illutak Anautak,2017-06-10,2017-06-10,Nunatsiaq News,https://nunatsiaq.com/stories/article/65674four_dead_in_akulivik_nunavik_quebec_investigation_office/
+1565,V1-0424,Illutak Anautak,2017-06-10,2018-11-15,APTN News,https://www.aptnnews.ca/national-news/kativik-regional-police-corrections-system-under-fire-at-quebec-inquiry/
+1566,V1-0424,Illutak Anautak,2017-06-10,2017-06-17,CBC,https://www.cbc.ca/news/canada/montreal/akulivik-quebec-slayings-inuit-crisis-1.4164557
+1567,V1-0424,Illutak Anautak,2017-06-10,2017-06-15,CBC,https://www.cbc.ca/news/canada/montreal/akulivik-community-support-1.4161463
+1568,V1-0424,Illutak Anautak,2017-06-10,2017-06-13,Nunatsiaq News,https://nunatsiaq.com/stories/article/65674nunavik_community_shocked_heartbroken_over_weekend_stabbings/
+1569,V1-0408,Daniel Rintoul,2016-11-10,2022-11-02,CBC,https://www.cbc.ca/news/canada/british-columbia/daniel-peter-rintoul-coroners-inquest-canadian-tire-2016-shooting-day-3-1.6638657
+1570,V1-0404,Danny Lafrance-Godmer,2016-10-06,2016-10-06,CBC,https://www.cbc.ca/news/canada/ottawa/montebello-police-man-shot-1.3795033
+1571,V1-0445,David Sappa,2017-12-28,2018-01-04,APTN News,https://www.aptnnews.ca/national-news/quebec-coroner-releases-name-man-shot-police-umiujaq/
+1572,V1-0408,Daniel Rintoul,2016-11-10,2022-10-31,Global News,https://globalnews.ca/news/9240027/daniel-rintoul-coroner-inquest-begins/
+1573,V1-0408,Daniel Rintoul,2016-11-10,2022-11-07,CBC,https://www.cbc.ca/news/canada/british-columbia/daniel-peter-rintoul-coroners-inquest-canadian-tire-2016-shooting-day-6-1.6643686
+1574,V1-0408,Daniel Rintoul,2016-11-10,2022-11-03,Global News,https://globalnews.ca/news/9250500/disturbing-note-daniel-rintoul-inquest-canadian-tire-shooting/
+1575,V1-0445,David Sappa,2017-12-28,2018-01-04,Nunatsiaq News,https://nunatsiaq.com/stories/article/65674probe_continues_into_shooting_death_of_nunavik_man/
+1576,V1-0408,Daniel Rintoul,2016-11-10,2022-11-09,The Vancouver Sun,https://vancouversun.com/news/crime/b-c-jury-makes-recommendations-after-man-who-stabbed-officer-shot-9-times-by-police
+1577,V1-0445,David Sappa,2017-12-28,2018-01-04,CBC,https://www.cbc.ca/news/canada/north/umiujaq-shooting-david-sappa-1.4473650
+1578,V1-0445,David Sappa,2017-12-28,2020-09-21,Nunatsiaq News,https://nunatsiaq.com/stories/article/better-communication-may-have-prevented-2017-nunavik-shooting-death-coroners-report/
+1579,V1-0445,David Sappa,2017-12-28,2019-09-25,Nunatsiaq News,https://nunatsiaq.com/stories/article/paulossie-crow-responds-to-sons-death-at-the-hands-of-police/
+1580,V1-0408,Daniel Rintoul,2016-11-10,2022-11-02,Kimberley Bulletin,https://www.kimberleybulletin.com/news/inquest-suspect-in-vancouver-canadian-tire-attack-was-shot-and-tasered-multiple-times-5224110
+1581,V1-0490,Kyaw Din,2019-08-11,2022-01-25,Surrey Now-Leader,https://www.surreynowleader.com/news/coroner-announces-inquest-into-maple-ridge-police-shooting/
+1582,V1-0490,Kyaw Din,2019-08-11,2020-08-28,CBC,https://www.cbc.ca/news/canada/british-columbia/more-than-a-year-after-his-death-family-of-b-c-man-shot-dead-by-rcmp-waits-for-answers-1.5704638
+1583,V1-0490,Kyaw Din,2019-08-11,2022-03-01,CTV,https://www.ctvnews.ca/vancouver/article/inquest-begins-into-fatal-rcmp-shooting-of-maple-ridge-bc-man-with-schizophrenia/
+1584,V1-0490,Kyaw Din,2019-08-11,2022-03-09,CTV,https://www.ctvnews.ca/vancouver/article/kyaw-din-inquest-recommends-significant-funding-for-responding-to-mental-health-calls/
+1585,V1-0490,Kyaw Din,2019-08-11,2019-10-05,Global News,https://globalnews.ca/news/5995995/maple-ridge-police-shooting-rally/
+1586,V1-0490,Kyaw Din,2019-08-11,2020-02-20,The Vancouver Sun,https://vancouversun.com/news/local-news/family-of-shooting-victim-presents-petition-to-iio
+1587,V1-0490,Kyaw Din,2019-08-11,2022-03-09,Aldergrove Star,https://www.aldergrovestar.com/news/sister-of-lower-mainland-police-shooting-victim-disappointed-recommendations-not-more-specific-2254204
+1588,V1-0490,Kyaw Din,2019-08-11,2022-03-01,The Agassiz-Harrison Observer,https://www.agassizharrisonobserver.com/news/coroners-inquest-begins-for-maple-ridge-man-fatally-shot-by-police-2002619
+1589,V1-0490,Kyaw Din,2019-08-11,2019-10-06,The Abbotsford News,https://www.abbynews.com/news/rally-for-man-killed-by-rcmp-in-maple-ridge-1794101
+1590,V1-0490,Kyaw Din,2019-08-11,2020-09-30,Maple Ridge-Pitt Meadows News,https://www.mapleridgenews.com/news/family-of-maple-ridge-police-shooting-victim-still-pushing-for-inquest-2648987
+1591,V1-0490,Kyaw Din,2019-08-11,2019-11-06,CBC,https://www.cbc.ca/news/canada/british-columbia/officer-involved-shooting-maple-ridge-coroners-inquest-1.5349462
+1592,V1-0490,Kyaw Din,2019-08-11,2022-03-01,CTV,https://www.ctvnews.ca/vancouver/article/officer-testifies-at-inquest-into-fatal-rcmp-shooting-of-maple-ridge-bc-man-with-schizophrenia/
+1593,V1-0490,Kyaw Din,2019-08-11,2020-09-24,CBC,https://www.cbc.ca/news/canada/british-columbia/iio-bc-report-kyaw-naing-din-1.5737398
+1594,V1-0490,Kyaw Din,2019-08-11,2020-08-28,Global News,https://globalnews.ca/news/7304311/kyaw-din-family-plea-iio/
+1595,V1-0490,Kyaw Din,2019-08-11,2020-08-29,CTV,https://bc.ctvnews.ca/we-feel-like-we-are-in-nightmare-family-wants-iio-decision-in-death-of-brother-at-hands-of-rcmp-1.5084114
+1596,V1-0490,Kyaw Din,2019-08-11,2020-09-25,CTV,https://bc.ctvnews.ca/we-are-very-traumatized-investigation-finds-use-of-force-justified-in-fatal-shooting-of-mentally-ill-man-1.5119519
+1597,V1-0404,Danny Lafrance-Godmer,2016-10-06,2018-08-23,CBC,https://www.cbc.ca/news/canada/ottawa/police-officers-cleared-death-man-montebello-quebec-1.4796814
+1598,V1-0412,Charles Qirngnirq,2016-12-19,2021-10-05,CBC,https://www.cbc.ca/news/canada/north/charles-qirngnirq-inquest-day-one-1.6200031
+1599,V1-0412,Charles Qirngnirq,2016-12-19,2021-10-04,Nunatsiaq News,https://nunatsiaq.com/stories/article/inquest-into-death-of-gjoa-haven-man-begins/
+1600,V1-0445,David Sappa,2017-12-28,2017-12-29,APTN News,https://www.aptnnews.ca/national-news/police-shooting-umiujaq-nunavik-leaves-man-dead/
