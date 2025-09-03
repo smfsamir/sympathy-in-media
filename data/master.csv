@@ -1699,3 +1699,409 @@ ID,Victim ID,Person Name,Incident Date,Publication Date,Publisher,URL
 1698,V1-0365,Myles Gray,2015-08-13,2024-12-11,CBC,https://www.cbc.ca/news/canada/british-columbia/public-hearing-myles-gray-vancouver-police-1.7407752
 1699,V1-0279,Phonesay Chanthachak,2012-02-13,2012-02-13,Stoney Creek News,https://www.thespec.com/news/hamilton-region/siu-names-man-shot-dead-by-hamilton-police/article_a0540545-c19e-5474-8253-e910c564cc12.html
 1700,V1-0129,Duane Christian,2006-06-20,2010-02-25,CBC,https://www.cbc.ca/news/canada/toronto/coroner-s-jury-suggests-changes-after-teen-s-death-1.896247
+1701,V1-0323,William David McCaffrey,2025-02-05,2017-07-27,CBC,https://www.cbc.ca/news/canada/new-brunswick/rothesay-shooting-commissioner-1.4223274
+1702,V1-0365,Myles Gray,2015-08-13,2024-12-12,The Globe and Mail,https://www.theglobeandmail.com/canada/article-seven-police-officers-present-when-a-vancouver-man-died-after-a-severe/
+1703,V1-0278,Michael Eligon,2012-02-03,2013-08-12,CBC,https://www.cbc.ca/news/canada/toronto/family-wants-toronto-police-shooting-ruling-overturned-1.1343850
+1704,V1-0129,Duane Christian,2006-06-20,2011-02-23,Toronto Star,https://www.thestar.com/news/crime/siu-death-investigation-enraged-victims-family/article_d7853936-d6ec-5e26-89fe-d85cc7b6586d.html
+1705,V1-0396,Aaron Driver,2016-08-10,2016-08-11,Global News,https://globalnews.ca/news/2876837/aaron-driver-what-we-know-about-the-canadian-terror-suspect-killed-in-ontario/
+1706,V1-0365,Myles Gray,2015-08-13,2023-04-27,paNOW,https://panow.com/2023/04/27/forcible-restraint-by-police-among-factors-in-myles-gray-death-pathologist-says/
+1707,V1-0396,Aaron Driver,2016-08-10,2016-11-15,Toronto Star,https://www.thestar.com/news/world/how-terrorism-suspect-aaron-driver-hid-behind-digital-encryption/article_c3f8c54c-524a-5af6-825c-08a13ab19848.html
+1708,V1-0337,Rhett Mutch,2014-11-01,2025-07-31,North Shore News,https://www.nsnews.com/bc-news/mom-pushes-ahead-with-lawsuit-against-vicpd-officers-involved-in-sons-death-11011958
+1709,V1-0281,Frank Berry,2012-02-20,2012-02-22,CBC,https://www.cbc.ca/news/canada/toronto/siu-identifies-man-killed-in-west-end-shooting-1.1268517
+1710,V1-0323,William David McCaffrey,2025-02-05,2014-03-03,Global News,https://globalnews.ca/news/1184542/rcmp-continue-to-investigate-fatal-police-shooting/
+1711,V1-0337,Rhett Mutch,2014-11-01,2017-04-19,Victoria News,https://www.vicnews.com/news/public-inquest-launched-into-death-of-victoria-man-shot-by-police-22840
+1712,V1-0365,Myles Gray,2015-08-13,2023-05-02,The Vancouver Sun,https://vancouversun.com/news/local-news/myles-grays-mother-says-conclusion-of-b-c-coroners-inquest-marks-end-of-chapter
+1713,V1-0129,Duane Christian,2006-06-20,2010-02-11,Toronto Star,https://www.thestar.com/news/crime/witness-casts-doubt-on-officers-story/article_31fcdcb0-7499-5d27-a461-cc577a7fe652.html
+1714,V1-0365,Myles Gray,2015-08-13,2024-10-10,CBC,https://www.cbc.ca/news/canada/british-columbia/probe-clears-7-vpd-officers-in-deadly-2015-beating-of-myles-gray-1.7349666
+1715,V1-0337,Rhett Mutch,2014-11-01,2017-05-20,Goldstream News Gazette,https://www.goldstreamgazette.com/news/24-hour-mental-health-crisis-team-called-for-in-wake-of-mutch-police-shooting-565391
+1716,V1-0365,Myles Gray,2015-08-13,2023-04-17,Terrace Standard,https://www.terracestandard.com/news/myles-gray-was-likely-suffering-manic-episode-when-police-beat-him-sister-tells-b-c-inquest-6074548
+1717,V1-0337,Rhett Mutch,2014-11-01,2017-05-23,Victoria News,https://www.vicnews.com/news/i-feel-like-my-son-was-killed-a-second-time-27706
+1718,V1-0239,Eric Osawe,2010-09-29,2010-09-29,CBC,https://www.cbc.ca/news/canada/toronto/family-of-man-killed-in-police-raid-hopeless-1.930566
+1719,V1-0129,Duane Christian,2006-06-20,2010-02-11,Toronto Star,https://www.thestar.com/news/gta/no-racism-in-teens-death-officer-says/article_42aaf1c6-3954-5c5d-b943-e3fb5d84dd86.html
+1720,V1-0129,Duane Christian,2006-06-20,2011-10-13,Global News,https://globalnews.ca/news/165505/supreme-court-wont-hear-familys-case-in-toronto-police-shooting-death/
+1721,V1-0337,Rhett Mutch,2014-11-01,2014-11-05,CBC,https://www.cbc.ca/news/canada/british-columbia/rhett-mutch-identifed-as-man-shot-and-killed-by-victoria-police-1.2825324
+1722,V1-0396,Aaron Driver,2016-08-10,2016-08-12,The Globe and Mail,https://www.theglobeandmail.com/news/national/aaron-drivers-father-says-he-was-a-troubled-child/article31393898/
+1723,V1-0335,Michael Zehaf-Bibeau,2014-10-22,2015-03-06,CBC,https://www.cbc.ca/news/politics/6-things-we-learned-about-michael-zehaf-bibeau-and-parliament-hill-shooting-1.2984759
+1724,V1-0337,Rhett Mutch,2014-11-01,2017-05-20,CHEK News,https://cheknews.ca/rhett-mutchs-police-involved-death-deemed-suicide-inquest-rules-319279/
+1725,V1-0337,Rhett Mutch,2014-11-01,2016-11-05,The Vancouver Sun,https://vancouversun.com/news/local-news/two-years-after-son-fatally-shot-by-police-victoria-mother-sues-for-wrongful-death
+1726,V1-0335,Michael Zehaf-Bibeau,2014-10-22,2014-10-22,Global News,https://globalnews.ca/news/1630054/honour-guard-killed-in-ottawa-remembered-as-proud-soldier/
+1727,V1-0607,Steven Iggy Dedam,2024-09-08,2025-04-03,CBC,https://www.cbc.ca/news/canada/new-brunswick/sirt-investigation-elsipogtog-police-shooting-1.7501308
+1728,V1-0640,Abdurahman Ibrahim Hassan,2015-06-11,2016-07-15,Peterborough Examiner,https://www.thepeterboroughexaminer.com/news/peterborough-region/coroners-inquest-called-into-immigration-detainee-abdurahman-hassans-death-at-peterborough-regional-health-centre/article_78c11ec1-e34c-5089-a93f-6fb5e743c209.html
+1729,V1-0335,Michael Zehaf-Bibeau,2014-10-22,2014-10-23,The Globe and Mail,https://www.theglobeandmail.com/news/national/suspected-killer-in-ottawa-shootings-had-a-disturbing-side/article21252419/
+1730,V1-0337,Rhett Mutch,2014-11-01,2017-05-18,CHEK News,https://cheknews.ca/surprise-witness-takes-stand-mutch-inquest-contradicting-police-testimony-318623/
+1731,V1-0437,Aaron Lee Prince,2017-10-12,2023-11-13,Nanaimo News Bulletin,https://www.nanaimobulletin.com/local-news/recommendations-made-after-police-fatally-shot-man-in-qualicum-beach-in-2017-7104465
+1732,V1-0396,Aaron Driver,2016-08-10,2016-08-17,The Globe and Mail,https://www.theglobeandmail.com/news/national/family-tied-to-aaron-driver-forced-to-clarify-their-relationship/article31440400/
+1733,V1-0239,Eric Osawe,2010-09-29,2012-02-23,Toronto Star,https://www.thestar.com/news/crime/2012/02/23/toronto_police_officer_charged_with_murder_in_2010_shooting.html
+1734,V1-0545,Sheena Jackson,2021-08-05,2022-08-23,BayToday,https://www.baytoday.ca/city-police-beat/cops-cleared-in-fatal-shooting-of-burks-falls-woman-5731630
+1735,V1-0308,Abraham Isidore Havis,2013-07-31,2013-08-19,CBC,https://www.cbc.ca/news/canada/montreal/côte-saint-luc-standoff-suspect-dies-in-hospital-1.1314232
+1736,V1-0308,Abraham Isidore Havis,2013-07-31,2013-07-31,The Globe and Mail,https://www.theglobeandmail.com/news/national/20-hour-standoff-at-montreal-area-home-ends-in-arrest/article13523537/
+1737,V1-0607,Steven Iggy Dedam,2024-09-08,2024-09-12,APTN News,https://www.aptnnews.ca/national-news/indigenous-deaths-rcmp-windsor-winnipeg-shooting/
+1738,V1-0607,Steven Iggy Dedam,2024-09-08,,Prince George Citizen,https://www.princegeorgecitizen.com/national-news/nb-liberal-leader-says-death-of-indigenous-man-during-wellness-check-inexplicable-9502228
+1739,V1-0607,Steven Iggy Dedam,2024-09-08,2024-09-13,Global News,https://globalnews.ca/news/10754170/nb-rcmp-dispute-death-was-wellness-check-gone-wrong/
+1740,V1-0239,Eric Osawe,2010-09-29,2016-09-21,Toronto Star,https://www.thestar.com/news/gta/death-of-eric-osawe-was-accidental-coroners-inquest/article_c892d6d8-f198-5559-888a-31ef73237bb3.html
+1741,V1-0545,Sheena Jackson,2021-08-05,2021-08-09,North Bay Nipissing News,https://www.northbaynipissing.com/news/they-shot-to-kill-brother-of-burk-s-falls-shooting-victim-expresses-pain-anger/article_87fb9441-96cb-5694-90e1-24bf07205b76.html
+1742,V1-0313,Gerald Lord,2013-09-11,2018-04-07,CBC,https://www.cbc.ca/news/canada/saskatoon/experts-call-for-better-police-oversight-in-saskatchewan-1.4596778
+1743,V1-0337,Rhett Mutch,2014-11-01,2017-05-17,CBC,https://www.cbc.ca/news/canada/british-columbia/coroners-inquest-victoria-mans-death-1.4116673
+1744,V1-0335,Michael Zehaf-Bibeau,2014-10-22,2014-10-22,Global News,https://globalnews.ca/news/1629846/there-is-a-shooter-on-the-loose-first-hand-account-of-ottawa-shooting-aftermath/
+1745,V1-0335,Michael Zehaf-Bibeau,2014-10-22,2014-10-22,The Globe and Mail,https://www.theglobeandmail.com/news/national/parliament-shooting/article21217602/
+1746,V1-0484,Geoff Morris,2019-05-04,2021-08-11,CBC,https://www.cbc.ca/news/canada/saskatchewan/jury-begins-deliberations-geoffrey-morris-inquest-1.6138143
+1747,V1-0545,Sheena Jackson,2021-08-05,2022-08-23,North Bay Nipissing News,https://www.northbaynipissing.com/news/opp-officers-not-criminally-liable-in-2021-shooting-death-of-woman-in-burks-falls-siu/article_fe194d26-45b9-596a-884a-4aa68dd0d951.html
+1748,V1-0021,Andreas Unkerskov-Chinnery,2011-02-02,2012-10-29,CBC,https://www.cbc.ca/news/canada/hamilton/headlines/inquest-called-into-shooting-death-of-hamilton-teen-1.1194011
+1749,V1-0239,Eric Osawe,2010-09-29,2016-09-14,Toronto Star,https://www.thestar.com/news/gta/cop-whose-gun-killed-eric-osawe-tells-inquest-he-wishes-he-d-been-shot-himself/article_9932e1dc-1dd5-5a99-a6aa-472ee5998b21.html
+1750,V1-0335,Michael Zehaf-Bibeau,2014-10-22,2014-10-22,CBC,https://www.cbc.ca/news/canada/british-columbia/ottawa-shooting-b-c-mlas-were-warned-of-possible-security-threat-1.2808990
+1751,V1-0239,Eric Osawe,2010-09-29,2015-11-17,CBC,https://www.cbc.ca/news/canada/toronto/inquest-called-into-2010-police-shooting-of-eric-osawe-1.3323136
+1752,V1-0277,Kyle Newman,2012-01-12,2012-07-06,The Globe and Mail,https://www.theglobeandmail.com/news/toronto/oakville-ont-man-shot-dead-by-officers-had-killed-estranged-wife-hours-earlier-police/article4394542/
+1753,V1-0337,Rhett Mutch,2014-11-01,2025-03-27,CHEK News,https://cheknews.ca/civil-suit-may-proceed-years-after-man-fatally-shot-by-vicpd-officer-judge-rules-1246325/
+1754,V1-0494,Clayton Donnelly,2019-10-28,2023-04-25,Global News,https://globalnews.ca/news/9651012/okanagan-family-sues-son-police-involved-death/
+1755,V1-0617,Chase de Balinhard,2025-02-09,2025-06-17,North Delta Reporter,https://www.northdeltareporter.com/community/gofunme-set-up-for-family-of-surrey-teen-killed-in-police-incident-8075674
+1756,V1-0484,Geoff Morris,2019-05-04,2021-08-11,Global News,https://globalnews.ca/news/8104039/jury-issues-recommendations-as-geoff-morris-death-inquest-concludes/
+1757,V1-0239,Eric Osawe,2010-09-29,2013-09-12,CBC,https://www.cbc.ca/news/canada/toronto/toronto-police-officer-cleared-in-fatal-2010-shooting-1.1700618
+1758,V1-0484,Geoff Morris,2019-05-04,2021-07-30,Global News,https://globalnews.ca/news/8074004/inquest-geoff-morris-death-police-hostage-situation/
+1759,V1-0568,Chris Amyotte,2022-08-22,2022-08-24,Global News,https://globalnews.ca/news/9083167/dtes-police-involved-death-identified-chris-amyotte/
+1760,V1-0239,Eric Osawe,2010-09-29,2014-04-02,National Post,https://nationalpost.com/opinion/christie-blatchford-the-crowns-determined-but-futile-effort-to-make-an-example-of-const-david-cavanagh
+1761,V1-0335,Michael Zehaf-Bibeau,2014-10-22,2015-06-01,CBC,https://www.cbc.ca/news/politics/ottawa-gunman-michael-zehaf-bibeau-was-shot-31-times-police-report-to-reveal-1.3096073
+1762,V1-0406,Robert Crowle,2016-10-11,2016-10-11,CBC,https://www.cbc.ca/news/canada/calgary/calgary-shooting-sundance-1.3800154
+1763,V1-0349,Marc Ekamba-Boekwa,2015-03-20,2017-01-27,Toronto Star,https://www.thestar.com/news/crime/mississauga-woman-convicted-in-confrontation-where-police-killed-her-son/article_4cb767b4-b841-592b-b8b1-4d29b58fb63a.html
+1764,V1-0640,Abdurahman Ibrahim Hassan,2015-06-11,2021-10-29,CBC,https://www.cbc.ca/news/canada/toronto/abdurahman-hassan-inquest-immigration-detainee-1.6230883
+1765,V1-0313,Gerald Lord,2013-09-11,2016-03-09,Global News,https://globalnews.ca/news/2567468/day-three-of-public-inquest-into-police-shooting-death-of-gerald-lord-hears-autopsy-testimony/
+1766,V1-0349,Marc Ekamba-Boekwa,2015-03-20,2015-11-26,Toronto Star,https://www.thestar.com/news/crime/no-charges-for-peel-cops-after-shooting-of-man-and-innocent-bystander/article_71f18d4f-77bb-50f3-97dc-b195f002fb03.html
+1767,V1-0612,Joshua Papigatuk,2024-10-30,2024-11-05,APTN News,https://www.aptnnews.ca/national-news/death-of-joshua-papigatuk-highlights-police-violence-in-nunavik/
+1768,V1-0335,Michael Zehaf-Bibeau,2014-10-22,2015-03-05,Global News,https://globalnews.ca/news/1866596/gen-lawson-knew-zehaf-bibeau-was-mentally-ill-on-day-of-ottawa-shooting-documents/
+1769,V1-0640,Abdurahman Ibrahim Hassan,2015-06-11,2023-02-10,Toronto Star,https://www.thestar.com/news/canada/inquest-jury-into-refugee-s-death-calls-for-end-to-holding-immigration-detainees-in-jails/article_f5935a71-610d-5c7e-9f44-4942697d9417.html
+1770,V1-0321,Alain Magloire,2014-02-03,2015-01-12,Global News,https://globalnews.ca/news/1768916/why-should-we-care-about-alain-magloire/
+1771,V1-0484,Geoff Morris,2019-05-04,2021-08-12,SaskToday,https://www.sasktoday.ca/southeast/local-news/jury-provides-regina-police-with-recommendations-after-geoffrey-morris-inquest-4214951
+1772,V1-0622,Eric Nothing,2025-07-22,2022-05-05,The Sault Star,https://www.saultstar.com/news/local-news/man-with-ample-record-wants-to-learn-indigenous-heritage
+1773,V1-0239,Eric Osawe,2010-09-29,2013-03-01,The Toronto Sun,https://torontosun.com/2013/03/01/toronto-police-officer-cleared-of-murder-charge
+1774,V1-0335,Michael Zehaf-Bibeau,2014-10-22,2014-10-24,The Globe and Mail,https://www.theglobeandmail.com/news/national/drugs-and-religion-key-themes-in-ottawa-shooters-troubled-life/article21282240/
+1775,V1-0337,Rhett Mutch,2014-11-01,2016-06-08,The Georgia Straight,https://www.straight.com/news/713201/investigators-clear-bc-police-another-fatal-shooting-ask-why-officers-allowed-situation
+1776,V1-0497,Fred Troy Penner,2019-12-31,2020-01-02,CBC,https://www.cbc.ca/news/canada/hamilton/st-catharines-siu-fred-penner-1.5412651
+1777,V1-0349,Marc Ekamba-Boekwa,2015-03-20,2017-01-27,Mississauga News,https://www.mississauga.com/news/crime/mississauga-woman-convicted-in-confrontation-where-peel-police-killed-her-son/article_6b92f531-ebae-56d5-818c-9f5f977f4430.html
+1778,V1-0349,Marc Ekamba-Boekwa,2015-03-20,2015-03-25,Toronto.com,https://www.toronto.com/news/dead-mans-mother-charged-with-conspiring-to-kill-cop-neighbour-in-police-shooting-on-queen/article_70972b9f-8239-57a8-9e59-b35cd78acdad.html?
+1779,V1-0239,Eric Osawe,2010-09-29,2010-09-29,The Globe and Mail,https://www.theglobeandmail.com/news/toronto/police-shoot-man-who-had-tried-to-leave-the-ghetto-life/article1380396/
+1780,V1-0600,Tristan Mariash,2024-06-04,2024-06-06,Winnipeg Free Press,https://www.winnipegfreepress.com/breakingnews/2024/06/06/r
+1781,V1-0484,Geoff Morris,2019-05-04,2021-08-10,CBC,https://www.cbc.ca/news/canada/saskatchewan/regina-cop-handcuffed-indigenous-man-after-shot-in-head-by-police-1.6136982
+1782,V1-0321,Alain Magloire,2014-02-03,2015-01-15,CBC,https://www.cbc.ca/news/canada/montreal/alain-magloire-was-in-attack-position-says-officer-who-shot-him-1.2902110
+1783,V1-0600,Tristan Mariash,2024-06-04,2024-06-07,Winnipeg Free Press,https://www.winnipegfreepress.com/local/2024/06/07/there-are-ways-to-reduce-recidivism-more-time-behind-bars-isnt-among-them
+1784,V1-0600,Tristan Mariash,2024-06-04,2025-07-24,CBC,https://www.cbc.ca/news/canada/manitoba/david-burling-sentencing-1.7593256
+1785,V1-0345,Kevin Mukuyama,2015-02-11,2015-02-13,CBC,https://www.cbc.ca/news/canada/british-columbia/kevin-seiji-mukuyama-id-d-as-chilliwack-dog-stabbing-suspect-who-died-in-police-custody-1.2957312
+1786,V1-0313,Gerald Lord,2013-09-11,2016-02-29,CBC,https://www.cbc.ca/news/canada/saskatchewan/inquest-gerald-lord-march-regina-holdfast-1.3469291
+1787,V1-0640,Abdurahman Ibrahim Hassan,2015-06-11,2023-01-15,Toronto Star,https://www.thestar.com/news/canada/why-was-he-in-a-maximum-security-prison-advocates-want-answers-on-immigration-detainee-s/article_b71afea2-c8c3-5a51-91d8-4e821b808b22.html
+1788,V1-0600,Tristan Mariash,2024-06-04,2025-07-24,Winnipeg Free Press,https://www.winnipegfreepress.com/breakingnews/2025/07/24/bizarre-crime-spree-leads-to-4-1-2-years-in-jail
+1789,V1-0484,Geoff Morris,2019-05-04,2021-07-30,CBC,https://www.cbc.ca/news/canada/saskatchewan/regina-inquest-geoffrey-morris-1.6123949
+1790,V1-0484,Geoff Morris,2019-05-04,2021-07-30,The Toronto Sun,https://torontosun.com/news/local-news/death-inquest-for-man-shot-by-regina-police-set-for-aug-9
+1791,V1-0612,Joshua Papigatuk,2024-10-30,2024-11-07,APTN News,https://www.aptnnews.ca/national-news/inuk-man-shot-dead-by-police-a-victim-of-systemic-racism-crown-indigenous-minister/
+1792,V1-0345,Kevin Mukuyama,2015-02-11,2016-09-09,The Chilliwack Progress,https://www.theprogress.com/news/inquest-called-into-2015-death-of-chilliwack-man-1858232
+1793,V1-0612,Joshua Papigatuk,2024-10-30,,Nunatsiaq News,https://nunatsiaq.com/stories/article/kuujjuaq-protest-demands-justice-after-police-shooting-in-salluit/
+1794,V1-0612,Joshua Papigatuk,2024-10-30,,Nunatsiaq News,https://nunatsiaq.com/stories/article/nunavik-police-service-aims-to-reinvent-itself-with-funding-increase/
+1795,V1-0612,Joshua Papigatuk,2024-10-30,,Nunatsiaq News,https://nunatsiaq.com/stories/article/new-head-of-quebec-police-watchdog-hopes-for-better-communication-with-nunavik/
+1796,V1-0568,Chris Amyotte,2022-08-22,2022-09-01,The Chilliwack Progress,https://www.theprogress.com/news/family-of-indigenous-man-killed-after-police-shooting-in-vancouver-demand-public-inquest/
+1797,V1-0640,Abdurahman Ibrahim Hassan,2015-06-11,2015-06-19,The Globe and Mail,https://www.theglobeandmail.com/news/national/authorities-remain-mum-on-death-of-detained-somali-refugee/article25045098/
+1798,V1-0321,Alain Magloire,2014-02-03,2014-10-16,CBC,https://www.cbc.ca/news/canada/montreal/alain-magloire-s-last-minutes-before-being-shot-dead-by-montreal-police-1.2801073
+1799,V1-0345,Kevin Mukuyama,2015-02-11,2015-02-12,The Chilliwack Progress,https://www.theprogress.com/news/update-one-man-dead-following-police-incident-in-chilliwack-1840908
+1800,V1-0345,Kevin Mukuyama,2015-02-11,2015-02-12,Global News,https://globalnews.ca/news/1826143/man-suspected-of-stabbing-dog-dies-in-police-custody-iio/
+1801,V1-0313,Gerald Lord,2013-09-11,2015-09-10,Global News,https://globalnews.ca/news/2211285/who-polices-the-police-no-independent-oversight-of-investigations-involving-sask-officers/
+1802,V1-0321,Alain Magloire,2014-02-03,2015-01-13,CBC,https://www.cbc.ca/news/canada/montreal/alain-magloire-told-police-go-ahead-and-shoot-me-inquest-hears-1.2899121
+1803,V1-0612,Joshua Papigatuk,2024-10-30,2024-12-02,APTN News,https://www.aptnnews.ca/national-news/people-take-to-the-streets-in-montreal-to-protest-shooting-of-papigatuk-twins/
+1804,V1-0321,Alain Magloire,2014-02-03,2014-02-04,Global News,https://globalnews.ca/news/1128332/shooting-victim-alain-magloire-described-as-a-caring-person/
+1805,V1-0586,Boden Umpherville,2023-04-01,2023-04-21,APTN News,https://www.aptnnews.ca/national-news/like-a-pack-of-wolves-prince-albert-man-clinging-to-life-following-violent-arrest/
+1806,V1-0612,Joshua Papigatuk,2024-10-30,,Nunatsiaq News,https://nunatsiaq.com/stories/article/residents-protest-police-watchdog-investigates-salluit-shooting-death-involving-police/
+1807,V1-0586,Boden Umpherville,2023-04-01,2023-04-21,CBC,https://www.cbc.ca/news/canada/saskatchewan/prince-albert-police-sirt-saskatchewan-umpherville-1.6819054
+1808,V1-0568,Chris Amyotte,2022-08-22,2022-09-01,CBC,https://www.cbc.ca/news/canada/british-columbia/chris-amyotte-family-seeks-inquest-1.6570375
+1809,V1-0191,Gregory Moynagh,2008-12-21,2008-12-22,CBC,https://www.cbc.ca/news/canada/toronto/man-shot-dies-in-confrontation-with-peel-police-1.774202
+1810,V1-0568,Chris Amyotte,2022-08-22,2022-09-01,Global News,https://globalnews.ca/news/9101674/chris-amyotte-beanbag-gun-family/
+1811,V1-0640,Abdurahman Ibrahim Hassan,2015-06-11,2023-01-26,The St. Catharines Standard,https://www.stcatharinesstandard.ca/ts/news/canada/2023/01/26/jail-where-immigration-detainee-was-held-had-one-psychiatrist-for-20-hoursweek-for-1200-inmates-inquest-hears.html
+1812,V1-0191,Gregory Moynagh,2008-12-21,2009-05-08,Mississauga News,https://www.mississauga.com/news/officer-cleared-in-fatal-shooting/article_82a2a5f9-e820-502b-a71e-9aa3b50694b8.html
+1813,V1-0634,Sandy Alaku,2019-07-05,,Nunatsiaq News,https://nunatsiaq.com/stories/article/quebecs-police-watchdog-completes-report-on-nunavik-mans-death/
+1814,V1-0493,Evan Freeman,2019-09-12,2020-06-01,The Kingston Whig-Standard,https://www.thewhig.com/news/local-news/kingston-police-officer-cleared-by-siu-after-responding-to-stabbing
+1815,V1-0485,Robin Fiddler,2019-06-26,2019-06-29,Global News,https://globalnews.ca/news/5446438/woman-killed-calgary-police-family/
+1816,V1-0568,Chris Amyotte,2022-08-22,2022-08-25,The St. Catharines Standard,https://www.stcatharinesstandard.ca/ts/news/canada/2022/08/25/vancouver-police-say-man-who-died-after-beanbag-shooting-had-been-asking-for-help.html
+1817,V1-0612,Joshua Papigatuk,2024-10-30,2024-11-07,CBC,https://www.cbc.ca/news/canada/north/investigators-arrive-salluit-fatal-police-shooting-1.7377237
+1818,V1-0612,Joshua Papigatuk,2024-10-30,2024-11-05,CBC,https://www.cbc.ca/news/canada/north/tasers-police-shooting-nunavik-1.7374297
+1819,V1-0586,Boden Umpherville,2023-04-01,,Prince George Citizen,https://www.princegeorgecitizen.com/national-news/family-says-first-nations-man-brain-dead-after-altercation-with-saskatchewan-police-6890663
+1820,V1-0344,Waylon Jesse Edey,2015-01-29,2023-07-07,Arrow Lakes News,https://www.arrowlakesnews.com/news/coroners-inquest-called-in-fatal-castlegar-police-shooting/
+1821,V1-0474,Stacey Perry,2018-12-25,2018-12-28,CBC,https://www.cbc.ca/news/canada/calgary/calgary-shooting-police-woman-stacey-perry-1.4961312
+1822,V1-0568,Chris Amyotte,2022-08-22,2024-08-09,The Vancouver Sun,https://vancouversun.com/news/family-of-winnipeg-man-shot-by-vancouver-police-bean-bags-sues-for-his-death
+1823,V1-0640,Abdurahman Ibrahim Hassan,2015-06-11,2023-02-01,Waterloo Region Record,https://www.therecord.com/ts/news/canada/2023/02/01/why-immigration-detainee-who-died-in-custody-had-no-end-date-on-stay-in-jail.html
+1824,V1-0474,Stacey Perry,2018-12-25,2018-12-28,Global News,https://globalnews.ca/news/4799318/manitoba-friends-family-identify-woman-shot-dead-by-calgary-police-christmas-morning/
+1825,V1-0609,Vanessa Renteria Valencia,2024-09-19,2025-02-18,Global News,https://globalnews.ca/news/11023728/surrey-mother-killed-police-quesions/
+1826,V1-0612,Joshua Papigatuk,2024-10-30,,Richmond News,https://www.richmond-news.com/national-news/should-never-have-ended-like-that-inuk-man-killed-by-police-in-quebecs-far-north-9770120
+1827,V1-0251,Adam Purdie,2011-03-02,2011-10-27,Surrey Now-Leader,https://www.surreynowleader.com/news/surrey-mountie-cleared-in-shooting-2907626
+1828,V1-0191,Gregory Moynagh,2008-12-21,2008-12-23,The Globe and Mail,https://www.theglobeandmail.com/news/national/man-described-run-in-with-police-before-it-happened/article665474/
+1829,V1-0586,Boden Umpherville,2023-04-01,2023-10-07,Prince Albert Daily Herald,https://paherald.sk.ca/we-dont-feel-safe-protestors-advocate-for-better-treatment-from-prince-albert-police/
+1830,V1-0586,Boden Umpherville,2023-04-01,2023-12-28,paNOW,https://panow.com/2023/12/28/year-in-review-sirt-investigates-after-man-tased-by-police-passes-away-in-hospital/
+1831,V1-0647,Yacin Osman,2018-04-09,2024-12-10,CBC,https://www.cbc.ca/news/canada/calgary/fatality-inquiry-undercover-officer-yacin-osman-1.7406538
+1832,V1-0612,Joshua Papigatuk,2024-10-30,2024-12-01,CBC,https://www.cbc.ca/news/canada/montreal/protest-nunavik-twins-fatal-police-shooting-1.7397938
+1833,V1-0568,Chris Amyotte,2022-08-22,2024-08-09,CBC,https://www.cbc.ca/news/canada/british-columbia/amyotte-death-lawsuit-vancouver-police-1.7290212
+1834,V1-0647,Yacin Osman,2018-04-09,2024-05-22,CBC,https://www.cbc.ca/news/canada/calgary/fatality-inquiry-calgary-police-osman-bridgeland-undercover-psychiatrist-1.7211588
+1835,V1-0344,Waylon Jesse Edey,2015-01-29,2018-04-03,Calgary Herald,https://calgaryherald.com/news/crime/b-c-mountie-charged-with-manslaughter-in-connection-with-traffic-stop-shooting
+1836,V1-0640,Abdurahman Ibrahim Hassan,2015-06-11,2023-01-18,Tribune,https://www.wellandtribune.ca/ts/news/canada/2023/01/17/i-had-no-hand-in-causing-his-death-inquest-into-immigration-detainees-death-hears-siu-interview-with-officer.html
+1837,V1-0647,Yacin Osman,2018-04-09,2024-05-21,Calgary Herald,https://calgaryherald.com/news/crime/officer-said-no-choice-shoot-knife-wielding-robber
+1838,V1-0586,Boden Umpherville,2023-04-01,2023-04-26,Lethbridge News Now,https://lethbridgenewsnow.com/2023/04/26/saskatchewan-man-left-brain-dead-after-altercation-with-police-has-died-family/
+1839,V1-0344,Waylon Jesse Edey,2015-01-29,,North Shore News,https://www.nsnews.com/bc-news/inquest-into-2015-rcmp-shooting-death-of-bc-man-announced-7248097
+1840,V1-0586,Boden Umpherville,2023-04-01,2023-07-14,Prince Albert Daily Herald,https://paherald.sk.ca/bodens-umphevilles-family-advocating-to-fix-skewed-relationship-with-prince-albert-police/
+1841,V1-0136,Daniel Antony King,2006-10-13,2006-10-17,CBC,https://www.cbc.ca/news/canada/british-columbia/man-shot-by-police-had-replica-gun-1.591117
+1842,V1-0186,Trevor Grimolfson,2008-10-29,2010-11-22,CBC,https://www.cbc.ca/news/canada/edmonton/mother-represents-son-at-taser-inquiry-1.944894
+1843,V1-0474,Stacey Perry,2018-12-25,2019-01-11,The Calgary Sun,https://calgarysun.com/news/crime/officer-who-fatally-wounded-woman-on-christmas-morning-previously-killed-man-in-line-of-duty
+1844,V1-0491,Lucien Silverquill,2019-08-27,2022-04-14,Global News,https://globalnews.ca/news/8761761/public-inquest-fishing-lake-first-nation-police-shooting/
+1845,V1-0344,Waylon Jesse Edey,2015-01-29,2015-02-03,Nelson Star,https://www.nelsonstar.com/news/bc-coroners-service-identifies-shooting-victim-4842926
+1846,V1-0495,Clive Mensah,2019-11-20,2021-03-30,The Globe and Mail,https://www.theglobeandmail.com/canada/toronto/article-siu-clears-three-peel-officers-in-death-of-mississauga-man-with-mental/
+1847,V1-0586,Boden Umpherville,2023-04-01,2023-04-26,paNOW,https://panow.com/2023/04/26/boden-umpherville-has-passed-away/
+1848,V1-0603,Mathios Arkangelo,2024-06-30,2024-09-12,The Brandon Sun,https://www.brandonsun.com/opinion/2024/09/12/police-body-cameras-do-little-to-ensure-more-transparency
+1849,V1-0495,Clive Mensah,2019-11-20,2020-12-22,INsauga,https://www.insauga.com/siu-still-investigating-police-involved-death-of-30-year-old-man-in-mississauga/
+1850,V1-0491,Lucien Silverquill,2019-08-27,2022-04-14,CBC,https://www.cbc.ca/news/canada/saskatchewan/date-set-for-inquest-into-rcmp-shooting-lucien-silverquill-1.6419991
+1851,V1-0586,Boden Umpherville,2023-04-01,2025-03-14,CBC,https://www.cbc.ca/news/canada/saskatoon/police-pa-upherville-sirt-conclusion-1.7484121
+1852,V1-0395,Abdirahman Abdi,2016-07-25,2016-08-24,Global News,https://globalnews.ca/news/2899990/black-lives-matter-stage-rally-at-siu-headquarters-over-death-of-abdirahman-abdi/
+1853,V1-0495,Clive Mensah,2019-11-20,2022-06-08,CBC,https://www.cbc.ca/news/canada/toronto/police-shooting-marc-ekamba-inquest-recommendations-1.6480063
+1854,V1-0495,Clive Mensah,2019-11-20,2021-01-18,Mississauga News,https://www.mississauga.com/news/coroner-s-report-into-mississauga-mans-death-sheds-light-on-final-interactions-with-peel-police/article_955edb9f-8738-59b4-9c34-3e1ce46a2ef9.html
+1855,V1-0395,Abdirahman Abdi,2016-07-25,2024-12-01,CBC,https://www.cbc.ca/news/canada/ottawa/changes-have-been-made-since-abdirahman-abdi-died-could-they-have-helped-him-1.7396714
+1856,V1-0491,Lucien Silverquill,2019-08-27,2021-05-20,CBC,https://www.cbc.ca/news/canada/saskatoon/saskatchewan-coroner-s-inquest-lucien-silverquill-1.6032808
+1857,V1-0344,Waylon Jesse Edey,2015-01-29,2015-02-04,Kimberley Bulletin,https://www.kimberleybulletin.com/news/man-fatally-shot-by-rcmp-had-a-history-of-impaired-driving-5157929
+1858,V1-0186,Trevor Grimolfson,2008-10-29,2010-11-23,CBC,https://www.cbc.ca/news/canada/edmonton/alta-man-in-taser-incident-attacked-worker-1.946983
+1859,V1-0186,Trevor Grimolfson,2008-10-29,2008-11-03,Toronto Star,https://www.thestar.com/news/canada/2008/11/03/man_dies_after_calgary_police_use_taser.html
+1860,V1-0186,Trevor Grimolfson,2008-10-29,2009-10-28,The Globe and Mail,https://www.theglobeandmail.com/news/national/no-criminal-charges-against-edmonton-officers-in-taser-incident/article4290447/
+1861,V1-0344,Waylon Jesse Edey,2015-01-29,2015-02-04,Trail Times,https://www.trailtimes.ca/news/coroner-identifies-castlegar-shooting-victim/
+1862,V1-0395,Abdirahman Abdi,2016-07-25,2016-07-25,CBC,https://www.cbc.ca/news/canada/ottawa/siu-investigate-hilda-street-arrest-hospital-1.3694114
+1863,V1-0495,Clive Mensah,2019-11-20,2021-03-29,CBC,https://www.cbc.ca/news/canada/toronto/clive-mensah-black-man-taser-peel-police-1.5967692
+1864,V1-0586,Boden Umpherville,2023-04-01,2023-04-21,paNOW,https://panow.com/2023/04/21/family-of-man-tased-by-police-looking-for-justice/
+1865,V1-0344,Waylon Jesse Edey,2015-01-29,2018-04-30,Coast Mountain News,https://www.coastmountainnews.com/news/rcmp-officer-accused-in-b-c-shooting-death-elects-jury-trial-5635746
+1866,V1-0495,Clive Mensah,2019-11-20,2020-07-22,Toronto Star,https://www.thestar.com/news/gta/nine-months-later-this-mississauga-man-s-family-is-still-in-the-dark-over-why/article_865150f2-8f44-55a6-bcbd-8beb11d544ca.html
+1867,V1-0645,Jobie Napartuk,2014-07-17,,Nunatsiaq News,https://nunatsiaq.com/stories/article/65674nunavik_man_dies_in_early_morning_police_altercation/
+1868,V1-0395,Abdirahman Abdi,2016-07-25,2016-07-24,CBC,https://www.cbc.ca/news/canada/ottawa/siu-investigate-hilda-street-arrest-hospital-1.3693073
+1869,V1-0645,Jobie Napartuk,2014-07-17,,Nunatsiaq News,https://nunatsiaq.com/stories/article/65674quebec_police_called_to_look_into_incident_in_nunavik_community/
+1870,V1-0344,Waylon Jesse Edey,2015-01-29,2023-09-04,CBC,https://www.cbc.ca/news/canada/british-columbia/waylon-edey-coroners-inquest-1.6956643
+1871,V1-0186,Trevor Grimolfson,2008-10-29,2008-10-29,Global News,https://globalnews.ca/news/74081/man-dies-after-two-taser-hits-in-west-edmonton/
+1872,V1-0395,Abdirahman Abdi,2016-07-25,2016-07-27,Global News,https://globalnews.ca/news/2852167/death-of-abdirahman-abdi-fuels-calls-for-police-training-reforms/
+1873,V1-0186,Trevor Grimolfson,2008-10-29,2008-11-04,Toronto Star,https://www.thestar.com/news/canada/2008/11/04/man_30_dies_after_police_use_taser.html
+1874,V1-0586,Boden Umpherville,2023-04-01,2023-04-28,paNOW,https://panow.com/2023/04/28/friends-and-family-of-man-tased-by-police-stage-public-protest/
+1875,V1-0495,Clive Mensah,2019-11-20,2021-01-14,CBC,https://www.cbc.ca/news/canada/toronto/black-mentally-ill-tasered-clive-mensah-1.5872153
+1876,V1-0186,Trevor Grimolfson,2008-10-29,2011-04-24,Global News,https://globalnews.ca/news/28940/no-criminal-charges-for-officers-involved-in-taser-incident-2/
+1877,V1-0495,Clive Mensah,2019-11-20,2021-03-31,Mississauga News,https://www.mississauga.com/news/we-are-devastated-family-issues-statement-after-siu-clears-police-in-death-of-clive-mensah/article_9a252c33-f07c-5f02-9706-d81cc04dd437.html
+1878,V1-0548,Justin Bourassa,2021-10-28,2025-07-16,Sarnia Observer,https://www.theobserver.ca/news/local-news/memorial-tennis-tournament-returns-to-sarnia-this-weekend
+1879,V1-0586,Boden Umpherville,2023-04-01,2023-04-21,Global News,https://globalnews.ca/news/9641854/man-brain-dead-prince-albert-police-stun-gun/
+1880,V1-0595,Afolabi Opaso,2023-12-31,2025-08-27,CBC,https://www.cbc.ca/news/canada/manitoba/winnipeg-police-involved-shooting-report-1.7619223
+1881,V1-0548,Justin Bourassa,2021-10-28,2021-11-03,The London Free Press,https://lfpress.com/news/local-news/tennis-pro-shot-by-london-police-was-charged-with-assaulting-sarnia-cops
+1882,V1-0616,Fabian Skani,2024-12-14,2024-12-18,APTN News,https://www.aptnnews.ca/national-news/death-of-cold-lake-first-nations-man-by-rcmp-shakes-first-nation-says-chief/
+1883,V1-0595,Afolabi Opaso,2023-12-31,2024-01-28,Global News,https://globalnews.ca/news/10256260/protesters-march-for-accountability-in-fatal-shooting-of-19-year-old-by-winnipeg-police/
+1884,V1-0186,Trevor Grimolfson,2008-10-29,2008-10-30,The Globe and Mail,https://www.theglobeandmail.com/news/national/man-in-edmonton-dies-after-taser-hit/article20389279/
+1885,V1-0595,Afolabi Opaso,2023-12-31,2024-01-05,CBC,https://www.cbc.ca/news/canada/manitoba/afolabi-stephen-opaso-police-shooting-friends-1.7075014
+1886,V1-0595,Afolabi Opaso,2023-12-31,2024-12-30,Winnipeg Free Press,https://www.winnipegfreepress.com/breakingnews/2024/12/30/year-after-man-shot-killed-by-police-family-still-waits-for-answers
+1887,V1-0590,Wesley Davidson,2023-05-29,2025-07-15,CBC,https://www.cbc.ca/news/canada/calgary/asirt-calgary-police-officer-charged-murder-officer-involved-shooting-1.7585785
+1888,V1-0339,Phuong Na Du,2014-11-22,2018-02-05,CBC,https://www.cbc.ca/news/canada/british-columbia/phuong-na-tony-du-inquest-1.4519980
+1889,V1-0395,Abdirahman Abdi,2016-07-25,2024-11-20,CBC,https://www.cbc.ca/news/canada/ottawa/first-officer-to-confront-abdirahman-abdi-has-left-ottawa-police-1.7388242
+1890,V1-0352,Cody Cole,2015-04-04,2018-11-05,Peterborough Examiner,https://www.thepeterboroughexaminer.com/news/crime/inquest-into-shooting-death-of-cody-cole-ends-with-recommendations-for-peterborough-police/article_cad5a5f5-89ac-540b-89bb-b924135fc53c.html
+1891,V1-0548,Justin Bourassa,2021-10-28,2022-06-27,CBC,https://www.cbc.ca/news/canada/london/london-police-officer-cleared-by-siu-in-shooting-death-of-justin-bourassa-1.6503549
+1892,V1-0395,Abdirahman Abdi,2016-07-25,2016-07-27,Global News,https://globalnews.ca/news/2850676/abdirahman-abdi-depressed-unemployed-before-confrontation-with-ottawa-police-former-boss/
+1893,V1-0305,Bob Srigley,2013-07-25,2013-07-30,The Kingston Whig-Standard,https://www.thewhig.com/2013/07/30/man-called-newspaper-before-fatal-shooting-near-sharbot-lake
+1894,V1-0548,Justin Bourassa,2021-10-28,2022-06-29,Global News,https://globalnews.ca/news/8956300/justin-bourassa-parents-london-police-shooting-questions/
+1895,V1-0339,Phuong Na Du,2014-11-22,2014-11-25,CBC,https://www.cbc.ca/news/canada/british-columbia/police-shootings-often-involve-mental-illness-and-ill-prepared-officers-1.2850020
+1896,V1-0339,Phuong Na Du,2014-11-22,2017-02-09,CBC,https://www.cbc.ca/news/canada/british-columbia/tony-du-vancouver-police-civil-suit-1.3975168
+1897,V1-0590,Wesley Davidson,2023-05-29,2025-07-17,CBC,https://www.cbc.ca/news/canada/calgary/asirt-calgary-police-officer-charged-murder-officer-involved-shooting-bail-1.7587962
+1898,V1-0395,Abdirahman Abdi,2016-07-25,2024-12-06,CBC,https://www.cbc.ca/news/canada/ottawa/abdirahman-abdi-inquest-death-cause-health-1.7401853
+1899,V1-0595,Afolabi Opaso,2023-12-31,2025-07-23,Winnipeg Free Press,https://www.winnipegfreepress.com/breakingnews/2025/07/23/family-of-u-of-m-student-killed-in-2023-police-shooting-wants-answers-from-investigation
+1900,V1-0339,Phuong Na Du,2014-11-22,2017-11-17,Global News,https://globalnews.ca/news/3867938/coroners-inquest-into-police-involved-shooting-of-tony-du-scheduled-for-next-year/
+1901,V1-0251,Adam Purdie,2011-03-02,2011-10-26,CBC,https://www.cbc.ca/news/canada/british-columbia/surrey-mountie-cleared-in-fatal-shooting-1.1126677
+1902,V1-0548,Justin Bourassa,2021-10-28,2021-11-02,Global News,https://globalnews.ca/news/8343970/siu-identity-man-fatally-shot-london-police/
+1903,V1-0603,Mathios Arkangelo,2024-06-30,2024-09-20,CBC,https://www.cbc.ca/news/canada/edmonton/edmonton-police-chief-denies-allegations-in-lawsuit-filed-by-arkangelo-family-1.7329949
+1904,V1-0603,Mathios Arkangelo,2024-06-30,2024-09-05,CBC,https://www.cbc.ca/news/canada/edmonton/family-of-edmonton-man-killed-by-police-launches-lawsuit-against-officers-police-chief-1.7313776
+1905,V1-0548,Justin Bourassa,2021-10-28,2021-11-02,CBC,https://www.cbc.ca/news/canada/london/man-shot-dead-by-london-police-mourned-by-sarnia-francophone-community-1.6234414
+1906,V1-0251,Adam Purdie,2011-03-02,2013-06-25,The Globe and Mail,https://www.theglobeandmail.com/news/british-columbia/victim-of-officers-gunshots-had-cocaine-morphine-in-system/article12807900/
+1907,V1-0251,Adam Purdie,2011-03-02,2011-10-26,Global News,https://globalnews.ca/news/170443/police-report-finds-shooting-of-adam-brian-purdie-justified/
+1908,V1-0610,Joseph Desjarlais,2024-09-19,2024-09-27,paNOW,https://panow.com/2024/09/27/loaded-shotgun-spent-casing-recovered-from-van-in-officer-involved-fatality/
+1909,V1-0497,Fred Troy Penner,2019-12-31,2020-08-20,CBC,https://www.cbc.ca/news/canada/hamilton/st-catharines-siu-fred-penner-1.5693778
+1910,V1-0251,Adam Purdie,2011-03-02,2013-01-16,Surrey Now-Leader,https://www.surreynowleader.com/news/inquest-held-into-police-shooting-2884334
+1911,V1-0497,Fred Troy Penner,2019-12-31,2023-02-13,Global News,https://globalnews.ca/news/9483474/inquest-st-catharines-fred-penner-police-shooting/
+1912,V1-0542,Jared Lowndes,2021-07-08,2023-07-07,The Globe and Mail,https://www.theglobeandmail.com/canada/article-family-of-jared-lowndes-sue-rcmp-over-2021-shooting-death-in-campbell/
+1913,V1-0643,Jerry Smallwood,2018-05-08,2024-11-13,CHEK News,https://cheknews.ca/inquest-into-2018-departure-bay-police-shooting-begins-1223716/
+1914,V1-0542,Jared Lowndes,2021-07-08,2023-07-07,The Chilliwack Progress,https://www.theprogress.com/news/family-of-indigenous-man-killed-by-campbell-river-rcmp-files-civil-suit-1943334
+1915,V1-0548,Justin Bourassa,2021-10-28,2021-11-02,Strathroy Age Dispatch,https://www.strathroyagedispatch.com/news/local-news/sarnia-tennis-pro-identified-as-man-fatally-shot-by-london-police/wcm/c64e057a-cbd4-445a-991f-0161e50f85f8
+1916,V1-0643,Jerry Smallwood,2018-05-08,2024-08-22,Tofino-Ucluelet Westerly News,https://www.westerlynews.ca/news/coroners-inquest-will-examine-2018-death-at-nanaimo-ferry-terminal-7498658
+1917,V1-0542,Jared Lowndes,2021-07-08,2022-12-01,Penticton Western News,https://www.pentictonwesternnews.com/news/reasonable-grounds-for-charges-against-three-officers-involved-in-2021-killing-of-indigenous-man-in-campbell-river-iio/
+1918,V1-0542,Jared Lowndes,2021-07-08,2024-04-24,Campbell River Mirror,https://www.campbellrivermirror.com/local-news/no-charges-in-rcmp-killing-of-jared-lowndes-shocks-first-nations-leaders-7349532
+1919,V1-0251,Adam Purdie,2011-03-02,2013-06-23,The Vancouver Sun,https://vancouversun.com/news/metro/i-believed-i-was-dead-rcmp-officer-tells-inquest
+1920,V1-0603,Mathios Arkangelo,2024-06-30,2024-10-16,CBC,https://www.cbc.ca/news/canada/edmonton/edmonton-police-seek-publication-ban-to-protect-identity-of-officer-in-fatal-shooting-1.7353285
+1921,V1-0487,Billy Shea,2019-07-23,2019-07-24,CBC,https://www.cbc.ca/news/canada/toronto/siu-peterborough-shooting-death-1.5223093
+1922,V1-0226,Lance Muir,2010-05-09,2010-05-10,CBC,https://www.cbc.ca/news/canada/manitoba/man-killed-by-police-led-troubled-life-1.952989
+1923,V1-0251,Adam Purdie,2011-03-02,2013-06-26,The Globe and Mail,https://www.theglobeandmail.com/news/british-columbia/testimony-wraps-up-in-fatal-police-shooting-inquest/article12835101/
+1924,V1-0226,Lance Muir,2010-05-09,2018-04-23,CBC,https://www.cbc.ca/news/canada/manitoba/winnipeg-lance-muir-police-shooting-inquest-1.4631731
+1925,V1-0341,Daniel Clause,2014-12-31,2016-10-27,CBC,https://www.cbc.ca/news/canada/toronto/toronto-daniel-clause-police-shooting-inquest-toxicology-1.3824852
+1926,V1-0603,Mathios Arkangelo,2024-06-30,2024-07-16,CBC,https://www.cbc.ca/news/canada/edmonton/family-of-man-killed-by-officer-demand-accountability-from-edmonton-police-1.7265351
+1927,V1-0341,Daniel Clause,2014-12-31,2014-12-31,CBC,https://www.cbc.ca/news/canada/toronto/ttc-subway-station-robbed-man-shot-dead-after-police-respond-1.2887098
+1928,V1-0603,Mathios Arkangelo,2024-06-30,2024-08-15,Edmonton Journal,https://edmontonjournal.com/news/crime/mathios-arkangelo-killing-edmonton
+1929,V1-0542,Jared Lowndes,2021-07-08,2024-04-24,APTN News,https://www.aptnnews.ca/national-news/rcmp-officers-who-shot-and-killed-wetsuweten-man-wont-face-charges/
+1930,V1-0405,Joshua Megeney,2016-10-06,2019-06-27,CBC,https://www.cbc.ca/news/canada/saskatoon/engaged-jury-at-joshua-megeney-inquest-asks-at-length-about-saskatoon-swat-team-practices-1.5191595
+1931,V1-0405,Joshua Megeney,2016-10-06,2019-06-24,Global News,https://globalnews.ca/news/5427221/inquest-police-involved-death-joshua-megeney/
+1932,V1-0405,Joshua Megeney,2016-10-06,2019-07-04,Global News,https://globalnews.ca/news/5460174/joshua-megeney-inquest-saskatoon-police/
+1933,V1-0405,Joshua Megeney,2016-10-06,2019-05-30,CBC,https://www.cbc.ca/news/canada/saskatoon/joshua-megeney-police-standoff-coroner-inquest-1.5155867
+1934,V1-0643,Jerry Smallwood,2018-05-08,2024-11-12,Global News,https://globalnews.ca/news/10865857/nanaimo-ferry-shooting-inquest/
+1935,V1-0542,Jared Lowndes,2021-07-08,2024-04-23,CBC,https://www.cbc.ca/news/canada/british-columbia/jared-lowndes-crown-charges-dropped-1.7182836
+1936,V1-0226,Lance Muir,2010-05-09,2018-04-24,Global News,https://globalnews.ca/news/4164019/police-shooting-in-2010-justified-inquest-report-concludes/
+1937,V1-0542,Jared Lowndes,2021-07-08,2024-05-10,The Vernon Morning Star,https://www.vernonmorningstar.com/news/northwest-hereditary-chiefs-demand-accountability-for-deadly-rcmp-arrests-7356837
+1938,V1-0487,Billy Shea,2019-07-23,2019-07-24,Global News,https://globalnews.ca/news/5676255/siu-fatal-police-involved-shooting-peterborough/
+1939,V1-0642,Sean Thompson,2019-06-26,2020-07-08,CBC,https://www.cbc.ca/news/canada/manitoba/police-watchdog-iiu-investigation-unit-death-1.5642108
+1940,V1-0643,Jerry Smallwood,2018-05-08,2024-11-19,CHEK News,https://cheknews.ca/jury-makes-recommendations-following-inquest-into-2018-shooting-death-in-nanaimo-1224868/
+1941,V1-0271,Justin Zinser,2011-09-24,2013-08-27,Global News,https://globalnews.ca/news/804465/recommendations-made-at-inquest-of-shooting-death/
+1942,V1-0271,Justin Zinser,2011-09-24,2011-09-27,The Williams Lake Tribune,https://www.wltribune.com/news/further-information-released-on-police-shooting-in-nimpo-lake/
+1943,V1-0405,Joshua Megeney,2016-10-06,2019-06-25,CBC,https://www.cbc.ca/news/canada/saskatoon/inquest-megeny-wanted-to-call-mother-1.5188804
+1944,V1-0271,Justin Zinser,2011-09-24,2013-08-28,CBC,https://www.cbc.ca/kamloops/mt/2013/08/28/stepfather-of-justin-zinser-williams-lake-rcmp-shooting-victim/
+1945,V1-0341,Daniel Clause,2014-12-31,2015-01-07,Toronto.com,https://www.toronto.com/news/funeral-for-man-shot-by-police-in-scarborough-set-for-friday/article_fbb54163-181d-525f-b9e8-ec82611d64aa.html
+1946,V1-0487,Billy Shea,2019-07-23,2020-06-29,Peterborough Examiner,https://www.thepeterboroughexaminer.com/news/it-ends-here-tonight-billy-shea-threatened-to-kill-peterborough-police-officers/article_e5d725a7-8c07-5975-bcb0-b6251d64f8f4.html
+1947,V1-0609,Vanessa Renteria Valencia,2024-09-19,2024-09-21,Fernie Free Press,https://www.thefreepress.ca/news/bc-mom-shot-dead-by-police-was-colombian-newcomer-advocacy-group-7548713
+1948,V1-0609,Vanessa Renteria Valencia,2024-09-19,2025-02-20,Alberni Valley News,https://www.albernivalleynews.com/news/family-of-bc-woman-killed-by-police-remembers-her-as-a-loving-mother-7833926
+1949,V1-0621,Jamie Kavik,2025-07-17,2025-07-24,APTN News,https://www.aptnnews.ca/national-news/3-prank-calls-reporting-active-gunmen-theats-since-fatal-shooting-inukjuak-mayor/
+1950,V1-0448,Joey Knapaysweet,2018-02-03,2018-02-27,CBC,https://www.cbc.ca/news/indigenous/joey-knapaysweet-family-timmins-police-death-1.4553181
+1951,V1-0496,Wade Vanderwal,2019-12-03,2021-07-08,Sarnia Observer,https://www.theobserver.ca/news/local-news/siu-probing-death-of-gas-theft-suspect-in-chatham-kent
+1952,V1-0542,Jared Lowndes,2021-07-08,,North Shore News,https://www.nsnews.com/bc-news/advocates-and-family-of-man-shot-by-rcmp-launch-peoples-tribunal-to-probe-police-10377292
+1953,V1-0334,Martin Couture-Rouleau,2014-10-20,2014-10-21,CBC,https://www.cbc.ca/news/canada/montreal/martin-couture-rouleau-hit-and-run-driver-arrested-by-rcmp-in-july-1.2807078
+1954,V1-0334,Martin Couture-Rouleau,2014-10-20,2014-10-21,CBC,https://www.cbc.ca/news/canada/who-is-martin-couture-rouleau-1.2807285
+1955,V1-0609,Vanessa Renteria Valencia,2024-09-19,2024-09-27,Peace Arch News,https://www.peacearchnews.com/local-news/surrey-mom-killed-by-police-was-doing-everything-refugees-are-asked-to-do-7559535
+1956,V1-0465,Nicholas Gibbs,2018-08-21,2018-11-04,Global News,https://globalnews.ca/news/4629181/vigil-nicholas-gibbs/
+1957,V1-0405,Joshua Megeney,2016-10-06,2019-06-26,Saskatoon StarPhoenix,https://thestarphoenix.com/news/local-news/megeney-asked-to-call-his-mother-moments-before-fatal-gunshots-were-fired-officer-says
+1958,V1-0542,Jared Lowndes,2021-07-08,2021-07-12,APTN News,https://www.aptnnews.ca/national-news/police-watchdog-investigating-after-b-c-rcmp-shoot-kill-wetsuweten-man-in-campbell-river/
+1959,V1-0448,Joey Knapaysweet,2018-02-03,2018-02-07,Global News,https://globalnews.ca/news/4011478/indigenous-deaths-police-timmins/
+1960,V1-0394,Sanjai Prasad,2016-07-15,2016-07-17,CBC,https://www.cbc.ca/news/canada/calgary/sanjai-prasad-police-shooting-killed-1.3683130
+1961,V1-0496,Wade Vanderwal,2019-12-03,2023-10-04,The London Free Press,https://lfpress.com/news/local-news/inquest-jury-releases-recommendations-in-death-of-man-shot-by-police
+1962,V1-0465,Nicholas Gibbs,2018-08-21,2019-08-17,Global News,https://globalnews.ca/news/5779737/protesters-gather-in-memory-of-nicholas-gibbs-shot-dead-by-police-officers/
+1963,V1-0448,Joey Knapaysweet,2018-02-03,2018-02-15,The Globe and Mail,https://www.theglobeandmail.com/news/national/mom-of-indigenous-man-killed-by-timmins-ont-police-searches-for-answers/article37991855/
+1964,V1-0405,Joshua Megeney,2016-10-06,2016-10-07,Saskatoon StarPhoenix,https://thestarphoenix.com/news/crime/he-was-not-a-monster-loved-ones-of-man-who-died-in-police-incident-speak-out
+1965,V1-0542,Jared Lowndes,2021-07-08,2023-10-27,CHEK News,https://cheknews.ca/iio-has-reasonable-grounds-to-believe-3-rcmp-officers-involved-in-jared-lowndes-death-may-have-committed-offences-1174881/
+1966,V1-0448,Joey Knapaysweet,2018-02-03,2020-02-05,Daily Press,https://www.timminspress.com/news/local-news/discrimination-alleged-in-2018-deaths-of-knapaysweet-sutherland
+1967,V1-0448,Joey Knapaysweet,2018-02-03,2018-02-06,Sudbury Star,https://www.thesudburystar.com/2018/02/07/vigil-honours-man-shot-killed-by-timmins-police
+1968,V1-0394,Sanjai Prasad,2016-07-15,2019-06-14,The Calgary Sun,https://calgarysun.com/news/crime/no-charges-laid-in-2016-officer-involved-shooting-despite-reasonable-grounds-offence-was-committed
+1969,V1-0334,Martin Couture-Rouleau,2014-10-20,2015-09-30,Calgary Herald,https://calgaryherald.com/news/national/9999-lang-how-radicalize
+1970,V1-0334,Martin Couture-Rouleau,2014-10-20,2014-10-26,Toronto Star,https://www.thestar.com/news/canada/how-martin-couture-rouleau-became-an-aspiring-islamic-state-fighter/article_cf9f24b4-2564-5cba-bb4a-9634e65c647d.html
+1971,V1-0334,Martin Couture-Rouleau,2014-10-20,2014-10-27,CBC,https://www.cbc.ca/news/michael-zehaf-bibeau-and-martin-couture-rouleau-how-canada-tracks-homegrown-radicals-1.2807390
+1972,V1-0639,Nicholas Edward Grieves,2020-07-07,2025-05-15,CBC,https://www.cbc.ca/news/canada/windsor/opp-manslaughter-trial-indigenous-orourke-grieves-1.7535927
+1973,V1-0465,Nicholas Gibbs,2018-08-21,2021-12-14,CBC,https://www.cbc.ca/news/canada/montreal/no-charges-laid-police-nicholas-gibbs-1.6285557
+1974,V1-0448,Joey Knapaysweet,2018-02-03,2024-10-08,CBC,https://www.cbc.ca/news/canada/sudbury/agnes-sutherland-joey-knapaysweet-fort-albany-cree-police-1.7345340
+1975,V1-0450,David Meadows,2018-02-24,2024-06-19,Tofino-Ucluelet Westerly News,https://www.westerlynews.ca/news/inquest-starts-healing-in-wake-of-bc-mans-taser-death-7397970
+1976,V1-0329,David Charles Sandaker,2014-05-11,2015-07-23,CBC,https://www.cbc.ca/news/canada/edmonton/edmonton-police-justified-in-shooting-david-sandaker-24-1.3165128
+1977,V1-0448,Joey Knapaysweet,2018-02-03,2019-03-08,Daily Press,https://www.timminspress.com/news/local-news/tps-cleared-of-wrongdoing-in-deaths-by-siu
+1978,V1-0322,Jason Gary Roy,2014-03-01,2014-03-01,CBC,https://www.cbc.ca/news/canada/calgary/man-killed-by-calgary-police-very-well-known-to-officers-1.2556353
+1979,V1-0465,Nicholas Gibbs,2018-08-21,2018-10-30,CBC,https://www.cbc.ca/news/canada/montreal/nicholas-gibbs-shooting-ndg-1.4883855
+1980,V1-0604,Hoss Lightning-Saddleback,2024-08-30,2024-09-16,The Brandon Sun,https://www.brandonsun.com/national/2024/09/16/mps-to-discuss-deaths-of-first-nations-people-by-police-in-emergency-debate
+1981,V1-0329,David Charles Sandaker,2014-05-11,2014-05-13,CBC,https://www.cbc.ca/news/canada/edmonton/man-killed-during-arrest-had-restraining-orders-against-him-1.2641022
+1982,V1-0639,Nicholas Edward Grieves,2020-07-07,2025-05-12,Chatham Daily News,https://www.chathamdailynews.ca/news/local-news/trial-starts-for-police-officer-charged-with-manslaughter-in-fatal-shooting
+1983,V1-0608,Jon Wells,2024-09-17,2024-09-18,APTN News,https://www.aptnnews.ca/featured/blood-tribe-alberta-police-city-of-calgary-death/
+1984,V1-0604,Hoss Lightning-Saddleback,2024-08-30,2024-09-23,Red Deer Advocate,https://www.reddeeradvocate.com/home2/samson-cree-nation-teen-was-trying-to-go-home-7550205
+1985,V1-0639,Nicholas Edward Grieves,2020-07-07,2022-02-16,Sudbury Star,https://www.thesudburystar.com/news/local-news/cop-charged-in-fatal-hwy-401-shooting-makes-first-court-appearance/wcm/acf84a35-e96e-4e25-9cb0-9171bed78787
+1986,V1-0465,Nicholas Gibbs,2018-08-21,2018-08-21,CBC,https://www.cbc.ca/news/canada/montreal/ndg-residents-heard-several-gunshots-before-man-23-killed-in-police-shooting-1.4794138
+1987,V1-0322,Jason Gary Roy,2014-03-01,2014-03-02,Global News,https://globalnews.ca/news/1181762/man-woman-shot-by-officers-well-known-to-calgary-police/
+1988,V1-0329,David Charles Sandaker,2014-05-11,2014-05-12,Global News,https://globalnews.ca/news/1324632/police-officer-injured-suspect-dead-following-shootout-in-southwest-edmonton/
+1989,V1-0639,Nicholas Edward Grieves,2020-07-07,2022-02-16,The Kingston Whig-Standard,https://www.thewhig.com/news/local-news/chatham-kent-opp-officer-accused-in-shooting-death-returns-to-court-march-30
+1990,V1-0334,Martin Couture-Rouleau,2014-10-20,2014-10-22,The Globe and Mail,https://www.theglobeandmail.com/news/national/extremism-in-canadas-borders/article21217185/
+1991,V1-0639,Nicholas Edward Grieves,2020-07-07,2025-05-21,The Brantford Expositor,https://www.brantfordexpositor.ca/news/local-news/use-of-force-expert-testifies-for-defence-at-opp-officers-manslaughter-trial
+1992,V1-0329,David Charles Sandaker,2014-05-11,2014-05-13,The Edmonton Sun,https://edmontonsun.com/2014/05/13/high-risk-take-downs-prompting-edmonton-police-to-adjust-training
+1993,V1-0577,Maiken Dani Cooper,2022-12-11,,North Shore News,https://www.nsnews.com/local-news/fatal-police-shooting-in-north-vancouver-justified-watchdog-rules-7370730
+1994,V1-0639,Nicholas Edward Grieves,2020-07-07,2025-05-17,The Windsor Star,https://windsorstar.com/news/local-news/firearm-experts-close-crown-evidence-at-opp-officers-manslaughter-trial
+1995,V1-0523,Jonathan Roy,2020-07-25,2009-10-07,CBC,https://www.cbc.ca/news/canada/montreal/patrick-roy-s-son-gets-absolute-discharge-1.781944
+1996,V1-0549,Rodger Kotanko,2021-11-03,2021-11-18,The Simcoe Reformer,https://www.simcoereformer.ca/news/local-news/kotanko-family-seeks-answers-in-mans-death
+1997,V1-0331,John Robert Buehler,2014-09-17,2019-07-19,CBC,https://www.cbc.ca/news/canada/british-columbia/thick-woods-contributed-to-death-of-man-1.5218513
+1998,V1-0331,John Robert Buehler,2014-09-17,2019-07-15,CBC,https://www.cbc.ca/news/canada/british-columbia/john-buehler-valemount-coroners-inquest-1.5211955
+1999,V1-0624,Tamara Bateman,2024-09-04,2024-09-04,Winnipeg Free Press,https://www.winnipegfreepress.com/featured/2024/09/04/i-love-you-my-baby
+2000,V1-0331,John Robert Buehler,2014-09-17,,Prince George Citizen,https://www.princegeorgecitizen.com/local-news/bc-coroners-inquest-into-2014-valemount-death-set-for-prince-george-1468182
+2001,V1-0473,Steven Rigby,2018-12-22,2021-06-20,CBC,https://www.cbc.ca/news/canada/saskatoon/steven-rigby-saskatoon-police-shooting-coroner-s-inquest-mental-health-1.6067923
+2002,V1-0549,Rodger Kotanko,2021-11-03,2021-12-15,St. Thomas Times-Journal,https://www.stthomastimesjournal.com/news/local-news/police-services-pleads-for-patience-as-fatal-shooting-investigation-continues
+2003,V1-0549,Rodger Kotanko,2021-11-03,2023-09-26,CBC,https://www.cbc.ca/news/canada/hamilton/rodger-kotanko-mystery-customer-witness-police-raid-1.6977476
+2004,V1-0639,Nicholas Edward Grieves,2020-07-07,2025-06-25,The London Free Press,https://lfpress.com/news/local-news/police-officer-not-guilty-of-manslaughter-in-hwy-401-shooting
+2005,V1-0331,John Robert Buehler,2014-09-17,2019-07-23,Toronto Star,https://www.thestar.com/vancouver/b-c-coroner-s-jury-wants-emergency-response-police-better-equipped-after-shooting-death-inquest/article_49a00b2a-61f7-51ca-90f2-4936c5dee774.html
+2006,V1-0473,Steven Rigby,2018-12-22,2021-06-14,Global News,https://globalnews.ca/news/7949203/inquest-saskatoon-police-shooting-death-steven-rigby/
+2007,V1-0409,Terrence Wienmeyer,2016-11-22,2016-11-23,CBC,https://www.cbc.ca/news/canada/calgary/calgary-police-officer-involved-shooting-terrence-weinmeyer-1.3864127
+2008,V1-0523,Jonathan Roy,2020-07-25,2009-06-10,The Globe and Mail,https://www.theglobeandmail.com/arts/jonathan-roy-a-lover-not-a-fighter/article4355409/
+2009,V1-0331,John Robert Buehler,2014-09-17,,Prince George Citizen,https://www.princegeorgecitizen.com/local-news/jury-in-coroners-inquest-enters-deliberations-3737330
+2010,V1-0473,Steven Rigby,2018-12-22,2021-05-18,CBC,https://www.cbc.ca/news/canada/saskatoon/steven-rigby-saskatoon-police-service-2018-shooting-corner-s-inquest-1.6029595
+2011,V1-0473,Steven Rigby,2018-12-22,2021-06-20,CBC,https://www.cbc.ca/news/canada/saskatoon/steven-rigby-family-1.6069907
+2012,V1-0331,John Robert Buehler,2014-09-17,,Prince George Citizen,https://www.princegeorgecitizen.com/local-news/regional-district-taking-no-action-on-coroners-inquest-recommendation-3740745
+2013,V1-0409,Terrence Wienmeyer,2016-11-22,2018-11-15,Toronto Star,https://www.thestar.com/calgary/2018/11/15/police-watchdog-clears-calgary-officer-in-fatal-2016-shooting-at-northwest-mall.html
+2014,V1-0562,Rojun Alphonse,2022-10-07,2022-07-19,Global News,https://globalnews.ca/news/9001742/williams-lake-first-nation-public-inquiry/
+2015,V1-0331,John Robert Buehler,2014-09-17,,Prince George Citizen,https://www.princegeorgecitizen.com/local-news/improvements-made-to-emergency-response-teams-inquest-into-police-shooting-death-hears-3737333
+2016,V1-0639,Nicholas Edward Grieves,2020-07-07,2025-05-16,The London Free Press,https://lfpress.com/news/local-news/opp-officer-describes-shooting-gas-theft-suspect-completely-shocked
+2017,V1-0473,Steven Rigby,2018-12-22,2021-06-24,Global News,https://globalnews.ca/news/7977193/steven-rigby-police-shooting-inquest-day-3/
+2018,V1-0639,Nicholas Edward Grieves,2020-07-07,2025-05-14,CBC,https://www.cbc.ca/news/canada/windsor/chatham-kent-opp-manslaughter-day-3-1.7534959
+2019,V1-0549,Rodger Kotanko,2021-11-03,2022-03-03,Global News,https://globalnews.ca/news/8657157/siu-clears-toronto-police-firearms-search-norfolk-county/
+2020,V1-0639,Nicholas Edward Grieves,2020-07-07,2025-05-16,Chatham Daily News,https://www.chathamdailynews.ca/news/chatham-kent-opp-officer-fabricating-stumble-story-crown
+2021,V1-0473,Steven Rigby,2018-12-22,2021-06-21,Global News,https://globalnews.ca/news/7969652/friends-steven-rigby-battles-mental-health/
+2022,V1-0549,Rodger Kotanko,2021-11-03,2021-11-04,The Brantford Expositor,https://www.brantfordexpositor.ca/news/local-news/man-shot-in-police-incident-was-gunsmith-neighbour-says-2
+2023,V1-0473,Steven Rigby,2018-12-22,2021-06-25,CBC,https://www.cbc.ca/news/canada/saskatoon/steven-rigby-coroner-s-inquest-day-4-police-shooting-1.6078493
+2024,V1-0549,Rodger Kotanko,2021-11-03,2021-11-18,CBC,https://www.cbc.ca/news/canada/hamilton/rodger-kotanko-police-shooting-1.6252238
+2025,V1-0562,Rojun Alphonse,2022-10-07,2022-07-20,The Globe and Mail,https://www.theglobeandmail.com/politics/article-calls-for-inquiry-after-first-nations-in-bc-man-dies-during-rcmp/
+2026,V1-0409,Terrence Wienmeyer,2016-11-22,2018-11-15,Global News,https://globalnews.ca/news/4667521/calgary-police-2016-fatal-shooting-asirt/
+2027,V1-0549,Rodger Kotanko,2021-11-03,2022-03-03,CBC,https://www.cbc.ca/news/canada/hamilton/rodger-kotanko-self-defence-siu-1.6371860
+2028,V1-0409,Terrence Wienmeyer,2016-11-22,2016-11-23,Global News,https://globalnews.ca/news/3084514/victim-identified-in-calgarys-9th-officer-involved-shooting-of-2016/
+2029,V1-0409,Terrence Wienmeyer,2016-11-22,2018-11-15,The Calgary Sun,https://calgarysun.com/news/crime/asirt-clears-officers-in-2016-shooting-that-killed-49-year-old-man
+2030,V1-0549,Rodger Kotanko,2021-11-03,2023-04-21,CBC,https://www.cbc.ca/news/canada/hamilton/rodger-kotanko-paramedic-response-toronto-police-raid-1.6816798
+2031,V1-0670,Yvon Chiasson,2021-02-24,2023-05-02,CBC,https://www.cbc.ca/news/canada/edmonton/edmonton-has-2nd-most-police-involved-deaths-1.6828204
+2032,V1-0526,Marty Powder,2020-09-18,2020-12-21,CBC,https://www.cbc.ca/news/canada/manitoba/police-shootings-2020-yer-review-1.5849788
+2033,V1-0526,Marty Powder,2020-09-18,2019-07-27,Global News,https://globalnews.ca/news/5693036/convicted-violent-offender-edmonton-matthew-powder/
+2034,V1-0166,Christopher Klim,2007-12-27,2007-12-28,CBC,https://www.cbc.ca/news/canada/british-columbia/taser-used-to-subdue-vernon-man-before-shooting-police-1.693455
+2035,V1-0219,Bernadette Auger,2010-01-18,2010-09-15,CBC,https://www.cbc.ca/news/canada/edmonton/fatal-police-shooting-justified-asirt-1.885686
+2036,V1-0470,Robyn Helen Garlow,2018-10-20,2025-02-05,Stoney Creek News,https://www.thespec.com/news/crime/coroners-inquest-called-into-death-of-woman-shot-by-hamilton-police/article_fbf8055b-0064-5bb9-8bbe-c8e7f6ec8c79.html
+2037,V1-0537,Trent Firth,2021-04-03,2021-04-06,The Calgary Sun,https://calgarysun.com/news/local-news/asirt-investigating-after-man-killed-during-officer-involved-shooting-on-ochiese-first-nation/wcm/ce55b4a3-a763-4411-942b-47545c4339fb
+2038,V1-0166,Christopher Klim,2007-12-27,2008-11-15,CBC,https://www.cbc.ca/news/canada/british-columbia/police-need-details-of-mental-patients-before-apprehension-coroner-s-jury-1.735720
+2039,V1-0567,Allan Andkilde,2022-08-15,2022-08-17,CBC,https://www.cbc.ca/news/canada/windsor/windsor-police-shooting-allan-andkilde-matthew-maloney-1.6553524
+2040,V1-0537,Trent Firth,2021-04-03,2021-04-13,APTN News,https://www.aptnnews.ca/national-news/ochiese-first-nation-members-call-for-more-support-following-shootings/
+2041,V1-0473,Steven Rigby,2018-12-22,2021-06-15,SaskToday,https://www.sasktoday.ca/north/local-news/inquest-set-into-2018-shooting-death-of-steven-rigby-during-police-confrontation-4172241
+2042,V1-0219,Bernadette Auger,2010-01-18,2013-02-27,CBC,https://www.cbc.ca/news/canada/edmonton/edmonton-officers-forced-to-shoot-woman-inquiry-finds-1.1347820
+2043,V1-0237,Reyal Jardine-Douglas,2010-08-29,2013-10-21,Toronto Star,https://www.thestar.com/news/crime/police-shootings-inquest-fateful-911-call-which-set-the-end-of-reyal-jardine-douglas-s/article_c8a6f9ee-1fcb-52cc-9293-d936e425c9ac.html
+2044,V1-0549,Rodger Kotanko,2021-11-03,2022-01-18,Edmonton Journal,https://edmontonjournal.com/news/provincial/recklessly-targeted-gunsmiths-family-sues-toronto-police-over-shooting-death
+2045,V1-0567,Allan Andkilde,2022-08-15,2015-09-01,Global News,https://globalnews.ca/news/2198176/man-sentenced-to-5-years-in-attack-at-west-edmonton-business/
+2046,V1-0326,John Caleb Ross,2014-04-14,2013-08-26,Global News,https://globalnews.ca/news/801524/calgary-man-killed-in-quebec-motorcycle-race/
+2047,V1-0549,Rodger Kotanko,2021-11-03,2021-11-18,Global News,https://globalnews.ca/news/8383288/port-dover-gunsmith-shot-dead-toronto-police/
+2048,V1-0549,Rodger Kotanko,2021-11-03,2021-11-18,Toronto Star,https://www.thestar.com/ths/news/hamilton-region/2021/11/18/toronto-police-shooting-death-norfolk-rodger-kotanko.html?source=torontostar&utm_campaign_id=
+2049,V1-0573,Ronny Kay,2022-09-17,2022-11-20,Global News,https://globalnews.ca/news/9293604/family-demanding-answers-about-alleged-police-shooting-death-of-ronny-kay/
+2050,V1-0549,Rodger Kotanko,2021-11-03,2022-03-08,National Post,https://nationalpost.com/pmn/news-pmn/canada-news-pmn/family-of-ontario-gunsmith-killed-by-police-questions-watchdogs-investigation
+2051,V1-0219,Bernadette Auger,2010-01-18,2013-02-27,Global News,https://globalnews.ca/news/399802/no-recommendations-from-inquiry-into-fatal-police-shooting-of-edmonton-woman/
+2052,V1-0332,Jermaine Carby,2014-09-24,2014-09-26,Brampton Guardian,https://www.bramptonguardian.com/news/man-shot-killed-by-peel-police-described-as-violent-drug-dealer/article_b15f9290-3b10-594b-a3cf-c7f60e1e68bc.html
+2053,V1-0325,Charnjit Singh Bassi,2014-03-28,2014-04-01,The Globe and Mail,https://www.theglobeandmail.com/news/toronto/man-killed-in-brampton-courthouse-described-as-too-religious/article17750940/
+2054,V1-0567,Allan Andkilde,2022-08-15,2022-12-14,The Windsor Star,https://windsorstar.com/news/local-news/shooting-of-machete-wielding-man-by-windsor-police-not-excessive-says-siu
+2055,V1-0332,Jermaine Carby,2014-09-24,2015-07-22,National Post,https://nationalpost.com/news/toronto/there-was-no-knife-found-on-the-scene-family-suing-after-watchdog-clears-ontario-officer-who-killed-man-at-traffic-stop
+2056,V1-0332,Jermaine Carby,2014-09-24,2016-05-13,National Post,https://nationalpost.com/opinion/christie-blatchford-family-of-police-shooting-victims-family-disgusted-by-officers-lack-of-remorse-at-inquest
+2057,V1-0567,Allan Andkilde,2022-08-15,2022-08-19,CBC,https://www.cbc.ca/news/canada/windsor/downtown-windsor-shooting-police-1.6555691
+2058,V1-0573,Ronny Kay,2022-09-17,2022-10-13,CBC,https://www.cbc.ca/news/canada/montreal/sister-police-shooting-montreal-nuns-island-1.6614686
+2059,V1-0325,Charnjit Singh Bassi,2014-03-28,2014-10-10,Toronto Star,https://www.thestar.com/news/crime/peel-police-officer-cleared-in-death-of-brampton-courthouse-shooter/article_1f18336f-481f-5341-8181-5ed811fb2a4f.html
+2060,V1-0461,Riley Fairholm,2018-07-25,2018-12-04,CBC,https://www.cbc.ca/news/canada/montreal/riley-fairholm-fatal-provincial-police-1.4931845
+2061,V1-0320,David-Hughes Lacour,2014-05-01,2018-05-03,CBC,https://www.cbc.ca/news/canada/montreal/eric-deslauriers-charged-sq-teen-death-1.4647428
+2062,V1-0326,John Caleb Ross,2014-04-14,2014-05-25,Toronto Star,https://www.thestar.com/news/crime/artist-john-caleb-ross-21-was-man-shot-by-police-in-aurora-last-month/article_46ab43f8-3d8a-557e-a917-735d6a9e712d.html
+2063,V1-0325,Charnjit Singh Bassi,2014-03-28,2014-04-03,The Globe and Mail,https://www.theglobeandmail.com/news/toronto/alleged-brampton-courthouse-shooter-had-previous-run-ins-with-law/article17785875/
+2064,V1-0237,Reyal Jardine-Douglas,2010-08-29,2013-10-24,CBC,https://www.cbc.ca/news/canada/toronto/officer-feared-for-his-life-when-he-shot-mentally-ill-man-1.2223897
+2065,V1-0633,Natasha Carla Abogado,2014-02-11,2018-09-13,CBC,https://www.cbc.ca/news/canada/toronto/speeding-police-officer-remo-romano-sentence-1.4821838
+2066,V1-0320,David-Hughes Lacour,2014-05-01,2017-09-22,CBC,https://www.cbc.ca/news/canada/montreal/eric-deslauriers-guilty-manslaughter-surete-du-quebec-1.4302259
+2067,V1-0326,John Caleb Ross,2014-04-14,2016-10-07,East Gwillimbury Express,https://www.yorkregion.com/news/york-police-officer-testifies-about-shooting-auroras-john-ross/article_769bf6a7-219e-5de2-afaf-19aa80fa4e83.html
+2068,V1-0325,Charnjit Singh Bassi,2014-03-28,2016-10-30,CBC,https://www.cbc.ca/news/canada/toronto/medals-bravery-peel-police-1.3828593
+2069,V1-0325,Charnjit Singh Bassi,2014-03-28,2014-03-31,The Globe and Mail,https://www.theglobeandmail.com/news/toronto/possible-suspect-in-brampton-court-shooting-described-as-kind-family-man/article17734192/
+2070,V1-0633,Natasha Carla Abogado,2014-02-11,2014-09-15,CBC,https://www.cbc.ca/news/canada/toronto/carla-abogado-death-family-files-2m-lawsuit-against-police-1.2766550
+2071,V1-0325,Charnjit Singh Bassi,2014-03-28,2014-03-31,National Post,https://nationalpost.com/news/toronto/brampton-residents-shocked-good-neighbour-opened-fire-in-courthouse-as-siu-searches-for-motive
+2072,V1-0320,David-Hughes Lacour,2014-05-01,2017-09-22,Brock Citizen,https://www.durhamregion.com/news/quebec-officer-convicted-of-manslaughter/article_4fb2aa8f-42db-5a45-8117-9c7e1f984854.html
+2073,V1-0461,Riley Fairholm,2018-07-25,2022-06-13,CBC,https://www.cbc.ca/news/canada/montreal/riley-fairholm-coroners-inquest-1.6487256
+2074,V1-0237,Reyal Jardine-Douglas,2010-08-29,2013-10-21,CBC,https://www.cbc.ca/news/canada/toronto/inquest-hears-911-call-that-preceded-fatal-police-shooting-1.2129651
+2075,V1-0326,John Caleb Ross,2014-04-14,2014-04-14,Brock Citizen,https://www.durhamregion.com/news/go-back-in-the-house-neighbour-warned-after-fatal-police-shooting-in-aurora/article_89544b9c-8020-5d1c-b786-3e348d6afa87.html
+2076,V1-0237,Reyal Jardine-Douglas,2010-08-29,2013-10-24,The Globe and Mail,https://www.theglobeandmail.com/news/toronto/toronto-cop-forced-to-shoot-mentally-disturbed-man-partner-tells-inquest/article15045531/
+2077,V1-0633,Natasha Carla Abogado,2014-02-11,2014-06-12,Brock Citizen,https://www.durhamregion.com/news/york-cop-charged-in-toronto-womans-death/article_0785d990-b6f2-58d1-a698-b1d53cb71e2e.html?
+2078,V1-0409,Terrence Wienmeyer,2016-11-22,2018-11-15,CBC,https://www.cbc.ca/news/canada/calgary/asirt-car-thief-terrence-weinmeyer-officers-cleared-1.4907922
+2079,V1-0237,Reyal Jardine-Douglas,2010-08-29,2013-08-08,Toronto Star,https://www.thestar.com/news/crime/2013/08/08/inquest_into_three_police_shootings_set_for_oct_15.html
+2080,V1-0461,Riley Fairholm,2018-07-25,,North Shore News,https://www.nsnews.com/national-news/quebec-coroner-investigates-case-of-teen-shot-dead-by-provincial-police-in-2018-5472110
+2081,V1-0633,Natasha Carla Abogado,2014-02-11,2016-11-04,East Gwillimbury Express,https://www.yorkregion.com/news/crime/crown-appeals-acquittal-of-york-cop-whose-vehicle-hit-killed-pedestrian/article_a7772050-8ca0-58f4-b95c-6963380eed3f.html
+2082,V1-0633,Natasha Carla Abogado,2014-02-11,2016-05-10,CBC,https://www.cbc.ca/news/canada/toronto/natasha-carla-abogado-reemo-romano-shoppers-drug-mart-perfume-1.3576073
+2083,V1-0635,Austin Eaglechief,2017-06-19,2019-08-19,CBC,https://www.cbc.ca/news/canada/saskatoon/austin-eaglechief-death-inquest-what-you-should-know-and-what-his-family-is-seeking-1.5251425
+2084,V1-0333,Peter de Groot,2014-10-13,2014-10-10,CBC,https://www.cbc.ca/news/canada/british-columbia/peter-de-groot-named-by-police-as-suspected-slocan-gunman-1.2794737
+2085,V1-0325,Charnjit Singh Bassi,2014-03-28,2014-04-01,Burlington Post,https://www.insidehalton.com/news/brampton-courthouse-shooter-s-actions-baffle-his-friends/article_beccf6e7-6777-5959-bdb8-7f17f9596007.html
+2086,V1-0333,Peter de Groot,2014-10-13,2021-09-27,Nelson Star,https://www.nelsonstar.com/news/inquest-in-death-of-peter-de-groot-begins-in-nelson-4896484
+2087,V1-0633,Natasha Carla Abogado,2014-02-11,2018-09-13,East Gwillimbury Express,https://www.yorkregion.com/news/crime/york-police-officer-whose-vehicle-struck-killed-woman-gets-8-month-sentence/article_35c1ff68-d485-5b23-830e-cc539af8f752.html
+2088,V1-0261,Corwin Peeace,2011-06-10,2012-04-30,Global News,https://globalnews.ca/news/239789/update-calgary-police-officer-cleared-in-june-police-shooting/
+2089,V1-0237,Reyal Jardine-Douglas,2010-08-29,2010-08-31,Toronto Star,https://www.thestar.com/news/gta/police-knew-of-mental-illness-before-fatal-shooting-family-says/article_f29ed79a-1b87-51d0-b908-76508a5e7948.html
+2090,V1-0333,Peter de Groot,2014-10-13,2021-10-12,Ladysmith Chemainus Chronicle,https://www.ladysmithchronicle.com/news/sister-of-west-kootenay-man-killed-by-rcmp-testifies-at-inquest/
+2091,V1-0461,Riley Fairholm,2018-07-25,2021-04-07,Global News,https://globalnews.ca/news/7744187/quebec-coroner-public-inquiry-2018-killing-lac-brome-teen/
+2092,V1-0333,Peter de Groot,2014-10-13,2021-10-04,Trail Times,https://www.trailtimes.ca/news/rcmp-officer-who-shot-peter-de-groot-testifies-at-inquest-5061114
+2093,V1-0633,Natasha Carla Abogado,2014-02-11,2014-02-15,Toronto Star,https://www.thestar.com/news/crime/parents-of-girl-killed-by-unmarked-police-vehicle-waiting-for-answers/article_ea0aa4d2-0ac5-59f9-8360-1302b75af7c8.html
+2094,V1-0409,Terrence Wienmeyer,2016-11-22,2016-11-24,Calgary Herald,https://calgaryherald.com/news/crime/passenger-of-suspected-car-thief-shot-by-police-facing-her-own-charges
+2095,V1-0461,Riley Fairholm,2018-07-25,,Sherbrooke Record,https://www.sherbrookerecord.com/coroner-reveals-recommendations-following-inquest-into-riley-fairholms-death/
+2096,V1-0324,Christopher Arkell,2014-03-22,,The Medicine Hat News,https://medicinehatnews.com/news/local-news/2022/06/16/arkell-police-interaction-reviewed-at-fatality-inquiry/
+2097,V1-0635,Austin Eaglechief,2017-06-19,2019-08-23,Global News,https://globalnews.ca/news/5805638/inquest-into-death-of-austin-eaglechief-reaches-day-4/
+2098,V1-0464,Sterling Ross Cardinal,2018-08-18,2020-06-05,Global News,https://globalnews.ca/news/7031596/asirt-edmonton-police-august-2018-fatal-shooting-man/
+2099,V1-0633,Natasha Carla Abogado,2014-02-11,2021-11-08,Vaughan Citizen,https://www.yorkregion.com/news/no-comment-york-police-union-hires-former-cop-who-struck-killed-teen-while-driving/article_f533c4c8-563f-5415-a0af-5ee09d386591.html
+2100,V1-0461,Riley Fairholm,2018-07-25,,Sherbrooke Record,https://www.sherbrookerecord.com/officer-who-shot-riley-fairholm-says-he-feared-for-the-safety-of-his-colleagues/
+2101,V1-0333,Peter de Groot,2014-10-13,2021-01-28,The Boundary Creek Times,https://www.boundarycreektimes.com/news/family-of-peter-de-groot-still-waiting-for-inquest-4668226
+2102,V1-0635,Austin Eaglechief,2017-06-19,2019-08-21,Global News,https://globalnews.ca/news/5796778/inquest-eaglechief-day-3/
+2103,V1-0483,Benjamin Richard,2019-04-19,2022-08-03,Winnipeg Free Press,https://www.winnipegfreepress.com/breakingnews/2022/08/03/first-nations-police-did-as-required-under-fire-inquest-judge
+2104,V1-0633,Natasha Carla Abogado,2014-02-11,2018-06-21,CBC,https://www.cbc.ca/news/canada/toronto/crown-wants-speeding-police-officer-who-killed-pedestrian-to-spend-a-year-behind-bars-1.4716679
+2105,V1-0464,Sterling Ross Cardinal,2018-08-18,2022-08-04,CBC,https://www.cbc.ca/news/canada/edmonton/public-fatality-inquiry-sterling-ross-cardinal-1.6539993
+2106,V1-0333,Peter de Groot,2014-10-13,2014-10-20,The Globe and Mail,https://www.theglobeandmail.com/news/british-columbia/family-of-bc-man-who-triggered-manhunt-say-rcmp-dismissed-pleas-for-assistance/article21180635/
