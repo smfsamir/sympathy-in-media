@@ -1186,8 +1186,8 @@
   "34_Rui Nabico_CBC.json": {
     "task1": {
       "Victim-aligned": [
-        "peter rosenthal (lawyer)",
         "rui nabico (victim)",
+        "peter rosenthal (lawyer)",
         "rodrigo almonacid (victim in previous case)"
       ],
       "Police-aligned": [
@@ -2580,7 +2580,8 @@
       "Victim-aligned": [
         "radford good dagger (victim)",
         "mark moore (friend of victim)",
-        "gary bird (victim's brother-in-law)"
+        "gary bird (victim's brother-in-law)",
+        "radford good dagger's family (victim's brother-in-law)"
       ],
       "Police-aligned": [
         "alberta serious incident response team (police oversight body)",
@@ -2592,10 +2593,10 @@
         "alberta serious incident response team"
       ],
       "paragraph 2": [
-        "gary bird"
+        "radford good dagger's family"
       ],
       "paragraph 3": [
-        "gary bird"
+        "radford good dagger's family"
       ],
       "paragraph 4": [
         "gary bird"
@@ -3629,7 +3630,7 @@
   "84_Buck E Evans_CBC.json": {
     "task1": {
       "Victim-aligned": [
-        "buck evans (victm)",
+        "buck evans (victim)",
         "melissa dumais (victim's girlfriend)"
       ],
       "Police-aligned": [
@@ -4267,7 +4268,7 @@
     "task1": {
       "Victim-aligned": [
         "hudson daryl willis (victim)",
-        "brendon samuel beddow (previous victim",
+        "brendon samuel beddow (previous victim)",
         "kenneth baines (previous victim)",
         "adam purdie (previous victim)",
         "naverone woods (previous victim)",
