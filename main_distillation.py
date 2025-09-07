@@ -30,116 +30,6 @@ logger = loguru.logger
 
 FLAN_TOKENIZER = AutoTokenizer.from_pretrained("google/flan-t5-base")
 
-@click.command()
-def create_distillation_examples_task1():
-    prompts = []
-    completions = []
-    with open("data/distillation_data/distill_examples.jsonl", "w") as f:
-        for annotated_example_file in os.listdir("data/evaluation_dataset"):
-            annotation_object = json.load(open(os.path.join("data/evaluation_dataset", annotated_example_file)))
-            article_paragraphs = annotation_object['article']
-            prompt = TASK_1_PROMPT + "\n".join(article_paragraphs) + "\n\n"
-            response = json.dumps(annotation_object['task1'])
-            prompts.append(prompt)
-            completions.append(response)
-            f.write(f"{{'prompt': {prompt}, 'completion': '{response}'}}\n")
-    dataset = Dataset.from_dict({
-        'prompt': prompts,
-        'completion': completions
-    }) 
-    dataset.to_json("data/distillation_data/eval_distill_examples.json") 
-    logger.info("Distillation examples created successfully.")
-        # Add more examples or prompts as needed
-        # f.write("Another example prompt here\n")
-
-# @click.command()
-def create_training_dataset_rolling():
-    training_annotations = 'training_data.json'
-    annotation_object = json.load(open(os.path.join("data", training_annotations)))
-
-    def contained_in(entity, entities):
-        """
-        Check if the entity is contained in the list of entities.
-        """
-        for e in entities:
-            if entity in e:
-                return True
-        return False
-
-    paragraphs = []
-    outputs = []
-    subjects = []
-    outlets = []
-    current_mentioned_entities = []
-    total_num_people = 0
-    for fname in os.listdir("data/articles"):
-        first_mentioned_entities = set([])
-        victim_aligned_entities = annotation_object[fname]['task1']['Victim-aligned']
-        police_aligned_entities = annotation_object[fname]['task1']['Police-aligned']
-        total_people_in_article = len(victim_aligned_entities) + len(police_aligned_entities)
-        task_2_corefs = annotation_object[fname]['task2'] # Dict[str, List[str]]
-        perspectives_in_article = 0
-        for i, paragraph in enumerate(json.load(open(os.path.join("data/articles", fname)))):
-            num = i + 1
-            if f"paragraph {num}" not in task_2_corefs:
-                output = "No new entities in this paragraph."
-                new_entities = set()
-            else:
-                paragraph_entities = task_2_corefs[f"paragraph {num}"]
-                new_entities = set(paragraph_entities) - first_mentioned_entities
-                if len(new_entities) == 0:
-                    output = "No new entities in this paragraph."
-                else:
-                    output = []
-                    for entity in new_entities:
-                        if contained_in(entity, victim_aligned_entities):
-                            output.append(f"{entity} (victim-aligned)")
-                            perspectives_in_article += 1
-                        elif contained_in(entity, police_aligned_entities):
-                            output.append(f"{entity} (police-aligned)")
-                            perspectives_in_article += 1
-                        else:
-                            raise ValueError(f"Entity {entity} not found in either victim-aligned or police-aligned entities.")
-                        total_num_people += 1
-                    output = ", ".join(output)
-
-            paragraphs.append(paragraph)
-            current_mentioned_entities.append(tuple(first_mentioned_entities))
-            outputs.append(output)
-            subjects.append(fname.split("_")[1])
-            outlets.append(pathlib.Path(fname.split("_")[2]).stem)
-            first_mentioned_entities.update(new_entities)
-        if perspectives_in_article < total_people_in_article - 1: # subtract victims
-            logger.warning(f"Article {fname} has fewer perspectives ({perspectives_in_article}) than total people ({total_people_in_article - 1}).")
-    logger.info(f"Total number of people identified: {total_num_people}")
-    dataset = Dataset.from_dict({
-        'paragraph': paragraphs,
-        'output': outputs,
-        'subject': subjects,
-        'outlet': outlets,
-        'current_mentioned_entities': current_mentioned_entities
-    })
-    dataset.to_json("data/distillation_data/rolling_training_dataset.json")
-    logger.info("Rolling training dataset created successfully.")
-    return dataset
-
-def compute_metrics(eval_preds):
-    arr = eval_preds.label_ids
-    arr = arr[0]
-    arr = arr[arr != -100]
-    label_text = OLMO_TOKENIZER.decode(arr, skip_special_tokens=True)
-    logger.info(f"Ground Truth: {label_text}")
-
-    predictions = eval_preds.predictions[0]
-    mask = ~(predictions == -100).all(axis=1)
-    predictions = predictions[mask]
-    predicted_string = OLMO_TOKENIZER.decode(predictions.argmax(axis=1), skip_special_tokens=True)
-    logger.info(f"Prediction: {predicted_string}")
-    return {"accuracy": 0}
-
-# def compute_metrics_flan(eval_preds):
-
-
 def preprocess_function(tokenizer, sample):
     model_inputs = tokenizer(sample['prompt']) # don't pad in preprocessing
     label_str = f"{sample['completion']}"
@@ -153,7 +43,7 @@ def preprocess_function(tokenizer, sample):
     model_inputs["labels"] = labels["input_ids"]
     return model_inputs
 
-class CustomTrainer(Trainer):
+class CustomSeq2SeqTrainer(Seq2SeqTrainer):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -174,39 +64,12 @@ class CustomTrainer(Trainer):
             tokenizer = self.tokenizer
             for i, _data in enumerate(eval_dataloader):
                 example_text = tokenizer.batch_decode(_data['input_ids'], skip_special_tokens=True)[0]
-                input_example = example_text[:example_text.rfind('\n\n')] + "### Answer:"
-                tokenized_input = tokenizer(input_example, return_tensors="pt").to(model.device)
-                prediction = model.generate(
-                    **tokenized_input, 
-                    do_sample=True, 
-                    top_k=50, 
-                    top_p=0.95,
-                    max_new_tokens=1000
-                )
-                prediction_text = tokenizer.batch_decode(prediction, skip_special_tokens=True)[0]
-                prediction_text_answer = prediction_text[prediction_text.rfind("### Answer:") + len("### Answer:"):].strip()
-                logger.info(f"ANSWER: {prediction_text_answer}")
+                ipdb.set_trace()
                 break
                 if i == 0:
                     logger.info(f"Eval batch {_data}")
             metrics = {'wer': 0}
             return metrics
-
-def preprocess_text(samples):
-    batch = OLMO_TOKENIZER([samples['prompt'][i] + samples['completion'][i] for i in range(len(samples['prompt']))], 
-                           padding=True,
-                           return_tensors="pt")
-    batch['labels'] = batch['input_ids'].clone()
-    return batch
-
-def get_model(model_name):
-    if model_name == 'olmo':
-        model = AutoModelForCausalLM.from_pretrained("allenai/OLMo-2-0425-1B", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
-    elif model_name == 'meta':
-        model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-3.2-1B", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
-    elif model_name == 'olmo-7b':
-        model = AutoModelForCausalLM.from_pretrained("allenai/OLMo-7B-hf", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
-    return model
 
 def tokenize_batch_flan_fn(samples):
     model_inputs = FLAN_TOKENIZER(samples['prompt'], padding=True, truncation=True, return_tensors="pt")
@@ -270,7 +133,7 @@ def distill_flant5():
         label_pad_token_id=label_pad_token_id, 
         padding=True, 
     )
-    trainer = Seq2SeqTrainer(
+    trainer = CustomSeq2SeqTrainer(
         model=model,
         args=training_arguments,
         train_dataset=train_dataset,
@@ -465,7 +328,6 @@ def create_coref_training_dataset():
     })
     dataset.to_json("data/distillation_data/coref_training_dataset.json")
 
-main.add_command(create_distillation_examples_task1)
 main.add_command(distill_flant5)
 # main.add_command(create_training_dataset_rolling)
 main.add_command(compute_required_memory)
