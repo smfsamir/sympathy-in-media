@@ -66,7 +66,7 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
                                                       skip_special_tokens=True)[0]
                 example_output_text = tokenizer.batch_decode(_data['labels'], 
                                                        skip_special_tokens=True)[0]
-                if '{' not in example_output_text and '}' not in example_output_text:
+                if "the entity name is" not in example_output_text.lower():
                     continue # we're looking for a target JSON output
                 logger.info(f"Target text: {example_output_text}")
                 prediction_logits = model.generate(
