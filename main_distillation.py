@@ -78,7 +78,7 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
                     pass
                 else:
                     logger.warning(f"Predicted text not in expected format: {predicted_text}")
-                ipdb.set_trace()
+                break
             metrics = {'wer': 0}
             return metrics
 
