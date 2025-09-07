@@ -72,6 +72,7 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
 def tokenize_batch_flan_fn(tokenizer, samples):
     model_inputs = tokenizer(samples['prompt'], padding=True, truncation=True, return_tensors="pt")
     labels = tokenizer(samples['completion'], padding=True, truncation=True, return_tensors="pt")['input_ids']
+    ipdb.set_trace()
     model_inputs['labels'] = labels
     return model_inputs
 
