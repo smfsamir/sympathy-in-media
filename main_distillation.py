@@ -112,6 +112,7 @@ def distill_flant5():
     )
     model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-large", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
     new_tokens = ["\n", "{", "}"]
+    new_tokens = set(new_tokens) - set(FLAN_TOKENIZER.vocab.keys())
     FLAN_TOKENIZER.add_tokens(new_tokens)
     model.resize_token_embeddings(len(FLAN_TOKENIZER))
     training_arguments = Seq2SeqTrainingArguments(
