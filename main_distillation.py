@@ -229,7 +229,7 @@ def distill_flant5():
 
     subjects_unique = set(dataset['victim_name'])
     train_subjects = set(random.sample(subjects_unique, int(len(subjects_unique) * 0.6)))
-    dev_subjects = train_subjects - subjects_unique
+    dev_subjects = subjects_unique - train_subjects
 
     logger.info(f"Train subjects: {train_subjects}")
     logger.info(f"Dev subjects: {dev_subjects}")
