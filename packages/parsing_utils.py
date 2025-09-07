@@ -1,7 +1,7 @@
 import os
 import json
 from dataclasses import dataclass
-from typing import List, Tuple, Optional, Set
+from typing import List, Tuple, Optional, Set, Iterable
 
 @dataclass
 class CorefEntityMetadata:
