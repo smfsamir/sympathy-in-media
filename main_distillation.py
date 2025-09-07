@@ -77,8 +77,9 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
                 predicted_text = tokenizer.batch_decode(prediction_logits, skip_special_tokens=True)[0]
                 if "There is no valid entity providing a perspective here." in predicted_text:
                     logger.info(f"Got a no entity response")
-                elif "{" in predicted_text and "}" in predicted_text:
-                    logger.info(f"Got a JSON response: {predicted_text}")
+                # elif "{" in predicted_text and "}" in predicted_text:
+                elif "the entity name is" in predicted_text.lower():
+                    logger.info(f"Got a valid entity response: {predicted_text}")
                 else:
                     logger.warning(f"Predicted text not in expected format: {predicted_text}")
                 break
@@ -114,6 +115,10 @@ def distill_flant5():
     # split train_dataset into train and validation sets
     train_dataset =  dataset.filter(lambda example: example['victim_name'] in train_subjects)
     eval_dataset = dataset.filter(lambda example: example['victim_name'] in dev_subjects)
+
+    # check the fraction of valid entities in the train and eval sets
+    logger.info(f"Train valid entities proportion: {sum(train_dataset['valid_entity'])} / {len(train_dataset)}")
+    logger.info(f"Eval valid entities proportion: {sum(eval_dataset['valid_entity'])} / {len(eval_dataset)}")
 
     model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-large", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
     new_tokens = ["{", "}"]
