@@ -255,7 +255,7 @@ def distill_flant5():
         per_device_eval_batch_size=2,
         max_steps=1000,
         logging_steps=10,
-        eval_strategy="steps",
+        evaluation_strategy="steps",
         save_strategy="steps",
         eval_steps=10,
         save_steps=100,
