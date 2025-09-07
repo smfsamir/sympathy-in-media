@@ -437,6 +437,7 @@ def create_coref_training_dataset():
     imperfect_articles = pd.read_csv('data/imperfect_articles.csv')['article'].tolist()
     perfect_articles = set(all_articles) - set(imperfect_articles)
     training_set = []
+    victim_names = []
     for article in perfect_articles:
         # load the coref object and the annotation object
         article_index = article.split('_')[0]
@@ -454,12 +455,13 @@ def create_coref_training_dataset():
                 training_annotation_entity=annotations
             )
             training_set.extend(training_instances)
+            victim_names.extend([person_name] * len(training_instances))
     dataset = Dataset.from_dict({
         'prompt': [instance['prompt'] for instance in training_set],
         'completion': [instance['completion'] for instance in training_set],
         'entity_name': [instance['entity_name'] for instance in training_set],
         'valid_entity': [instance['valid_entity'] for instance in training_set],
-        'victim_name': [instance['victim_name'] for instance in training_set],
+        'victim_name': victim_names
     })
     dataset.to_json("data/distillation_data/coref_training_dataset.json")
 
