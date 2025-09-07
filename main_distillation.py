@@ -28,9 +28,7 @@ logger = loguru.logger
 # response = olmo.generate(**inputs, max_new_tokens=100, do_sample=True, top_k=50, top_p=0.95)
 # print(tokenizer.batch_decode(response, skip_special_tokens=True)[0])
 
-OLMO_TOKENIZER = AutoTokenizer.from_pretrained("allenai/OLMo-1B-hf")
 FLAN_TOKENIZER = AutoTokenizer.from_pretrained("google/flan-t5-base")
-META_TOKENIZER = AutoTokenizer.from_pretrained("meta-llama/Llama-3.2-1B")
 
 @click.command()
 def create_distillation_examples_task1():
@@ -125,43 +123,6 @@ def create_training_dataset_rolling():
     logger.info("Rolling training dataset created successfully.")
     return dataset
 
-@click.command()
-def create_training_dataset():
-    prompts = []
-    completions = []
-    training_annotations = 'training_data.json'
-    annotation_object = json.load(open(os.path.join("data", training_annotations)))
-    eval_fnames = os.listdir("data/evaluation_dataset")
-
-    paragraph_num_tokens = []
-    flan_num_tokens = []
-    num_words = []
-
-    for fname in os.listdir("data/articles"):
-        if fname in eval_fnames:
-            continue
-        else:
-            person_annotations = annotation_object[fname]
-        article_paragraphs = '\n'.join([f"{i+1}. {paragraph}" for i, paragraph in enumerate(json.load(open(os.path.join("data/articles", fname))))])
-        paragraph_num_tokens.append(len(OLMO_TOKENIZER(article_paragraphs)['input_ids']))
-        flan_num_tokens.append(len(FLAN_TOKENIZER(article_paragraphs)['input_ids']))
-        num_words.append(len(article_paragraphs.split()))
-        prompt = f"{TASK_1_PROMPT}" + article_paragraphs
-        response = f"### Answer: {json.dumps(person_annotations['task1'])}"
-        prompts.append(prompt)
-        completions.append(response)
-    dataset = Dataset.from_dict({
-        'prompt': prompts,
-        'completion': completions
-    }) 
-    prompt_length = len(OLMO_TOKENIZER.encode(TASK_1_PROMPT))
-    dataset.to_json("data/distillation_data/train_distill_examples.json") 
-    # with open("data/distillation_data/train_distill_examples.json", "r") as f:
-    #     object = json.load(f)
-    dataset = load_dataset("json", data_files={'train': "data/distillation_data/train_distill_examples.json"}, split='train')
-    logger.info("Distillation examples created successfully.")
-    pass
-
 def compute_metrics(eval_preds):
     arr = eval_preds.label_ids
     arr = arr[0]
@@ -247,73 +208,9 @@ def get_model(model_name):
         model = AutoModelForCausalLM.from_pretrained("allenai/OLMo-7B-hf", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
     return model
 
-def get_tokenizer(model_name):
-    cache_dir = os.path.join(config['SCRATCH_DIR'], "transformers_cache")
-    if model_name == 'olmo':
-        tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-2-0425-1B", cache_dir=cache_dir)
-    elif model_name == 'meta':
-        tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-3.2-1B", cache_dir=cache_dir)
-        tokenizer.pad_token = tokenizer.eos_token
-    return tokenizer
-
-@click.command()
-@click.option('--learning_rate', type=float, default=2e-5)
-@click.option('--num_training_steps', type=int, default=100)
-@click.option('--warmup_steps', type=int, default=100)
-@click.option('--weight_decay', type=float, default=0.01)
-@click.option('--model_name', type=click.Choice(['olmo', 'flan', 'meta']), default='olmo')
-def distill_task1_olmo(learning_rate, num_training_steps, warmup_steps, weight_decay, model_name):
-
-    # olmo = AutoModelForCausalLM.from_pretrained("allenai/OLMo-2-0425-1B")
-    # tokenizer = AutoTokenizer.from_pretrained("allenai/OLMo-2-0425-1B")
-    SCRATCH_DIR = config['SCRATCH_DIR']
-    eval_dataset = load_dataset("json", data_files={'test': "data/distillation_data/distill_examples.json"}, split='test')
-    train_dataset = load_dataset("json", data_files={'train': "data/distillation_data/train_distill_examples.json"}, split='train')
-    train_dataset = train_dataset.map(
-        preprocess_text, 
-        batched=True,
-    )
-    eval_dataset = eval_dataset.map(
-        preprocess_text, 
-        batched=True,
-    )
-
-    model = get_model(model_name)
-    tokenizer = get_tokenizer(model_name)
-
-    training_arguments = TrainingArguments(
-        output_dir=os.path.join(SCRATCH_DIR, "sympathy_task_1"),
-        per_device_train_batch_size=2,
-        per_device_eval_batch_size=2,
-        max_steps=num_training_steps,
-        logging_steps=10,
-        eval_strategy="steps",
-        save_strategy="steps",
-        eval_steps=10,
-        save_steps=100,
-        learning_rate=learning_rate,
-        weight_decay=weight_decay,
-        warmup_steps=warmup_steps
-    )
-    collator = DataCollatorForLanguageModeling(tokenizer = tokenizer, mlm=False)
-    trainer = CustomTrainer(
-        model=model,
-        args=training_arguments,
-        train_dataset=train_dataset,
-        eval_dataset=eval_dataset,
-        data_collator=collator, 
-        tokenizer=tokenizer
-    )
-    trainer.train()
-
-
-def preprocess_flan_fn(sample):
-    prompt = f"Here's an article about {sample['subject']}, who was killed by police as reported by {sample['outlet']}. Identify entities (people, organizations) who are expressing a perspective about the incident. Here are the roles we've identified so far: {sample['current_mentioned_entities']}. Identify NEW people/agencies providing a perspective, if any, in this paragraph:\n\n{sample['paragraph']}"
-    return {'prompt': prompt, 'response': sample['output']}
-
 def tokenize_batch_flan_fn(samples):
     model_inputs = FLAN_TOKENIZER(samples['prompt'], padding=True, truncation=True, return_tensors="pt")
-    labels = FLAN_TOKENIZER(samples['response'], padding=True, truncation=True, return_tensors="pt")['input_ids']
+    labels = FLAN_TOKENIZER(samples['completion'], padding=True, truncation=True, return_tensors="pt")['input_ids']
     model_inputs['labels'] = labels
     return model_inputs
 
@@ -328,39 +225,32 @@ def distill_flant5():
         cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache")
     )
 
-    dataset = load_dataset("json", data_files={'train': "data/distillation_data/rolling_training_dataset.json"}, split='train')
+    dataset = load_dataset("json", data_files={'train': "data/distillation_data/coref_training_dataset.json"}, split='train')
 
-    subjects_unique = set(dataset['subject'])
+    subjects_unique = set(dataset['victim_name'])
     train_subjects = set(random.sample(subjects_unique, int(len(subjects_unique) * 0.6)))
-    dev_subjects = set(random.sample(subjects_unique - train_subjects, int(len(subjects_unique) * 0.2)))
-    test_subjects = subjects_unique - train_subjects - dev_subjects
+    dev_subjects = train_subjects - subjects_unique
 
     logger.info(f"Train subjects: {train_subjects}")
     logger.info(f"Dev subjects: {dev_subjects}")
-    logger.info(f"Test subjects: {test_subjects}")
     # rolling_training_dataset.json
     # split train_dataset into train and validation sets
-    train_dataset =  dataset.filter(lambda example: example['subject'] in train_subjects)
-    eval_dataset = dataset.filter(lambda example: example['subject'] in dev_subjects)
+    train_dataset =  dataset.filter(lambda example: example['victim_name'] in train_subjects)
+    eval_dataset = dataset.filter(lambda example: example['victim_name'] in dev_subjects)
 
     train_dataset = train_dataset.map(
-        preprocess_flan_fn, 
-        remove_columns=['output', 'subject', 'outlet', 'current_mentioned_entities'],
-    ).map(
         tokenize_batch_flan_fn, 
-        batched=True,
+        batched=True
     )
+        # preprocess_flan_fn, 
+        # remove_columns=['output', 'subject', 'outlet', 'current_mentioned_entities'],
     eval_dataset = eval_dataset.map(
-        preprocess_flan_fn, 
-        remove_columns=['output', 'subject', 'outlet', 'current_mentioned_entities'],
-    ).map(
         tokenize_batch_flan_fn, 
-        batched=True,
+        batched=True
     )
-
     model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-large", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
     training_arguments = Seq2SeqTrainingArguments(
-        output_dir=os.path.join(config['SCRATCH_DIR'], "sympathy_task_1_flan"),
+        output_dir=os.path.join(config['SCRATCH_DIR'], "sympathy_distillation"),
         per_device_train_batch_size=2,
         per_device_eval_batch_size=2,
         max_steps=1000,
@@ -389,7 +279,6 @@ def distill_flant5():
         tokenizer=FLAN_TOKENIZER
     )
     trainer.train()
-
 
 @click.group()
 def main():
@@ -504,7 +393,7 @@ def construct_length_limited_prompt(victim_name: str,
         output_str = json.dumps({'entity_name': coref_entity_obj.entity_name, 'police_aligned': coref_entity_obj.police_aligned,'perspective_paragraphs': subset_indices})
     else:
         output_str = f"### Answer: There is no valid entity providing a perspective here."
-    return {'prompt': task_instruction_str, 'completion': output_str}
+    return {'prompt': task_instruction_str, 'completion': output_str, 'entity_name': coref_entity_obj.entity_name, 'valid_entity': coref_entity_obj.valid_entity, victim_name: victim_name}
 
 def _create_training_instance(victim_name: str, 
                               all_paragraphs: List[str], 
@@ -565,12 +454,17 @@ def create_coref_training_dataset():
                 training_annotation_entity=annotations
             )
             training_set.extend(training_instances)
-    print(len(training_set))
+    dataset = Dataset.from_dict({
+        'prompt': [instance['prompt'] for instance in training_set],
+        'completion': [instance['completion'] for instance in training_set],
+        'entity_name': [instance['entity_name'] for instance in training_set],
+        'valid_entity': [instance['valid_entity'] for instance in training_set],
+        'victim_name': [instance['victim_name'] for instance in training_set],
+    })
+    dataset.to_json("data/distillation_data/coref_training_dataset.json")
 
 main.add_command(create_distillation_examples_task1)
-main.add_command(distill_task1_olmo)
 main.add_command(distill_flant5)
-main.add_command(create_training_dataset)
 # main.add_command(create_training_dataset_rolling)
 main.add_command(compute_required_memory)
 main.add_command(assess_baseline_ner_model)
@@ -592,5 +486,3 @@ if __name__ == "__main__":
     # print(f"TRAINING_STEPS=({training_steps})")
     # print(f"WARMUP_STEPS=({warmup_steps})")
     # print(f"WEIGHT_DECAYS=({weight_decays})")
-
-    # # main()
