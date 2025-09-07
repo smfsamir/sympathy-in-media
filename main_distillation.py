@@ -302,14 +302,15 @@ def _create_training_instance(victim_name: str,
             coref_auto_indices=coref_indices,
             annotation_indices=get_manual_annotation_occurrences(training_annotation_entity, coref_metadata_obj.entity_name) if coref_metadata_obj.valid_entity else []
         ))
-        if coref_metadata_obj.valid_entity:
-            output_dict = json.loads(training_instances[-1]['completion'])
-            if len(output_dict['perspective_paragraphs']) > 0:
-                all_perspective_paragraphs_empty = False
+    # NOTE: uncomment this after figuring out how to load the set of perspective paragraphs in the natural language format
+    #     if coref_metadata_obj.valid_entity:
+    #         output_dict = json.loads(training_instances[-1]['completion'])
+    #         if len(output_dict['perspective_paragraphs']) > 0:
+    #             all_perspective_paragraphs_empty = False
 
-    if coref_metadata_obj.valid_entity and all_perspective_paragraphs_empty:
-        logger.warning("Valid entity but no perspective paragraphs found")
-        ipdb.set_trace()
+    # if coref_metadata_obj.valid_entity and all_perspective_paragraphs_empty:
+    #     logger.warning("Valid entity but no perspective paragraphs found")
+    #     ipdb.set_trace()
     return training_instances
 
     
