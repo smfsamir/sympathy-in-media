@@ -1,6 +1,7 @@
+import os
 import json
 from dataclasses import dataclass
-from typing import List, Tuple, Optional
+from typing import List, Tuple, Optional, Set
 
 @dataclass
 class CorefEntityMetadata:
@@ -57,3 +58,9 @@ def retrieve_entity_from_coref_objs(coref_objs: List[CorefEntityMetadata],
         if coref_obj.entity_name.lower() == entity_name.lower():
             return coref_obj
     raise ValueError(f"Could not find coref object for entity {entity_name}.")
+
+def load_repaired_articles(path: str="data/repaired_coref_annotations") -> Iterable[str]:
+    articles = os.listdir(path)
+    # remove _repaired suffix, just before the .json extension. Keep the .json extension
+    # articles = set([article.replace('_repaired', '') for article in articles])
+    return articles

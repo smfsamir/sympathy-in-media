@@ -17,7 +17,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, Seq2SeqTrainingArg
 from dataclasses import dataclass
 from datasets import load_dataset, Dataset
 from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
-from packages.parsing_utils import CorefEntityMetadata, get_manual_annotation_occurrences, load_article_paragraphs, load_training_data_annotations_for_person
+from packages.parsing_utils import CorefEntityMetadata, get_manual_annotation_occurrences, load_article_paragraphs, load_repaired_articles, load_training_data_annotations_for_person
 
 config = dotenv_values(".env")
 logger = loguru.logger
@@ -330,7 +330,7 @@ def create_coref_training_dataset():
     # TODO: note that some people have multiple articles from one outlet (Charles Qirnirq)
     all_articles = os.listdir("data/linked_coref_annotations")
     imperfect_articles = pd.read_csv('data/imperfect_articles.csv')['article'].tolist()
-    repaired_articles = ... # TODO: load a set here.
+    repaired_articles = load_repaired_articles()
     perfect_articles = set(all_articles) - set(imperfect_articles)
     training_set = []
     victim_names = []
@@ -344,7 +344,8 @@ def create_coref_training_dataset():
         paragraphs = load_article_paragraphs(article)
         coref_metadata_objects = [CorefEntityMetadata(**obj) for obj in json.load(open(os.path.join("data/linked_coref_annotations", article)))]
         # TODO: load the repaired articles here, separately.
-        for coref_obj in coref_metadata_objects:
+        repaired_metadata_objects = [CorefEntityMetadata(**obj) for obj in json.load(open(os.path.join("data/repaired_coref_annotations", article)))]
+        for coref_obj in coref_metadata_objects + repaired_metadata_objects:
             training_instances = _create_training_instance(
                 victim_name=person_name,
                 all_paragraphs=paragraphs,
