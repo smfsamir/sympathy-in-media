@@ -157,7 +157,7 @@ def distill_flant5():
         data_collator=data_collator, 
         tokenizer=FLAN_TOKENIZER
     )
-    trainer.train()
+    trainer.train(resume_from_checkpoint=True)
 
 @click.group()
 def main():
