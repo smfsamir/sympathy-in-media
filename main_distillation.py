@@ -69,9 +69,9 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
             metrics = {'wer': 0}
             return metrics
 
-def tokenize_batch_flan_fn(samples):
-    model_inputs = FLAN_TOKENIZER(samples['prompt'], padding=True, truncation=True, return_tensors="pt")
-    labels = FLAN_TOKENIZER(samples['completion'], padding=True, truncation=True, return_tensors="pt")['input_ids']
+def tokenize_batch_flan_fn(tokenizer, samples):
+    model_inputs = tokenizer(samples['prompt'], padding=True, truncation=True, return_tensors="pt")
+    labels = tokenizer(samples['completion'], padding=True, truncation=True, return_tensors="pt")['input_ids']
     model_inputs['labels'] = labels
     return model_inputs
 
@@ -100,13 +100,13 @@ def distill_flant5():
     eval_dataset = dataset.filter(lambda example: example['victim_name'] in dev_subjects)
 
     train_dataset = train_dataset.map(
-        tokenize_batch_flan_fn, 
+        partial(tokenize_batch_flan_fn, FLAN_TOKENIZER), 
         batched=True
     )
         # preprocess_flan_fn, 
         # remove_columns=['output', 'subject', 'outlet', 'current_mentioned_entities'],
     eval_dataset = eval_dataset.map(
-        tokenize_batch_flan_fn, 
+        partial(tokenize_batch_flan_fn, FLAN_TOKENIZER), 
         batched=True
     )
     model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-large", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
