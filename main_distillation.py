@@ -73,9 +73,9 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
                 )                                    
                 predicted_text = tokenizer.batch_decode(prediction_logits, skip_special_tokens=True)[0]
                 if "There is no valid entity providing a perspective here." in predicted_text:
-                    pass
+                    logger.info(f"Got a no entity response")
                 elif "{" in predicted_text and "}" in predicted_text:
-                    pass
+                    logger.info(f"Got a JSON response: {predicted_text}")
                 else:
                     logger.warning(f"Predicted text not in expected format: {predicted_text}")
                 break
