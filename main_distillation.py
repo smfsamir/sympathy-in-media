@@ -1,3 +1,4 @@
+import wandb
 import pandas as pd
 import random
 import pathlib
@@ -136,6 +137,7 @@ def distill_flant5():
         partial(tokenize_batch_flan_fn, FLAN_TOKENIZER), 
         batched=True
     )
+    wandb.init(project="sympathy")
     training_arguments = Seq2SeqTrainingArguments(
         output_dir=os.path.join(config['SCRATCH_DIR'], "sympathy_distillation"),
         per_device_train_batch_size=8,
@@ -148,7 +150,8 @@ def distill_flant5():
         save_steps=100,
         learning_rate=2e-5,
         weight_decay=0.01,
-        warmup_steps=100
+        warmup_steps=100,
+        report_to="wandb"
     )
     label_pad_token_id = -100
     data_collator = DataCollatorForSeq2Seq(
