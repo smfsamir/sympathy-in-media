@@ -100,6 +100,12 @@ def distill_flant5():
     train_dataset =  dataset.filter(lambda example: example['victim_name'] in train_subjects)
     eval_dataset = dataset.filter(lambda example: example['victim_name'] in dev_subjects)
 
+    model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-large", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
+    new_tokens = ["\n", "{", "}"]
+    new_tokens = set(new_tokens) - set(FLAN_TOKENIZER.vocab.keys())
+    new_tokens = list(new_tokens)
+    FLAN_TOKENIZER.add_tokens(new_tokens)
+    model.resize_token_embeddings(len(FLAN_TOKENIZER))
     train_dataset = train_dataset.map(
         partial(tokenize_batch_flan_fn, FLAN_TOKENIZER), 
         batched=True
@@ -110,12 +116,6 @@ def distill_flant5():
         partial(tokenize_batch_flan_fn, FLAN_TOKENIZER), 
         batched=True
     )
-    model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-large", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
-    new_tokens = ["\n", "{", "}"]
-    new_tokens = set(new_tokens) - set(FLAN_TOKENIZER.vocab.keys())
-    new_tokens = list(new_tokens)
-    FLAN_TOKENIZER.add_tokens(new_tokens)
-    model.resize_token_embeddings(len(FLAN_TOKENIZER))
     training_arguments = Seq2SeqTrainingArguments(
         output_dir=os.path.join(config['SCRATCH_DIR'], "sympathy_distillation"),
         per_device_train_batch_size=2,
