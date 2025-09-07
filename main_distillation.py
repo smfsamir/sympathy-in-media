@@ -140,8 +140,8 @@ def distill_flant5():
     wandb.init(project="sympathy")
     training_arguments = Seq2SeqTrainingArguments(
         output_dir=os.path.join(config['SCRATCH_DIR'], "sympathy_distillation"),
-        per_device_train_batch_size=8,
-        per_device_eval_batch_size=8,
+        per_device_train_batch_size=16,
+        per_device_eval_batch_size=16,
         max_steps=1000,
         logging_steps=10,
         evaluation_strategy="steps",
@@ -329,6 +329,7 @@ def create_coref_training_dataset():
     # TODO: note that some people have multiple articles from one outlet (Charles Qirnirq)
     all_articles = os.listdir("data/linked_coref_annotations")
     imperfect_articles = pd.read_csv('data/imperfect_articles.csv')['article'].tolist()
+    repaired_articles = ... # TODO: load a set here.
     perfect_articles = set(all_articles) - set(imperfect_articles)
     training_set = []
     victim_names = []
@@ -341,6 +342,7 @@ def create_coref_training_dataset():
         # coref_metadata_objects = [CorefEntityMetadata(**obj) for obj in json.load(open(os.path.join("data/coref_metadata", article)))]
         paragraphs = load_article_paragraphs(article)
         coref_metadata_objects = [CorefEntityMetadata(**obj) for obj in json.load(open(os.path.join("data/linked_coref_annotations", article)))]
+        # TODO: load the repaired articles here, separately.
         for coref_obj in coref_metadata_objects:
             training_instances = _create_training_instance(
                 victim_name=person_name,
