@@ -62,10 +62,23 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
             model = self.model
             tokenizer = self.tokenizer
             for i, _data in enumerate(eval_dataloader):
-                example_text = tokenizer.batch_decode(_data['input_ids'], skip_special_tokens=True)[0]
+                example_input_text = tokenizer.batch_decode(_data['input_ids'], 
+                                                      skip_special_tokens=True)[0]
+                example_output_text = tokenizer.batch_decode(_data['labels'], 
+                                                       skip_special_tokens=True)[0]
+                prediction_logits = model.generate(
+                    input_ids=_data['input_ids'].to(self.args.device), 
+                    attention_mask=_data['attention_mask'].to(self.args.device), 
+                    max_new_tokens=300
+                )                                    
+                predicted_text = tokenizer.batch_decode(prediction_logits, skip_special_tokens=True)[0]
+                if "There is no valid entity providing a perspective here." in predicted_text:
+                    pass
+                elif "{" in predicted_text and "}" in predicted_text:
+                    pass
+                else:
+                    logger.warning(f"Predicted text not in expected format: {predicted_text}")
                 ipdb.set_trace()
-                if i == 0:
-                    logger.info(f"Eval batch {_data}")
             metrics = {'wer': 0}
             return metrics
 
@@ -258,7 +271,7 @@ def construct_length_limited_prompt(victim_name: str,
         # if len(intersection_indices) == 0: # TODO: this is more likely to happen, since you're not doing the split...
         output_str = json.dumps({'entity_name': coref_entity_obj.entity_name, 'police_aligned': coref_entity_obj.police_aligned,'perspective_paragraphs': subset_indices})
     else:
-        output_str = f"### Answer: There is no valid entity providing a perspective here."
+        output_str = f"There is no valid entity providing a perspective here."
     return {'prompt': task_instruction_str, 'completion': output_str, 'entity_name': coref_entity_obj.entity_name, 'valid_entity': coref_entity_obj.valid_entity, victim_name: victim_name}
 
 def _create_training_instance(victim_name: str, 
