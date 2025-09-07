@@ -72,7 +72,6 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
 def tokenize_batch_flan_fn(tokenizer, samples):
     model_inputs = tokenizer(samples['prompt'], padding=True, truncation=True, return_tensors="pt")
     labels = tokenizer(samples['completion'], padding=True, truncation=True, return_tensors="pt")['input_ids']
-    ipdb.set_trace()
     model_inputs['labels'] = labels
     return model_inputs
 
@@ -101,7 +100,7 @@ def distill_flant5():
     eval_dataset = dataset.filter(lambda example: example['victim_name'] in dev_subjects)
 
     model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-large", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
-    new_tokens = ["\n", "{", "}"]
+    new_tokens = ["{", "}"]
     new_tokens = set(new_tokens) - set(FLAN_TOKENIZER.vocab.keys())
     new_tokens = list(new_tokens)
     FLAN_TOKENIZER.add_tokens(new_tokens)
