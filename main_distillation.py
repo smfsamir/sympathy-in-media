@@ -138,8 +138,8 @@ def distill_flant5():
     )
     training_arguments = Seq2SeqTrainingArguments(
         output_dir=os.path.join(config['SCRATCH_DIR'], "sympathy_distillation"),
-        per_device_train_batch_size=2,
-        per_device_eval_batch_size=2,
+        per_device_train_batch_size=8,
+        per_device_eval_batch_size=8,
         max_steps=1000,
         logging_steps=10,
         evaluation_strategy="steps",
