@@ -28,7 +28,6 @@ logger = loguru.logger
 # response = olmo.generate(**inputs, max_new_tokens=100, do_sample=True, top_k=50, top_p=0.95)
 # print(tokenizer.batch_decode(response, skip_special_tokens=True)[0])
 
-FLAN_TOKENIZER = AutoTokenizer.from_pretrained("google/flan-t5-base")
 
 def preprocess_function(tokenizer, sample):
     model_inputs = tokenizer(sample['prompt']) # don't pad in preprocessing
