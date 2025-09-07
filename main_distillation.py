@@ -65,7 +65,6 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
             for i, _data in enumerate(eval_dataloader):
                 example_text = tokenizer.batch_decode(_data['input_ids'], skip_special_tokens=True)[0]
                 ipdb.set_trace()
-                break
                 if i == 0:
                     logger.info(f"Eval batch {_data}")
             metrics = {'wer': 0}
@@ -112,6 +111,9 @@ def distill_flant5():
         batched=True
     )
     model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-large", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
+    new_tokens = ["\n", "{", "}"]
+    FLAN_TOKENIZER.add_tokens(new_tokens)
+    model.resize_token_embeddings(len(FLAN_TOKENIZER))
     training_arguments = Seq2SeqTrainingArguments(
         output_dir=os.path.join(config['SCRATCH_DIR'], "sympathy_distillation"),
         per_device_train_batch_size=2,
