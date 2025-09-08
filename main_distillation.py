@@ -259,23 +259,14 @@ def assess_ft_flan_model():
                      'Dillon Warren Breed']
 
     eval_dataset = dataset.filter(lambda example: example['victim_name'] in eval_subjects) 
-    def generate_predictions(batch):
-        inputs = tokenizer(batch['prompt'], return_tensors='pt', padding=True, truncation=True).to('cuda')
-        outputs = flan_t5.generate(
-            input_ids=inputs['input_ids'], 
-            attention_mask=inputs['attention_mask'], 
-            max_new_tokens=300
-        )
-        batch['predicted_text'] = tokenizer.batch_decode(outputs, skip_special_tokens=True)
-        return batch
     
-    def evaluate_entity_identified(example): # not batched
+    def evaluate_entity_identified_batch(batch): # not batched
         no_entity_str = "there is no valid entity providing a perspective here."
         entity_present_str = "the entity name is"
-        ground_truth = example['completion'].lower()
-        prediction = example['predicted_text'].lower()
+        ground_truth = batch['completion'].lower()
+        prediction = batch['predicted_text'].lower()
         if entity_present_str in ground_truth:
-            example['valid_entity'] = 1
+            batch['valid_entity'] = 1
             if entity_present_str in prediction:
                 is_correct = 1
             else:
@@ -288,8 +279,8 @@ def assess_ft_flan_model():
         else:
             logger.warning(f"Ground truth not in expected format: {ground_truth}")
             raise ValueError(f"Ground truth not in expected format: {ground_truth}")
-        example['entity_identified_correct'] = is_correct
-        return example
+        batch['entity_identified_correct'] = is_correct
+        return batch
 
     eval_dataset = eval_dataset.map(
         partial(tokenize_batch_flan_fn, tokenizer), 
@@ -300,7 +291,7 @@ def assess_ft_flan_model():
     eval_dataset = eval_dataset.map(generate_predictions, 
                                     batched=True, 
                                     batch_size=8)
-    eval_dataset = eval_dataset.map(evaluate_entity_identified)
+    eval_dataset = eval_dataset.map(evaluate_entity_identified_batch)
     ipdb.set_trace()
 
     trainer = CustomSeq2SeqTrainer(
