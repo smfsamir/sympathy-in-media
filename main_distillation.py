@@ -263,6 +263,25 @@ def assess_ft_flan_model():
         )
         batch['predicted_text'] = tokenizer.batch_decode(outputs, skip_special_tokens=True)
         return batch
+    
+    def evaluate_entity_identified(example): # not batched
+        no_entity_str = "there is no valid entity providing a perspective here."
+        entity_present_str = "the entity name is"
+        ground_truth = example['completion'].lower()
+        prediction = example['predicted_text'].lower()
+        if entity_present_str in ground_truth:
+            if entity_present_str in prediction:
+                return 1
+            else:
+                return 0
+        elif no_entity_str in ground_truth:
+            if no_entity_str in prediction:
+                return 1
+            else:
+                return 0
+        else:
+            logger.warning(f"Ground truth not in expected format: {ground_truth}")
+            return 0
 
     eval_dataset = eval_dataset.map(
         partial(tokenize_batch_flan_fn, tokenizer), 
@@ -273,6 +292,7 @@ def assess_ft_flan_model():
     eval_dataset = eval_dataset.map(generate_predictions, 
                                     batched=True, 
                                     batch_size=8)
+    eval_dataset = eval_dataset.map(evaluate_entity_identified)
     ipdb.set_trace()
     # for subject in eval_subjects:
     #     eval_subset = dataset.filter(lambda example: example['subject'] == subject) # is this still in the right order?
