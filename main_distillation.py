@@ -302,6 +302,18 @@ def assess_ft_flan_model():
                                     batch_size=8)
     eval_dataset = eval_dataset.map(evaluate_entity_identified)
     ipdb.set_trace()
+
+    trainer = CustomSeq2SeqTrainer(
+        model=flan_t5,
+        args=Seq2SeqTrainingArguments(
+            output_dir=os.path.join(config['SCRATCH_DIR'], "sympathy_distillation"),
+            per_device_eval_batch_size=8,
+            report_to="none"
+        ),
+        eval_dataset=eval_dataset,
+        tokenizer=tokenizer
+    )
+    trainer.evaluate()
     # for subject in eval_subjects:
     #     eval_subset = dataset.filter(lambda example: example['subject'] == subject) # is this still in the right order?
         # eval_subset = eval_subset.map(
