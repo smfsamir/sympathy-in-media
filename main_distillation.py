@@ -288,7 +288,7 @@ def assess_ft_flan_model():
     )
     assert 'input_ids' in eval_dataset.column_names
     assert 'labels' in eval_dataset.column_names
-    eval_dataset = eval_dataset.map(generate_predictions, 
+    eval_dataset = eval_dataset.map(partial(generate_predictions, flan_t5, tokenizer),
                                     batched=True, 
                                     batch_size=8)
     eval_dataset = eval_dataset.map(evaluate_entity_identified_batch)
