@@ -18,7 +18,7 @@ from dataclasses import dataclass
 from datasets import load_dataset, Dataset
 from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
 from packages.parsing_utils import CorefEntityMetadata, get_manual_annotation_occurrences, load_article_paragraphs, load_repaired_articles, load_training_data_annotations_for_person
-from packages.flan_utils import generate_singleton_prediction, evaluate_entity_identified_single, generate_predictions, generate_predictions_tokenized_batch
+from packages.flan_utils import compute_metrics_tokenized_batch, generate_singleton_prediction, evaluate_entity_identified_single, generate_predictions, generate_predictions_tokenized_batch
 
 config = dotenv_values(".env")
 logger = loguru.logger
@@ -66,6 +66,8 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
             eval_entity_present_labels = []
             for i, _data in enumerate(eval_dataloader): # should be batch size set by trainer.
                 batch = generate_predictions_tokenized_batch(model, tokenizer, _data)
+                batch_metrics = compute_metrics_tokenized_batch(batch)
+                print(batch_metrics)
                 ipdb.set_trace()
                 #######
                 example_input_text = tokenizer.batch_decode(_data['input_ids'], 
@@ -260,11 +262,11 @@ def assess_ft_flan_model():
 
     eval_dataset = dataset.filter(lambda example: example['victim_name'] in eval_subjects) 
     
-    def evaluate_entity_identified_batch(batch): # not batched
+    def evaluate_entity_identified_batch(example): # not batched
         no_entity_str = "there is no valid entity providing a perspective here."
         entity_present_str = "the entity name is"
-        ground_truth = batch['completion'].lower()
-        prediction = batch['predicted_text'].lower()
+        ground_truth = example['completion'].lower()
+        prediction = example['predicted_text'].lower()
         if entity_present_str in ground_truth:
             if entity_present_str in prediction:
                 is_correct = True
@@ -278,8 +280,8 @@ def assess_ft_flan_model():
         else:
             logger.warning(f"Ground truth not in expected format: {ground_truth}")
             raise ValueError(f"Ground truth not in expected format: {ground_truth}")
-        batch['entity_identified_correct'] = is_correct
-        return batch
+        example['entity_identified_correct'] = is_correct
+        return example
 
     eval_dataset = eval_dataset.map(
         partial(tokenize_batch_flan_fn, tokenizer), 
