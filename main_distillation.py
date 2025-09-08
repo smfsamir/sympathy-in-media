@@ -18,7 +18,7 @@ from dataclasses import dataclass
 from datasets import load_dataset, Dataset
 from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
 from packages.parsing_utils import CorefEntityMetadata, get_manual_annotation_occurrences, load_article_paragraphs, load_repaired_articles, load_training_data_annotations_for_person
-from packages.flan_utils import generate_singleton_prediction, evaluate_entity_identified, generate_predictions
+from packages.flan_utils import generate_singleton_prediction, evaluate_entity_identified_single, generate_predictions
 
 config = dotenv_values(".env")
 logger = loguru.logger
