@@ -18,6 +18,7 @@ from dataclasses import dataclass
 from datasets import load_dataset, Dataset
 from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
 from packages.parsing_utils import CorefEntityMetadata, get_manual_annotation_occurrences, load_article_paragraphs, load_repaired_articles, load_training_data_annotations_for_person
+from packages.flan_utils import generate_singleton_prediction, evaluate_entity_identified, generate_predictions
 
 config = dotenv_values(".env")
 logger = loguru.logger
@@ -62,7 +63,11 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
             # Perform decoding and loss calculations here
             model = self.model
             tokenizer = self.tokenizer
-            for i, _data in enumerate(eval_dataloader):
+            eval_entity_present_labels = []
+            for i, _data in enumerate(eval_dataloader): # should be batch size set by trainer.
+                predictions_batch = generate_predictions(model, tokenizer, _data)
+                ipdb.set_trace()
+                #######
                 example_input_text = tokenizer.batch_decode(_data['input_ids'], 
                                                       skip_special_tokens=True)[0]
                 example_output_text = tokenizer.batch_decode(_data['labels'], 
@@ -270,6 +275,7 @@ def assess_ft_flan_model():
         ground_truth = example['completion'].lower()
         prediction = example['predicted_text'].lower()
         if entity_present_str in ground_truth:
+            example['valid_entity'] = 1
             if entity_present_str in prediction:
                 is_correct = 1
             else:
