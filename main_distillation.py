@@ -325,6 +325,9 @@ def _create_training_instance(victim_name: str,
     
 @click.command()
 def create_coref_training_dataset():
+    def _remove_repaired_suffix(article_name: str) -> str:
+        assert '_repaired' in article_name, f"Article name {article_name} does not contain '_repaired'"
+        return article_name.replace('_repaired', '')
     # write a function to create a coreference resolution training dataset.
 
     # TODO: note that some people have multiple articles from one outlet (Charles Qirnirq)
@@ -341,7 +344,11 @@ def create_coref_training_dataset():
         outlet = article.split('_')[2]
         annotations = load_training_data_annotations_for_person(person_name, outlet, identifier=article_index)
         # coref_metadata_objects = [CorefEntityMetadata(**obj) for obj in json.load(open(os.path.join("data/coref_metadata", article)))]
-        paragraphs = load_article_paragraphs(article)
+        if '_repaired' in article:
+            paragraphs = load_article_paragraphs(_remove_repaired_suffix(article))
+        elif article in perfect_articles:
+            paragraphs = load_article_paragraphs(article)
+
         if article in perfect_articles:
             coref_metadata_objects = [CorefEntityMetadata(**obj) for obj in json.load(open(os.path.join("data/linked_coref_annotations", article)))]
         # TODO: load the repaired articles here, separately.
