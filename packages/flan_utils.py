@@ -24,7 +24,7 @@ def generate_singleton_prediction(model, tokenizer, example) -> Dict:
     example['predicted_text'] = tokenizer.decode(outputs[0], skip_special_tokens=True)
     return example
 
-def evaluate_entity_identified(example) -> Dict: # not batched
+def evaluate_entity_identified_single(example) -> Dict: # not batched
     no_entity_str = "there is no valid entity providing a perspective here."
     entity_present_str = "the entity name is"
     ground_truth = example['completion'].lower()
