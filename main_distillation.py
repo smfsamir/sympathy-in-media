@@ -18,7 +18,7 @@ from dataclasses import dataclass
 from datasets import load_dataset, Dataset
 from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
 from packages.parsing_utils import CorefEntityMetadata, get_manual_annotation_occurrences, load_article_paragraphs, load_repaired_articles, load_training_data_annotations_for_person
-from packages.flan_utils import generate_singleton_prediction, evaluate_entity_identified_single, generate_predictions
+from packages.flan_utils import generate_singleton_prediction, evaluate_entity_identified_single, generate_predictions, generate_predictions_tokenized_batch
 
 config = dotenv_values(".env")
 logger = loguru.logger
@@ -65,8 +65,8 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
             tokenizer = self.tokenizer
             eval_entity_present_labels = []
             for i, _data in enumerate(eval_dataloader): # should be batch size set by trainer.
+                batch = generate_predictions_tokenized_batch(model, tokenizer, _data)
                 ipdb.set_trace()
-                predictions_batch = generate_predictions(model, tokenizer, _data)
                 #######
                 example_input_text = tokenizer.batch_decode(_data['input_ids'], 
                                                       skip_special_tokens=True)[0]

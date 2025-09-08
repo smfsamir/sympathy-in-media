@@ -13,6 +13,17 @@ def generate_predictions(model, tokenizer, batch) -> Dict:
     batch['predicted_text'] = tokenizer.batch_decode(outputs, skip_special_tokens=True)
     return batch
 
+def generate_predictions_tokenized_batch(model, tokenizer, batch) -> Dict:
+    # the batch only has [input_ids, labels, and attention_mask]
+    prediction_logits = model.generate(
+                    input_ids=batch['input_ids'].to(model.device), 
+                    attention_mask=batch['attention_mask'].to(model.device), 
+                    max_new_tokens=300
+                )  
+    batch['predicted_text'] = tokenizer.batch_decode(prediction_logits, skip_special_tokens=True)
+    batch['label_text'] = tokenizer.batch_decode(batch['labels'], skip_special_tokens=True)
+    return batch
+
 def generate_singleton_prediction(model, tokenizer, example) -> Dict:
     inputs = tokenizer(example['prompt'], return_tensors='pt').to('cuda')
     outputs = model.generate(
