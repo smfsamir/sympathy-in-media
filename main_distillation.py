@@ -65,8 +65,8 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
             tokenizer = self.tokenizer
             eval_entity_present_labels = []
             for i, _data in enumerate(eval_dataloader): # should be batch size set by trainer.
-                predictions_batch = generate_predictions(model, tokenizer, _data)
                 ipdb.set_trace()
+                predictions_batch = generate_predictions(model, tokenizer, _data)
                 #######
                 example_input_text = tokenizer.batch_decode(_data['input_ids'], 
                                                       skip_special_tokens=True)[0]
