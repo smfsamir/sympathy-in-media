@@ -334,7 +334,7 @@ def create_coref_training_dataset():
     perfect_articles = set(all_articles) - set(imperfect_articles)
     training_set = []
     victim_names = []
-    for article in perfect_articles:
+    for article in perfect_articles + repaired_articles:
         # load the coref object and the annotation object
         article_index = article.split('_')[0]
         person_name = article.split('_')[1]
@@ -342,10 +342,14 @@ def create_coref_training_dataset():
         annotations = load_training_data_annotations_for_person(person_name, outlet, identifier=article_index)
         # coref_metadata_objects = [CorefEntityMetadata(**obj) for obj in json.load(open(os.path.join("data/coref_metadata", article)))]
         paragraphs = load_article_paragraphs(article)
-        coref_metadata_objects = [CorefEntityMetadata(**obj) for obj in json.load(open(os.path.join("data/linked_coref_annotations", article)))]
+        if article in perfect_articles:
+            coref_metadata_objects = [CorefEntityMetadata(**obj) for obj in json.load(open(os.path.join("data/linked_coref_annotations", article)))]
         # TODO: load the repaired articles here, separately.
-        repaired_metadata_objects = [CorefEntityMetadata(**obj) for obj in json.load(open(os.path.join("data/repaired_coref_annotations", article)))]
-        for coref_obj in coref_metadata_objects + repaired_metadata_objects:
+        elif article in repaired_articles:
+            coref_metadata_objects= [CorefEntityMetadata(**obj) for obj in json.load(open(os.path.join("data/repaired_coref_annotations", article)))]
+        else:
+            raise ValueError(f"Article {article} not found in perfect or repaired articles.")
+        for coref_obj in coref_metadata_objects:
             training_instances = _create_training_instance(
                 victim_name=person_name,
                 all_paragraphs=paragraphs,
