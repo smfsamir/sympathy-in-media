@@ -220,8 +220,14 @@ def assess_baseline_ner_model():
     )
     eval_dataset.set_format(type='torch', columns=['input_ids', 'attention_mask'])
 
+    
+
 @click.command()
 def assess_ft_flan_model():
+    tokenizer = AutoTokenizer.from_pretrained(
+        "google/flan-t5-large", 
+        cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache")
+    )
     flan_t5 = AutoModelForSeq2SeqLM.from_pretrained(
         pretrained_model_name_or_path=os.path.join(
             config['SCRATCH_DIR'], 
@@ -248,6 +254,25 @@ def assess_ft_flan_model():
                      'Dillon Warren Breed']
 
     eval_dataset = dataset.filter(lambda example: example['victim_name'] in eval_subjects) 
+    def generate_predictions(batch):
+        inputs = tokenizer(batch['prompt'], return_tensors='pt', padding=True, truncation=True).to('cuda')
+        outputs = flan_t5.generate(
+            input_ids=inputs['input_ids'], 
+            attention_mask=inputs['attention_mask'], 
+            max_new_tokens=300
+        )
+        batch['predicted_text'] = tokenizer.batch_decode(outputs, skip_special_tokens=True)
+        return batch
+
+    eval_dataset = eval_dataset.map(
+        partial(tokenize_batch_flan_fn, tokenize_batch_flan_fn), 
+        batched=True
+    )
+    assert 'input_ids' in eval_dataset.column_names
+    assert 'labels' in eval_dataset.column_names
+    eval_dataset = eval_dataset.map(generate_predictions, 
+                                    batched=True, 
+                                    batch_size=8)
     ipdb.set_trace()
     # for subject in eval_subjects:
     #     eval_subset = dataset.filter(lambda example: example['subject'] == subject) # is this still in the right order?
