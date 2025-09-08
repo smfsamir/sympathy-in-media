@@ -266,16 +266,15 @@ def assess_ft_flan_model():
         ground_truth = batch['completion'].lower()
         prediction = batch['predicted_text'].lower()
         if entity_present_str in ground_truth:
-            batch['valid_entity'] = 1
             if entity_present_str in prediction:
-                is_correct = 1
+                is_correct = True
             else:
-                is_correct = 0
+                is_correct = False
         elif no_entity_str in ground_truth:
             if no_entity_str in prediction:
-                is_correct = 1
+                is_correct = True
             else:
-                is_correct = 0
+                is_correct = False
         else:
             logger.warning(f"Ground truth not in expected format: {ground_truth}")
             raise ValueError(f"Ground truth not in expected format: {ground_truth}")
