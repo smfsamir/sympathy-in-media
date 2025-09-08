@@ -334,7 +334,7 @@ def create_coref_training_dataset():
     perfect_articles = set(all_articles) - set(imperfect_articles)
     training_set = []
     victim_names = []
-    for article in perfect_articles + repaired_articles:
+    for article in perfect_articles.union(repaired_articles):
         # load the coref object and the annotation object
         article_index = article.split('_')[0]
         person_name = article.split('_')[1]
