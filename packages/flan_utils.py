@@ -1,6 +1,12 @@
 import loguru
 import ipdb
 from typing import Dict
+import jiwer
+
+# reference = ["i can spell", "i hope"]
+# hypothesis = ["i kan cpell", "i hop"]
+
+# error = jiwer.cer(reference, hypothesis)
 
 logger = loguru.logger
 def generate_predictions(model, tokenizer, batch) -> Dict:
@@ -24,6 +30,35 @@ def generate_predictions_tokenized_batch(model, tokenizer, batch) -> Dict:
     batch['label_text'] = tokenizer.batch_decode(batch['labels'], skip_special_tokens=True)
     return batch
 
+def compute_metrics_tokenized_batch(batch) -> Dict:
+    no_entity_str = "there is no valid entity providing a perspective here."
+    entity_present_str = "the entity name is"
+    entity_correct_batch = []
+    batch_cers = []
+    for i, example in enumerate(batch['label_text']):
+        ground_truth = example.lower()
+        prediction = batch['predicted_text'][i].lower()
+        if entity_present_str in ground_truth:
+            batch['valid_entity'] = 1
+            if entity_present_str in prediction:
+                is_correct = 1
+            else:
+                is_correct = 0
+        elif no_entity_str in ground_truth:
+            if no_entity_str in prediction:
+                is_correct = 1
+            else:
+                is_correct = 0
+        else:
+            logger.warning(f"Ground truth not in expected format: {ground_truth}")
+            raise ValueError(f"Ground truth not in expected format: {ground_truth}")
+        entity_correct_batch.append(is_correct)
+        batch_cers.append(jiwer.cer(ground_truth, prediction))
+    return {
+        'entity_present_correct': entity_correct_batch, 
+        'cer': batch_cers
+    }
+
 def generate_singleton_prediction(model, tokenizer, example) -> Dict:
     inputs = tokenizer(example['prompt'], return_tensors='pt').to('cuda')
     outputs = model.generate(
@@ -34,6 +69,7 @@ def generate_singleton_prediction(model, tokenizer, example) -> Dict:
     ipdb.set_trace()
     example['predicted_text'] = tokenizer.decode(outputs[0], skip_special_tokens=True)
     return example
+
 
 def evaluate_entity_identified_single(example) -> Dict: # not batched
     no_entity_str = "there is no valid entity providing a perspective here."
