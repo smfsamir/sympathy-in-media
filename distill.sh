@@ -1,6 +1,7 @@
 #!/bin/bash
 #SBATCH --time=2:00:00
 #SBATCH --job-name=distill-flant5-sympathy
+#SBATCH --partition=gpunodes
 #SBATCH --gres=gpu:rtx_a6000:1 
 #SBATCH --mem=16G
 #SBATCH --mail-type=END,FAIL,INVALID_DEPEND
