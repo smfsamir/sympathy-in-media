@@ -223,34 +223,48 @@ def assess_baseline_ner_model():
 @click.command()
 def assess_ft_flan_model():
     flan_t5 = AutoModelForSeq2SeqLM.from_pretrained(
-        pretrained_model_name_or_path=os.path.join(config['SCRATCH_DIR'], "sympathy_task_1_flan", "checkpoint-1000")
+        pretrained_model_name_or_path=os.path.join(
+            config['SCRATCH_DIR'], 
+            "sympathy_distillation", 
+            "checkpoint-1000")
     ).to('cuda')
-    dataset = load_dataset("json", data_files={'train': "data/distillation_data/rolling_training_dataset.json"}, split='train')
+
+    dataset = load_dataset("json", 
+                           data_files={'train': "data/distillation_data/coref_training_dataset.json"}, 
+                           split='train')
 
     # rolling_training_dataset.json
     # split train_dataset into train and validation sets
-    eval_subjects = ['Danny Lafrance-Godmer', 'Jeremy Nuvviaq', 'Dale Culver', 'Jason Gary Roy', 'Bradley Thomas Clattenburg', 'Charles Qirngnirq', 'Riley Fairholm', 'Radford James Good Dagger', 'Elgyn Muskego', 'Illutak Anautak', 'Christopher Arkell', 'David Charles Sandaker', 'Abisay Cruz', 'William David McCaffrey', 'John Robert Buehler'] 
+    # eval_subjects = ['Danny Lafrance-Godmer', 'Jeremy Nuvviaq', 'Dale Culver', 'Jason Gary Roy', 'Bradley Thomas Clattenburg', 'Charles Qirngnirq', 'Riley Fairholm', 'Radford James Good Dagger', 'Elgyn Muskego', 'Illutak Anautak', 'Christopher Arkell', 'David Charles Sandaker', 'Abisay Cruz', 'William David McCaffrey', 'John Robert Buehler'] 
+    eval_subjects = ['Chris Bloomfield', 
+                     'Erixon Kabera', 
+                     'Buck E Evans', 
+                     'Babak Saidi', 
+                     'David Meadows', 
+                     'Pierre Charron', 
+                     'Bony Jean-Pierre', 
+                     'Jermaine Carby\t', 
+                     'Eugene Ethan Marcano', 
+                     'Dillon Warren Breed']
 
-    for subject in eval_subjects:
-        eval_subset = dataset.filter(lambda example: example['subject'] == subject) # is this still in the right order?
-        if len(eval_subset['outlet'])> 1:
-            # pick a random one
-            outlet = random.choice(eval_subset['outlet'])
-            eval_subset = eval_subset.filter(lambda example: example['outlet'] == outlet)
-        eval_subset = eval_subset.map(
-            preprocess_flan_fn, 
-            remove_columns=['output', 'subject', 'outlet', 'current_mentioned_entities'],
-        ).map(
-            tokenize_batch_flan_fn, 
-            batched=True,
-        )
-        predictions = flan_t5.generate(
-            input_ids=torch.tensor(eval_subset['input_ids']).to('cuda'), 
-            attention_mask=torch.tensor(eval_subset['attention_mask']).to('cuda'), 
-            max_new_tokens=300
-        )
-        predicted_texts = FLAN_TOKENIZER.batch_decode(predictions, skip_special_tokens=True)
-        ipdb.set_trace()
+    eval_dataset = dataset.filter(lambda example: example['victim_name'] in eval_subjects) 
+    ipdb.set_trace()
+    # for subject in eval_subjects:
+    #     eval_subset = dataset.filter(lambda example: example['subject'] == subject) # is this still in the right order?
+        # eval_subset = eval_subset.map(
+        #     preprocess_flan_fn, 
+        #     remove_columns=['output', 'subject', 'outlet', 'current_mentioned_entities'],
+        # ).map(
+        #     tokenize_batch_flan_fn, 
+        #     batched=True,
+        # )
+        # predictions = flan_t5.generate(
+        #     input_ids=torch.tensor(eval_subset['input_ids']).to('cuda'), 
+        #     attention_mask=torch.tensor(eval_subset['attention_mask']).to('cuda'), 
+        #     max_new_tokens=300
+        # )
+        # predicted_texts = FLAN_TOKENIZER.batch_decode(predictions, skip_special_tokens=True)
+        # ipdb.set_trace()
 
     pass
 
