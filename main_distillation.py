@@ -271,17 +271,19 @@ def assess_ft_flan_model():
         prediction = example['predicted_text'].lower()
         if entity_present_str in ground_truth:
             if entity_present_str in prediction:
-                return 1
+                is_correct = 1
             else:
-                return 0
+                is_correct = 0
         elif no_entity_str in ground_truth:
             if no_entity_str in prediction:
-                return 1
+                is_correct = 1
             else:
-                return 0
+                is_correct = 0
         else:
             logger.warning(f"Ground truth not in expected format: {ground_truth}")
-            return 0
+            raise ValueError(f"Ground truth not in expected format: {ground_truth}")
+        example['entity_identified_correct'] = is_correct
+        return example
 
     eval_dataset = eval_dataset.map(
         partial(tokenize_batch_flan_fn, tokenizer), 
