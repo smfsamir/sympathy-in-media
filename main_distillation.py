@@ -265,7 +265,7 @@ def assess_ft_flan_model():
         return batch
 
     eval_dataset = eval_dataset.map(
-        partial(tokenize_batch_flan_fn, tokenize_batch_flan_fn), 
+        partial(tokenize_batch_flan_fn, tokenizer), 
         batched=True
     )
     assert 'input_ids' in eval_dataset.column_names
