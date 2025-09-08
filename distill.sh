@@ -1,3 +1,4 @@
+#!/bin/bash
 #SBATCH --time=2:00:00
 #SBATCH --job-name=distill-flant5-sympathy
 #SBATCH --gres=gpu:rtx_a6000:1 
