@@ -102,5 +102,6 @@ def convert_text_to_entity_present_label(description_texts):
         elif entity_present_str in text.lower():
             labels.append('valid entity')
         else:
-            raise ValueError(f"Unrecognized text: {text}")
+            logger.warning(f"Unrecognized text: {text}") # likely to happen during the early steps of training
+            labels.append('unrecognized')
     return labels
