@@ -82,6 +82,7 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
             accuracy_metric = sum(all_is_correct_labels) / len(all_is_correct_labels) # TODO
             cer_metric = np.median(all_cer_metrics)
             metrics = {'cer': cer_metric, 'accuracy': accuracy_metric, 'f1': f1_metric}
+            logger.info(f"Eval metrics: {metrics}")
             return metrics
 
 def tokenize_batch_flan_fn(tokenizer, samples):
