@@ -70,8 +70,8 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
             for i, _data in enumerate(eval_dataloader): # should be batch size set by trainer.
                 batch = generate_predictions_tokenized_batch(model, tokenizer, _data)
                 batch_metrics = compute_metrics_tokenized_batch(batch)
-                batch_entity_present_gt_labels = convert_text_to_entity_present_label(batch['prediction_text']) # TODO: implement this function
-                batch_entity_present_predicted_labels = convert_text_to_entity_present_label(batch['prediction_text']) # TODO: implement this function
+                batch_entity_present_gt_labels = convert_text_to_entity_present_label(batch['label_text']) # TODO: implement this function
+                batch_entity_present_predicted_labels = convert_text_to_entity_present_label(batch['predicted_text']) # TODO: implement this function
                 all_eval_entity_present_gt_labels.extend(batch_entity_present_gt_labels)
                 all_eval_entity_present_prediction_labels.extend(batch_entity_present_predicted_labels)
                 all_cer_metrics.extend(batch_metrics['cer']) # TODO: double check these keys
