@@ -78,7 +78,8 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
                 all_eval_entity_present_prediction_labels.extend(batch_entity_present_predicted_labels)
                 all_cer_metrics.extend(batch_metrics['cer']) 
                 all_is_correct_labels.extend(batch_metrics['entity_present_correct'])
-            f1_metric_dict = f1_score(all_eval_entity_present_gt_labels, all_eval_entity_present_prediction_labels, average=None)
+            f1_metric_dict_2_labels = f1_score(all_eval_entity_present_gt_labels, all_eval_entity_present_prediction_labels, average=None, labels=['valid entity', 'no entity'])
+            f1_metric_dict_3_labels = f1_score(all_eval_entity_present_gt_labels, all_eval_entity_present_prediction_labels, average=None, labels=['valid entity', 'no entity', 'unrecognized'])
             ipdb.set_trace()
             # TODO: get the f1 for the positive class ('valid entity' class)
             accuracy_metric = sum(all_is_correct_labels) / len(all_is_correct_labels) # TODO
