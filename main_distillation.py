@@ -78,30 +78,6 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
                 all_eval_entity_present_prediction_labels.extend(batch_entity_present_predicted_labels)
                 all_cer_metrics.extend(batch_metrics['cer']) # TODO: double check these keys
                 all_is_correct_labels.extend(batch_metrics['entity_present_correct'])
-                print(batch_metrics)
-                ipdb.set_trace()
-                #######
-                example_input_text = tokenizer.batch_decode(_data['input_ids'], 
-                                                      skip_special_tokens=True)[0]
-                example_output_text = tokenizer.batch_decode(_data['labels'], 
-                                                       skip_special_tokens=True)[0]
-                if "the entity name is" not in example_output_text.lower():
-                    continue # we're looking for a target JSON output
-                logger.info(f"Target text: {example_output_text}")
-                prediction_logits = model.generate(
-                    input_ids=_data['input_ids'].to(self.args.device), 
-                    attention_mask=_data['attention_mask'].to(self.args.device), 
-                    max_new_tokens=300
-                )                                    
-                predicted_text = tokenizer.batch_decode(prediction_logits, skip_special_tokens=True)[0]
-                if "There is no valid entity providing a perspective here." in predicted_text:
-                    logger.info(f"Got a no entity response")
-                # elif "{" in predicted_text and "}" in predicted_text:
-                elif "the entity name is" in predicted_text.lower():
-                    logger.info(f"Got a valid entity response: {predicted_text}")
-                else:
-                    logger.warning(f"Predicted text not in expected format: {predicted_text}")
-                break
             f1_metric = f1_score(all_eval_entity_present_gt_labels, all_eval_entity_present_prediction_labels, pos_label='valid entity')
             accuracy_metric = sum(all_is_correct_labels) / len(all_is_correct_labels) # TODO
             cer_metric = np.median(all_cer_metrics)
