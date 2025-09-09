@@ -65,11 +65,17 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
             tokenizer = self.tokenizer
             all_eval_entity_present_gt_labels = []
             all_eval_entity_present_prediction_labels = []
+            all_is_correct_labels = []
+            all_cer_metrics = []
             for i, _data in enumerate(eval_dataloader): # should be batch size set by trainer.
                 batch = generate_predictions_tokenized_batch(model, tokenizer, _data)
                 batch_metrics = compute_metrics_tokenized_batch(batch)
                 batch_entity_present_gt_labels = convert_text_to_entity_present_label(batch['prediction_text']) # TODO: implement this function
                 batch_entity_present_predicted_labels = convert_text_to_entity_present_label(batch['prediction_text']) # TODO: implement this function
+                all_eval_entity_present_gt_labels.extend(batch_entity_present_gt_labels)
+                all_eval_entity_present_prediction_labels.extend(batch_entity_present_predicted_labels)
+                all_cer_metrics.extend(batch_metrics['cer']) # TODO: double check these keys
+                all_is_correct_labels.extend(batch_metrics['is_correct'])
                 print(batch_metrics)
                 ipdb.set_trace()
                 #######
@@ -94,7 +100,10 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
                 else:
                     logger.warning(f"Predicted text not in expected format: {predicted_text}")
                 break
-            metrics = {'wer': 0}
+            f1_metric = f1_score(all_eval_entity_present_gt_labels, all_eval_entity_present_prediction_labels, pos_label='valid entity')
+            accuracy_metric = sum(all_is_correct_labels) / len(all_is_correct_labels) # TODO
+            cer_metric = np.median(cer_metrics)
+            metrics = {'cer': cer_metric, 'accuracy': accuracy_metric, 'f1': f1_metric}
             return metrics
 
 def tokenize_batch_flan_fn(tokenizer, samples):
