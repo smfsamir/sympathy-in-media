@@ -78,13 +78,11 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
                 all_eval_entity_present_prediction_labels.extend(batch_entity_present_predicted_labels)
                 all_cer_metrics.extend(batch_metrics['cer']) 
                 all_is_correct_labels.extend(batch_metrics['entity_present_correct'])
-            f1_metric_dict_2_labels = f1_score(all_eval_entity_present_gt_labels, all_eval_entity_present_prediction_labels, average=None, labels=['valid entity', 'no entity'])
-            f1_metric_dict_3_labels = f1_score(all_eval_entity_present_gt_labels, all_eval_entity_present_prediction_labels, average=None, labels=['valid entity', 'no entity', 'unrecognized'])
-            ipdb.set_trace()
-            # TODO: get the f1 for the positive class ('valid entity' class)
+            labels = ['valid entity', 'no entity', 'unrecognized']
+            f1_metric_dict_3_labels = f1_score(all_eval_entity_present_gt_labels, all_eval_entity_present_prediction_labels, average=None, labels=labels)
             accuracy_metric = sum(all_is_correct_labels) / len(all_is_correct_labels) # TODO
             cer_metric = np.median(all_cer_metrics)
-            metrics = {'cer': cer_metric, 'accuracy': accuracy_metric, 'f1': f1_metric_dict} # TODO: fix the value for f1
+            metrics = {'cer': cer_metric, 'accuracy': accuracy_metric, 'f1': f1_metric_dict_3_labels[labels.index('valid entity')]} # TODO: fix the value for f1
             logger.info(f"Eval metrics: {metrics}")
             return metrics
 
@@ -214,7 +212,6 @@ def assess_baseline_ner_model():
     model = AutoModelForTokenClassification.from_pretrained("dslim/bert-base-NER", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
     eval_dataset = load_dataset("json", data_files={'test': "data/distillation_data/distill_examples.json"}, split='test')
 
-    ipdb.set_trace()
     eval_dataset = eval_dataset.map(
         lambda samples: tokenizer(samples['prompt'], padding=True, truncation=True, return_tensors="pt"), 
         batched=True,
@@ -287,7 +284,6 @@ def assess_ft_flan_model():
                                     batched=True, 
                                     batch_size=8)
     eval_dataset = eval_dataset.map(evaluate_entity_identified_batch)
-    ipdb.set_trace()
 
     trainer = CustomSeq2SeqTrainer(
         model=flan_t5,
