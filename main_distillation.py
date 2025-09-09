@@ -145,14 +145,13 @@ def distill_flant5():
         max_steps=1000,
         logging_steps=10,
         evaluation_strategy="steps",
-        save_strategy="no",
-        load_best_model_at_end=False,
-        eval_steps=30,
+        save_strategy="steps",
+        eval_steps=10,
+        save_steps=50,
         learning_rate=2e-5,
         weight_decay=0.01,
         warmup_steps=100,
-        report_to="wandb", 
-        save_total_limit=2
+        report_to="wandb"
     )
     label_pad_token_id = -100
     data_collator = DataCollatorForSeq2Seq(
