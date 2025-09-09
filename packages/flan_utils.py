@@ -91,3 +91,16 @@ def evaluate_entity_identified_single(example) -> Dict: # not batched
         logger.warning(f"Ground truth not in expected format: {ground_truth}")
         raise ValueError(f"Ground truth not in expected format: {ground_truth}")
     return is_correct
+
+def convert_text_to_entity_present_label(description_texts):
+    no_entity_str = "there is no valid entity providing a perspective here"
+    entity_present_str = "the entity name is"
+    labels = []
+    for text in description_texts:
+        if no_entity_str in text.lower():
+            labels.append('no entity')
+        elif entity_present_str in text.lower():
+            labels.append('valid entity')
+        else:
+            raise ValueError(f"Unrecognized text: {text}")
+    return labels
