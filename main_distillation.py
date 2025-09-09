@@ -76,12 +76,13 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
                 batch_entity_present_predicted_labels = convert_text_to_entity_present_label(batch['predicted_text']) # TODO: implement this function
                 all_eval_entity_present_gt_labels.extend(batch_entity_present_gt_labels)
                 all_eval_entity_present_prediction_labels.extend(batch_entity_present_predicted_labels)
-                all_cer_metrics.extend(batch_metrics['cer']) # TODO: double check these keys
+                all_cer_metrics.extend(batch_metrics['cer']) 
                 all_is_correct_labels.extend(batch_metrics['entity_present_correct'])
-            f1_metric = f1_score(all_eval_entity_present_gt_labels, all_eval_entity_present_prediction_labels, pos_label='valid entity')
+            f1_metric_dict = f1_score(all_eval_entity_present_gt_labels, all_eval_entity_present_prediction_labels, average=None)
+            # TODO: get the f1 for the positive class ('valid entity' class)
             accuracy_metric = sum(all_is_correct_labels) / len(all_is_correct_labels) # TODO
             cer_metric = np.median(all_cer_metrics)
-            metrics = {'cer': cer_metric, 'accuracy': accuracy_metric, 'f1': f1_metric}
+            metrics = {'cer': cer_metric, 'accuracy': accuracy_metric, 'f1': f1_metric_dict} # TODO: fix the value for f1
             logger.info(f"Eval metrics: {metrics}")
             return metrics
 
