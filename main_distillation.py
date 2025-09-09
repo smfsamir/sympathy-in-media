@@ -152,7 +152,7 @@ def distill_flant5():
         weight_decay=0.01,
         warmup_steps=100,
         report_to="wandb", 
-        save_total_limit=2,
+        save_total_limit=2
     )
     label_pad_token_id = -100
     data_collator = DataCollatorForSeq2Seq(
