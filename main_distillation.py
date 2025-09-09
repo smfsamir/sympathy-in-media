@@ -63,10 +63,13 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
             # Perform decoding and loss calculations here
             model = self.model
             tokenizer = self.tokenizer
-            eval_entity_present_labels = []
+            all_eval_entity_present_gt_labels = []
+            all_eval_entity_present_prediction_labels = []
             for i, _data in enumerate(eval_dataloader): # should be batch size set by trainer.
                 batch = generate_predictions_tokenized_batch(model, tokenizer, _data)
                 batch_metrics = compute_metrics_tokenized_batch(batch)
+                batch_entity_present_gt_labels = convert_text_to_entity_present_label(batch['prediction_text']) # TODO: implement this function
+                batch_entity_present_predicted_labels = convert_text_to_entity_present_label(batch['prediction_text']) # TODO: implement this function
                 print(batch_metrics)
                 ipdb.set_trace()
                 #######
