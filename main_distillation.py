@@ -153,7 +153,6 @@ def distill_flant5():
         warmup_steps=100,
         report_to="wandb", 
         save_total_limit=2,
-        load_best_model_at_end=True
     )
     label_pad_token_id = -100
     data_collator = DataCollatorForSeq2Seq(
