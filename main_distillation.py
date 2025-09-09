@@ -75,7 +75,7 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
                 all_eval_entity_present_gt_labels.extend(batch_entity_present_gt_labels)
                 all_eval_entity_present_prediction_labels.extend(batch_entity_present_predicted_labels)
                 all_cer_metrics.extend(batch_metrics['cer']) # TODO: double check these keys
-                all_is_correct_labels.extend(batch_metrics['is_correct'])
+                all_is_correct_labels.extend(batch_metrics['entity_present_correct'])
                 print(batch_metrics)
                 ipdb.set_trace()
                 #######
