@@ -238,7 +238,6 @@ def assess_ft_flan_model():
                            data_files={'train': "data/distillation_data/coref_training_dataset.json"}, 
                            split='train')
 
-    ipdb.set_trace()
     # rolling_training_dataset.json
     # split train_dataset into train and validation sets
     # eval_subjects = ['Danny Lafrance-Godmer', 'Jeremy Nuvviaq', 'Dale Culver', 'Jason Gary Roy', 'Bradley Thomas Clattenburg', 'Charles Qirngnirq', 'Riley Fairholm', 'Radford James Good Dagger', 'Elgyn Muskego', 'Illutak Anautak', 'Christopher Arkell', 'David Charles Sandaker', 'Abisay Cruz', 'William David McCaffrey', 'John Robert Buehler'] 
@@ -286,7 +285,7 @@ def assess_ft_flan_model():
                                     batched=True, 
                                     batch_size=8)
     eval_dataset = eval_dataset.map(evaluate_entity_identified_batch)
-
+    ipdb.set_trace()
     trainer = CustomSeq2SeqTrainer(
         model=flan_t5,
         args=Seq2SeqTrainingArguments(
