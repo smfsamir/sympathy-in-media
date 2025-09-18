@@ -86,6 +86,7 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
             logger.info(f"Eval metrics: {metrics}")
             return metrics
 
+
 def tokenize_batch_flan_fn(tokenizer, samples):
     model_inputs = tokenizer(samples['prompt'], padding=True, truncation=True, return_tensors="pt")
     labels = tokenizer(samples['completion'], padding=True, truncation=True, return_tensors="pt")['input_ids']
@@ -398,6 +399,8 @@ def create_coref_training_dataset():
     perfect_articles = set(all_articles) - set(imperfect_articles)
     training_set = []
     victim_names = []
+    outlets = []
+    article_indices = []
     for article in perfect_articles.union(repaired_articles):
         # load the coref object and the annotation object
         article_index = article.split('_')[0]
@@ -426,11 +429,15 @@ def create_coref_training_dataset():
             )
             training_set.extend(training_instances)
             victim_names.extend([person_name] * len(training_instances))
+            outlets.extend([outlet] * len(training_instances))
+            article_indices.extend([article_index] * len(training_instances))
     dataset = Dataset.from_dict({
         'prompt': [instance['prompt'] for instance in training_set],
         'completion': [instance['completion'] for instance in training_set],
         'entity_name': [instance['entity_name'] for instance in training_set],
         'valid_entity': [instance['valid_entity'] for instance in training_set],
+        'outlet': outlets,
+        'article_index': article_indices,
         'victim_name': victim_names
     })
     # log the number of valid entities relative to the total
