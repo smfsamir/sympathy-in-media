@@ -245,7 +245,7 @@ def evaluate_proportion_distribution_metric(dataset):
         for i in range(len(article_subset)):
             paras_extracted = extract_enumerated_paragraphs(article_subset['prompt'][i])
             coref_prediction_text = article_subset['predicted_text'][i]
-            if is_valid_entity_present(coref_prediction_text):
+            if is_valid_entity_present(coref_prediction_text) == 'valid entity':
                 relevant_paragraph_indices = extract_relevant_paragraphs(coref_prediction_text)
                 whole_article_indices = [paragraphs_ordered.index(para) + 1 for para in paras_extracted if para in paragraphs_ordered]
                 police_aligned = is_police_aligned_entity(coref_prediction_text)
