@@ -248,7 +248,7 @@ def evaluate_proportion_distribution_metric(dataset):
             if is_valid_entity_present(coref_prediction_text) == 'valid entity':
                 relevant_paragraph_indices = extract_relevant_paragraphs(coref_prediction_text)
                 try:
-                    relevant_paragraphs = [paras_extracted[idx - 1] for idx in relevant_paragraph_indices]
+                    relevant_paragraphs = [paras_extracted[idx - 1] for idx in relevant_paragraph_indices if idx - 1 < len(paras_extracted)]
                 except IndexError:
                     logger.warning(f"Index error for {article} with indices {relevant_paragraph_indices} and paragraphs {paras_extracted}")
                     ipdb.set_trace()
