@@ -1,4 +1,5 @@
 import numpy as np
+from collections import defaultdict
 import wandb
 import pandas as pd
 import random
@@ -20,7 +21,8 @@ from dataclasses import dataclass
 from datasets import load_dataset, Dataset
 from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
 from packages.parsing_utils import CorefEntityMetadata, get_manual_annotation_occurrences, load_article_paragraphs, load_repaired_articles, load_training_data_annotations_for_person, extract_enumerated_paragraphs
-from packages.flan_utils import compute_metrics_tokenized_batch, generate_singleton_prediction, evaluate_entity_identified_single, generate_predictions, generate_predictions_tokenized_batch, convert_text_to_entity_present_label
+from packages.flan_utils import compute_metrics_tokenized_batch, generate_singleton_prediction, evaluate_entity_identified_single, generate_predictions, generate_predictions_tokenized_batch, convert_text_to_entity_present_label,\
+    is_valid_entity_present, is_police_aligned_entity, extract_relevant_paragraphs
 
 config = dotenv_values(".env")
 logger = loguru.logger
@@ -228,7 +230,6 @@ def evaluate_proportion_distribution_metric(dataset):
         article_subset = dataset.filter(lambda example: example['article_index'] == index)
         article = f"{index}_{article_subset[0]['victim_name']}_{article_subset[0]['outlet']}"
         article = article + ".json" if not article.endswith('.json') else article
-
         gt_annotations = load_training_data_annotations_for_person(
             person_name=article_subset[0]['victim_name'], 
             outlet=article_subset[0]['outlet'], 
@@ -239,7 +240,24 @@ def evaluate_proportion_distribution_metric(dataset):
         for para in paras_extracted:
             assert para in paragraphs_ordered, f"Extracted paragraph not in original paragraphs: {para}"
         logger.info(f"Good for {article}")
-        
+        # get the coref entities that were classified as valid. 
+        paragraph_index_to_assignments = defaultdict(list)
+        for i in range(len(article_subset)):
+            paras_extracted = extract_enumerated_paragraphs(article_subset['prompt'][i])
+            coref_prediction_text = article_subset['predicted_text'][i]
+            if is_valid_entity_present(coref_prediction_text):
+                relevant_paragraph_indices = extract_relevant_paragraphs(coref_prediction_text)
+                whole_article_indices = [paragraphs_ordered.index(para) + 1 for para in paras_extracted if para in paragraphs_ordered]
+                police_aligned = is_police_aligned_entity(coref_prediction_text)
+                paragraph_index_to_assignments.update({index: 'police-aligned' if police_aligned else 'victim-aligned' for index in relevant_paragraph_indices if index in whole_article_indices})
+
+        # Then, obtain their paragraphs.
+        # then, map those paragraphs into their index into the original article.
+        # then, assign those paragraphs as police-aligned, or victim-aligned.
+        # then, compute the F1 across the labels.
+        # keep a paragraph to list mappnig. If it's emtpy, then it's prediction is context 
+        # otherwise it is the maximum of police or victim.
+
     ipdb.set_trace()
         # Get the unique articles, go by the article index.
         # then, load the ground-truth annotations for that article
