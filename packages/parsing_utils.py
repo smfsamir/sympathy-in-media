@@ -1,3 +1,4 @@
+import ipdb
 import re
 import os
 import json
@@ -74,6 +75,7 @@ def extract_enumerated_paragraphs(text: str):
     # Use regex to split on numbers followed by a dot and space (like "1. ")
     # Keep the delimiter to reconstruct the full paragraph properly
     parts = re.split(r'\n?\s*(\d+\.\s)', text.strip())
+    ipdb.set_trace()
     
     paragraphs = []
     current = ""
