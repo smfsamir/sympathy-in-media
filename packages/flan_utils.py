@@ -118,7 +118,7 @@ def is_police_aligned_entity(description_text):
     return 'not aligned with the police' in description_text.lower()
 
 def extract_relevant_paragraphs(description_text):
-    assert is_valid_entity_present(description_text) == 'valid entity', "Entity is not valid"
+    assert is_valid_entity_present(description_text) == 'valid entity', f"Entity is not valid: {description_text}"
     # remove the period, hence the [:-1]
     paragraph_numbers = description_text.split("The paragraphs that reflect their perspectives are:")[-1].strip()[:-1]\
         .split(",")
