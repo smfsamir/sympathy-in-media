@@ -72,24 +72,9 @@ def extract_enumerated_paragraphs(text: str):
     Extracts enumerated paragraphs (e.g., 1. ..., 2. ..., etc.)
     from a block of text and returns them as a list of strings.
     """
-    # Use regex to split on numbers followed by a dot and space (like "1. ")
-    # Keep the delimiter to reconstruct the full paragraph properly
-    parts = re.split(r'\n?\s*(\d+\.\s)', text.strip())
+    start = " Here are the paragraphs that mention them:\n"
+    end = f" Parse whether there is a valid entity, and, if so, what the entity name is whether they're aligned with the police, and which paragraphs reflect their perspectives." 
+
+    relevant_lines = text[text.index(start) + len(start):text.index(end)].strip().split('\n')
     ipdb.set_trace()
     
-    paragraphs = []
-    current = ""
-    for part in parts:
-        if re.match(r'^\d+\.\s$', part):
-            # If we already have a paragraph, store it
-            if current:
-                paragraphs.append(current.strip())
-            current = ""  # reset for new paragraph
-        else:
-            current += part
-    
-    # Append the last one
-    if current:
-        paragraphs.append(current.strip())
-    
-    return paragraphs
