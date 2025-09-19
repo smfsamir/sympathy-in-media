@@ -219,6 +219,29 @@ def assess_baseline_ner_model():
     )
     eval_dataset.set_format(type='torch', columns=['input_ids', 'attention_mask'])
 
+
+def evaluate_proportion_distribution_metric(dataset):
+    # TODO: CRUCIAL, FILL IN.
+    article_indices = dataset['article_index']
+    unique_article_indices = set(article_indices)
+    for index in unique_article_indices:
+        article_subset = dataset.filter(lambda example: example['article_index'] == index)
+        article = f"{index}_{article_subset[0]['victim_name']}_{article_subset[0]['outlet']}"
+        gt_annotations = load_training_data_annotations_for_person(
+            person_name=article_subset[0]['victim_name'], 
+            outlet=article_subset[0]['outlet'], 
+            identifier=index
+        )
+        paragraphs_ordered = load_article_paragraphs(article)
+        ipdb.set_trace()
+        
+        # Get the unique articles, go by the article index.
+        # then, load the ground-truth annotations for that article
+        # then, find all the coref objects that are identified as valid.
+        # then, use the prompt and the predictions to get the relevant paragraphs.
+        # then, map those paragraphs into their index into the original article.
+        # then, compare the set of paragraphs to the ground-truth annotations.
+    pass
     
 
 @click.command()
@@ -285,7 +308,7 @@ def assess_ft_flan_model():
                                     batched=True, 
                                     batch_size=8)
     eval_dataset = eval_dataset.map(evaluate_entity_identified_batch)
-    ipdb.set_trace()
+    evaluate_proportion_distribution_metric(eval_dataset)
     trainer = CustomSeq2SeqTrainer(
         model=flan_t5,
         args=Seq2SeqTrainingArguments(
@@ -296,7 +319,7 @@ def assess_ft_flan_model():
         eval_dataset=eval_dataset,
         tokenizer=tokenizer
     )
-    trainer.evaluate()
+    # trainer.evaluate()
     # for subject in eval_subjects:
     #     eval_subset = dataset.filter(lambda example: example['subject'] == subject) # is this still in the right order?
         # eval_subset = eval_subset.map(
