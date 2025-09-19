@@ -226,7 +226,7 @@ def evaluate_proportion_distribution_metric(dataset):
     unique_article_indices = set(article_indices)
     for index in unique_article_indices:
         article_subset = dataset.filter(lambda example: example['article_index'] == index)
-        article = f"{index}_{article_subset[0]['victim_name']}_{article_subset[0]['outlet']}"
+        article = f"{index}_{article_subset[0]['victim_name']}_{article_subset[0]['outlet']}.json"
 
         gt_annotations = load_training_data_annotations_for_person(
             person_name=article_subset[0]['victim_name'], 
