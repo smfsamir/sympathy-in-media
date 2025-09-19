@@ -234,6 +234,7 @@ def evaluate_proportion_distribution_metric(dataset):
             identifier=index
         )
         paragraphs_ordered = load_article_paragraphs(article)
+        paras_extracted = extract_enumerated_paragraphs(article_subset['prompt'][0])
         ipdb.set_trace()
         
         # Get the unique articles, go by the article index.
