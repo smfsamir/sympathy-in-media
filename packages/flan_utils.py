@@ -119,6 +119,9 @@ def is_police_aligned_entity(description_text):
 
 def extract_relevant_paragraphs(description_text):
     assert is_valid_entity_present(description_text) == 'valid entity', "Entity is not valid"
-    paragraph_numbers = description_text.split("The relevant paragraphs are :")[-1].strip().split(",")
-    return [int(num.strip()) for num in paragraph_numbers]
-
+    paragraph_numbers = description_text.split("The paragraphs that reflect their perspectives are:")[-1].strip().split(",")
+    if paragraph_numbers[0] == 'none':
+        logger.warning('valid entity but no paragraphs?')
+        return []
+    else:
+        return [int(num.strip()) for num in paragraph_numbers]
