@@ -104,3 +104,21 @@ def convert_text_to_entity_present_label(description_texts):
         else:
             labels.append('unrecognized')
     return labels
+
+def is_valid_entity_present(description_text):
+    no_entity_str = "there is no valid entity providing a perspective here"
+    entity_present_str = "the entity name is"
+    if no_entity_str in description_text.lower():
+        return 'no entity'
+    elif entity_present_str in description_text.lower():
+        return 'valid entity'
+
+def is_police_aligned_entity(description_text):
+    assert is_valid_entity_present(description_text) == 'valid entity', "Entity is not valid"
+    return 'not aligned with the police' in description_text.lower()
+
+def extract_relevant_paragraphs(description_text):
+    assert is_valid_entity_present(description_text) == 'valid entity', "Entity is not valid"
+    paragraph_numbers = description_text.split("The relevant paragraphs are :")[-1].strip().split(",")
+    return [int(num.strip()) for num in paragraph_numbers]
+
