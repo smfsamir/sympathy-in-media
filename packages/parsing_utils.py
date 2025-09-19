@@ -1,3 +1,4 @@
+import re
 import os
 import json
 from dataclasses import dataclass
@@ -64,3 +65,29 @@ def load_repaired_articles(path: str="data/repaired_coref_annotations") -> Itera
     # remove _repaired suffix, just before the .json extension. Keep the .json extension
     # articles = set([article.replace('_repaired', '') for article in articles])
     return articles
+
+def extract_enumerated_paragraphs(text: str):
+    """
+    Extracts enumerated paragraphs (e.g., 1. ..., 2. ..., etc.)
+    from a block of text and returns them as a list of strings.
+    """
+    # Use regex to split on numbers followed by a dot and space (like "1. ")
+    # Keep the delimiter to reconstruct the full paragraph properly
+    parts = re.split(r'\n?\s*(\d+\.\s)', text.strip())
+    
+    paragraphs = []
+    current = ""
+    for part in parts:
+        if re.match(r'^\d+\.\s$', part):
+            # If we already have a paragraph, store it
+            if current:
+                paragraphs.append(current.strip())
+            current = ""  # reset for new paragraph
+        else:
+            current += part
+    
+    # Append the last one
+    if current:
+        paragraphs.append(current.strip())
+    
+    return paragraphs
