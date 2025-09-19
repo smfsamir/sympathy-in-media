@@ -74,7 +74,6 @@ def extract_enumerated_paragraphs(text: str):
     """
     start = " Here are the paragraphs that mention them:\n"
     end = f" Parse whether there is a valid entity, and, if so, what the entity name is whether they're aligned with the police, and which paragraphs reflect their perspectives." 
-
     relevant_lines = text[text.index(start) + len(start):text.index(end)].strip().split('\n')
-    ipdb.set_trace()
-    
+    # remove the enumeration (e.g., "1. ", "2. ", etc.) from each line
+    return [line[3:] for line in relevant_lines]
