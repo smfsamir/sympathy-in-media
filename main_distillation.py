@@ -306,14 +306,14 @@ def assess_ft_flan_model():
     assert 'labels' in eval_dataset.column_names
     eval_dataset = eval_dataset.map(partial(generate_predictions, flan_t5, tokenizer),
                                     batched=True, 
-                                    batch_size=8)
+                                    batch_size=2)
     eval_dataset = eval_dataset.map(evaluate_entity_identified_batch)
     evaluate_proportion_distribution_metric(eval_dataset)
     trainer = CustomSeq2SeqTrainer(
         model=flan_t5,
         args=Seq2SeqTrainingArguments(
             output_dir=os.path.join(config['SCRATCH_DIR'], "sympathy_distillation"),
-            per_device_eval_batch_size=8,
+            per_device_eval_batch_size=1,
             report_to="none"
         ),
         eval_dataset=eval_dataset,
