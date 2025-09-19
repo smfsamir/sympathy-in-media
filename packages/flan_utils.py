@@ -116,9 +116,9 @@ def is_valid_entity_present(description_text):
 def is_police_aligned_entity(description_text):
     assert is_valid_entity_present(description_text) == 'valid entity', "Entity is not valid"
     if 'not aligned with the police' in description_text.lower():
+        ipdb.set_trace()
         return False
     else:
-        ipdb.set_trace()
         return True
 
 def extract_relevant_paragraphs(description_text):
