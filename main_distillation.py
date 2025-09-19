@@ -249,7 +249,7 @@ def evaluate_proportion_distribution_metric(dataset):
                 relevant_paragraph_indices = extract_relevant_paragraphs(coref_prediction_text)
                 whole_article_indices = [paragraphs_ordered.index(para) + 1 for para in paras_extracted if para in paragraphs_ordered]
                 police_aligned = is_police_aligned_entity(coref_prediction_text)
-                paragraph_index_to_assignments.update({index: 'police-aligned' if police_aligned else 'victim-aligned' for index in relevant_paragraph_indices if index in whole_article_indices})
+                paragraph_index_to_assignments.update({index: 'police-aligned' if police_aligned else 'victim-aligned' for index in whole_article_indices})
 
         # Then, obtain their paragraphs.
         # then, map those paragraphs into their index into the original article.
