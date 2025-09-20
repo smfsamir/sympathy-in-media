@@ -399,7 +399,7 @@ def construct_length_limited_prompt(victim_name: str,
         # output_str = json.dumps({'entity_name': coref_entity_obj.entity_name, 'police_aligned': coref_entity_obj.police_aligned,'perspective_paragraphs': subset_indices})
         # output_str = json.dumps({'entity_name': coref_entity_obj.entity_name, 'police_aligned': coref_entity_obj.police_aligned,'perspective_paragraphs': subset_indices})
         # TODO: try a natural language output
-        output_str = f"The entity name is {coref_entity_obj.entity_name}. They are {'aligned with the police' if coref_entity_obj.police_aligned else 'not aligned with the police'}. The paragraphs that reflect their perspectives are: {', '.join(map(str, subset_indices)) if len(subset_indices) > 0 else 'none'}."
+        output_str = f"The entity name is {coref_entity_obj.entity_name}. They are {'aligned with the police' if coref_entity_obj.police_aligned == 'yes' else 'not aligned with the police'}. The paragraphs that reflect their perspectives are: {', '.join(map(str, subset_indices)) if len(subset_indices) > 0 else 'none'}."
     else:
         output_str = f"There is no valid entity providing a perspective here."
     return {'prompt': task_instruction_str, 'completion': output_str, 'entity_name': coref_entity_obj.entity_name, 'valid_entity': coref_entity_obj.valid_entity, victim_name: victim_name}
