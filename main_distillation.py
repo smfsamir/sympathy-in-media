@@ -19,6 +19,7 @@ from typing import List, Dict
 from transformers import AutoModelForCausalLM, AutoTokenizer, Seq2SeqTrainingArguments, Seq2SeqTrainer, DataCollatorForSeq2Seq, AutoModelForSeq2SeqLM, TrainingArguments, Trainer, DataCollatorForLanguageModeling, AutoModelForTokenClassification
 from dataclasses import dataclass
 from datasets import load_dataset, Dataset
+from packages.constants import DEV_SUBJECTS
 from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
 from packages.parsing_utils import CorefEntityMetadata, get_manual_annotation_occurrences,\
     load_article_paragraphs, load_repaired_articles,\
@@ -116,7 +117,7 @@ def distill_flant5():
 
     subjects_unique = set(dataset['victim_name'])
     train_subjects = set(random.sample(subjects_unique, int(len(subjects_unique) * 0.7)))
-    dev_subjects = subjects_unique - train_subjects
+    dev_subjects = DEV_SUBJECTS
     logger.info(f"Train subjects: {train_subjects}")
     logger.info(f"Dev subjects: {dev_subjects}")
 
@@ -284,7 +285,7 @@ def assess_ft_flan_model():
         pretrained_model_name_or_path=os.path.join(
             config['SCRATCH_DIR'], 
             "sympathy_distillation", 
-            "checkpoint-850")
+            "checkpoint-1000")
     ).to('cuda')
 
     dataset = load_dataset("json", 
@@ -294,7 +295,7 @@ def assess_ft_flan_model():
     # rolling_training_dataset.json
     # split train_dataset into train and validation sets
     # eval_subjects = ['Danny Lafrance-Godmer', 'Jeremy Nuvviaq', 'Dale Culver', 'Jason Gary Roy', 'Bradley Thomas Clattenburg', 'Charles Qirngnirq', 'Riley Fairholm', 'Radford James Good Dagger', 'Elgyn Muskego', 'Illutak Anautak', 'Christopher Arkell', 'David Charles Sandaker', 'Abisay Cruz', 'William David McCaffrey', 'John Robert Buehler'] 
-    eval_subjects =['Babak Saidi', 'Charles Qirngnirq', 'Ralph Stephens', 'David Charles Sandaker', 'Erixon Kabera', 'Steven Rigby', 'Abisay Cruz', 'Vitaly Savin', 'Radford James Good Dagger', 'Dillon Warren Breed'] 
+    eval_subjects = ['Vitaly Savin', 'Chris Bloomfield', 'Charles Qirngnirq', 'Dale Culver', 'Pierre Coriolan', 'Babak Saidi', 'Matt Dumas', 'Quinn E MacDougall', 'Jermaine Carby\t', 'Rui Nabico']
     eval_dataset = dataset.filter(lambda example: example['victim_name'] in eval_subjects) 
     
     def evaluate_entity_identified_batch(example): # not batched
