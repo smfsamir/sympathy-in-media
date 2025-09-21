@@ -117,6 +117,8 @@ def distill_flant5():
     subjects_unique = set(dataset['victim_name'])
     train_subjects = set(random.sample(subjects_unique, int(len(subjects_unique) * 0.7)))
     dev_subjects = subjects_unique - train_subjects
+    logger.info(f"Train subjects: {train_subjects}")
+    logger.info(f"Dev subjects: {dev_subjects}")
 
     # rolling_training_dataset.json
     # split train_dataset into train and validation sets
@@ -175,8 +177,6 @@ def distill_flant5():
         data_collator=data_collator, 
         tokenizer=FLAN_TOKENIZER
     )
-    logger.info(f"Train subjects: {train_subjects}")
-    logger.info(f"Dev subjects: {dev_subjects}")
     trainer.train(resume_from_checkpoint=False)
 
 @click.group()
