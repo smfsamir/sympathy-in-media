@@ -284,7 +284,7 @@ def assess_ft_flan_model():
         pretrained_model_name_or_path=os.path.join(
             config['SCRATCH_DIR'], 
             "sympathy_distillation", 
-            "checkpoint-1000")
+            "checkpoint-850")
     ).to('cuda')
 
     dataset = load_dataset("json", 
