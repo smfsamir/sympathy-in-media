@@ -254,9 +254,10 @@ def evaluate_proportion_distribution_metric(dataset):
                     ipdb.set_trace()
                 whole_article_indices = [paragraphs_ordered.index(para) + 1 for para in relevant_paragraphs]
                 police_aligned = is_police_aligned_entity(coref_prediction_text)
-                paragraph_index_to_assignments.update({index: 'police-aligned' if police_aligned else 'victim-aligned' for index in whole_article_indices})
-                print(paragraph_index_to_assignments)
-
+                for index in whole_article_indices:
+                    paragraph_index_to_assignments[index]\
+                        .append('police-aligned' if police_aligned else 'victim-aligned')
+        ipdb.set_trace()
         # Then, obtain their paragraphs.
         # then, map those paragraphs into their index into the original article.
         # then, assign those paragraphs as police-aligned, or victim-aligned.
@@ -264,7 +265,6 @@ def evaluate_proportion_distribution_metric(dataset):
         # keep a paragraph to list mappnig. If it's emtpy, then it's prediction is context 
         # otherwise it is the maximum of police or victim.
 
-    ipdb.set_trace()
         # Get the unique articles, go by the article index.
         # then, load the ground-truth annotations for that article
         # then, find all the coref objects that are identified as valid.
