@@ -98,7 +98,7 @@ def get_pb_entities_training(annotation_object, include_perspectives_only: bool)
 def get_civ_entities_training(annotation_obj, include_perspectives_only, count_victim=False):
     if include_perspectives_only:
         victim_aligned_entities = annotation_obj['task1']['Victim-aligned']
-        victim_aligned_entities = [entity[:entity.index(" (")] for entity in victim_aligned_entities]
+        victim_aligned_entities = [entity[:entity.rindex(" (")] for entity in victim_aligned_entities]
         perspective_entities = set([])
         # iterate through task 2 paragraph entities
         for _, entities in annotation_obj['task2'].items():
@@ -109,7 +109,7 @@ def get_civ_entities_training(annotation_obj, include_perspectives_only, count_v
     else:
         entities = annotation_obj['task1']['Victim-aligned']
         assert '(victim)' in entities[0] 
-        entities = [entity[:entity.index(" (")] for entity in entities] # remove the (id) part
+        entities = [entity[:entity.rindex(" (")] for entity in entities] # remove the (id) part
 
     return entities if count_victim else entities[1:]
 
