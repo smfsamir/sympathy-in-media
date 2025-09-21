@@ -92,7 +92,7 @@ def get_pb_entities_training(annotation_object, include_perspectives_only: bool)
         return list(perspective_entities)
     else:
         entities = annotation_object['task1']['Police-aligned'] 
-        entities = [entity[:entity.index(" (")] for entity in entities] # remove the (id) part
+        entities = [entity[:entity.rindex(" (")] for entity in entities] # remove the (id) part
         return entities
 
 def get_civ_entities_training(annotation_obj, include_perspectives_only, count_victim=False):
