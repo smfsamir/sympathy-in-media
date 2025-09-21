@@ -115,11 +115,9 @@ def distill_flant5():
     dataset = load_dataset("json", data_files={'train': "data/distillation_data/coref_training_dataset.json"}, split='train')
 
     subjects_unique = set(dataset['victim_name'])
-    train_subjects = set(random.sample(subjects_unique, int(len(subjects_unique) * 0.6)))
+    train_subjects = set(random.sample(subjects_unique, int(len(subjects_unique) * 0.7)))
     dev_subjects = subjects_unique - train_subjects
 
-    logger.info(f"Train subjects: {train_subjects}")
-    logger.info(f"Dev subjects: {dev_subjects}")
     # rolling_training_dataset.json
     # split train_dataset into train and validation sets
     train_dataset =  dataset.filter(lambda example: example['victim_name'] in train_subjects)
@@ -177,6 +175,8 @@ def distill_flant5():
         data_collator=data_collator, 
         tokenizer=FLAN_TOKENIZER
     )
+    logger.info(f"Train subjects: {train_subjects}")
+    logger.info(f"Dev subjects: {dev_subjects}")
     trainer.train(resume_from_checkpoint=False)
 
 @click.group()
@@ -273,20 +273,6 @@ def evaluate_proportion_distribution_metric(dataset):
 
     report = classification_report(all_y_true, all_y_pred, labels=['police-aligned', 'victim-aligned', 'no entity'])
     print(report)
-        # Then, obtain their paragraphs.
-        # then, map those paragraphs into their index into the original article.
-        # then, assign those paragraphs as police-aligned, or victim-aligned.
-        # then, compute the F1 across the labels.
-        # keep a paragraph to list mappnig. If it's emtpy, then it's prediction is context 
-        # otherwise it is the maximum of police or victim.
-
-        # Get the unique articles, go by the article index.
-        # then, load the ground-truth annotations for that article
-        # then, find all the coref objects that are identified as valid.
-        # then, use the prompt and the predictions to get the relevant paragraphs.
-        # then, map those paragraphs into their index into the original article.
-        # then, compare the set of paragraphs to the ground-truth annotations.
-    
 
 @click.command()
 def assess_ft_flan_model():
@@ -308,17 +294,7 @@ def assess_ft_flan_model():
     # rolling_training_dataset.json
     # split train_dataset into train and validation sets
     # eval_subjects = ['Danny Lafrance-Godmer', 'Jeremy Nuvviaq', 'Dale Culver', 'Jason Gary Roy', 'Bradley Thomas Clattenburg', 'Charles Qirngnirq', 'Riley Fairholm', 'Radford James Good Dagger', 'Elgyn Muskego', 'Illutak Anautak', 'Christopher Arkell', 'David Charles Sandaker', 'Abisay Cruz', 'William David McCaffrey', 'John Robert Buehler'] 
-    eval_subjects = ['Chris Bloomfield', 
-                     'Erixon Kabera', 
-                     'Buck E Evans', 
-                     'Babak Saidi', 
-                     'David Meadows', 
-                     'Pierre Charron', 
-                     'Bony Jean-Pierre', 
-                     'Jermaine Carby\t', 
-                     'Eugene Ethan Marcano', 
-                     'Dillon Warren Breed']
-
+    eval_subjects =['Babak Saidi', 'Charles Qirngnirq', 'Ralph Stephens', 'David Charles Sandaker', 'Erixon Kabera', 'Steven Rigby', 'Abisay Cruz', 'Vitaly Savin', 'Radford James Good Dagger', 'Dillon Warren Breed'] 
     eval_dataset = dataset.filter(lambda example: example['victim_name'] in eval_subjects) 
     
     def evaluate_entity_identified_batch(example): # not batched
