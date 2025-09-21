@@ -161,6 +161,4 @@ def compute_f1(gt_paragraph_to_affinity,
     for i in range(1, num_paragraphs_in_article + 1):
         y_true.append(gt_paragraph_to_affinity[i])
         y_pred.append(predicted_paragraph_to_affinity[i])
-    report = classification_report(y_true, y_pred, output_dict=True, zero_division=0)
-    print(report)
-    return report
+    return y_true, y_pred

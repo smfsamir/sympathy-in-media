@@ -5,7 +5,7 @@ import pandas as pd
 import random
 import pathlib
 import torch
-from sklearn.metrics import f1_score
+from sklearn.metrics import f1_score, classification_report
 import ipdb
 from functools import partial
 import loguru
@@ -232,6 +232,8 @@ def evaluate_proportion_distribution_metric(dataset):
     # TODO: CRUCIAL, FILL IN.
     article_indices = dataset['article_index']
     unique_article_indices = set(article_indices)
+    all_y_true = []
+    all_y_pred = []
     for index in unique_article_indices:
         article_subset = dataset.filter(lambda example: example['article_index'] == index)
         article = f"{index}_{article_subset[0]['victim_name']}_{article_subset[0]['outlet']}"
@@ -265,7 +267,12 @@ def evaluate_proportion_distribution_metric(dataset):
                         .append('police-aligned' if police_aligned else 'victim-aligned')
         gt_paragraph_to_affinities = compute_paragraph_to_affinities(gt_annotations)
         pred_paragraph_to_affinities = reduce_affinities_to_individual_prediction(paragraph_index_to_assignments)
-        f1 = compute_f1(gt_paragraph_to_affinities, pred_paragraph_to_affinities, len(paragraphs_ordered))
+        y_true, y_pred = compute_f1(gt_paragraph_to_affinities, pred_paragraph_to_affinities, len(paragraphs_ordered))
+        all_y_true.extend(y_true)
+        all_y_pred.extend(y_pred)
+
+        report = classification_report(y_true, y_pred, labels=['police-aligned', 'victim-aligned', 'no entity'])
+        print(report)
         # Then, obtain their paragraphs.
         # then, map those paragraphs into their index into the original article.
         # then, assign those paragraphs as police-aligned, or victim-aligned.
