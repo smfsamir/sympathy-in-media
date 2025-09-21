@@ -1,0 +1,1 @@
+DEV_SUBJECTS = ['Vitaly Savin', 'Chris Bloomfield', 'Charles Qirngnirq', 'Dale Culver', 'Pierre Coriolan', 'Babak Saidi', 'Matt Dumas', 'Quinn E MacDougall', 'Jermaine Carby\t', 'Rui Nabico']
