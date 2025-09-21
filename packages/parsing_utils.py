@@ -82,7 +82,7 @@ def extract_enumerated_paragraphs(text: str):
 def get_pb_entities_training(annotation_object, include_perspectives_only: bool):
     if include_perspectives_only:
         police_aligned_entities = annotation_object['task1']['Police-aligned']
-        police_aligned_entities = [entity[:entity.index(" (")] for entity in police_aligned_entities] # remove the (id) part
+        police_aligned_entities = [entity[:entity.rindex(" (")] for entity in police_aligned_entities] # remove the (id) part
         perspective_entities = set([])
         # iterate through task 2 paragraph entities
         for _, entities in annotation_object['task2'].items():
