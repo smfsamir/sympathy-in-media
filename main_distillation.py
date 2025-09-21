@@ -271,8 +271,8 @@ def evaluate_proportion_distribution_metric(dataset):
         all_y_true.extend(y_true)
         all_y_pred.extend(y_pred)
 
-        report = classification_report(y_true, y_pred, labels=['police-aligned', 'victim-aligned', 'no entity'])
-        print(report)
+    report = classification_report(all_y_true, all_y_pred, labels=['police-aligned', 'victim-aligned', 'no entity'])
+    print(report)
         # Then, obtain their paragraphs.
         # then, map those paragraphs into their index into the original article.
         # then, assign those paragraphs as police-aligned, or victim-aligned.
