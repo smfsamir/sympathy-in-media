@@ -20,9 +20,15 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, Seq2SeqTrainingArg
 from dataclasses import dataclass
 from datasets import load_dataset, Dataset
 from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
-from packages.parsing_utils import CorefEntityMetadata, get_manual_annotation_occurrences, load_article_paragraphs, load_repaired_articles, load_training_data_annotations_for_person, extract_enumerated_paragraphs
-from packages.flan_utils import compute_metrics_tokenized_batch, generate_singleton_prediction, evaluate_entity_identified_single, generate_predictions, generate_predictions_tokenized_batch, convert_text_to_entity_present_label,\
-    is_valid_entity_present, is_police_aligned_entity, extract_relevant_paragraphs
+from packages.parsing_utils import CorefEntityMetadata, get_manual_annotation_occurrences,\
+    load_article_paragraphs, load_repaired_articles,\
+    load_training_data_annotations_for_person, extract_enumerated_paragraphs,\
+    compute_paragraph_to_affinities
+from packages.flan_utils import compute_metrics_tokenized_batch, generate_singleton_prediction,\
+    evaluate_entity_identified_single, generate_predictions,\
+    generate_predictions_tokenized_batch, convert_text_to_entity_present_label,\
+    is_valid_entity_present, is_police_aligned_entity, extract_relevant_paragraphs,\
+    compute_f1, reduce_affinities_to_individual_prediction 
 
 config = dotenv_values(".env")
 logger = loguru.logger
@@ -257,6 +263,9 @@ def evaluate_proportion_distribution_metric(dataset):
                 for index in whole_article_indices:
                     paragraph_index_to_assignments[index]\
                         .append('police-aligned' if police_aligned else 'victim-aligned')
+        gt_paragraph_to_affinities = compute_paragraph_to_affinities(gt_annotations)
+        pred_paragraph_to_affinities = reduce_affinities_to_individual_prediction(paragraph_index_to_assignments)
+        f1 = compute_f1(gt_paragraph_to_affinities, pred_paragraph_to_affinities, len(paragraphs_ordered))
         ipdb.set_trace()
         # Then, obtain their paragraphs.
         # then, map those paragraphs into their index into the original article.

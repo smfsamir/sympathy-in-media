@@ -1,3 +1,4 @@
+from typing import Dict
 import ipdb
 import re
 import os
@@ -77,3 +78,53 @@ def extract_enumerated_paragraphs(text: str):
     relevant_lines = text[text.index(start) + len(start):text.index(end)].strip().split('\n')
     # remove the enumeration (e.g., "1. ", "2. ", etc.) from each line
     return [line[3:] for line in relevant_lines]
+
+def get_pb_entities_training(annotation_object, include_perspectives_only: bool):
+    if include_perspectives_only:
+        police_aligned_entities = annotation_object['task1']['Police-aligned']
+        police_aligned_entities = [entity[:entity.index(" (")] for entity in police_aligned_entities] # remove the (id) part
+        perspective_entities = set([])
+        # iterate through task 2 paragraph entities
+        for _, entities in annotation_object['task2'].items():
+            for entity in entities:
+                if entity in police_aligned_entities:
+                    perspective_entities.update(set([entity]))
+        return list(perspective_entities)
+    else:
+        entities = annotation_object['task1']['Police-aligned'] 
+        entities = [entity[:entity.index(" (")] for entity in entities] # remove the (id) part
+        return entities
+
+def get_civ_entities_training(annotation_obj, include_perspectives_only, count_victim=False):
+    if include_perspectives_only:
+        victim_aligned_entities = annotation_obj['task1']['Victim-aligned']
+        victim_aligned_entities = [entity[:entity.index(" (")] for entity in victim_aligned_entities]
+        perspective_entities = set([])
+        # iterate through task 2 paragraph entities
+        for _, entities in annotation_obj['task2'].items():
+            for entity in entities:
+                if entity in victim_aligned_entities:
+                    perspective_entities.update(set([entity]))
+        return list(perspective_entities)
+    else:
+        entities = annotation_obj['task1']['Victim-aligned']
+        assert '(victim)' in entities[0] 
+        entities = [entity[:entity.index(" (")] for entity in entities] # remove the (id) part
+
+    return entities if count_victim else entities[1:]
+
+def compute_paragraph_to_affinities(gt_annotations) -> Dict:
+    paragraph_to_affinity = {}
+    bureaucrats = get_pb_entities_training(gt_annotations, 
+                                           include_perspectives_only=True)
+    civ_entities = get_civ_entities_training(gt_annotations,
+                                             include_perspectives_only=True)
+    for paragraph_index, entities in gt_annotations['task2'].items(): 
+        entity = entities[0] # entities is a list but usually only has one item.
+        if entity in bureaucrats:
+            paragraph_to_affinity[int(paragraph_index.split(' ')[1])] = 'police-aligned'
+        elif entity in civ_entities:
+            paragraph_to_affinity[int(paragraph_index.split(' ')[1])] = 'victim-aligned'
+        else:
+            raise ValueError(f"Entity {entity} not found in either police-aligned or victim-aligned entities.")
+    return paragraph_to_affinity

@@ -1,7 +1,9 @@
 import loguru
 import ipdb
-from typing import Dict
+from typing import Dict, List
 import jiwer
+from collections import Counter
+from sklearn.metrics import classification_report
 
 # reference = ["i can spell", "i hope"]
 # hypothesis = ["i kan cpell", "i hop"]
@@ -130,3 +132,35 @@ def extract_relevant_paragraphs(description_text):
         return []
     else:
         return [int(num.strip()) for num in paragraph_numbers]
+
+def reduce_affinities_to_individual_prediction(
+        predicted_paragraph_to_affinity) -> Dict[int, List[str]]:
+    paragraph_to_affinities = {}
+    for paragraph_index, affinities in predicted_paragraph_to_affinity.items():
+        # count the number of each affinity, and assign the most common one
+        affinity_counts = Counter(affinities)
+        most_common_affinity = affinity_counts.most_common(1)[0][0]
+        paragraph_to_affinities[paragraph_index] = most_common_affinity
+    return paragraph_to_affinities
+
+
+def compute_f1(gt_paragraph_to_affinity, 
+               predicted_paragraph_to_affinity, 
+               num_paragraphs_in_article):
+    gt_paragraph_to_affinity = gt_paragraph_to_affinity.copy()
+    predicted_paragraph_to_affinity = predicted_paragraph_to_affinity.copy()
+    # add any missing paragraphs as 'no entity', to both dictionaries.
+    for i in range(1, num_paragraphs_in_article + 1):
+        if i not in gt_paragraph_to_affinity:
+            gt_paragraph_to_affinity[i] = 'no entity'
+        if i not in predicted_paragraph_to_affinity:
+            predicted_paragraph_to_affinity[i] = 'no entity'
+    assert len(gt_paragraph_to_affinity) == len(predicted_paragraph_to_affinity)
+    y_true = []
+    y_pred = []
+    for i in range(1, num_paragraphs_in_article + 1):
+        y_true.append(gt_paragraph_to_affinity[i])
+        y_pred.append(predicted_paragraph_to_affinity[i])
+    report = classification_report(y_true, y_pred, output_dict=True, zero_division=0)
+    print(report)
+    return report
