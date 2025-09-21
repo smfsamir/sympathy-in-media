@@ -266,7 +266,6 @@ def evaluate_proportion_distribution_metric(dataset):
         gt_paragraph_to_affinities = compute_paragraph_to_affinities(gt_annotations)
         pred_paragraph_to_affinities = reduce_affinities_to_individual_prediction(paragraph_index_to_assignments)
         f1 = compute_f1(gt_paragraph_to_affinities, pred_paragraph_to_affinities, len(paragraphs_ordered))
-        ipdb.set_trace()
         # Then, obtain their paragraphs.
         # then, map those paragraphs into their index into the original article.
         # then, assign those paragraphs as police-aligned, or victim-aligned.
@@ -280,7 +279,6 @@ def evaluate_proportion_distribution_metric(dataset):
         # then, use the prompt and the predictions to get the relevant paragraphs.
         # then, map those paragraphs into their index into the original article.
         # then, compare the set of paragraphs to the ground-truth annotations.
-    pass
     
 
 @click.command()
