@@ -407,6 +407,7 @@ def inspect_annotations():
     match_ratios_found = []
     perfect_articles = []
     imperfect_articles = []
+    article_to_match_ratios = {}
     for article_annotations in coref_annotations:
         article = article_annotations['article']
         manual_annotations = training_data_annotations[article]
@@ -415,7 +416,6 @@ def inspect_annotations():
                                   manual_annotations)
         discovered_counts.append(len(result_dict['matched_entities']))
         match_ratios_found.extend(result_dict['matched_entities_match_ratios'])
-        ipdb.set_trace()
         num_paragraphs_for_unfound_entities = [get_num_paragraphs_for_entity(entity, manual_annotations) for entity in result_dict['unfound_entities']]
         match_ratios_for_unfound_entities = [f"0/{num_paragraphs}" for num_paragraphs in num_paragraphs_for_unfound_entities]
         if include_unfound_entity_ratios:
@@ -430,6 +430,12 @@ def inspect_annotations():
             perfect_articles.append(article)
         else:
             imperfect_articles.append(article)
+        
+        total_num_paragraphs_for_all_entities = 0
+        for entity in get_all_entities_names_only(manual_annotations):
+            total_num_paragraphs_for_all_entities += get_num_paragraphs_for_entity(entity, manual_annotations)
+        article_to_match_ratios[article] = f"{sum([int(ratio.split('/')[0]) for ratio in result_dict['matched_entities_match_ratios']])}/{total_num_paragraphs_for_all_entities}"
+        ipdb.set_trace()
     entity_match_ratios = [f"{discovered}/{total}" for discovered, total in zip(discovered_counts, total_counts)]
     print(f"Entity Match Ratios: {entity_match_ratios}")
     print(f"Overall: {sum(discovered_counts)}/{sum(total_counts)} entities matched.")
@@ -452,6 +458,11 @@ def inspect_annotations():
         f.write("article,\n")
         for article in imperfect_articles:
             f.write(f"{article},\n")
+    
+    # compute the overall ratios for each article
+
+
+
         
 # model = FCoref(device='cuda:0')
 @click.group()
