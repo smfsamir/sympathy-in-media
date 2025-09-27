@@ -405,7 +405,7 @@ def inspect_annotations():
     discovered_counts = []
     total_counts = []
     match_ratios_found = []
-    perfect_articles = 0
+    perfect_articles = []
     imperfect_articles = []
     total_num_paragraphs_for_unfound_entities = 0
     for article_annotations in coref_annotations:
@@ -425,7 +425,8 @@ def inspect_annotations():
         coref_perfect = all([(int(ratio.split('/')[0]) / int(ratio.split('/')[1])) == 1 for ratio in result_dict['matched_entities_match_ratios']])
         if len(result_dict['unfound_entities']) == 0 and coref_perfect:
             print(f"All entities found {len(result_dict['matched_entities'])} and perfectly matched ({result_dict['matched_entities_match_ratios']}) for article {article}.")
-            perfect_articles += 1
+            # perfect_articles += 1
+            perfect_articles.append(article)
         else:
             imperfect_articles.append(article)
     entity_match_ratios = [f"{discovered}/{total}" for discovered, total in zip(discovered_counts, total_counts)]
@@ -444,7 +445,7 @@ def inspect_annotations():
     median_match_ratio = np.median(match_ratios_found)
     print(f"Median Match Ratio: {median_match_ratio:.2f}")
 
-    logger.info(f"Perfect Articles: {perfect_articles}/{len(coref_annotations)}")
+    logger.info(f"Perfect Articles: {len(perfect_articles)}/{len(coref_annotations)}. They are {perfect_articles}")
     # write imperfect articles to a CSV, with one column
     with open('data/imperfect_articles.csv', 'w') as f:
         f.write("article,\n")
