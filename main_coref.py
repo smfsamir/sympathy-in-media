@@ -435,7 +435,6 @@ def inspect_annotations():
         for entity in get_all_entities_names_only(manual_annotations):
             total_num_paragraphs_for_all_entities += get_num_paragraphs_for_entity(entity, manual_annotations)
         article_to_match_ratios[article] = f"{sum([int(ratio.split('/')[0]) for ratio in result_dict['matched_entities_match_ratios']])}/{total_num_paragraphs_for_all_entities}"
-        ipdb.set_trace()
     entity_match_ratios = [f"{discovered}/{total}" for discovered, total in zip(discovered_counts, total_counts)]
     print(f"Entity Match Ratios: {entity_match_ratios}")
     print(f"Overall: {sum(discovered_counts)}/{sum(total_counts)} entities matched.")
@@ -458,6 +457,11 @@ def inspect_annotations():
         f.write("article,\n")
         for article in imperfect_articles:
             f.write(f"{article},\n")
+    # print the article to match ratio, sorted
+    sorted_article_to_match_ratios = dict(sorted(article_to_match_ratios.items(), key=lambda item: float(item[1].split('/')[0]) / float(item[1].split('/')[1]), reverse=True))
+    print("Article to Match Ratios:")
+    for article, ratio in sorted_article_to_match_ratios.items():
+        print(f"{article}: {ratio} = {int(ratio.split('/')[0]) / int(ratio.split('/')[1]):.2f}")
     
     # compute the overall ratios for each article
 
