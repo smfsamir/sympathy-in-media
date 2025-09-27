@@ -397,7 +397,7 @@ def get_paragraphs_for_entity(entity, annotation_object) -> List[int]:
 def inspect_annotations():
     include_unfound_entity_ratios = True
 
-    with open('data/train_fcoref_annotations.json', 'r') as f:
+    with open('data/all_fcoref_annotations.json', 'r') as f:
         coref_annotations = json.load(f)
     with open("data/training_data.json", 'r') as f:
         training_data_annotations = json.load(f)
