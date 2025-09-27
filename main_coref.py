@@ -407,7 +407,6 @@ def inspect_annotations():
     match_ratios_found = []
     perfect_articles = []
     imperfect_articles = []
-    total_num_paragraphs_for_unfound_entities = 0
     for article_annotations in coref_annotations:
         article = article_annotations['article']
         manual_annotations = training_data_annotations[article]
@@ -416,11 +415,13 @@ def inspect_annotations():
                                   manual_annotations)
         discovered_counts.append(len(result_dict['matched_entities']))
         match_ratios_found.extend(result_dict['matched_entities_match_ratios'])
+        ipdb.set_trace()
         num_paragraphs_for_unfound_entities = [get_num_paragraphs_for_entity(entity, manual_annotations) for entity in result_dict['unfound_entities']]
         match_ratios_for_unfound_entities = [f"0/{num_paragraphs}" for num_paragraphs in num_paragraphs_for_unfound_entities]
         if include_unfound_entity_ratios:
             match_ratios_found.extend(match_ratios_for_unfound_entities)
         total_counts.append(len(result_dict['unfound_entities']) + len(result_dict['matched_entities']))
+        # article_to_recall_ratios[article] = f"{len(result_dict['matched_entities'])}/{len(result_dict['unfound_entities']) + len(result_dict['matched_entities'])}"
 
         coref_perfect = all([(int(ratio.split('/')[0]) / int(ratio.split('/')[1])) == 1 for ratio in result_dict['matched_entities_match_ratios']])
         if len(result_dict['unfound_entities']) == 0 and coref_perfect:
