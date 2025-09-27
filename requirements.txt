@@ -40,3 +40,5 @@ pandas==2.0.3
 ipdb
 click
 datasets==2.14.6
+fastcoref
+termcolor
