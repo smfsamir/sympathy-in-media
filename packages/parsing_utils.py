@@ -1,6 +1,7 @@
 from typing import Dict
 import ipdb
 import re
+import unicodedata
 import os
 import json
 from dataclasses import dataclass
@@ -132,3 +133,9 @@ def compute_paragraph_to_affinities(gt_annotations) -> Dict:
         else:
             raise ValueError(f"Entity {entity} not found in either police-aligned or victim-aligned entities.")
     return paragraph_to_affinity
+
+
+def normalize_whitespace(text: str) -> str:
+    return " ".join(
+        unicodedata.normalize("NFKC", text).split()
+    )
