@@ -253,8 +253,8 @@ def evaluate_proportion_distribution_metric(dataset):
                 try:
                     whole_article_indices = [paragraphs_ordered.index(para) + 1 for para in relevant_paragraphs]
                 except ValueError as e:
-                    # print the error message
-                    print(e.with_traceback())
+                    # print traceback of e
+                    logger.warning(f"Value error for {article} with paragraphs {relevant_paragraphs}: {e}")
                     ipdb.set_trace()
 
 
