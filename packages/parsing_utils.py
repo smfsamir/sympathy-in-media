@@ -22,7 +22,6 @@ def get_manual_annotation_occurrences(manual_annotation_obj, entity) -> List[int
             occurrences.append(int(paragraph_key.split(' ')[1]))
     return occurrences
 
-
 def get_paragraph_occurrences(paragraph_boundaries: List[Tuple],
                              entity_occurrences: List[Tuple]):
     occurrences = []
@@ -66,6 +65,11 @@ def load_repaired_articles(path: str="data/repaired_coref_annotations") -> Itera
     articles = os.listdir(path)
     # remove _repaired suffix, just before the .json extension. Keep the .json extension
     # articles = set([article.replace('_repaired', '') for article in articles])
+    return articles
+
+def load_all_articles(path: str="data/articles") -> Iterable[str]:
+    articles = os.listdir(path)
+    # return only the filename (+ extension), not the full path
     return articles
 
 def extract_enumerated_paragraphs(text: str):
