@@ -45,8 +45,8 @@ def load_training_data_annotations_for_person(person_name: str, outlet: str,
                 continue
             training_data_annotation = v
             matched_annotations.append(training_data_annotation)
-    assert training_data_annotation is not None, f"Could not find training data annotation for {person_name} and {outlet}."
-    assert len(matched_annotations) == 1, f"Found multiple training data annotations for {person_name} and {outlet}: {matched_annotations}."
+    assert training_data_annotation is not None, f"Could not find training data annotation for {person_name} and {outlet} and {identifier}."
+    assert len(matched_annotations) == 1, f"Found multiple training data annotations for {person_name} and {outlet} and {identifier}: {matched_annotations}."
     return training_data_annotation
 
 def load_article_paragraphs(article: str) -> List[str]:
