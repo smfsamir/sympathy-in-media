@@ -428,7 +428,7 @@ def _create_training_instance(victim_name: str,
     return training_instances
 
 def create_hf_dataset_from_articles(articles: List[str], 
-                                    repaired_set: Optional[List[str]] = None) -> Dataset:
+                                    repaired_set: Optional[List[str]] = []) -> Dataset:
     training_set = []
     victim_names = []
     outlets = []
