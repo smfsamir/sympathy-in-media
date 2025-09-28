@@ -250,7 +250,14 @@ def evaluate_proportion_distribution_metric(dataset):
                 except IndexError:
                     logger.warning(f"Index error for {article} with indices {relevant_paragraph_indices} and paragraphs {paras_extracted}")
                     ipdb.set_trace()
-                whole_article_indices = [paragraphs_ordered.index(para) + 1 for para in relevant_paragraphs]
+                try:
+                    whole_article_indices = [paragraphs_ordered.index(para) + 1 for para in relevant_paragraphs]
+                except ValueError as e:
+                    # print the error message
+                    print(e.with_traceback())
+                    ipdb.set_trace()
+
+
                 police_aligned = is_police_aligned_entity(coref_prediction_text)
                 for index in whole_article_indices:
                     paragraph_index_to_assignments[index]\
