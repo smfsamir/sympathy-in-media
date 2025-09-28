@@ -21,7 +21,7 @@ from dataclasses import dataclass
 from datasets import load_dataset, Dataset
 from packages.constants import DEV_SUBJECTS
 from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
-from packages.parsing_utils import CorefEntityMetadata, get_manual_annotation_occurrences,\
+from packages.parsing_utils import CorefEntityMetadata, get_manual_annotation_occurrences, load_all_articles,\
     load_article_paragraphs, load_repaired_articles,\
     load_training_data_annotations_for_person, extract_enumerated_paragraphs,\
     compute_paragraph_to_affinities
@@ -436,34 +436,30 @@ def create_coref_training_dataset():
         return article_name.replace('_repaired', '')
     # write a function to create a coreference resolution training dataset.
 
-    # TODO: note that some people have multiple articles from one outlet (Charles Qirnirq)
-    all_articles = os.listdir("data/linked_coref_annotations")
-    imperfect_articles = pd.read_csv('data/imperfect_articles.csv')['article'].tolist()
-    repaired_articles = load_repaired_articles()
-    perfect_articles = set(all_articles) - set(imperfect_articles)
+    split_to_article = obtain_train_eval_test_split()
+    train_articles = split_to_article['train']
+    dev_articles = split_to_article['dev']
+    test_articles = split_to_article['test']
+    repaired_articles = split_to_article['repaired (train)']
+
     training_set = []
     victim_names = []
     outlets = []
     article_indices = []
-    for article in perfect_articles.union(repaired_articles):
+    for article in train_articles:
         # load the coref object and the annotation object
         article_index = article.split('_')[0]
         person_name = article.split('_')[1]
         outlet = article.split('_')[2]
         annotations = load_training_data_annotations_for_person(person_name, outlet, identifier=article_index)
         # coref_metadata_objects = [CorefEntityMetadata(**obj) for obj in json.load(open(os.path.join("data/coref_metadata", article)))]
-        if '_repaired' in article:
-            paragraphs = load_article_paragraphs(_remove_repaired_suffix(article))
-        elif article in perfect_articles:
-            paragraphs = load_article_paragraphs(article)
+        paragraphs = load_article_paragraphs(article)
 
-        if article in perfect_articles:
+        if article not in repaired_articles:
             coref_metadata_objects = [CorefEntityMetadata(**obj) for obj in json.load(open(os.path.join("data/linked_coref_annotations", article)))]
         # TODO: load the repaired articles here, separately.
-        elif article in repaired_articles:
-            coref_metadata_objects= [CorefEntityMetadata(**obj) for obj in json.load(open(os.path.join("data/repaired_coref_annotations", article)))]
         else:
-            raise ValueError(f"Article {article} not found in perfect or repaired articles.")
+            coref_metadata_objects= [CorefEntityMetadata(**obj) for obj in json.load(open(os.path.join("data/repaired_coref_annotations", article.replace('.json', '_repaired.json'))))]
         for coref_obj in coref_metadata_objects:
             training_instances = _create_training_instance(
                 victim_name=person_name,
@@ -488,6 +484,50 @@ def create_coref_training_dataset():
     logger.info(f"Number of valid entities: {sum(dataset['valid_entity'])} / {len(dataset)}")
     dataset.to_json("data/distillation_data/coref_training_dataset.json")
 
+@click.command()
+def obtain_train_eval_test_split():
+    repaired_articles = load_repaired_articles()
+    perfect_ratio_articles = ['23_Charles Qirngnirq_CBC.json', '47_Raymond Alliman_York Region.json',
+                              '79_Buck E Evans_Edmonton Journal.json', '40_Raymond Alliman_Ottawa Citizen.json',
+                              '51_Ralph Stephens_Calgary Sun.json', '61_Abisay Cruz_CityNews Montreal.json',
+                              '8_Vitaly Savin_CBC.json', '77_Tommy Ningiuk_Nunatsiaq News.json',
+                              '63_Pierre Charron_Ottawa Citizen.json', '84_Buck E Evans_CBC.json',
+                              '86_David-Huges Lacour_CityNews Ottawa.json']
+    all_articles = load_all_articles()
+    # the train set will be all of these, unless they are about a person in {DEV_SUBJECTS}
+    train_set = []
+    repaired_articles = []
+    for article in repaired_articles + perfect_ratio_articles:
+        if not any(dev_subject in article for dev_subject in DEV_SUBJECTS):
+            train_set.append(article.replace('_repaired', ''))
+            if '_repaired' in article:
+                repaired_articles.append(article.replace('_repaired', ''))
+    print(f"{len(train_set)} Train set articles: {train_set}\n=========")
+    # development articles
+    development_articles = []
+    for article in all_articles:
+        for dev_subject in DEV_SUBJECTS:
+            if dev_subject in article:
+                development_articles.append(article)
+                break
+    # select 25 - len(development_articles) articles to also add into the development set. 
+    # Then, the rest will be the test set.
+    remaining_articles = set(all_articles) - set(train_set) - set(development_articles)
+    num_additional_dev = 25 - len(development_articles)
+    additional_dev_articles = random.sample(remaining_articles, num_additional_dev)
+    development_articles.extend(additional_dev_articles)
+    print(f"{len(development_articles)} Development set articles: {development_articles}\n=======")
+
+    test_set = set(all_articles) - set(development_articles) - set([article.replace("_repaired", "") for article in train_set]) 
+    print(f"{len(test_set)} Test set articles: {test_set}")
+
+    return {
+        'train': train_set,
+        'dev': development_articles,
+        'test': list(test_set),
+        'repaired (train)': repaired_articles
+    }
+
 main.add_command(distill_flant5)
 # main.add_command(create_training_dataset_rolling)
 main.add_command(compute_required_memory)
@@ -495,6 +535,7 @@ main.add_command(assess_baseline_ner_model)
 # main.add_command(create_training_dataset_rolling)
 main.add_command(assess_ft_flan_model)
 main.add_command(create_coref_training_dataset)
+main.add_command(obtain_train_eval_test_split)
 # main.add_command(create_distillation_examples_task1)
 
 if __name__ == "__main__":
