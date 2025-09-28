@@ -525,8 +525,9 @@ def obtain_train_eval_test_split():
     development_articles.extend(additional_dev_articles)
     print(f"{len(development_articles)} Development set articles: {development_articles}\n=======")
 
-    test_set = set(all_articles) - set(development_articles) - set([article.replace("_repaired", "") for article in train_set]) 
+    test_set = set(all_articles) - set(development_articles) - set(train_set)
     print(f"{len(test_set)} Test set articles: {test_set}")
+    ipdb.set_trace()
 
     return {
         'train': train_set,
