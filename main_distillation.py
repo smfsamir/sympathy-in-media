@@ -234,7 +234,7 @@ def evaluate_proportion_distribution_metric(dataset):
             identifier=index
         )
         paragraphs_ordered = [normalize_whitespace(paragraph) for paragraph in load_article_paragraphs(article)]
-        paras_extracted = extract_enumerated_paragraphs(article_subset['prompt'][0])
+        paras_extracted = [normalize_whitespace(paragraph) for paragraph in extract_enumerated_paragraphs(article_subset['prompt'][0])]
         for para in paras_extracted:
             assert para in paragraphs_ordered, f"Extracted paragraph not in original paragraphs: {para}"
         logger.info(f"Good for {article}")
