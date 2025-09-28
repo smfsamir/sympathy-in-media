@@ -114,8 +114,8 @@ def distill_flant5():
     )
 
     train_dataset = load_dataset("json", data_files={'train': "data/distillation_data/coref_training_dataset.json"}, split='train')
-    dev_dataset = load_dataset("json", data_files={'test': "data/distillation_data/coref_dev_dataset.json"}, split='train')
-    test_dataset = load_dataset("json", data_files={'test': "data/distillation_data/coref_test_dataset.json"}, split='train')
+    dev_dataset = load_dataset("json", data_files={'test': "data/distillation_data/coref_dev_dataset.json"}, split='test')
+    test_dataset = load_dataset("json", data_files={'test': "data/distillation_data/coref_test_dataset.json"}, split='test')
     ipdb.set_trace()
 
     # check the fraction of valid entities in the train and eval sets
