@@ -13,7 +13,7 @@ import json
 import os
 import click
 from dotenv import dotenv_values
-from typing import List, Dict
+from typing import List, Dict, Optional, Iterable
 
 
 from transformers import AutoModelForCausalLM, AutoTokenizer, Seq2SeqTrainingArguments, Seq2SeqTrainer, DataCollatorForSeq2Seq, AutoModelForSeq2SeqLM, TrainingArguments, Trainer, DataCollatorForLanguageModeling, AutoModelForTokenClassification
@@ -428,25 +428,13 @@ def _create_training_instance(victim_name: str,
     #     ipdb.set_trace()
     return training_instances
 
-    
-@click.command()
-def create_coref_training_dataset():
-    def _remove_repaired_suffix(article_name: str) -> str:
-        assert '_repaired' in article_name, f"Article name {article_name} does not contain '_repaired'"
-        return article_name.replace('_repaired', '')
-    # write a function to create a coreference resolution training dataset.
-
-    split_to_article = obtain_train_eval_test_split()
-    train_articles = split_to_article['train']
-    dev_articles = split_to_article['dev']
-    test_articles = split_to_article['test']
-    repaired_articles = split_to_article['repaired (train)']
-
+def create_hf_dataset_from_articles(articles: List[str], 
+                                    repaired_set: Optional[List[str]] = None) -> Dataset:
     training_set = []
     victim_names = []
     outlets = []
     article_indices = []
-    for article in train_articles:
+    for article in articles:
         # load the coref object and the annotation object
         article_index = article.split('_')[0]
         person_name = article.split('_')[1]
@@ -455,7 +443,7 @@ def create_coref_training_dataset():
         # coref_metadata_objects = [CorefEntityMetadata(**obj) for obj in json.load(open(os.path.join("data/coref_metadata", article)))]
         paragraphs = load_article_paragraphs(article)
 
-        if article not in repaired_articles:
+        if article not in repaired_set:
             coref_metadata_objects = [CorefEntityMetadata(**obj) for obj in json.load(open(os.path.join("data/linked_coref_annotations", article)))]
         # TODO: load the repaired articles here, separately.
         else:
@@ -480,9 +468,28 @@ def create_coref_training_dataset():
         'article_index': article_indices,
         'victim_name': victim_names
     })
+    return dataset
+    
+@click.command()
+def create_coref_training_dataset():
+    def _remove_repaired_suffix(article_name: str) -> str:
+        assert '_repaired' in article_name, f"Article name {article_name} does not contain '_repaired'"
+        return article_name.replace('_repaired', '')
+    # write a function to create a coreference resolution training dataset.
+
+    split_to_article = obtain_train_eval_test_split()
+    train_articles = split_to_article['train']
+    dev_articles = split_to_article['dev']
+    test_articles = split_to_article['test']
+    repaired_articles = split_to_article['repaired (train)']
+
     # log the number of valid entities relative to the total
-    logger.info(f"Number of valid entities: {sum(dataset['valid_entity'])} / {len(dataset)}")
-    dataset.to_json("data/distillation_data/coref_training_dataset.json")
+    train_dataset = create_hf_dataset_from_articles(train_articles, repaired_set=[_remove_repaired_suffix(article) for article in repaired_articles]) 
+    dev_dataset = create_hf_dataset_from_articles(dev_articles)
+    test_dataset = create_hf_dataset_from_articles(test_articles)
+    train_dataset.to_json("data/distillation_data/coref_training_dataset.json")
+    dev_dataset.to_json("data/distillation_data/coref_dev_dataset.json")
+    test_dataset.to_json("data/distillation_data/coref_test_dataset.json")
 
 @click.command()
 def obtain_train_eval_test_split():
