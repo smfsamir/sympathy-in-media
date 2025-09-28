@@ -118,7 +118,7 @@ def distill_flant5():
 
     # check the fraction of valid entities in the train and eval sets
     logger.info(f"Train valid entities proportion: {sum(train_dataset['valid_entity'])} / {len(train_dataset)}")
-    logger.info(f"Eval valid entities proportion: {sum(dev_dataset['valid_entity'])} / {len(eval_dataset)}")
+    logger.info(f"Eval valid entities proportion: {sum(dev_dataset['valid_entity'])} / {len(dev_dataset)}")
 
     model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-large", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
     new_tokens = ["{", "}"]
