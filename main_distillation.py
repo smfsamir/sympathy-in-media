@@ -277,7 +277,7 @@ def assess_ft_flan_model():
             "checkpoint-900")
     ).to('cuda')
 
-    dataset = load_dataset("json", 
+    eval_dataset = load_dataset("json", 
                            data_files={'train': "data/distillation_data/coref_dev_dataset.json"},
                            split='train')
 
