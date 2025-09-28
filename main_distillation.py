@@ -24,7 +24,7 @@ from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
 from packages.parsing_utils import CorefEntityMetadata, get_manual_annotation_occurrences, load_all_articles,\
     load_article_paragraphs, load_repaired_articles,\
     load_training_data_annotations_for_person, extract_enumerated_paragraphs,\
-    compute_paragraph_to_affinities
+    compute_paragraph_to_affinities, normalize_whitespace
 from packages.flan_utils import compute_metrics_tokenized_batch, generate_singleton_prediction,\
     evaluate_entity_identified_single, generate_predictions,\
     generate_predictions_tokenized_batch, convert_text_to_entity_present_label,\
@@ -233,7 +233,7 @@ def evaluate_proportion_distribution_metric(dataset):
             outlet=article_subset[0]['outlet'], 
             identifier=index
         )
-        paragraphs_ordered = load_article_paragraphs(article)
+        paragraphs_ordered = [normalize_whitespace(paragraph) for paragraph in load_article_paragraphs(article)]
         paras_extracted = extract_enumerated_paragraphs(article_subset['prompt'][0])
         for para in paras_extracted:
             assert para in paragraphs_ordered, f"Extracted paragraph not in original paragraphs: {para}"
@@ -246,7 +246,7 @@ def evaluate_proportion_distribution_metric(dataset):
             if is_valid_entity_present(coref_prediction_text) == 'valid entity':
                 relevant_paragraph_indices = extract_relevant_paragraphs(coref_prediction_text)
                 try:
-                    relevant_paragraphs = [paras_extracted[idx - 1] for idx in relevant_paragraph_indices if idx - 1 < len(paras_extracted)]
+                    relevant_paragraphs = [normalize_whitespace(paras_extracted[idx - 1]) for idx in relevant_paragraph_indices if idx - 1 < len(paras_extracted)]
                 except IndexError:
                     logger.warning(f"Index error for {article} with indices {relevant_paragraph_indices} and paragraphs {paras_extracted}")
                     ipdb.set_trace()
@@ -255,6 +255,7 @@ def evaluate_proportion_distribution_metric(dataset):
                 except ValueError as e:
                     # print traceback of e
                     logger.warning(f"Value error for {article} with paragraphs {relevant_paragraphs}: {e}")
+
                     ipdb.set_trace()
 
 
