@@ -471,6 +471,7 @@ def create_hf_dataset_from_articles(articles: List[str],
     
 @click.command()
 def create_coref_training_dataset():
+
     def _remove_repaired_suffix(article_name: str) -> str:
         assert '_repaired' in article_name, f"Article name {article_name} does not contain '_repaired'"
         return article_name.replace('_repaired', '')
@@ -489,8 +490,8 @@ def create_coref_training_dataset():
     train_dataset.to_json("data/distillation_data/coref_training_dataset.json")
     dev_dataset.to_json("data/distillation_data/coref_dev_dataset.json")
     test_dataset.to_json("data/distillation_data/coref_test_dataset.json")
+    return
 
-@click.command()
 def obtain_train_eval_test_split():
     repaired_articles = load_repaired_articles()
     perfect_ratio_articles = ['23_Charles Qirngnirq_CBC.json', '47_Raymond Alliman_York Region.json',
@@ -541,7 +542,7 @@ main.add_command(assess_baseline_ner_model)
 # main.add_command(create_training_dataset_rolling)
 main.add_command(assess_ft_flan_model)
 main.add_command(create_coref_training_dataset)
-main.add_command(obtain_train_eval_test_split)
+# main.add_command(obtain_train_eval_test_split)
 # main.add_command(create_distillation_examples_task1)
 
 if __name__ == "__main__":
