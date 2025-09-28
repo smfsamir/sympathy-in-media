@@ -142,15 +142,15 @@ def distill_flant5():
         per_device_train_batch_size=8,
         per_device_eval_batch_size=8,
         gradient_accumulation_steps=2,
-        max_steps=1000,
+        max_steps=2000,
         logging_steps=10,
         evaluation_strategy="steps",
         save_strategy="steps",
         eval_steps=10,
-        save_steps=50,
+        save_steps=100,
         learning_rate=2e-5,
         weight_decay=0.01,
-        warmup_steps=100,
+        warmup_steps=200,
         report_to="wandb"
     )
     label_pad_token_id = -100
