@@ -115,12 +115,10 @@ def distill_flant5():
 
     train_dataset = load_dataset("json", data_files={'train': "data/distillation_data/coref_training_dataset.json"}, split='train')
     dev_dataset = load_dataset("json", data_files={'test': "data/distillation_data/coref_dev_dataset.json"}, split='test')
-    test_dataset = load_dataset("json", data_files={'test': "data/distillation_data/coref_test_dataset.json"}, split='test')
-    ipdb.set_trace()
 
     # check the fraction of valid entities in the train and eval sets
     logger.info(f"Train valid entities proportion: {sum(train_dataset['valid_entity'])} / {len(train_dataset)}")
-    logger.info(f"Eval valid entities proportion: {sum(eval_dataset['valid_entity'])} / {len(eval_dataset)}")
+    logger.info(f"Eval valid entities proportion: {sum(dev_dataset['valid_entity'])} / {len(eval_dataset)}")
 
     model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-large", cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache"))
     new_tokens = ["{", "}"]
@@ -134,7 +132,7 @@ def distill_flant5():
     )
         # preprocess_flan_fn, 
         # remove_columns=['output', 'subject', 'outlet', 'current_mentioned_entities'],
-    eval_dataset = eval_dataset.map(
+    dev_dataset = dev_dataset.map(
         partial(tokenize_batch_flan_fn, FLAN_TOKENIZER), 
         batched=True
     )
@@ -166,7 +164,7 @@ def distill_flant5():
         model=model,
         args=training_arguments,
         train_dataset=train_dataset,
-        eval_dataset=eval_dataset,
+        eval_dataset=dev_dataset,
         data_collator=data_collator, 
         tokenizer=FLAN_TOKENIZER
     )
