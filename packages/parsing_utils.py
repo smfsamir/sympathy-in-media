@@ -41,7 +41,7 @@ def load_training_data_annotations_for_person(person_name: str, outlet: str,
     matched_annotations = []
     for k, v in training_data_annotations.items():
         if person_name in k and outlet in k:
-            if identifier != -1 and f"{identifier}" not in k:
+            if identifier != -1 and (not f"{identifier}" == k.split('_')[0]):
                 continue
             training_data_annotation = v
             matched_annotations.append(training_data_annotation)
