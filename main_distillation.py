@@ -274,19 +274,13 @@ def assess_ft_flan_model():
         pretrained_model_name_or_path=os.path.join(
             config['SCRATCH_DIR'], 
             "sympathy_distillation", 
-            "checkpoint-1000")
+            "checkpoint-900")
     ).to('cuda')
 
     dataset = load_dataset("json", 
-                           data_files={'train': "data/distillation_data/coref_training_dataset.json"}, 
+                           data_files={'train': "data/distillation_data/coref_dev_dataset.json"},
                            split='train')
 
-    # rolling_training_dataset.json
-    # split train_dataset into train and validation sets
-    # eval_subjects = ['Danny Lafrance-Godmer', 'Jeremy Nuvviaq', 'Dale Culver', 'Jason Gary Roy', 'Bradley Thomas Clattenburg', 'Charles Qirngnirq', 'Riley Fairholm', 'Radford James Good Dagger', 'Elgyn Muskego', 'Illutak Anautak', 'Christopher Arkell', 'David Charles Sandaker', 'Abisay Cruz', 'William David McCaffrey', 'John Robert Buehler'] 
-    eval_subjects = ['Vitaly Savin', 'Chris Bloomfield', 'Charles Qirngnirq', 'Dale Culver', 'Pierre Coriolan', 'Babak Saidi', 'Matt Dumas', 'Quinn E MacDougall', 'Jermaine Carby\t', 'Rui Nabico']
-    eval_dataset = dataset.filter(lambda example: example['victim_name'] in eval_subjects) 
-    
     def evaluate_entity_identified_batch(example): # not batched
         no_entity_str = "there is no valid entity providing a perspective here."
         entity_present_str = "the entity name is"
