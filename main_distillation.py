@@ -493,7 +493,7 @@ def create_coref_training_dataset():
     return
 
 def obtain_train_eval_test_split():
-    repaired_articles = load_repaired_articles()
+    current_repaired_articles = load_repaired_articles()
     perfect_ratio_articles = ['23_Charles Qirngnirq_CBC.json', '47_Raymond Alliman_York Region.json',
                               '79_Buck E Evans_Edmonton Journal.json', '40_Raymond Alliman_Ottawa Citizen.json',
                               '51_Ralph Stephens_Calgary Sun.json', '61_Abisay Cruz_CityNews Montreal.json',
@@ -503,14 +503,14 @@ def obtain_train_eval_test_split():
     all_articles = load_all_articles()
     # the train set will be all of these, unless they are about a person in {DEV_SUBJECTS}
     train_set = []
-    repaired_articles = []
-    for article in repaired_articles + perfect_ratio_articles:
+    current_repaired_articles = []
+    for article in current_repaired_articles + perfect_ratio_articles:
         if not any(dev_subject in article for dev_subject in DEV_SUBJECTS):
             train_set.append(
                 article.replace('_repaired', '')
             )
             if '_repaired' in article:
-                repaired_articles.append(article.replace('_repaired', ''))
+                current_repaired_articles.append(article.replace('_repaired', ''))
     print(f"{len(train_set)} Train set articles: {train_set}\n=========")
     # development articles
     development_articles = []
@@ -535,7 +535,7 @@ def obtain_train_eval_test_split():
         'train': train_set,
         'dev': development_articles,
         'test': list(test_set),
-        'repaired (train)': repaired_articles
+        'repaired (train)': current_repaired_articles
     }
 
 main.add_command(distill_flant5)
