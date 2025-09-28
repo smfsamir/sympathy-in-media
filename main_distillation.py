@@ -183,7 +183,6 @@ def distill_flant5():
 @click.group()
 def main():
     pass
-import random
 
 # Define hyperparameter ranges
 param_ranges = {
