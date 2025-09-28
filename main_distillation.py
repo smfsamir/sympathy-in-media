@@ -113,18 +113,10 @@ def distill_flant5():
         cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache")
     )
 
-    dataset = load_dataset("json", data_files={'train': "data/distillation_data/coref_training_dataset.json"}, split='train')
-
-    subjects_unique = set(dataset['victim_name'])
-    train_subjects = set(random.sample(subjects_unique, int(len(subjects_unique) * 0.7)))
-    dev_subjects = DEV_SUBJECTS
-    logger.info(f"Train subjects: {train_subjects}")
-    logger.info(f"Dev subjects: {dev_subjects}")
-
-    # rolling_training_dataset.json
-    # split train_dataset into train and validation sets
-    train_dataset =  dataset.filter(lambda example: example['victim_name'] in train_subjects)
-    eval_dataset = dataset.filter(lambda example: example['victim_name'] in dev_subjects)
+    train_dataset = load_dataset("json", data_files={'train': "data/distillation_data/coref_training_dataset.json"}, split='train')
+    dev_dataset = load_dataset("json", data_files={'test': "data/distillation_data/coref_dev_dataset.json"}, split='train')
+    test_dataset = load_dataset("json", data_files={'test': "data/distillation_data/coref_test_dataset.json"}, split='train')
+    ipdb.set_trace()
 
     # check the fraction of valid entities in the train and eval sets
     logger.info(f"Train valid entities proportion: {sum(train_dataset['valid_entity'])} / {len(train_dataset)}")
