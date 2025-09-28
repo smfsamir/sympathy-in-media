@@ -506,7 +506,9 @@ def obtain_train_eval_test_split():
     repaired_articles = []
     for article in repaired_articles + perfect_ratio_articles:
         if not any(dev_subject in article for dev_subject in DEV_SUBJECTS):
-            train_set.append(article.replace('_repaired', ''))
+            train_set.append(
+                article.replace('_repaired', '')
+            )
             if '_repaired' in article:
                 repaired_articles.append(article.replace('_repaired', ''))
     print(f"{len(train_set)} Train set articles: {train_set}\n=========")
