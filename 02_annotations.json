@@ -124,13 +124,14 @@
 "5_Jimmy Cloutier_CTV.json": {
   "task1": {
     "Victim-aligned": [
-        "jimmy cloutier",
-        "old brewery mission",
-        "matthew pearce",
-        "friends and acquaintances of cloutier",
-        "milosz janda",
-        "pierre magloire"
-      ],
+      "jimmy cloutier",
+      "old brewery mission",
+      "matthew pearce",
+      "jimmy cloutier's friends and acquaintances",
+      "milosz janda",
+      "pierre magloire",
+      "alain magloire"
+    ],
     "Police-aligned": [
         "montreal police",
         "bei"
@@ -144,7 +145,7 @@
     "paragraph 11": [ "matthew pearce" ],
     "paragraph 12": [ "matthew pearce" ],
     "paragraph 13": [ "matthew pearce" ],
-    "paragraph 14": [ "friends and acquaintances of cloutier" ],
+    "paragraph 14": [ "jimmy cloutier's friends and acquaintances" ],
     "paragraph 15": [ "milosz janda" ],
     "paragraph 16": [ "pierre magloire" ],
     "paragraph 18": [ "pierre magloire" ],
