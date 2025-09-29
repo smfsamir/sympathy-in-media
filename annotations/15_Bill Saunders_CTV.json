@@ -1,0 +1,77 @@
+{
+  "article": {
+    "paragraph 1": "'He was a good kid': Family of man fatally shot by RCMP",
+    "paragraph 2": "A Manitoba family is left waiting for answers after an altercation with RCMP that left a man dead.",
+    "paragraph 3": "Family members have identified the man shot and killed by RCMP early Wednesday morning near Lake Manitoba First Nation as 18-year-old Bill Saunders.",
+    "paragraph 4": "His older sister Rebecca Saunders told CTV News that her brother was the kind of guy who loved to joke around and cared about his family.",
+    "paragraph 5": "“He's not the type of person who would go out to hurt anyone else,” Saunders said.",
+    "paragraph 6": "“He was a good kid.”",
+    "paragraph 7": "Saunders said she got the call from her mother shortly after 6 a.m. Tuesday and knew immediately she was to receive bad news.",
+    "paragraph 8": "According to family members, Bill Saunders was in custody and being transported to Winnipeg, when there was an altercation on the side of the road.",
+    "paragraph 9": "The Independent Investigations Unit of Manitoba is now investigating.",
+    "paragraph 10": "READ MORE: Armed and dangerous suspect near St. Laurent shot, pronounced dead",
+    "paragraph 11": "“He was shot in the shoulder,” Rebecca Saunders said about her brother.",
+    "paragraph 12": "“He jumped into the vehicle which was the unmarked, stolen vehicle and I guess he had taken the officer's pistol.”",
+    "paragraph 13": "From there, Saunders said her brother made his way back to the family home in Eriksdale and addressed his mother before jumping back into the police vehicle.",
+    "paragraph 14": "“He said 'I gotta go, I don't know when I'll be able to talk to you but I'll call you when I can'. And that was the last thing he said to my mom and my sister,” Saunders said.",
+    "paragraph 15": "It was a call that never came for anxious family members desperately reaching out to friends by phone and online.",
+    "paragraph 16": "Instead, Saunders said the next visit the family received was from RCMP, informing them that Bill Saunders had been killed.",
+    "paragraph 17": "“There are a lot of questions we have,” Saunders said.",
+    "paragraph 18": "Lake Manitoba First Nation Chief Cornell McLean told CTV news that he believed the suspect shot by RCMP was the same man accused of robbing VLTs in his community early Sunday morning.",
+    "paragraph 19": "“I am very compassionate for the family of the deceased young man. But also compassionate for my members as well and hopefully this will put an end to the robberies and the violence in the community,” said McLean."
+  },
+  "task1": {
+    "Victim-aligned": [
+      "bill saunders's family",
+      "bill saunders",
+      "rebecca saunders",
+      "bill saunders's mother",
+      "cornell mclean"
+    ],
+    "Police-aligned": [
+      "rcmp",
+      "independent investigations unit of manitoba"
+    ]
+  },
+  "task2": {
+    "paragraph 4": [
+      "rebecca saunders"
+    ],
+    "paragraph 5": [
+      "rebecca saunders"
+    ],
+    "paragraph 6": [
+      "rebecca saunders"
+    ],
+    "paragraph 7": [
+      "rebecca saunders"
+    ],
+    "paragraph 8": [
+      "bill saunders's family"
+    ],
+    "paragraph 11": [
+      "rebecca saunders"
+    ],
+    "paragraph 12": [
+      "rebecca saunders"
+    ],
+    "paragraph 13": [
+      "rebecca saunders"
+    ],
+    "paragraph 14": [
+      "rebecca saunders"
+    ],
+    "paragraph 16": [
+      "rebecca saunders"
+    ],
+    "paragraph 17": [
+      "rebecca saunders"
+    ],
+    "paragraph 18": [
+      "cornell mclean"
+    ],
+    "paragraph 19": [
+      "cornell mclean"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "article": {
+    "paragraph 1": "Edmonton man fatally shot by police identified as construction worker",
+    "paragraph 2": "Vitaly Savin came at Edmonton police officer with knife before fatal shooting, CBC told",
+    "paragraph 3": "The man shot and killed by a police officer at a traffic stop in southwest Edmonton Thursday has been identified as Vitaly Savin, sources tell CBC News.",
+    "paragraph 4": "An employee of an Edmonton home construction company where he had worked, confirmed he worked there as a subcontractor.",
+    "paragraph 5": "Savin's LinkedIn page says he's worked for more than eight years in Edmonton as a drill operator with the company, called Great Canadian. Prior to moving to Edmonton, he worked as a mining engineer in Russia.",
+    "paragraph 6": "On his Facebook page, Savin, 55, is still connected to family and friends in Russia.",
+    "paragraph 7": "A court check shows Savin as having no criminal record.",
+    "paragraph 8": "At around 1:30 p.m. Thursday, Edmonton Police Service received two 911 calls from citizens reporting a possible impaired driver.",
+    "paragraph 9": "A patrol officer, driving a marked police vehicle, located the suspect vehicle in a cul-de-sac near Hollands Landing in the Hodgson neighbourhood in southwest Edmonton.",
+    "paragraph 10": "The officer pulled over the driver. Both got out of their cars. There was a confrontation, the Alberta Serious Incident Response Team (ASIRT) said.",
+    "paragraph 11": "The officer shot the man, who was pronounced dead at the scene.",
+    "paragraph 12": "Witnesses to the shooting in southwest Edmonton Thursday have told police the driver came at the officer with a knife, sources told CBC.",
+    "paragraph 13": "ASIRT, which is investigating the shooting, reported in a news release Friday a large hunting knife was recovered near the driver's body.",
+    "paragraph 14": "While ASIRT has not identified the shooting victim, the release said he was 55 years old.",
+    "paragraph 15": "ASIRT is investigating the circumstances surrounding the confrontation that resulted in the officer firing his police-issue firearm and is encouraging anyone with information or who witnessed the incident to call them.",
+    "paragraph 16": "An autopsy is scheduled for Friday.",
+    "paragraph 17": "ASIRT's mandate is to investigate incidents involving Alberta's police that have resulted in serious injury or death to any person, as well as serious or sensitive allegations of police misconduct."
+  },
+  "task1": {
+    "Victim-aligned": [
+      "witnesses to the shooting",
+      "vitaly savin",
+      "vitaly savin's former coworker",
+      "vitaly savin's family and friends in russia",
+      "911 callers"
+    ],
+    "Police-aligned": [
+      "edmonton police service",
+      "alberta serious incident response team"
+    ]
+  },
+  "task2": {
+    "paragraph 10": [
+      "alberta serious incident response team"
+    ],
+    "paragraph 13": [
+      "alberta serious incident response team"
+    ],
+    "paragraph 14": [
+      "alberta serious incident response team"
+    ]
+  }
+}

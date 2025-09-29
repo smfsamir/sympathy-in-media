@@ -1,0 +1,56 @@
+{
+  "article": {
+    "paragraph 1": "Woman fatally injured during arrest by Gatineau police identified",
+    "paragraph 2": "Nadia Racine, 34, succumbed to injuries Wednesday night",
+    "paragraph 3": "Quebec's coroner has identified a woman who died after being critically injured during an arrest in Gatineau Tuesday night.",
+    "paragraph 4": "Nadia Racine, 34, was taken to hospital after police were called to her apartment complex at 24 Rue Charles-Albanel to address a noise complaint.",
+    "paragraph 5": "BEI spokesman Martin Bonin-Charron said when police arrived at Racine's apartment there was no answer at the door, so they forced their way in. Once inside, police found Racine in a state of \"mental distress.\"",
+    "paragraph 6": "\"She was banging her head around the apartment,\" said Bonin-Charron.",
+    "paragraph 7": "Police placed handcuffs on Racine, but Bonin-Charron didn't know the precise series of events leading to the woman's injury.",
+    "paragraph 8": "\"The police officers, they handcuffed her before realizing she was in [medical] distress,\" he said.",
+    "paragraph 9": "Neighbour called 911",
+    "paragraph 10": "Racine's neighbour Shawn Lescard, who lives in the apartment directly above hers, said he called authorities when he heard screaming and banging coming from below.",
+    "paragraph 11": "\"It sounded like she was getting beaten,\" he said. \"I wanted to save her life. I thought she was getting beaten and that's why I called the cops. Now ... she's passed away.\"",
+    "paragraph 12": "Lescard said he first called 911, but was told to call Gatineau police's non-emergency phone line instead.",
+    "paragraph 13": "\"She seemed like a good person. Quiet. She [kept] to herself. It's pretty sad the way she went,\" he said.",
+    "paragraph 14": "The BEI has assigned eight investigators to the case and will be receiving assistance from the Sûreté du Québec."
+  },
+  "task1": {
+    "Victim-aligned": [
+      "nadia racine",
+      "shawn lescard"
+    ],
+    "Police-aligned": [
+      "quebec's coroner",
+      "bei",
+      "martin bonin-charron",
+      "surete du quebec"
+    ]
+  },
+  "task2": {
+    "paragraph 5": [
+      "martin bonin-charron"
+    ],
+    "paragraph 6": [
+      "martin bonin-charron"
+    ],
+    "paragraph 7": [
+      "martin bonin-charron"
+    ],
+    "paragraph 8": [
+      "martin bonin-charron"
+    ],
+    "paragraph 10": [
+      "shawn lescard"
+    ],
+    "paragraph 11": [
+      "shawn lescard"
+    ],
+    "paragraph 12": [
+      "shawn lescard"
+    ],
+    "paragraph 13": [
+      "shawn lescard"
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "article": {
+    "paragraph 1": "Dead suspect wanted when shot by police",
+    "paragraph 2": "The homicide suspect shot dead by a tactical police officer this weekend was wanted on a bench warrant in Vaughan at the time of his death, the Sun has learned.",
+    "paragraph 3": "Raymond Alliman, 31, died in a shootout with an Ottawa police officer early Saturday morning inside a ByWard Market parking garage. That exchange of gunfire came after Alliman had already shot two other people in a frenzied rampage that played out on bustling downtown streets as bar-goers were leaving the Market.",
+    "paragraph 4": "A dispute between two groups of bar-goers is believed to have kicked off the early morning gunfire.",
+    "paragraph 5": "Bun Sim was shot first and injured. His friend Terrence Phillips, 43, was fatally shot next by the fleeing suspect, after a police officer had already tried in vain to arrest Alliman at gunpoint.",
+    "paragraph 6": "The officer chased Alliman inside a parking garage. The civilian police watchdog, which is now investigating the series of shootings, has designated that officer and his actions as the subject of its probe. Post media has learned that the officer is Const. Aaron Reichert.",
+    "paragraph 7": "The Special Investigations Unit will determine if the officer's actions and use of lethal force were justified. The watchdog has also said there are two witness officers. It has not publicly named any of the shooting dead nor any officers.",
+    "paragraph 8": "Autopsies for both Phillips and Alliman were scheduled to take place Monday.",
+    "paragraph 9": "Little is currently known about Alliman. His last known address is at a downtown condo is Mississauga, west of Toronto. He was previously charged with impaired driving by York Regional Police, but that charge was later withdrawn. At the time of his death, he was wanted on a bench warrant out of Vaughan, Ont., for multiple counts of drug possession and possessing a gun inside a motor vehicle.",
+    "paragraph 10": "Efforts to reach his family in the Greater Toronto Area were unsuccessful.",
+    "paragraph 11": "Reichert has been lauded by members of the public for his skill in previously diffusing volatile situations. Several officers say his actions Saturday morning — pursuing an active shooter — were “heroic.”",
+    "paragraph 12": "A former supervisor told Postmedia the officer is thought of as “calm and level-headed.”",
+    "paragraph 13": "In 2007, Dr. Jack Kitts, the president and CEO of The Ottawa Hospital, thanked Reichert and other officers for their help in a violent incident involving a patient.",
+    "paragraph 14": "“On that evening we encountered a violent situation with a patient at the Civic Campus, causing some of our staff members to be injured. During the incident, the Ottawa Police Service was called and responded immediately and managed the situation extremely professionally,” said Kitts' letter of commendation to then-chief Vern White.",
+    "paragraph 15": "In 2011, a member of the public thanked Reichert and another officer for their calm assistance in defusing a situation involving a drunk driver. “Const. Reichert was extremely courteous while taking our statements and investigating the details. It never struck me until this morning how dangerous the situation was. If the driver had hit the gas, she could have killed someone or herself,” said the letter of commendation. “Thank you for keeping our city safe.”",
+    "paragraph 16": "Reichert was also among the police contingent dispatched in 2011 to Haiti, where an earthquake had been followed by a cholera epidemic that killed 7,000 people and sickened 530,000 more. The deployment, managed by the RCMP's International Peace Operations Branch in Ottawa, was the largest deployment of Canadian police to international peace missions. The officers' work included mentoring the Police Nationale d'Haiti and eight-hour foot patrols through dangerous neighbourhoods as well as speaking with community leaders and assessing security concerns. Reichert also patrolled camps for displaced people, according to an article published by Legion magazine in 2012 .",
+    "paragraph 17": "The triple shooting has renewed attention on the ByWard Market and police staffing levels in the area. Reichert is believed to have been alone at the time he was patrolling the area and heard the first shooting, and alone with Alliman in the subsequent gun battle.",
+    "paragraph 18": "Acting Chief Jill Skinner told Postmedia on Monday that the service “is very engaged in safety and security in the ByWard Market, Rideau Street and Lowertown area.",
+    "paragraph 19": "“The area is one of the busiest areas of the city and we assign appropriate resources to deal with the crime and social disorder issues we see there.”",
+    "paragraph 20": "Police union president Matt Skof said the influx of bar patrons as establishments close creates a dangerous situation for police.",
+    "paragraph 21": "Skinner said that “at closing time for bars, the area is saturated with police resources to ensure the safety of the public and to deal with crime and disorder issues we know occur there.”",
+    "paragraph 22": "“Officers conduct a number of duties,” she said, “including responding to calls for service and engaging in proactive policing. This includes walking through bars to assess the environment.”",
+    "paragraph 23": "Skinner declined to comment on the shooting or any other matters related to the ongoing SIU investigation.",
+    "paragraph 24": "While Skinner would not give the Sun specific numbers on staffing levels, she said “multiple resources focus on the area on a daily basis including regular patrol, foot patrol, bike patrol and a community police officer.”",
+    "paragraph 25": "The service has plans to increase the officers on foot patrol in the area before the end of the month “to address the issues that arise when the tourist season begins,” Skinner said.",
+    "paragraph 26": "“We also work with local businesses to provide advice and input on how they can prevent crime through design changes to their property.”"
+  },
+  "task1": {
+    "Victim-aligned": [
+      "raymond alliman",
+      "bun sim",
+      "terrence phillips"
+    ],
+    "Police-aligned": [
+      "ottawa police service",
+      "aaron reichert",
+      "special investigations unit",
+      "jack kitts",
+      "rcmp",
+      "jill skinner",
+      "matt skof",
+      "vern white",
+      "member of the public",
+      "aaron reichert's former supervisor",
+      "police nationale d'haiti",
+      "police union",
+      "york regional police"
+    ]
+  },
+  "task2": {
+    "paragraph 7": [
+      "special investigations unit"
+    ],
+    "paragraph 11": [
+      "ottawa police service"
+    ],
+    "paragraph 12": [
+      "aaron reichert's former supervisor"
+    ],
+    "paragraph 13": [
+      "jack kitts"
+    ],
+    "paragraph 14": [
+      "jack kitts"
+    ],
+    "paragraph 15": [
+      "member of the public"
+    ],
+    "paragraph 18": [
+      "jill skinner"
+    ],
+    "paragraph 19": [
+      "jill skinner"
+    ],
+    "paragraph 20": [
+      "matt skof"
+    ],
+    "paragraph 21": [
+      "jill skinner"
+    ],
+    "paragraph 22": [
+      "jill skinner"
+    ],
+    "paragraph 24": [
+      "jill skinner"
+    ],
+    "paragraph 25": [
+      "jill skinner"
+    ],
+    "paragraph 26": [
+      "jill skinner"
+    ]
+  }
+}

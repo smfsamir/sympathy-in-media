@@ -1,0 +1,48 @@
+{
+  "article": {
+    "paragraph 1": "Man fatally shot by police in Lachine after pursuit",
+    "paragraph 2": "A 27-year-old man is dead after he was shot by police following a pursuit Thursday morning.",
+    "paragraph 3": "The incident began around 12:45 a.m., when a man alerted police that his son, Noam Cohen, was in distress and had gotten behind the wheel with intent to do harm.",
+    "paragraph 4": "Cohen was apparently dressed only in his underwear when Cote Saint Luc security agents arrived, but were unable to prevent the man from driving off in his car.",
+    "paragraph 5": "Montreal police then caught up with Cohen as he drove for several kilometres and headed for Lachine.",
+    "paragraph 6": "Police said that Cohen was responsible for at least three collisions as he drove a black SUV with police in pursuit. They say police set up a patrol car as a makeshift barricade, but that Cohen tried to steer into officers at St. Joseph Blvd. near George V.",
+    "paragraph 7": "Montreal police said that officers shot Cohen at least once, although another source has told CTV that Cohen was shot in the back. He was taken to hospital where he died of his injuries.",
+    "paragraph 8": "Police said Cohen has a history of violence and had mental health issues. He pleaded guilty last year to breaking and entering and weapons charges, and was sentenced to three years probation and 240 hours of community service.",
+    "paragraph 9": "This is the second time this year Montreal police have shot and killed a man. On January 6 officers shot and killed Jimmy Cloutier, a frequent patron of the Old Brewery Mission.",
+    "paragraph 10": "Since then the director of the Mission, Matthew Pearce, has been active in training Montreal police officers on how to de-escalate situations involving a person who is believed to be mentally ill.",
+    "paragraph 11": "\"When we see someone who's got a mental illness and they're acting aggressively, their primary feeling is one of fear not one of anger. It looks like it's anger but in fact these are people who are very, very frightened because they are seeing things we're not seeing, they're experiencing things we're not experiencing, and it's frightening for them,\" said Pearce.",
+    "paragraph 12": "So far 75 of Montreal's 4,000 officers have been trained.",
+    "paragraph 13": "Both shootings are being investigated by the independent investigations bureau, the BEI, and the SQ will provide additional assistance under the independent team's watch.",
+    "paragraph 14": "Anyone who witnessed the event is urged to contact the BEI here.",
+    "paragraph 15": "Read the BEI report here."
+  },
+  "task1": {
+    "Victim-aligned": [
+      "noam cohen",
+      "old brewery mission",
+      "matthew pearce",
+      "jimmy cloutier",
+      "noam cohen's father"
+    ],
+    "Police-aligned": [
+      "cote saint luc security agents",
+      "montreal police",
+      "bei",
+      "sq"
+    ]
+  },
+  "task2": {
+    "paragraph 6": [
+      "montreal police"
+    ],
+    "paragraph 7": [
+      "montreal police"
+    ],
+    "paragraph 8": [
+      "montreal police"
+    ],
+    "paragraph 11": [
+      "matthew pearce"
+    ]
+  }
+}

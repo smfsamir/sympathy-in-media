@@ -1,0 +1,83 @@
+{
+  "article": {
+    "paragraph 1": "Man shot by RCMP on Stoney Nakoda reserve dies",
+    "paragraph 2": "'My family told me it happened so quick, even my cousin was asking them 'Have you shot my boy?'' says relative",
+    "paragraph 3": "A man shot by RCMP on the Stoney Nakoda reserve on Saturday has died.",
+    "paragraph 4": "Ralph Stephens, 27, was fatally shot as police executed a warrant for first-degree murder charges in the death of Lorenzo Bearspaw, also 27, who was reported missing on Tuesday by a family member.",
+    "paragraph 5": "Police said they found Bearspaw's body around 12:30 p.m. Friday on the Stoney Nakoda First Nation.",
+    "paragraph 6": "RCMP also identified two other suspects in the death of Bearspaw — John Stephens, 29, and Deangelo Powderface, 22.",
+    "paragraph 7": "The RCMP major crimes unit and the Emergency Response Team descended on a home on the reserve about 4 p.m. Saturday to serve the warrants, said Chief Supt. Tony Hamori, the officer in charge of Southern Alberta.",
+    "paragraph 8": "They took one suspect — John Stephens — into custody without incident.",
+    "paragraph 9": "Police said Ralph Stephens then \"engaged police and shots were fired.\" He died in hospital about an hour later.",
+    "paragraph 10": "Hamori described John and Ralph Stephens as brothers and said there were a number of people inside the residence at the time.",
+    "paragraph 11": "\"These events are tragic for the families, first responders and the Morley community,\" he said.",
+    "paragraph 12": "\"On behalf of the RCMP, I want to extend sincere condolences to the families of Lorenzo Bearspaw and Ralph Stephens. I also urge calm in the community while the investigations take place.\"",
+    "paragraph 13": "'Have you shot my boy?'",
+    "paragraph 14": "A relative of the Stephens family said he was told it was a chaotic scene when the police arrived.",
+    "paragraph 15": "\"My family told me it happened so quick, even my cousin was asking them, 'Have you shot my boy?'\" said Gerald Powderface.",
+    "paragraph 16": "\"They didn't even answer him, they just dragged him out of the house without no shoes and they're throwing people out of the house left and right. They didn't even answer his question, 'Have you shot my boy? What happened, what's going on here?'\"​",
+    "paragraph 17": "He said the family is surrounded by community at this time.",
+    "paragraph 18": "\"We have a community here that support each other on every matter, especially a matter like that. They all come to the house,\" he said on Sunday morning.",
+    "paragraph 19": "\"There was a lot of people there last night when I left.\"",
+    "paragraph 20": "Suspect turns himself in",
+    "paragraph 21": "The Alberta Serious Incident Response Team (ASIRT) is investigating the RCMP's role in the shooting.",
+    "paragraph 22": "John Stephens remains in custody, according to RCMP, awaiting his first court appearance.",
+    "paragraph 23": "Deangelo Powderface turned himself in to Cochrane RCMP on Sunday.",
+    "paragraph 24": "​Anyone with information is asked to call Cochrane RCMP at 403-932-2211 or anonymously through Crime Stoppers."
+  },
+  "task1": {
+    "Victim-aligned": [
+      "ralph stephens",
+      "lorenzo bearspaw",
+      "john stephens",
+      "deangelo powderface",
+      "gerald powderface"
+    ],
+    "Police-aligned": [
+      "rcmp",
+      "tony hamori",
+      "alberta serious incident response team"
+    ]
+  },
+  "task2": {
+    "paragraph 2": [
+      "gerald powderface"
+    ],
+    "paragraph 5": [
+      "rcmp"
+    ],
+    "paragraph 7": [
+      "tony hamori"
+    ],
+    "paragraph 9": [
+      "rcmp"
+    ],
+    "paragraph 10": [
+      "tony hamori"
+    ],
+    "paragraph 11": [
+      "tony hamori"
+    ],
+    "paragraph 12": [
+      "tony hamori"
+    ],
+    "paragraph 14": [
+      "gerald powderface"
+    ],
+    "paragraph 15": [
+      "gerald powderface"
+    ],
+    "paragraph 16": [
+      "gerald powderface"
+    ],
+    "paragraph 17": [
+      "gerald powderface"
+    ],
+    "paragraph 18": [
+      "gerald powderface"
+    ],
+    "paragraph 19": [
+      "gerald powderface"
+    ]
+  }
+}
