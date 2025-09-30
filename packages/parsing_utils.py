@@ -62,6 +62,11 @@ def load_article_paragraphs(article: str, path="data/articles") -> List[str]:
         paragraphs = json.load(f)
     return paragraphs
 
+def load_unsupervised_article_paragraphs(article: str, path="unsupervised_articles") -> List[str]:
+    with open(f'{path}/{article}', 'r') as f:
+        paragraphs = json.load(f)['article']
+    return paragraphs
+
 def retrieve_entity_from_coref_objs(coref_objs: List[CorefEntityMetadata], 
                                     entity_name) -> CorefEntityMetadata:
     for coref_obj in coref_objs:

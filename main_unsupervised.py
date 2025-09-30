@@ -11,7 +11,7 @@ import loguru
 
 logger = loguru.logger
 from packages.coref_utils import compute_fastcoref_annotation
-from packages.parsing_utils import CorefEntityInferenceMetadata, get_paragraph_occurrences, load_article_paragraphs
+from packages.parsing_utils import CorefEntityInferenceMetadata, get_paragraph_occurrences, load_unsupervised_article_paragraphs
 
 @click.command()
 def inspect_distributions_unsupervised():
@@ -176,7 +176,7 @@ def create_coref_inference_dataset():
         person_name = article.split('_')[1]
         outlet = article.split('_')[2]
 
-        paragraphs = load_article_paragraphs(article, path="unsupervised_articles")
+        paragraphs = load_unsupervised_article_paragraphs(article, path="unsupervised_articles")
         coref_metadata_objects = [CorefEntityInferenceMetadata(**obj) for obj in json.load(open(os.path.join("data/unsupervised_coref_annotations", article)))]
         for coref_metadata_obj in coref_metadata_objects:
             inference_instances.extend(
