@@ -114,14 +114,15 @@ def construct_length_limited_inference_prompt(victim_name: str,
                                     ) -> Dict:
     preamble_str = f"This is an article about the killing of {victim_name} by police." 
     #### Constructing the input
-    ipdb.set_trace()
     coref_auto_paragraphs = "\n".join([f"{i+1}. {all_paragraphs[index - 1]}" for i, index in enumerate(coref_auto_indices)])
     task_instruction_str = preamble_str +\
         f" Here are references to a potential entity: {coref_entity_obj.cluster_strings}\n" +\
         f" Here are the paragraphs that mention them:\n" +\
         f"{coref_auto_paragraphs}\n\n" +\
         f" Parse whether there is a valid entity, and, if so, what the entity name is whether they're aligned with the police, and which paragraphs reflect their perspectives." 
-    index_to_auto_paragraph_index = {index: i+1 for i, index in enumerate(coref_auto_indices)}
+    # NOTE: did we need the object below for something...?
+    # index_to_auto_paragraph_index = {index: i+1 for i, index in enumerate(coref_auto_indices)}
+
 
     preamble_str = f"This is an article about the killing of {victim_name} by police." 
     #### Constructing the input
