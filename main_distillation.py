@@ -5,7 +5,7 @@ import pandas as pd
 import random
 import pathlib
 import torch
-from sklearn.metrics import f1_score, classification_report
+from sklearn.metrics import f1_score, classification_report, cohen_kappa_score
 import ipdb
 from functools import partial
 import loguru
@@ -29,7 +29,7 @@ from packages.flan_utils import compute_metrics_tokenized_batch, generate_single
     evaluate_entity_identified_single, generate_predictions,\
     generate_predictions_tokenized_batch, convert_text_to_entity_present_label,\
     is_valid_entity_present, is_police_aligned_entity, extract_relevant_paragraphs,\
-    compute_f1, reduce_affinities_to_individual_prediction 
+    convert_to_ternary_label_list, reduce_affinities_to_individual_prediction 
 
 config = dotenv_values(".env")
 logger = loguru.logger
@@ -219,7 +219,6 @@ def assess_baseline_ner_model():
 
 
 def evaluate_proportion_distribution_metric(dataset):
-    # TODO: CRUCIAL, FILL IN.
     article_indices = dataset['article_index']
     unique_article_indices = set(article_indices)
     all_y_true = []
@@ -265,7 +264,7 @@ def evaluate_proportion_distribution_metric(dataset):
                         .append('police-aligned' if police_aligned else 'victim-aligned')
         gt_paragraph_to_affinities = compute_paragraph_to_affinities(gt_annotations)
         pred_paragraph_to_affinities = reduce_affinities_to_individual_prediction(paragraph_index_to_assignments)
-        y_true, y_pred = compute_f1(gt_paragraph_to_affinities, pred_paragraph_to_affinities, len(paragraphs_ordered))
+        y_true, y_pred = convert_to_ternary_label_list(gt_paragraph_to_affinities, pred_paragraph_to_affinities, len(paragraphs_ordered))
         all_y_true.extend(y_true)
         all_y_pred.extend(y_pred)
 
@@ -460,6 +459,7 @@ def create_hf_dataset_from_articles(articles: List[str],
         'victim_name': victim_names
     })
     return dataset
+
     
 @click.command()
 def create_coref_training_dataset():
@@ -483,6 +483,8 @@ def create_coref_training_dataset():
     dev_dataset.to_json("data/distillation_data/coref_dev_dataset.json")
     test_dataset.to_json("data/distillation_data/coref_test_dataset.json")
     return
+
+
 
 def obtain_train_eval_test_split():
     repaired_articles = load_repaired_articles()
@@ -530,6 +532,38 @@ def obtain_train_eval_test_split():
         'repaired (train)': repaired_articles
     }
 
+@click.command()
+def check_agreement():
+    with open("data/02_annotations.json", 'r') as f:
+        articles = list(json.load(f).keys())
+    articles.remove("5_Jimmy Cloutier_CTV.json")
+    print(articles)
+    all_gt_annotations = []
+    all_indep_annotations = []
+    for article in articles:
+        person_name = article.split('_')[1]
+        outlet = article.split('_')[2].replace('.json', '')
+        identifier = int(article.split('_')[0])
+        gt_annotations = load_training_data_annotations_for_person(person_name=person_name,
+                                                                outlet=outlet, 
+                                                                identifier=identifier
+                                                                )
+        indep_annotations = load_training_data_annotations_for_person(person_name=person_name,
+                                                                    outlet=outlet, 
+                                                                    identifier=identifier,
+                                                                    fname="data/02_annotations.json"
+                                                                    )                                                
+
+        paragraphs = load_article_paragraphs(article)                                                            
+        gt_paragraph_to_affinities = compute_paragraph_to_affinities(gt_annotations)
+        indep_paragraph_to_affinities = compute_paragraph_to_affinities(indep_annotations)
+    # load paragraphs for this article
+        y_one, y_two = convert_to_ternary_label_list(gt_paragraph_to_affinities, indep_paragraph_to_affinities, len(paragraphs))
+        all_gt_annotations.extend(y_one)
+        all_indep_annotations.extend(y_two)
+    score = cohen_kappa_score(all_gt_annotations, all_indep_annotations, labels=['police-aligned', 'victim-aligned', 'no entity'])
+    logger.info(f"Cohen's kappa score: {score}")
+
 main.add_command(distill_flant5)
 # main.add_command(create_training_dataset_rolling)
 main.add_command(compute_required_memory)
@@ -537,6 +571,7 @@ main.add_command(assess_baseline_ner_model)
 # main.add_command(create_training_dataset_rolling)
 main.add_command(assess_ft_flan_model)
 main.add_command(create_coref_training_dataset)
+main.add_command(check_agreement)
 # main.add_command(obtain_train_eval_test_split)
 # main.add_command(create_distillation_examples_task1)
 
