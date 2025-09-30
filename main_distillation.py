@@ -484,8 +484,6 @@ def create_coref_training_dataset():
     test_dataset.to_json("data/distillation_data/coref_test_dataset.json")
     return
 
-
-
 def obtain_train_eval_test_split():
     repaired_articles = load_repaired_articles()
     perfect_ratio_articles = ['23_Charles Qirngnirq_CBC.json', '47_Raymond Alliman_York Region.json',
