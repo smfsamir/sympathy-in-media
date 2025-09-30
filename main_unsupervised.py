@@ -180,16 +180,17 @@ def create_coref_inference_dataset():
         paragraphs = load_unsupervised_article_paragraphs(article, path="unsupervised_articles")
         coref_metadata_objects = [CorefEntityInferenceMetadata(**obj) for obj in json.load(open(os.path.join("data/unsupervised_coref_annotations", article)))]
         for coref_metadata_obj in coref_metadata_objects:
-            inference_instances.extend(
-                _create_inference_instance(
+            current_inference_instances = _create_inference_instance(
                     victim_name=person_name,
                     all_paragraphs=paragraphs,
                     coref_metadata_obj=coref_metadata_obj
                 )
+            inference_instances.extend(
+               current_inference_instances
             )
-            outlets.append(outlet)
-            victim_names.append(person_name)
-            article_indices.append(article_index)
+            outlets.extend([outlet] * len(current_inference_instances))
+            victim_names.append([person_name] * len(current_inference_instances))
+            article_indices.append([article_index] * len(current_inference_instances))
     dataset = Dataset.from_dict({
         'victim_name': victim_names,
         'outlet': outlets,
