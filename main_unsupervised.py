@@ -189,8 +189,8 @@ def create_coref_inference_dataset():
                current_inference_instances
             )
             outlets.extend([outlet] * len(current_inference_instances))
-            victim_names.append([person_name] * len(current_inference_instances))
-            article_indices.append([article_index] * len(current_inference_instances))
+            victim_names.extend([person_name] * len(current_inference_instances))
+            article_indices.extend([article_index] * len(current_inference_instances))
     dataset = Dataset.from_dict({
         'victim_name': victim_names,
         'outlet': outlets,
