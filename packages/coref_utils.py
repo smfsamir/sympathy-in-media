@@ -29,3 +29,4 @@ def compute_fastcoref_annotation(fcoref_instance,
         'full_text': full_text,
         'paragraph_boundaries': paragraph_boundaries
     }
+

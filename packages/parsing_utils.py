@@ -16,6 +16,12 @@ class CorefEntityMetadata:
     police_aligned: str # yes/no, or NA if not valid_entity. This needs to be predicted at inference time
     entity_name: str # the name of the entity, NA if not valid_entity. Otherwise, the name should be present in paragraph_indices. This needs to be predicted at inference time
 
+@dataclass
+class CorefEntityInferenceMetadata:
+    cluster_strings: List[str] # this will be provided as input
+    cluster_indices: List[Tuple[int, int]] # this will be provided as input
+    auto_paragraph_indices: List[int] # this will be provided as input
+
 def get_manual_annotation_occurrences(manual_annotation_obj, entity) -> List[int]:
     occurrences = []
     for paragraph_key, entity_list in manual_annotation_obj['task2'].items():
@@ -35,8 +41,9 @@ def get_paragraph_occurrences(paragraph_boundaries: List[Tuple],
     return occurrences
 
 def load_training_data_annotations_for_person(person_name: str, outlet: str,
-                                              identifier: Optional[int] = -1):
-    with open("data/training_data.json", 'r') as f:
+                                              identifier: Optional[int] = -1, 
+                                              fname="data/training_data.json") -> Dict:
+    with open(fname, 'r') as f:
         training_data_annotations = json.load(f)
     training_data_annotation = None
     matched_annotations = []
@@ -50,8 +57,8 @@ def load_training_data_annotations_for_person(person_name: str, outlet: str,
     assert len(matched_annotations) == 1, f"Found multiple training data annotations for {person_name} and {outlet} and {identifier}: {matched_annotations}."
     return training_data_annotation
 
-def load_article_paragraphs(article: str) -> List[str]:
-    with open(f'data/articles/{article}', 'r') as f:
+def load_article_paragraphs(article: str, path="data/articles") -> List[str]:
+    with open(f'{path}/{article}', 'r') as f:
         paragraphs = json.load(f)
     return paragraphs
 
@@ -87,7 +94,7 @@ def extract_enumerated_paragraphs(text: str):
 def get_pb_entities_training(annotation_object, include_perspectives_only: bool):
     if include_perspectives_only:
         police_aligned_entities = annotation_object['task1']['Police-aligned']
-        police_aligned_entities = [entity[:entity.rindex(" (")] for entity in police_aligned_entities] # remove the (id) part
+        police_aligned_entities = [(entity[:entity.rindex(" (")] if " (" in entity else entity)  for entity in police_aligned_entities] # remove the (id) part
         perspective_entities = set([])
         # iterate through task 2 paragraph entities
         for _, entities in annotation_object['task2'].items():
@@ -103,7 +110,7 @@ def get_pb_entities_training(annotation_object, include_perspectives_only: bool)
 def get_civ_entities_training(annotation_obj, include_perspectives_only, count_victim=False):
     if include_perspectives_only:
         victim_aligned_entities = annotation_obj['task1']['Victim-aligned']
-        victim_aligned_entities = [entity[:entity.rindex(" (")] for entity in victim_aligned_entities]
+        victim_aligned_entities = [(entity[:entity.rindex(" (")] if " (" in entity else entity) for entity in victim_aligned_entities]
         perspective_entities = set([])
         # iterate through task 2 paragraph entities
         for _, entities in annotation_obj['task2'].items():
