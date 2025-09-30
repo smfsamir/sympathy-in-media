@@ -5,7 +5,7 @@ import pandas as pd
 import random
 import pathlib
 import torch
-from sklearn.metrics import f1_score, classification_report
+from sklearn.metrics import f1_score, classification_report, confusion_matrix
 import ipdb
 from functools import partial
 import loguru
@@ -271,6 +271,8 @@ def evaluate_proportion_distribution_metric(dataset):
 
     report = classification_report(all_y_true, all_y_pred, labels=['police-aligned', 'victim-aligned', 'no entity'])
     print(report)
+    conf_matrix = confusion_matrix(all_y_true, all_y_pred)
+    print(conf_matrix)
 
 @click.command()
 def assess_ft_flan_model():
@@ -282,11 +284,11 @@ def assess_ft_flan_model():
         pretrained_model_name_or_path=os.path.join(
             config['SCRATCH_DIR'], 
             "sympathy_distillation", 
-            "checkpoint-900")
+            "checkpoint-1300")
     ).to('cuda')
 
     eval_dataset = load_dataset("json", 
-                           data_files={'train': "data/distillation_data/coref_dev_dataset.json"},
+                           data_files={'train': "data/distillation_data/coref_test_dataset.json"},
                            split='train')
 
     def evaluate_entity_identified_batch(example): # not batched
@@ -331,6 +333,7 @@ def assess_ft_flan_model():
         eval_dataset=eval_dataset,
         tokenizer=tokenizer
     )
+
     # trainer.evaluate()
     # for subject in eval_subjects:
     #     eval_subset = dataset.filter(lambda example: example['subject'] == subject) # is this still in the right order?
@@ -493,6 +496,7 @@ def obtain_train_eval_test_split():
                               '63_Pierre Charron_Ottawa Citizen.json', '84_Buck E Evans_CBC.json',
                               '86_David-Huges Lacour_CityNews Ottawa.json']
     all_articles = load_all_articles()
+    ipdb.set_trace()
     # the train set will be all of these, unless they are about a person in {DEV_SUBJECTS}
     train_set = []
     train_repaired_articles = []
@@ -521,7 +525,6 @@ def obtain_train_eval_test_split():
 
     test_set = set(all_articles) - set(development_articles) - set(train_set)
     print(f"{len(test_set)} Test set articles: {test_set}")
-    ipdb.set_trace()
 
     return {
         'train': train_set,
