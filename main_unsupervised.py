@@ -1,3 +1,4 @@
+import polars as pl
 from tqdm import tqdm
 from typing import List, Dict
 import matplotlib.pyplot as plt
@@ -15,6 +16,7 @@ from packages.parsing_utils import CorefEntityInferenceMetadata, get_paragraph_o
 def inspect_distributions_unsupervised():
     years = []
     outlets = []
+    ids = []
     for article in os.listdir('unsupervised_articles'):
         with open(f'unsupervised_articles/{article}', 'r') as f:
             obj = json.load(f)
@@ -23,7 +25,7 @@ def inspect_distributions_unsupervised():
             years.append(year)
             outlet = obj['publisher']
             outlets.append(outlet)
-
+            ids.append(obj['victim_id'])
     # sort by year
     years.sort()
     sns.histplot(years)
@@ -52,6 +54,16 @@ def inspect_distributions_unsupervised():
     plt.tight_layout()
     plt.savefig('unsupervised_article_outlet_distribution.png')
 
+    # print the counts of IDs sorted downwards by frequency
+    id_counts = {}
+    for id in ids:
+        if id not in id_counts:
+            id_counts[id] = 0
+        id_counts[id] += 1
+    sorted_id_counts = sorted(id_counts.items(), key=lambda x: x[1], reverse=True)
+    with open('unsupervised_article_id_counts.txt', 'w') as f:
+        for id, count in sorted_id_counts:
+            f.write(f"{id}: {count}\n")
 
 @click.command()
 def compute_fastcoref_annotations():
@@ -192,6 +204,7 @@ def main():
 main.add_command(inspect_distributions_unsupervised)
 main.add_command(compute_fastcoref_annotations) # run this first
 main.add_command(compute_article_basis_coref_objects)
+main.add_command(create_coref_inference_dataset) 
 
 if __name__ == '__main__':
     main()
