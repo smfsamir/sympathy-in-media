@@ -30,5 +30,7 @@ def compute_fastcoref_annotations():
 def main():
     pass
 
+main.add_command(inspect_distributions_unsupervised)
+
 if __name__ == '__main__':
     main()
