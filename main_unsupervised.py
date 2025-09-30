@@ -181,8 +181,7 @@ def create_coref_inference_dataset():
                 _create_inference_instance(
                     victim_name=person_name,
                     all_paragraphs=paragraphs,
-                    coref_metadata_obj=coref_metadata_obj,
-                    training_annotation_entity=None
+                    coref_metadata_obj=coref_metadata_obj
                 )
             )
             outlets.append(outlet)
