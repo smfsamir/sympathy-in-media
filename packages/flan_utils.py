@@ -144,7 +144,7 @@ def reduce_affinities_to_individual_prediction(
     return paragraph_to_affinities
 
 
-def compute_f1(gt_paragraph_to_affinity, 
+def convert_to_ternary_label_list(gt_paragraph_to_affinity, 
                predicted_paragraph_to_affinity, 
                num_paragraphs_in_article):
     gt_paragraph_to_affinity = gt_paragraph_to_affinity.copy()
