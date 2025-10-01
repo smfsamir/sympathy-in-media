@@ -321,7 +321,7 @@ def assess_ft_flan_model():
     assert 'labels' in eval_dataset.column_names
     eval_dataset = eval_dataset.map(partial(generate_predictions, flan_t5, tokenizer),
                                     batched=True, 
-                                    batch_size=2)
+                                    batch_size=16)
     eval_dataset = eval_dataset.map(evaluate_entity_identified_batch)
     evaluate_proportion_distribution_metric(eval_dataset)
 
