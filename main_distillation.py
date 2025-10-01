@@ -350,7 +350,8 @@ def run_large_scale_inference():
     inference_dataset = inference_dataset.map(partial(generate_predictions, flan_t5, tokenizer),
                                     batched=True,
                                     batch_size=2)
-    ipdb.set_trace()
+    inference_dataset.to_json("data/distillation_data/coref_inference_with_predictions.json")
+    logger.info("Wrote inference dataset with predictions to data/distillation_data/coref_inference_with_predictions.json")
 
 def construct_length_limited_prompt(victim_name: str, 
                                     coref_entity_obj: CorefEntityMetadata,
