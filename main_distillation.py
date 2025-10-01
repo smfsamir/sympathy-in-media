@@ -347,7 +347,6 @@ def run_large_scale_inference():
         batched=True
     )
     assert 'input_ids' in inference_dataset.column_names
-    assert 'labels' in inference_dataset.column_names
     inference_dataset = inference_dataset.map(partial(generate_predictions, flan_t5, tokenizer),
                                     batched=True,
                                     batch_size=2)
