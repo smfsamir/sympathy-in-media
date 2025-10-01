@@ -102,6 +102,10 @@ def tokenize_batch_flan_fn(tokenizer, samples):
     model_inputs['labels'] = labels
     return model_inputs
 
+def tokenize_batch_flan_fn_inference(tokenizer, samples):
+    model_inputs = tokenizer(samples['prompt'], padding=True, truncation=True, return_tensors="pt")
+    return model_inputs
+
 def compute_metrics_flan():
     pass
 
@@ -339,7 +343,7 @@ def run_large_scale_inference():
                            split='train')
 
     inference_dataset = inference_dataset.map(
-        partial(tokenize_batch_flan_fn, tokenizer),
+        partial(tokenize_batch_flan_fn_inference, tokenizer),
         batched=True
     )
     assert 'input_ids' in inference_dataset.column_names
