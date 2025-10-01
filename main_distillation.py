@@ -5,8 +5,7 @@ import pandas as pd
 import random
 import pathlib
 import torch
-from sklearn.metrics import f1_score, classification_report, confusion_matrix, cohen_kappa_score
-from sklearn.metrics import f1_score, classification_report, 
+from sklearn.metrics import f1_score, classification_report, cohen_kappa_score
 import ipdb
 from functools import partial
 import loguru
@@ -271,8 +270,6 @@ def evaluate_proportion_distribution_metric(dataset):
 
     report = classification_report(all_y_true, all_y_pred, labels=['police-aligned', 'victim-aligned', 'no entity'])
     print(report)
-    conf_matrix = confusion_matrix(all_y_true, all_y_pred)
-    print(conf_matrix)
 
 @click.command()
 def assess_ft_flan_model():
@@ -284,11 +281,11 @@ def assess_ft_flan_model():
         pretrained_model_name_or_path=os.path.join(
             config['SCRATCH_DIR'], 
             "sympathy_distillation", 
-            "checkpoint-1300")
+            "checkpoint-900")
     ).to('cuda')
 
     eval_dataset = load_dataset("json", 
-                           data_files={'train': "data/distillation_data/coref_test_dataset.json"},
+                           data_files={'train': "data/distillation_data/coref_dev_dataset.json"},
                            split='train')
 
     def evaluate_entity_identified_batch(example): # not batched
@@ -323,36 +320,34 @@ def assess_ft_flan_model():
                                     batch_size=2)
     eval_dataset = eval_dataset.map(evaluate_entity_identified_batch)
     evaluate_proportion_distribution_metric(eval_dataset)
-    trainer = CustomSeq2SeqTrainer(
-        model=flan_t5,
-        args=Seq2SeqTrainingArguments(
-            output_dir=os.path.join(config['SCRATCH_DIR'], "sympathy_distillation"),
-            per_device_eval_batch_size=1,
-            report_to="none"
-        ),
-        eval_dataset=eval_dataset,
-        tokenizer=tokenizer
+
+@click.command()
+def run_large_scale_inference():
+    tokenizer = AutoTokenizer.from_pretrained(
+        "google/flan-t5-large", 
+        cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache")
     )
+    flan_t5 = AutoModelForSeq2SeqLM.from_pretrained(
+        pretrained_model_name_or_path=os.path.join(
+            config['SCRATCH_DIR'], 
+            "sympathy_distillation", 
+            "checkpoint-900")
+    ).to('cuda')
 
-    # trainer.evaluate()
-    # for subject in eval_subjects:
-    #     eval_subset = dataset.filter(lambda example: example['subject'] == subject) # is this still in the right order?
-        # eval_subset = eval_subset.map(
-        #     preprocess_flan_fn, 
-        #     remove_columns=['output', 'subject', 'outlet', 'current_mentioned_entities'],
-        # ).map(
-        #     tokenize_batch_flan_fn, 
-        #     batched=True,
-        # )
-        # predictions = flan_t5.generate(
-        #     input_ids=torch.tensor(eval_subset['input_ids']).to('cuda'), 
-        #     attention_mask=torch.tensor(eval_subset['attention_mask']).to('cuda'), 
-        #     max_new_tokens=300
-        # )
-        # predicted_texts = FLAN_TOKENIZER.batch_decode(predictions, skip_special_tokens=True)
-        # ipdb.set_trace()
+    inference_dataset = load_dataset("json", 
+                           data_files={'train': "data/distillation_data/coref_inference_dataset.json"},
+                           split='train')
 
-    pass
+    inference_dataset = inference_dataset.map(
+        partial(tokenize_batch_flan_fn, tokenizer),
+        batched=True
+    )
+    assert 'input_ids' in inference_dataset.column_names
+    assert 'labels' in inference_dataset.column_names
+    inference_dataset = inference_dataset.map(partial(generate_predictions, flan_t5, tokenizer),
+                                    batched=True,
+                                    batch_size=2)
+    ipdb.set_trace()
 
 def construct_length_limited_prompt(victim_name: str, 
                                     coref_entity_obj: CorefEntityMetadata,
@@ -497,7 +492,6 @@ def obtain_train_eval_test_split():
                               '63_Pierre Charron_Ottawa Citizen.json', '84_Buck E Evans_CBC.json',
                               '86_David-Huges Lacour_CityNews Ottawa.json']
     all_articles = load_all_articles()
-    ipdb.set_trace()
     # the train set will be all of these, unless they are about a person in {DEV_SUBJECTS}
     train_set = []
     train_repaired_articles = []
@@ -526,6 +520,7 @@ def obtain_train_eval_test_split():
 
     test_set = set(all_articles) - set(development_articles) - set(train_set)
     print(f"{len(test_set)} Test set articles: {test_set}")
+    ipdb.set_trace()
 
     return {
         'train': train_set,
@@ -574,6 +569,7 @@ main.add_command(assess_baseline_ner_model)
 main.add_command(assess_ft_flan_model)
 main.add_command(create_coref_training_dataset)
 main.add_command(check_agreement)
+main.add_command(run_large_scale_inference)
 # main.add_command(obtain_train_eval_test_split)
 # main.add_command(create_distillation_examples_task1)
 
