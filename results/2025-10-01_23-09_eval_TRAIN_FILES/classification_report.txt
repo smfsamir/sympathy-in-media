@@ -1,0 +1,9 @@
+                precision    recall  f1-score   support
+
+police-aligned       0.78      0.80      0.79       370
+victim-aligned       0.91      0.63      0.74       262
+     no entity       0.67      0.81      0.73       366
+
+      accuracy                           0.76       998
+     macro avg       0.79      0.74      0.76       998
+  weighted avg       0.77      0.76      0.76       998

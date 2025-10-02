@@ -8,14 +8,17 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import precision_recall_fscore_support
 import glob
 from datetime import datetime
+from splits import TRAIN_DEV, TRAIN_FILES, VAL_FILES, TEST_FILES
+import argparse
+
 
 def load_prompt(filename):
     with open(f"prompts/{filename}", "r", encoding="utf-8") as f:
         return f.read()
 
-TASK1_PROMPT = load_prompt("task1_prompt.txt")
-TASK2_PROMPT = load_prompt("task2_prompt.txt")
-ARTICLES_FOLDER = "data/articles/batch5"
+TASK1_PROMPT = load_prompt("v2/task1_prompt.txt")
+TASK2_PROMPT = load_prompt("v2/task2_prompt.txt")
+ARTICLES_FOLDER = "data/articles"
 
 def load_client():
     config = dotenv_values(".env")
@@ -24,6 +27,24 @@ def load_client():
         api_key=key
     )
     return client
+
+
+def resolve_article_paths(file_list=None, base_dir=ARTICLES_FOLDER):
+    if file_list:
+        paths = []
+        search_root = os.path.dirname(base_dir.rstrip(os.sep)) or base_dir
+        for name in file_list:
+            direct = os.path.join(base_dir, name)
+            if os.path.exists(direct):
+                paths.append(direct)
+                continue
+            hits = glob.glob(os.path.join(search_root, "**", name), recursive=True)
+            if hits:
+                paths.append(hits[0])
+            else:
+                print("WARNING: Missing file " + name)
+        return paths
+    return glob.glob(os.path.join(base_dir, "*.json"))
 
 
 # TASK 1 HELPERS 
@@ -61,6 +82,8 @@ def task1(client, article_path):
             article_content = "\n".join(article_content)
         
         message = TASK1_PROMPT + article_content
+        # message = TASK1_PROMPT.replace("PASTE ARTICLE HERE", article_content)
+ 
         response = client.chat.completions.create(
                 model="gpt-4o", 
                 temperature=0,
@@ -124,6 +147,8 @@ def task2(client, article_data, task1_response):
             line = "Paragraph " + str(i) + ": " + para
             numbered_article.append(line)
     article_text_prompt = "\n\n".join(numbered_article)
+
+    # message = TASK2_PROMPT.replace("PASTE ARTICLE HERE", article_content)
     
     messages = [
         {"role": "user", "content": TASK1_PROMPT + article_text_prompt},
@@ -191,16 +216,15 @@ def save_predictions(task1_results, task2_results):
 
     return
 
-def main():
-    articles_dir = ARTICLES_FOLDER
-    article_paths = glob.glob(os.path.join(articles_dir, "*.json"))
-    
+def main(file_list=None):
+    article_paths = resolve_article_paths(file_list, ARTICLES_FOLDER)
+
     if not article_paths:
-        print("No articles found in ", articles_dir)
+        print("No articles found in " + ARTICLES_FOLDER)
         return
-        
+
     client = load_client()
-    
+
     task1_results = []
     print("Starting Task 1...")
     for article_path in article_paths:
@@ -211,15 +235,26 @@ def main():
     task2_results = []
     print("Starting Task 2...")
     for task1_result in task1_results:
+        if "error" in task1_result:
+            task2_results.append({"error": "skipped due to task1 error"})
+            continue
         task2_result = task2(client, task1_result["article_data"], task1_result["response"])
         task2_results.append(task2_result)
     print("Task 2 Complete")
 
     save_predictions(task1_results, task2_results)
 
-    return    
-    
-    
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--split", choices=["dev", "train", "val", "test"])
+    args = parser.parse_args()
+
+    split_map = {
+        "dev": TRAIN_DEV,
+        "train": TRAIN_FILES,
+        "val": VAL_FILES,
+        "test": TEST_FILES,
+    }
+    chosen = split_map.get(args.split) if args.split else None
+    main(chosen)

@@ -65,65 +65,31 @@
       "Police-aligned": [
         "ronald macdonald (chief civilian director of the iio)",
         "allan turner (iio investigator)",
-        "independent investigation office (police oversight body)",
+        "independent investigations office (police oversight body)",
         "ridge meadows rcmp (police)",
         "david eby (attorney general)"
       ]
     },
     "task2": {
-      "paragraph 2": [
-        "yin yin din",
-        "min aung"
-      ],
-      "paragraph 4": [
-        "yin yin din",
-        "min aung"
-      ],
-      "paragraph 5": [
-        "yin yin din",
-        "min aung",
-        "listen chen"
-      ],
-      "paragraph 6": [
-        "yin yin din",
-        "min aung",
-        "listen chen"
-      ],
-      "paragraph 8": [
-        "yin yin din",
-        "min aung"
-      ],
-      "paragraph 9": [
-        "independent investigation office"
-      ],
-      "paragraph 11": [
-        "ronald macdonald"
-      ],
-      "paragraph 12": [
-        "ronald macdonald"
-      ],
-      "paragraph 13": [
-        "ronald macdonald"
-      ],
-      "paragraph 14": [
-        "ronald macdonald"
-      ],
-      "paragraph 15": [
-        "yin yin din"
-      ],
-      "paragraph 16": [
-        "ronald macdonald"
-      ],
-      "paragraph 17": [
-        "ronald macdonald"
-      ],
-      "paragraph 18": [
-        "yin yin din"
-      ],
-      "paragraph 19": [
-        "yin yin din"
-      ]
+      "paragraph 2": ["yin yin din", "min aung"],
+      "paragraph 4": ["yin yin din", "min aung"],
+      "paragraph 5": ["listen chen", "min aung", "yin yin din"],
+      "paragraph 6": ["listen chen", "min aung", "yin yin din"],
+      "paragraph 8": ["yin yin din"],
+      "paragraph 9": ["independent investigations office"],
+      "paragraph 10": ["independent investigations office"],
+      "paragraph 11": ["ronald macdonald"],
+      "paragraph 12": ["ronald macdonald"],
+      "paragraph 13": ["ronald macdonald"],
+      "paragraph 14": ["ronald macdonald"],
+      "paragraph 15": ["yin yin din"],
+      "paragraph 16": ["ronald macdonald"],
+      "paragraph 17": ["ronald macdonald"],
+      "paragraph 18": ["yin yin din"],
+      "paragraph 19": ["yin yin din"],
+      "paragraph 20": ["yin yin din"]
     }
+
   },
   "26_Dale Culver_Global News.json": {
     "task1": {
@@ -4662,7 +4628,7 @@
                 "matthew pearce (head of the old brewery mission)",
                 "jimmy clouter's friends and acquaintances (victim's friends)",
                 "milosz janda (social counsellor)",
-                "alain (previous victim)",
+                "alain magloire (previous victim)",
                 "pierre magloire (brother of a previous victim)"
             ],
 
@@ -4674,19 +4640,20 @@
 
         "task2": 
         {
-            "paragraph 3": ["old brewery mission"],
-            "paragraph 6": ["montreal police"],
-            "paragraph 8": ["matthew pearce"],
-            "paragraph 9": ["matthew pearce"],
-            "paragraph 10": ["matthew pearce"],
-            "paragraph 11": ["matthew pearce"],
-            "paragraph 12": ["matthew pearce"],
-            "paragraph 13": ["jimmy clouter's friends and acquaintances"],
-            "paragraph 14": ["milosz janda"],
-            "paragraph 15": ["pierre magloire"],
-            "paragraph 17": ["pierre magloire"],
-            "paragraph 18": ["pierre magloire"],
-            "paragraph 19": ["pierre magloire"]
+          "paragraph 4": ["old brewery mission"],
+          "paragraph 7": ["montreal police"],
+          "paragraph 8": ["matthew pearce"],
+          "paragraph 9": ["matthew pearce"],
+          "paragraph 10": ["matthew pearce"],
+          "paragraph 11": ["matthew pearce"],
+          "paragraph 12": ["matthew pearce"],
+          "paragraph 13": ["matthew pearce"],
+          "paragraph 14": ["jimmy clouter's friends and acquaintances"],
+          "paragraph 15": ["milosz janda"],
+          "paragraph 16": ["pierre magloire"],
+          "paragraph 18": ["pierre magloire"],
+          "paragraph 19": ["pierre magloire"],
+          "paragraph 20": ["pierre magloire"]
         }
 
      },
