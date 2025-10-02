@@ -31,7 +31,7 @@ from packages.flan_utils import compute_metrics_tokenized_batch, generate_single
     generate_predictions_tokenized_batch, convert_text_to_entity_present_label,\
     is_valid_entity_present, is_police_aligned_entity, extract_relevant_paragraphs,\
     convert_to_ternary_label_list, reduce_affinities_to_individual_prediction,\
-    convert_to_ternary_label_list_inference
+    convert_to_ternary_label_list_inference, load_unsupervised_article_paragraphs
 
 config = dotenv_values(".env")
 logger = loguru.logger
@@ -223,10 +223,9 @@ def assess_baseline_ner_model():
     )
     eval_dataset.set_format(type='torch', columns=['input_ids', 'attention_mask'])
 
-# TODO: complete
 def get_predicted_article_paragraph_mappings(article_dataset: Dataset,
                                              article_name: str) -> List[str]: # dataset filtered by article index
-    paragraphs_ordered = [normalize_whitespace(paragraph) for paragraph in load_article_paragraphs(article_name)]
+    paragraphs_ordered = [normalize_whitespace(paragraph) for paragraph in load_unsupervised_article_paragraphs(article_name)]
     paragraph_index_to_assignments = defaultdict(list)
     for i in range(len(article_dataset)):
         paras_extracted = extract_enumerated_paragraphs(article_dataset['prompt'][i])
