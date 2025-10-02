@@ -607,7 +607,7 @@ def analyze_large_scale_inference():
     indices = set(inference_dataset['article_index'])
     for index in tqdm(indices):
         article_subset = inference_dataset.filter(pl.col('article_index') == index)
-        article = f"{index}_{article_subset[0]['victim_name']}_{article_subset[0]['outlet']}"
+        article = f"{index}_{article_subset['victim_name'][0]}_{article_subset['outlet'][0]}"
         get_predicted_article_paragraph_mappings(article_subset, article)
 
 main.add_command(distill_flant5)
