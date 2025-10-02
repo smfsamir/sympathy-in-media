@@ -1,3 +1,4 @@
+from tqdm import tqdm
 import numpy as np
 from collections import defaultdict
 import wandb
@@ -29,7 +30,8 @@ from packages.flan_utils import compute_metrics_tokenized_batch, generate_single
     evaluate_entity_identified_single, generate_predictions,\
     generate_predictions_tokenized_batch, convert_text_to_entity_present_label,\
     is_valid_entity_present, is_police_aligned_entity, extract_relevant_paragraphs,\
-    convert_to_ternary_label_list, reduce_affinities_to_individual_prediction 
+    convert_to_ternary_label_list, reduce_affinities_to_individual_prediction,\
+    convert_to_ternary_label_list_inference
 
 config = dotenv_values(".env")
 logger = loguru.logger
@@ -221,8 +223,42 @@ def assess_baseline_ner_model():
     )
     eval_dataset.set_format(type='torch', columns=['input_ids', 'attention_mask'])
 
+# TODO: complete
+def get_predicted_article_paragraph_mappings(article_dataset: Dataset,
+                                             article_name: str) -> List[str]: # dataset filtered by article index
 
-def evaluate_proportion_distribution_metric(dataset):
+    paragraphs_ordered = [normalize_whitespace(paragraph) for paragraph in load_article_paragraphs(article)]
+    paras_extracted = [normalize_whitespace(paragraph) for paragraph in extract_enumerated_paragraphs(article_subset['prompt'][0])]
+    for para in paras_extracted:
+        assert para in paragraphs_ordered, f"Extracted paragraph not in original paragraphs: {para}"
+    logger.info(f"Good for {article_name}")
+    paragraph_index_to_assignments = defaultdict(list)
+    for i in range(len(article_dataset)):
+        paras_extracted = extract_enumerated_paragraphs(article_dataset['prompt'][i])
+        coref_prediction_text = article_dataset['predicted_text'][i]
+        if is_valid_entity_present(coref_prediction_text) == 'valid entity':
+            relevant_paragraph_indices = extract_relevant_paragraphs(coref_prediction_text)
+            try:
+                relevant_paragraphs = [normalize_whitespace(paras_extracted[idx - 1]) for idx in relevant_paragraph_indices if idx - 1 < len(paras_extracted)]
+            except IndexError:
+                logger.warning(f"Index error for {article_name} with indices {relevant_paragraph_indices} and paragraphs {paras_extracted}")
+                ipdb.set_trace()
+            try:
+                whole_article_indices = [paragraphs_ordered.index(para) + 1 for para in relevant_paragraphs]
+            except ValueError as e:
+                # print traceback of e
+                logger.warning(f"Value error for {article_name} with paragraphs {relevant_paragraphs}: {e}")
+                ipdb.set_trace()
+
+            police_aligned = is_police_aligned_entity(coref_prediction_text)
+            for index in whole_article_indices:
+                paragraph_index_to_assignments[index]\
+                    .append('police-aligned' if police_aligned else 'victim-aligned')
+    pred_paragraph_to_affinities = reduce_affinities_to_individual_prediction(paragraph_index_to_assignments)
+    y_pred = convert_to_ternary_label_list(pred_paragraph_to_affinities, len(paragraphs_ordered))
+    return y_pred
+
+def evaluate_proportion_distribution_metric(dataset): #TODO: might have accidentally broken this at 9PM on Wednesday Oct 1 
     article_indices = dataset['article_index']
     unique_article_indices = set(article_indices)
     all_y_true = []
@@ -274,6 +310,8 @@ def evaluate_proportion_distribution_metric(dataset):
 
     report = classification_report(all_y_true, all_y_pred, labels=['police-aligned', 'victim-aligned', 'no entity'])
     print(report)
+
+
 
 @click.command()
 def assess_ft_flan_model():
@@ -537,7 +575,6 @@ def obtain_train_eval_test_split():
 def check_agreement():
     with open("data/02_annotations.json", 'r') as f:
         articles = list(json.load(f).keys())
-    articles.remove("5_Jimmy Cloutier_CTV.json")
     print(articles)
     all_gt_annotations = []
     all_indep_annotations = []
@@ -565,6 +602,17 @@ def check_agreement():
     score = cohen_kappa_score(all_gt_annotations, all_indep_annotations, labels=['police-aligned', 'victim-aligned', 'no entity'])
     logger.info(f"Cohen's kappa score: {score}")
 
+@click.command()
+def analyze_large_scale_inference():
+    inference_dataset = load_dataset("json", 
+                           data_files={'train': "data/distillation_data/coref_inference_with_predictions.json"},
+                           split='train')
+    # TODO: need to write a new function
+    indices = inference_dataset['article_index']
+    for index in tqdm(indices):
+        article_subset = inference_dataset.filter(lambda example: example['article_index'] == index)
+        get_predicted_article_paragraph_mappings(article_subset)
+
 main.add_command(distill_flant5)
 # main.add_command(create_training_dataset_rolling)
 main.add_command(compute_required_memory)
@@ -574,6 +622,7 @@ main.add_command(assess_ft_flan_model)
 main.add_command(create_coref_training_dataset)
 main.add_command(check_agreement)
 main.add_command(run_large_scale_inference)
+main.add_command(analyze_large_scale_inference) # TODO: create a new file for every article, lining up with the large dataset. Should basically be able to do a .join with it.
 # main.add_command(obtain_train_eval_test_split)
 # main.add_command(create_distillation_examples_task1)
 
