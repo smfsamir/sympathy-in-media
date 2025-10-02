@@ -162,3 +162,16 @@ def convert_to_ternary_label_list(gt_paragraph_to_affinity,
         y_true.append(gt_paragraph_to_affinity[i])
         y_pred.append(predicted_paragraph_to_affinity[i])
     return y_true, y_pred
+
+def convert_to_ternary_label_list_inference( 
+               predicted_paragraph_to_affinity, 
+               num_paragraphs_in_article):
+    predicted_paragraph_to_affinity = predicted_paragraph_to_affinity.copy()
+    # add any missing paragraphs as 'no entity', to both dictionaries.
+    for i in range(1, num_paragraphs_in_article + 1):
+        if i not in predicted_paragraph_to_affinity:
+            predicted_paragraph_to_affinity[i] = 'no entity'
+    y_pred = []
+    for i in range(1, num_paragraphs_in_article + 1):
+        y_pred.append(predicted_paragraph_to_affinity[i])
+    return y_pred
