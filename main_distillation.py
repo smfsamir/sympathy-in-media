@@ -610,7 +610,9 @@ def analyze_large_scale_inference():
         article_subset = inference_dataset.filter(pl.col('article_index') == index)
         article = f"{index}_{article_subset['victim_name'][0]}_{article_subset['outlet'][0]}"
         try:
-            get_predicted_article_paragraph_mappings(article_subset, article)
+            y_pred = get_predicted_article_paragraph_mappings(article_subset, article)
+            article_paragraphs = load_unsupervised_article_paragraphs(article)
+            assert len(y_pred) == len(article_paragraphs), f"Length mismatch for {article}: {len(y_pred)} vs {len(article_paragraphs)}"
         except ValueError as e:
             logger.error(f"Value error for article {article}: {e}")
             failed_indices.append(index)
