@@ -1,4 +1,5 @@
 from tqdm import tqdm
+import polars as pl
 import numpy as np
 from collections import defaultdict
 import wandb
@@ -601,10 +602,11 @@ def analyze_large_scale_inference():
     inference_dataset = load_dataset("json", 
                            data_files={'train': "data/distillation_data/coref_inference_with_predictions.json"},
                            split='train')
+    inference_dataset = pl.from_pandas(inference_dataset.to_pandas())
     # TODO: need to write a new function
     indices = set(inference_dataset['article_index'])
     for index in tqdm(indices):
-        article_subset = inference_dataset.filter(lambda example: example['article_index'] == index)
+        article_subset = inference_dataset.filter(pl.col('article_index') == index)
         article = f"{index}_{article_subset[0]['victim_name']}_{article_subset[0]['outlet']}"
         get_predicted_article_paragraph_mappings(article_subset, article)
 
