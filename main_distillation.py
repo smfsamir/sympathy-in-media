@@ -243,7 +243,7 @@ def get_predicted_article_paragraph_mappings(article_dataset: Dataset,
             except ValueError as e:
                 # print traceback of e
                 logger.warning(f"Value error for {article_name} with paragraphs {relevant_paragraphs}: {e}")
-                ipdb.set_trace()
+                raise e
 
             police_aligned = is_police_aligned_entity(coref_prediction_text)
             for index in whole_article_indices:
@@ -605,10 +605,16 @@ def analyze_large_scale_inference():
     inference_dataset = pl.from_pandas(inference_dataset.to_pandas())
     # TODO: need to write a new function
     indices = set(inference_dataset['article_index'])
+    failed_indices = []
     for index in tqdm(indices):
         article_subset = inference_dataset.filter(pl.col('article_index') == index)
         article = f"{index}_{article_subset['victim_name'][0]}_{article_subset['outlet'][0]}"
-        get_predicted_article_paragraph_mappings(article_subset, article)
+        try:
+            get_predicted_article_paragraph_mappings(article_subset, article)
+        except ValueError as e:
+            logger.error(f"Value error for article {article}: {e}")
+            failed_indices.append(index)
+    logger.info(f"Failed indices: {failed_indices}")
 
 main.add_command(distill_flant5)
 # main.add_command(create_training_dataset_rolling)
