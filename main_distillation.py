@@ -226,12 +226,7 @@ def assess_baseline_ner_model():
 # TODO: complete
 def get_predicted_article_paragraph_mappings(article_dataset: Dataset,
                                              article_name: str) -> List[str]: # dataset filtered by article index
-
-    paragraphs_ordered = [normalize_whitespace(paragraph) for paragraph in load_article_paragraphs(article)]
-    paras_extracted = [normalize_whitespace(paragraph) for paragraph in extract_enumerated_paragraphs(article_subset['prompt'][0])]
-    for para in paras_extracted:
-        assert para in paragraphs_ordered, f"Extracted paragraph not in original paragraphs: {para}"
-    logger.info(f"Good for {article_name}")
+    paragraphs_ordered = [normalize_whitespace(paragraph) for paragraph in load_article_paragraphs(article_name)]
     paragraph_index_to_assignments = defaultdict(list)
     for i in range(len(article_dataset)):
         paras_extracted = extract_enumerated_paragraphs(article_dataset['prompt'][i])
@@ -255,7 +250,7 @@ def get_predicted_article_paragraph_mappings(article_dataset: Dataset,
                 paragraph_index_to_assignments[index]\
                     .append('police-aligned' if police_aligned else 'victim-aligned')
     pred_paragraph_to_affinities = reduce_affinities_to_individual_prediction(paragraph_index_to_assignments)
-    y_pred = convert_to_ternary_label_list(pred_paragraph_to_affinities, len(paragraphs_ordered))
+    y_pred = convert_to_ternary_label_list_inference(pred_paragraph_to_affinities, len(paragraphs_ordered))
     return y_pred
 
 def evaluate_proportion_distribution_metric(dataset): #TODO: might have accidentally broken this at 9PM on Wednesday Oct 1 
