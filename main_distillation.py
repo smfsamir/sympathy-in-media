@@ -602,7 +602,7 @@ def analyze_large_scale_inference():
                            data_files={'train': "data/distillation_data/coref_inference_with_predictions.json"},
                            split='train')
     # TODO: need to write a new function
-    indices = inference_dataset['article_index']
+    indices = set(inference_dataset['article_index'])
     for index in tqdm(indices):
         article_subset = inference_dataset.filter(lambda example: example['article_index'] == index)
         article = f"{index}_{article_subset[0]['victim_name']}_{article_subset[0]['outlet']}"
