@@ -606,6 +606,7 @@ def analyze_large_scale_inference():
     # TODO: need to write a new function
     indices = set(inference_dataset['article_index'])
     failed_indices = []
+
     for index in tqdm(indices):
         article_subset = inference_dataset.filter(pl.col('article_index') == index)
         article = f"{index}_{article_subset['victim_name'][0]}_{article_subset['outlet'][0]}"
@@ -613,6 +614,9 @@ def analyze_large_scale_inference():
             y_pred = get_predicted_article_paragraph_mappings(article_subset, article)
             article_paragraphs = load_unsupervised_article_paragraphs(article)
             assert len(y_pred) == len(article_paragraphs), f"Length mismatch for {article}: {len(y_pred)} vs {len(article_paragraphs)}"
+            # write the predictions to "data/unsupervised_inference_predictions/{article}.json"
+            with open(f"data/unsupervised_inference_predictions/{article}", 'w') as f:
+                json.dump(y_pred, f)
         except ValueError as e:
             logger.error(f"Value error for article {article}: {e}")
             failed_indices.append(index)
