@@ -135,9 +135,9 @@ def compute_gpt_paragraph_to_affinities() -> Dict:
 
 
 if __name__ == '__main__':
-    PRED_FILE = "results/2025-10-01_23-09_predictions.json"
-    SPLIT = TRAIN_FILES
-    SPLIT_NAME = "TRAIN_FILES"
+    PRED_FILE = "v1/2025-10-06_15-02_predictions.json"
+    SPLIT = TEST_FILES
+    SPLIT_NAME = "TEST"
 
     with open(PRED_FILE, "r", encoding="utf-8") as f:
         bundle = json.load(f)

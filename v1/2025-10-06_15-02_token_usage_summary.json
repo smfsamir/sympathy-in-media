@@ -1,0 +1,18 @@
+{
+  "n_requests": 50,
+  "median_prompt_tokens": 1848.0,
+  "median_completion_tokens": 108.5,
+  "median_total_tokens": 1961.5,
+  "per_task": {
+    "task1": {
+      "median_prompt_tokens": 1641,
+      "median_completion_tokens": 75,
+      "median_total_tokens": 1712
+    },
+    "task2": {
+      "median_prompt_tokens": 1979,
+      "median_completion_tokens": 181,
+      "median_total_tokens": 2171
+    }
+  }
+}
