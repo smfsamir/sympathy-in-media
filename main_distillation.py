@@ -1,4 +1,5 @@
 from tqdm import tqdm
+from scipy.stats import spearmanr
 import polars as pl
 import numpy as np
 from collections import defaultdict
@@ -258,6 +259,11 @@ def evaluate_proportion_distribution_metric(dataset): #TODO: might have accident
     unique_article_indices = set(article_indices)
     all_y_true = []
     all_y_pred = []
+    aligned_ratios_gt = [] 
+    aligned_ratios_predicted = []
+    critical_ratios_gt = []
+    critical_ratios_predicted = []
+
     for index in unique_article_indices:
         article_subset = dataset.filter(lambda example: example['article_index'] == index)
         article = f"{index}_{article_subset[0]['victim_name']}_{article_subset[0]['outlet']}"
@@ -300,8 +306,16 @@ def evaluate_proportion_distribution_metric(dataset): #TODO: might have accident
         gt_paragraph_to_affinities = compute_paragraph_to_affinities(gt_annotations)
         pred_paragraph_to_affinities = reduce_affinities_to_individual_prediction(paragraph_index_to_assignments)
         y_true, y_pred = convert_to_ternary_label_list(gt_paragraph_to_affinities, pred_paragraph_to_affinities, len(paragraphs_ordered))
+        aligned_ratios_gt.append(y_true.count('police-aligned') / len(y_true))
+        aligned_ratios_predicted.append(y_pred.count('police-aligned') / len(y_pred))
+        critical_ratios_gt.append(y_true.count('victim-aligned') / len(y_true))
+        critical_ratios_predicted.append(y_pred.count('victim-aligned') / len(y_pred))
         all_y_true.extend(y_true)
         all_y_pred.extend(y_pred)
+
+    logger.info("Showing correlations between article-level ratios")
+    print(f"Police-aligned ratio correlation: {spearmanr(aligned_ratios_gt, aligned_ratios_predicted):.2f}")
+    print(f"Victim-aligned ratio correlation: {spearmanr(critical_ratios_gt, critical_ratios_predicted):.2f}")
 
     report = classification_report(all_y_true, all_y_pred, labels=['police-aligned', 'victim-aligned', 'no entity'], output_dict=True)
     print(report)
