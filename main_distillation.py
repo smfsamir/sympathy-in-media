@@ -1,5 +1,5 @@
 from tqdm import tqdm
-from scipy.stats import spearmanr
+from scipy.stats import spearmanr,pearsonr
 import polars as pl
 import numpy as np
 from collections import defaultdict
@@ -314,8 +314,8 @@ def evaluate_proportion_distribution_metric(dataset): #TODO: might have accident
         all_y_pred.extend(y_pred)
 
     logger.info("Showing correlations between article-level ratios")
-    print(f"Police-aligned ratio correlation: {spearmanr(aligned_ratios_gt, aligned_ratios_predicted).statistic:.2f}")
-    print(f"Victim-aligned ratio correlation: {spearmanr(critical_ratios_gt, critical_ratios_predicted).statistic:.2f}")
+    print(f"Police-aligned ratio correlation: {pearsonr(aligned_ratios_gt, aligned_ratios_predicted).statistic:.2f}")
+    print(f"Victim-aligned ratio correlation: {pearsonr(critical_ratios_gt, critical_ratios_predicted).statistic:.2f}")
 
     report = classification_report(all_y_true, all_y_pred, labels=['police-aligned', 'victim-aligned', 'no entity'], output_dict=True)
     print(report)
