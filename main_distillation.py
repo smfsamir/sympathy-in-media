@@ -7,7 +7,7 @@ import pandas as pd
 import random
 import pathlib
 import torch
-from sklearn.metrics import f1_score, classification_report, cohen_kappa_score
+from sklearn.metrics import f1_score, classification_report, cohen_kappa_score, confusion_matrix
 import ipdb
 from functools import partial
 import loguru
@@ -303,9 +303,39 @@ def evaluate_proportion_distribution_metric(dataset): #TODO: might have accident
         all_y_true.extend(y_true)
         all_y_pred.extend(y_pred)
 
-    report = classification_report(all_y_true, all_y_pred, labels=['police-aligned', 'victim-aligned', 'no entity'])
+    report = classification_report(all_y_true, all_y_pred, labels=['police-aligned', 'victim-aligned', 'no entity'], output_dict=True)
     print(report)
+    # get the weighted f1 score
+    weighted_f1 = report['weighted avg']['f1-score']
+    # compute a boostrapped test for the confidence interval, checking whether it is significantly less than 0.78
+    print(f"Weighted F1 score: {weighted_f1}")
+    num_greater = 0
+    for b in range(1000):
+        indices = np.random.choice(len(all_y_true), len(all_y_true), replace=True)
+        y_true_sampled = [all_y_true[i] for i in indices]
+        y_pred_sampled = [all_y_pred[i] for i in indices]
+        report_sampled = classification_report(y_true_sampled, y_pred_sampled, labels=['police-aligned', 'victim-aligned', 'no entity'], output_dict=True)
+        weighted_f1_sampled = report_sampled['weighted avg']['f1-score']
+        if weighted_f1_sampled >= 0.78:
+            num_greater += 1
+    p_value = num_greater / 1000
+    print(f"P-value for weighted F1 >= 0.78: {p_value}")
 
+
+    # compute the confusion matrix
+    cm = confusion_matrix(all_y_true, all_y_pred, labels=['police-aligned', 'victim-aligned', 'no entity'])
+    print("Confusion Matrix:")
+    print(cm)
+    # number of 
+
+    # compute a dummy classifier that predicts randomly
+    random.seed(42)
+    all_y_random = []
+    for _ in range(len(all_y_true)):
+        all_y_random.append(random.choice(['police-aligned', 'victim-aligned', 'no entity']))
+    random_report = classification_report(all_y_true, all_y_random, labels=['police-aligned', 'victim-aligned', 'no entity'])
+    print("Random classifier report:")
+    print(random_report)
 
 
 @click.command()
@@ -357,6 +387,7 @@ def assess_ft_flan_model():
                                     batch_size=16)
     eval_dataset = eval_dataset.map(evaluate_entity_identified_batch)
     evaluate_proportion_distribution_metric(eval_dataset)
+
 
 @click.command()
 def run_large_scale_inference():
@@ -596,6 +627,20 @@ def check_agreement():
         all_indep_annotations.extend(y_two)
     score = cohen_kappa_score(all_gt_annotations, all_indep_annotations, labels=['police-aligned', 'victim-aligned', 'no entity'])
     logger.info(f"Cohen's kappa score: {score}")
+    print(len(all_gt_annotations))
+    # compute the f1 score for police-aligned vs not police-aligned
+    report = classification_report(all_indep_annotations, all_gt_annotations, labels=['police-aligned', 'victim-aligned', 'no entity'])
+    print(report)
+
+
+    # are there any cases where all_gt_annotations[i] is 'police' and all_indep_annotations[i] is 'victim' or vice versa?
+    # polar_disagreements = 0
+    # for i in range(len(all_gt_annotations)):
+    #     if (all_gt_annotations[i] == 'police-aligned' and all_indep_annotations[i] == 'victim-aligned') or \
+    #        (all_gt_annotations[i] == 'victim-aligned' and all_indep_annotations[i] == 'police-aligned'):
+    #         logger.warning(f"Disagreement at index {i}: GT={all_gt_annotations[i]}, Indep={all_indep_annotations[i]}")
+    #         polar_disagreements += 1
+    # logger.info(f"{polar_disagreements}/{len(all_gt_annotations)} polar disagreements found.")
 
 @click.command()
 def analyze_large_scale_inference():
