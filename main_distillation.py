@@ -7,7 +7,7 @@ import pandas as pd
 import random
 import pathlib
 import torch
-from sklearn.metrics import f1_score, classification_report, cohen_kappa_score
+from sklearn.metrics import f1_score, classification_report, cohen_kappa_score, confusion_matrix
 import ipdb
 from functools import partial
 import loguru
@@ -306,6 +306,19 @@ def evaluate_proportion_distribution_metric(dataset): #TODO: might have accident
     report = classification_report(all_y_true, all_y_pred, labels=['police-aligned', 'victim-aligned', 'no entity'])
     print(report)
 
+    cm = confusion_matrix(all_y_true, all_y_pred, labels=['police-aligned', 'victim-aligned', 'no entity'])
+    print("Confusion Matrix:")
+    print(cm)
+
+
+    random.seed(42)
+    all_y_random = []
+    for _ in range(len(all_y_true)):
+        all_y_random.append(random.choice(['police-aligned', 'victim-aligned', 'no entity']))
+    random_report = classification_report(all_y_true, all_y_random, labels=['police-aligned', 'victim-aligned', 'no entity'])
+    print("Random classifier report:")
+    print(random_report)
+
 
 
 @click.command()
@@ -318,11 +331,11 @@ def assess_ft_flan_model():
         pretrained_model_name_or_path=os.path.join(
             config['SCRATCH_DIR'], 
             "sympathy_distillation", 
-            "checkpoint-900")
+            "checkpoint-1300")
     ).to('cuda')
 
     eval_dataset = load_dataset("json", 
-                           data_files={'train': "data/distillation_data/coref_dev_dataset.json"},
+                           data_files={'train': "data/distillation_data/coref_test_dataset.json"},
                            split='train')
 
     def evaluate_entity_identified_batch(example): # not batched
