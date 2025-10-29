@@ -316,6 +316,11 @@ def evaluate_proportion_distribution_metric(dataset): #TODO: might have accident
     logger.info("Showing correlations between article-level ratios")
     print(f"Police-aligned ratio correlation: {pearsonr(aligned_ratios_gt, aligned_ratios_predicted).statistic:.2f}")
     print(f"Victim-aligned ratio correlation: {pearsonr(critical_ratios_gt, critical_ratios_predicted).statistic:.2f}")
+    # print the individual four arrays
+    print("Police-aligned ratios GT:", aligned_ratios_gt)
+    print("Police-aligned ratios Predicted:", aligned_ratios_predicted)
+    print("Victim-aligned ratios GT:", critical_ratios_gt)
+    print("Victim-aligned ratios Predicted:", critical_ratios_predicted)
 
     report = classification_report(all_y_true, all_y_pred, labels=['police-aligned', 'victim-aligned', 'no entity'], output_dict=True)
     print(report)
