@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --time=2:00:00
+#SBATCH --time=5:00:00
 #SBATCH --job-name=distill-flant5-sympathy
 #SBATCH --partition=gpunodes
 #SBATCH --gres=gpu:rtx_a6000:1 
@@ -11,4 +11,4 @@
 source ~/sympathy_venv/bin/activate
 cd sympathy-in-media
 
-python main_distillation.py distill-flant5
+python main_distillation.py run-large-scale-inference
