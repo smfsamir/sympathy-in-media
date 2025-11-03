@@ -431,7 +431,7 @@ def run_large_scale_inference():
         pretrained_model_name_or_path=os.path.join(
             config['SCRATCH_DIR'], 
             "sympathy_distillation", 
-            "checkpoint-900")
+            "checkpoint-1300")
     ).to('cuda')
 
     inference_dataset = load_dataset("json", 
