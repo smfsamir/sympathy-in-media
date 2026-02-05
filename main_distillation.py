@@ -715,7 +715,7 @@ def analyze_large_scale_inference(input_file_prefix):
         article = f"{index}_{article_subset['victim_name'][0]}_{article_subset['outlet'][0]}"
         try:
             y_pred = get_predicted_article_paragraph_mappings(article_subset, article, input_file_prefix)
-            article_paragraphs = load_unsupervised_article_paragraphs(article)
+            article_paragraphs = load_unsupervised_article_paragraphs(article, input_file_prefix + "_articles")
             assert len(y_pred) == len(article_paragraphs), f"Length mismatch for {article}: {len(y_pred)} vs {len(article_paragraphs)}"
             # write the predictions to "data/unsupervised_inference_predictions/{article}.json"
             with open(f"data/unsupervised_inference_predictions/{article}", 'w') as f:
