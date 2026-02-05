@@ -629,7 +629,6 @@ main.add_command(compute_article_basis_coref_objects)
 main.add_command(create_coref_inference_dataset) 
 main.add_command(compute_unsupervised_narration_distributions)
 main.add_command(compute_ngram_occurrences_unsupervised_dataset)
-main.add_command()
 # main.add_command(find_same_outlet_followups)
 
 if __name__ == '__main__':
