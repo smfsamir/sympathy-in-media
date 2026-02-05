@@ -225,8 +225,9 @@ def assess_baseline_ner_model():
     eval_dataset.set_format(type='torch', columns=['input_ids', 'attention_mask'])
 
 def get_predicted_article_paragraph_mappings(article_dataset: Dataset,
-                                             article_name: str) -> List[str]: # dataset filtered by article index
-    paragraphs_ordered = [normalize_whitespace(paragraph) for paragraph in load_unsupervised_article_paragraphs(article_name)]
+                                             article_name: str,
+                                             article_folder_prefix: str) -> List[str]: # dataset filtered by article index
+    paragraphs_ordered = [normalize_whitespace(paragraph) for paragraph in load_unsupervised_article_paragraphs(article_name, f"{article_folder_prefix}_articles")]
     paragraph_index_to_assignments = defaultdict(list)
     for i in range(len(article_dataset)):
         paras_extracted = extract_enumerated_paragraphs(article_dataset['prompt'][i])
@@ -713,7 +714,7 @@ def analyze_large_scale_inference(input_file_prefix):
         article_subset = inference_dataset.filter(pl.col('article_index') == index)
         article = f"{index}_{article_subset['victim_name'][0]}_{article_subset['outlet'][0]}"
         try:
-            y_pred = get_predicted_article_paragraph_mappings(article_subset, article)
+            y_pred = get_predicted_article_paragraph_mappings(article_subset, article, input_file_prefix)
             article_paragraphs = load_unsupervised_article_paragraphs(article)
             assert len(y_pred) == len(article_paragraphs), f"Length mismatch for {article}: {len(y_pred)} vs {len(article_paragraphs)}"
             # write the predictions to "data/unsupervised_inference_predictions/{article}.json"
