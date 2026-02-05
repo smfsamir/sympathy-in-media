@@ -240,7 +240,7 @@ def create_coref_inference_dataset(input_file_prefix: str):
         person_name = article.split('_')[1]
         outlet = article.split('_')[2]
 
-        paragraphs = load_unsupervised_article_paragraphs(article, path="unsupervised_articles")
+        paragraphs = load_unsupervised_article_paragraphs(article, path=f"{input_file_prefix}_articles")
         coref_metadata_objects = [CorefEntityInferenceMetadata(**obj) for obj in json.load(open(os.path.join("data/unsupervised_coref_annotations", article)))]
         for coref_metadata_obj in coref_metadata_objects:
             current_inference_instances = _create_inference_instance(
