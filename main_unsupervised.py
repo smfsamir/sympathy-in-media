@@ -142,8 +142,9 @@ def compute_fastcoref_annotations(folder: str, output_filename: str):
         json.dump(fcoref_annotations, f, indent=4)
 
 @click.command()
-def compute_article_basis_coref_objects():
-    with open('data/unsupervised_fcoref_annotations.json', 'r') as f:
+@click.argument('input_file_prefix', type=str)
+def compute_article_basis_coref_objects(input_file_prefix):
+    with open(f'data/{input_file_prefix}_fcoref_annotations.json', 'r') as f:
         fcoref_annotations = json.load(f)
     for article_annotations in tqdm(fcoref_annotations):
         coref_inference_objects = []
@@ -163,7 +164,7 @@ def compute_article_basis_coref_objects():
                 )
             )
             # save to file
-        with open(f'data/unsupervised_coref_annotations/{article}', 'w') as f:
+        with open(f'data/{input_file_prefix}_coref_annotations/{article}', 'w') as f:
             json.dump([obj.__dict__ for obj in coref_inference_objects], f, indent=4)
 
 def construct_length_limited_inference_prompt(victim_name: str, 
