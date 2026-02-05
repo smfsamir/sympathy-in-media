@@ -718,7 +718,7 @@ def analyze_large_scale_inference(input_file_prefix):
             article_paragraphs = load_unsupervised_article_paragraphs(article, input_file_prefix + "_articles")
             assert len(y_pred) == len(article_paragraphs), f"Length mismatch for {article}: {len(y_pred)} vs {len(article_paragraphs)}"
             # write the predictions to "data/unsupervised_inference_predictions/{article}.json"
-            with open(f"data/unsupervised_inference_predictions/{article}", 'w') as f:
+            with open(f"data/{input_file_prefix}_inference_predictions/{article}", 'w') as f:
                 json.dump(y_pred, f)
         except ValueError as e:
             logger.error(f"Value error for article {article}: {e}")
