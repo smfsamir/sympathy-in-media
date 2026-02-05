@@ -164,6 +164,8 @@ def compute_article_basis_coref_objects(input_file_prefix):
                 )
             )
             # save to file
+        # create directory if it doesn't exist
+        os.makedirs(f'data/{input_file_prefix}_coref_annotations', exist_ok=True)
         with open(f'data/{input_file_prefix}_coref_annotations/{article}', 'w') as f:
             json.dump([obj.__dict__ for obj in coref_inference_objects], f, indent=4)
 
