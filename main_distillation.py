@@ -710,6 +710,8 @@ def analyze_large_scale_inference(input_file_prefix):
     indices = set(inference_dataset['article_index'])
     failed_indices = []
 
+    # create a folder f"data/{input_file_prefix}_inference_predictions" if it doesn't exist
+    os.makedirs(f"data/{input_file_prefix}_inference_predictions", exist_ok=True)
     for index in tqdm(indices):
         article_subset = inference_dataset.filter(pl.col('article_index') == index)
         article = f"{index}_{article_subset['victim_name'][0]}_{article_subset['outlet'][0]}"
