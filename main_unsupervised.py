@@ -227,9 +227,10 @@ def _create_inference_instance(victim_name: str,
     return training_instances
 
 @click.command()
-def create_coref_inference_dataset():
+@click.argument('input_file_prefix', type=str)
+def create_coref_inference_dataset(input_file_prefix: str):
     from datasets import Dataset
-    inference_articles = os.listdir("data/unsupervised_coref_annotations")
+    inference_articles = os.listdir(f"data/{input_file_prefix}_coref_annotations")
     outlets = []
     victim_names = []
     inference_instances = []
@@ -259,7 +260,8 @@ def create_coref_inference_dataset():
         'prompt': [instance['prompt'] for instance in inference_instances],
         'article_index': article_indices
     })
-    dataset.to_json("data/distillation_data/coref_inference_dataset.json")
+    # dataset.to_json("data/distillation_data/coref_inference_dataset.json")
+    dataset.to_json(f"data/distillation_data/{input_file_prefix}_coref_inference_dataset.json")
     return dataset
 
 @click.command()
