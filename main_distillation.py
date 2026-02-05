@@ -23,7 +23,6 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, Seq2SeqTrainingArg
 from dataclasses import dataclass
 from datasets import load_dataset, Dataset
 from packages.constants import DEV_SUBJECTS
-from packages.prompts.task_1_ner_distill_prompt import TASK_1_PROMPT
 from packages.parsing_utils import CorefEntityMetadata, get_manual_annotation_occurrences, load_all_articles,\
     load_article_paragraphs, load_repaired_articles,\
     load_training_data_annotations_for_person, extract_enumerated_paragraphs,\
@@ -422,7 +421,8 @@ def assess_ft_flan_model():
 
 
 @click.command()
-def run_large_scale_inference():
+@click.argument("input_file_prefix", type=str)
+def run_large_scale_inference(input_file_prefix):
     tokenizer = AutoTokenizer.from_pretrained(
         "google/flan-t5-large", 
         cache_dir=os.path.join(config['SCRATCH_DIR'], "transformers_cache")
@@ -435,7 +435,7 @@ def run_large_scale_inference():
     ).to('cuda')
 
     inference_dataset = load_dataset("json", 
-                           data_files={'train': "data/distillation_data/coref_inference_dataset.json"},
+                           data_files={'train': f"data/distillation_data/{input_file_prefix}_coref_inference_dataset.json"},
                            split='train')
 
     inference_dataset = inference_dataset.map(
@@ -446,8 +446,8 @@ def run_large_scale_inference():
     inference_dataset = inference_dataset.map(partial(generate_predictions, flan_t5, tokenizer),
                                     batched=True,
                                     batch_size=2)
-    inference_dataset.to_json("data/distillation_data/coref_inference_with_predictions.json")
-    logger.info("Wrote inference dataset with predictions to data/distillation_data/coref_inference_with_predictions.json")
+    inference_dataset.to_json(f"data/distillation_data/{input_file_prefix}_coref_inference_with_predictions.json")
+    logger.info(f"Wrote inference dataset with predictions to data/distillation_data/{input_file_prefix}_coref_inference_with_predictions.json")
 
 def construct_length_limited_prompt(victim_name: str, 
                                     coref_entity_obj: CorefEntityMetadata,
@@ -569,6 +569,7 @@ def create_coref_training_dataset():
     # write a function to create a coreference resolution training dataset.
 
     split_to_article = obtain_train_eval_test_split()
+    ipdb.set_trace()
     train_articles = split_to_article['train']
     dev_articles = split_to_article['dev']
     test_articles = split_to_article['test']
@@ -620,8 +621,15 @@ def obtain_train_eval_test_split():
 
     test_set = set(all_articles) - set(development_articles) - set(train_set)
     print(f"{len(test_set)} Test set articles: {test_set}")
-    ipdb.set_trace()
 
+    # compute the total number of paragraphs in each set
+    for set_name, article_list in [('train', train_set), ('dev', development_articles), ('test', list(test_set))]:
+        total_paragraphs = 0
+        for article in article_list:
+            paragraphs = load_article_paragraphs(article)
+            total_paragraphs += len(paragraphs)
+        print(f"{set_name} set has {total_paragraphs} paragraphs across {len(article_list)} articles.")
+    ipdb.set_trace()
     return {
         'train': train_set,
         'dev': development_articles,
@@ -658,11 +666,27 @@ def check_agreement():
         all_gt_annotations.extend(y_one)
         all_indep_annotations.extend(y_two)
     score = cohen_kappa_score(all_gt_annotations, all_indep_annotations, labels=['police-aligned', 'victim-aligned', 'no entity'])
+    # Compute the randomized agreement, by shufflign all_indep_annotations
+    shuffled_gt_annotations = all_gt_annotations.copy()
+    shuffled_indep_annotations = all_indep_annotations.copy()
+    random_scores = []
+    for i in range(1000):
+        random.shuffle(shuffled_indep_annotations)
+        random.shuffle(shuffled_gt_annotations)
+        random_score = cohen_kappa_score(shuffled_gt_annotations, shuffled_indep_annotations, labels=['police-aligned', 'victim-aligned', 'no entity'])
+        random_scores.append(random_score)
+    avg_random_score = sum(random_scores) / len(random_scores)
+    print(f"Average randomized Cohen's kappa score: {avg_random_score}")
+
+
     logger.info(f"Cohen's kappa score: {score}")
     print(len(all_gt_annotations))
     # compute the f1 score for police-aligned vs not police-aligned
     report = classification_report(all_indep_annotations, all_gt_annotations, labels=['police-aligned', 'victim-aligned', 'no entity'])
     print(report)
+
+
+
 
 
     # are there any cases where all_gt_annotations[i] is 'police' and all_indep_annotations[i] is 'victim' or vice versa?
@@ -675,9 +699,10 @@ def check_agreement():
     # logger.info(f"{polar_disagreements}/{len(all_gt_annotations)} polar disagreements found.")
 
 @click.command()
-def analyze_large_scale_inference():
+@click.argument("input_file_prefix", type=str)
+def analyze_large_scale_inference(input_file_prefix):
     inference_dataset = load_dataset("json", 
-                           data_files={'train': "data/distillation_data/coref_inference_with_predictions.json"},
+                           data_files={'train': f"data/distillation_data/{input_file_prefix}_coref_inference_with_predictions.json"},
                            split='train')
     inference_dataset = pl.from_pandas(inference_dataset.to_pandas())
     # TODO: need to write a new function
